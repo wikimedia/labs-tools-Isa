@@ -4,9 +4,6 @@ This tool helps to describe the images contributed to Wiki Loves competitions.
 
 Isa is not only an acronym for information structured additions, but is also a [chiShona](https://sn.wikipedia.org/wiki/ChiShona) language word for ‘put’.
 
-[Python 3.x+](https://www.python.org/downloads/)
-
-
 # Requirements
 
 * [Python 3.x+](https://www.python.org/downloads/)
