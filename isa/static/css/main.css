@@ -2,9 +2,9 @@
 .topnav {
     background-color: #332;
     overflow: hidden;
-  }
+}
   
-  /* Style the links inside the navigation bar */
+/* Style the links inside the navigation bar */
   .topnav a {
     float: left;
     display: block;
@@ -14,12 +14,84 @@
     text-decoration: none;
     font-size: 17px;
     border-bottom: 3px solid transparent;
-  }
+}
   
-  .topnav a:hover {
+.topnav a:hover {
     border-bottom: 3px solid red;
-  }
+}
   
-  .topnav a.active {
+.topnav a.active {
     border-bottom: 3px solid red;
+}
+
+.main-page {
+    padding: 70px 0;
   }
+
+.main-page h1 {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.container {
+  max-width: 1100px;
+  display: block;
+  padding: 0 10px;
+  position: relative;
+}
+
+.explore-campaigns {
+  padding-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.campaign-select, .filter-select, .sort-select {
+  cursor: pointer;
+  float: right;
+  margin: 10px 10px 10px 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+.table td  th{
+  text-align: center;   
+}
+
+.table tbody tr .table-link-cell a, .table thead tr .table-link-cell a {
+  color: #6a6a6a;
+  display: block;
+  margin: 0;
+  text-decoration: none;
+  text-align: left;
+  padding: 12px 24px;
+}
+
+.campaign-link {
+  margin-top: 15px;
+}
+
+.table thead tr th:first-child, .table thead tr th:last-child {
+  border-left: none;
+  border-right: none;
+}
+
+.table thead tr th {
+  border: none;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 800;
+  vertical-align: bottom;
+  color: grey;
+}
+
+tr {
+  line-height: 7px;
+  min-height: 7px;
+  height: 7px;
+}

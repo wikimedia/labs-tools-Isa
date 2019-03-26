@@ -1,5 +1,7 @@
 from flask import render_template
 from isa import app
+from datetime import datetime
+from isa.models import User, Campaign
 
 @app.route( "/" )
 def home():
@@ -7,10 +9,13 @@ def home():
 
 @app.route( "/campaigns" )
 def getCampaigns():
-    return render_template( 'campaigns.html', title = 'Home' )
+    campaigns = Campaign.query.all()
+    return render_template( 'campaigns.html', title = 'Campaigns', campaigns=campaigns, today_date=datetime.utcnow )
 
 @app.route( "/campaigns/<string:campaign_name>" )
 def getCampaignById( campaign_name ):
+
+    #  Here we will select campain with campaign_name and render its info
     return render_template( 'campaign.html', title = 'Campaigns' )
 
 @app.route( "/campaigns/create" )

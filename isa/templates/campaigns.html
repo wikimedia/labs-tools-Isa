@@ -1,3 +1,90 @@
 {% extends "layout.html" %}
 {% block content%}
+    <header class="main-page">
+        <div class=" d-flex justify-content-center container">
+            <h1>
+                ISA - Campaigns
+            </h1>
+        </div>
+    </header>
+    <div class="container">
+        <form class="navbar-form explore-campaigns" role="search">
+            <div class="input-group add-on">
+            <input class="form-control active-cyan-2 " placeholder="Search Campaigns" name="srch-term" id="srch-term" type="text">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            </div>
+        </form>
+        <section id="campaigns">
+            <div class="section-header">
+                <h3>
+                    Ongoing Campaigns
+                </h3>
+            </div>
+            <div class="sort-select">
+                <select class="sorts fas fa-sort" rel="campaigns">
+                    <option rel="asc" value="campaign_name">Title</option>
+                    <option rel="desc" value="campaign_country">Country</option>
+                    <option rel="desc" value="start_date">Start Date</option>
+                    <option rel="desc" value="end_date">End Date</option>
+                    <option rel="desc" value="status">Status</option>
+                </select>
+            </div>
+            <table class="table table-hover ">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Campaign</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">End Date</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for campaign in campaigns %}
+                        <tr>
+                            <td class="table-link-cell title" role="button" tabindex="0">
+                                <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
+                                    <span class="title">
+                                        {{ campaign.campaign_name }}
+                                    </span>
+                                </a>
+                            </td>
+
+                            <td class="table-link-cell">
+                                <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
+                                    <span class="articles-created-human">
+                                        {{ campaign.campaign_country }}
+                                    </span>
+                                </a>
+                            </td>
+                            <td class="table-link-cell">
+                                <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
+                                    <span class="characters-human">
+                                        {{ campaign.start_date }}
+                                    </span>
+                                </a>
+                            </td>
+                            <td class="table-link-cell">
+                                <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
+                                    <span class="views-human">
+                                        {{ campaign.end_date }}
+                                    </span>    
+                                </a>
+                            </td>
+                            <td class="table-link-cell">
+                                <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
+                                    <span class="students">
+                                        {{ campaign.status }}
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor%} 
+                    </tbody>
+                  </table>
+        </section>
+    </div>
 {% endblock content%}
+
