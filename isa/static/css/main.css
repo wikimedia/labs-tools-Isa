@@ -95,3 +95,19 @@ tr {
   min-height: 7px;
   height: 7px;
 }
+
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: 100%;
+}
+
+input[type=search] {
+  border: 1px dotted #999;
+  border-radius: 0;
+  -webkit-appearance: none;
+  width: 3100px
+}
+table.dataTable {
+  margin-top: 50px !important;
+}
