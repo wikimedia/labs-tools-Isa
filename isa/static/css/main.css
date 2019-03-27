@@ -62,7 +62,7 @@
   margin: 0;
   text-decoration: none;
   text-align: left;
-  padding: 12px 24px;
+  padding: 8px 8px;
 }
 
 .campaign-link {
@@ -77,16 +77,22 @@
 .table thead tr th {
   border: none;
   text-align: left;
-  font-size: 10px;
-  font-weight: 500;
-  vertical-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  vertical-align: bottom;
   color: grey;
 }
 
 tr {
-  line-height: 5px;
-  min-height: 5px;
-  height: 5px;
+  line-height: 7px;
+  min-height: 7px;
+  height: 7px;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: 100%;
 }
 
 input[type=search] {
@@ -95,8 +101,6 @@ input[type=search] {
   -webkit-appearance: none;
   width: 3100px
 }
-
-
 
 form {
   border:thin black solid;
