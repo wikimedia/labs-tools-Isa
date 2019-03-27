@@ -30,7 +30,7 @@
                           <tr>
                               <td class="table-link-cell title" role="button" tabindex="0">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
-                                      <span class="title">
+                                      <span class="">
                                           {{ campaign.campaign_name }}
                                       </span>
                                   </a>
@@ -38,30 +38,32 @@
   
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
-                                      <span class="articles-created-human">
+                                      <span class="">
                                           {{ campaign.campaign_country }}
                                       </span>
                                   </a>
                               </td>
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
-                                      <span class="characters-human">
+                                      <span class="">
                                           {{ campaign.start_date }}
                                       </span>
                                   </a>
                               </td>
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
-                                      <span class="views-human">
+                                      <span class="">
                                           {{ campaign.end_date }}
                                       </span>    
                                   </a>
                               </td>
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
-                                      <span class="students">
-                                          {{ campaign.status }}
-                                      </span>
+                                        {% if campaign.status == True %}
+                                            <span class=""> Closed </span>
+                                            {% else %}
+                                                <span class=""> Open </span>
+                                        {%  endif %}
                                   </a>
                               </td>
                           </tr>
