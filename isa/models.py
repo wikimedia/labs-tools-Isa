@@ -27,11 +27,11 @@ class Campaign( db.Model ):
     id = db.Column( db.Integer, primary_key=True )
     campaign_country = db.Column( db.String( 15 ), unique=True, nullable=False )
     campaign_name = db.Column( db.String( 15 ), unique=True, nullable=False )
+    categories = db.Column( db.Text, nullable=False )
     start_date = db.Column( db.String( 15 ), nullable=False, default=datetime.utcnow )
     end_date = db.Column( db.String( 15 ), nullable=False, default=datetime.utcnow )
     status = db.Column ( db.Boolean, nullable=False, default=True )
     description = db.Column( db.Text, nullable=False )
-    # categories = db.Column( db.Text, nullable=False )
     user_id = db.Column( db.Integer, db.ForeignKey( 'user.id'), nullable=False )
     contribution = db.relationship('Contribution', backref='made_on', lazy=True) 
     def __repr__( self ):

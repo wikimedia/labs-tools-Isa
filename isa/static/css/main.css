@@ -53,12 +53,16 @@
 }
 
 #campaign_detail_table{
-  width: 60%;
+  vertical-align:top;
+  padding: 1px;
+}
+
+#campaign_categories{
+  height: 20%;
 }
 
 .table td  th{
   text-align: center;
-
 }
 
 .table tbody tr .table-link-cell a, .table thead tr .table-link-cell a {
@@ -146,4 +150,11 @@ small {
   padding: 10px;
   text-align: center;
   font-weight: 700;
+}
+
+.text-wrap {
+  overflow-wrap:inherit;
+  position: relative;
+  oveflow: hidden;
+  bottom: 0;
 }

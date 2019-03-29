@@ -71,6 +71,7 @@ def CreateCampaign():
         campaign = Campaign(
             campaign_country = form.campaign_country.data,
             campaign_name = form.campaign_name.data,
+            categories = form.categories.data,
             start_date = form.start_date.data,
             end_date = form.end_date.data,
             status = bool( form.status.data ),

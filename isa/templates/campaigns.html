@@ -28,7 +28,7 @@
                     <tbody>
                           {% for campaign in campaigns %}
                           <tr>
-                              <td class="table-link-cell title" role="button" tabindex="0">
+                              <td nowrap class="table-link-cell title" role="button" tabindex="0">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
                                       <span class="">
                                           {{ campaign.campaign_name }}

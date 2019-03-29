@@ -6,7 +6,9 @@ from wtforms.widgets import TextArea
 
 Countries = [ ('-1', '-----'),
             ('rw', 'Rwanda'),
-            ('den', 'Denmark') ]
+            ('den', 'Denmark'),
+            ('ben', 'Benin'),
+            ('cm', 'Cameroon')  ]
 
 class CampaignForm( FlaskForm ):
     campaign_name = StringField('Campaign Name',
