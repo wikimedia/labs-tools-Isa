@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, flash
 from isa import app
 from datetime import datetime
 from isa import db
-from isa.models import User, Campaign
+from isa.models import User, Campaign, Contribution
 from isa.forms import CampaignForm
 
 @app.route( "/" )
@@ -14,11 +14,53 @@ def getCampaigns():
     campaigns = Campaign.query.all()
     return render_template( 'campaigns.html', title = 'Campaigns', campaigns=campaigns, today_date=datetime.utcnow )
 
+'''
+    The below functions are used to perform operations on the db tables
+'''
+
+def sum_all_user_contributions(users):
+    user_contribution_sum = 0;
+    user_count = len(users)
+    for user in users:
+        user_contribution_sum += get_user_contributions( user.id )
+    return user_contribution_sum
+
 @app.route( "/campaigns/<string:campaign_name>" )
 def getCampaignById( campaign_name ):
+    # We select the campaign and the manager here
+    campaign = Campaign.query.filter_by(campaign_name=campaign_name).first()
+    campaign_manager = User.query.filter_by(id=campaign.user_id).first()
 
-    #  Here we will select campain with campaign_name and render its info
-    return render_template( 'campaign.html', title = 'Campaigns' )
+    # We get all the users from the db 
+    all_users = User.query.all()
+    all_contributions = Contribution.query.all()
+    user_count = len(all_users)
+    # contributions for campaign 
+    campaign_contributions = 0
+    #Editor for a particular campaign
+    campaign_editors = 0
+    # participantids for this campaign 
+    campaign_users_ids = []
+
+    # We are querrying all the users who participate in the campaign
+    contribs_for_campaign = Contribution.query.filter_by( campaign_id=campaign.id ).all()
+    for campaign_contribution in contribs_for_campaign:
+        campaign_users_ids.append( campaign_contribution.user_id )  
+    # we get the unique ids so as not to count an id twice
+    campaign_users_ids_set = set( campaign_users_ids )
+
+    campaign_editors = len( campaign_users_ids_set )
+    # We then re-initialize the ids array
+    campaign_users_ids = []
+    
+    # We now get the contributor count for this campaign
+    for contrib in all_contributions:
+        if (contrib.campaign_id == campaign.id ):
+            campaign_contributions += 1
+    return render_template( 'campaign.html', title = 'Campaign - ' + campaign_name,
+                campaign=campaign, campaign_manager=campaign_manager.username,
+                campaign_editors=campaign_editors, campaign_contributions=campaign_contributions,
+            )
 
 @app.route( "/campaigns/create", methods=['GET','POST'] )
 def CreateCampaign():

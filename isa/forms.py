@@ -12,6 +12,7 @@ class CampaignForm( FlaskForm ):
     campaign_name = StringField('Campaign Name',
                     validators=[DataRequired(), Length(min=2, max=20)])
     description = StringField('Description', widget=TextArea())
+    categories = StringField('Categories', widget=TextArea())
     campaign_country = SelectField('Country', choices=Countries )
     start_date = DateField('Start date', default=datetime.utcnow )
     end_date = DateField('End date', default=datetime.utcnow )

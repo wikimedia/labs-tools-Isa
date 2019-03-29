@@ -1,3 +1,59 @@
 {% extends "layout.html" %}
 {% block content%}
+<header class="main-page">
+        <div class=" d-flex justify-content-center">
+            <h1>
+                {{ campaign.campaign_name }}
+            </h1>
+        </div>
+</header>
+<div class="d-flex specifictd justify-content-center container">
+        <table class="table mt-15 table-border table-responsive-sm" id="campaign_detail_table">
+            <tbody>
+                <tr>
+                    <td>Campaign For </td>
+                    <td>{{campaign.campaign_name}}</td>
+                </tr>
+                <tr>
+                    <td>Country </td>
+                    <td>{{campaign.campaign_country}}</td>
+                </tr>
+                <tr>
+                    <td>About Campaign</td>
+                    <td>{{campaign.description}}</td>
+                </tr>
+                    <td>Campaign Manger</td>
+                    <td> <a href="https://meta.wikimedia.org/wiki/User:{{campaign_manager}}">{{campaign_manager}}</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+<div class=" d-flex justify-content-center">
+    <h3>
+        <u>{{ campaign.campaign_name }} Statistics</u>
+    </h3>
+</div>
+<br>
+<div class="container">
+    <div class="row  d-flex justify-content-center">
+        <div class="stat-display">
+            <div class="stat-display__stat">
+                <div class="stat-display__value">{{ campaign_contributions }} </div>
+                <small class="">Contributions</small>
+            </div>     
+        </div>
+        <div class="stat-display">
+                <div class="stat-display__stat">
+                    <div class="stat-display__value"> {{ campaign_editors }} </div>
+                    <small class="next_small">Editors</small>
+                </div>     
+        </div>
+    </div>
+</div>
+</header>
+
 {% endblock content%}
