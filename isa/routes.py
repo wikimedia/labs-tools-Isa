@@ -4,6 +4,7 @@ from datetime import datetime
 from isa import db
 from isa.models import User, Campaign, Contribution
 from isa.forms import CampaignForm
+import pycountry
 
 @app.route( "/" )
 def home():
@@ -62,6 +63,22 @@ def getCampaignById( campaign_name ):
                 campaign_editors=campaign_editors, campaign_contributions=campaign_contributions,
             )
 
+def get_country_from_code( country_code ):
+    '''Retrieves the country from the country code
+
+    :country_code string: The country code of the
+
+    :returns:
+    :rtype: String
+    '''
+    country = []
+    countries = [ ( country.alpha_2, country.name ) for country in pycountry.countries ]
+    for country_index in range( len( countries ) ):
+        # index 0 is the country code selected from the form
+        if( countries[ country_index ][ 0 ] == country_code ):
+                country.append( countries[ country_index ] )
+    return country[ 0 ][ 1 ]
+
 @app.route( "/campaigns/create", methods=['GET','POST'] )
 def CreateCampaign():
     form = CampaignForm()
@@ -69,7 +86,7 @@ def CreateCampaign():
         # We add the campaign information to the database
         # TODO: Add current userid for user who created campaign
         campaign = Campaign(
-            campaign_country = form.campaign_country.data,
+            campaign_country = get_country_from_code( form.campaign_country.data ),
             campaign_name = form.campaign_name.data,
             categories = form.categories.data,
             start_date = form.start_date.data,

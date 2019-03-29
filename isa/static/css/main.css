@@ -151,3 +151,12 @@ small {
   text-align: center;
   font-weight: 700;
 }
+
+.datetimepicker{
+  height: 50px;
+}
+
+.form-group {
+  padding-top: 0px;
+  padding-bottom: 1px;
+}
