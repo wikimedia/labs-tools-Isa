@@ -151,10 +151,3 @@ small {
   text-align: center;
   font-weight: 700;
 }
-
-.text-wrap {
-  overflow-wrap:inherit;
-  position: relative;
-  oveflow: hidden;
-  bottom: 0;
-}
