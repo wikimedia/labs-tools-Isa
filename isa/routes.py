@@ -78,9 +78,19 @@ def CreateCampaign():
             user_id = 1
         )
         db.session.add( campaign )
-        db.session.commit()
-        flash( f'{ form.campaign_name.data } Campaign created!', 'success' )
-        return redirect( url_for( 'getCampaigns' ) )
+        failed=False
+        try:
+            db.session.commit()
+        except Exception as e:
+            db.session.rollback()
+            db.session.flush() # for resetting non-commited .add()
+            failed=True
+        #commit failed
+        if ( failed == True ):
+            flash( f'{ form.campaign_name.data } not created! Campaign may be available in { form.campaign_country.data }', 'danger' )
+        else:
+            flash( f'{ form.campaign_name.data } Campaign created!', 'success' )
+            return redirect( url_for( 'getCampaigns' ) )
     return render_template( 'create_campaign.html', title = 'Create a campaign', form=form)
 
 @app.route( "/campaigns/<string:campaign_name>/edit" )

@@ -66,19 +66,17 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
-            <div class="row">
-            {% with messages = get_flashed_messages( with_categories = true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="alert alert-{{ category }} col-sm-7">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
+        <div class="d-flex justify-content-center">
+                {% with messages = get_flashed_messages( with_categories = true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                                <div class="notice col-sm-12 alert alert-{{ category }}">
+                                        {{ message }}
+                                </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
             </div>
-        </div>
         {% block content%} {% endblock content%}
         <script src="{{url_for('static', filename='js/main.js')}}"></script>
     </body>

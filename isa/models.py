@@ -31,6 +31,7 @@ class Campaign( db.Model ):
     end_date = db.Column( db.String( 15 ), nullable=False, default=datetime.utcnow )
     status = db.Column ( db.Boolean, nullable=False, default=True )
     description = db.Column( db.Text, nullable=False )
+    # categories = db.Column( db.Text, nullable=False )
     user_id = db.Column( db.Integer, db.ForeignKey( 'user.id'), nullable=False )
     contribution = db.relationship('Contribution', backref='made_on', lazy=True) 
     def __repr__( self ):

@@ -141,3 +141,9 @@ small {
 #next_small::before {
   content: "\00a0 \00a0 \00a0 \00a0";
 }
+
+.notice {
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+}
