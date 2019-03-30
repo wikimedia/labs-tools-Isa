@@ -13,7 +13,7 @@ def home():
 @app.route( "/campaigns" )
 def getCampaigns():
     campaigns = Campaign.query.all()
-    return render_template( 'campaigns.html', title = 'Campaigns', campaigns=campaigns, today_date=datetime.utcnow )
+    return render_template( 'campaigns.html', title = 'Campaigns', campaigns=campaigns, today_date=datetime.date( datetime.utcnow() ) )
 
 '''
     The below functions are used to perform operations on the db tables
@@ -79,6 +79,19 @@ def get_country_from_code( country_code ):
                 country.append( countries[ country_index ] )
     return country[ 0 ][ 1 ]
 
+def compute_campaign_status( end_date ):
+    '''Determines the campaign status based on the end date
+
+    :end_date Date: The campaign end date
+
+    :returns:
+    :rtype: Boolean
+    '''
+    status = bool( 'False' )
+    if ( end_date < datetime.date( datetime.utcnow() ) ):
+        status = bool( 'True' )
+    return status
+
 @app.route( "/campaigns/create", methods=['GET','POST'] )
 def CreateCampaign():
     form = CampaignForm()
@@ -91,7 +104,7 @@ def CreateCampaign():
             categories = form.categories.data,
             start_date = form.start_date.data,
             end_date = form.end_date.data,
-            status = bool( form.status.data ),
+            status = compute_campaign_status( form.end_date.data ),
             description = form.description.data,
             user_id = 1
         )

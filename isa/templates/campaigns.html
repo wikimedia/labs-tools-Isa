@@ -60,9 +60,10 @@
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
                                         {% if campaign.status == True %}
+                                            <p>{{ campaign.status }}</p>
                                             <span class=""> Closed </span>
-                                            {% else %}
-                                                <span class=""> Open </span>
+                                        {% else %}
+                                            <span class=""> Open </span>
                                         {%  endif %}
                                   </a>
                               </td>
