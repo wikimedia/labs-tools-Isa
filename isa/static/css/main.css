@@ -30,7 +30,7 @@
 
 .main-page h1 {
     font-weight: 300;
-    margin-bottom: 0;
+    margin-bottom: -50px;
 }
 
 .explore-campaigns {
