@@ -11,5 +11,7 @@ $(function () {
         'width': '800px'
     } );
 
-    $( '#datetimepicker' ).datepicker();
+    // $( '#datepick1' ).datetimepicker();
+    // $( '#datepick2' ).datetimepicker();
+
 } );

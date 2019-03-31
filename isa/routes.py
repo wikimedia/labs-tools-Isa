@@ -13,7 +13,8 @@ def home():
 @app.route( "/campaigns" )
 def getCampaigns():
     campaigns = Campaign.query.all()
-    return render_template( 'campaigns.html', title = 'Campaigns', campaigns=campaigns, today_date=datetime.date( datetime.utcnow() ) )
+    return render_template( 'campaigns.html', title = 'Campaigns',
+        campaigns=campaigns, today_date=datetime.date( datetime.utcnow() ), datetime=datetime )
 
 '''
     The below functions are used to perform operations on the db tables
@@ -88,7 +89,7 @@ def compute_campaign_status( end_date ):
     :rtype: Boolean
     '''
     status = bool( 'False' )
-    if ( end_date < datetime.date( datetime.utcnow() ) ):
+    if ( end_date.strftime("%Y-%m-%d %H:%M") < datetime.now().strftime("%Y-%m-%d %H:%M") ):
         status = bool( 'True' )
     return status
 
@@ -122,7 +123,7 @@ def CreateCampaign():
         else:
             flash( f'{ form.campaign_name.data } Campaign created!', 'success' )
             return redirect( url_for( 'getCampaigns' ) )
-    return render_template( 'create_campaign.html', title = 'Create a campaign', form=form)
+    return render_template( 'create_campaign.html', title = 'Create a campaign', form=form, datetime=datetime )
 
 @app.route( "/campaigns/<string:campaign_name>/edit" )
 def editCampaign( campaign_name ):

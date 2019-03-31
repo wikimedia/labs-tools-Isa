@@ -46,21 +46,20 @@
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
                                       <span class="">
-                                          {{ campaign.start_date }}
+                                          {{ campaign.start_date.strftime("%Y-%m-%d %H:%M") }}
                                       </span>
                                   </a>
                               </td>
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
                                       <span class="">
-                                          {{ campaign.end_date }}
+                                            {{ campaign.end_date.strftime("%Y-%m-%d %H:%M") }}
                                       </span>    
                                   </a>
                               </td>
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('getCampaignById', campaign_name=campaign.campaign_name) }}">
-                                        {% if campaign.status == True %}
-                                            <p>{{ campaign.status }}</p>
+                                        {% if campaign.end_date.strftime("%Y-%m-%d %H:%M") < datetime.now().strftime("%Y-%m-%d %H:%M") %}
                                             <span class=""> Closed </span>
                                         {% else %}
                                             <span class=""> Open </span>

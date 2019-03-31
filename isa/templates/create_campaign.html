@@ -66,35 +66,36 @@
                                     </div>
                                     <div class="form-group">
                                             {{ form.start_date.label( class='datepicker' ) }}
-                                            <div class="input-group datetimepicker">
+                                            <div class="input-group date">
                                                 <!-- We test for errors in the form data here -->
                                                 {% if form.start_date.errors %}
-                                                    {{ form.start_date( class="form-control form-control-lg is-invalid" ) }}
+                                                    {{ form.start_date( class="form-control form-control-md is-invalid" ) }}
                                                     <div class="invalid-feedback">
                                                         {% for error in form.start_date.errors %}
                                                             <span> {{ error }}</span>
                                                         {% endfor %}
                                                     </div>
                                                 {% else %}
-                                                    {{ form.start_date( class="form-control form-control-lg" ) }}
+                                                    {{ form.start_date( class="form-control form-control-md" ) }}
+
                                                 {% endif %}
                                             </div>
-                                        </div>
+                                    </div>
                                     <div class="form-group">
-                                        {{ form.end_date.label( class='datepicker' ) }}
-                                        <div class="input-group datetimepicker" >
+                                            {{ form.end_date.label( class='datepicker' ) }}
+                                            <div class="input-group-addon date" >
                                                 <!-- We test for errors in the form data here -->
                                                 {% if form.end_date.errors %}
-                                                    {{ form.end_date( class="form-control form-control-lg is-invalid" ) }}
+                                                    {{ form.end_date( class="form-control form-control-md is-invalid" ) }}
                                                     <div class="invalid-feedback">
-                                                        {% for error in form.end_date.errors %}
+                                                        {% for error in form.start_date.errors %}
                                                             <span> {{ error }}</span>
                                                         {% endfor %}
                                                     </div>
                                                 {% else %}
-                                                    {{ form.end_date( class="form-control form-control-lg" ) }}
+                                                    {{ form.end_date( class="form-control form-control-md" ) }}
                                                 {% endif %}
-                                        </div>
+                                            </div>
                                     </div>
                                 </fieldset>
                                 <div class="form-group">

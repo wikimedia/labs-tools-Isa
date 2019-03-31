@@ -28,12 +28,12 @@ class Campaign( db.Model ):
     campaign_country = db.Column( db.String( 15 ), unique=True, nullable=False )
     campaign_name = db.Column( db.String( 15 ), unique=True, nullable=False )
     categories = db.Column( db.Text, nullable=False )
-    start_date = db.Column( db.String( 15 ), nullable=False, default=datetime.utcnow )
-    end_date = db.Column( db.String( 15 ), nullable=False, default=datetime.utcnow )
-    status = db.Column ( db.Boolean, nullable=False, default=True )
+    start_date = db.Column( db.DateTime, nullable=False, default=datetime.now().strftime("%Y-%m-%d %H:%M") )
+    end_date = db.Column( db.DateTime, nullable=False, default=datetime.now().strftime("%Y-%m-%d %H:%M") )
+    status = db.Column ( db.Boolean, nullable=False, default=bool( 'False' ) )
     description = db.Column( db.Text, nullable=False )
     categories = db.Column( db.Text, nullable=False )
-    user_id = db.Column( db.Integer, db.ForeignKey( 'user.id'), nullable=False )
+    user_id = db.Column( db.Integer, db.ForeignKey( 'user.id' ), nullable=False )
     contribution = db.relationship('Contribution', backref='made_on', lazy=True) 
     def __repr__( self ):
         # This is what is shown when object is printed
