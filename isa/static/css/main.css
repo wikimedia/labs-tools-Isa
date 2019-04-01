@@ -160,3 +160,7 @@ small {
   padding-top: 0px;
   padding-bottom: 1px;
 }
+
+#edit_campaign{
+  float: right;
+}

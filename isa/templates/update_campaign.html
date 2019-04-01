@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="row d-flex justify-content-center">
+            <section id="" class="col-lg-5 ">
+                    <div class="form-group">
+                            <form  class="" method="POST" action="">
+                                    {{ form.csrf_token }}
+                                <fieldset class="form-group align-items-center">
+                                    <legend class="border-bottom mb-3 text-center">Update Campaign Details</legend>
+                                    <div class="form-group">
+                                        {{ form.campaign_name.label( class="form-control-label" ) }}
+                                        <!-- We test for errors in the form data here -->
+                                        {% if form.campaign_name.errors %}
+                                            {{ form.campaign_name( class="form-control form-control-lg is-nvalid" ) }}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.campaign_name.errors %}
+                                                    <span> {{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.campaign_name( class="form-control form-control-lg" ) }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.description.label( class="form-control-label" ) }}
+                                        <!-- We test for errors in the form data here -->
+                                        {% if form.description.errors %}
+                                            {{ form.description( class="form-control form-control-lg is-invalid" ) }}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.description.errors %}
+                                                    <span> {{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.description( class="form-control form-control-lg" ) }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                            {{ form.categories.label( class="form-control-label" ) }}
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Enter categoies separated by commas"></i>  
+                                            <!-- We test for errors in the form data here -->
+                                            {% if form.categories.errors %}
+                                                {{ form.categories( class="form-control form-control-lg is-invalid" ) }}
+                                                <div class="invalid-feedback">
+                                                    {% for error in form.categories.errors %}
+                                                        <span> {{ error }}</span>
+                                                    {% endfor %}
+                                                </div>
+                                            {% else %}
+                                                {{ form.categories( class="form-control form-control-lg" ) }}
+                                            {% endif %}
+                                        </div>
+                                    <div class="form-group">
+                                        {{ form.campaign_country.label( class="form-control-label" ) }}
+                                        <!-- We test for errors in the form data here -->
+                                        {% if form.campaign_country.errors %}
+                                            {{ form.campaign_country( class="form-control form-control-lg is-invalid" ) }}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.campaign_country.errors %}
+                                                    <span> {{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.campaign_country( class="form-control form-control-lg" ) }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                            {{ form.start_date.label( class='datepicker' ) }}
+                                            <div class="input-group date">
+                                                <!-- We test for errors in the form data here -->
+                                                {% if form.start_date.errors %}
+                                                    {{ form.start_date( class="form-control form-control-md is-invalid" ) }}
+                                                    <div class="invalid-feedback">
+                                                        {% for error in form.start_date.errors %}
+                                                            <span> {{ error }}</span>
+                                                        {% endfor %}
+                                                    </div>
+                                                {% else %}
+                                                    {{ form.start_date( class="form-control form-control-md" ) }}
+
+                                                {% endif %}
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                            {{ form.end_date.label( class='datepicker' ) }}
+                                            <div class="input-group-addon date" >
+                                                <!-- We test for errors in the form data here -->
+                                                {% if form.end_date.errors %}
+                                                    {{ form.end_date( class="form-control form-control-md is-invalid" ) }}
+                                                    <div class="invalid-feedback">
+                                                        {% for error in form.start_date.errors %}
+                                                            <span> {{ error }}</span>
+                                                        {% endfor %}
+                                                    </div>
+                                                {% else %}
+                                                    {{ form.end_date( class="form-control form-control-md" ) }}
+                                                {% endif %}
+                                            </div>
+                                    </div>
+                                </fieldset>
+                                <div class="form-group">
+                                    {{ form.submit( class="btn btn-secondary" ) }}
+                                </div>
+                            </form>
+                        </div>
+            </section>
+        </div>
+{% endblock content %}

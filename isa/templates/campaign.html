@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 {% block content%}
+<br>
+<div class="form-group">
+        <a href="{{url_for('updateCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-warning pt-0 mr-2" id="edit_campaign">Edit Campaign</a>
+</div>
 <header class="main-page">
         <div class=" d-flex justify-content-center">
             <h1>
