@@ -10,4 +10,14 @@ $( function () {
         'float': 'right',
         'width': '800px'
     } );
+
+    $( '.pagination' ).css(
+        {
+            'border' : '0.5px solid black'
+        }
+    );
+
+    $( '.paginate_button' ).css(
+        { 'border-right' : '0.5px solid black' }
+    );
 } );
