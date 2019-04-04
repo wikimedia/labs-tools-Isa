@@ -1,3 +1,81 @@
 {% extends "layout.html" %}
 {% block content%}
+<div class="container form-group">
+    <a href="{{url_for('getCampaignById', campaign_name=campaign_name ) }}" class="btn btn-danger btn-lg pt-0 mt-3 ml-4" id="campaign_back_button">Back</a>
+</div>
+<br><br>
+<div class="container">
+        <div class="row">
+            <!-- Image details column -->
+          <div class="col">
+            <div class="" id="image_details">
+                <table class="table" id="image_details_table">
+                <thead class="thead-dark">
+                    <tr>
+                    <th scope="col"> Link to Image Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Desc</td>
+                    </tr>
+                    <tr>
+                    <td>Author</td>
+                    </tr>
+                    <tr>
+                    <td>Date</td>
+                    </tr>
+                    <tr>
+                    <td>Uploader</td>
+                    </tr>
+                    <tr>
+                    <td>Image Category</td>
+                    </tr>
+                    <tr>
+                    <td>License</td>
+                    </tr>
+                    <tr>
+                    <td>Downloadable info</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+          </div>
+          <!-- Image appearance column -->
+          <div class="col">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card" id="entry_image_card">
+                        <img class="card-img-top" src="/static/sample.jpg" alt="">
+                        <div class="card-body d-flex specifictd justify-content-center">
+                            <a class=" btn-dark slide-control mr-5" href="" role="button" data-slide="prev"><i class="navigator fas fa-angle-left"></i></a>
+                            <a class=" btn-dark slide-control ml-5" href="" role="button" data-slide="next"><i class="navigator fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="caption_edit_section">
+                <div class="col">
+                    <div id="" class="input-group input-group-sm mb-0">
+                        <div class="input-group">
+                            <h3>Caption:</h3>
+                            <div class="input-group-btn">
+                                <a href="" class="btn btn-warning btn-lg pt-0 pb-0 mt-0 ml-5" id="edit_caption_button">Edit</a>
+                            </div>
+                            <div class="input-group">
+                                <h3>Depicts:</h3>
+                                <div class="input-group-btn">
+                                        <a href="" class="btn btn-warning btn-lg pt-0 pb-0 mt-0 ml-5" id="edit_caption_button">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- <div class="card-group">
+
+</div> -->
 {% endblock content%}

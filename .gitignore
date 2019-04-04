@@ -6,3 +6,4 @@ isa/static/lib/
 isa/database.db
 isa/test_db.py
 test_db.py
+isa/static/sample.jpg

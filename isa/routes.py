@@ -137,9 +137,10 @@ def CreateCampaign():
     return render_template( 'create_campaign.html', title = 'Create a campaign',
         form=form, datetime = datetime )
 
-@app.route( '/campaigns/<string:campaign_name>/entry' )
+@app.route( '/campaigns/<string:campaign_name>/participate' )
 def contributeToCampaign( campaign_name ):
-    return render_template( 'campaign_entry.html', title = 'Contribute' )
+    return render_template( 'campaign_entry.html', title = campaign_name + ' - Contribute',
+        campaign_name = campaign_name )
 
 @app.route( '/login' )
 def login():

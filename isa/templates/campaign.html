@@ -1,11 +1,9 @@
 {% extends "layout.html" %}
 {% block content%}
 <br>
-<span class="row-md-12">
-    <div class="form-group">
-            <a href="{{url_for('updateCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-warning pt-0 ml-3" id="edit_campaign">Edit Campaign</a>
-    </div>
-</span>
+<div class="form-group">
+    <a href="{{url_for('updateCampaign', campaign_name=campaign_name ) }}" class="btn btn-warning pt-0 ml-3" id="edit_campaign">Edit Campaign</a>
+</div>
 
 <header class="main-page">
         <div class=" d-flex justify-content-center">
@@ -66,7 +64,7 @@
         </div>
     </div>
     <div class="form-group  d-flex justify-content-center">
-        <a href="" class="btn btn-primary pt-0 mr-3" id="campaign_participate">Participate</a>
+        <a href="{{url_for('contributeToCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-primary pt-0 mr-3" id="campaign_participate">Participate</a>
     </div>
 </div>
 </header>

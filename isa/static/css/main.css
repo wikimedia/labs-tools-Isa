@@ -165,3 +165,47 @@ small {
 #edit_campaign{
   float: right;
 }
+
+#campaign_back_button {
+  float: left;
+  width: 100px;
+}
+
+#entry_image_card {
+  height: 200px;
+  max-width: 750px;
+  float: left;
+  padding: 0px;
+}
+
+#image_details_table {
+  width: 500px;
+  float: left;
+  margin-right: -400pxpx;
+  margin-left: 20px;
+  border-bottom: 1px solid black
+}
+
+.slide-control {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+
+#caption_edit_section {
+  margin-top: 0px;
+  margin-top: 200px;
+}
+
+#edit_caption_button {
+  margin-left: 50px;
+  float: left;
+}
+
+.card-body {
+  padding-top: 0.5px;
+  padding-bottom: 60px;
+  margin-bottom: 30px;
+}
