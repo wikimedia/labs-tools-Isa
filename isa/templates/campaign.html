@@ -1,9 +1,12 @@
 {% extends "layout.html" %}
 {% block content%}
 <br>
-<div class="form-group">
-        <a href="{{url_for('updateCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-warning pt-0 mr-2" id="edit_campaign">Edit Campaign</a>
-</div>
+<span class="row-md-12">
+    <div class="form-group">
+            <a href="{{url_for('updateCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-warning pt-0 ml-3" id="edit_campaign">Edit Campaign</a>
+    </div>
+</span>
+
 <header class="main-page">
         <div class=" d-flex justify-content-center">
             <h1>
@@ -40,6 +43,7 @@
             </tbody>
         </table>
 </div>
+
 <div class=" d-flex justify-content-center">
     <h3>
         <u>{{ campaign.campaign_name }} Statistics</u>
@@ -60,6 +64,9 @@
                     <small class="next_small">Editors</small>
                 </div>     
         </div>
+    </div>
+    <div class="form-group  d-flex justify-content-center">
+        <a href="" class="btn btn-primary pt-0 mr-3" id="campaign_participate">Participate</a>
     </div>
 </div>
 </header>
