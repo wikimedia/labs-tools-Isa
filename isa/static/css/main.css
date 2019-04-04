@@ -104,7 +104,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   width: 100%;
 }
 
-input[type=search] {
+input[ type = search ] {
   border: 1px dotted #999;
   border-radius: 0;
   -webkit-appearance: none;
@@ -143,7 +143,7 @@ small {
 }
 
 #next_small::before {
-  content: "\00a0 \00a0 \00a0 \00a0";
+  content: '\00a0 \00a0 \00a0 \00a0';
 }
 
 .notice {
