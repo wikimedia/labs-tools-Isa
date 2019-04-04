@@ -37,5 +37,5 @@ class Campaign( db.Model ):
     contribution = db.relationship( 'Contribution', backref = 'made_on', lazy = True)
     def __repr__( self ):
         # This is what is shown when object is printed
-        return f"Campaign(  { self.campaign_name },
-            { self.campaign_country }, { self.status }, { self.start_date }, { self.end_date } )"
+        return ( f"Campaign(  { self.campaign_name }, { self.campaign_country }, " +
+            f" { self.status }, { self.start_date }, { self.end_date } " )
