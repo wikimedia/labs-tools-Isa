@@ -13,11 +13,11 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link href="//tools-static.wmflabs.org/cdnjs/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+        <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
         <link type="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/*.css">
         <script src="//tools-static.wmflabs.org/cdnjs/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="//tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/datatables/1.10.19/js/dataTables.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-lg topnav">
@@ -27,7 +27,7 @@
                 </button>
     
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto my-2 my-lg-0">
+                    <ul class="navbar-nav mr-auto ">
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for( 'home' )}}" id="">
                                 <i class="fa fa-home"></i> Home <span class="sr-only">(current)</span>
@@ -55,6 +55,14 @@
                                     <i class="fab fa-wikipedia-w"></i> Login
                                 </a>
                             </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <select class="selectpicker nav-item" data-width="fit">
+                                <option data-content='<span class=""></span> English'>En</option>
+                                <option  data-content='<span class=""></span> Español'>Es</option>
+                            </select>
+                        </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">

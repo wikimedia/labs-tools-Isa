@@ -20,4 +20,8 @@ $( function () {
     $( '.paginate_button' ).css(
         { 'border-right' : '0.5px solid black' }
     );
+
+    $( function() {
+        $( '.selectpicker' ).selectpicker();
+    } );
 } );
