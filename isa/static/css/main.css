@@ -210,10 +210,16 @@ small {
   margin-bottom: 30px;
 }
 
-.navbar-nav {
-  margin-left: 50px;
-}
-
 .lang_selector {
   margin-right: 0px;
+}
+
+.footer {
+  padding-top: 190px;
+}
+
+.copyright {
+  float: right;
+  margin-right: 70px;
+  margin-top: 10px;
 }

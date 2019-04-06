@@ -8,15 +8,31 @@ from isa.models import Campaign, Contribution, User
 from isa.forms import CampaignForm, UpdateCampaignForm
 
 
+def get_user_language_preferences( username ):
+    """
+    Get user language preferences for currently logged in user
+
+    Keyword arguments:
+    username -- the currently logged in user
+    """
+    user = User.query.filter_by( username=username ).first()
+    user_pref_options = user.pref_lang
+    return user_pref_options.split( ',' )
+
+# Should be for current logged in user
+user_pref_lang = []
+user_pref_lang = get_user_language_preferences( 'Flash2003' )
+
 @app.route( '/' )
 def home():
-    return render_template( 'home.html', title = 'Home' )
+    return render_template( 'home.html', title = 'Home', user_pref_lang = user_pref_lang )
 
 @app.route( '/campaigns' )
 def getCampaigns():
     campaigns = Campaign.query.all()
     return render_template( 'campaigns.html', title = 'Campaigns',
-        campaigns = campaigns, today_date = datetime.date( datetime.utcnow() ), datetime = datetime )
+        campaigns = campaigns, today_date = datetime.date( datetime.utcnow() ),
+        datetime = datetime, user_pref_lang = user_pref_lang )
 
 
 # The below functions are used to perform operations on the db tables
@@ -68,6 +84,7 @@ def getCampaignById( campaign_name ):
     return render_template( 'campaign.html', title = 'Campaign - ' + campaign_name,
                 campaign = campaign, campaign_manager = campaign_manager.username,
                 campaign_editors = campaign_editors, campaign_contributions = campaign_contributions,
+                user_pref_lang = user_pref_lang
             )
 
 def get_country_from_code( country_code ):
@@ -135,12 +152,12 @@ def CreateCampaign():
             flash( f'{ form.campaign_name.data } Campaign created!', 'success' )
             return redirect( url_for( 'getCampaigns' ) )
     return render_template( 'create_campaign.html', title = 'Create a campaign',
-        form=form, datetime = datetime )
+        form=form, datetime = datetime, user_pref_lang = user_pref_lang )
 
 @app.route( '/campaigns/<string:campaign_name>/participate' )
 def contributeToCampaign( campaign_name ):
     return render_template( 'campaign_entry.html', title = campaign_name + ' - Contribute',
-        campaign_name = campaign_name )
+        campaign_name = campaign_name, user_pref_lang = user_pref_lang )
 
 @app.route( '/login' )
 def login():
@@ -178,4 +195,6 @@ def updateCampaign( campaign_name ):
         form.end_date.data = campaign.end_date
     else:
         flash( f'Booo! { form.campaign_name.data } Could not be updated!', 'danger' )
-    return render_template( 'update_campaign.html', title = campaign_name + ' - Update', form = form )
+    return render_template( 'update_campaign.html', title = campaign_name + ' - Update', form = form,
+        user_pref_lang = user_pref_lang
+        )
