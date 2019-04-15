@@ -1,11 +1,20 @@
 from datetime import datetime
+import os
 
+import yaml
+import mwoauth
 import pycountry
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, url_for, flash, request, session
 
 from isa import app, db
 from isa.forms import CampaignForm, UpdateCampaignForm
 from isa.models import Campaign, Contribution, User
+
+
+# Load configuration from YAML file
+__dir__ = os.path.dirname(__file__)
+app.config.update(
+    yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
 
 
 def get_user_language_preferences(username):
@@ -15,30 +24,31 @@ def get_user_language_preferences(username):
     Keyword arguments:
     username -- the currently logged in user
     """
-    user = User.query.filter_by(username=username).first()
+    user = User.query.filter_by(username='Flash2003').first()
     user_pref_options = user.pref_lang
     return user_pref_options.split(',')
 
 
-# Should be for current logged in user
-user_pref_lang = []
-user_pref_lang = get_user_language_preferences('Flash2003')
-
-
 @app.route('/')
 def home():
-    return render_template('home.html', title='Home', user_pref_lang=user_pref_lang)
+    username = session.get('username', None)
+    return render_template('home.html',
+                           title='Home',
+                           username=username)
 
 
 @app.route('/campaigns')
 def getCampaigns():
     campaigns = Campaign.query.all()
+    username = session.get('username', None)
     return render_template('campaigns.html',
                            title='Campaigns',
+                           username=username,
                            campaigns=campaigns,
                            today_date=datetime.date(datetime.utcnow()),
                            datetime=datetime,
-                           user_pref_lang=user_pref_lang)
+                           user_pref_lang=get_user_language_preferences(
+                               session.get('username', None)))
 
 
 # TODO: The below functions are used to perform operations on the db tables
@@ -57,6 +67,8 @@ def getCampaigns():
 
 @app.route('/campaigns/<string:campaign_name>')
 def getCampaignById(campaign_name):
+    # We get the current user's user_name
+    username = session.get('username', None)
     # We select the campaign and the manager here
     campaign = Campaign.query.filter_by(campaign_name=campaign_name).first()
     campaign_manager = User.query.filter_by(id=campaign.user_id).first()
@@ -84,9 +96,11 @@ def getCampaignById(campaign_name):
     return render_template('campaign.html', title='Campaign - ' + campaign_name,
                            campaign=campaign,
                            campaign_manager=campaign_manager.username,
+                           username=username,
                            campaign_editors=campaign_editors,
                            campaign_contributions=campaign_contributions,
-                           user_pref_lang=user_pref_lang)
+                           user_pref_lang=get_user_language_preferences(
+                               session.get('username', None)))
 
 
 def get_country_from_code(country_code):
@@ -157,18 +171,73 @@ def CreateCampaign():
             flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
             return redirect(url_for('getCampaigns'))
     return render_template('create_campaign.html', title='Create a campaign',
-                           form=form, datetime=datetime, user_pref_lang=user_pref_lang)
+                           form=form, datetime=datetime,
+                           user_pref_lang=get_user_language_preferences(
+                               session.get('username', None)))
 
 
 @app.route('/campaigns/<string:campaign_name>/participate')
 def contributeToCampaign(campaign_name):
     return render_template('campaign_entry.html', title=campaign_name + ' - Contribute',
-                           campaign_name=campaign_name, user_pref_lang=user_pref_lang)
+                           campaign_name=campaign_name,
+                           user_pref_lang=get_user_language_preferences(
+                               session.get('username', None)))
 
 
 @app.route('/login')
 def login():
-    return 'login'
+    """Initiate an OAuth login.
+    
+    Call the MediaWiki server to get request secrets and then redirect the
+    user to the MediaWiki server to sign the request.
+    """
+    consumer_token = mwoauth.ConsumerToken(
+        app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
+    try:
+        redirect_string, request_token = mwoauth.initiate(
+            app.config['OAUTH_MWURI'], consumer_token)
+    except Exception:
+        app.logger.exception('mwoauth.initiate failed')
+        return redirect(url_for('home'))
+    else:
+        session['request_token'] = dict(zip(
+            request_token._fields, request_token))
+        return redirect(redirect_string)
+
+
+@app.route('/oauth-callback')
+def oauth_callback():
+    """OAuth handshake callback."""
+    if 'request_token' not in session:
+        flash(u'OAuth callback failed. Are cookies disabled?')
+        return redirect(url_for('home'))
+
+    consumer_token = mwoauth.ConsumerToken(
+        app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
+
+    try:
+        access_token = mwoauth.complete(
+            app.config['OAUTH_MWURI'],
+            consumer_token,
+            mwoauth.RequestToken(**session['request_token']),
+            request.query_string)
+
+        identity = mwoauth.identify(
+            app.config['OAUTH_MWURI'], consumer_token, access_token)
+    except Exception:
+        app.logger.exception('OAuth authentication failed')
+    else:
+        session['access_token'] = dict(zip(
+            access_token._fields, access_token))
+        session['username'] = identity['username']
+    return redirect(url_for('home'))
+
+
+@app.route('/logout')
+def logout():
+    """Log the user out by clearing their session."""
+    session.clear()
+    return redirect(url_for('home'))
 
 
 @app.route('/campaigns/<string:campaign_name>/update', methods=['GET', 'POST'])
@@ -204,4 +273,6 @@ def updateCampaign(campaign_name):
         flash('Booo! {} Could not be updated!'.format(
               form.campaign_name.data), 'danger')
     return render_template('update_campaign.html', title=campaign_name + ' - Update',
-                           form=form, user_pref_lang=user_pref_lang)
+                           form=form,
+                           user_pref_lang=get_user_language_preferences(
+                               session.get('username', None)))

@@ -8,3 +8,4 @@ isa/test_db.py
 test_db.py
 isa/static/sample.jpg
 .tox/
+config.yaml
