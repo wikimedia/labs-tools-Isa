@@ -17,6 +17,39 @@ app.config.update(
     yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
 
 
+def check_user_existence(username):
+    """
+    Check if user exists already in db
+
+    Keyword arguments:
+    username -- the currently logged in user
+    """
+    user_exists = User.query.filter_by(username=username).first()
+    if not user_exists:
+        return True
+    else:
+        return False
+
+
+def add_user_to_db(username):
+    """
+    Add user to database if they don't exist already
+
+    Keyword arguments:
+    username -- the currently logged in user
+    """
+    if check_user_existence(username):
+        user = User(username=username, pref_lang='en,fr')
+        db.session.add(user)
+        if testDbCommitSuccess():
+            return False
+        else:
+            return user.username
+    else:
+        user = User.query.filter_by(username=username).first()
+        return user.username
+
+
 def get_user_language_preferences(username):
     """
     Get user language preferences for currently logged in user
@@ -24,31 +57,35 @@ def get_user_language_preferences(username):
     Keyword arguments:
     username -- the currently logged in user
     """
-    user = User.query.filter_by(username='Flash2003').first()
-    user_pref_options = user.pref_lang
-    return user_pref_options.split(',')
+    user = User.query.filter_by(username=username).first()
+    if user is None:
+        return 'en,fr'.split(',')
+    else:
+        user_pref_options = user.pref_lang
+        return user_pref_options.split(',')
 
 
 @app.route('/')
 def home():
-    username = session.get('username', None)
+    username = session.get('username', 'Guest')
+    username_for_current_user = add_user_to_db(username)
     return render_template('home.html',
                            title='Home',
-                           username=username)
+                           username=username_for_current_user,
+                           user_pref_lang=get_user_language_preferences(username))
 
 
 @app.route('/campaigns')
 def getCampaigns():
     campaigns = Campaign.query.all()
-    username = session.get('username', None)
+    username = session.get('username', 'Guest')
     return render_template('campaigns.html',
                            title='Campaigns',
                            username=username,
                            campaigns=campaigns,
                            today_date=datetime.date(datetime.utcnow()),
                            datetime=datetime,
-                           user_pref_lang=get_user_language_preferences(
-                               session.get('username', None)))
+                           user_pref_lang=get_user_language_preferences(username))
 
 
 # TODO: The below functions are used to perform operations on the db tables
@@ -68,7 +105,7 @@ def getCampaigns():
 @app.route('/campaigns/<string:campaign_name>')
 def getCampaignById(campaign_name):
     # We get the current user's user_name
-    username = session.get('username', None)
+    username = session.get('username', 'Guest')
     # We select the campaign and the manager here
     campaign = Campaign.query.filter_by(campaign_name=campaign_name).first()
     campaign_manager = User.query.filter_by(id=campaign.user_id).first()
@@ -99,8 +136,7 @@ def getCampaignById(campaign_name):
                            username=username,
                            campaign_editors=campaign_editors,
                            campaign_contributions=campaign_contributions,
-                           user_pref_lang=get_user_language_preferences(
-                               session.get('username', None)))
+                           user_pref_lang=get_user_language_preferences(username))
 
 
 def get_country_from_code(country_code):
@@ -149,6 +185,8 @@ def testDbCommitSuccess():
 
 @app.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
+    # We get the current user's user_name
+    username = session.get('username', 'Guest')
     form = CampaignForm()
     if form.is_submitted():
         # We add the campaign information to the database
@@ -172,16 +210,16 @@ def CreateCampaign():
             return redirect(url_for('getCampaigns'))
     return render_template('create_campaign.html', title='Create a campaign',
                            form=form, datetime=datetime,
-                           user_pref_lang=get_user_language_preferences(
-                               session.get('username', None)))
+                           user_pref_lang=get_user_language_preferences(username))
 
 
 @app.route('/campaigns/<string:campaign_name>/participate')
 def contributeToCampaign(campaign_name):
+    # We get the current user's user_name
+    username = session.get('username', 'Guest')
     return render_template('campaign_entry.html', title=campaign_name + ' - Contribute',
                            campaign_name=campaign_name,
-                           user_pref_lang=get_user_language_preferences(
-                               session.get('username', None)))
+                           user_pref_lang=get_user_language_preferences(username))
 
 
 @app.route('/login')
@@ -230,6 +268,7 @@ def oauth_callback():
         session['access_token'] = dict(zip(
             access_token._fields, access_token))
         session['username'] = identity['username']
+        flash(' Welcome  {}!'.format(session['username']), 'success')
     return redirect(url_for('home'))
 
 
@@ -242,7 +281,10 @@ def logout():
 
 @app.route('/campaigns/<string:campaign_name>/update', methods=['GET', 'POST'])
 def updateCampaign(campaign_name):
+    # We get the current user's user_name
+    username = session.get('username', 'Guest')
     form = UpdateCampaignForm()
+
     # when the form is submitted, we update the campaign
     # TODO: Check if campaign is closed so that it cannot be edited again
     # This is a potential issue/Managerial
@@ -274,5 +316,4 @@ def updateCampaign(campaign_name):
               form.campaign_name.data), 'danger')
     return render_template('update_campaign.html', title=campaign_name + ' - Update',
                            form=form,
-                           user_pref_lang=get_user_language_preferences(
-                               session.get('username', None)))
+                           user_pref_lang=get_user_language_preferences(username))
