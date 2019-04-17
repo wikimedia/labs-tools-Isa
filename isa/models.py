@@ -1,9 +1,16 @@
 from datetime import datetime
 
-from isa import db
+from flask_login import UserMixin
+
+from isa import db, login_manager
 
 
-class User(db.Model):
+@login_manager.user_loader
+def user_loader(user_id):
+    return User.query.get(int(user_id))
+
+
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, index=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     pref_lang = db.Column(db.String(15), nullable=False)

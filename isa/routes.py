@@ -5,6 +5,7 @@ import yaml
 import mwoauth
 import pycountry
 from flask import render_template, redirect, url_for, flash, request, session
+from flask_login import current_user, login_user, logout_user
 
 from isa import app, db
 from isa.forms import CampaignForm, UpdateCampaignForm
@@ -67,7 +68,7 @@ def get_user_language_preferences(username):
 
 @app.route('/')
 def home():
-    username = session.get('username', 'Guest')
+    username = session.get('username', None)
     username_for_current_user = add_user_to_db(username)
     return render_template('home.html',
                            title='Home',
@@ -78,7 +79,7 @@ def home():
 @app.route('/campaigns')
 def getCampaigns():
     campaigns = Campaign.query.all()
-    username = session.get('username', 'Guest')
+    username = session.get('username', None)
     return render_template('campaigns.html',
                            title='Campaigns',
                            username=username,
@@ -105,7 +106,7 @@ def getCampaigns():
 @app.route('/campaigns/<string:campaign_name>')
 def getCampaignById(campaign_name):
     # We get the current user's user_name
-    username = session.get('username', 'Guest')
+    username = session.get('username', None)
     # We select the campaign and the manager here
     campaign = Campaign.query.filter_by(campaign_name=campaign_name).first()
     campaign_manager = User.query.filter_by(id=campaign.user_id).first()
@@ -186,7 +187,7 @@ def testDbCommitSuccess():
 @app.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name
-    username = session.get('username', 'Guest')
+    username = session.get('username', None)
     form = CampaignForm()
     if form.is_submitted():
         # We add the campaign information to the database
@@ -210,13 +211,14 @@ def CreateCampaign():
             return redirect(url_for('getCampaigns'))
     return render_template('create_campaign.html', title='Create a campaign',
                            form=form, datetime=datetime,
+                           username=username,
                            user_pref_lang=get_user_language_preferences(username))
 
 
 @app.route('/campaigns/<string:campaign_name>/participate')
 def contributeToCampaign(campaign_name):
     # We get the current user's user_name
-    username = session.get('username', 'Guest')
+    username = session.get('username', None)
     return render_template('campaign_entry.html', title=campaign_name + ' - Contribute',
                            campaign_name=campaign_name,
                            user_pref_lang=get_user_language_preferences(username))
@@ -229,18 +231,24 @@ def login():
     Call the MediaWiki server to get request secrets and then redirect the
     user to the MediaWiki server to sign the request.
     """
-    consumer_token = mwoauth.ConsumerToken(
-        app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
-    try:
-        redirect_string, request_token = mwoauth.initiate(
-            app.config['OAUTH_MWURI'], consumer_token)
-    except Exception:
-        app.logger.exception('mwoauth.initiate failed')
+    if current_user.is_authenticated:
         return redirect(url_for('home'))
     else:
-        session['request_token'] = dict(zip(
-            request_token._fields, request_token))
-        return redirect(redirect_string)
+        consumer_token = mwoauth.ConsumerToken(
+            app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
+        try:
+            redirect_string, request_token = mwoauth.initiate(
+                app.config['OAUTH_MWURI'], consumer_token)
+        except Exception:
+            app.logger.exception('mwoauth.initiate failed')
+            return redirect(url_for('home'))
+        else:
+            session['request_token'] = dict(zip(
+                request_token._fields, request_token))
+            user = User.query.filter_by(username=session.get('username', 'Guest')).first()
+            if user and user.username != 'Guest':
+                login_user(user)
+            return redirect(redirect_string)
 
 
 @app.route('/oauth-callback')
@@ -275,7 +283,9 @@ def oauth_callback():
 @app.route('/logout')
 def logout():
     """Log the user out by clearing their session."""
+    logout_user()
     session.clear()
+    flash('See you next time!', 'success')
     return redirect(url_for('home'))
 
 

@@ -4,3 +4,4 @@ flask-wtf==0.14.2
 pycountry==18.12.8
 pyyaml
 mwoauth
+flask-login
