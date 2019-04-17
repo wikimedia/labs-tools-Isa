@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -55,14 +54,14 @@
                                     <a class="nav-link" href="{{url_for( 'logout' )}}">
                                         <i class="fab fa-wikipedia-w"></i> Logout
                                     </a>
-                                {% elif username == False %}
+                                {% elif username != 'Guest' and username != False and username != None %}
+                                    <a class="nav-link" href="{{url_for( 'logout' )}}">
+                                        <i class="fab fa-wikipedia-w"></i> Logout
+                                    </a>
+                                {% else %}
                                     <a class="nav-link" href="{{url_for( 'login' )}}">
                                         <i class="fab fa-wikipedia-w"></i> Login
                                     </a>
-                                {% else %}
-                                    <a class="nav-link" href="{{url_for( 'logout' )}}">
-                                        <i class="fab fa-wikipedia-w"></i> Logout
-                                    </a>                                                                  
                                 {% endif %}
                             </li>
                     </ul> &nbsp;&nbsp;&nbsp;&nbsp;
