@@ -73,7 +73,8 @@ def home():
     return render_template('home.html',
                            title='Home',
                            username=username_for_current_user,
-                           user_pref_lang=get_user_language_preferences(username))
+                           user_pref_lang=get_user_language_preferences(username),
+                           current_user=current_user)
 
 
 @app.route('/campaigns')
@@ -86,7 +87,8 @@ def getCampaigns():
                            campaigns=campaigns,
                            today_date=datetime.date(datetime.utcnow()),
                            datetime=datetime,
-                           user_pref_lang=get_user_language_preferences(username))
+                           user_pref_lang=get_user_language_preferences(username),
+                           current_user=current_user)
 
 
 # TODO: The below functions are used to perform operations on the db tables
@@ -137,7 +139,8 @@ def getCampaignById(campaign_name):
                            username=username,
                            campaign_editors=campaign_editors,
                            campaign_contributions=campaign_contributions,
-                           user_pref_lang=get_user_language_preferences(username))
+                           user_pref_lang=get_user_language_preferences(username),
+                           current_user=current_user)
 
 
 def get_country_from_code(country_code):
@@ -212,7 +215,8 @@ def CreateCampaign():
     return render_template('create_campaign.html', title='Create a campaign',
                            form=form, datetime=datetime,
                            username=username,
-                           user_pref_lang=get_user_language_preferences(username))
+                           user_pref_lang=get_user_language_preferences(username),
+                           current_user=current_user)
 
 
 @app.route('/campaigns/<string:campaign_name>/participate')
@@ -221,7 +225,8 @@ def contributeToCampaign(campaign_name):
     username = session.get('username', None)
     return render_template('campaign_entry.html', title=campaign_name + ' - Contribute',
                            campaign_name=campaign_name,
-                           user_pref_lang=get_user_language_preferences(username))
+                           user_pref_lang=get_user_language_preferences(username),
+                           current_user=current_user)
 
 
 @app.route('/login')
@@ -326,4 +331,5 @@ def updateCampaign(campaign_name):
               form.campaign_name.data), 'danger')
     return render_template('update_campaign.html', title=campaign_name + ' - Update',
                            form=form,
-                           user_pref_lang=get_user_language_preferences(username))
+                           user_pref_lang=get_user_language_preferences(username),
+                           current_user=current_user)
