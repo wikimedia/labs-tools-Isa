@@ -200,7 +200,7 @@ def CreateCampaign():
         # commit failed
         if testDbCommitSuccess():
             flash('Campaign exists already in {}'.format(
-                  form.campaign_country.data), 'danger')
+                  get_country_from_code(form.campaign_country.data)), 'danger')
         else:
             flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
             return redirect(url_for('getCampaigns'))
