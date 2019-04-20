@@ -1,7 +1,5 @@
 from datetime import datetime
-import os
 
-import yaml
 import mwoauth
 import pycountry
 from flask import render_template, redirect, url_for, flash, request, session
@@ -10,12 +8,6 @@ from flask_login import current_user, login_user, logout_user
 from isa import app, db
 from isa.forms import CampaignForm, UpdateCampaignForm
 from isa.models import Campaign, Contribution, User
-
-
-# Load configuration from YAML file
-__dir__ = os.path.dirname(__file__)
-app.config.update(
-    yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
 
 
 def check_user_existence(username):
