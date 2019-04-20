@@ -183,6 +183,11 @@ def testDbCommitSuccess():
 def CreateCampaign():
     # We get the current user's user_name
     username = session.get('username', None)
+    if username:
+        current_user_id = User.query.filter_by(username=username).first().id
+    else:
+        # TODO: We have to decide which user should own arbitrary campaigns
+        current_user_id = User.query.filter_by(username='Guest').first().id
     form = CampaignForm()
     if form.is_submitted():
         # We add the campaign information to the database
@@ -195,7 +200,7 @@ def CreateCampaign():
             end_date=form.end_date.data,
             status=compute_campaign_status(form.end_date.data),
             description=form.description.data,
-            user_id=1)
+            user_id=current_user_id)
         db.session.add(campaign)
         # commit failed
         if testDbCommitSuccess():
