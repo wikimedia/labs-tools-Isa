@@ -303,7 +303,7 @@ def logout():
 @app.route('/campaigns/<string:campaign_name>/update', methods=['GET', 'POST'])
 def updateCampaign(campaign_name):
     # We get the current user's user_name
-    username = session.get('username', 'Guest')
+    username = session.get('username', None)
     form = UpdateCampaignForm()
 
     # when the form is submitted, we update the campaign
@@ -338,4 +338,5 @@ def updateCampaign(campaign_name):
     return render_template('update_campaign.html', title=campaign_name + ' - Update',
                            form=form,
                            user_pref_lang=get_user_language_preferences(username),
-                           current_user=current_user)
+                           current_user=current_user,
+                           username=username)

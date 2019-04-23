@@ -64,8 +64,11 @@
         </div>
     </div>
     <div class="form-group  d-flex justify-content-center">
-        <a href="{{url_for('contributeToCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-primary pt-0 mr-3" id="campaign_participate">Participate</a>
+        {% if username != 'Guest' and username != False and username != None %}
+            <a href="{{url_for('contributeToCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-primary pt-0 mr-3" id="campaign_participate">Participate</a>
+        {% endif %}
     </div>
+
 </div>
 </header>
 
