@@ -18,5 +18,8 @@ app.config['SECRET_KEY']
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
+login_manager.login_view = 'home'
+login_manager.login_message = 'You Need to Login to Access This Page!'
+login_manager.login_message_category = 'danger'
 
 from isa import routes

@@ -3,7 +3,7 @@ from datetime import datetime
 import mwoauth
 import pycountry
 from flask import render_template, redirect, url_for, flash, request, session
-from flask_login import current_user, login_user, logout_user
+from flask_login import current_user, login_required, login_user, logout_user
 
 from isa import app, db
 from isa.forms import CampaignForm, UpdateCampaignForm
@@ -180,6 +180,7 @@ def testDbCommitSuccess():
 
 
 @app.route('/campaigns/create', methods=['GET', 'POST'])
+@login_required
 def CreateCampaign():
     # We get the current user's user_name
     username = session.get('username', None)
