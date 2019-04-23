@@ -188,7 +188,7 @@ def CreateCampaign():
         current_user_id = User.query.filter_by(username=username).first().id
     else:
         # TODO: We have to decide which user should own arbitrary campaigns
-        current_user_id = User.query.filter_by(username='Guest').first().id
+        current_user_id = User.query.filter_by(username='Eugene233').first().id
     form = CampaignForm()
     if form.is_submitted():
         # we check campaign existence in db with form data
