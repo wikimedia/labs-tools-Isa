@@ -190,8 +190,15 @@ def CreateCampaign():
         current_user_id = User.query.filter_by(username='Guest').first().id
     form = CampaignForm()
     if form.is_submitted():
+        # we check campaign existence in db with form data
+        # NOTE: c is used below to reduce line length
+        c = Campaign.query.filter_by(campaign_name=form.campaign_name.data).first()
+        if c and c.campaign_name == form.campaign_name.data and c.campaign_country == form.campaign_country.data:
+            # here we flash a message and do nothing
+            flash('{} already exists in {}'.format(form.campaign_name.data,
+                  get_country_from_code(form.campaign_country.data)), 'danger')
+        # here we create a campaign
         # We add the campaign information to the database
-        # TODO: Add current userid for user who created campaign
         campaign = Campaign(
             campaign_country=get_country_from_code(form.campaign_country.data),
             campaign_name=form.campaign_name.data,
@@ -204,8 +211,8 @@ def CreateCampaign():
         db.session.add(campaign)
         # commit failed
         if testDbCommitSuccess():
-            flash('Campaign exists already in {}'.format(
-                  get_country_from_code(form.campaign_country.data)), 'danger')
+            flash('Sorry {} already exists'
+                  .format(form.campaign_name.data), 'danger')
         else:
             flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
             return redirect(url_for('getCampaigns'))
