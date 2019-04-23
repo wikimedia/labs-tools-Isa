@@ -225,6 +225,7 @@ def CreateCampaign():
 
 
 @app.route('/campaigns/<string:campaign_name>/participate')
+@login_required
 def contributeToCampaign(campaign_name):
     # We get the current user's user_name
     username = session.get('username', None)
