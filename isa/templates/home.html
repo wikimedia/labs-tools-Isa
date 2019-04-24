@@ -1,8 +1,43 @@
 {% extends "layout.html" %}
 {% block content%}
-<div id="site-welcome" class="jumbotron jumbotron-fluid">
-    <div class="d-inline-flex "></div>
-        <h1 class="display-6 ">ISA (Information Structured Acceleration) on Commons</h1>
-        <br> <br><br><br>
+<div id="site-welcome">
+    <div class="contianer">
+        <strong><h3 class=" pt-2 d-flex justify-content-center"> Isa </h3></strong>
+        <hr width="35%">
+        <h6 class="text-center"> Easily Add Information about Images on Wikimedia Commons</h6>
+        <hr width="17%">
+        <div class="text-center">
+            <small>
+                <strong>
+                    ISA is a fun tool aimed at the metadata enhancement of images contributed to the various Wiki Loves competitions on Wikimedia Commons. <br>
+                    It is being created as a way to quickly add structured information to a collection of pre-defined images.
+                </strong>
+            </small>
+        </div>
+        <br><br>
+        <div class="form-group  d-flex justify-content-center">
+            <a href="{{url_for( 'getCampaigns' )}}" class="btn btn-primary pt-0 mr-3" >EXPLORE CAMPAIGNS</a>
+        </div>
+    </div>
+    <hr width="90%">
+    <div class="container">
+        <strong><h4 class=" pt-2 d-flex justify-content-center"> About this tool </h4></strong>
+        <div class="text-center">
+            <small>
+                    In the long run, the intent behind the tool is to increase the use of the knowledge that resides within each image. The tool is aimed to assist in the usefulness and information of images donated to the Wiki Loves competitions.
+                    It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond.
+                    The tool is also designed to be a host of small competitions.
+                    ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project.
+
+                    ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for ‘put’ or 'place'.
+            </small>
+        </div>
+        <br>
+        {% if username != 'Guest' and username != False and username != None %}
+            <div class="form-group  d-flex justify-content-center">
+                <a href="{{url_for( 'CreateCampaign' )}}" class="btn btn-primary pt-0 mr-3" >Create a capaign</a>
+            </div>
+        {% endif %}
+    </div>
 </div>
 {% endblock content%}
