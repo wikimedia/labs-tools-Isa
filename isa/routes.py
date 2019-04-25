@@ -125,6 +125,7 @@ def getCampaignById(campaign_name):
     for contrib in all_contributions:
         if (contrib.campaign_id == campaign.id):
             campaign_contributions += 1
+    countries = [(country.alpha_2, country.name) for country in pycountry.countries]
     return render_template('campaign.html', title='Campaign - ' + campaign_name,
                            campaign=campaign,
                            campaign_manager=campaign_manager.username,
@@ -132,7 +133,8 @@ def getCampaignById(campaign_name):
                            campaign_editors=campaign_editors,
                            campaign_contributions=campaign_contributions,
                            user_pref_lang=get_user_language_preferences(username),
-                           current_user=current_user)
+                           current_user=current_user,
+                           countries=countries)
 
 
 def get_country_from_code(country_code):

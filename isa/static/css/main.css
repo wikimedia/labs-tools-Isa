@@ -25,8 +25,9 @@
 }
 
 .main-page {
-    padding: 70px 0;
-  }
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
 
 .main-page h1 {
     font-weight: 300;
@@ -48,55 +49,41 @@
   margin: 10px 10px 10px 0;
 }
 
+
 .table {
-  width: 100%;
-  border-collapse: separate;
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+  width: 95%;
+  padding-top: 0px;
+}
+.table th {
+	padding: 2px;
+	background-color: #dedede;
+}
+.table td {
+	padding: 2px;
+	background-color: #ffffff;
+}
+
+.last_column{
+  float: right;
 }
 
 #campaign_detail_table{
   vertical-align:top;
-  padding: 1px;
+  padding: 0px;
+}
+
+#my_contributions_table{
+  width: inherit;
 }
 
 #campaign_categories{
   height: 20%;
 }
 
-.table td  th{
-  text-align: center;
-}
-
-.table tbody tr .table-link-cell a, .table thead tr .table-link-cell a {
-  color: #6a6a6a;
-  display: block;
-  margin: 0;
-  text-decoration: none;
-  text-align: left;
-  padding: 8px 8px;
-}
-
 .campaign-link {
   margin-top: 15px;
-}
-
-.table thead tr th:first-child, .table thead tr th:last-child {
-  border-left: none;
-  border-right: none;
-}
-
-.table thead tr th {
-  border: none;
-  text-align: left;
-  font-size: 14px;
-  font-weight: 800;
-  vertical-align: bottom;
-  color: grey;
-}
-
-tr {
-  line-height: 7px;
-  min-height: 7px;
-  height: 7px;
 }
 
 div.dataTables_wrapper div.dataTables_filter input {
@@ -178,12 +165,15 @@ small {
   padding: 0px;
 }
 
-#image_details_table {
-  width: 500px;
+#image_details_left_table {
   float: left;
   margin-right: -400pxpx;
   margin-left: 20px;
   border-bottom: 1px solid black
+}
+
+#image_details_left_right_table {
+  float: right
 }
 
 .slide-control {
@@ -222,4 +212,59 @@ small {
   float: right;
   margin-right: 70px;
   margin-top: 10px;
+}
+
+#campaign_nav{
+  height: 50px;
+  padding-top: 2px;
+}
+
+#campaign_stats_table{
+  padding-top: 20px;
+}
+
+#get_started_btn{
+  height: 30px;
+  padding-top: 0px;
+}
+
+select.selectpicker {
+  background: transparent;
+  width: 150px;
+  padding: 2px;
+  font-size: 13px;
+  line-height: 1;
+  border: 1px solid black;
+  border-radius: 0.5;
+  height: 34px;
+  -webkit-appearance: none;
+  font-family:helvetica-roman;
+  color:#9C9C9C;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  text-indent: 20px;
+  text-overflow: '';
+  text-align: center;
+}
+
+.btn-new {
+  background-color: white;
+  width: 150px;
+}
+
+.select-option{
+  max-width: inherit;
+}
+
+.campaign_progress_text{
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+}
+
+#get_started_btn {
+  margin-right: 0px;
+  margin-top: 4px;
+  margin-left: 215px;
 }

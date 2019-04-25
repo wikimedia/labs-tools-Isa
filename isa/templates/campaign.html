@@ -1,76 +1,147 @@
 {% extends "layout.html" %}
 {% block content%}
-<br>
-{% if campaign_manager == username %}
-    <div class="form-group">
-        <a href="{{url_for('updateCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-warning pt-0 ml-3" id="edit_campaign">Edit Campaign</a>
-    </div>
-{% endif %}
-<header class="main-page">
-        <div class=" d-flex justify-content-center">
-            <h1>
-                {{ campaign.campaign_name }}
-            </h1>
+<div id="campaign_nav" class=" text-center pb-2  navbar-light bg-light">
+    <div class="container">
+        <div class="row">
+        <div class="ml-auto">
+            <small> <strong>View images from </strong> </small>
+             <select class="fas fa-caret-down selectpicker btn-new" data-style="btn-new">
+                <option class="select-option" value= "all" SELECTED>All Countries</option>"
+                <!-- Specify all countries using pycountry -->
+                {% for country in countries %}
+                    <option value= "{{country[1]}}">{{country[1]}}</option>
+                {% endfor %}
+            </select>
         </div>
-</header>
-<div class="d-flex specifictd justify-content-center container">
-        <table class="table mt-15 table-border table-responsive-sm" id="campaign_detail_table">
-            <tbody>
-                <tr>
-                    <td>Campaign For </td>
-                    <td>{{campaign.campaign_name}}</td>
-                </tr>
-                <tr>
-                    <td>Country </td>
-                    <td>{{campaign.campaign_country}}</td>
-                </tr>
-                <tr>
-                    <td nowrap>Commons Categories</td>
-                    <td nowrap>{{campaign.categories}}</td>
-                </tr>
-                <tr>
-                    <td>About Campaign</td>
-                    <td>{{campaign.description}}</td>
-                </tr>
-                    <td>Campaign Manger</td>
-                    <td> <a href="https://meta.wikimedia.org/wiki/User:{{campaign_manager}}">{{campaign_manager}}</a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+        <a id="get_started_btn" href="{{url_for('contributeToCampaign', campaign_name=campaign.campaign_name ) }}" class="ml-auto mr-auto btn btn-primary" >Get Started</a>
+        </div>
+    </div>
 </div>
-
-<div class=" d-flex justify-content-center">
-    <h3>
-        <u>{{ campaign.campaign_name }} Statistics</u>
-    </h3>
-</div>
-<br>
 <div class="container">
-    <div class="row  d-flex justify-content-center">
-        <div class="stat-display">
-            <div class="stat-display__stat">
-                <div class="stat-display__value">{{ campaign_contributions }} </div>
-                <small class="">Contributions</small>
-            </div>     
+    <header class="main-page">
+        <div class="pt-0 d-flex justify-content-center">
+            <h3>
+                {{ campaign.campaign_name }}
+            </h3>
         </div>
-        <div class="stat-display">
-                <div class="stat-display__stat">
-                    <div class="stat-display__value"> {{ campaign_editors }} </div>
-                    <small class="next_small">Editors</small>
-                </div>     
+    </header>
+    <div class="text-center pb-3">
+        <h6><strong>START DATE: </strong> {{campaign.start_date}}</h6>
+        <h6><strong>END DATE: </strong> {{campaign.end_date}}</h6>
+    </div>
+
+    <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
+        <small class="campaign_progress_text"><strong>Campaign Progress</strong></small>
+        <br>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="stat-display">
+                    <div class="stat-display__stat">
+                        <div class="stat-display__value">{{ campaign_contributions }} </div>
+                        <small class="">Contributions</small>
+                    </div>
+                </div>
+                <div class="stat-display">
+                        <div class="stat-display__stat">
+                            <div class="stat-display__value"> {{ campaign_editors }} </div>
+                            <small class="next_small">Editors</small>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 ml-auto">
+                    <div class="pb-3 ml-auto">Top Contributors</div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Contributor</th>
+                            <th scope="col">Images Improved</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-6 mr-auto">
+                    <div class="pb-3 ml-auto">Most improved Countries</div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Images Improved</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="pt-3 mr-auto">
+            <a id="" href="#" class="btn btn-primary" >Download Complete Stats</a>
         </div>
     </div>
-    <div class="form-group  d-flex justify-content-center">
-        {% if username != 'Guest' and username != False and username != None %}
-            <a href="{{url_for('contributeToCampaign', campaign_name=campaign.campaign_name ) }}" class="btn btn-primary pt-0 mr-3" id="campaign_participate">Participate</a>
+    <br>
+    <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col ml-auto">
+                    <div class="pb-3 ml-auto">My Contributions</div>
+                    <table id="my_contributions_table" class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Images Improved</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="main-page">
+            <div class="pt-0 text-center">
+                <h3>
+                    More about {{ campaign.campaign_name }}
+                </h3>
+            </div>
+        </header>
+        <div class="text-center">
+            <h6><strong>Maanager: </strong><a href="https://meta.wikimedia.org/wiki/User:{{campaign_manager}}">{{campaign_manager}}</a></h6>
+        </div>
+        <div class="text-center">
+            <small>
+                <strong>
+                    {{campaign.description}}
+                </strong>
+            </small>
+        </div>
+        {% if campaign_manager == username %}
+            <div class=" pt-5 text-center mr-auto ml-auto">
+                <a id="" href="{{url_for('updateCampaign', campaign_name=campaign.campaign_name)}}" class="btn btn-danger" >Edit Campaign</a>
+            </div>
         {% endif %}
     </div>
-
 </div>
-</header>
-
+</div>
 {% endblock content%}
