@@ -16,7 +16,7 @@
     border-bottom: 3px solid transparent;
 }
   
-.topnav a:hover {
+.nav-link:hover {
     border-bottom: 3px solid red;
 }
   

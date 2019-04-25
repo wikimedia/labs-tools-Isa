@@ -24,8 +24,14 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-    
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a id="logo" href="{{url_for( 'home' )}}" >
+                                <img style='width:30px;height:30px;'  src="https://upload.wikimedia.org/wikipedia/commons/4/4c/ISA_Structured_Data_logo.png">
+                            </a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav mr-auto ">
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for( 'home' )}}" id="">
