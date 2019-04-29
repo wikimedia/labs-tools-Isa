@@ -97,12 +97,12 @@ def getCampaigns():
 #     return user_contribution_sum
 
 
-@app.route('/campaigns/<string:campaign_name>')
-def getCampaignById(campaign_name):
+@app.route('/campaigns/<int:id>')
+def getCampaignById(id):
     # We get the current user's user_name
     username = session.get('username', None)
     # We select the campaign and the manager here
-    campaign = Campaign.query.filter_by(campaign_name=campaign_name).first()
+    campaign = Campaign.query.filter_by(id=id).first()
     campaign_manager = User.query.filter_by(id=campaign.user_id).first()
     # We get all the contributions from the ddatabase
     all_contributions = Contribution.query.all()
@@ -126,7 +126,7 @@ def getCampaignById(campaign_name):
         if (contrib.campaign_id == campaign.id):
             campaign_contributions += 1
     countries = [(country.alpha_2, country.name) for country in pycountry.countries]
-    return render_template('campaign.html', title='Campaign - ' + campaign_name,
+    return render_template('campaign.html', title='Campaign - ' + campaign.campaign_name,
                            campaign=campaign,
                            campaign_manager=campaign_manager.username,
                            username=username,
@@ -226,13 +226,14 @@ def CreateCampaign():
                            current_user=current_user)
 
 
-@app.route('/campaigns/<string:campaign_name>/participate')
+@app.route('/campaigns/<int:id>/participate')
 @login_required
-def contributeToCampaign(campaign_name):
+def contributeToCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
-    return render_template('campaign_entry.html', title=campaign_name + ' - Contribute',
-                           campaign_name=campaign_name,
+    campaign = Campaign.query.filter_by(id=id).first()
+    return render_template('campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
+                           id=id,
                            user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user)
 
@@ -302,8 +303,8 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route('/campaigns/<string:campaign_name>/update', methods=['GET', 'POST'])
-def updateCampaign(campaign_name):
+@app.route('/campaigns/<int:id>/update', methods=['GET', 'POST'])
+def updateCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
     form = UpdateCampaignForm()
@@ -312,7 +313,7 @@ def updateCampaign(campaign_name):
     # TODO: Check if campaign is closed so that it cannot be edited again
     # This is a potential issue/Managerial
     if form.is_submitted():
-        campaign = Campaign.query.filter_by(campaign_name=campaign_name).first()
+        campaign = Campaign.query.filter_by(id=id).first()
         campaign.campaign_name = form.campaign_name.data
         campaign.description = form.description.data
         campaign.categories = form.categories.data
@@ -327,7 +328,7 @@ def updateCampaign(campaign_name):
     # User requests to edit so we update the form with Campaign details
     elif request.method == 'GET':
         # we get the campaign data to place in form fields
-        campaign = Campaign.query.filter_by(campaign_name=campaign_name).first()
+        campaign = Campaign.query.filter_by(id=id).first()
         form.campaign_name.data = campaign.campaign_name
         form.description.data = campaign.description
         form.categories.data = campaign.categories
@@ -337,7 +338,7 @@ def updateCampaign(campaign_name):
     else:
         flash('Booo! {} Could not be updated!'.format(
               form.campaign_name.data), 'danger')
-    return render_template('update_campaign.html', title=campaign_name + ' - Update',
+    return render_template('update_campaign.html', title=campaign.campaign_name + ' - Update',
                            form=form,
                            user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user,

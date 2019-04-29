@@ -13,7 +13,7 @@
                 {% endfor %}
             </select>
         </div>
-        <a id="get_started_btn" href="{{url_for('contributeToCampaign', campaign_name=campaign.campaign_name ) }}" class="ml-auto mr-auto btn btn-primary" >Get Started</a>
+        <a id="get_started_btn" href="{{url_for('contributeToCampaign', id=campaign.id ) }}" class="ml-auto mr-auto btn btn-primary" >Get Started</a>
         </div>
     </div>
 </div>
@@ -138,7 +138,7 @@
         </div>
         {% if campaign_manager == username %}
             <div class=" pt-5 text-center mr-auto ml-auto">
-                <a id="" href="{{url_for('updateCampaign', campaign_name=campaign.campaign_name)}}" class="btn btn-danger" >Edit Campaign</a>
+                <a id="" href="{{url_for('updateCampaign', id=campaign.id)}}" class="btn btn-danger" >Edit Campaign</a>
             </div>
         {% endif %}
     </div>
