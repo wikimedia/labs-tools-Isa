@@ -183,13 +183,12 @@ def testDbCommitSuccess():
 
 @app.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
-    # We verify if current user is not authenticated
-    if not current_user.is_authenticated:
+    # We get the current user's user_name
+    username = session.get('username', None)
+    if not username:
         flash('You need to Login to create a campaign', 'danger')
         return redirect(url_for('getCampaigns'))
     else:
-        # We get the current user's user_name
-        username = session.get('username', None)
         if username:
             current_user_id = User.query.filter_by(username=username).first().id
         else:
