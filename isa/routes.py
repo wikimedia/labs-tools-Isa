@@ -182,8 +182,11 @@ def testDbCommitSuccess():
 
 
 @app.route('/campaigns/create', methods=['GET', 'POST'])
-@login_required
 def CreateCampaign():
+    # We verify if current user is not authenticated
+    if not current_user.is_authenticated:
+        flash('You need to Login to create a campaign', 'danger')
+        return redirect(url_for('getCampaigns'))
     # We get the current user's user_name
     username = session.get('username', None)
     if username:
@@ -203,7 +206,6 @@ def CreateCampaign():
         # here we create a campaign
         # We add the campaign information to the database
         campaign = Campaign(
-            campaign_country=get_country_from_code(form.campaign_country.data),
             campaign_name=form.campaign_name.data,
             categories=form.categories.data,
             start_date=form.start_date.data,
@@ -317,7 +319,6 @@ def updateCampaign(id):
         campaign.campaign_name = form.campaign_name.data
         campaign.description = form.description.data
         campaign.categories = form.categories.data
-        campaign.campaign_country = get_country_from_code(form.campaign_country.data)
         campaign.start_date = form.start_date.data
         campaign.end_date = form.end_date.data
         if testDbCommitSuccess():

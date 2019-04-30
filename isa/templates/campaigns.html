@@ -19,7 +19,6 @@
                     <thead class="thead-dark">
                        <tr>
                           <th scope="col">Campaign</th>
-                          <th scope="col">Country</th>
                           <th scope="col">Start Date</th>
                           <th scope="col">End Date</th>
                           <th scope="col">Status</th>
@@ -32,14 +31,6 @@
                                   <a class="campaign-link" href="{{url_for('getCampaignById', id=campaign.id) }}">
                                       <span class="">
                                           {{ campaign.campaign_name }}
-                                      </span>
-                                  </a>
-                              </td>
-  
-                              <td class="table-link-cell">
-                                  <a class="campaign-link" href="{{url_for('getCampaignById', id=campaign.id) }}">
-                                      <span class="">
-                                          {{ campaign.campaign_country }}
                                       </span>
                                   </a>
                               </td>

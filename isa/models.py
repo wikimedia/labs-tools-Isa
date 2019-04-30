@@ -43,7 +43,6 @@ class Contribution(db.Model):
 
 class Campaign(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    campaign_country = db.Column(db.String(15), unique=True, nullable=False)
     campaign_name = db.Column(db.String(15), unique=True, nullable=False)
     categories = db.Column(db.Text, nullable=False)
     start_date = db.Column(db.Date, nullable=False,
