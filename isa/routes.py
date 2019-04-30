@@ -187,45 +187,39 @@ def CreateCampaign():
     if not current_user.is_authenticated:
         flash('You need to Login to create a campaign', 'danger')
         return redirect(url_for('getCampaigns'))
-    # We get the current user's user_name
-    username = session.get('username', None)
-    if username:
-        current_user_id = User.query.filter_by(username=username).first().id
     else:
-        # TODO: We have to decide which user should own arbitrary campaigns
-        current_user_id = User.query.filter_by(username='Eugene233').first().id
-    form = CampaignForm()
-    if form.is_submitted():
-        # we check campaign existence in db with form data
-        # NOTE: c is used below to reduce line length
-        c = Campaign.query.filter_by(campaign_name=form.campaign_name.data).first()
-        if c and c.campaign_name == form.campaign_name.data and c.campaign_country == form.campaign_country.data:
-            # here we flash a message and do nothing
-            flash('{} already exists in {}'.format(form.campaign_name.data,
-                  get_country_from_code(form.campaign_country.data)), 'danger')
-        # here we create a campaign
-        # We add the campaign information to the database
-        campaign = Campaign(
-            campaign_name=form.campaign_name.data,
-            categories=form.categories.data,
-            start_date=form.start_date.data,
-            end_date=form.end_date.data,
-            status=compute_campaign_status(form.end_date.data),
-            description=form.description.data,
-            user_id=current_user_id)
-        db.session.add(campaign)
-        # commit failed
-        if testDbCommitSuccess():
-            flash('Sorry {} already exists'
-                  .format(form.campaign_name.data), 'danger')
+        # We get the current user's user_name
+        username = session.get('username', None)
+        if username:
+            current_user_id = User.query.filter_by(username=username).first().id
         else:
-            flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
-            return redirect(url_for('getCampaigns'))
-    return render_template('create_campaign.html', title='Create a campaign',
-                           form=form, datetime=datetime,
-                           username=username,
-                           user_pref_lang=get_user_language_preferences(username),
-                           current_user=current_user)
+            # TODO: We have to decide which user should own arbitrary campaigns
+            current_user_id = User.query.filter_by(username='Eugene233').first().id
+        form = CampaignForm()
+        if form.is_submitted():
+            # here we create a campaign
+            # We add the campaign information to the database
+            campaign = Campaign(
+                campaign_name=form.campaign_name.data,
+                categories=form.categories.data,
+                start_date=form.start_date.data,
+                end_date=form.end_date.data,
+                status=compute_campaign_status(form.end_date.data),
+                description=form.description.data,
+                user_id=current_user_id)
+            db.session.add(campaign)
+            # commit failed
+            if testDbCommitSuccess():
+                flash('Sorry {} already exists'.format(
+                      form.campaign_name.data), 'danger')
+            else:
+                flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
+                return redirect(url_for('getCampaigns'))
+        return render_template('create_campaign.html', title='Create a campaign',
+                               form=form, datetime=datetime,
+                               username=username,
+                               user_pref_lang=get_user_language_preferences(username),
+                               current_user=current_user)
 
 
 @app.route('/campaigns/<int:id>/participate')
@@ -333,7 +327,6 @@ def updateCampaign(id):
         form.campaign_name.data = campaign.campaign_name
         form.description.data = campaign.description
         form.categories.data = campaign.categories
-        form.campaign_country.data = campaign.campaign_country
         form.start_date.data = campaign.start_date
         form.end_date.data = campaign.end_date
     else:
