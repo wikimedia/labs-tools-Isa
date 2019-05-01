@@ -18,14 +18,21 @@
     </div>
 </div>
 <div class="container">
-    <header class="main-page">
+    <header class="main-page pb-0">
         <div class="pt-0 d-flex justify-content-center">
             <h3>
                 {{ campaign.campaign_name }}
             </h3>
         </div>
     </header>
-    <div class="text-center pb-3">
+    <div class="text-center pt-0">
+        <small>
+            <strong>
+                {{campaign.short_description}}
+            </strong>
+        </small>
+    </div>
+    <div class="text-center pb-3 pt-4">
         <h6><strong>START DATE: </strong> {{campaign.start_date}}</h6>
         <h6><strong>END DATE: </strong> {{campaign.end_date}}</h6>
     </div>
@@ -132,7 +139,7 @@
         <div class="text-center">
             <small>
                 <strong>
-                    {{campaign.description}}
+                    {{campaign.long_description}}
                 </strong>
             </small>
         </div>

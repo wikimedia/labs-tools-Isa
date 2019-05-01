@@ -50,13 +50,19 @@ class Campaign(db.Model):
     end_date = db.Column(db.Date, nullable=False,
                          default=datetime.now().strftime('%Y-%m-%d'))
     status = db.Column(db.Boolean, nullable=False, default=bool('False'))
-    description = db.Column(db.Text, nullable=False)
+    short_description = db.Column(db.Text, nullable=False)
+    long_description = db.Column(db.Text, nullable=False)
     categories = db.Column(db.Text, nullable=False)
+    manager_name = db.Column(db.String(15), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    depicts_metadata = db.Column(db.Boolean)
+    captions_metadata = db.Column(db.Boolean)
     contribution = db.relationship('Contribution', backref='made_on', lazy=True)
 
     def __repr__(self):
         # This is what is shown when object is printed
         return "Campaign( {}, {}".format(
                self.campaign_name,
-               self.campaign_country)
+               self.categories,
+               self.depicts_metadata,
+               self.captions_metadata)

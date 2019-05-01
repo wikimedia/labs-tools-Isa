@@ -204,7 +204,11 @@ def CreateCampaign():
                 start_date=form.start_date.data,
                 end_date=form.end_date.data,
                 status=compute_campaign_status(form.end_date.data),
-                description=form.description.data,
+                short_description=form.short_description.data,
+                long_description=form.long_description.data,
+                depicts_metadata=form.depicts_metadata.data,
+                captions_metadata=form.captions_metadata.data,
+                manager_name=form.manager_name.data,
                 user_id=current_user_id)
             db.session.add(campaign)
             # commit failed
@@ -303,36 +307,48 @@ def updateCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
     form = UpdateCampaignForm()
-
-    # when the form is submitted, we update the campaign
-    # TODO: Check if campaign is closed so that it cannot be edited again
-    # This is a potential issue/Managerial
-    if form.is_submitted():
-        campaign = Campaign.query.filter_by(id=id).first()
-        campaign.campaign_name = form.campaign_name.data
-        campaign.description = form.description.data
-        campaign.categories = form.categories.data
-        campaign.start_date = form.start_date.data
-        campaign.end_date = form.end_date.data
-        if testDbCommitSuccess():
-            flash('Please check the country for this Campaign!', 'danger')
-        else:
-            flash('Updated Succesfull!', 'success')
-            return redirect(url_for('getCampaigns'))
-    # User requests to edit so we update the form with Campaign details
-    elif request.method == 'GET':
-        # we get the campaign data to place in form fields
-        campaign = Campaign.query.filter_by(id=id).first()
-        form.campaign_name.data = campaign.campaign_name
-        form.description.data = campaign.description
-        form.categories.data = campaign.categories
-        form.start_date.data = campaign.start_date
-        form.end_date.data = campaign.end_date
+    if not username:
+        flash('You need to Login to update a campaign', 'danger')
+        return redirect(url_for('getCampaigns'))
     else:
-        flash('Booo! {} Could not be updated!'.format(
-              form.campaign_name.data), 'danger')
-    return render_template('update_campaign.html', title=campaign.campaign_name + ' - Update',
-                           form=form,
-                           user_pref_lang=get_user_language_preferences(username),
-                           current_user=current_user,
-                           username=username)
+        # when the form is submitted, we update the campaign
+        # TODO: Check if campaign is closed so that it cannot be edited again
+        # This is a potential issue/Managerial
+        if form.is_submitted():
+            campaign = Campaign.query.filter_by(id=id).first()
+            campaign.campaign_name = form.campaign_name.data
+            campaign.short_description = form.short_description.data
+            campaign.long_description = form.long_description.data
+            campaign.manager_name = form.manager_name.data
+            campaign.depicts_metadata = form.depicts_metadata.data
+            campaign.captions_metadata = form.captions_metadata.data
+            campaign.categories = form.categories.data
+            campaign.start_date = form.start_date.data
+            campaign.end_date = form.end_date.data
+            if testDbCommitSuccess():
+                flash('Please check the country for this Campaign!', 'danger')
+            else:
+                flash('Updated Succesfull!', 'success')
+                return redirect(url_for('getCampaigns'))
+        # User requests to edit so we update the form with Campaign details
+        elif request.method == 'GET':
+            # we get the campaign data to place in form fields
+            campaign = Campaign.query.filter_by(id=id).first()
+            form.campaign_name.data = campaign.campaign_name
+            form.short_description.data = campaign.short_description
+            form.long_description.data = campaign.long_description
+            form.categories.data = campaign.categories
+            form.manager_name.data = campaign.manager_name
+            form.start_date.data = campaign.start_date
+            form.depicts_metadata.data = campaign.depicts_metadata
+            form.captions_metadata.data = campaign.captions_metadata
+            form.end_date.data = campaign.end_date
+        else:
+            flash('Booo! {} Could not be updated!'.format(
+                form.campaign_name.data), 'danger')
+        return render_template('update_campaign.html', title=campaign.campaign_name + ' - Update',
+                               campaign=campaign,
+                               form=form,
+                               user_pref_lang=get_user_language_preferences(username),
+                               current_user=current_user,
+                               username=username)
