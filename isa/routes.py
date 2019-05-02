@@ -7,6 +7,7 @@ from flask_login import current_user, login_required, login_user, logout_user
 
 from isa import app, db
 from isa.forms import CampaignForm, CampaignEntryForm, UpdateCampaignForm
+from isa.get_category_items import get_category_items
 from isa.models import Campaign, Contribution, User
 
 
@@ -225,20 +226,68 @@ def CreateCampaign():
                                current_user=current_user)
 
 
+def get_campaign_category_list(categories):
+    """
+    Extract categoriues for a given campaign
+
+    Keyword arguments:
+    campaign_id -- The id of the campaign
+    """
+    if categories is None:
+        return ''
+    else:
+        return categories.split(',')
+
+
+def combine_campign_content(content_list):
+    campaign_content = []
+    campaign_content.append(content_list)
+    return campaign_content
+
+
+def get_all_campaign_images(query_data):
+    campaign_image_list = []
+    for data in query_data:
+        for category_member in data['query']['categorymembers']:
+            campaign_image_list.append(category_member['title'])
+    return campaign_image_list
+
+
+def get_actual_image_file_names(image_list):
+    image_names = []
+    for image in image_list:
+        image_name_without_file = image.split(':')[1]
+        # we now replaces spaces with underscore in image name
+
+        image_names.append(image_name_without_file.replace(" ", "_"))
+    return image_names
+
+
 @app.route('/campaigns/<int:id>/participate', methods=['GET', 'POST'])
 def contributeToCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
     if not username:
-        flash('You need to Login participate', 'info')
+        flash('You need to Login to update a campaign', 'danger')
         return redirect(url_for('getCampaigns'))
     else:
         campaign = Campaign.query.filter_by(id=id).first()
         form = CampaignEntryForm()
+        campaign_categories = get_campaign_category_list(campaign.categories)
+        # will homd the data about the categores
+        campaign_partcicipate_data = []
+        # we now get content through api call for the images
+        for category in campaign_categories:
+            category_data = get_category_items(category)
+            campaign_partcicipate_data.append(category_data)
+        all_campaign_images = get_all_campaign_images(campaign_partcicipate_data)
+        all_campaign_image_names = get_actual_image_file_names(all_campaign_images)
         return render_template('campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
                                id=id,
                                form=form,
+                               all_campaign_image_names=all_campaign_image_names,
                                campaign=campaign,
+                               campaign_partcicipate_data=campaign_partcicipate_data,
                                user_pref_lang=get_user_language_preferences(username),
                                current_user=current_user)
 

@@ -3,15 +3,13 @@
 <div class="container form-group">
     <a href="{{url_for('getCampaignById', id=campaign.id ) }}" class="fas fa-caret-left btn btn-light pt-0 mt-1 ml-4" id="campaign_back_button">  Campaign Home</a>
 </div>
-
-
 <div class="container">
     <div class="text-center pt-4 mr-auto">
-        <img id="edited_image" src="/static/default.jpg" alt="Image Undergoing Edit">
+        <img id="edited_image" src=" https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[3]}}" alt="Image Undergoing Edit">
     </div>
     <div id="edit_image_info" class="mr-auto pb-2 navbar-light bg-light text-center">
         <div class="text-left pl-2">
-            <small><strong>File:</strong>&nbsp; File:La_rencontre.jpg</small> <br>
+            <small><strong>File:</strong>&nbsp; {{all_campaign_image_names[0]}}</small> <br>
             <small><strong>Description:</strong>&nbsp; This is a sample image which depicts love</small> <br>
             <small><strong>Category:</strong>&nbsp; Wiki loves love in Cameroon | Love depicts</small> <br>
             <small><strong>Author:</strong>&nbsp; Igor et Mona</small>
