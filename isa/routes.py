@@ -6,7 +6,7 @@ from flask import render_template, redirect, url_for, flash, request, session
 from flask_login import current_user, login_required, login_user, logout_user
 
 from isa import app, db
-from isa.forms import CampaignForm, UpdateCampaignForm
+from isa.forms import CampaignForm, CampaignEntryForm, UpdateCampaignForm
 from isa.models import Campaign, Contribution, User
 
 
@@ -186,7 +186,7 @@ def CreateCampaign():
     # We get the current user's user_name
     username = session.get('username', None)
     if not username:
-        flash('You need to Login to create a campaign', 'danger')
+        flash('You need to Login to create a campaign', 'info')
         return redirect(url_for('getCampaigns'))
     else:
         if username:
@@ -225,16 +225,22 @@ def CreateCampaign():
                                current_user=current_user)
 
 
-@app.route('/campaigns/<int:id>/participate')
-@login_required
+@app.route('/campaigns/<int:id>/participate', methods=['GET', 'POST'])
 def contributeToCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
-    campaign = Campaign.query.filter_by(id=id).first()
-    return render_template('campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
-                           id=id,
-                           user_pref_lang=get_user_language_preferences(username),
-                           current_user=current_user)
+    if not username:
+        flash('You need to Login participate', 'info')
+        return redirect(url_for('getCampaigns'))
+    else:
+        campaign = Campaign.query.filter_by(id=id).first()
+        form = CampaignEntryForm()
+        return render_template('campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
+                               id=id,
+                               form=form,
+                               campaign=campaign,
+                               user_pref_lang=get_user_language_preferences(username),
+                               current_user=current_user)
 
 
 @app.route('/login')

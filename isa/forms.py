@@ -42,3 +42,10 @@ class UpdateCampaignForm(FlaskForm):
     long_description = StringField('Long description of Campaign(full about info)',
                                    widget=widgets.TextArea())
     submit = SubmitField('Update Campaign')
+
+
+class CampaignEntryForm(FlaskForm):
+    depicts = StringField(validators=[DataRequired(),
+                          Length(min=2, max=20)])
+    caption = StringField(widget=widgets.TextArea())
+    submit = SubmitField('Save')

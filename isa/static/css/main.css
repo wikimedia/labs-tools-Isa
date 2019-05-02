@@ -103,6 +103,7 @@ form {
   width: 50%;
   margin:10px;
   padding:10px;
+  padding-bottom: 1px;
 }
 
 
@@ -156,7 +157,7 @@ small {
 
 #campaign_back_button {
   float: left;
-  width: 100px;
+  width: 150px;
 }
 
 #entry_image_card {
@@ -268,4 +269,40 @@ select.selectpicker {
   margin-right: 0px;
   margin-top: 4px;
   margin-left: 215px;
+}
+
+#edited_image{
+  width: 400px;
+  height: 450px;
+  max-width: inherit;
+  max-height: inherit;
+}
+
+#edit_image_info{
+  width: 70%;
+  margin-left: auto;
+  padding-top: 1px;
+  margin-top: 0px;
+}
+
+.chip{
+  background-color: #007bff;
+  width: 180px;
+  margin-left: 5px;
+  color: white;
+  border-radius: 7px;
+}
+
+#add_depict_btn{
+  width: 180px;
+  margin-right: auto;
+}
+
+.captions_text{
+  width: 100%;
+}
+
+.choose_caption_lang_text{
+  font-size: 10px;
+  margin-top: 1px;
 }
