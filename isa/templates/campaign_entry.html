@@ -12,13 +12,13 @@
                 {% for image in all_campaign_image_names %}
                     {% if image == all_campaign_image_names[0] %}
                         <div id="participate_image_item"class="carousel-item active">
-                            <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{image}}"
-                                alt="{{image}}" width="200" height="40">
+                            <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
+                                alt="{{all_campaign_image_names[0]}}" width="200" height="40">
                         </div>
                     {% else %}
                         <!-- We will display a random image here  -->
                         <div id="participate_image_item" class="carousel-item">
-                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
+                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{image}}"
                                 alt="{{image}}" width="200" height="40">
                         </div>
                     {% endif %}
@@ -55,31 +55,14 @@
         <div class="text-center pl-4 pb-4">
             <div class="text-center pl-4">
                 <div class="text-center">
-                    <div class="row pt-2">
-                        <div class="col-sm-3 mr-auto">
-                            <div class="chip lighten-4">
-                                One
-                                <i class="close fas fa-times"></i>
-                            </div>
-                        </div>&nbsp;
-                        <div class="col-sm-3 mr-auto">
-                            <div class="chip lighten-4">
-                                Two
-                                <i class="close fas fa-times"></i>
-                            </div>
-                        </div>&nbsp;
-                        <div class="col-sm-3 mr-auto">
-                            <div class="chip lighten-4">
-                                Three
-                                <i class="close fas fa-times"></i>
-                            </div>
-                        </div>
+                    <div id="depicts_columns" class="row pt-2">
                     </div>
+                    <div id="depicts_error_message" class="col-sm-12 mr-auto"></div>
                     <div class="row pt-4">
                         <div class="col-sm-4 ml-auto">
                             <div id="add_depict_btn" class="btn btn-success lighten-4">
                                 Add new &nbsp;
-                                <i class="close fas fa-search"></i>
+                                <i width="0.5%" class="fas fa-search"></i>
                             </div>
                         </div>
                     </div>

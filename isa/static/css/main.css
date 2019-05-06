@@ -287,15 +287,19 @@ select.selectpicker {
 
 .chip{
   background-color: #007bff;
-  width: 180px;
-  margin-left: 5px;
+  width: 80px;
+  margin-left: 3px;
   color: white;
+  font-weight: 0.5px;
+  font-size: 12px;
   border-radius: 7px;
+  margin-bottom: 2.5px;
 }
 
 #add_depict_btn{
-  width: 180px;
+  width: 100px;
   margin-right: auto;
+  font-size: 12px;
 }
 
 .captions_text{
