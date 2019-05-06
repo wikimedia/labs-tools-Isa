@@ -9,25 +9,26 @@
     <div class="container mr-auto d-flex justify-content-center">
         <div id="campaignPartcipateImageCarousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-                <!-- We will display a random image here  -->
-                <div class="carousel-item active">
-                    <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
-                        alt="First slide">
-                </div>
                 {% for image in all_campaign_image_names %}
-                    {% if image != all_campaign_image_names[0] %}
-                        <div class="carousel-item">
+                    {% if image == all_campaign_image_names[0] %}
+                        <div id="participate_image_item"class="carousel-item active">
                             <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{image}}"
+                                alt="{{image}}" width="200" height="40">
+                        </div>
+                    {% else %}
+                        <!-- We will display a random image here  -->
+                        <div id="participate_image_item" class="carousel-item">
+                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
                                 alt="{{image}}" width="200" height="40">
                         </div>
                     {% endif %}
                 {% endfor %}
             </div>
-            <a class="carousel-control-prev" href="#campaignPartcipateImageCarousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#campaignPartcipateImageCarousel" role="button" id="carousel-btn-prev" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#campaignPartcipateImageCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#campaignPartcipateImageCarousel" id="carousel-btn-next" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -38,10 +39,10 @@
     </div> -->
     <div id="edit_image_info" class="mr-auto pb-2 navbar-light bg-light text-center">
         <div class="text-left pl-2">
-            <small><strong>File:</strong>&nbsp; File:La_rencontre.jpg</small> <br>
-            <small><strong>Description:</strong>&nbsp; This is a sample image which depicts love</small> <br>
-            <small><strong>Category:</strong>&nbsp; Wiki loves love in Cameroon | Love depicts</small> <br>
-            <small><strong>Author:</strong>&nbsp; Igor et Mona</small>
+            <small><strong>File:</strong>&nbsp; </small> <small id="image_name"></small> <br>
+            <small><strong>Description:</strong>&nbsp; <small id="image_description"></small></small> <br>
+            <small><strong>Categories:</strong>&nbsp; <small id="image_categories"></small></small> <br>
+            <small id="image_author"><strong>Author(s):</strong>&nbsp;</small>
         </div>
         <div class="text-center">
             <a href="#"><small class="fas fa-caret-up"> show all metadata from commons</small></a>
