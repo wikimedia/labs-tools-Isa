@@ -267,9 +267,11 @@ def get_actual_image_file_names(image_list):
 def contributeToCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
-    if not username:
-        flash('You need to Login to update a campaign', 'danger')
-        return redirect(url_for('getCampaigns'))
+    # if not username:
+    #     flash('You need to Login to update a campaign', 'danger')
+    #     return redirect(url_for('getCampaigns'))
+    if False:
+        pass
     else:
         campaign = Campaign.query.filter_by(id=id).first()
         form = CampaignEntryForm()

@@ -24,4 +24,8 @@ $( function () {
     $( function() {
         $( '.selectpicker' ).selectpicker();
     } );
+
+    $('.carousel').carousel({
+        interval: false
+    });
 } );

@@ -306,3 +306,9 @@ select.selectpicker {
   font-size: 10px;
   margin-top: 1px;
 }
+
+.carousel {
+  width: 550px;
+  max-width: inherit;
+  max-height: inherit;
+}
