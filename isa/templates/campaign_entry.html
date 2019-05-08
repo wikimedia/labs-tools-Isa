@@ -48,89 +48,95 @@
             <a href="#"><small class="fas fa-caret-up"> show all metadata from commons</small></a>
         </div>
     </div>
-    <div id="edit_image_info" class="mr-auto pb-2 mt-2 navbar-light bg-light text-center">
-        <div class="text-left pl-4 pb-2">
-            <h6>Depicts</h6>
-        </div>
-        <div class="text-center pl-4 pb-4">
-            <div class="text-center pl-4">
-                <div class="text-center">
-                    <div id="depicts_columns" class="row pt-2">
-                    </div>
-                    <div id="depicts_error_message" class="col-sm-12 mr-auto"></div>
-                    <div class="row pt-4">
-                        <div class="col-sm-4 ml-auto">
-                            <div id="add_depict_btn" class="btn btn-success lighten-4">
-                                Add new &nbsp;
-                                <i width="0.5%" class="fas fa-search"></i>
+
+    {% if campaign.depicts_metadata %}
+        <div id="edit_image_info" class="mr-auto pb-2 mt-2 navbar-light bg-light text-center">
+            <div class="text-left pl-4 pb-2">
+                <h6>Depicts</h6>
+            </div>
+            <div class="text-center pl-4 pb-4">
+                <div class="text-center pl-4">
+                    <div class="text-center">
+                        <div id="depicts_columns" class="row pt-2">
+                        </div>
+                        <div id="depicts_error_message" class="col-sm-12 mr-auto"></div>
+                        <div class="row pt-4">
+                            <div class="col-sm-4 ml-auto">
+                                <div id="add_depict_btn" class="btn btn-success lighten-4">
+                                    Add new &nbsp;
+                                    <i width="0.5%" class="fas fa-search"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="edit_image_info" class="mr-auto pb-2 mt-2 navbar-light bg-light text-center">
-        <div class="text-left pl-4 pt-2">
-            <h6>Caption</h6>
-        </div>
-        <div class="text-center d-flex justify-content-center">
-            <form  class="" method="POST" action="">
-                {{ form.csrf_token }}
-                <div class="form-group">
-                    <!-- We test for errors in the form data here -->
-                    {% if form.caption.errors %}
-                        {{ form.caption( class="form-control form-control-sm is-invalid" ) }}
-                        <div class="invalid-feedback">
-                            {% for error in form.caption.errors %}
-                                <span> {{ error }}</span>
-                            {% endfor %}
+    {% endif %}
+
+    {% if campaign.captions_metadata %}
+        <div id="edit_image_info" class="mr-auto pb-2 mt-2 navbar-light bg-light text-center">
+            <div class="text-left pl-4 pt-2">
+                <h6>Caption</h6>
+            </div>
+            <div class="text-center d-flex justify-content-center">
+                <form  class="" method="POST" action="">
+                    {{ form.csrf_token }}
+                    <div class="form-group">
+                        <!-- We test for errors in the form data here -->
+                        {% if form.caption.errors %}
+                            {{ form.caption( class="form-control form-control-sm is-invalid" ) }}
+                            <div class="invalid-feedback">
+                                {% for error in form.caption.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor %}
+                        </div>
+                        {% else %}
+                            {{ form.caption( class="form-control captions_text form-control-sm" ) }}
+                        {% endif %}
                     </div>
-                    {% else %}
-                        {{ form.caption( class="form-control captions_text form-control-sm" ) }}
-                    {% endif %}
-                </div>
-                <div class="text-center">
-                    <small class="choose_caption_lang_text"><strong>Change Caption Language:</strong> CHOOSE AVAILABLE LANGUAGES</small>
-                </div>
-                <div class="text-center pl-4">
                     <div class="text-center">
-                        <div class="row pt-2">
-                            <div class="col-sm-3 mr-auto">
-                                <h6><span class="badge badge-primary">English</span></h6>
-                            </div>
-                            <div class="col-sm-3 mr-auto">
-                                <h6><span class="badge badge-warning">French</span></h6>
-                            </div>
-                            <div class="col-sm-3 mr-auto">
-                                <h6><span class="badge badge-warning">German</span></h6>
-                            </div>
-                            <div class="col-sm-3 mr-auto">
-                                <h6><span class="badge badge-warning">Spanish</span></h6>
+                        <small class="choose_caption_lang_text"><strong>Change Caption Language:</strong> CHOOSE AVAILABLE LANGUAGES</small>
+                    </div>
+                    <div class="text-center pl-4">
+                        <div class="text-center">
+                            <div class="row pt-2">
+                                <div class="col-sm-3 mr-auto">
+                                    <h6><span class="badge badge-primary">English</span></h6>
+                                </div>
+                                <div class="col-sm-3 mr-auto">
+                                    <h6><span class="badge badge-warning">French</span></h6>
+                                </div>
+                                <div class="col-sm-3 mr-auto">
+                                    <h6><span class="badge badge-warning">German</span></h6>
+                                </div>
+                                <div class="col-sm-3 mr-auto">
+                                    <h6><span class="badge badge-warning">Spanish</span></h6>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="mr-auto pb-1 pt-1 mt-4 navbar-light bg-dark text-center">
-                    <div class="text-center">
-                        <div class="row pt-1">
-                            <div class="col-sm-3 mr-auto">
-                                <h6><span class="btn btn-lg btn-primary fas fa-caret-left"></span></h6>
-                            </div>
-                            <div class="col-sm-3 mr-auto">
-                                <h6><span class="btn btn-secondary">Cancel</span></h6>
-                            </div>
-                            <div class="col-sm-3 mr-auto">
-                                <h6><span>{{ form.submit( class="btn btn-secondary" ) }}</span></h6>
-                            </div>
-                            <div class="col-sm-3 mr-auto">
-                                <h6><span class="btn btn-lg btn-primary fas fa-caret-right"></span></h6>
+                    <div class="mr-auto pb-1 pt-1 mt-4 navbar-light bg-dark text-center">
+                        <div class="text-center">
+                            <div class="row pt-1">
+                                <div class="col-sm-3 mr-auto">
+                                    <h6><span class="btn btn-lg btn-primary fas fa-caret-left"></span></h6>
+                                </div>
+                                <div class="col-sm-3 mr-auto">
+                                    <h6><span class="btn btn-secondary">Cancel</span></h6>
+                                </div>
+                                <div class="col-sm-3 mr-auto">
+                                    <h6><span>{{ form.submit( class="btn btn-secondary" ) }}</span></h6>
+                                </div>
+                                <div class="col-sm-3 mr-auto">
+                                    <h6><span class="btn btn-lg btn-primary fas fa-caret-right"></span></h6>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
+    {% endif %}
 </div>
 {% endblock content%}
