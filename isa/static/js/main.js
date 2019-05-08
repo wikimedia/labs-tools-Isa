@@ -92,14 +92,14 @@ $( function () {
                 depictsStatements = response.entities[m_number].statements.P180;
             }
             var wikidata_Q_values = [];
-
+            console.log(wikidata_Q_values)
             for (let index = 0; index < depictsStatements.length; index++) {
                 wikidata_Q_values.push(depictsStatements[index].mainsnak.datavalue.value.id);
             }
             var first_element =  wikidata_Q_values.pop(0);
             var split_array = wikidata_Q_values.join('|');
             var id_string = '';
-            if ( first_element ) {
+            if ( wikidata_Q_values.length === 0 ) {
                 id_string = first_element;
             } else {
                 id_string = first_element + '|' + split_array;
@@ -121,7 +121,6 @@ $( function () {
                 data: secondApiOptions
                 })
             .done( function ( response ) {
-                console.log(response);
                 // $( '#depicts_columns' ).empty();
                 $('#depicts_error_message').show();
                 for ( var qvalue in response.entities ) {
