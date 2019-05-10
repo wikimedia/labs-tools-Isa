@@ -3,10 +3,11 @@ from datetime import datetime
 import mwoauth
 import pycountry
 from flask import render_template, redirect, url_for, flash, request, session
+
 from flask_login import current_user, login_required, login_user, logout_user
 
 from isa import app, db
-from isa.forms import CampaignForm, CampaignEntryForm, UpdateCampaignForm
+from isa.forms import CampaignForm, CampaignDepictsSearchForm, CampaignEntryForm, UpdateCampaignForm
 from isa.get_category_items import get_category_items
 from isa.models import Campaign, Contribution, User
 
@@ -272,7 +273,10 @@ def contributeToCampaign(id):
         return redirect(url_for('getCampaigns'))
     else:
         campaign = Campaign.query.filter_by(id=id).first()
+
         form = CampaignEntryForm()
+        depicts_form = CampaignDepictsSearchForm()
+
         campaign_categories = get_campaign_category_list(campaign.categories)
         # will homd the data about the categores
         campaign_partcicipate_data = []
@@ -285,6 +289,7 @@ def contributeToCampaign(id):
         return render_template('campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
                                id=id,
                                form=form,
+                               depicts_form=depicts_form,
                                all_campaign_image_names=all_campaign_image_names,
                                campaign=campaign,
                                campaign_partcicipate_data=campaign_partcicipate_data,
@@ -362,9 +367,11 @@ def updateCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
     form = UpdateCampaignForm()
-    if not username:
-        flash('You need to Login to update a campaign', 'danger')
-        return redirect(url_for('getCampaigns'))
+    # if not username:
+    #     flash('You need to Login to update a campaign', 'danger')
+    #     return redirect(url_for('getCampaigns'))
+    if False:
+        pass
     else:
         # when the form is submitted, we update the campaign
         # TODO: Check if campaign is closed so that it cannot be edited again

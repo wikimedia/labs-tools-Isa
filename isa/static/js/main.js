@@ -1,4 +1,4 @@
-$( function () {
+$(document).ready( function () {
     $( '#campaign_table' ).DataTable();
     
     $( '#campaign_table' ).css( {
@@ -29,6 +29,55 @@ $( function () {
     $( '.carousel' ).carousel( {
         interval: false
     } );
+    // when the page loads, we hide the section for depict search 
+
+
+    // we get the language set for the depicts
+    var depicts_language = $('#depicts_lang_select').val();
+    // we convert the depicts seach box to a select field
+    // which will make the Ajax call to Wikidata api
+    $( '#depicts_select_options' ).select2( {
+        placeholder: 'Search for depicts',
+        delay: 250,
+        tags: true,
+        multiple: true,
+        tokenSeparators: [',', ' '],
+        minimumResultsForSearch: 1,
+        maximumSelectionLength: 4,
+        ajax: {
+            type: 'GET',
+            dataType:'json',
+            url: ' https://www.wikidata.org/w/api.php',
+            data: function (params) {
+                var query = {
+                    search: params.term,
+                    action: 'wbsearchentities',
+                    language: depicts_language,
+                    format: 'json',
+                    uselang: 'fr',
+                    origin: '*'
+                }
+				return query
+            },
+            processResults: function (data) {
+                var depict_search_results = [];
+                var i=0;
+                for ( var item in data.search) {
+                    depict_search_results.push( {
+                        id: item,
+                        text: data.search[item].label + ':' + data.search[item].description
+                    });
+                    i++;
+                }
+                return { 
+                    results: depict_search_results
+                };
+            }
+        },
+        escapeMarkup: function(markup) {
+            return markup;
+          },
+    });
 
 	/**
 	 * Populate images metadata.
@@ -92,7 +141,6 @@ $( function () {
                 depictsStatements = response.entities[m_number].statements.P180;
             }
             var wikidata_Q_values = [];
-            console.log(wikidata_Q_values)
             for (let index = 0; index < depictsStatements.length; index++) {
                 wikidata_Q_values.push(depictsStatements[index].mainsnak.datavalue.value.id);
             }
@@ -163,4 +211,11 @@ $( function () {
             populateStructuredDataSection( current_slide );
         }
     } );
+
+    $( '#depicts_search_form_section' ).slideUp();
+    $( '#add_depict_btn' ).click(function (e) {
+        $( '#depicts_search_form_section' ).slideDown();
+        return false;
+    });
 } );
+

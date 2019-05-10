@@ -72,6 +72,24 @@
                 </div>
             </div>
         </div>
+        <div id="depicts_search_form_section">
+            <div id="" class=" d-flex justify-content-center">
+                <form  class="" method="POST" action="">
+                    {{ form.csrf_token }}
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-1 mr-auto ml-0"> 
+                            {{ depicts_form.depicts( id="depicts_select_options", class=" form-control form-control-lg") }}
+                        </div>
+                        <div class = "col-md-2 col-md-offset-2 pl-0">
+                            {{ depicts_form.lang( id="depicts_lang_select", class=" btn btn-secondary lighten-2" ) }}
+                        </div>
+                        <div id="depict_save_btn" class="col-md-2 mr-auto mt-1">
+                            {{ form.submit( class="btn btn-sm btn-warning" ) }}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>  
     {% endif %}
 
     {% if campaign.captions_metadata %}

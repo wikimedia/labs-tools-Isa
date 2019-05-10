@@ -316,3 +316,35 @@ select.selectpicker {
   max-width: inherit;
   max-height: inherit;
 }
+
+.exampleSearch {
+  width: 250px;
+  margin-right: auto;
+  display: block;
+}
+
+#depicts_form_wrapper {
+  /* display: flexbox;
+  margin-right: 700px; */
+}
+
+#depicts_search_field {
+  /* flex: 0 0 5%; */
+}
+
+#depicts_submit_btn {
+  flex: 1;
+  width: 80px;
+  height: inherit;
+  font-size: 12px;
+}
+
+#depicts_lang_select{
+  margin-left: 15px;
+}
+
+.select2-container {
+  width: 500px !important;
+  font-size: 10px !important;
+  max-width: 100% !important;
+}

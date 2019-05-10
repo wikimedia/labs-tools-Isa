@@ -3,7 +3,7 @@ from flask_wtf import FlaskForm
 import pycountry
 
 from wtforms import BooleanField, SelectField, StringField, SubmitField, widgets
-from wtforms.fields.html5 import DateField
+from wtforms.fields.html5 import DateField, SearchField
 from wtforms.validators import DataRequired, InputRequired, Length
 
 
@@ -45,7 +45,13 @@ class UpdateCampaignForm(FlaskForm):
 
 
 class CampaignEntryForm(FlaskForm):
-    depicts = StringField(validators=[DataRequired(),
+    depicts = SelectField(validators=[DataRequired(),
                           Length(min=2, max=20)])
     caption = StringField(widget=widgets.TextArea())
+    submit = SubmitField('Save')
+
+
+class CampaignDepictsSearchForm(FlaskForm):
+    depicts = SelectField(validators=[DataRequired()], choices=[])
+    lang = SelectField(validators=[DataRequired()], choices=[('fr', 'fr'), ('en', 'en'), ('de', 'de')])
     submit = SubmitField('Save')
