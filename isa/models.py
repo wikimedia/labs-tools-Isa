@@ -53,6 +53,7 @@ class Campaign(db.Model):
     short_description = db.Column(db.Text, nullable=False)
     long_description = db.Column(db.Text, nullable=False)
     categories = db.Column(db.Text, nullable=False)
+    campaign_type = db.Column(db.Boolean)
     manager_name = db.Column(db.String(15), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     depicts_metadata = db.Column(db.Boolean)
@@ -65,4 +66,6 @@ class Campaign(db.Model):
                self.campaign_name,
                self.categories,
                self.depicts_metadata,
-               self.captions_metadata)
+               self.captions_metadata,
+               self.start_date,
+               self.end_date)

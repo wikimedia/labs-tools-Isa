@@ -210,6 +210,7 @@ def CreateCampaign():
                 long_description=form.long_description.data,
                 depicts_metadata=form.depicts_metadata.data,
                 captions_metadata=form.captions_metadata.data,
+                campaign_type=form.campaign_type.data,
                 manager_name=form.manager_name.data,
                 user_id=current_user_id)
             db.session.add(campaign)
@@ -367,11 +368,9 @@ def updateCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
     form = UpdateCampaignForm()
-    # if not username:
-    #     flash('You need to Login to update a campaign', 'danger')
-    #     return redirect(url_for('getCampaigns'))
-    if False:
-        pass
+    if not username:
+        flash('You need to Login to update a campaign', 'danger')
+        return redirect(url_for('getCampaigns'))
     else:
         # when the form is submitted, we update the campaign
         # TODO: Check if campaign is closed so that it cannot be edited again
@@ -386,6 +385,7 @@ def updateCampaign(id):
             campaign.captions_metadata = form.captions_metadata.data
             campaign.categories = form.categories.data
             campaign.start_date = form.start_date.data
+            campaign.campaign_type = form.campaign_type.data
             campaign.end_date = form.end_date.data
             if testDbCommitSuccess():
                 flash('Please check the country for this Campaign!', 'danger')
@@ -404,6 +404,7 @@ def updateCampaign(id):
             form.start_date.data = campaign.start_date
             form.depicts_metadata.data = campaign.depicts_metadata
             form.captions_metadata.data = campaign.captions_metadata
+            form.campaign_type.data = campaign.campaign_type
             form.end_date.data = campaign.end_date
         else:
             flash('Booo! {} Could not be updated!'.format(
