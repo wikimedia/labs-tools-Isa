@@ -78,7 +78,7 @@
                     {{ form.csrf_token }}
                     <div class="row">
                         <div class="col-md-8 col-md-offset-1 mr-auto ml-0"> 
-                            {{ depicts_form.depicts( id="depicts_select_options", class=" form-control form-control-lg") }}
+                            {{ depicts_form.depicts( id="depicts_select_options", class="form-control", multiple="multiple") }}
                         </div>
                         <div class = "col-md-2 col-md-offset-2 pl-0">
                             {{ depicts_form.lang( id="depicts_lang_select", class=" btn btn-secondary lighten-2" ) }}

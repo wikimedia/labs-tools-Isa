@@ -270,7 +270,7 @@ def contributeToCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
     if not username:
-        flash('You need to Login to update a campaign', 'danger')
+        flash('You need to Login to participate', 'info')
         return redirect(url_for('getCampaigns'))
     else:
         campaign = Campaign.query.filter_by(id=id).first()
