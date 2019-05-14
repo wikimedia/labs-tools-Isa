@@ -1,9 +1,7 @@
-
 from flask_wtf import FlaskForm
-import pycountry
 
 from wtforms import BooleanField, SelectField, StringField, SubmitField, widgets
-from wtforms.fields.html5 import DateField, SearchField
+from wtforms.fields.html5 import DateField
 from wtforms.validators import DataRequired, InputRequired, Length
 
 

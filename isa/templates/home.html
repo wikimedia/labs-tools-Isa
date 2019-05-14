@@ -16,7 +16,7 @@
         </div>
         <br><br>
         <div class="form-group  d-flex justify-content-center">
-            <a href="{{url_for( 'getCampaigns' )}}" class="btn btn-primary pt-0 mr-3" >EXPLORE CAMPAIGNS</a>
+            <a href="{{url_for( 'campaigns.getCampaigns' )}}" class="btn btn-primary pt-0 mr-3" >EXPLORE CAMPAIGNS</a>
         </div>
     </div>
     <hr width="90%">
@@ -35,7 +35,7 @@
         <br>
         {% if username != 'Guest' and username != False and username != None %}
             <div class="form-group  d-flex justify-content-center">
-                <a href="{{url_for( 'CreateCampaign' )}}" class="btn btn-primary pt-0 mr-3" >Create a capaign</a>
+                <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary pt-0 mr-3" >Create a capaign</a>
             </div>
         {% endif %}
     </div>

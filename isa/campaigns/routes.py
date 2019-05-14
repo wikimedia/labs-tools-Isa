@@ -1,78 +1,21 @@
 from datetime import datetime
-import sys
-
-import mwoauth
+from flask import render_template, redirect, url_for, flash, request, session, Blueprint
+from flask_login import current_user
 import pycountry
-from flask import render_template, redirect, url_for, flash, request, session
 
-from flask_login import current_user, login_required, login_user, logout_user
-
-from isa import app, db
-from isa.forms import CampaignForm, CampaignDepictsSearchForm, CampaignCaptionsForm, UpdateCampaignForm
+from isa import db
+from isa.campaigns.forms import CampaignForm, CampaignDepictsSearchForm, CampaignCaptionsForm, UpdateCampaignForm
 from isa.get_category_items import get_category_items
 from isa.models import Campaign, Contribution, User
+from isa.campaigns.utils import (get_actual_image_file_names, get_all_campaign_images, constructEditContent,
+                                 get_campaign_category_list, get_country_from_code, compute_campaign_status)
+from isa.main.utils import testDbCommitSuccess
+from isa.users.utils import get_user_language_preferences
+
+campaigns = Blueprint('campaigns', __name__)
 
 
-def check_user_existence(username):
-    """
-    Check if user exists already in db
-
-    Keyword arguments:
-    username -- the currently logged in user
-    """
-    user_exists = User.query.filter_by(username=username).first()
-    if not user_exists:
-        return True
-    else:
-        return False
-
-
-def add_user_to_db(username):
-    """
-    Add user to database if they don't exist already
-
-    Keyword arguments:
-    username -- the currently logged in user
-    """
-    if check_user_existence(username):
-        user = User(username=username, pref_lang='en,fr')
-        db.session.add(user)
-        if testDbCommitSuccess():
-            return False
-        else:
-            return user.username
-    else:
-        user = User.query.filter_by(username=username).first()
-        return user.username
-
-
-def get_user_language_preferences(username):
-    """
-    Get user language preferences for currently logged in user
-
-    Keyword arguments:
-    username -- the currently logged in user
-    """
-    user = User.query.filter_by(username=username).first()
-    if user is None:
-        return 'en,fr'.split(',')
-    else:
-        user_pref_options = user.pref_lang
-        return user_pref_options.split(',')
-
-
-@app.route('/')
-def home():
-    username = session.get('username', None)
-    username_for_current_user = add_user_to_db(username)
-    return render_template('home.html',
-                           title='Home',
-                           username=username_for_current_user,
-                           user_pref_lang=get_user_language_preferences(username),
-                           current_user=current_user)
-
-
-@app.route('/campaigns')
+@campaigns.route('/campaigns')
 def getCampaigns():
     campaigns = Campaign.query.all()
     username = session.get('username', None)
@@ -86,21 +29,7 @@ def getCampaigns():
                            current_user=current_user)
 
 
-# TODO: The below functions are used to perform operations on the db tables
-# def sum_all_user_contributions(users):
-#     """
-#     Sum contributions made by all users.
-
-#     Keyword arguments:
-#     users -- the users list
-#     """
-#     user_contribution_sum = 0
-#     for user in users:
-#         user_contribution_sum += get_user_contributions(user.id)
-#     return user_contribution_sum
-
-
-@app.route('/campaigns/<int:id>')
+@campaigns.route('/campaigns/<int:id>')
 def getCampaignById(id):
     # We get the current user's user_name
     username = session.get('username', None)
@@ -108,7 +37,7 @@ def getCampaignById(id):
     campaign = Campaign.query.filter_by(id=id).first()
     if not campaign:
         flash('Campaign with id {} does not exist'.format(id), 'info')
-        return redirect(url_for('getCampaigns'))
+        return redirect(url_for('campaigns.getCampaigns'))
 
     # We select the campaign and the manager here
     campaign_manager = User.query.filter_by(id=campaign.user_id).first()
@@ -145,57 +74,13 @@ def getCampaignById(id):
                            countries=countries)
 
 
-def get_country_from_code(country_code):
-    """
-    Get country label from country code.
-
-    Keyword arguments:
-    country_code -- the code of the country (e.g 'FR' for France)
-    """
-    country = []
-    countries = [(country.alpha_2, country.name) for country in pycountry.countries]
-    for country_index in range(len(countries)):
-        # index 0 is the country code selected from the form
-        if(countries[country_index][0] == country_code):
-            country.append(countries[country_index])
-    return country[0][1]
-
-
-def compute_campaign_status(end_date):
-    """
-    Computes the campaign status (Open or closed).
-
-    Keyword arguments:
-    end_date -- the end date of the campaign
-    """
-    status = bool('False')
-    if (end_date.strftime('%Y-%m-%d %H:%M') < datetime.now().strftime('%Y-%m-%d %H:%M')):
-        status = bool('True')
-    return status
-
-
-def testDbCommitSuccess():
-    """
-    Test for the success of a database commit operation.
-
-    """
-    try:
-        db.session.commit()
-    except Exception:
-        db.session.rollback()
-        # for resetting non-commited .add()
-        db.session.flush()
-        return True
-    return False
-
-
-@app.route('/campaigns/create', methods=['GET', 'POST'])
+@campaigns.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name
     username = session.get('username', None)
     if not username:
         flash('You need to Login to create a campaign', 'info')
-        return redirect(url_for('getCampaigns'))
+        return redirect(url_for('campaigns.getCampaigns'))
     else:
         if username:
             current_user_id = User.query.filter_by(username=username).first().id
@@ -226,7 +111,7 @@ def CreateCampaign():
                       form.campaign_name.data), 'danger')
             else:
                 flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
-                return redirect(url_for('getCampaigns'))
+                return redirect(url_for('campaigns.getCampaigns'))
         return render_template('create_campaign.html', title='Create a campaign',
                                form=form, datetime=datetime,
                                username=username,
@@ -234,68 +119,16 @@ def CreateCampaign():
                                current_user=current_user)
 
 
-def get_campaign_category_list(categories):
-    """
-    Extract categoriues for a given campaign
-
-    Keyword arguments:
-    campaign_id -- The id of the campaign
-    """
-    if categories is None:
-        return ''
-    else:
-        return categories.split(',')
-
-
-def combine_campign_content(content_list):
-    campaign_content = []
-    campaign_content.append(content_list)
-    return campaign_content
-
-
-def get_all_campaign_images(query_data):
-    campaign_image_list = []
-    for data in query_data:
-        for category_member in data['query']['categorymembers']:
-            campaign_image_list.append(category_member['title'])
-    return campaign_image_list
-
-
-def get_actual_image_file_names(image_list):
-    image_names = []
-    for image in image_list:
-        image_name_without_file = image.split(':')[1]
-        # we now replaces spaces with underscore in image name
-        image_names.append(image_name_without_file.replace(" ", "_"))
-    return image_names
-
-
-def constructEditContent(formdata):
-    """
-    Arranges edit content into objects
-
-    Keyword arguments:
-    formdata -- Request data with depict q values
-    """
-    depicts_content = []
-    if formdata:
-        for depict_data in formdata:
-            depicts_content.append(depict_data.split('|'))
-        return depicts_content
-    else:
-        return []
-
-
-@app.route('/campaigns/<int:id>/participate', methods=['GET', 'POST'])
+@campaigns.route('/campaigns/<int:id>/participate', methods=['GET', 'POST'])
 def contributeToCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
     if not username:
         flash('You need to Login to participate', 'info')
-        return redirect(url_for('getCampaigns'))
+        return redirect(url_for('campaigns.getCampaigns'))
     else:
         campaign = Campaign.query.filter_by(id=id).first()
-        current_user_id = User.query.filter_by(username=username).first().id
+        current_user_id = User.query.filter_by(username='Eugene233').first().id
         # contribution = Contribution(
         form = CampaignCaptionsForm()
         depicts_form = CampaignDepictsSearchForm()
@@ -344,79 +177,14 @@ def contributeToCampaign(id):
                                current_user=current_user)
 
 
-@app.route('/login')
-def login():
-    """Initiate an OAuth login.
-    
-    Call the MediaWiki server to get request secrets and then redirect the
-    user to the MediaWiki server to sign the request.
-    """
-    if current_user.is_authenticated:
-        return redirect(url_for('home'))
-    else:
-        consumer_token = mwoauth.ConsumerToken(
-            app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
-        try:
-            redirect_string, request_token = mwoauth.initiate(
-                app.config['OAUTH_MWURI'], consumer_token)
-        except Exception:
-            app.logger.exception('mwoauth.initiate failed')
-            return redirect(url_for('home'))
-        else:
-            session['request_token'] = dict(zip(
-                request_token._fields, request_token))
-            user = User.query.filter_by(username=session.get('username', 'Guest')).first()
-            if user and user.username != 'Guest':
-                login_user(user)
-            return redirect(redirect_string)
-
-
-@app.route('/oauth-callback')
-def oauth_callback():
-    """OAuth handshake callback."""
-    if 'request_token' not in session:
-        flash(u'OAuth callback failed. Are cookies disabled?')
-        return redirect(url_for('home'))
-
-    consumer_token = mwoauth.ConsumerToken(
-        app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
-
-    try:
-        access_token = mwoauth.complete(
-            app.config['OAUTH_MWURI'],
-            consumer_token,
-            mwoauth.RequestToken(**session['request_token']),
-            request.query_string)
-
-        identity = mwoauth.identify(
-            app.config['OAUTH_MWURI'], consumer_token, access_token)
-    except Exception:
-        app.logger.exception('OAuth authentication failed')
-    else:
-        session['access_token'] = dict(zip(
-            access_token._fields, access_token))
-        session['username'] = identity['username']
-        flash(' Welcome  {}!'.format(session['username']), 'success')
-    return redirect(url_for('home'))
-
-
-@app.route('/logout')
-def logout():
-    """Log the user out by clearing their session."""
-    logout_user()
-    session.clear()
-    flash('See you next time!', 'success')
-    return redirect(url_for('home'))
-
-
-@app.route('/campaigns/<int:id>/update', methods=['GET', 'POST'])
+@campaigns.route('/campaigns/<int:id>/update', methods=['GET', 'POST'])
 def updateCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
     form = UpdateCampaignForm()
     if not username:
         flash('You need to Login to update a campaign', 'danger')
-        return redirect(url_for('getCampaigns'))
+        return redirect(url_for('campaigns.getCampaigns'))
     else:
         # when the form is submitted, we update the campaign
         # TODO: Check if campaign is closed so that it cannot be edited again
@@ -437,7 +205,7 @@ def updateCampaign(id):
                 flash('Please check the country for this Campaign!', 'danger')
             else:
                 flash('Updated Succesfull!', 'success')
-                return redirect(url_for('getCampaigns'))
+                return redirect(url_for('campaigns.getCampaigns'))
         # User requests to edit so we update the form with Campaign details
         elif request.method == 'GET':
             # we get the campaign data to place in form fields

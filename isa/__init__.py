@@ -18,8 +18,16 @@ app.config['SECRET_KEY']
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
-login_manager.login_view = 'home'
+login_manager.login_view = 'main.home'
 login_manager.login_message = 'You Need to Login to Access This Page!'
 login_manager.login_message_category = 'danger'
 
-from isa import routes
+# we import all our blueprint routes here
+from isa.campaigns.routes import campaigns
+from isa.main.routes import main
+from isa.users.routes import users
+
+# Here we register the various blue_prints of our app
+app.register_blueprint(campaigns)
+app.register_blueprint(main)
+app.register_blueprint(users)
