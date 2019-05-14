@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+        <div class="text-center">
+            <div class="error-template">
+                    <h1>
+                        Oops!</h1>
+                    <h2> Page Not Found (404)</h2>
+                    <div class="error-details">
+                        We Are Unable to find the page you are looking for
+                    </div>
+                    <div class="error-actions">
+                        <a href="{{url_for( 'main.home' )}}" class="btn btn-primary btn-lg">
+                            <span class="fas fa-home"></span>
+                            Take Me Home 
+                        </a>
+                        <a href="#" class="btn btn-default btn-lg">
+                            <span class="fas fa-envelope"></span> Contact Support </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock content%}

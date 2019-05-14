@@ -26,8 +26,10 @@ login_manager.login_message_category = 'danger'
 from isa.campaigns.routes import campaigns
 from isa.main.routes import main
 from isa.users.routes import users
+from isa.errors.handlers import errors
 
 # Here we register the various blue_prints of our app
 app.register_blueprint(campaigns)
 app.register_blueprint(main)
 app.register_blueprint(users)
+app.register_blueprint(errors)
