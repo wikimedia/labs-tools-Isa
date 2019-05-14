@@ -30,12 +30,20 @@ class Contribution(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
+    file = db.Column(db.String(35), nullable=False)
+    edit_type = db.Column(db.String(7), nullable=False)
+    edit_acton = db.Column(db.String(7), nullable=False)
+    edit_content = db.Column(db.String(20), nullable=False)
 
     def __repr__(self):
         # This is what is shown when object is printed
-        return "Contribution( {}, {})".format(
+        return "Contribution( {}, {}, {},{},{},{})".format(
                self.user_id,
-               self.campaign_id)
+               self.campaign_id,
+               self.file,
+               self.edit_type,
+               self.edit_acton,
+               self.edit_content)
 
     def __getitem__(self, index):
         return self[index]

@@ -30,54 +30,57 @@ $(document).ready( function () {
         interval: false
     } );
     // when the page loads, we hide the section for depict search 
-
+    var current_slide = $( '.carousel-item' ).find( 'img' ).attr( 'alt' );
 
     // we get the language set for the depicts
     var depicts_language = $('#depicts_lang_select').val();
     // we convert the depicts seach box to a select field
     // which will make the Ajax call to Wikidata api
-    $( '#depicts_select_options' ).select2( {
-        placeholder: 'Search for depicts',
-        delay: 250,
-        tags: true,
-        multiple: true,
-        tokenSeparators: [',', ' '],
-        minimumResultsForSearch: 1,
-        maximumSelectionLength: 4,
-        ajax: {
-            type: 'GET',
-            dataType:'json',
-            url: ' https://www.wikidata.org/w/api.php',
-            data: function (params) {
-                var query = {
-                    search: params.term,
-                    action: 'wbsearchentities',
-                    language: depicts_language,
-                    format: 'json',
-                    uselang: 'fr',
-                    origin: '*'
+
+    function setUpDepictsForm(current_image){
+        $( '#depicts_select_options' ).select2( {
+            placeholder: 'Search for depicts',
+            delay: 250,
+            tags: true,
+            multiple: true,
+            tokenSeparators: [',', ' '],
+            minimumResultsForSearch: 1,
+            maximumSelectionLength: 4,
+            ajax: {
+                type: 'GET',
+                dataType:'json',
+                url: ' https://www.wikidata.org/w/api.php',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        action: 'wbsearchentities',
+                        language: depicts_language,
+                        format: 'json',
+                        uselang: 'fr',
+                        origin: '*'
+                    }
+                    return query
+                },
+                processResults: function (data) {
+                    var depict_search_results = [];
+                    var i=0;
+                    for ( var item in data.search) {
+                        depict_search_results.push( {
+                            id: data.search[item].id +'|'+ $('.active').find('img').attr('alt'),
+                            text: data.search[item].label + ':' + data.search[item].description
+                        });
+                        i++;
+                    }
+                    return {
+                        results: depict_search_results
+                    };
                 }
-				return query
             },
-            processResults: function (data) {
-                var depict_search_results = [];
-                var i=0;
-                for ( var item in data.search) {
-                    depict_search_results.push( {
-                        id: item,
-                        text: data.search[item].label + ':' + data.search[item].description
-                    });
-                    i++;
-                }
-                return { 
-                    results: depict_search_results
-                };
-            }
-        },
-        escapeMarkup: function(markup) {
-            return markup;
-          },
-    });
+            escapeMarkup: function(markup) {
+                return markup;
+              },
+        });
+    }
 
 	/**
 	 * Populate images metadata.
@@ -188,10 +191,10 @@ $(document).ready( function () {
     $( '#depicts_columns' ).empty();
     //  Populate  metadata for current slide
     // In this case, the carousel-item has not changed yet
-    var current_slide = $( '.carousel-item' ).find( 'img' ).attr( 'alt' );
+
     populateImageMetadata( current_slide );
     populateStructuredDataSection( current_slide );
-
+    setUpDepictsForm(current_slide);
     // here we detect a change in the carousel item
     $( '#campaignPartcipateImageCarousel' ).bind( 'slide.bs.carousel', function (e) {
         $( '#depicts_columns' ).empty();
@@ -204,11 +207,13 @@ $(document).ready( function () {
             var destination = $( '.carousel-item' ).eq( slideFrom + 1 ).find( 'img' ).attr( 'alt' );
             populateImageMetadata( destination );
             populateStructuredDataSection( destination );
+            setUpDepictsForm( destination );
         }
         else{
             var current_slide = $( '.carousel-item' ).find( 'img' ).attr( 'alt' );
             populateImageMetadata( current_slide );
             populateStructuredDataSection( current_slide );
+            setUpDepictsForm( current_slide );
         }
     } );
 

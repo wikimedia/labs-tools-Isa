@@ -1,4 +1,5 @@
 from datetime import datetime
+import sys
 
 import mwoauth
 import pycountry
@@ -7,7 +8,7 @@ from flask import render_template, redirect, url_for, flash, request, session
 from flask_login import current_user, login_required, login_user, logout_user
 
 from isa import app, db
-from isa.forms import CampaignForm, CampaignDepictsSearchForm, CampaignEntryForm, UpdateCampaignForm
+from isa.forms import CampaignForm, CampaignDepictsSearchForm, CampaignCaptionsForm, UpdateCampaignForm
 from isa.get_category_items import get_category_items
 from isa.models import Campaign, Contribution, User
 
@@ -103,8 +104,13 @@ def getCampaigns():
 def getCampaignById(id):
     # We get the current user's user_name
     username = session.get('username', None)
-    # We select the campaign and the manager here
+
     campaign = Campaign.query.filter_by(id=id).first()
+    if not campaign:
+        flash('Campaign with id {} does not exist'.format(id), 'info')
+        return redirect(url_for('getCampaigns'))
+
+    # We select the campaign and the manager here
     campaign_manager = User.query.filter_by(id=campaign.user_id).first()
     # We get all the contributions from the ddatabase
     all_contributions = Contribution.query.all()
@@ -260,9 +266,24 @@ def get_actual_image_file_names(image_list):
     for image in image_list:
         image_name_without_file = image.split(':')[1]
         # we now replaces spaces with underscore in image name
-
         image_names.append(image_name_without_file.replace(" ", "_"))
     return image_names
+
+
+def constructEditContent(formdata):
+    """
+    Arranges edit content into objects
+
+    Keyword arguments:
+    formdata -- Request data with depict q values
+    """
+    depicts_content = []
+    if formdata:
+        for depict_data in formdata:
+            depicts_content.append(depict_data.split('|'))
+        return depicts_content
+    else:
+        return []
 
 
 @app.route('/campaigns/<int:id>/participate', methods=['GET', 'POST'])
@@ -274,8 +295,9 @@ def contributeToCampaign(id):
         return redirect(url_for('getCampaigns'))
     else:
         campaign = Campaign.query.filter_by(id=id).first()
-
-        form = CampaignEntryForm()
+        current_user_id = User.query.filter_by(username=username).first().id
+        # contribution = Contribution(
+        form = CampaignCaptionsForm()
         depicts_form = CampaignDepictsSearchForm()
 
         campaign_categories = get_campaign_category_list(campaign.categories)
@@ -287,6 +309,30 @@ def contributeToCampaign(id):
             campaign_partcicipate_data.append(category_data)
         all_campaign_images = get_all_campaign_images(campaign_partcicipate_data)
         all_campaign_image_names = get_actual_image_file_names(all_campaign_images)
+
+        # When a form with depict statments is submitted, we process each and
+        # register a contribution for each of the depicts
+        if depicts_form.is_submitted():
+            depicts_data = constructEditContent(request.form.getlist('depicts'))
+            if not depicts_data:
+                flash('please add at least a depict statement', 'info')
+            else:
+                #  we iterate the depicsts data and create a contribution for each
+                for depict in depicts_data:
+                    contribution = Contribution(
+                        user_id=current_user_id,
+                        campaign_id=id,
+                        edit_type='depicts',
+                        file=depict[1],
+                        edit_acton='Add',
+                        edit_content=depict[0]
+                    )
+                    db.session.add(contribution)
+                    # commit failed
+                    if testDbCommitSuccess():
+                        flash('Sorry edit could not be registered', 'danger')
+                    else:
+                        flash('Thanks for Your contribution', 'success')
         return render_template('campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
                                id=id,
                                form=form,

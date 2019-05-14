@@ -130,7 +130,7 @@
                         </div>
                         <div class="col-sm-6 mr-auto">
                             <div class="input-group">
-                                <small><i class="fas fa-star"></i><strong>{{ form.captions_metadata.label( class='' ) }}</strong></small>&nbsp;
+                                <small><strong>{{ form.captions_metadata.label( class='' ) }}</strong></small>&nbsp;
                                 <!-- We test for errors in the form data here -->
                                 {% if form.captions_metadata.errors %}
                                     {{ form.captions_metadata( class="form-control form-control-sm is-invalid" ) }}
@@ -148,26 +148,26 @@
                 </div>
             </div>
             <div class="navbar-light bg-light">
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6 ml-auto mr-auto">
-                        <div class="input-group date pt-3">
-                            {{ form.campaign_type.label( class='datepicker' ) }} &nbsp;&nbsp;
-                            <!-- We test for errors in the form data here -->
-                            {% if form.campaign_type.errors %}
-                                {{ form.campaign_type( class="form-control form-control-sm is-invalid" ) }}
-                                <div class="invalid-feedback">
-                                    {% for error in form.campaign_type.errors %}
-                                        <span> {{ error }}</span>
-                                    {% endfor %}
-                                </div>
-                            {% else %}
-                                {{ form.campaign_type( class="form-control form-control-sm mt-2" ) }}
-                            {% endif %}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6 ml-auto mr-auto">
+                            <div class="input-group date pt-3">
+                                    * {{ form.campaign_type.label( class='datepicker' ) }} &nbsp;&nbsp;
+                                <!-- We test for errors in the form data here -->
+                                {% if form.campaign_type.errors %}
+                                    {{ form.campaign_type( class="form-control form-control-sm is-invalid" ) }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.campaign_type.errors %}
+                                            <span> {{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.campaign_type( class="form-control form-control-sm mt-2" ) }}
+                                {% endif %}
                             </div>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
             <div class="form-group">
                 {{ form.long_description.label( class="form-control-label" ) }}
