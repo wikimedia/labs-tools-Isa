@@ -10,7 +10,7 @@ main = Blueprint('main', __name__)
 def home():
     username = session.get('username', None)
     username_for_current_user = add_user_to_db(username)
-    return render_template('home.html',
+    return render_template('main/home.html',
                            title='Home',
                            username=username_for_current_user,
                            user_pref_lang=get_user_language_preferences(username),

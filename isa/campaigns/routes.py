@@ -19,7 +19,7 @@ campaigns = Blueprint('campaigns', __name__)
 def getCampaigns():
     campaigns = Campaign.query.all()
     username = session.get('username', None)
-    return render_template('campaigns.html',
+    return render_template('campaign/campaigns.html',
                            title='Campaigns',
                            username=username,
                            campaigns=campaigns,
@@ -63,7 +63,7 @@ def getCampaignById(id):
         if (contrib.campaign_id == campaign.id):
             campaign_contributions += 1
     countries = [(country.alpha_2, country.name) for country in pycountry.countries]
-    return render_template('campaign.html', title='Campaign - ' + campaign.campaign_name,
+    return render_template('campaign/campaign.html', title='Campaign - ' + campaign.campaign_name,
                            campaign=campaign,
                            campaign_manager=campaign_manager.username,
                            username=username,
@@ -112,7 +112,7 @@ def CreateCampaign():
             else:
                 flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
                 return redirect(url_for('campaigns.getCampaigns'))
-        return render_template('create_campaign.html', title='Create a campaign',
+        return render_template('campaign/create_campaign.html', title='Create a campaign',
                                form=form, datetime=datetime,
                                username=username,
                                user_pref_lang=get_user_language_preferences(username),
@@ -166,7 +166,7 @@ def contributeToCampaign(id):
                         flash('Sorry edit could not be registered', 'danger')
                     else:
                         flash('Thanks for Your contribution', 'success')
-        return render_template('campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
+        return render_template('campaign/campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
                                id=id,
                                form=form,
                                depicts_form=depicts_form,
@@ -223,7 +223,7 @@ def updateCampaign(id):
         else:
             flash('Booo! {} Could not be updated!'.format(
                 form.campaign_name.data), 'danger')
-        return render_template('update_campaign.html', title=campaign.campaign_name + ' - Update',
+        return render_template('campaign/update_campaign.html', title=campaign.campaign_name + ' - Update',
                                campaign=campaign,
                                form=form,
                                user_pref_lang=get_user_language_preferences(username),
