@@ -75,7 +75,7 @@
         <div id="depicts_search_form_section">
             <div id="" class=" d-flex justify-content-center">
                 <form  class="" method="POST" action="">
-                    {{ form.csrf_token }}
+                    {{ depicts_form.csrf_token }}
                     <div class="row">
                         <div class="col-md-8 col-md-offset-1 mr-auto ml-0"> 
                             {{ depicts_form.depicts( id="depicts_select_options", class="form-control", multiple="multiple") }}
@@ -84,7 +84,7 @@
                             {{ depicts_form.lang( id="depicts_lang_select", class=" btn btn-secondary lighten-2" ) }}
                         </div>
                         <div id="depict_save_btn" class="col-md-2 mr-auto mt-1">
-                            {{ form.submit( class="btn btn-sm btn-warning" ) }}
+                            {{ depicts_form.submit( class="btn btn-sm btn-warning" ) }}
                         </div>
                     </div>
                 </form>
@@ -99,18 +99,19 @@
             </div>
             <div class="text-center d-flex justify-content-center">
                 <form  class="" method="POST" action="">
-                    {{ form.csrf_token }}
+                    {{ captions_form.csrf_token }}
+                    <small class="pb-2"> {{captions_form.image_label(id="captions_image_label")}}</small>
                     <div class="form-group">
                         <!-- We test for errors in the form data here -->
-                        {% if form.caption.errors %}
-                            {{ form.caption( class="form-control form-control-sm is-invalid" ) }}
+                        {% if captions_form.caption.errors %}
+                            {{ captions_form.caption( class="form-control form-control-sm is-invalid" ) }}
                             <div class="invalid-feedback">
-                                {% for error in form.caption.errors %}
+                                {% for error in captions_form.caption.errors %}
                                     <span> {{ error }}</span>
                                 {% endfor %}
                         </div>
                         {% else %}
-                            {{ form.caption( class="form-control captions_text form-control-sm" ) }}
+                            {{ captions_form.caption( class="form-control captions_text form-control-sm" ) }}
                         {% endif %}
                     </div>
                     <div class="text-center">
@@ -144,7 +145,7 @@
                                     <h6><span class="btn btn-secondary">Cancel</span></h6>
                                 </div>
                                 <div class="col-sm-3 mr-auto">
-                                    <h6><span>{{ form.submit( class="btn btn-secondary" ) }}</span></h6>
+                                    <h6><span>{{ captions_form.submit( class="btn btn-secondary" ) }}</span></h6>
                                 </div>
                                 <div class="col-sm-3 mr-auto">
                                     <h6><span class="btn btn-lg btn-primary fas fa-caret-right"></span></h6>

@@ -130,8 +130,8 @@ def contributeToCampaign(id):
         campaign = Campaign.query.filter_by(id=id).first()
         current_user_id = User.query.filter_by(username='Eugene233').first().id
         # contribution = Contribution(
-        form = CampaignCaptionsForm()
-        depicts_form = CampaignDepictsSearchForm()
+        captions_form = CampaignCaptionsForm(prefix="captions_form")
+        depicts_form = CampaignDepictsSearchForm(prefix="depicts_form")
 
         campaign_categories = get_campaign_category_list(campaign.categories)
         # will homd the data about the categores
@@ -145,7 +145,7 @@ def contributeToCampaign(id):
 
         # When a form with depict statments is submitted, we process each and
         # register a contribution for each of the depicts
-        if depicts_form.is_submitted():
+        if depicts_form.is_submitted() and depicts_form.submit.data:
             depicts_data = constructEditContent(request.form.getlist('depicts'))
             if not depicts_data:
                 flash('please add at least a depict statement', 'info')
@@ -166,9 +166,27 @@ def contributeToCampaign(id):
                         flash('Sorry edit could not be registered', 'danger')
                     else:
                         flash('Thanks for Your contribution', 'success')
+        if captions_form.is_submitted() and captions_form.submit.data:
+            captions_image_label = request.form.get('captions_form-image_label')
+            caption_text = request.form.get('captions_form-caption')
+            if captions_image_label and caption_text:
+                contribution = Contribution(
+                    user_id=current_user_id,
+                    campaign_id=id,
+                    edit_type='caption',
+                    file=captions_image_label,
+                    edit_acton='Add',
+                    edit_content=caption_text
+                )
+                db.session.add(contribution)
+                # commit failed
+                if testDbCommitSuccess():
+                    flash('Sorry edit could not be registered', 'danger')
+                else:
+                    flash('Thanks for Your contribution', 'success')
         return render_template('campaign/campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
                                id=id,
-                               form=form,
+                               captions_form=captions_form,
                                depicts_form=depicts_form,
                                all_campaign_image_names=all_campaign_image_names,
                                campaign=campaign,

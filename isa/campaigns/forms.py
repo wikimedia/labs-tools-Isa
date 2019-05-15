@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 
-from wtforms import BooleanField, SelectField, StringField, SubmitField, widgets
+from wtforms import BooleanField, SelectField, StringField, SubmitField, widgets, Label
 from wtforms.fields.html5 import DateField
 from wtforms.validators import DataRequired, InputRequired, Length
 
@@ -51,5 +51,6 @@ class CampaignDepictsSearchForm(FlaskForm):
 
 
 class CampaignCaptionsForm(FlaskForm):
+    image_label = StringField('image here')
     caption = StringField(widget=widgets.TextArea())
     submit = SubmitField('Save')

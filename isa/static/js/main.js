@@ -32,8 +32,12 @@ $(document).ready( function () {
     // when the page loads, we hide the section for depict search 
     var current_slide = $( '.carousel-item' ).find( 'img' ).attr( 'alt' );
 
+    //  we write the current slide value to the captions image label
+    $( '#captions_image_label' ).val(current_slide);
+    $( '#captions_image_label' ).hide();
     // we get the language set for the depicts
     var depicts_language = $('#depicts_lang_select').val();
+
     // we convert the depicts seach box to a select field
     // which will make the Ajax call to Wikidata api
 
@@ -205,12 +209,18 @@ $(document).ready( function () {
         var totalItems = $( '.carousel-item' ).length;
         if( slideFrom < totalItems - 1 ) {
             var destination = $( '.carousel-item' ).eq( slideFrom + 1 ).find( 'img' ).attr( 'alt' );
+            //  we update the captions_image label
+            $( '#captions_image_label' ).val(destination);
+            $( '#captions_image_label' ).hide();
             populateImageMetadata( destination );
             populateStructuredDataSection( destination );
             setUpDepictsForm( destination );
         }
         else{
             var current_slide = $( '.carousel-item' ).find( 'img' ).attr( 'alt' );
+            //  we update the captions_image label
+            $( '#captions_image_label' ).val(current_slide);
+            $( '#captions_image_label' ).hide();
             populateImageMetadata( current_slide );
             populateStructuredDataSection( current_slide );
             setUpDepictsForm( current_slide );
