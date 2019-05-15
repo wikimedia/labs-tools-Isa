@@ -18,7 +18,7 @@ def get_category_items(category):
     PARAMS = {
         'action': "query",
         'list': "categorymembers",
-        'cmtitle': "Category:" + category,
+        'cmtitle': category,
         'cmlimit': 2,
         'cmtype': "file",
         'prop': "images",

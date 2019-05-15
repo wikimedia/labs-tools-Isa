@@ -9,14 +9,12 @@ class CampaignForm(FlaskForm):
     campaign_name = StringField('Campaign Name * ', validators=[DataRequired(),
                                 Length(min=2, max=20)])
     short_description = StringField('Short description of Campaign', widget=widgets.TextArea())
-    manager_name = StringField('Campaign Manager Name', validators=[DataRequired(),
-                               Length(min=2, max=12)])
+    manager_name = StringField('Campaign Manager Name', validators=[Length(min=2, max=12)])
     start_date = DateField('Start Date *', id='datepick1',
                            format='%Y-%m-%d', validators=[InputRequired()])
     end_date = DateField('Close Date *', id='datepick2',
                          format='%Y-%m-%d', validators=[InputRequired()])
-    categories = StringField('Categories to use in this campaign',
-                             widget=widgets.TextArea())
+    categories = SelectField(validators=[DataRequired()], choices=[])
     depicts_metadata = BooleanField('Depicts')
     captions_metadata = BooleanField('Captions')
     campaign_type = BooleanField('This is a Wiki Loves Campaign')
@@ -35,7 +33,7 @@ class UpdateCampaignForm(FlaskForm):
                            format='%Y-%m-%d', validators=[InputRequired()])
     end_date = DateField('Close Date *', id='datepick2',
                          format='%Y-%m-%d', validators=[InputRequired()])
-    categories = StringField('Categories to use in this campaign', widget=widgets.TextArea())
+    categories = SelectField(validators=[DataRequired()], choices=[])
     depicts_metadata = BooleanField('Depicts')
     captions_metadata = BooleanField('Captions')
     campaign_type = BooleanField('This is a Wiki Loves Campaign')

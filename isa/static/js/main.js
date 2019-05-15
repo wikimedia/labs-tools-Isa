@@ -41,6 +41,54 @@ $(document).ready( function () {
     // we convert the depicts seach box to a select field
     // which will make the Ajax call to Wikidata api
     
+    function categorySearchResultsFormat(state) {
+        if (!state.id) {
+          return state.text;
+        }
+        var $state = $( '<span class="search-result-label">' + state.text + '</span>');
+        return $state;
+    }
+
+    $( '#categories_select_options' ).select2( {
+        placeholder: 'Search for Categories here',
+        delay: 250,
+        tags: true,
+        multiple: true,
+        tokenSeparators: [','],
+        minimumResultsForSearch: 1,
+        ajax: {
+            type: 'GET',
+                dataType:'json',
+                url: 'https://commons.wikimedia.org/w/api.php',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        action: 'opensearch',
+                        namespace: 14,
+                        format: 'json',
+                        origin: '*'
+                    }
+                    return query
+                },
+                processResults: function (data) {
+                    var processedResults = [],
+                        results = data[1];
+                    for (var i=0; i < results.length; i++) {
+                        var result = results[i];
+                        console.log(result);
+                        processedResults.push({
+                            id: result,
+                            text: result
+                        });
+                    }
+                    return {
+                        results: processedResults
+                    };
+                }
+            },
+        templateResult: categorySearchResultsFormat
+    });
+
     function searchResultsFormat(state) {
       if (!state.id) {
         return state.text;
@@ -50,7 +98,7 @@ $(document).ready( function () {
       );
       return $state;
     }
-    
+
     function setUpDepictsForm(current_image){
         $( '#depicts_select_options' ).select2( {
             placeholder: 'Search for depicts',
@@ -103,7 +151,7 @@ $(document).ready( function () {
     function populateImageMetadata( filename ) {
         var apiOptions = {
             action: 'query',
-            titles: 'File:'+filename,
+            titles: filename,
             prop: 'imageinfo',
             iiprop: 'extmetadata',
             format: 'json',
@@ -133,7 +181,7 @@ $(document).ready( function () {
     function populateStructuredDataSection( filename ) {
         var entitiesApiOptions = {
             action: 'wbgetentities',
-            titles: 'File:'+filename,
+            titles: filename,
             sites: 'commonswiki',
             format: 'json',
             formatversion: 2,

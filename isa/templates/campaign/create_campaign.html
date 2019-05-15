@@ -91,7 +91,7 @@
                 <div id="campaign_stats_table" class="pb-5 navbar-light bg-light text-center">
                     <div class="row">
                         <div class="col ">
-                            <div class="pb-0 ml-auto">{{ form.categories.label( class="form-control-label" ) }}<span><i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="Enter categoies separated by commas"></i>
+                            <div class="pb-0 ml-auto">{{ form.categories.label( class="form-control-label" ) }}<span><i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="select a category by clicking on it"></i>
                             </span></div>
                             <!-- We test for errors in the form data here -->
                             {% if form.categories.errors %}
@@ -102,7 +102,7 @@
                                     {% endfor %}
                                 </div>
                             {% else %}
-                                {{ form.categories( class=" pl-2 pr-2 form-control form-control-sm" ) }}
+                                {{ form.categories( id="categories_select_options", class="form-control form-control-sm", multiple="multiple") }}
                             {% endif %}
                         </div>
                     </div>

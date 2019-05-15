@@ -102,8 +102,7 @@
                                         {% endfor %}
                                     </div>
                                 {% else %}
-                                    {{ form.categories( class=" pl-2 pr-2 form-control form-control-sm" ) }}
-                                {% endif %}
+                                {{ form.categories( id="categories_select_options", class="form-control form-control-sm", multiple="multiple") }}                                {% endif %}
                             </div>
                         </div>
                     </div>

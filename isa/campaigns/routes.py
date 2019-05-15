@@ -2,6 +2,7 @@ from datetime import datetime
 from flask import render_template, redirect, url_for, flash, request, session, Blueprint
 from flask_login import current_user
 import pycountry
+import sys
 
 from isa import db
 from isa.campaigns.forms import CampaignForm, CampaignDepictsSearchForm, CampaignCaptionsForm, UpdateCampaignForm
@@ -89,11 +90,12 @@ def CreateCampaign():
             current_user_id = User.query.filter_by(username='Eugene233').first().id
         form = CampaignForm()
         if form.is_submitted():
+            form_categories = ",".join(request.form.getlist('categories'))
             # here we create a campaign
             # We add the campaign information to the database
             campaign = Campaign(
                 campaign_name=form.campaign_name.data,
-                categories=form.categories.data,
+                categories=form_categories,
                 start_date=form.start_date.data,
                 end_date=form.end_date.data,
                 status=compute_campaign_status(form.end_date.data),
@@ -123,14 +125,12 @@ def CreateCampaign():
 def contributeToCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
-    # if not username:
-    #     flash('You need to Login to participate', 'info')
-    #     return redirect(url_for('campaigns.getCampaigns'))
-    if False:
-        pass
+    if not username:
+        flash('You need to Login to participate', 'info')
+        return redirect(url_for('campaigns.getCampaigns'))
     else:
         campaign = Campaign.query.filter_by(id=id).first()
-        current_user_id = User.query.filter_by(username='Eugene233').first().id
+        current_user_id = User.query.filter_by(username=username).first().id
         # contribution = Contribution(
         captions_form = CampaignCaptionsForm(prefix="captions_form")
         depicts_form = CampaignDepictsSearchForm(prefix="depicts_form")
@@ -143,7 +143,6 @@ def contributeToCampaign(id):
             category_data = get_category_items(category)
             campaign_partcicipate_data.append(category_data)
         all_campaign_images = get_all_campaign_images(campaign_partcicipate_data)
-        all_campaign_image_names = get_actual_image_file_names(all_campaign_images)
 
         # When a form with depict statments is submitted, we process each and
         # register a contribution for each of the depicts
@@ -190,7 +189,7 @@ def contributeToCampaign(id):
                                id=id,
                                captions_form=captions_form,
                                depicts_form=depicts_form,
-                               all_campaign_image_names=all_campaign_image_names,
+                               all_campaign_image_names=all_campaign_images,
                                campaign=campaign,
                                campaign_partcicipate_data=campaign_partcicipate_data,
                                user_pref_lang=get_user_language_preferences(username),
@@ -210,6 +209,9 @@ def updateCampaign(id):
         # TODO: Check if campaign is closed so that it cannot be edited again
         # This is a potential issue/Managerial
         if form.is_submitted():
+            # we get the list of catefories from request
+            form_categories = ",".join(request.form.getlist('categories'))
+
             campaign = Campaign.query.filter_by(id=id).first()
             campaign.campaign_name = form.campaign_name.data
             campaign.short_description = form.short_description.data
@@ -217,7 +219,7 @@ def updateCampaign(id):
             campaign.manager_name = form.manager_name.data
             campaign.depicts_metadata = form.depicts_metadata.data
             campaign.captions_metadata = form.captions_metadata.data
-            campaign.categories = form.categories.data
+            campaign.categories = form_categories
             campaign.start_date = form.start_date.data
             campaign.campaign_type = form.campaign_type.data
             campaign.end_date = form.end_date.data
