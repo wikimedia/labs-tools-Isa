@@ -40,7 +40,17 @@ $(document).ready( function () {
 
     // we convert the depicts seach box to a select field
     // which will make the Ajax call to Wikidata api
-
+    
+    function searchResultsFormat(state) {
+      if (!state.id) {
+        return state.text;
+      }
+      var $state = $(
+        '<span class="search-result-label">' + state.text + '</span> <br> <span class="search-result-description">' + state.description + '</span>'
+      );
+      return $state;
+    }
+    
     function setUpDepictsForm(current_image){
         $( '#depicts_select_options' ).select2( {
             placeholder: 'Search for depicts',
@@ -53,36 +63,35 @@ $(document).ready( function () {
             ajax: {
                 type: 'GET',
                 dataType:'json',
-                url: ' https://www.wikidata.org/w/api.php',
+                url: 'https://www.wikidata.org/w/api.php',
                 data: function (params) {
                     var query = {
                         search: params.term,
                         action: 'wbsearchentities',
                         language: depicts_language,
                         format: 'json',
-                        uselang: 'fr',
+                        uselang: 'en',
                         origin: '*'
-                    }
-                    return query
+                    };
+                    return query;
                 },
                 processResults: function (data) {
-                    var depict_search_results = [];
-                    var i=0;
-                    for ( var item in data.search) {
-                        depict_search_results.push( {
-                            id: data.search[item].id +'|'+ $('.active').find('img').attr('alt'),
-                            text: data.search[item].label + ':' + data.search[item].description
+                    var processedResults = [],
+                        results = data.search;
+                    for (var i=0; i < results.length; i++) {
+                        var result = results[i];
+                        processedResults.push({
+                            id: result.id +'|'+ $('.active').find('img').attr('alt'),
+                            text: result.label,
+                            description: result.description || "" //use "" as default to avoid 'undefined' showing as description
                         });
-                        i++;
                     }
                     return {
-                        results: depict_search_results
+                        results: processedResults
                     };
                 }
             },
-            escapeMarkup: function(markup) {
-                return markup;
-              },
+            templateResult: searchResultsFormat
         });
     }
 

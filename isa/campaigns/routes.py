@@ -123,9 +123,11 @@ def CreateCampaign():
 def contributeToCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
-    if not username:
-        flash('You need to Login to participate', 'info')
-        return redirect(url_for('campaigns.getCampaigns'))
+    # if not username:
+    #     flash('You need to Login to participate', 'info')
+    #     return redirect(url_for('campaigns.getCampaigns'))
+    if False:
+        pass
     else:
         campaign = Campaign.query.filter_by(id=id).first()
         current_user_id = User.query.filter_by(username='Eugene233').first().id
@@ -146,7 +148,7 @@ def contributeToCampaign(id):
         # When a form with depict statments is submitted, we process each and
         # register a contribution for each of the depicts
         if depicts_form.is_submitted() and depicts_form.submit.data:
-            depicts_data = constructEditContent(request.form.getlist('depicts'))
+            depicts_data = constructEditContent(request.form.getlist('depicts_form-depicts'))
             if not depicts_data:
                 flash('please add at least a depict statement', 'info')
             else:
