@@ -12,13 +12,13 @@
                 {% for image in all_campaign_image_names %}
                     {% if image == all_campaign_image_names[0] %}
                         <div id="participate_image_item"class="carousel-item active">
-                            <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
+                            <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons./wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
                                 alt="{{all_campaign_image_names[0]}}" width="200" height="40">
                         </div>
                     {% else %}
                         <!-- We will display a random image here  -->
                         <div id="participate_image_item" class="carousel-item">
-                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{image}}"
+                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons/.wikimedia.org/wiki/Special:FilePath/{{image}}"
                                 alt="{{image}}" width="200" height="40">
                         </div>
                     {% endif %}

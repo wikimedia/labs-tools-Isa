@@ -165,7 +165,7 @@ def contributeToCampaign(id):
 
         # When a form with depict statments is submitted, we process each and
         # register a contribution for each of the depicts
-        if depicts_form.is_submitted() and depicts_form.submit.data:
+        if depicts_form.is_submitted():
             depicts_data = constructEditContent(request.form.getlist('depicts_form-depicts'))
             if not depicts_data:
                 flash('please add at least a depict statement', 'info')
