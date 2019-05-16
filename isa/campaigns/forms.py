@@ -12,8 +12,7 @@ class CampaignForm(FlaskForm):
     manager_name = StringField('Campaign Manager Name', validators=[Length(min=2, max=12)])
     start_date = DateField('Start Date *', id='datepick1',
                            format='%Y-%m-%d', validators=[InputRequired()])
-    end_date = DateField('Close Date *', id='datepick2',
-                         format='%Y-%m-%d', validators=[InputRequired()])
+    end_date = DateField('Close Date *', id='datepick2', format='%Y-%m-%d')
     categories = SelectField(validators=[DataRequired()], choices=[])
     depicts_metadata = BooleanField('Depicts')
     captions_metadata = BooleanField('Captions')
@@ -31,8 +30,7 @@ class UpdateCampaignForm(FlaskForm):
                                Length(min=2, max=12)])
     start_date = DateField('Start Date *', id='datepick1',
                            format='%Y-%m-%d', validators=[InputRequired()])
-    end_date = DateField('Close Date *', id='datepick2',
-                         format='%Y-%m-%d', validators=[InputRequired()])
+    end_date = DateField('Close Date *', id='datepick2', format='%Y-%m-%d')
     categories = SelectField(validators=[DataRequired()], choices=[])
     depicts_metadata = BooleanField('Depicts')
     captions_metadata = BooleanField('Captions')

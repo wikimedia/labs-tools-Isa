@@ -19,7 +19,7 @@ def get_category_items(category):
         'action': "query",
         'list': "categorymembers",
         'cmtitle': category,
-        'cmlimit': 2,
+        'cmlimit': 'max',
         'cmtype': "file",
         'prop': "images",
         'format': "json"

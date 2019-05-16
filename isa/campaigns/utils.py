@@ -26,8 +26,11 @@ def compute_campaign_status(end_date):
     end_date -- the end date of the campaign
     """
     status = bool('False')
-    if (end_date.strftime('%Y-%m-%d %H:%M') < datetime.now().strftime('%Y-%m-%d %H:%M')):
-        status = bool('True')
+    if end_date:
+        if (end_date.strftime('%Y-%m-%d %H:%M') < datetime.now().strftime('%Y-%m-%d %H:%M')):
+            status = bool('True')
+    else:
+        return False
     return status
 
 
