@@ -1,3 +1,6 @@
+import json
+from operator import itemgetter
+
 from isa.models import User
 from isa import db
 from isa.main.utils import testDbCommitSuccess
@@ -10,6 +13,7 @@ def check_user_existence(username):
     Keyword arguments:
     username -- the currently logged in user
     """
+
     user_exists = User.query.filter_by(username=username).first()
     if not user_exists:
         return True
@@ -24,6 +28,7 @@ def add_user_to_db(username):
     Keyword arguments:
     username -- the currently logged in user
     """
+
     if check_user_existence(username):
         user = User(username=username, pref_lang='en,fr')
         db.session.add(user)
@@ -43,6 +48,7 @@ def get_user_language_preferences(username):
     Keyword arguments:
     username -- the currently logged in user
     """
+
     user = User.query.filter_by(username=username).first()
     if user is None:
         return 'en,fr'.split(',')
@@ -51,15 +57,67 @@ def get_user_language_preferences(username):
         return user_pref_options.split(',')
 
 
-# TODO: The below functions are used to perform operations on the db tables
-# def sum_all_user_contributions(users):
-#     """
-#     Sum contributions made by all users.
+def getUserRanking(all_contributors_data, username):
+    """
+    Get a particular user's ranking
 
-#     Keyword arguments:
-#     users -- the users list
-#     """
-#     user_contribution_sum = 0
-#     for user in users:
-#         user_contribution_sum += get_user_contributions(user.id)
-#     return user_contribution_sum
+    Keyword arguments:
+    all_contributors_data -- sorted list of all users by their contributions
+    username -- the user who's ranking is to be obtained
+    """
+
+    index = next((i for i, item in enumerate(all_contributors_data) if item['username'] == username), -1)
+    return index + 1  # we shift from 0
+
+
+def getUserContributionsPerCampign(username, campaign_id):
+    """
+    Get a particular user's contribution per Campaign
+
+    Keyword arguments:
+    username -- the user who's contributions is to be obtained
+    campaign_id -- the campaign id
+    """
+
+    user = User.query.filter_by(username=username).first()
+    user_contributed_files = []
+    user_contribution_data = {}  # has keys username and images_improved
+    for contrib in user.contributions:
+        if contrib.campaign_id == campaign_id:
+            user_contributed_files.append(contrib.file)
+    user_contribution_data['username'] = username
+    user_contribution_data['images_improved'] = len(user_contributed_files)
+    return user_contribution_data
+
+
+def getAllUsersContributionsPerCampaign(Users, campaign_id):
+    """
+    Get all user contributions per Campaign
+
+    Keyword arguments:
+    Users -- List of all users who make contributions in a campaign
+    campaign_id -- the campaign id
+    """
+
+    all_contributors_data = []
+    for user in Users:
+        all_contributors_data.append(getUserContributionsPerCampign(user.username, campaign_id))
+    #  We sort the users and their contributions data in decreaasing order
+    all_contributors_data = sorted(all_contributors_data, key=itemgetter('images_improved'), reverse=True)
+    return all_contributors_data
+
+
+def getCurrentUserImagesImproved(all_contributors_data, username):
+    """
+    Get current user's ranking
+
+    Keyword arguments:
+    all_contributors_data -- sorted list of all users by their contributions
+    username -- the user who's images improved is to be obtained
+    """
+
+    for user_data in all_contributors_data:
+        if user_data['username'] == username:
+            return user_data['images_improved']
+        else:
+            return 'N/A'

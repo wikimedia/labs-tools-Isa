@@ -66,13 +66,25 @@
                             <th scope="col">Images Improved</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            </tr>
-                        </tbody>
+                        {% if all_contributors_data %}
+                            <tbody>
+                                {% for contributor_data in all_contributors_data %}
+                                    <tr>
+                                        <th scope="row">{{contributor_data['rank']}}</th>
+                                        <td>{{contributor_data['username']}}</td>
+                                        <td>{{contributor_data['images_improved']}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        {% else %}
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Sorry!</th>
+                                    <td></td>
+                                    <td class="text-center">No partcipants has contributed to this campaign</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
                     </table>
                 </div>
                 <div class="col-sm-6 mr-auto">
@@ -88,8 +100,8 @@
                         <tbody>
                             <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
+                            <td>Cameroon</td>
+                            <td>500</td>
                             </tr>
                         </tbody>
                     </table>
@@ -101,30 +113,32 @@
         </div>
     </div>
     <br>
-    <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col ml-auto">
-                    <div class="pb-3 ml-auto">My Contributions</div>
-                    <table id="my_contributions_table" class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Rank</th>
-                                <th scope="col">Images Improved</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>23</td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <!-- {% if username != 'Guest' and username != False and username != None %} -->
+        <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col ml-auto">
+                        <div class="pb-3 ml-auto">My Contributions</div>
+                        <table id="my_contributions_table" class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Images Improved</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{{current_user_rank}}</th>
+                                    <td>{{current_user_images_improved}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    <!-- {% endif %} -->
     <div class="container">
         <header class="main-page">
             <div class="pt-0 text-center">

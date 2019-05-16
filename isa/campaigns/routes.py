@@ -11,7 +11,8 @@ from isa.models import Campaign, Contribution, User
 from isa.campaigns.utils import (get_actual_image_file_names, get_all_campaign_images, constructEditContent,
                                  get_campaign_category_list, get_country_from_code, compute_campaign_status)
 from isa.main.utils import testDbCommitSuccess
-from isa.users.utils import get_user_language_preferences
+from isa.users.utils import (get_user_language_preferences,
+                             getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
 
 campaigns = Blueprint('campaigns', __name__)
 
@@ -34,7 +35,6 @@ def getCampaigns():
 def getCampaignById(id):
     # We get the current user's user_name
     username = session.get('username', None)
-
     campaign = Campaign.query.filter_by(id=id).first()
     if not campaign:
         flash('Campaign with id {} does not exist'.format(id), 'info')
@@ -64,6 +64,22 @@ def getCampaignById(id):
         if (contrib.campaign_id == campaign.id):
             campaign_contributions += 1
     countries = [(country.alpha_2, country.name) for country in pycountry.countries]
+
+    # We now obtain the ranking for all the users in the system and their files improved
+    all_camapign_users_list = []
+    #  We iterate the individual participants id in a campaign and get the user info
+    for user_id in campaign_users_ids_set:
+        user = User.query.filter_by(id=user_id).first()
+        all_camapign_users_list.append(user)
+
+    # We get the users and their contribution data
+    all_contributors_data = getAllUsersContributionsPerCampaign(all_camapign_users_list, id)
+    current_user_rank = getUserRanking(all_contributors_data, username)
+    current_user_images_improved = getCurrentUserImagesImproved(all_contributors_data, username)
+
+    # We add rank to all contributor's data
+    for user_data in all_contributors_data:
+        user_data['rank'] = getUserRanking(all_contributors_data, user_data['username'])
     return render_template('campaign/campaign.html', title='Campaign - ' + campaign.campaign_name,
                            campaign=campaign,
                            campaign_manager=campaign_manager.username,
@@ -72,7 +88,10 @@ def getCampaignById(id):
                            campaign_contributions=campaign_contributions,
                            user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user,
-                           countries=countries)
+                           countries=countries,
+                           all_contributors_data=all_contributors_data,
+                           current_user_rank=current_user_rank,
+                           current_user_images_improved=current_user_images_improved)
 
 
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
