@@ -12,13 +12,13 @@
                 {% for image in all_campaign_image_names %}
                     {% if image == all_campaign_image_names[0] %}
                         <div id="participate_image_item"class="carousel-item active">
-                            <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons./wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
+                            <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
                                 alt="{{all_campaign_image_names[0]}}" width="200" height="40">
                         </div>
                     {% else %}
                         <!-- We will display a random image here  -->
                         <div id="participate_image_item" class="carousel-item">
-                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons/.wikimedia.org/wiki/Special:FilePath/{{image}}"
+                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{image}}"
                                 alt="{{image}}" width="200" height="40">
                         </div>
                     {% endif %}
@@ -42,7 +42,7 @@
             <small><strong>File:</strong>&nbsp; </small> <small id="image_name"></small> <br>
             <small><strong>Description:</strong>&nbsp; <small id="image_description"></small></small> <br>
             <small><strong>Categories:</strong>&nbsp; <small id="image_categories"></small></small> <br>
-            <small id="image_author"><strong>Author(s):</strong>&nbsp;</small>
+            <small><strong>Author:  </strong><small id="image_author"></small>&nbsp;</small>
         </div>
         <div class="text-center">
             <a href="#"><small class="fas fa-caret-up"> show all metadata from commons</small></a>
