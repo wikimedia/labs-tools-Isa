@@ -55,7 +55,7 @@ class Campaign(db.Model):
     categories = db.Column(db.Text, nullable=False)
     start_date = db.Column(db.Date, nullable=False,
                            default=datetime.now().strftime('%Y-%m-%d'))
-    end_date = db.Column(db.Date, nullable=False,
+    end_date = db.Column(db.Date, nullable=True,
                          default=datetime.now().strftime('%Y-%m-%d'))
     status = db.Column(db.Boolean, nullable=False, default=bool('False'))
     short_description = db.Column(db.Text, nullable=False)

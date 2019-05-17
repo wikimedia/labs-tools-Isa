@@ -106,7 +106,7 @@ def CreateCampaign():
             current_user_id = User.query.filter_by(username=username).first().id
         else:
             # TODO: We have to decide which user should own arbitrary campaigns
-            current_user_id = User.query.filter_by(username='Eugene233').first().id
+            current_user_id = User.query.filter_by(username=username).first().id
         form = CampaignForm()
         if form.is_submitted():
             form_categories = ",".join(request.form.getlist('categories'))
@@ -128,7 +128,7 @@ def CreateCampaign():
             db.session.add(campaign)
             # commit failed
             if testDbCommitSuccess():
-                flash('Sorry {} already exists'.format(
+                flash('Sorry {} Could not be created'.format(
                       form.campaign_name.data), 'danger')
             else:
                 flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
@@ -245,8 +245,8 @@ def updateCampaign(id):
             if testDbCommitSuccess():
                 flash('Please check the country for this Campaign!', 'danger')
             else:
-                flash('Updated Succesfull!', 'success')
-                return redirect(url_for('campaigns.getCampaigns'))
+                flash('Update Succesfull !', 'success')
+                return redirect(url_for('campaigns.getCampaignById', id=id))
         # User requests to edit so we update the form with Campaign details
         elif request.method == 'GET':
             # we get the campaign data to place in form fields
