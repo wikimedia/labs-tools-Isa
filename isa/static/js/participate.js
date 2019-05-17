@@ -8,8 +8,6 @@ $(document).ready( function () {
     // when the page loads, we hide the section for depict search 
     var current_slide = $( '.carousel-item' ).find( 'img' ).attr( 'alt' );
 
-    // part 
-
     //  we write the current slide value to the captions image label
     $( '#captions_image_label' ).val(current_slide);
     $( '#captions_image_label' ).hide();
@@ -32,6 +30,7 @@ $(document).ready( function () {
         delay: 250,
         tags: true,
         multiple: true,
+        allowClear: true,
         tokenSeparators: [','],
         minimumResultsForSearch: 1,
         ajax: {
@@ -64,7 +63,10 @@ $(document).ready( function () {
                     };
                 }
             },
-        templateResult: categorySearchResultsFormat
+        templateResult: categorySearchResultsFormat,
+        createTag: function() {
+            return undefined;
+       }
     });
 
     function searchResultsFormat(state) {
@@ -116,9 +118,12 @@ $(document).ready( function () {
                           results: processedResults
                       };
                   }
-              },
-              templateResult: searchResultsFormat
-          });
+            },
+            templateResult: searchResultsFormat,
+            createTag: function() {
+                return undefined;
+            }
+        });
       }
 /**
 	 * Populate images metadata.
