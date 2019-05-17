@@ -159,3 +159,6 @@
     {% endif %}
 </div>
 {% endblock content%}
+{% block scripts %}
+    <script src="{{url_for('static', filename='js/participate.js')}}"></script>
+{% endblock scripts%}
