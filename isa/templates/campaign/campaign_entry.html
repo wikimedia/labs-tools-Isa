@@ -9,16 +9,16 @@
     <div class="container mr-auto d-flex justify-content-center">
         <div id="campaignPartcipateImageCarousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-                {% for image in all_campaign_image_names %}
-                    {% if image == all_campaign_image_names[0] %}
+                {% for image in all_campaign_desired_images %}
+                    {% if image == all_campaign_desired_images[0] %}
                         <div id="participate_image_item"class="carousel-item active">
-                            <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_image_names[0]}}"
-                                alt="{{all_campaign_image_names[0]}}" width="200" height="40">
+                            <img id="participate_image" name="{{image}}" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{all_campaign_desired_images[0]}}?width=100"
+                                alt="{{all_campaign_desired_images[0]}}" width="200" height="40">
                         </div>
                     {% else %}
                         <!-- We will display a random image here  -->
                         <div id="participate_image_item" class="carousel-item">
-                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{image}}"
+                            <img id="participate_image" name="participate_image" class="d-block w-100 img-fluid" src="https://commons.wikimedia.org/wiki/Special:FilePath/{{image}}?width=100"
                                 alt="{{image}}" width="200" height="40">
                         </div>
                     {% endif %}

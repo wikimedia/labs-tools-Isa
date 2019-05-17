@@ -163,6 +163,14 @@ def contributeToCampaign(id):
             campaign_partcicipate_data.append(category_data)
         all_campaign_images = get_all_campaign_images(campaign_partcicipate_data)
 
+        # We take only the images which have the following extensions
+        #  .png .jpeg .jpg .svg
+        all_campaign_desired_images = []
+        for image in all_campaign_images:
+            image_lower = image.lower()
+            if image_lower.endswith('.png') or image_lower.endswith('.jpeg') \
+               or image_lower.endswith('.jpg') or image_lower.endswith('.svg'):
+                all_campaign_desired_images.append(image)
         # When a form with depict statments is submitted, we process each and
         # register a contribution for each of the depicts
         if depicts_form.is_submitted():
@@ -208,7 +216,7 @@ def contributeToCampaign(id):
                                id=id,
                                captions_form=captions_form,
                                depicts_form=depicts_form,
-                               all_campaign_image_names=all_campaign_images,
+                               all_campaign_desired_images=all_campaign_desired_images,
                                campaign=campaign,
                                campaign_partcicipate_data=campaign_partcicipate_data,
                                user_pref_lang=get_user_language_preferences(username),
