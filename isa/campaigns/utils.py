@@ -84,3 +84,10 @@ def constructEditContent(formdata):
         return depicts_content
     else:
         return []
+
+
+def buildCategoryObject(category):
+    cat_object_body = {}
+    cat_object_body['name'] = category
+    cat_object_body['depth'] = 0
+    return cat_object_body

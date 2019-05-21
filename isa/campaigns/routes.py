@@ -3,13 +3,15 @@ from flask import render_template, redirect, url_for, flash, request, session, B
 from flask_login import current_user
 import pycountry
 import sys
+import json
 
 from isa import db
 from isa.campaigns.forms import CampaignForm, CampaignDepictsSearchForm, CampaignCaptionsForm, UpdateCampaignForm
 from isa.get_category_items import get_category_items
 from isa.models import Campaign, Contribution, User
 from isa.campaigns.utils import (get_actual_image_file_names, get_all_campaign_images, constructEditContent,
-                                 get_campaign_category_list, get_country_from_code, compute_campaign_status)
+                                 get_campaign_category_list, get_country_from_code, compute_campaign_status,
+                                 buildCategoryObject)
 from isa.main.utils import testDbCommitSuccess
 from isa.users.utils import (get_user_language_preferences,
                              getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
@@ -278,3 +280,25 @@ def updateCampaign(id):
                                user_pref_lang=get_user_language_preferences(username),
                                current_user=current_user,
                                username=username)
+
+
+@campaigns.route('/api/get-campaign-categories', methods=['GET', 'POST'])
+def getCampaignCategories():
+    # we get the campaign_id from the route request
+    campaign_id = request.args.get('campaign')
+    # We get the current user's user_name
+    username = session.get('username', None)
+    if not username:
+        return '<stong> Sorry! This Data is available for logged in Users only</strong>'
+    else:
+        # We get the campaign categories
+        campaign = Campaign.query.filter_by(id=campaign_id).first()
+        campaign_object = {}
+        campaign_object['name'] = campaign.campaign_name
+        campaign_object['categories'] = {}  # We store each category here
+
+        categories_objects_array = []
+        for category in campaign.categories.split(','):
+            categories_objects_array.append(buildCategoryObject(category))
+        campaign_object['categories'] = categories_objects_array
+        return json.dumps(campaign_object)
