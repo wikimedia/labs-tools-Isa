@@ -117,6 +117,7 @@ def CreateCampaign():
             campaign = Campaign(
                 campaign_name=form.campaign_name.data,
                 categories=form_categories,
+                categories_depth=int(form.categories_depth.data),
                 start_date=form.start_date.data,
                 end_date=form.end_date.data,
                 status=compute_campaign_status(form.end_date.data),
@@ -249,6 +250,7 @@ def updateCampaign(id):
             campaign.depicts_metadata = form.depicts_metadata.data
             campaign.captions_metadata = form.captions_metadata.data
             campaign.categories = form_categories
+            campaign.categories_depth = int(form.categories_depth.data)
             campaign.start_date = form.start_date.data
             campaign.campaign_type = form.campaign_type.data
             campaign.end_date = form.end_date.data
@@ -265,6 +267,7 @@ def updateCampaign(id):
             form.short_description.data = campaign.short_description
             form.long_description.data = campaign.long_description
             form.categories.data = campaign.categories
+            form.categories_depth.data = int(campaign.categories_depth)
             form.manager_name.data = campaign.manager_name
             form.start_date.data = campaign.start_date
             form.depicts_metadata.data = campaign.depicts_metadata

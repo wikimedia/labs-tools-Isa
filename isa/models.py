@@ -53,6 +53,7 @@ class Campaign(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     campaign_name = db.Column(db.String(15), nullable=False)
     categories = db.Column(db.Text, nullable=False)
+    categories_depth = db.Column(db.Integer)
     start_date = db.Column(db.Date, nullable=False,
                            default=datetime.now().strftime('%Y-%m-%d'))
     end_date = db.Column(db.Date, nullable=True,
@@ -70,9 +71,10 @@ class Campaign(db.Model):
 
     def __repr__(self):
         # This is what is shown when object is printed
-        return "Campaign( {}, {}".format(
+        return "Campaign( {}, {}, {}, {}, {}, {}, {})".format(
                self.campaign_name,
                self.categories,
+               self.categories_depth,
                self.depicts_metadata,
                self.captions_metadata,
                self.start_date,
