@@ -194,6 +194,8 @@ def contributeToCampaign(id):
                         flash('Sorry edit could not be registered', 'danger')
                     else:
                         flash('Thanks for Your contribution', 'success')
+                        # We make sure that the form data does not remain in browser
+                        return redirect(url_for('campaigns.contributeToCampaign', id=id))
         if captions_form.is_submitted() and captions_form.submit.data:
             captions_image_label = request.form.get('captions_form-image_label')
             caption_text = request.form.get('captions_form-caption')
@@ -212,6 +214,8 @@ def contributeToCampaign(id):
                     flash('Sorry edit could not be registered', 'danger')
                 else:
                     flash('Thanks for Your contribution', 'success')
+                    # We make sure that the form data does not remain in browser
+                    return redirect(url_for('campaigns.contributeToCampaign', id=id))
         return render_template('campaign/campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
                                id=id,
                                captions_form=captions_form,
