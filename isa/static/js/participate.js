@@ -3,7 +3,9 @@ $(document).ready( function () {
     $( '.carousel' ).carousel( {
         interval: false
     } );
-    // par
+
+    // We hide the country sub-category input field
+    $('.country-subcategory-input').hide();
 
     // when the page loads, we hide the section for depict search 
     var current_slide = $( '.carousel-item' ).find( 'img' ).attr( 'alt' );

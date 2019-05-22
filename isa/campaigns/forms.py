@@ -42,11 +42,13 @@ class UpdateCampaignForm(FlaskForm):
 
 class CampaignDepictsSearchForm(FlaskForm):
     depicts = SelectField(validators=[DataRequired()], choices=[])
+    sub_categories = StringField()
     lang = SelectField(validators=[DataRequired()], choices=[('fr', 'fr'), ('en', 'en'), ('de', 'de')])
     submit = SubmitField('Save')
 
 
 class CampaignCaptionsForm(FlaskForm):
     image_label = StringField('image here')
+    sub_categories = StringField()
     caption = StringField(widget=widgets.TextArea())
     submit = SubmitField('Save')
