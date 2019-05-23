@@ -87,6 +87,9 @@
                             {{ depicts_form.submit( class="btn btn-sm btn-warning" ) }}
                         </div>
                     </div>
+                    <div class="row">
+                        {{ depicts_form.sub_categories( class="country-subcategory-input form-control form-control-sm" ) }}
+                    </div>
                 </form>
             </div>
         </div>  
@@ -113,6 +116,9 @@
                         {% else %}
                             {{ captions_form.caption( class="form-control captions_text form-control-sm" ) }}
                         {% endif %}
+                    </div>
+                    <div class="row">
+                        {{ captions_form.sub_categories( class="country-subcategory-input form-control form-control-sm" ) }}
                     </div>
                     <div class="text-center">
                         <small class="choose_caption_lang_text"><strong>Change Caption Language:</strong> CHOOSE AVAILABLE LANGUAGES</small>
