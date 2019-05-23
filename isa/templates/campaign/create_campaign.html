@@ -38,20 +38,6 @@
                 {% endif %}
             </div>
             <div class="form-group">
-                {{ form.manager_name.label( class="form-control-label" ) }}
-                <!-- We test for errors in the form data here -->
-                 {% if form.manager_name.errors %}
-                    {{ form.manager_name( class="form-control form-control-sm is-nvalid" ) }}
-                    <div class="invalid-feedback">
-                        {% for error in form.manager_name.errors %}
-                        <span> {{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.manager_name( class="form-control form-control-sm" ) }}
-                {% endif %}
-            </div>
-            <div class="form-group">
                 <div class="row">
                     <div class="col-sm-6 ml-auto">
                         <div class="input-group date">

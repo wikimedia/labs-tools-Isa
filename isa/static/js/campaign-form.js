@@ -1,5 +1,9 @@
 $(document).ready( function () {
-    $( '.selectpicker' ).selectpicker();
+
+    $( function() {
+        $( '.selectpicker' ).selectpicker();
+    } );
+
     function categorySearchResultsFormat(state) {
         if (!state.id) {
           return state.text;
