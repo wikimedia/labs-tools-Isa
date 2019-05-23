@@ -3,17 +3,17 @@
 <div id="campaign_nav" class=" text-center pb-2  navbar-light bg-light">
     <div class="container">
         <div class="row">
-        <div class="ml-auto">
-            <small> <strong>View images from </strong> </small>
-             <select class="fas fa-caret-down selectpicker btn-new" data-style="btn-new">
-                <option class="select-option" value= "all" SELECTED>All Countries</option>"
-                <!-- Specify all countries using pycountry -->
-                {% for country in countries %}
-                    <option value= "{{country[1]}}">{{country[1]}}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="ml-auto mr-auto btn btn-primary" >Get Started</a>
+            {% if is_wiki_loves_campaign %}
+                <div class="ml-auto">
+                    <small> <strong>View images from </strong> </small>
+                    <select id="campaign_countries" class="fas fa-caret-down selectpicker btn-new" data-style="btn-new">
+                        <option class="select-option" value= "all" SELECTED>Country 1</option>
+                        <option class="select-option" value= "all" SELECTED>Country 2</option>
+                        <!-- The other obtions will be povided here on fron-end -->
+                    </select>
+                </div>
+            {% endif %}
+            <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="ml-auto mr-auto btn btn-primary" >Get Started</a>
         </div>
     </div>
 </div>

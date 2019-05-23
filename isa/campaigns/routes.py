@@ -1,7 +1,6 @@
 from datetime import datetime
 from flask import render_template, redirect, url_for, flash, request, session, Blueprint
 from flask_login import current_user
-import pycountry
 import sys
 import json
 
@@ -65,7 +64,6 @@ def getCampaignById(id):
     for contrib in all_contributions:
         if (contrib.campaign_id == campaign.id):
             campaign_contributions += 1
-    countries = [(country.alpha_2, country.name) for country in pycountry.countries]
 
     # We now obtain the ranking for all the users in the system and their files improved
     all_camapign_users_list = []
@@ -90,7 +88,7 @@ def getCampaignById(id):
                            campaign_contributions=campaign_contributions,
                            user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user,
-                           countries=countries,
+                           is_wiki_loves_campaign=campaign.campaign_type,
                            all_contributors_data=all_contributors_data,
                            current_user_rank=current_user_rank,
                            current_user_images_improved=current_user_images_improved)
@@ -259,7 +257,7 @@ def updateCampaign(id):
             campaign.campaign_type = form.campaign_type.data
             campaign.end_date = form.end_date.data
             if testDbCommitSuccess():
-                flash('Please check the country for this Campaign!', 'danger')
+                flash('Please enter an End Date for this Campaign!', 'danger')
             else:
                 flash('Update Succesfull !', 'success')
                 return redirect(url_for('campaigns.getCampaignById', id=id))
