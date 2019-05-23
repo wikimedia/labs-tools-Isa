@@ -1,5 +1,6 @@
 import mwoauth
 
+import sys
 from flask import Blueprint, redirect, url_for, flash, request, session
 from flask_login import current_user, login_user, logout_user
 # import pycountry
@@ -64,6 +65,10 @@ def oauth_callback():
             access_token._fields, access_token))
         session['username'] = identity['username']
         flash(' Welcome  {}!'.format(session['username']), 'success')
+        if session.get('next_url'):
+            next_url = session.get('next_url')
+            session.pop('next_url', None)
+            return redirect(next_url)
     return redirect(url_for('main.home'))
 
 

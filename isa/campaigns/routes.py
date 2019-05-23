@@ -143,38 +143,45 @@ def CreateCampaign():
 
 @campaigns.route('/campaigns/<int:id>/participate', methods=['GET', 'POST'])
 def contributeToCampaign(id):
-    # We get the current user's user_name
+    
+    # We get current user in sessions's username
     username = session.get('username', None)
-    if not username:
-        flash('You need to Login to participate', 'info')
-        return redirect(url_for('campaigns.getCampaigns'))
-    else:
-        campaign = Campaign.query.filter_by(id=id).first()
-        current_user_id = User.query.filter_by(username=username).first().id
-        # contribution = Contribution(
-        captions_form = CampaignCaptionsForm(prefix="captions_form")
-        depicts_form = CampaignDepictsSearchForm(prefix="depicts_form")
 
-        campaign_categories = get_campaign_category_list(campaign.categories)
-        # will homd the data about the categores
-        campaign_partcicipate_data = []
-        # we now get content through api call for the images
-        for category in campaign_categories:
-            category_data = get_category_items(category)
-            campaign_partcicipate_data.append(category_data)
-        all_campaign_images = get_all_campaign_images(campaign_partcicipate_data)
+    # We select the campign whose id comes into the route
+    campaign = Campaign.query.filter_by(id=id).first()
+    
+    # contribution = Contribution(
+    captions_form = CampaignCaptionsForm(prefix="captions_form")
+    depicts_form = CampaignDepictsSearchForm(prefix="depicts_form")
 
-        # We take only the images which have the following extensions
-        #  .png .jpeg .jpg .svg
-        all_campaign_desired_images = []
-        for image in all_campaign_images:
-            image_lower = image.lower()
-            if image_lower.endswith('.png') or image_lower.endswith('.jpeg') \
-               or image_lower.endswith('.jpg') or image_lower.endswith('.svg'):
-                all_campaign_desired_images.append(image)
-        # When a form with depict statments is submitted, we process each and
-        # register a contribution for each of the depicts
-        if depicts_form.is_submitted():
+    campaign_categories = get_campaign_category_list(campaign.categories)
+    # will homd the data about the categores
+    campaign_partcicipate_data = []
+    # we now get content through api call for the images
+    for category in campaign_categories:
+        category_data = get_category_items(category)
+        campaign_partcicipate_data.append(category_data)
+    all_campaign_images = get_all_campaign_images(campaign_partcicipate_data)
+
+    # We take only the images which have the following extensions
+    #  .png .jpeg .jpg .svg
+    all_campaign_desired_images = []
+    for image in all_campaign_images:
+        image_lower = image.lower()
+        if image_lower.endswith('.png') or image_lower.endswith('.jpeg') \
+           or image_lower.endswith('.jpg') or image_lower.endswith('.svg'):
+            all_campaign_desired_images.append(image)
+    # When a form with depict statments is submitted, we process each and
+    # register a contribution for each of the depicts
+    if depicts_form.is_submitted():
+        # We check if there is a user in session
+        if not username:
+            flash('You need to login to participate', 'info')
+            # User is not logged in so we set the next url to redirect them after login
+            session['next_url'] = request.url
+            return redirect(url_for('campaigns.contributeToCampaign', id=id))
+        else:
+            current_user_id = User.query.filter_by(username=username).first().id
             depicts_data = constructEditContent(request.form.getlist('depicts_form-depicts'))
             if not depicts_data:
                 flash('please add at least a depict statement', 'info')
@@ -197,7 +204,14 @@ def contributeToCampaign(id):
                         flash('Thanks for Your contribution', 'success')
                         # We make sure that the form data does not remain in browser
                         return redirect(url_for('campaigns.contributeToCampaign', id=id))
-        if captions_form.is_submitted() and captions_form.submit.data:
+    if captions_form.is_submitted() and captions_form.submit.data:
+        # We check if there is a user in session
+        if not username:
+            flash('You need to login to participate', 'info')
+            # User is not logged in so we set the next url to redirect them after login
+            session['next_url'] = request.url
+            return redirect(url_for('campaigns.contributeToCampaign', id=id))
+        else:
             captions_image_label = request.form.get('captions_form-image_label')
             caption_text = request.form.get('captions_form-caption')
             if captions_image_label and caption_text:
@@ -217,15 +231,16 @@ def contributeToCampaign(id):
                     flash('Thanks for Your contribution', 'success')
                     # We make sure that the form data does not remain in browser
                     return redirect(url_for('campaigns.contributeToCampaign', id=id))
-        return render_template('campaign/campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
-                               id=id,
-                               captions_form=captions_form,
-                               depicts_form=depicts_form,
-                               all_campaign_desired_images=all_campaign_desired_images,
-                               campaign=campaign,
-                               campaign_partcicipate_data=campaign_partcicipate_data,
-                               user_pref_lang=get_user_language_preferences(username),
-                               current_user=current_user)
+    return render_template('campaign/campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
+                           id=id,
+                           captions_form=captions_form,
+                           depicts_form=depicts_form,
+                           all_campaign_desired_images=all_campaign_desired_images,
+                           campaign=campaign,
+                           username=username,
+                           campaign_partcicipate_data=campaign_partcicipate_data,
+                           user_pref_lang=get_user_language_preferences(username),
+                           current_user=current_user)
 
 
 @campaigns.route('/campaigns/<int:id>/update', methods=['GET', 'POST'])
