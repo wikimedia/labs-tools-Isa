@@ -98,16 +98,13 @@ def getCampaignById(id):
 def CreateCampaign():
     # We get the current user's user_name
     username = session.get('username', None)
+    form = CampaignForm()
     if not username:
+        session['next_url'] = request.url
         flash('You need to Login to create a campaign', 'info')
         return redirect(url_for('campaigns.getCampaigns'))
     else:
-        if username:
-            current_user_id = User.query.filter_by(username=username).first().id
-        else:
-            # TODO: We have to decide which user should own arbitrary campaigns
-            current_user_id = User.query.filter_by(username='Eugene233').first().id
-        form = CampaignForm()
+        current_user_id = User.query.filter_by(username=username).first().id
         if form.is_submitted():
             form_categories = ",".join(request.form.getlist('categories'))
             # here we create a campaign
@@ -124,7 +121,6 @@ def CreateCampaign():
                 depicts_metadata=form.depicts_metadata.data,
                 captions_metadata=form.captions_metadata.data,
                 campaign_type=form.campaign_type.data,
-                manager_name=form.manager_name.data,
                 user_id=current_user_id)
             db.session.add(campaign)
             # commit failed
