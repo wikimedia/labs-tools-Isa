@@ -49,6 +49,9 @@ $(document).ready( function () {
                     };
                 }
             },
-        templateResult: categorySearchResultsFormat
+        templateResult: categorySearchResultsFormat,
+        createTag: function() {
+            return undefined;
+        }
     });
 });
