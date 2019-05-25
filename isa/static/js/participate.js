@@ -98,8 +98,9 @@ $(document).ready( function () {
         } )
         .done( function( response ) {
             var response_metadata = response.query.pages[0].imageinfo[0].extmetadata;
+            var htmlStrippedDescription = $('<span>' + response_metadata.ImageDescription.value + '</span>').text();
             $( '#image_name' ).text( response.query.pages[0].title );
-            $( '#image_description' ).text( response_metadata.ImageDescription.value );
+            $( '#image_description' ).html( htmlStrippedDescription );
             $( '#image_categories' ).text( response_metadata.Categories.value );
             $( '#image_author' ).html( response_metadata.Artist.value );
         } );
