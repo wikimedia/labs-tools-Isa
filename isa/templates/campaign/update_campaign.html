@@ -89,6 +89,22 @@
                                     </div>
                                 {% else %}
                                 {{ form.categories( id="categories_select_options", class="form-control form-control-sm", multiple="multiple") }}                                {% endif %}
+                                
+                                <!-- Category selection UI which is NOT submitted in the form --> 
+                                <select id="category-search"></select>
+                                <table>
+                                    <thead id="selected-categories-header">
+                                        <tr>
+                                            <th> Name </th>
+                                            <th> Depth </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="selected-categories-content">
+                                           <!-- populated by JavaScript -->
+                                    </tbody>
+                                </table>
+                                
+                                
                             </div>
                         </div>
                     </div>
