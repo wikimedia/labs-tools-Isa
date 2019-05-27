@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 
-from wtforms import BooleanField, SelectField, StringField, SubmitField, widgets, Label, DecimalField
+from wtforms import BooleanField, SelectField, StringField, SubmitField, widgets, Label, DecimalField, HiddenField
 from wtforms.fields.html5 import DateField
 from wtforms.validators import DataRequired, InputRequired, Length, NumberRange
 
@@ -12,7 +12,7 @@ class CampaignForm(FlaskForm):
     start_date = DateField('Start Date *', id='datepick1',
                            format='%Y-%m-%d', validators=[InputRequired()])
     end_date = DateField('Close Date *', id='datepick2', format='%Y-%m-%d')
-    categories = SelectField(validators=[DataRequired()], choices=[])
+    categories = HiddenField(validators=[DataRequired()])
     categories_depth = DecimalField('Specify a category depth',
                                     validators=[NumberRange(min=0, max=5, message='Max depth is 5')])
     depicts_metadata = BooleanField('Depicts')
@@ -30,7 +30,7 @@ class UpdateCampaignForm(FlaskForm):
     start_date = DateField('Start Date *', id='datepick1',
                            format='%Y-%m-%d', validators=[InputRequired()])
     end_date = DateField('Close Date *', id='datepick2', format='%Y-%m-%d')
-    categories = SelectField(validators=[DataRequired()], choices=[])
+    categories = HiddenField(validators=[DataRequired()])
     categories_depth = DecimalField('Modify a category depth',
                                     validators=[NumberRange(min=0.0, max=5.0, message='Max depth is 5')])
     depicts_metadata = BooleanField('Depicts')

@@ -63,9 +63,6 @@ $(document).ready( function () {
         $('#selected-categories-content').append(getCategoryRowHtml(shortName, depth))
         // show the table header if it's not visible already
         $('#selected-categories-header').show();
-        
-        // temporary! add option to old form element to keep system working while we transition to new JSON form data
-        $('#categories_select_options').append( '<option selected="selected" value="' + name + '">' + shortName + '</option>');
     } 
     
     // Click event for removing categories
@@ -87,5 +84,23 @@ $(document).ready( function () {
         var buttonHtml = '<td> <button type="button" class="close" aria-label="Close"> <span aria-hidden="true"> × </span> </button> </td>';
         return '<tr class="selected-category">' + nameHtml + depthHtml + buttonHtml + '</tr>';
     }
+    
+    // Returns category data that can be submitted to the server
+    function getJsonCategoryData() {
+        var categoryData = [];
+        $('.selected-category').each(function(index, element) {
+            var name = $(element).find('.category-name').text();
+            var depth = $(element).find('.category-depth-input').val();
+            categoryData.push({
+                name: name,
+                depth: depth
+            })
+        })
+        return JSON.stringify(categoryData);
+    }
+
+    $('form').submit(function(event, data) {
+        $('#categories-data')[0].value = getJsonCategoryData();
+    })
     
 });

@@ -385,11 +385,6 @@ select.selectpicker {
     width: 45px;
 }
 
-#categories_select_options {
-    display:none; /* temporary, element to be removes in restructure*/
-}
-
-
 /******** errors ********/
 .error-template {padding: 40px 15px;text-align: center;}
 .error-actions {margin-top:15px;margin-bottom:15px;}
