@@ -15,6 +15,8 @@ URL = "https://commons.wikimedia.org/w/api.php?"
 
 
 def get_category_items(category):
+    if not category.startswith('Category:'):
+        category = 'Category:' + category
     PARAMS = {
         'action': "query",
         'list': "categorymembers",

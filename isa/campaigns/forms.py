@@ -13,8 +13,6 @@ class CampaignForm(FlaskForm):
                            format='%Y-%m-%d', validators=[InputRequired()])
     end_date = DateField('Close Date *', id='datepick2', format='%Y-%m-%d')
     categories = HiddenField(validators=[DataRequired()])
-    categories_depth = DecimalField('Specify a category depth',
-                                    validators=[NumberRange(min=0, max=5, message='Max depth is 5')])
     depicts_metadata = BooleanField('Depicts')
     captions_metadata = BooleanField('Captions')
     campaign_type = BooleanField('This is a Wiki Loves Campaign')
@@ -31,8 +29,6 @@ class UpdateCampaignForm(FlaskForm):
                            format='%Y-%m-%d', validators=[InputRequired()])
     end_date = DateField('Close Date *', id='datepick2', format='%Y-%m-%d')
     categories = HiddenField(validators=[DataRequired()])
-    categories_depth = DecimalField('Modify a category depth',
-                                    validators=[NumberRange(min=0.0, max=5.0, message='Max depth is 5')])
     depicts_metadata = BooleanField('Depicts')
     captions_metadata = BooleanField('Captions')
     campaign_type = BooleanField('This is a Wiki Loves Campaign')

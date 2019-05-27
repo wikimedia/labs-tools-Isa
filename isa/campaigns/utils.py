@@ -1,4 +1,6 @@
+import json
 import pycountry
+
 from datetime import datetime
 
 
@@ -41,10 +43,15 @@ def get_campaign_category_list(categories):
     Keyword arguments:
     campaign_id -- The id of the campaign
     """
+    categories_list = []
+    # We convert the json string to json
+    categories = json.loads(categories)
     if categories is None:
-        return ''
+        return []
     else:
-        return categories.split(',')
+        for category in categories:
+            categories_list.append(category['name'])
+        return categories_list
 
 
 def combine_campign_content(content_list):
