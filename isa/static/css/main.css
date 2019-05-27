@@ -357,6 +357,40 @@ select.selectpicker {
 
 }
 
+
+/******** campaign categories selections ********/
+#selected-categories-header {
+    display: none;
+}
+
+.selected-category {
+    border-bottom: solid 1px #ccc;
+    border-top: solid 1px #ccc;
+}
+
+.selected-category td {
+    padding: 7px;
+}
+
+#selected-categories-header th{
+    text-align: left;
+    padding: 7px;
+}
+.selected-category .category-name {
+    min-width: 200px;
+    text-align: left;
+}
+
+.selected-category .category-depth-input {
+    width: 45px;
+}
+
+#categories_select_options {
+    display:none; /* temporary, element to be removes in restructure*/
+}
+
+
+/******** errors ********/
 .error-template {padding: 40px 15px;text-align: center;}
 .error-actions {margin-top:15px;margin-bottom:15px;}
 .error-actions .btn { margin-right:10px; }
