@@ -1,11 +1,18 @@
+
+/*************CSS FOR LAYOUT.HTML************/
+
+
+
+/*******REMOVED CLASSES AND REVERTED TO NATIVE BOOTSTRAP STYLES*/
+
 /* Add a black background color to the top navigation */
-.topnav {
+/*.topnav {
     background-color: #332;
     overflow: hidden;
-}
-  
+}*/
+
 /* Style the links inside the navigation bar */
-  .topnav a {
+/*  .topnav a {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -14,15 +21,66 @@
     text-decoration: none;
     font-size: 17px;
     border-bottom: 3px solid transparent;
+}*/
+
+
+
+/* Add padding to bottom of page for footer*/
+body {
+	padding-bottom: 80px
 }
-  
+
+/* Custom hover and active states for nav bar buttons*/
 .nav-link:hover {
     border-bottom: 3px solid red;
 }
-  
 .topnav a.active {
     border-bottom: 3px solid red;
 }
+
+/*re-style select to match standard wiki style*/
+select.selectpicker {
+    display: inline-block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/*match select dropdown bg to nav bar*/
+select.selectpicker> option  {
+	background-color: #343A40;
+}
+
+/*create sticky footer*/
+.footer{
+	position: fixed;
+	bottom:0;
+    width: 100%;
+    height: 40px;
+    color:#6a6a6a;
+	font-size: 11px;
+	text-align: center;
+	padding: 5px 0
+}
+
+/*make subtle footer links*/
+.footer a {
+	color: #676eb4;
+	text-decoration: underline
+}
+/*********************** end layout.html css*/
+
+
+
+
 
 .main-page {
   padding-top: 40px;
@@ -206,16 +264,6 @@ small {
   margin-right: 0px;
 }
 
-.footer {
-  padding-top: 190px;
-}
-
-.copyright {
-  float: right;
-  margin-right: 70px;
-  margin-top: 10px;
-}
-
 #campaign_nav{
   height: 50px;
   padding-top: 2px;
@@ -230,24 +278,8 @@ small {
   padding-top: 0px;
 }
 
-select.selectpicker {
-  background: transparent;
-  width: 150px;
-  padding: 2px;
-  font-size: 13px;
-  line-height: 1;
-  border: 1px solid black;
-  border-radius: 0.5;
-  height: 34px;
-  -webkit-appearance: none;
-  font-family:helvetica-roman;
-  color:#9C9C9C;
-  background-color: rgba(0, 0, 0, 0);
-  -webkit-appearance: none;
-  text-indent: 20px;
-  text-overflow: '';
-  text-align: center;
-}
+
+
 
 .btn-new {
   background-color: white;
