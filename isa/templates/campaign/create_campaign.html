@@ -108,20 +108,6 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                {{ form.categories_depth.label( class="form-control-label " ) }}
-                <!-- We test for errors in the form data here -->
-                {% if form.categories_depth.errors %}
-                    {{ form.categories_depth( class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.categories_depth.errors %}
-                            <span> {{ error }}</span>
-                        {% endfor %}
-                   </div>
-                {% else %}
-                    {{ form.categories_depth( class="form-control form-control-sm",type="number", min="0", max="5" ) }}
-                {% endif %}
-            </div>
            <div class="form-group">
                 <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
                     <small>Metadata to collect in the Cmapign</small>

@@ -112,7 +112,6 @@ def CreateCampaign():
             campaign = Campaign(
                 campaign_name=form.campaign_name.data,
                 categories=form_categories,
-                categories_depth=int(form.categories_depth.data),
                 start_date=form.start_date.data,
                 end_date=form.end_date.data,
                 status=compute_campaign_status(form.end_date.data),
@@ -252,18 +251,13 @@ def updateCampaign(id):
         # TODO: Check if campaign is closed so that it cannot be edited again
         # This is a potential issue/Managerial
         if form.is_submitted():
-            # we get the list of catefories from request
-            form_categories = ",".join(request.form.getlist('categories'))
-
             campaign = Campaign.query.filter_by(id=id).first()
             campaign.campaign_name = form.campaign_name.data
             campaign.short_description = form.short_description.data
             campaign.long_description = form.long_description.data
-            campaign.manager_name = form.manager_name.data
             campaign.depicts_metadata = form.depicts_metadata.data
             campaign.captions_metadata = form.captions_metadata.data
-            campaign.categories = form_categories
-            campaign.categories_depth = int(form.categories_depth.data)
+            campaign.categories = form.categories.data
             campaign.start_date = form.start_date.data
             campaign.campaign_type = form.campaign_type.data
             campaign.end_date = form.end_date.data
@@ -280,8 +274,6 @@ def updateCampaign(id):
             form.short_description.data = campaign.short_description
             form.long_description.data = campaign.long_description
             form.categories.data = campaign.categories
-            form.categories_depth.data = int(campaign.categories_depth)
-            form.manager_name.data = campaign.manager_name
             form.start_date.data = campaign.start_date
             form.depicts_metadata.data = campaign.depicts_metadata
             form.captions_metadata.data = campaign.captions_metadata
@@ -309,12 +301,4 @@ def getCampaignCategories():
     else:
         # We get the campaign categories
         campaign = Campaign.query.filter_by(id=campaign_id).first()
-        campaign_object = {}
-        campaign_object['name'] = campaign.campaign_name
-        campaign_object['categories'] = {}  # We store each category here
-
-        categories_objects_array = []
-        for category in campaign.categories.split(','):
-            categories_objects_array.append(buildCategoryObject(category))
-        campaign_object['categories'] = categories_objects_array
-        return json.dumps(campaign_object)
+        return campaign.categories
