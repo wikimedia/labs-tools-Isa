@@ -38,25 +38,29 @@ $(document).ready( function () {
     var urlPathParts = window.location.pathname.split("/");
     campaignId = urlPathParts[urlPathParts.length - 1];
     
-    //only if it's a WikiLoves campaign, extract the country list
+    // Only if it's a WikiLoves campaign, extract the country list
     if (isWikiLovesCampaign) {
         updateWikiLovesCountries();
     }
     
     function updateWikiLovesCountries() {
         var countries = [];
-        //find out which categories the campaign has
+        // find out which categories the campaign has
         $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
-            .done( function(response) {
-            return response.categories;
-        })
-            .then( function(data) {
-            //asynchronously get country subcategories for each campaign category found
-            campaignCategories = data.categories;
+            .done( function(categories) {
+            // add "Cateogry:" prefix
+            campaignCategories = categories.map(function(element) {
+                return {
+                    name: "Category:" + element.name,
+                    depth: element.depth
+                }
+            });
+            
+            // asynchronously get country subcategories for each campaign category found
             getSubcategoryAjaxRequests(campaignCategories);
-         })
-            .fail( function() {
-             console.log("no category data found for campaign_id = ", campaignId);
+        })
+            .fail( function(err) {
+             console.log("error retrieving campaign categories", err);
              return false
          })
     }
@@ -80,13 +84,15 @@ $(document).ready( function () {
                 url: 'https://commons.wikimedia.org/w/api.php',
                 data: apiOptions
             })
-                .done(function(response) {
-                   //next steps for each request can be added here, e.g. more results
-                });
-            
+            .done(function(response) {
+                //next steps for each request can be added here, e.g. more results
+            })
+            .fail(function(err) {
+                console.log("error retrieving subcategories", err);
+                return false 
+            })
             subcategoryAjaxRequests.push(ajaxRequest);
         }
-        
         combineCountriesFromAjaxRequests(subcategoryAjaxRequests);
     }
     
@@ -102,8 +108,10 @@ $(document).ready( function () {
             var subcategories = requests[i].responseJSON.query.categorymembers.map(function(currentValue) {
                 return currentValue.title;
             });
+            
             //find the root category, which is in the same order as requests array;
-            var campaignCategory = campaignCategories[i].name.replace(/_/g," "); //
+            var campaignCategory = campaignCategories[i].name;
+            
             //filter out subcategories that don't match WikiLoves country syntax
             var countries = subcategories.filter(function(currentCategory) { 
                 return currentCategory.startsWith(campaignCategory + " in ");
@@ -123,15 +131,14 @@ $(document).ready( function () {
             for (var i=0;i<wikiLovesCountries.length;i++){
                 option += '<option value="'+ wikiLovesCountries[i] + '">' + wikiLovesCountries[i] + '</option>';
             }
-            $('#campaign_countries').append(option);   
-            
+            $('#campaign_countries').append(option);
         });
     }
     
     // On selecting a country, append it to the participate URL
     $('#campaign_countries').on('change', function(event) {
         var selection = $(this).val();
-        var path = window.location.pathname;
+        var path = window.location.pathname + '/participate';
         //only add country parameter to href when one has been selected
         var participateUrl = (selection === "all") ? path : path + '?country=' + selection;
         $('#get_started_btn').attr("href", participateUrl);
