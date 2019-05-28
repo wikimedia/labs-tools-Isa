@@ -1,9 +1,16 @@
 $(document).ready( function () {
-
-    $( function() {
-        $( '.selectpicker' ).selectpicker();
-    } );
-
+    
+    // Populate existing categories in the UI if data present in hidden field (on update route)
+    var categoryData = $('#categories-data').val();
+    if ( categoryData ) {
+        console.log("populate categories");
+        var categories = JSON.parse(categoryData);
+        for (var i=0; i < categories.length; i++) {
+            addSelectedCategory(categories[i].name, categories[i].depth);
+        }
+    }
+    
+    // Setup category search box
     function categorySearchResultsFormat(state) {
         if (!state.id) {
           return state.text;
