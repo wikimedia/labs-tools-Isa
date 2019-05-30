@@ -100,7 +100,7 @@ def getCampaignById(id):
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name
-    username = session.get('username', 'Eugene233')
+    username = session.get('username', None)
     form = CampaignForm()
     if not username:
         session['next_url'] = request.url
@@ -250,7 +250,7 @@ def updateCampaign(id):
     username = session.get('username', None)
     form = UpdateCampaignForm()
     if not username:
-        flash(gettext('You need to Login to update a campaign'), 'danger')
+        flash(gettext('You need to Login to update a campaign'), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
     else:
         # when the form is submitted, we update the campaign

@@ -154,7 +154,7 @@
                     <div class="row">
                         <div class="col-md-6 ml-auto mr-auto">
                             <div class="input-group date pt-3">
-                                *&nbsp;&nbsp;{{ _('This is a Wiki Loves Campaign') }} &nbsp;&nbsp;
+                                <small><strong>{{ _('This is a Wiki Loves Campaign') }}</strong></small> &nbsp;&nbsp;
                                 <!-- We test for errors in the form data here -->
                                 {% if form.campaign_type.errors %}
                                     {{ form.campaign_type( class="form-control form-control-sm is-invalid" ) }}
@@ -164,7 +164,7 @@
                                         {% endfor %}
                                     </div>
                                 {% else %}
-                                    {{ form.campaign_type( class="form-control form-control-sm mt-2" ) }}
+                                    {{ form.campaign_type( class="form-control form-control-sm mt-1" ) }}
                                 {% endif %}
                             </div>
                         </div>
