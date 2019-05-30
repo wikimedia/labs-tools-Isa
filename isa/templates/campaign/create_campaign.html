@@ -1,15 +1,16 @@
 {% extends "main/layout.html" %}
 {% block content %}
 <div class="container">
-    <strong><h5 class=" pt-1 pb-0 d-flex justify-content-center"> Create new Campaign </h5></strong>
+    <strong><h5 class=" pt-1 pb-0 d-flex justify-content-center">{{ _('Create new Campaign') }}</h5></strong>
     <hr class="pt-0" width="35%">
     <div class="pt-0 mt-0 text-center">
-        <small> Fill in the form below to create you campaign, <br> Fields marked with * are mandatory</small>
+        <small> {{ _('Fill in the form below to create you campaign') }}, <br> {{ _('Fields marked with * are mandatory') }}</small>
     </div>
     <div class="d-flex justify-content-center">
         <form  class="" method="POST" action="">
             {{ form.csrf_token }}
-            {{ form.campaign_name.label( class="form-control-label" ) }}
+            <!-- {{ form.campaign_name.label( class="form-control-label" ) }} -->
+            <small class="form-control-label">{{ _('Campaign Name') }}</small>
             <div class="form-group">
                 <!-- We test for errors in the form data here -->
                  {% if form.campaign_name.errors %}
@@ -24,7 +25,8 @@
                 {% endif %}
             </div>
             <div class="form-group">
-                {{ form.short_description.label( class="form-control-label " ) }}
+                <!-- {{ form.short_description.label( class="form-control-label " ) }} -->
+                <small class="form-control-label">{{ _('Short description of Campaign') }}</small>
                 <!-- We test for errors in the form data here -->
                 {% if form.short_description.errors %}
                     {{ form.short_description( class="form-control form-control-lg is-invalid" ) }}
@@ -41,7 +43,7 @@
                 <div class="row">
                     <div class="col-sm-6 ml-auto">
                         <div class="input-group date">
-                            {{ form.start_date.label( class='datepicker' ) }} &nbsp;&nbsp;
+                            <small class="datepicker">{{ _('Start Date') }}</small> &nbsp;&nbsp;
                             <!-- We test for errors in the form data here -->
                             {% if form.start_date.errors %}
                                 {{ form.start_date( class="form-control form-control-sm is-invalid" ) }}
@@ -57,7 +59,7 @@
                     </div>
                     <div class="col-sm-6 ml-auto">
                         <div class="input-group date">
-                            {{ form.end_date.label( class='datepicker' ) }} &nbsp;&nbsp;
+                            <small class="datepicker">{{ _('End Date') }}</small> &nbsp;&nbsp;
                             <!-- We test for errors in the form data here -->
                             {% if form.end_date.errors %}
                                 {{ form.end_date( class="form-control form-control-md is-invalid" ) }}
@@ -77,7 +79,7 @@
                 <div id="campaign_stats_table" class="pb-5 navbar-light bg-light text-center">
                     <div class="row">
                         <div class="col ">
-                            <div class="pb-0 ml-auto">{{ form.categories.label( class="form-control-label" ) }}<span><i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="select a category by clicking on it"></i>
+                            <div class="pb-0 ml-auto">{{ _('Categories') }}<span><i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="select a category by clicking on it"></i>
                             </span></div>
                             <!-- We test for errors in the form data here -->
                             {% if form.categories.errors %}
@@ -96,8 +98,8 @@
                             <table>
                                 <thead id="selected-categories-header">
                                     <tr>
-                                        <th> Name </th>
-                                        <th> Depth </th>
+                                        <th>{{ _('Name') }}</th>
+                                        <th>{{ _('Depth') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody id="selected-categories-content">
@@ -110,11 +112,11 @@
             </div>
            <div class="form-group">
                 <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
-                    <small>Metadata to collect in the Cmapign</small>
+                    <small>{{ _('Metadata to collect in the Cmapign') }}</small>
                     <div class="row pt-2">
                         <div class="col-sm-6 mr-auto">
                             <div class="input-group date">
-                                    <small><strong>{{ form.depicts_metadata.label( class='' ) }}</strong></small> &nbsp;
+                                <small><strong>{{ _('Depicts') }}</strong></small> &nbsp;
                                 <!-- We test for errors in the form data here -->
                                 {% if form.depicts_metadata.errors %}
                                     {{ form.depicts_metadata( class="form-control form-control-sm is-invalid" ) }}
@@ -130,7 +132,7 @@
                         </div>
                         <div class="col-sm-6 mr-auto">
                             <div class="input-group">
-                                <small><strong>{{ form.captions_metadata.label( class='' ) }}</strong></small>&nbsp;
+                                <small><strong>{{ _('Captions') }}</strong></small> &nbsp;
                                 <!-- We test for errors in the form data here -->
                                 {% if form.captions_metadata.errors %}
                                     {{ form.captions_metadata( class="form-control form-control-sm is-invalid" ) }}
@@ -152,7 +154,7 @@
                     <div class="row">
                         <div class="col-md-6 ml-auto mr-auto">
                             <div class="input-group date pt-3">
-                                    *&nbsp;&nbsp;{{ form.campaign_type.label( class='datepicker' ) }} &nbsp;&nbsp;
+                                *&nbsp;&nbsp;{{ _('This is a Wiki Loves Campaign') }} &nbsp;&nbsp;
                                 <!-- We test for errors in the form data here -->
                                 {% if form.campaign_type.errors %}
                                     {{ form.campaign_type( class="form-control form-control-sm is-invalid" ) }}
@@ -170,7 +172,7 @@
                 </div>
             </div>
             <div class="form-group">
-                {{ form.long_description.label( class="form-control-label" ) }}
+                {{ _('Long description of Campaign(full about info)') }}
                 <!-- We test for errors in the form data here -->
                 {% if form.long_description.errors %}
                     {{ form.long_description( class="form-control form-control-sm is-invalid" ) }}
@@ -184,7 +186,7 @@
                 {% endif %}
             </div>
             <div class="form-group text-center">
-                {{ form.submit( class="btn btn-primary" ) }}
+                {{ form.submit( class="btn btn-primary", value=_('Publish Campaign') ) }}
             </div>
         </form>
     </div>

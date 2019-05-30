@@ -5,18 +5,18 @@
             <div class="error-template">
                 <h1>
                     Oops!</h1>
-                <h2> Permission Denied (403)</h2>
+                <h2> {{ _('Permission Denied') }} (403)</h2>
                 <div class="error-details">
-                   Please check that You have the rights to perform this task
+                        {{ _('Please check that You have the rights to perform this task') }}
                 </div>
                 <div class="error-actions">
                     <a href="{{url_for( 'main.home' )}}" class="btn btn-primary btn-lg">
                             <span class="fas fa-home"></span>
-                            Take Me Home 
+                            {{ _(' Take Me Home') }}
                         </a>
                         <a href="#" class="btn btn-default btn-lg">
                             <span class="fas fa-envelope"></span>
-                            Contact Support
+                            {{ _('Contact Support') }}
                         </a>
                </div>
             </div>

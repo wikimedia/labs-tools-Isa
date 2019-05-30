@@ -33,24 +33,24 @@
 		<ul class="navbar-nav mr-auto  ">
 			<li class="nav-item">
 				<a class="nav-link" href="{{url_for( 'main.home' )}}" id="">
-					<i class="fa fa-home"></i> Home <span class="sr-only">(current)</span>
+					<i class="fa fa-home"></i> {{ _('Home') }} <span class="sr-only">(current)</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="{{url_for( 'campaigns.getCampaigns' )}}">
-					<i class="fa fa-bell "></i> Campaigns
+					<i class="fa fa-bell "></i> {{ _('Campaigns') }}
 				</a>
 			</li>
 			<li class="nav-item">
 				{% if username != 'Guest' and username != False and username != None %}
 				<a class="nav-link" href="{{url_for( 'campaigns.CreateCampaign' )}}">
-					<i class="fa fa-plus"></i> Create New
+					<i class="fa fa-plus"></i> {{ _('Create New') }}
 				</a>
 				{% endif %}
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#" target="_blank">
-					<i class="fa fa-book"></i> Help
+					<i class="fa fa-book"></i> {{ _('Help') }}
 				</a>
 			</li>
 		</ul>
@@ -61,9 +61,10 @@
 				</span>
 			</li>
 			<li class="nav-item">
-				<select class="selectpicker custom-select nav-item" data-width="fit">
+				<select id="language_select" class="selectpicker custom-select nav-item" data-width="fit">
 			   		{% for lang in user_pref_lang %}
 					<option data-content='<span class=""></span> {{ lang }}'> {{ lang }} </option>
+					<!-- <a href="{{url_for( 'main.set_language', lang=lang )}}"></a> -->
 					{% endfor %}
 				</select> 
 			</li>     
@@ -77,15 +78,15 @@
 			<li class="nav-item">
 				{% if current_user.is_authenticated and username  %}
 				<a class="nav-link" href="{{url_for( 'users.logout' )}}">
-					<i class="fab fa-wikipedia-w"></i> Logout
+					<i class="fab fa-wikipedia-w"></i> {{ _('Logout') }}
 				</a>
 				{% elif username %}
 				<a class="nav-link" href="{{url_for( 'users.logout' )}}">
-					<i class="fab fa-wikipedia-w"></i> Logout
+					<i class="fab fa-wikipedia-w"></i> {{ _('Logout') }}
 				</a>
 				{% else %}
 				<a class="nav-link" href="{{url_for( 'users.login' )}}">
-					<i class="fab fa-wikipedia-w"></i> Login
+					<i class="fab fa-wikipedia-w"></i> {{ _('Login') }} 
 				</a>
 				{% endif %}
 			</li>

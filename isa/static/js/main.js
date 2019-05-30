@@ -20,7 +20,35 @@ $(document).ready( function () {
     $( '.paginate_button' ).css(
         { 'border-right' : '0.5px solid black' }
     );
-    
+
+
+    /**********  SET THE LANGUAGE IN SESSION ***********/
+
+        
+    function getUrlParameters () {
+        var parametersObject = {};
+        var parameters = window.location.search.substr(1);
+        if (parameters == "") return {};
+        parameters = parameters.split('&');
+        for (var i = 0; i < parameters.length; i++) {
+            var splitParameters = parameters[i].split("=");
+            parametersObject[ splitParameters[0] ] = splitParameters[1];
+        }
+        return parametersObject;
+    }
+
+    function addLanguageToUrl(langCode) {  
+        var path = window.location.pathname;
+        var parametersObject = getUrlParameters();
+        parametersObject.lang = langCode; //will create or replace existing value
+        window.location.search = '?' + $.param(parametersObject);
+    }
+
+    $("#language_select").change( function () {
+        addLanguageToUrl($("#language_select").val()); 
+    });
+
+
     /*********** Get WikiLoves country list for dropdown ***********/
     
     // Get the categories for the campaign using internal /api

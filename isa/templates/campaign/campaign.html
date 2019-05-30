@@ -5,9 +5,9 @@
         <div class="row">
             {% if is_wiki_loves_campaign %}
                 <div class="ml-auto">
-                    <small> <strong>View images from </strong> </small>
+                    <small> <strong> {{_('View images from')}} </strong> </small>
                     <select id="campaign_countries" class="fas fa-caret-down custom-select btn-new" data-style="btn-new">
-                        <option class="select-option" value= "all" select="selected">All countries</option>
+                        <option class="select-option" value= "all" select="selected">{{_('All countries')}}</option>
                         <!-- The other obtions will be povided here on front-end -->
                     </select>
                 </div>
@@ -32,37 +32,37 @@
         </small>
     </div>
     <div class="text-center pb-3 pt-4">
-        <h6><strong>START DATE: </strong> {{campaign.start_date}}</h6>
-        <h6><strong>END DATE: </strong> {{campaign.end_date}}</h6>
+        <h6><strong>{{ _('START DATE')}}: </strong> {{campaign.start_date}}</h6>
+        <h6><strong>{{ _('END DATE') }}: </strong> {{campaign.end_date}}</h6>
     </div>
 
     <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
-        <small class="campaign_progress_text"><strong>Campaign Progress</strong></small>
+        <small class="campaign_progress_text"><strong>{{ _('Campaign Progress') }}</strong></small>
         <br>
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="stat-display">
                     <div class="stat-display__stat">
                         <div class="stat-display__value">{{ campaign_contributions }} </div>
-                        <small class="">Contributions</small>
+                        <small class="">{{ _('Contributions') }}</small>
                     </div>
                 </div>
                 <div class="stat-display">
                         <div class="stat-display__stat">
                             <div class="stat-display__value"> {{ campaign_editors }} </div>
-                            <small class="next_small">Editors</small>
+                            <small class="next_small">{{ _('Editors') }}</small>
                         </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 ml-auto">
-                    <div class="pb-3 ml-auto">Top Contributors</div>
+                    <div class="pb-3 ml-auto">{{ _('Top Contributors') }}</div>
                     <table class="table">
                         <thead>
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Contributor</th>
-                            <th scope="col">Images Improved</th>
+                            <th scope="col">{{ _('Contributor') }}</th>
+                            <th scope="col">{{ _('Images Improved') }}</th>
                             </tr>
                         </thead>
                         {% if all_contributors_data %}
@@ -78,22 +78,22 @@
                         {% else %}
                             <tbody>
                                 <tr>
-                                    <th scope="row">Sorry!</th>
+                                    <th scope="row">{{ _('Sorry') }}!</th>
                                     <td></td>
-                                    <td class="text-center">No partcipants has contributed to this campaign</td>
+                                    <td class="text-center">{{ _('No partcipants has contributed to this campaign') }}</td>
                                 </tr>
                             </tbody>
                         {% endif %}
                     </table>
                 </div>
                 <div class="col-sm-6 mr-auto">
-                    <div class="pb-3 ml-auto">Most improved Countries</div>
+                    <div class="pb-3 ml-auto">{{ _('Most improved Countries') }}</div>
                     <table class="table">
                         <thead>
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Country</th>
-                            <th scope="col">Images Improved</th>
+                            <th scope="col">{{ _('Country') }}</th>
+                            <th scope="col">{{ _('Images Improved') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="pt-3 mr-auto">
-            <a id="" href="#" class="btn btn-primary" >Download Complete Stats</a>
+            <a id="" href="#" class="btn btn-primary" >{{ _('Download Complete Stats') }}</a>
         </div>
     </div>
     <br>
@@ -118,12 +118,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col ml-auto">
-                        <div class="pb-3 ml-auto">My Contributions</div>
+                        <div class="pb-3 ml-auto">{{ _('My Contributions') }}</div>
                         <table id="my_contributions_table" class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Rank</th>
-                                    <th scope="col">Images Improved</th>
+                                    <th scope="col">{{ _('Rank') }}</th>
+                                    <th scope="col">{{ _('Images Improved') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -142,12 +142,12 @@
         <header class="main-page">
             <div class="pt-0 text-center">
                 <h3>
-                    More about {{ campaign.campaign_name }}
+                    {{ _('More about') }} {{ campaign.campaign_name }}
                 </h3>
             </div>
         </header>
         <div class="text-center">
-            <h6><strong>Maanager: </strong><a href="https://commons.wikimedia.org/wiki/User:{{campaign_manager}}">{{campaign_manager}}</a></h6>
+            <h6><strong>{{ _('Maanager') }}: </strong><a href="https://commons.wikimedia.org/wiki/User:{{campaign_manager}}">{{campaign_manager}}</a></h6>
         </div>
         <div class="text-center">
             <small>

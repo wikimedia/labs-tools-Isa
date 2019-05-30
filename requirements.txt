@@ -1,7 +1,0 @@
-Flask==0.12.2
-Flask-SQLAlchemy==2.3.2
-flask-wtf==0.14.2
-pycountry==18.12.8
-pyyaml
-mwoauth
-flask-login

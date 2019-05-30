@@ -1,5 +1,6 @@
-from flask import Blueprint, render_template, session
+from flask import Blueprint, render_template, session, redirect, url_for
 from flask_login import current_user
+from isa import gettext
 
 from isa.users.utils import add_user_to_db, get_user_language_preferences
 
@@ -15,3 +16,9 @@ def home():
                            username=username_for_current_user,
                            user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user)
+
+
+@main.route('/', methods=['GET', 'POST'])
+def set_language(lang):
+    session['lang'] = lang
+    return redirect(url_for('main.home'))

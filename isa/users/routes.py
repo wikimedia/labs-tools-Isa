@@ -5,7 +5,7 @@ from flask import Blueprint, redirect, url_for, flash, request, session
 from flask_login import current_user, login_user, logout_user
 # import pycountry
 
-from isa import app
+from isa import app, gettext
 from isa.models import User
 
 
@@ -43,7 +43,7 @@ def login():
 def oauth_callback():
     """OAuth handshake callback."""
     if 'request_token' not in session:
-        flash(u'OAuth callback failed. Are cookies disabled?')
+        flash(gettext('OAuth callback failed. Are cookies disabled?'))
         return redirect(url_for('main.home'))
 
     consumer_token = mwoauth.ConsumerToken(
@@ -64,7 +64,7 @@ def oauth_callback():
         session['access_token'] = dict(zip(
             access_token._fields, access_token))
         session['username'] = identity['username']
-        flash(' Welcome  {}!'.format(session['username']), 'success')
+        flash(gettext(' Welcome  %(username)s!', username=session['username']), 'success')
         if session.get('next_url'):
             next_url = session.get('next_url')
             session.pop('next_url', None)
@@ -77,5 +77,5 @@ def logout():
     """Log the user out by clearing their session."""
     logout_user()
     session.clear()
-    flash('See you next time!', 'success')
+    flash(gettext('See you next time!'), 'info')
     return redirect(url_for('main.home'))

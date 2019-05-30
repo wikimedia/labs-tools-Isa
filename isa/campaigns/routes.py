@@ -1,8 +1,10 @@
 from datetime import datetime
 from flask import render_template, redirect, url_for, flash, request, session, Blueprint
+from isa import gettext
 from flask_login import current_user
 import sys
 import json
+
 
 from isa import db
 from isa.campaigns.forms import CampaignForm, CampaignDepictsSearchForm, CampaignCaptionsForm, UpdateCampaignForm
@@ -15,6 +17,7 @@ from isa.main.utils import testDbCommitSuccess
 from isa.users.utils import (get_user_language_preferences,
                              getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
 
+
 campaigns = Blueprint('campaigns', __name__)
 
 
@@ -23,7 +26,7 @@ def getCampaigns():
     campaigns = Campaign.query.all()
     username = session.get('username', None)
     return render_template('campaign/campaigns.html',
-                           title='Campaigns',
+                           title=gettext('Campaigns'),
                            username=username,
                            campaigns=campaigns,
                            today_date=datetime.date(datetime.utcnow()),
@@ -38,7 +41,7 @@ def getCampaignById(id):
     username = session.get('username', None)
     campaign = Campaign.query.filter_by(id=id).first()
     if not campaign:
-        flash('Campaign with id {} does not exist'.format(id), 'info')
+        flash(gettext('Campaign with id %(id)s does not exist', id=id), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
 
     # We select the campaign and the manager here
@@ -80,7 +83,7 @@ def getCampaignById(id):
     # We add rank to all contributor's data
     for user_data in all_contributors_data:
         user_data['rank'] = getUserRanking(all_contributors_data, user_data['username'])
-    return render_template('campaign/campaign.html', title='Campaign - ' + campaign.campaign_name,
+    return render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                            campaign=campaign,
                            campaign_manager=campaign_manager.username,
                            username=username,
@@ -97,11 +100,11 @@ def getCampaignById(id):
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name
-    username = session.get('username', None)
+    username = session.get('username', 'Eugene233')
     form = CampaignForm()
     if not username:
         session['next_url'] = request.url
-        flash('You need to Login to create a campaign', 'info')
+        flash(gettext('You need to Login to create a campaign'), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
     else:
         current_user_id = User.query.filter_by(username=username).first().id
@@ -124,12 +127,13 @@ def CreateCampaign():
             db.session.add(campaign)
             # commit failed
             if testDbCommitSuccess():
-                flash('Sorry {} Could not be created'.format(
-                      form.campaign_name.data), 'danger')
+                flash(gettext('Sorry %(campaign_name)s Could not be created',
+                              campaign_name=form.campaign_name.data), 'danger')
             else:
-                flash('{} Campaign created!'.format(form.campaign_name.data), 'success')
+                flash(gettext('%(campaign_name)s Campaign created!',
+                              campaign_name=form.campaign_name.data), 'success')
                 return redirect(url_for('campaigns.getCampaigns'))
-        return render_template('campaign/create_campaign.html', title='Create a campaign',
+        return render_template('campaign/create_campaign.html', title=gettext('Create a campaign'),
                                form=form, datetime=datetime,
                                username=username,
                                user_pref_lang=get_user_language_preferences(username),
@@ -171,7 +175,7 @@ def contributeToCampaign(id):
     if depicts_form.is_submitted():
         # We check if there is a user in session
         if not username:
-            flash('You need to login to participate', 'info')
+            flash(gettext('You need to login to participate'), 'info')
             # User is not logged in so we set the next url to redirect them after login
             session['next_url'] = request.url
             return redirect(url_for('campaigns.contributeToCampaign', id=id))
@@ -179,7 +183,7 @@ def contributeToCampaign(id):
             current_user_id = User.query.filter_by(username=username).first().id
             depicts_data = constructEditContent(request.form.getlist('depicts_form-depicts'))
             if not depicts_data:
-                flash('please add at least a depict statement', 'info')
+                flash(gettext('please add at least a depict statement'), 'info')
             else:
                 #  we iterate the depicsts data and create a contribution for each
                 for depict in depicts_data:
@@ -194,15 +198,15 @@ def contributeToCampaign(id):
                     db.session.add(contribution)
                     # commit failed
                     if testDbCommitSuccess():
-                        flash('Sorry edit could not be registered', 'danger')
+                        flash(gettext('Sorry edit could not be registered'), 'danger')
                     else:
-                        flash('Thanks for Your contribution', 'success')
+                        flash(gettext('Thanks for Your contribution'), 'success')
                         # We make sure that the form data does not remain in browser
                         return redirect(url_for('campaigns.contributeToCampaign', id=id))
     if captions_form.is_submitted() and captions_form.submit.data:
         # We check if there is a user in session
         if not username:
-            flash('You need to login to participate', 'info')
+            flash(gettext('You need to login to participate', 'info'))
             # User is not logged in so we set the next url to redirect them after login
             session['next_url'] = request.url
             return redirect(url_for('campaigns.contributeToCampaign', id=id))
@@ -221,12 +225,14 @@ def contributeToCampaign(id):
                 db.session.add(contribution)
                 # commit failed
                 if testDbCommitSuccess():
-                    flash('Sorry edit could not be registered', 'danger')
+                    flash(gettext('Sorry edit could not be registered'), 'danger')
                 else:
-                    flash('Thanks for Your contribution', 'success')
+                    flash(gettext('Thanks for Your contribution'), 'success')
                     # We make sure that the form data does not remain in browser
                     return redirect(url_for('campaigns.contributeToCampaign', id=id))
-    return render_template('campaign/campaign_entry.html', title=campaign.campaign_name + ' - Contribute',
+    return render_template('campaign/campaign_entry.html',
+                           title=gettext('%(campaign_name)s - Contribute',
+                                         campaign_name=campaign.campaign_name),
                            id=id,
                            captions_form=captions_form,
                            depicts_form=depicts_form,
@@ -244,7 +250,7 @@ def updateCampaign(id):
     username = session.get('username', None)
     form = UpdateCampaignForm()
     if not username:
-        flash('You need to Login to update a campaign', 'danger')
+        flash(gettext('You need to Login to update a campaign'), 'danger')
         return redirect(url_for('campaigns.getCampaigns'))
     else:
         # when the form is submitted, we update the campaign
@@ -262,9 +268,9 @@ def updateCampaign(id):
             campaign.campaign_type = form.campaign_type.data
             campaign.end_date = form.end_date.data
             if testDbCommitSuccess():
-                flash('Please enter an End Date for this Campaign!', 'danger')
+                flash(gettext('Please enter an End Date for this Campaign!'), 'danger')
             else:
-                flash('Update Succesfull !', 'success')
+                flash(gettext('Update Succesfull !'), 'success')
                 return redirect(url_for('campaigns.getCampaignById', id=id))
         # User requests to edit so we update the form with Campaign details
         elif request.method == 'GET':
@@ -280,9 +286,11 @@ def updateCampaign(id):
             form.campaign_type.data = campaign.campaign_type
             form.end_date.data = campaign.end_date
         else:
-            flash('Booo! {} Could not be updated!'.format(
-                form.campaign_name.data), 'danger')
-        return render_template('campaign/update_campaign.html', title=campaign.campaign_name + ' - Update',
+            flash(gettext('Booo! %(campaign_name)s Could not be updated!',
+                          campaign_name=form.campaign_name.data), 'danger')
+        return render_template('campaign/update_campaign.html',
+                               title=gettext('%(campaign_name)s - Update',
+                                             campaign_name=campaign.campaign_name),
                                campaign=campaign,
                                form=form,
                                user_pref_lang=get_user_language_preferences(username),
@@ -297,7 +305,7 @@ def getCampaignCategories():
     # We get the current user's user_name
     username = session.get('username', None)
     if not username:
-        return '<stong> Sorry! This Data is available for logged in Users only</strong>'
+        return '<stong>' + gettext('Sorry! This Data is available for logged in Users only') + '</strong>'
     else:
         # We get the campaign categories
         campaign = Campaign.query.filter_by(id=campaign_id).first()

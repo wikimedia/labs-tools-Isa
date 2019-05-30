@@ -1,8 +1,10 @@
 import os
 
 import yaml
-from flask import Flask
+from flask import Flask, request, session
 from flask_sqlalchemy import SQLAlchemy
+from flask_babel import Babel, gettext
+
 from flask_login import LoginManager
 
 app = Flask(__name__)
@@ -15,6 +17,18 @@ app.config.update(
 # Another secret key will be generated later
 app.config['SQLALCHEMY_DATABASE_URI']
 app.config['SECRET_KEY']
+
+# We hook babel to our app
+babel = Babel(app)
+
+
+@babel.localeselector
+def get_locale():
+    if request.args.get('lang'):
+        session['lang'] = request.args.get('lang')
+    return session.get('lang', 'en')
+
+
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)

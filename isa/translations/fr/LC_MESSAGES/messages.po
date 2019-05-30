@@ -1,0 +1,421 @@
+# French translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-05-30 16:35+0100\n"
+"PO-Revision-Date: 2019-05-30 16:41+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: campaigns/routes.py:29 templates/campaign/campaigns.html:6
+#: templates/main/layout.html:41
+msgid "Campaigns"
+msgstr ""
+
+#: campaigns/routes.py:44
+#, python-format
+msgid "Campaign with id %(id)s does not exist"
+msgstr ""
+
+#: campaigns/routes.py:86
+msgid "Campaign - "
+msgstr ""
+
+#: campaigns/routes.py:107
+msgid "You need to Login to create a campaign"
+msgstr ""
+
+#: campaigns/routes.py:130
+#, python-format
+msgid "Sorry %(campaign_name)s Could not be created"
+msgstr ""
+
+#: campaigns/routes.py:133
+#, python-format
+msgid "%(campaign_name)s Campaign created!"
+msgstr ""
+
+#: campaigns/routes.py:136
+msgid "Create a campaign"
+msgstr ""
+
+#: campaigns/routes.py:178 campaigns/routes.py:209
+msgid "You need to login to participate"
+msgstr ""
+
+#: campaigns/routes.py:186
+msgid "please add at least a depict statement"
+msgstr ""
+
+#: campaigns/routes.py:201 campaigns/routes.py:228
+msgid "Sorry edit could not be registered"
+msgstr ""
+
+#: campaigns/routes.py:203 campaigns/routes.py:230
+msgid "Thanks for Your contribution"
+msgstr ""
+
+#: campaigns/routes.py:234
+#, python-format
+msgid "%(campaign_name)s - Contribute"
+msgstr ""
+
+#: campaigns/routes.py:253
+msgid "You need to Login to update a campaign"
+msgstr ""
+
+#: campaigns/routes.py:271
+msgid "Please enter an End Date for this Campaign!"
+msgstr ""
+
+#: campaigns/routes.py:273
+msgid "Update Succesfull !"
+msgstr ""
+
+#: campaigns/routes.py:289
+#, python-format
+msgid "Booo! %(campaign_name)s Could not be updated!"
+msgstr ""
+
+#: campaigns/routes.py:292
+#, python-format
+msgid "%(campaign_name)s - Update"
+msgstr ""
+
+#: campaigns/routes.py:308
+msgid "Sorry! This Data is available for logged in Users only"
+msgstr ""
+
+#: templates/campaign/campaign.html:8
+msgid "View images from"
+msgstr ""
+
+#: templates/campaign/campaign.html:10
+msgid "All countries"
+msgstr ""
+
+#: templates/campaign/campaign.html:35
+msgid "START DATE"
+msgstr ""
+
+#: templates/campaign/campaign.html:36
+msgid "END DATE"
+msgstr ""
+
+#: templates/campaign/campaign.html:40
+msgid "Campaign Progress"
+msgstr ""
+
+#: templates/campaign/campaign.html:47
+msgid "Contributions"
+msgstr ""
+
+#: templates/campaign/campaign.html:53
+msgid "Editors"
+msgstr ""
+
+#: templates/campaign/campaign.html:59
+msgid "Top Contributors"
+msgstr ""
+
+#: templates/campaign/campaign.html:64
+msgid "Contributor"
+msgstr ""
+
+#: templates/campaign/campaign.html:65 templates/campaign/campaign.html:96
+#: templates/campaign/campaign.html:126
+msgid "Images Improved"
+msgstr ""
+
+#: templates/campaign/campaign.html:81
+msgid "Sorry"
+msgstr ""
+
+#: templates/campaign/campaign.html:83
+msgid "No partcipants has contributed to this campaign"
+msgstr ""
+
+#: templates/campaign/campaign.html:90
+msgid "Most improved Countries"
+msgstr ""
+
+#: templates/campaign/campaign.html:95
+msgid "Country"
+msgstr ""
+
+#: templates/campaign/campaign.html:111
+msgid "Download Complete Stats"
+msgstr ""
+
+#: templates/campaign/campaign.html:121
+msgid "My Contributions"
+msgstr ""
+
+#: templates/campaign/campaign.html:125
+msgid "Rank"
+msgstr ""
+
+#: templates/campaign/campaign.html:145
+msgid "More about"
+msgstr ""
+
+#: templates/campaign/campaign.html:150
+msgid "Maanager"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:42
+msgid "File"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:43
+msgid "Description"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:44
+#: templates/campaign/create_campaign.html:82
+#: templates/campaign/update_campaign.html:80
+msgid "Categories"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:45
+msgid "Author"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:48
+msgid "show all metadata from commons"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:55
+#: templates/campaign/create_campaign.html:119
+msgid "Depicts"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:66
+msgid "Add new"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:101
+msgid "Caption"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:124
+msgid "Change Caption Language"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:124
+msgid "CHOOSE AVAILABLE LANGUAGES"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:130
+msgid "English"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:133
+msgid "French"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:136
+msgid "German"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:139
+msgid "Spanish"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:151
+msgid "Cancel"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:154
+msgid "Save"
+msgstr ""
+
+#: templates/campaign/campaigns.html:14
+msgid "Ongoing Campaigns"
+msgstr ""
+
+#: templates/campaign/campaigns.html:21
+msgid "Campaign"
+msgstr ""
+
+#: templates/campaign/campaigns.html:22
+#: templates/campaign/create_campaign.html:46
+#: templates/campaign/update_campaign.html:44
+msgid "Start Date"
+msgstr ""
+
+#: templates/campaign/campaigns.html:23
+#: templates/campaign/create_campaign.html:62
+#: templates/campaign/update_campaign.html:60
+msgid "End Date"
+msgstr ""
+
+#: templates/campaign/campaigns.html:24
+msgid "Status"
+msgstr ""
+
+#: templates/campaign/campaigns.html:54
+msgid "Closed"
+msgstr ""
+
+#: templates/campaign/campaigns.html:56
+msgid "Open"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:4
+msgid "Create new Campaign"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:7
+msgid "Fill in the form below to create you campaign"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:7
+#: templates/campaign/update_campaign.html:7
+msgid "Fields marked with * are mandatory"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:13
+#: templates/campaign/update_campaign.html:12
+msgid "Campaign Name"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:29
+#: templates/campaign/update_campaign.html:27
+msgid "Short description of Campaign"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:101
+#: templates/campaign/update_campaign.html:99
+msgid "Name"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:102
+#: templates/campaign/update_campaign.html:100
+msgid "Depth"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:115
+#: templates/campaign/update_campaign.html:115
+msgid "Metadata to collect in the Cmapign"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:135
+#: templates/campaign/update_campaign.html:135
+msgid "Captions"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:157
+#: templates/campaign/update_campaign.html:157
+msgid "This is a Wiki Loves Campaign"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:175
+msgid "Long description of Campaign(full about info)"
+msgstr ""
+
+#: templates/campaign/create_campaign.html:189
+msgid "Publish Campaign"
+msgstr ""
+
+#: templates/campaign/update_campaign.html:4
+msgid "Update Campaign Details"
+msgstr ""
+
+#: templates/campaign/update_campaign.html:7
+msgid "You are updating"
+msgstr ""
+
+#: templates/campaign/update_campaign.html:175
+msgid "Long description of Campaign(full about info"
+msgstr ""
+
+#: templates/campaign/update_campaign.html:189
+msgid "Publish Changes"
+msgstr ""
+
+#: templates/errors/403.html:8
+msgid "Permission Denied"
+msgstr ""
+
+#: templates/errors/403.html:10
+msgid "Please check that You have the rights to perform this task"
+msgstr ""
+
+#: templates/errors/403.html:15
+msgid " Take Me Home"
+msgstr ""
+
+#: templates/errors/403.html:19 templates/errors/404.html:18
+#: templates/errors/500.html:18
+msgid "Contact Support"
+msgstr ""
+
+#: templates/errors/404.html:8
+msgid "Page Not Found"
+msgstr ""
+
+#: templates/errors/404.html:10
+msgid "We Are Unable to find the page you are looking for"
+msgstr ""
+
+#: templates/errors/404.html:15 templates/errors/500.html:14
+msgid "Take Me Home"
+msgstr ""
+
+#: templates/errors/500.html:7
+msgid "Something Went Wrong"
+msgstr ""
+
+#: templates/errors/500.html:9
+msgid "Isa might be undergoing maintenance"
+msgstr ""
+
+#: templates/main/home.html:8
+msgid "Easily Add Information about Images on Wikimedia Commons"
+msgstr ""
+
+#: templates/main/layout.html:36
+msgid "Home"
+msgstr ""
+
+#: templates/main/layout.html:47
+msgid "Create New"
+msgstr ""
+
+#: templates/main/layout.html:53
+msgid "Help"
+msgstr ""
+
+#: templates/main/layout.html:81 templates/main/layout.html:85
+msgid "Logout"
+msgstr ""
+
+#: templates/main/layout.html:89
+msgid "Login"
+msgstr ""
+
+#: users/routes.py:46
+msgid "OAuth callback failed. Are cookies disabled?"
+msgstr ""
+
+#: users/routes.py:67
+#, python-format
+msgid " Welcome  %(username)s!"
+msgstr ""
+
+#: users/routes.py:80
+msgid "See you next time!"
+msgstr ""
+

@@ -3,7 +3,7 @@
     <header class="main-page">
         <div class=" d-flex justify-content-center container">
             <h1>
-                ISA - Campaigns
+                ISA - {{ _('Campaigns') }}
             </h1>
         </div>
     </header>
@@ -11,17 +11,17 @@
         <section id="campaigns">
             <div class="section-header">
                 <h3>
-                    Ongoing Campaigns
+                    {{ _('Ongoing Campaigns') }}
                 </h3>
             </div>
             <br>
             <table id="campaign_table" class="table mt-10px table-striped table-bordered table-hover" cellspacing="0" width="100%">
                     <thead class="thead-dark">
                        <tr>
-                          <th scope="col">Campaign</th>
-                          <th scope="col">Start Date</th>
-                          <th scope="col">End Date</th>
-                          <th scope="col">Status</th>
+                          <th scope="col">{{ _('Campaign') }}</th>
+                          <th scope="col">{{ _('Start Date') }}</th>
+                          <th scope="col">{{ _('End Date') }}</th>
+                          <th scope="col">{{ _('Status') }}</th>
                           </tr>
                     </thead>
                     <tbody>
@@ -51,9 +51,9 @@
                               <td class="table-link-cell">
                                   <a class="campaign-link" href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}">
                                         {% if campaign.end_date.strftime("%Y-%m-%d %H:%M") < datetime.now().strftime("%Y-%m-%d %H:%M") %}
-                                            <span class=""> Closed </span>
+                                            <span class=""> {{ _('Closed') }}</span>
                                         {% else %}
-                                            <span class=""> Open </span>
+                                            <span class="">{{ _('Open') }}</span>
                                         {%  endif %}
                                   </a>
                               </td>

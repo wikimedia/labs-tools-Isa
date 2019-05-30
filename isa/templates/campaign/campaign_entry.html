@@ -39,20 +39,20 @@
     </div> -->
     <div id="edit_image_info" class="mr-auto pb-2 navbar-light bg-light text-center">
         <div class="text-left pl-2">
-            <small><strong>File:</strong>&nbsp; </small> <small id="image_name"></small> <br>
-            <small><strong>Description:</strong>&nbsp; <small id="image_description"></small></small> <br>
-            <small><strong>Categories:</strong>&nbsp; <small id="image_categories"></small></small> <br>
-            <small><strong>Author:  </strong><small id="image_author"></small>&nbsp;</small>
+            <small><strong>{{ _('File') }}:</strong>&nbsp; </small> <small id="image_name"></small> <br>
+            <small><strong>{{ _('Description') }}:</strong>&nbsp; <small id="image_description"></small></small> <br>
+            <small><strong>{{ _('Categories') }}:</strong>&nbsp; <small id="image_categories"></small></small> <br>
+            <small><strong>{{ _('Author') }}: </strong><small id="image_author"></small>&nbsp;</small>
         </div>
         <div class="text-center">
-            <a href="#"><small class="fas fa-caret-up"> show all metadata from commons</small></a>
+            <a href="#"><small class="fas fa-caret-up"> {{ _('show all metadata from commons') }}</small></a>
         </div>
     </div>
 
     {% if campaign.depicts_metadata %}
         <div id="edit_image_info" class="mr-auto pb-2 mt-2 navbar-light bg-light text-center">
             <div class="text-left pl-4 pb-2">
-                <h6>Depicts</h6>
+                <h6>{{ _('Depicts') }}</h6>
             </div>
             <div class="text-center pl-4 pb-4">
                 <div class="text-center pl-4">
@@ -63,7 +63,7 @@
                         <div class="row pt-4">
                             <div class="col-sm-4 ml-auto">
                                 <div id="add_depict_btn" class="btn btn-success lighten-4">
-                                    Add new &nbsp;
+                                    {{ _('Add new') }} &nbsp;
                                     <i width="0.5%" class="fas fa-search"></i>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
     {% if campaign.captions_metadata %}
         <div id="edit_image_info" class="mr-auto pb-2 mt-2 navbar-light bg-light text-center">
             <div class="text-left pl-4 pt-2">
-                <h6>Caption</h6>
+                <h6>{{ _('Caption') }}</h6>
             </div>
             <div class="text-center d-flex justify-content-center">
                 <form  class="" method="POST" action="">
@@ -121,22 +121,22 @@
                         {{ captions_form.sub_categories( class="country-subcategory-input form-control form-control-sm" ) }}
                     </div>
                     <div class="text-center">
-                        <small class="choose_caption_lang_text"><strong>Change Caption Language:</strong> CHOOSE AVAILABLE LANGUAGES</small>
+                        <small class="choose_caption_lang_text"><strong>{{ _('Change Caption Language') }}:</strong> {{ _('CHOOSE AVAILABLE LANGUAGES') }}</small>
                     </div>
                     <div class="text-center pl-4">
                         <div class="text-center">
                             <div class="row pt-2">
                                 <div class="col-sm-3 mr-auto">
-                                    <h6><span class="badge badge-primary">English</span></h6>
+                                    <h6><span class="badge badge-primary">{{ _('English') }}</span></h6>
                                 </div>
                                 <div class="col-sm-3 mr-auto">
-                                    <h6><span class="badge badge-warning">French</span></h6>
+                                    <h6><span class="badge badge-warning">{{ _('French') }}</span></h6>
                                 </div>
                                 <div class="col-sm-3 mr-auto">
-                                    <h6><span class="badge badge-warning">German</span></h6>
+                                    <h6><span class="badge badge-warning">{{ _('German') }}</span></h6>
                                 </div>
                                 <div class="col-sm-3 mr-auto">
-                                    <h6><span class="badge badge-warning">Spanish</span></h6>
+                                    <h6><span class="badge badge-warning">{{ _('Spanish') }}</span></h6>
                                 </div>
                             </div>
                         </div>
@@ -148,10 +148,10 @@
                                     <h6><span class="btn btn-lg btn-primary fas fa-caret-left"></span></h6>
                                 </div>
                                 <div class="col-sm-3 mr-auto">
-                                    <h6><span class="btn btn-secondary">Cancel</span></h6>
+                                    <h6><span class="btn btn-secondary">{{ _('Cancel') }}</span></h6>
                                 </div>
                                 <div class="col-sm-3 mr-auto">
-                                    <h6><span>{{ captions_form.submit( class="btn btn-secondary" ) }}</span></h6>
+                                    <h6><span>{{ captions_form.submit( class="btn btn-secondary", value=_('Save') ) }}</span></h6>
                                 </div>
                                 <div class="col-sm-3 mr-auto">
                                     <h6><span class="btn btn-lg btn-primary fas fa-caret-right"></span></h6>
