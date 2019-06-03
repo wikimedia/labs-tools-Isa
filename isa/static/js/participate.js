@@ -55,9 +55,6 @@ $(document).ready( function () {
           $( '#depicts-select' ).select2( {
               placeholder: 'Search for depicts',
               delay: 250,
-              tags: true,
-              multiple: true,
-              tokenSeparators: [',', ' '],
               minimumResultsForSearch: 1,
               maximumSelectionLength: 4,
               ajax: {
@@ -81,8 +78,8 @@ $(document).ready( function () {
                       for (var i=0; i < results.length; i++) {
                           var result = results[i];
                           processedResults.push({
-                              id: result.id +'|'+ $('.active').find('img').attr('alt'),
-                              text: result.label,
+                              id: result.id,
+                              text: result.label || "(no label)",
                               description: result.description || "" //use "" as default to avoid 'undefined' showing as description
                           });
                       }
@@ -92,10 +89,13 @@ $(document).ready( function () {
                   }
             },
             templateResult: searchResultsFormat,
-            createTag: function() {
-                return undefined;
-            }
         });
+        
+        $('#depicts-select').on('select2:select', function(ev) {
+            // Add new depict statement to the UI when user selects result
+            var selected = ev.params.data;
+            editSession.addDepictStatement(selected.id, selected.text, selected.description)
+        })
       })();
     
     // ParticipationManager class manages all aspects of the current participation session
@@ -126,28 +126,40 @@ $(document).ready( function () {
         
         // All actions to complete when a new image has loaded
         this.imageChanged = function () {
+            var me = this;
             var file = getImageFilename ()
             imageFileName = file;
             updateImage(file);
             populateMetadata(file);
-            populateStructuredData(file, /*callback*/ {onInitialDataReady: saveInitialStructuredData});
-            
-            // run data change events to update button states and other settings
+            populateStructuredData(file, /*callbacks*/ {
+                onInitialDataReady: saveInitialStructuredData,
+                onUiRendered: function () {
+                    // run data change events to update button states and other settings
+                    // must be done once HTML is rendered as this is used to find differences to start data
+                    me.depictDataChanged();
+                    me.captionDataChanged();
+                }
+            });
+        }
+        
+        this.addDepictStatement = function (item, label, description, isProminent) {
+            var statementHtml = getStatementHtml(item, label, description, isProminent);
+            $('.depict-tag-group').append(statementHtml);
             this.depictDataChanged();
-            this.captionDataChanged();
         }
         
         // All actions to complete when depict statement is added/removed/edited
         this.depictDataChanged = function () {
             updateUnsavedDepictChanges();
             updateButtonStates("depicts");
-            console.log("unsaved depicts changes: ", unsavedChanges.depicts)
+            console.log("Depicts data changed - unsaved changes: ", JSON.stringify(unsavedChanges.depicts))
         }
         
         // All actions to complete when caption statement is added/removed/edited
         this.captionDataChanged = function () {
             updateUnsavedCaptionChanges();
             updateButtonStates("captions");
+            console.log("Depicts data changed - unsaved changes: ", JSON.stringify(unsavedChanges.captions))
         }
         
         /*---------- Image utilities ----------*/
@@ -165,7 +177,7 @@ $(document).ready( function () {
         function saveInitialStructuredData(depictsData, captionsData) {
             initialData.depicts = depictsData;
             initialData.captions = captionsData;
-            console.log("intial data saved", initialData)
+            console.log("intial structured data saved", JSON.stringify(initialData))
         }
         
         //todo: create generalised updateUnsavedChanges which work for depicts and captions
@@ -383,14 +395,17 @@ $(document).ready( function () {
                     });
                 } else {
                     //todo: add message to new div
-                    console.log("this item has no depicts statements yet")
+                    //console.log("this item has no depicts statements yet")
                 }
 
                 // run callback now that data has been retreived
                 if (callbacks.onInitialDataReady) callbacks.onInitialDataReady(depictItems, captions);
         
-                if (depictItems.length === 0) return;
-                
+                if (depictItems.length === 0) {
+                    // fire the UiRendered event now and return as there are no items to get labels for
+                    if (callbacks.onUiRendered) callbacks.onUiRendered(); 
+                    return;
+                }
                 // now make another call to Wikidata to get the labels for each depcits item
                 var qvalues = depictItems.map(function(statement) {
                     return statement.item;
@@ -425,14 +440,12 @@ $(document).ready( function () {
                     }
                     $('.depict-tag-group').html(intialStatementsHtml);
                     
-                    if (callbacks.onDepictLabelsReady) callbacks.onDepictLabelsReady(depictItems); // not needed yet
+                    if (callbacks.onUiRendered) callbacks.onUiRendered(); // fires when the the actual HTML has finsihed being added to the page
                     
                     function getProminentValue(item) {
                         //uses depictItems from previous API call to Commons
-                        console.log("get prominence", item)
                         for (var i=0; i < depictItems.length; i++) {
                             if (depictItems[i].item === item) return depictItems[i].isProminent;
-                            console.log("get prominence found", item, depictItems)
                         }
                     }
                 });
@@ -487,6 +500,19 @@ $(document).ready( function () {
     
     $('.caption-input').on('input', function() {
         editSession.captionDataChanged();
+    })
+    
+    
+    // Click to remove depicts tags
+    $('.depict-tag-group').on('click','.depict-tag-btn', function(ev) {
+        $(this).parents('.depict-tag-item').remove();
+        editSession.depictDataChanged();
+    })
+    
+    // Click to change isProminent for depicts tags
+    $('.depict-tag-group').on('click','.prominent-btn', function(ev) {
+        $(this).toggleClass('active');
+        editSession.depictDataChanged();
     })
     
 });
