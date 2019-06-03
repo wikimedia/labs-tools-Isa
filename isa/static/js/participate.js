@@ -34,8 +34,8 @@ $(document).ready( function () {
         })
         
         // launch new participationManager using list of images in response from api
-        window.participationManager = new ParticipationManager(images);
-        participationManager.imageChanged();
+        window.editSession = new ParticipationManager(images);
+        editSession.imageChanged();
     })
     
     // Initialise the depicts search box
@@ -97,13 +97,6 @@ $(document).ready( function () {
             }
         });
       })();
-
-
-    $( '#add_depict_btn' ).click(function (e) {
-        $( '#depicts_search_form_section' ).slideDown();
-        return false;
-    });
-    
     
     // ParticipationManager class manages all aspects of the current participation session
     // The initialData property contains an object with inital depicts and captions data retrieved from Commons
@@ -113,48 +106,213 @@ $(document).ready( function () {
     // Data is sent via ajax post request instead of default form submit to prevent page reload
     ParticipationManager = function(images) {
         var imageIndex = 0,
-            countrySubcategory = getUrlParameters().country, //returns country or undefined
+            imageFileName = '',
             initialData = {depicts: [], captions: []},
-            unsavedChanges = {depicts: [], captions: []};
+            unsavedChanges = {depicts: [], captions: []},
+            countrySubcategory = getUrlParameters().country, // returns country or undefined
+            userCaptionLanguages = ['en', 'fr', 'de', 'es']; // todo: update on startup from user preferences 
         
-        this.nextImage = function() {
+        this.nextImage = function () {
             imageIndex = (imageIndex + 1) % (images.length);
             this.imageChanged();
         }
         
-        this.previousImage = function() {
+        this.previousImage = function () {
             imageIndex -= 1;
             //jump to end of list if previous image is called on index=0
             if (imageIndex < 0) imageIndex = images.length - 1;
             this.imageChanged();
         }
         
-        this.imageChanged = function() {
-            // all actions to complete when a new image has loaded
-            var file = getImageFilename()
+        // All actions to complete when a new image has loaded
+        this.imageChanged = function () {
+            var file = getImageFilename ()
+            imageFileName = file;
             updateImage(file);
             populateMetadata(file);
-            populateStructuredData(file, /*callback*/ saveInitialStructuredData);
+            populateStructuredData(file, /*callback*/ {onInitialDataReady: saveInitialStructuredData});
+            
+            // run data change events to update button states and other settings
+            this.depictDataChanged();
+            this.captionDataChanged();
         }
-    
+        
+        // All actions to complete when depict statement is added/removed/edited
+        this.depictDataChanged = function () {
+            updateUnsavedDepictChanges();
+            updateButtonStates("depicts");
+            console.log("unsaved depicts changes: ", unsavedChanges.depicts)
+        }
+        
+        // All actions to complete when caption statement is added/removed/edited
+        this.captionDataChanged = function () {
+            updateUnsavedCaptionChanges();
+            updateButtonStates("captions");
+        }
+        
+        /*---------- Image utilities ----------*/
+        
         function getImageFilename () {
             return images[imageIndex];
         }
-        
-        function saveInitialStructuredData(depictsData, captionsData) {
-            // todo: store the results of the intial api call, so represents the live data before any changes
-            initialData.depicts = depictsData;
-            //initialData.captions = captionsData;
-        }
-        
-        function updateUnsavedChanges() {
-            // todo: compare current selection to initialData to see if there are any unsaved changes
-        }
-        
     
         function updateImage(filename) {
             $('.img-holder img').attr('src', 'https://commons.wikimedia.org/wiki/Special:FilePath/' + filename + '?width=500')
         }
+        
+        /*---------- Change tracking functions ----------*/
+        
+        function saveInitialStructuredData(depictsData, captionsData) {
+            initialData.depicts = depictsData;
+            initialData.captions = captionsData;
+            console.log("intial data saved", initialData)
+        }
+        
+        //todo: create generalised updateUnsavedChanges which work for depicts and captions
+        function updateUnsavedDepictChanges () {
+            // Compare current selection to initialData to see if there are any unsaved changes
+            
+            var depictStatements = [];
+            var intialDepictStatements = initialData.depicts;
+            var depictChanges = [];
+            
+            $('.depict-tag-item').each(function(index, element) {
+                var item = $(element).find('.depict-tag-qvalue').text(),
+                    isProminent = $(element).find('.prominent-btn').hasClass('active');
+                depictStatements.push({item: item, isProminent: isProminent});
+            })
+            
+            // Compare to initial state to find actual depcits edits
+            
+            // First find any new items, or changes to isProminent
+            for (var i=0; i < depictStatements.length; i++) {
+                var currentStatement = depictStatements[i];
+                var found = false;
+                for (var j=0; j < intialDepictStatements.length; j++) {
+                    // check all intial statements to see if currentStatement q number was there
+                    var initialStatement = intialDepictStatements[j];
+                    
+                    if (initialStatement.item === currentStatement.item) {
+                        // the item was there to start with, now check if isProminent has changed
+                        if (currentStatement.isProminent !== initialStatement.isProminent) {
+                            // only isProminent has changed
+                            depictChanges.push({
+                                edit_action: "edit",
+                                edit_content: currentStatement,
+                            })
+                        } // else, no changes to statement
+                        
+                        found = true;
+                        break; // any changes for this item have now been found, no need to check more initial statements
+                    }
+                }
+        
+                if (!found) {
+                    // The current depicts item has not been found, it must be an unsaved change
+                    depictChanges.push({
+                        edit_action: "add",
+                        edit_content: currentStatement,
+                    })
+                }
+            } // check next statement...
+            
+            // Second, find any removed statements
+            for (var i = 0; i < intialDepictStatements.length; i++) {
+                var initialStatement = intialDepictStatements[i];
+                var found = false;
+                // for each initialStatement, check if it still exists in current depictStatements
+                for (var j=0; j < depictStatements.length; j++) {
+                    var currentStatement = depictStatements[j];
+                    if (currentStatement.item === initialStatement.item) {
+                        found = true;
+                        break;
+                    }
+                }
+                
+                if (!found) {
+                    depictChanges.push({
+                        edit_action: "remove",
+                        edit_content: initialStatement,
+                    })
+                }
+            } // check next initial statement...
+            
+            unsavedChanges.depicts = depictChanges;
+        }
+        
+        function updateUnsavedCaptionChanges () {
+            var captions = [];
+            var intialCaptions = initialData.captions;
+            var captionChanges = [];
+            
+            // get current captions fromt the UI
+            // each language has a separate input
+            // all inputs have class "caption-input" and custom "lang" attribute
+            $('.caption-input').each(function(index, element) {
+                var caption = $(element).val(),
+                    language = $(element).attr('lang');
+                if (caption) {
+                    captions.push({
+                        language: language,
+                        value: caption
+                    })
+                }
+            })
+            
+            // First, find the added or edited captions
+            for (var i=0; i < captions.length; i++) {
+                var currentCaption = captions[i],
+                    found = false;
+                for (var j=0; j < intialCaptions.length; j++) {
+                    var initialCaption = intialCaptions[j];
+                    
+                    if (currentCaption.language === initialCaption.language) {
+                        // this language caption existed intially
+                        // has the text changed?
+                        if (currentCaption.value !== initialCaption.value) {
+                             captionChanges.push({
+                                edit_action: "edit",
+                                edit_content: currentCaption,
+                            })
+                        } // else, no changes to caption
+                        found = true;
+                        break; // any changes for this item have now been found, no need to check more captions
+                    }
+                }
+        
+                if (!found) {
+                    // The current caption has not been found, it must be an unsaved change
+                    captionChanges.push({
+                        edit_action: "add",
+                        edit_content: currentCaption,
+                    })
+                }
+            } // check next statement...
+            
+            // Second, find any removed caption
+            for (var i = 0; i < intialCaptions.length; i++) {
+                var initialCaption = intialCaptions[i];
+                var found = false;
+                // for each initialCaption, check if it still exists in current captions
+                for (var j=0; j < captions.length; j++) {
+                    var currentCaption = captions[j];
+                    if (currentCaption.language === initialCaption.language) {
+                        found = true;
+                        break;
+                    }
+                }
+                
+                if (!found) {
+                    captionChanges.push({
+                        edit_action: "remove",
+                        edit_content: initialCaption,
+                    })
+                }
+            } // check next initial statement...
+            unsavedChanges.captions = captionChanges;
+        }
+    
+        /*---------- Data populating functions ----------*/
         
         function populateMetadata(filename) {
             var apiOptions = {
@@ -184,7 +342,7 @@ $(document).ready( function () {
             } );
         }
 
-        function populateStructuredData(filename, callback) {
+        function populateStructuredData(filename, callbacks) {
             $('.depict-tag-group').empty(); //clear previous
             var entitiesApiOptions = {
                 action: 'wbgetentities',
@@ -198,32 +356,50 @@ $(document).ready( function () {
                 url: 'https://commons.wikimedia.org/w/api.php',
                 data: entitiesApiOptions
             } ).done( function( response ) {
-                // todo: get captions data, and pass cleaned data to callback function (which saves initial state)
+               
                 var mediaId = Object.keys(response.entities)[0];
-                var depictsStatements = [];
-                // no depicts data
-                // Todo: add "this item has no depicts statement yet" message to separate div
-
-                var mediaStatements = response.entities[mediaId].statements;
-                if ( !(mediaStatements && mediaStatements.P180) ) {
+                var mediaStatements = response.entities[mediaId].statements || {};
+                var mediaCaptions = response.entities[mediaId].labels || {};
+                var depictItems = [];
+                var captions = [];
+                
+                // process captions
+                for (var i=0; i < userCaptionLanguages.length; i++) {
+                    var userLang = userCaptionLanguages[i];
+                    var caption = mediaCaptions[userLang];
+                    if (caption) {
+                        captions.push(caption);
+                    }
+                }
+                
+                // process statements
+                if ( mediaStatements.P180 ) {
+                    // convert results to array of {item, isProminent} objects
+                    depictItems = mediaStatements.P180.map(function(depictStatement) {
+                        return {
+                            item: depictStatement.mainsnak.datavalue.value.id,
+                            isProminent: depictStatement.rank === "preferred"
+                        }
+                    });
+                } else {
                     //todo: add message to new div
-                    return console.log("this item has no depicts statements yet")
+                    console.log("this item has no depicts statements yet")
                 }
 
-                // convert results to list of Q numbers only
-                // todo: switch to array of objects to store isProminent value for each 
-                depictsItems = mediaStatements.P180.map(function(depictsStatement) {
-                    return depictsStatement.mainsnak.datavalue.value.id;
-                });
-                if (callback) callback(depictsItems);
-                if (depictsItems.length === 0) return;
+                // run callback now that data has been retreived
+                if (callbacks.onInitialDataReady) callbacks.onInitialDataReady(depictItems, captions);
+        
+                if (depictItems.length === 0) return;
                 
                 // now make another call to Wikidata to get the labels for each depcits item
+                var qvalues = depictItems.map(function(statement) {
+                    return statement.item;
+                });
                 var secondApiOptions = {
                     action: 'wbgetentities',
                     props: 'labels|descriptions',
                     format: 'json',
-                    ids: depictsItems.join("|"),
+                    ids: qvalues.join("|"),
                     languages: 'en',
                     origin: '*',
                     languagefallback: ''
@@ -235,20 +411,35 @@ $(document).ready( function () {
                     })
                 .done( function (response) {
                     // now we have the labels, populate the statements area to show existing depicts items
+                    // we need to extract isProminent from results of previous API call to Commons
                     var intialStatementsHtml = "";
                     for (var qvalue in response.entities) {
                         var itemData = response.entities[qvalue],
                             labelLang = Object.keys(itemData.labels)[0],
                             label = itemData.labels[labelLang].value,
                             descriptionLang = Object.keys(itemData.descriptions)[0],
-                            description = itemData.descriptions[descriptionLang].value;
+                            description = itemData.descriptions[descriptionLang].value,
+                            isProminent = getProminentValue(qvalue);
                             //todo: access isProminent value
-                        intialStatementsHtml += getStatementHtml(qvalue, label, description);
+                        intialStatementsHtml += getStatementHtml(qvalue, label, description, isProminent);
                     }
                     $('.depict-tag-group').html(intialStatementsHtml);
+                    
+                    if (callbacks.onDepictLabelsReady) callbacks.onDepictLabelsReady(depictItems); // not needed yet
+                    
+                    function getProminentValue(item) {
+                        //uses depictItems from previous API call to Commons
+                        console.log("get prominence", item)
+                        for (var i=0; i < depictItems.length; i++) {
+                            if (depictItems[i].item === item) return depictItems[i].isProminent;
+                            console.log("get prominence found", item, depictItems)
+                        }
+                    }
                 });
             });
         }
+        
+        /*---------- General utilities ----------*/
         
         function getUrlParameters () {
             var parametersObject = {};
@@ -263,24 +454,39 @@ $(document).ready( function () {
         };
         
         function getStatementHtml(item, label, description, isProminent) {
+            var isProminentButtonHtml = isProminent ?
+                '<button class="btn btn-sm btn-warning prominent-btn active" title="Mark this depicted item as NOT prominent">Prominent</button>' :
+                '<button class="btn btn-sm btn-warning prominent-btn" title="Mark this depicted item as prominent">Prominent</button>'
             return [
                 '<div class="depict-tag-item" title="' + description + '">',
                 '<div class="depict-tag-label">', 
-                '<div class="label btn-sm">' + label + ' <span class="depict-tag-item">' + item + '</span></div>',
-                '<button class="btn btn-sm btn-warning mark-prominent-btn" title="Mark this depicted item as NOT prominent">Prominent</button>',
+                '<div class="label btn-sm">' + label + ' <span class="depict-tag-qvalue">' + item + '</span></div>',
+                isProminentButtonHtml,
                 '<div class="depict-tag-btn">',
                 '<button class="fas fa-trash btn-link btn" title="Remove this depicted item"></button></div>',
                 '</div></div></div>'].join("");
         }
+        
+        
+        function updateButtonStates(editType) {
+            var currentChanges = unsavedChanges[editType],
+                $publishBtns = $('.edit-publish-btn-group[edit-type=' + editType + '] button'),
+                areButtonsDisabled = currentChanges.length === 0;
+            $publishBtns.prop('disabled', areButtonsDisabled);
+        }
     }
     
-    /********* click handlers *********/
+    /********* event handlers *********/
     $('#next-image-btn').click(function(ev) {
-        participationManager.nextImage();
+        editSession.nextImage();
     })
     
     $('#previous-image-btn').click(function(ev) {
-        participationManager.previousImage();
+        editSession.previousImage();
+    })
+    
+    $('.caption-input').on('input', function() {
+        editSession.captionDataChanged();
     })
     
 });

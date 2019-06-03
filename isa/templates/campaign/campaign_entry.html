@@ -30,9 +30,9 @@
 <div class="container edit-box">
 <div class="edit-box-header">
 	<h4>{{ _('Depicts') }}</h4>
-	<div class="edit-publish-btn-group">
-	<button class="btn btn-sm btn-link">{{ _('Cancel') }}</button>
-	<button type="submit" class="btn btn-sm btn-primary">{{ _('Save') }}</button>
+	<div edit-type="depicts" class="edit-publish-btn-group">
+	<button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
+	<button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
 	</div>
 	<p>Search for things you see in the image</p>	
   </div>
@@ -47,26 +47,16 @@
 	
  <div class="depict-tag-group">
     <!-- populated by JavaScript -->
-    <!-- example snippet:
-    <div class="depict-tag-item" title="landform that extends above the surrounding terrain">
-             <div class="depict-tag-label">
-                 <div class="label btn-sm">hill <span class="depict-tag-item">Q54050</span></div>
-                 <button class="btn btn-sm btn-warning mark-prominent-btn" title="Mark this depicted item as NOT prominent">Prominent</button>
-                 <div class="depict-tag-btn">
-                     <button class="fas fa-trash btn-link btn" title="Remove this depicted item"></button>
-                 </div>
-             </div>
-         </div>-->
-    </div> 
+ </div> 
  
 </div>
 
 <div class="container edit-box">
 <div class="edit-box-header">
 	<h4>{{ _('Caption') }}</h4>
-	<div class="edit-publish-btn-group">
-	<button class="btn btn-sm btn-link">{{ _('Cancel') }}</button>
-	<button type="submit" class="btn btn-sm btn-primary">{{ _('Save') }}</button>
+	<div edit-type="captions" class="edit-publish-btn-group">
+	<button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
+	<button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
 	</div>
 	<p>Add a captions for the image</p>	
   </div>
@@ -75,7 +65,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon2"><i class="fas fa-edit"></i></span>
   </div>
-  <input type="input" class="form-control" placeholder="write a caption" aria-label="search" aria-describedby="basic-addon2">
+  <input type="input" class="form-control caption-input" lang="en" placeholder="write a caption" aria-label="search" aria-describedby="basic-addon2">
 </div>
   </div>
 
