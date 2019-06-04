@@ -310,3 +310,35 @@ def getCampaignCategories():
         # We get the campaign categories
         campaign = Campaign.query.filter_by(id=campaign_id).first()
         return campaign.categories
+
+
+@campaigns.route('/api/post-contribution', methods=['POST'])
+def postContribution():
+    contrib_data = json.loads(request.data)
+    username = session.get('username', 'Eugene233')
+    campaign_id = contrib_data[0]['campaign_id']
+    
+    if not username:
+        flash(gettext('You need to login to participate'), 'info')
+        # User is not logged in so we set the next url to redirect them after login
+        session['next_url'] = request.url
+        return redirect(url_for('campaigns.contributeToCampaign', id=campaign_id))
+    else:
+        current_user_id = User.query.filter_by(username=username).first().id
+        edit_content = str(contrib_data[0]['edit_content'])
+        file = contrib_data[0]['image']
+        edit_action = contrib_data[0]['edit_action']
+        edit_type = ''  # should be something like contrib_data[0]['edit_type']
+        conribution = Contribution(user_id=current_user_id,
+                                   campaign_id=campaign_id,
+                                   file=file,
+                                   edit_acton=edit_action,
+                                   edit_type=edit_type,
+                                   edit_content=edit_content)
+        db.session.add(conribution)
+        if testDbCommitSuccess():
+            flash(gettext('Contribution not registered'), 'danger')
+        else:
+            flash(gettext('Thanks for your contribution'), 'success')
+            return("Success!")
+    return("Failure")
