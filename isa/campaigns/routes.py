@@ -7,6 +7,7 @@ import json
 
 
 from isa import db
+from isa.utils.languages import getLanguages
 from isa.campaigns.forms import CampaignForm, CampaignDepictsSearchForm, CampaignCaptionsForm, UpdateCampaignForm
 from isa.get_category_items import get_category_items
 from isa.models import Campaign, Contribution, User

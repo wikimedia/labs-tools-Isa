@@ -70,7 +70,7 @@
 			</li>     
 			<li class="nav-item">
 				{% if username %}
-				<a class="nav-link active" id="user_name" >
+				<a href="{{url_for( 'users.userSettings' )}}" class="nav-link " id="user_name" >
 					<i class="fa fa-user"></i> {{username}}
 				</a>
 				{% endif %}

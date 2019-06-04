@@ -30,7 +30,7 @@ def add_user_to_db(username):
     """
 
     if check_user_existence(username):
-        user = User(username=username, pref_lang='en,fr')
+        user = User(username=username, pref_lang='en,fr,,,,')
         db.session.add(user)
         if testDbCommitSuccess():
             return False
@@ -53,8 +53,12 @@ def get_user_language_preferences(username):
     if user is None:
         return 'en,fr'.split(',')
     else:
-        user_pref_options = user.pref_lang
-        return user_pref_options.split(',')
+        user_pref_options = []
+        user_pref_langs = user.pref_lang.split(',')
+        for lang in user_pref_langs:
+            if lang != '':
+                user_pref_options.append(lang)
+        return user_pref_options
 
 
 def getUserRanking(all_contributors_data, username):
@@ -121,3 +125,7 @@ def getCurrentUserImagesImproved(all_contributors_data, username):
             return user_data['images_improved']
         else:
             return 'N/A'
+
+
+def buildUserPrefLang(lang_1, lang_2, lang_3, lang_4, lang_5, lang_6):
+    return lang_1 + ',' + lang_2 + ',' + lang_3 + ',' + lang_4 + ',' + lang_5 + ',' + lang_6

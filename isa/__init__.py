@@ -4,7 +4,6 @@ import yaml
 from flask import Flask, request, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_babel import Babel, gettext
-
 from flask_login import LoginManager
 
 app = Flask(__name__)

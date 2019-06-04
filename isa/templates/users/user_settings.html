@@ -1,0 +1,83 @@
+{% extends "main/layout.html" %}
+{% block content %}
+<br>
+<div class="container">
+    <div class="navbar-light bg-light">
+        <div class="container">
+            <header class="main-page">
+                <div class="pt-0 text-center">
+                    <h2>
+                        {{ _('Caption Languages') }}
+                    </h2>
+                    <br>
+                    <small><strong>{{ _('Select upto 6 languages for captions') }}</strong></small>
+                </div>
+            </header>
+            <div class="d-flex justify-content-center">
+                <form class="" method="POST">
+                    {{ captions_lang_form.csrf_token }}
+                    <div id="language_select_1" class="row pb-2">
+                        <div class="col-md-8">
+                            {{ captions_lang_form.language_select_1( id="captions_lang_select_1", class="form-control") }}</td>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><i style='color:red' class="fa fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div id="language_select_2" class="row pb-2">
+                        <div class="col-md-8">
+                            {{ captions_lang_form.language_select_2( id="captions_lang_select_2", class="form-control") }}</td>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><i style='color:red' class="fa fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div id="language_select_3" class="row pb-2">
+                        <div class="col-md-8">
+                            {{ captions_lang_form.language_select_3( id="captions_lang_select_3", class="form-control") }}</td>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><i style='color:red' class="fa fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div id="language_select_4" class="row pb-2">
+                        <div class="col-md-8">
+                            {{ captions_lang_form.language_select_4( id="captions_lang_select_4", class="form-control") }}</td>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><i style='color:red' class="fa fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div id="language_select_5" class="row pb-2">
+                        <div class="col-md-8">
+                            {{ captions_lang_form.language_select_5( id="captions_lang_select_5", class="form-control") }}</td>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><i style='color:red' class="fa fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div id="language_select_6" class="row">
+                        <div class="col-md-8">
+                            {{ captions_lang_form.language_select_6( id="captions_lang_select_6", class="form-control") }}</td>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><i style='color:red' class="fa fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div id="language_select_6" class="row pt-3">
+                        <div class="col-md-6">
+                            {{ captions_lang_form.submit(class="btn btn-primary", value=_('Save')) }}</td>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="btn btn-danger" type="button" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+{% endblock scripts%}

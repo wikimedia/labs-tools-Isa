@@ -138,30 +138,6 @@
             </div>
         </div>
     {% endif %}
-    <div class="container">
-        <header class="main-page">
-            <div class="pt-0 text-center">
-                <h3>
-                    {{ _('More about') }} {{ campaign.campaign_name }}
-                </h3>
-            </div>
-        </header>
-        <div class="text-center">
-            <h6><strong>{{ _('Maanager') }}: </strong><a href="https://commons.wikimedia.org/wiki/User:{{campaign_manager}}">{{campaign_manager}}</a></h6>
-        </div>
-        <div class="text-center">
-            <small>
-                <strong>
-                    {{campaign.long_description}}
-                </strong>
-            </small>
-        </div>
-        {% if campaign_manager == username %}
-            <div class=" pt-5 text-center mr-auto ml-auto">
-                <a id="" href="{{url_for('campaigns.updateCampaign', id=campaign.id)}}" class="btn btn-danger" >Edit Campaign</a>
-            </div>
-        {% endif %}
-    </div>
 </div>
 </div>
 {% endblock content%}

@@ -21,6 +21,24 @@ $(document).ready( function () {
         { 'border-right' : '0.5px solid black' }
     );
 
+    $('#captions_lang_select_1').select2({
+        tags: false
+    });
+    $('#captions_lang_select_2').select2({
+        tags: false
+    });
+    $('#captions_lang_select_3').select2({
+        tags: false
+    });
+    $('#captions_lang_select_4').select2({
+        tags: false
+    });
+    $('#captions_lang_select_5').select2({
+        tags: false
+    });
+    $('#captions_lang_select_6').select2({
+        tags: false
+    });
 
     /**********  SET THE LANGUAGE IN SESSION ***********/
 
