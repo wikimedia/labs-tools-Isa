@@ -107,10 +107,13 @@ $(document).ready( function () {
     ParticipationManager = function(images) {
         var imageIndex = 0,
             imageFileName = '',
-            initialData = {depicts: [], captions: []},
-            unsavedChanges = {depicts: [], captions: []},
+            campaignId = getCampaignId(),
             countrySubcategory = getUrlParameters().country, // returns country or undefined
-            userCaptionLanguages = ['en', 'fr', 'de', 'es']; // todo: update on startup from user preferences 
+            userCaptionLanguages = ['en', 'fr', 'de', 'es'], // todo: update on startup from user preferences 
+            initialData = {depicts: [], captions: []},
+            unsavedChanges = {depicts: [], captions: []};
+            
+           
         
         this.nextImage = function () {
             imageIndex = (imageIndex + 1) % (images.length);
@@ -152,14 +155,74 @@ $(document).ready( function () {
         this.depictDataChanged = function () {
             updateUnsavedDepictChanges();
             updateButtonStates("depicts");
-            console.log("Depicts data changed - unsaved changes: ", JSON.stringify(unsavedChanges.depicts))
         }
         
         // All actions to complete when caption statement is added/removed/edited
         this.captionDataChanged = function () {
             updateUnsavedCaptionChanges();
             updateButtonStates("captions");
-            console.log("Depicts data changed - unsaved changes: ", JSON.stringify(unsavedChanges.captions))
+        }
+        
+        this.resetDepictStatements = function () {
+            $('.depict-tag-group').empty();
+            var initialDepictsData = initialData.depicts;
+            for (var i=0; i < initialDepictsData.length; i++) {
+                var depictItem = initialDepictsData[i];
+                var item = depictItem.item,
+                    label = depictItem.label,
+                    description = depictItem.description,
+                    isProminent = depictItem.isProminent;
+                this.addDepictStatement(item, label, description, isProminent)
+            }
+        }
+        
+        this.resetCaptions = function () {
+            $('.caption-input').val('');
+            //todo: complete once caption data is populated at startup
+            
+        }
+        
+        // Posts the current unsaved changes to the server as a JSON string
+        this.postContribution = function(editType) {
+            
+            // now extend the unsavedChanged data with properties that are the same for all contribution types
+            var universalContributionData = {
+                image: imageFileName,
+                campaign_id: campaignId,
+            }
+            
+            //make deep copy of contribution data to keep original unchanged
+            var contributions = $.extend(/*deep*/ true, [], unsavedChanges[editType]);
+            
+            contributions.map(function (contribution) {
+                return $.extend(contribution, universalContributionData);
+            })
+            
+            var contributionsData = JSON.stringify(contributions);
+            
+            var me = this;
+            $.post({
+                url: '../../api/post-contribution',
+                data: contributionsData,
+                contentType: 'application/json',
+            }).done(function(response) {
+                console.log("Contribution posted - ", response, contributionsData)
+                
+                // Contribution accepted by server, now we can update initial data
+                // Button states will return to disabled
+                // Cancel buttons will now reset to the current image data
+                if (editType === "depicts") {
+                    saveInitialStructuredData(getCurrentDepictStatements(), false);
+                    me.depictDataChanged();
+                }
+                if (editType === "captions") {
+                    saveInitialStructuredData(false, getCurrentCaptions());
+                    me.captionDataChanged();
+                }
+                
+            }).fail( function(error) {
+                console.log("Unable to post contributions to ISA server", error)
+            })
         }
         
         /*---------- Image utilities ----------*/
@@ -174,31 +237,60 @@ $(document).ready( function () {
         
         /*---------- Change tracking functions ----------*/
         
+        // Used to store starting data from Commons, or after changes have been saved
         function saveInitialStructuredData(depictsData, captionsData) {
-            initialData.depicts = depictsData;
-            initialData.captions = captionsData;
-            console.log("intial structured data saved", JSON.stringify(initialData))
+            if (depictsData) initialData.depicts = depictsData;
+            if (captionsData) initialData.captions = captionsData;
+        }
+        
+        // Get the current depcits data as displayed in the UI
+        function getCurrentDepictStatements () {
+            var statements = []
+            $('.depict-tag-item').each(function(index, element) {
+                var item = $(element).find('.depict-tag-qvalue').text(),
+                    label = $(element).find('.depict-tag-label-text').text(),
+                    description = $(element).attr('title'),
+                    isProminent = $(element).find('.prominent-btn').hasClass('active');
+                statements.push({
+                    item: item,
+                    label: label,
+                    description: description,
+                    isProminent: isProminent
+                });
+            })
+            return statements;
+        }
+        
+        // Get the current captions data as displayed in the UI
+        function getCurrentCaptions () {
+            var captions = [];
+            $('.caption-input').each(function(index, element) {
+                var caption = $(element).val(),
+                    language = $(element).attr('lang');
+                if (caption) {
+                    captions.push({
+                        language: language,
+                        value: caption
+                    })
+                }
+            })
+            return captions;
         }
         
         //todo: create generalised updateUnsavedChanges which work for depicts and captions
         function updateUnsavedDepictChanges () {
             // Compare current selection to initialData to see if there are any unsaved changes
             
-            var depictStatements = [];
+            var depictStatements = getCurrentDepictStatements();
             var intialDepictStatements = initialData.depicts;
             var depictChanges = [];
-            
-            $('.depict-tag-item').each(function(index, element) {
-                var item = $(element).find('.depict-tag-qvalue').text(),
-                    isProminent = $(element).find('.prominent-btn').hasClass('active');
-                depictStatements.push({item: item, isProminent: isProminent});
-            })
-            
+           
             // Compare to initial state to find actual depcits edits
             
             // First find any new items, or changes to isProminent
             for (var i=0; i < depictStatements.length; i++) {
                 var currentStatement = depictStatements[i];
+                var editContent = {item: currentStatement.item, isProminent: currentStatement.isProminent};
                 var found = false;
                 for (var j=0; j < intialDepictStatements.length; j++) {
                     // check all intial statements to see if currentStatement q number was there
@@ -210,7 +302,7 @@ $(document).ready( function () {
                             // only isProminent has changed
                             depictChanges.push({
                                 edit_action: "edit",
-                                edit_content: currentStatement,
+                                edit_content: editContent,
                             })
                         } // else, no changes to statement
                         
@@ -223,7 +315,7 @@ $(document).ready( function () {
                     // The current depicts item has not been found, it must be an unsaved change
                     depictChanges.push({
                         edit_action: "add",
-                        edit_content: currentStatement,
+                        edit_content: editContent,
                     })
                 }
             } // check next statement...
@@ -244,7 +336,7 @@ $(document).ready( function () {
                 if (!found) {
                     depictChanges.push({
                         edit_action: "remove",
-                        edit_content: initialStatement,
+                        edit_content: {item: initialStatement.item, isProminent: initialStatement.isProminent},
                     })
                 }
             } // check next initial statement...
@@ -253,23 +345,13 @@ $(document).ready( function () {
         }
         
         function updateUnsavedCaptionChanges () {
-            var captions = [];
+            var captions = getCurrentCaptions();
             var intialCaptions = initialData.captions;
             var captionChanges = [];
             
             // get current captions fromt the UI
             // each language has a separate input
             // all inputs have class "caption-input" and custom "lang" attribute
-            $('.caption-input').each(function(index, element) {
-                var caption = $(element).val(),
-                    language = $(element).attr('lang');
-                if (caption) {
-                    captions.push({
-                        language: language,
-                        value: caption
-                    })
-                }
-            })
             
             // First, find the added or edited captions
             for (var i=0; i < captions.length; i++) {
@@ -394,7 +476,7 @@ $(document).ready( function () {
                         }
                     });
                 } else {
-                    //todo: add message to new div
+                    //todo: add message to statements container
                     //console.log("this item has no depicts statements yet")
                 }
 
@@ -427,25 +509,32 @@ $(document).ready( function () {
                 .done( function (response) {
                     // now we have the labels, populate the statements area to show existing depicts items
                     // we need to extract isProminent from results of previous API call to Commons
+                    // and add the labels and descriptions found to the existing stored data
                     var intialStatementsHtml = "";
                     for (var qvalue in response.entities) {
+                        var storedItemData = getStoredItemData(qvalue);
+                        
                         var itemData = response.entities[qvalue],
                             labelLang = Object.keys(itemData.labels)[0],
                             label = itemData.labels[labelLang].value,
                             descriptionLang = Object.keys(itemData.descriptions)[0],
                             description = itemData.descriptions[descriptionLang].value,
-                            isProminent = getProminentValue(qvalue);
+                            isProminent = storedItemData.isProminent;
                             //todo: access isProminent value
                         intialStatementsHtml += getStatementHtml(qvalue, label, description, isProminent);
+                        
+                        // save label and description
+                        storedItemData.label = label;
+                        storedItemData.description = description;
                     }
                     $('.depict-tag-group').html(intialStatementsHtml);
                     
                     if (callbacks.onUiRendered) callbacks.onUiRendered(); // fires when the the actual HTML has finsihed being added to the page
                     
-                    function getProminentValue(item) {
+                    function getStoredItemData(qvalue) {
                         //uses depictItems from previous API call to Commons
                         for (var i=0; i < depictItems.length; i++) {
-                            if (depictItems[i].item === item) return depictItems[i].isProminent;
+                            if (depictItems[i].item === qvalue) return depictItems[i];
                         }
                     }
                 });
@@ -466,6 +555,10 @@ $(document).ready( function () {
             return parametersObject;
         };
         
+        function getCampaignId () {
+            return parseInt(window.location.pathname.split("/")[2]);
+        }
+        
         function getStatementHtml(item, label, description, isProminent) {
             var isProminentButtonHtml = isProminent ?
                 '<button class="btn btn-sm btn-warning prominent-btn active" title="Mark this depicted item as NOT prominent">Prominent</button>' :
@@ -473,7 +566,7 @@ $(document).ready( function () {
             return [
                 '<div class="depict-tag-item" title="' + description + '">',
                 '<div class="depict-tag-label">', 
-                '<div class="label btn-sm">' + label + ' <span class="depict-tag-qvalue">' + item + '</span></div>',
+                '<div class="label btn-sm"><span class="depict-tag-label-text">' + label + '</span> <span class="depict-tag-qvalue">' + item + '</span></div>',
                 isProminentButtonHtml,
                 '<div class="depict-tag-btn">',
                 '<button class="fas fa-trash btn-link btn" title="Remove this depicted item"></button></div>',
@@ -513,6 +606,24 @@ $(document).ready( function () {
     $('.depict-tag-group').on('click','.prominent-btn', function(ev) {
         $(this).toggleClass('active');
         editSession.depictDataChanged();
+    })
+    
+    $('.edit-publish-btn-group').on('click', 'button', function() {
+        var editType = $(this).parent().attr('edit-type');
+        
+        if ( $(this).hasClass('cancel-edits-btn') ) {
+            if (editType === "depicts") {
+                editSession.resetDepictStatements();
+            }
+            if (editType === "captions") {
+                editSession.resetCaptions();
+            }
+        }
+        
+        if ( $(this).hasClass('publish-edits-btn') ) {
+            editSession.postContribution(editType)
+        } 
+        
     })
     
 });
