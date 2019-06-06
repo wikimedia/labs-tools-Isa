@@ -540,6 +540,8 @@ small {
     width: 45px;
 }
 
+@media (min-width: 992px) {.participate-nav-footer.container {position: inherit}}
+
 /******** errors ********/
 .error-template {padding: 40px 15px;text-align: center;}
 .error-actions {margin-top:15px;margin-bottom:15px;}
