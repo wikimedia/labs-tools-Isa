@@ -98,7 +98,7 @@ $(document).ready( function () {
     ParticipationManager = function(images) {
         var imageIndex = 0,
             imageFileName = '',
-            countrySubcategory = getUrlParameters().country, // returns country or undefined
+            countrySubcategory = getUrlParameters().country || '', // returns country or undefined
             userCaptionLanguages = ['en', 'fr', 'de', 'es'], // todo: update on startup from user preferences 
             initialData = {depicts: [], captions: []},
             unsavedChanges = {depicts: [], captions: []};
@@ -179,9 +179,9 @@ $(document).ready( function () {
             var additonalContributionData = {
                 image: imageFileName,
                 campaign_id: campaignId,
-                edit_type: editType
+                edit_type: editType,
+                country: countrySubcategory
             }
-            if (countrySubcategory) additonalContributionData.country = countrySubcategory;
             
             //make deep copy of contribution data to keep original unchanged
             var contributions = $.extend(/*deep*/ true, [], unsavedChanges[editType]);
