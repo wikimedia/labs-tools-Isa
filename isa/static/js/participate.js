@@ -1,16 +1,25 @@
 $(document).ready( function () {
-
+    var campaignId = getCampaignId(),
+        wikiLovesCountry = getWikiLovesCountry(),
+        isWikiLovesCampaign = !!wikiLovesCountry; // todo: this should be read from get-campaign-categories api call 
+    
     // Retrieve campaign categories with depth from internal API
-    var campaignId = getCampaignId();
     $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
         .done(function(categories) {
+            console.log(isWikiLovesCampaign, wikiLovesCountry)
+        
+            // todo: if it's a wiki loves campaign with no country selected, set all depth = 1 (ignore category depth settings)
             // Add Category: prefix
-            categories = categories.map(function(element) {
-                return {
-                    name: "Category:" + element.name,
-                    depth: element.depth
-                }
-            });
+            categories.forEach(function(category) {
+                category.name = "Category:" + category.name;
+                })
+            
+            if (isWikiLovesCampaign && wikiLovesCountry) {
+                categories.forEach(function(category) {
+                    category.name += ' in ' + wikiLovesCountry;
+                    category.depth = 0;
+                })
+            }
             
             // Get images in categories
             CategoryMembers.getImages(categories, function(images) {
@@ -98,7 +107,6 @@ $(document).ready( function () {
     ParticipationManager = function(images) {
         var imageIndex = 0,
             imageFileName = '',
-            countrySubcategory = getUrlParameters().country || '', // returns country or undefined
             userCaptionLanguages = ['en', 'fr', 'de', 'es'], // todo: update on startup from user preferences 
             initialData = {depicts: [], captions: []},
             unsavedChanges = {depicts: [], captions: []};
@@ -180,7 +188,7 @@ $(document).ready( function () {
                 image: imageFileName,
                 campaign_id: campaignId,
                 edit_type: editType,
-                country: countrySubcategory
+                country: wikiLovesCountry
             }
             
             //make deep copy of contribution data to keep original unchanged
@@ -535,18 +543,6 @@ $(document).ready( function () {
         
         /*---------- General utilities ----------*/
         
-        function getUrlParameters () {
-            var parametersObject = {};
-            var parameters = window.location.search.substr(1);
-            if (parameters == "") return {};
-            parameters = parameters.split('&');
-            for (var i = 0; i < parameters.length; i++) {
-                var splitParameters = parameters[i].split('=');
-                parametersObject[ splitParameters[0] ] = splitParameters[1];
-            }
-            return parametersObject;
-        };
-        
         function getStatementHtml(item, label, description, isProminent) {
             var isProminentButtonHtml = isProminent ?
                 '<button class="btn btn-sm btn-warning prominent-btn active" title="Mark this depicted item as NOT prominent">Prominent</button>' :
@@ -575,7 +571,26 @@ $(document).ready( function () {
         return parseInt(window.location.pathname.split("/")[2]);
     }
     
+    function getWikiLovesCountry () {
+        var country = getUrlParameters().country;
+        return (country) ? decodeURIComponent(country) : '';
+    }
     
+    
+    function getUrlParameters () {
+        var parametersObject = {};
+        var parameters = window.location.search.substr(1);
+        if (parameters == "") return {};
+        parameters = parameters.split('&');
+        for (var i = 0; i < parameters.length; i++) {
+            var splitParameters = parameters[i].split('=');
+            parametersObject[ splitParameters[0] ] = splitParameters[1];
+        }
+        return parametersObject;
+    };
+
+
+
     /********* event handlers *********/
     $('#next-image-btn').click(function(ev) {
         editSession.nextImage();
