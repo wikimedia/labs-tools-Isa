@@ -78,8 +78,128 @@ select.selectpicker> option  {
 }
 /*********************** end layout.html css*/
 
+/* Participate Page - NEW*/
 
+/*#edit_image_info{
+  width: 70%;
+  margin-left: auto;
+  padding-top: 1px;
+  margin-top: 0px;
+}*/
+/*.carousel {
+  width: 550px;
+  max-width: inherit;
+  max-height: inherit;
+}*/
 
+.image-desc p {
+	margin: 0;
+	font-weight: 700;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.image-desc span {
+		font-weight: 400
+	}
+.image-desc {
+	font-size: 12px;
+	line-height: 1.5;
+	padding: 10px;
+}
+	
+/*make space for extra sticky footer*/	
+body {padding-bottom: 100px!important}
+	
+	
+	/*allow absolute position for publish btns*/
+.edit-box-header {
+		position:relative
+	}
+ 
+	/*place publish btn top right of edit box*/
+.edit-publish-btn-group {
+	position: absolute;
+	right: 0;
+	top: 0;
+}	
+/*adjust padding and spacing*/	
+.container.edit-box {
+	margin-top: 10px;
+	padding: 10px;
+	border:  solid 1px #a2a9b1;
+	border-radius: 5px;
+}
+	
+	
+/* make depict tag*/	
+.depict-tag-label{
+	display: flex
+}
+.depict-tag-label .label {
+	white-space: pre-wrap; 
+	color: #fff;
+    font-weight: 700;
+    justify-self: flex-start;
+    margin-right: auto;}
+
+	
+.depict-tag-item {
+	margin-top: 3px;
+	display: inline-block;
+	background-color: #4391df!important;
+    border-radius: 5px;
+    padding: 5px;
+	 
+}
+.depict-tag-item button {
+		white-space: initial;
+	}	
+
+.depict-tag-label btn {
+	padding: 4px 1px
+}
+
+.depict-tag-btn {
+	padding: 0;
+    display: flex;
+    background-color: white;
+    border-radius: 32px;
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;;
+	min-width: 25px;
+    justify-content: center;
+    align-self: center;
+}
+
+.depict-tag-btn button {
+	color: red;
+    padding: 0;
+}
+/* end make depict tag*/
+	
+	
+/*img holder*/
+#participate_image_item {height: 240px}
+#participate_image_item img {height: 100%; width: 100%; object-fit:contain}
+.carousel{width: auto}
+#campaign_back_button {float: inherit; width: auto}	
+	
+	
+	
+.participate-nav-footer.container {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 40px;
+	padding: 0
+}
+	.participate-nav-footer .btn-group {
+		height: 50px;
+	}
+
+/* End particiapte CSS*/
 
 
 .main-page {
@@ -310,12 +430,7 @@ small {
   max-height: inherit;
 }
 
-#edit_image_info{
-  width: 70%;
-  margin-left: auto;
-  padding-top: 1px;
-  margin-top: 0px;
-}
+
 
 .chip{
   background-color: #007bff;
@@ -343,11 +458,7 @@ small {
   margin-top: 1px;
 }
 
-.carousel {
-  width: 550px;
-  max-width: inherit;
-  max-height: inherit;
-}
+
 
 .exampleSearch {
   width: 250px;

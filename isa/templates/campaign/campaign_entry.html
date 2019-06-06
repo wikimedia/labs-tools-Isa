@@ -1,12 +1,14 @@
 {% extends "main/layout.html" %}
 {% block content%}
-<div class="container form-group">
-    <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="fas fa-caret-left btn btn-light pt-0 mt-1 ml-4" id="campaign_back_button">  Campaign Home</a>
+
+<div class="container px-0">
+	<a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: Home Page</a>
+ <!--   <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="fas fa-caret-left btn btn-light pt-0 mt-1 ml-4" id="campaign_back_button">  Campaign Home</a>-->
 </div>
 
 
-<div class="container">
-    <div class="container mr-auto d-flex justify-content-center">
+
+<div class="container px-0">
         <div id="campaignPartcipateImageCarousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 {% for image in all_campaign_desired_images %}
@@ -33,138 +35,106 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
+    
     <!-- <div class="text-center pt-4 mr-auto">
         <img id="edited_image" src="/static/default.jpg" alt="Image Undergoing Edit">
     </div> -->
-    <div id="edit_image_info" class="mr-auto pb-2 navbar-light bg-light text-center">
-        <div class="text-left pl-2">
-            <small><strong>{{ _('File') }}:</strong>&nbsp; </small> <small id="image_name"></small> <br>
-            <small><strong>{{ _('Description') }}:</strong>&nbsp; <small id="image_description"></small></small> <br>
-            <small><strong>{{ _('Categories') }}:</strong>&nbsp; <small id="image_categories"></small></small> <br>
-            <small><strong>{{ _('Author') }}: </strong><small id="image_author"></small>&nbsp;</small>
+    <div id="edit_image_info" class="bg-light">
+        <div class="image-desc">
+			<p>{{ _('File') }}&nbsp;<span id="image_name"></span></p>
+			<p>{{ _('Description') }}:&nbsp;<span id="image_description"></span></p>
+			<p>{{ _('Categories') }}&nbsp;<span id="image_categories"></span></p>
+			<p>{{ _('Author') }}::&nbsp;<span id="image_author"></span></p>
+
         </div>
         <div class="text-center">
-            <a href="#"><small class="fas fa-caret-up"> {{ _('show all metadata from commons') }}</small></a>
+            <button class="btn btn-sm btn-link"><i class="fas fa-caret-down"></i>&nbsp;{{ _('show all metadata from commons') }}</button>
         </div>
     </div>
-
-    {% if campaign.depicts_metadata %}
-        <div id="edit_image_info" class="mr-auto pb-2 mt-2 navbar-light bg-light text-center">
-            <div class="text-left pl-4 pb-2">
-                <h6>{{ _('Depicts') }}</h6>
-            </div>
-            <div class="text-center pl-4 pb-4">
-                <div class="text-center pl-4">
-                    <div class="text-center">
-                        <div id="depicts_columns" class="row pt-2">
-                        </div>
-                        <div id="depicts_error_message" class="col-sm-12 mr-auto"></div>
-                        <div class="row pt-4">
-                            <div class="col-sm-4 ml-auto">
-                                <div id="add_depict_btn" class="btn btn-success lighten-4">
-                                    {{ _('Add new') }} &nbsp;
-                                    <i width="0.5%" class="fas fa-search"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="depicts_search_form_section">
-            <div id="" class=" d-flex justify-content-center">
-                <form  class="" method="POST" action="">
-                    {{ depicts_form.csrf_token }}
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-1 mr-auto ml-0"> 
-                            {{ depicts_form.depicts( id="depicts_select_options", class="form-control", multiple="multiple") }}
-                        </div>
-                        <div class = "col-md-2 col-md-offset-2 pl-0">
-                            {{ depicts_form.lang( id="depicts_lang_select", class=" btn btn-secondary lighten-2" ) }}
-                        </div>
-                        <div id="depict_save_btn" class="col-md-2 mr-auto mt-1">
-                            {{ depicts_form.submit( class="btn btn-sm btn-warning" ) }}
-                        </div>
-                    </div>
-                    <div class="row">
-                        {{ depicts_form.sub_categories( class="country-subcategory-input form-control form-control-sm" ) }}
-                    </div>
-                </form>
-            </div>
-        </div>  
-    {% endif %}
-
-    {% if campaign.captions_metadata %}
-        <div id="edit_image_info" class="mr-auto pb-2 mt-2 navbar-light bg-light text-center">
-            <div class="text-left pl-4 pt-2">
-                <h6>{{ _('Caption') }}</h6>
-            </div>
-            <div class="text-center d-flex justify-content-center">
-                <form  class="" method="POST" action="">
-                    {{ captions_form.csrf_token }}
-                    <small class="pb-2"> {{captions_form.image_label(id="captions_image_label")}}</small>
-                    <div class="form-group">
-                        <!-- We test for errors in the form data here -->
-                        {% if captions_form.caption.errors %}
-                            {{ captions_form.caption( class="form-control form-control-sm is-invalid" ) }}
-                            <div class="invalid-feedback">
-                                {% for error in captions_form.caption.errors %}
-                                    <span> {{ error }}</span>
-                                {% endfor %}
-                        </div>
-                        {% else %}
-                            {{ captions_form.caption( class="form-control captions_text form-control-sm" ) }}
-                        {% endif %}
-                    </div>
-                    <div class="row">
-                        {{ captions_form.sub_categories( class="country-subcategory-input form-control form-control-sm" ) }}
-                    </div>
-                    <div class="text-center">
-                        <small class="choose_caption_lang_text"><strong>{{ _('Change Caption Language') }}:</strong> {{ _('CHOOSE AVAILABLE LANGUAGES') }}</small>
-                    </div>
-                    <div class="text-center pl-4">
-                        <div class="text-center">
-                            <div class="row pt-2">
-                                <div class="col-sm-3 mr-auto">
-                                    <h6><span class="badge badge-primary">{{ _('English') }}</span></h6>
-                                </div>
-                                <div class="col-sm-3 mr-auto">
-                                    <h6><span class="badge badge-warning">{{ _('French') }}</span></h6>
-                                </div>
-                                <div class="col-sm-3 mr-auto">
-                                    <h6><span class="badge badge-warning">{{ _('German') }}</span></h6>
-                                </div>
-                                <div class="col-sm-3 mr-auto">
-                                    <h6><span class="badge badge-warning">{{ _('Spanish') }}</span></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mr-auto pb-1 pt-1 mt-4 navbar-light bg-dark text-center">
-                        <div class="text-center">
-                            <div class="row pt-1">
-                                <div class="col-sm-3 mr-auto">
-                                    <h6><span class="btn btn-lg btn-primary fas fa-caret-left"></span></h6>
-                                </div>
-                                <div class="col-sm-3 mr-auto">
-                                    <h6><span class="btn btn-secondary">{{ _('Cancel') }}</span></h6>
-                                </div>
-                                <div class="col-sm-3 mr-auto">
-                                    <h6><span>{{ captions_form.submit( class="btn btn-secondary", value=_('Save') ) }}</span></h6>
-                                </div>
-                                <div class="col-sm-3 mr-auto">
-                                    <h6><span class="btn btn-lg btn-primary fas fa-caret-right"></span></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    {% endif %}
 </div>
+
+
+
+<div class="container edit-box">
+<div class="edit-box-header">
+	<h4>{{ _('Depicts') }}</h4>
+	<div class="edit-publish-btn-group">
+	<button class="btn btn-sm btn-link">{{ _('Cancel') }}</button>
+	<button type="submit" class="btn btn-sm btn-primary">{{ _('Save') }}</button>
+	</div>
+	<p>Search for things you see in the image</p>	
+  </div>
+<div class="depicts-search">
+ <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+  </div>
+  <input type="search" class="form-control" placeholder="search for depicts statements" aria-label="search" aria-describedby="basic-addon1">
+</div>
+  </div>
+	
+ <div class="depict-tag-group">
+
+<!-- Start depict tag-->
+<div class="depict-tag-item">
+<div class="depict-tag-label">
+<div class="label btn-sm">Depict tag</div>
+<button class="btn btn-sm btn-warning">Prominent</button>	
+<div class="depict-tag-btn">
+<button class="fas fa-trash btn-link btn"></button></div>
+</div></div>
+</div>
+<!-- end depict tag-->
+	
+	
+</div>
+ 
+
+
+<div class="container edit-box">
+<div class="edit-box-header">
+	<h4>{{ _('Caption') }}</h4>
+	<div class="edit-publish-btn-group">
+	<button class="btn btn-sm btn-link">{{ _('Cancel') }}</button>
+	<button type="submit" class="btn btn-sm btn-primary">{{ _('Save') }}</button>
+	</div>
+	<p>Add a captions for the image</p>	
+  </div>
+<div class="depicts-search">
+ <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon2"><i class="fas fa-edit"></i></span>
+  </div>
+  <input type="input" class="form-control" placeholder="search for depicts statements" aria-label="search" aria-describedby="basic-addon2">
+</div>
+  </div>
+
+<div class="caption-lang-btn-group">
+	<p>{{ _('Change Caption Language') }}</p>
+<div class="btn-group" role="group" aria-label="">
+	<button class="btn btn-small btn-outline-secondary">{{ _('English') }}</button>
+	<button class="btn btn-small btn-outline-secondary">{{ _('French') }}</button>
+	<button class="btn btn-small btn-outline-secondary">{{ _('German') }}</button>
+	<button class="btn btn-small btn-outline-secondary">{{ _('Spanish') }}</button>
+	  </div>
+		<button class="btn btn-sm btn-link">{{ _('CHOOSE AVAILABLE LANGUAGES') }}</button>
+	</div>
+</div>
+
+ 
+<div class="participate-nav-footer container">
+		<div class="btn-group d-flex" role="group" aria-label="">
+
+	<button class="btn btn-primary w-100" disabled><i class="fas fa-chevron-left"></i>PREV IMAGE</button>
+	<button class="btn btn-primary w-100">NEXT IMAGE<i class="fas fa-chevron-right"></i></button>
+</div> 
+</div>
+
+
+
 {% endblock content%}
 {% block scripts %}
-    <script src="{{url_for('static', filename='js/participate.js')}}"></script>
+
+
+<script src="{{url_for('static', filename='js/participate.js')}}"></script>
 {% endblock scripts%}
