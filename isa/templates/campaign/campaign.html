@@ -1,157 +1,145 @@
 {% extends "main/layout.html" %}
 {% block content%}
-<div id="campaign_nav" class=" text-center pb-2  navbar-light bg-light">
-    <div class="container">
-        <div class="row">
-            {% if is_wiki_loves_campaign %}
-                <div class="ml-auto">
-                    <small> <strong> {{_('View images from')}} </strong> </small>
-                    <select id="campaign_countries" class="fas fa-caret-down custom-select btn-new" data-style="btn-new">
-                        <option class="select-option" value= "all" select="selected">{{_('All countries')}}</option>
-                        <!-- The other obtions will be povided here on front-end -->
-                    </select>
-                </div>
-            {% endif %}
-            <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="ml-auto mr-auto btn btn-primary" >Get Started</a>
-        </div>
+<div class="container page-header text-center">
+    <h1>{{ campaign.campaign_name }}</h1>
+    <hr>
+    <p>{{campaign.short_description}}</p>
+</div>
+
+<div class="container text-center">
+    <div class="campaign-panel primary-cta">
+    {% if is_wiki_loves_campaign %}
+        <div class="campaign-country-select">
+            <p>{{_('View images from')}}</p>
+            <select id="campaign_countries" class="fas fa-caret-down custom-select btn-new" data-style="btn-new">
+                <option class="select-option" value= "all" select="selected">{{_('All countries')}}</option>
+                <!-- The other obtions will be povided here on front-end -->
+            </select>
+        </div>           
+    {% endif %}
+        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary" >Get Started</a>
     </div>
 </div>
-<div class="container">
-    <header class="main-page pb-0">
-        <div class="pt-0 d-flex justify-content-center">
-            <h3>
-                {{ campaign.campaign_name }}
-            </h3>
-        </div>
-    </header>
-    <div class="text-center pt-0">
-        <small>
-            <strong>
-                {{campaign.short_description}}
-            </strong>
-        </small>
-    </div>
-    <div class="text-center pb-3 pt-4">
-        <h6><strong>{{ _('START DATE')}}: </strong> {{campaign.start_date}}</h6>
-        <h6><strong>{{ _('END DATE') }}: </strong> {{campaign.end_date}}</h6>
-    </div>
 
-    <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
-        <small class="campaign_progress_text"><strong>{{ _('Campaign Progress') }}</strong></small>
-        <br>
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="stat-display">
-                    <div class="stat-display__stat">
-                        <div class="stat-display__value">{{ campaign_contributions }} </div>
-                        <small class="">{{ _('Contributions') }}</small>
-                    </div>
-                </div>
-                <div class="stat-display">
-                        <div class="stat-display__stat">
-                            <div class="stat-display__value"> {{ campaign_editors }} </div>
-                            <small class="next_small">{{ _('Editors') }}</small>
-                        </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 ml-auto">
-                    <div class="pb-3 ml-auto">{{ _('Top Contributors') }}</div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">{{ _('Contributor') }}</th>
-                            <th scope="col">{{ _('Images Improved') }}</th>
-                            </tr>
-                        </thead>
-                        {% if all_contributors_data %}
-                            <tbody>
-                                {% for contributor_data in all_contributors_data %}
-                                    <tr>
-                                        <th scope="row">{{contributor_data['rank']}}</th>
-                                        <td>{{contributor_data['username']}}</td>
-                                        <td>{{contributor_data['images_improved']}}</td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
-                        {% else %}
-                            <tbody>
-                                <tr>
-                                    <th scope="row">{{ _('Sorry') }}!</th>
-                                    <td></td>
-                                    <td class="text-center">{{ _('No partcipants has contributed to this campaign') }}</td>
-                                </tr>
-                            </tbody>
-                        {% endif %}
-                    </table>
-                </div>
-                <div class="col-sm-6 mr-auto">
-                    <div class="pb-3 ml-auto">{{ _('Most improved Countries') }}</div>
-                    <table class="table">
-                        <thead>
-                            <tr>
+<div class="container campaign-stats text-center">
+    <div class="campaign-panel">
+        <div class="campaign-stats-title">
+            <h4>{{ _('Campaign Progress') }}</h4>
+        </div>
+    <div class="main-stats-label-group mx-auto">
+        <div class="label btn btn-warning">{{ _('Editors') }}<br>{{ campaign_editors }}</div>
+        <div class="label btn btn-warning">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
+    </div>
+    <div class="stats-table mx-auto">
+        <div class="top-user-table mr-4">				
+            <table class="table table-sm table-light text-center">
+                <h6>{{ _('Top Contributors') }}</h6>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">{{ _('Contributor') }}</th>
+                        <th scope="col">{{ _('Images Improved') }}</th>
+                    </tr>
+                </thead>
+                {% if all_contributors_data %}
+                <tbody>
+                {% for contributor_data in all_contributors_data %}
+                    <tr>
+                        <th scope="row">{{contributor_data['rank']}}</th>
+                        <td>{{contributor_data['username']}}</td>
+                        <td>{{contributor_data['images_improved']}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                {% else %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ _('Sorry') }}!</th>
+                        <td></td>
+                        <td class="text-center">{{ _('No partcipants has contributed to this campaign') }}</td>
+                    </tr>
+                </tbody>
+                {% endif %}
+            </table>
+        </div>
+        <div class="top-country-table">
+            <table class="table table-sm table-light text-center">
+                <h6>{{ _('Most improved Countries') }}</h6>
+                    <thead>
+                        <tr>
                             <th scope="col">#</th>
                             <th scope="col">{{ _('Country') }}</th>
                             <th scope="col">{{ _('Images Improved') }}</th>
-                            </tr>
-                        </thead>
-                        {% if all_campaign_country_statistics_data %}
-                            <tbody>
-                                {% for country_statistics_data in all_campaign_country_statistics_data %}
-                                    <tr>
-                                        <th scope="row">{{country_statistics_data['rank']}}</th>
-                                        <td>{{country_statistics_data['country']}}</td>
-                                        <td>{{country_statistics_data['images_improved']}}</td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
-                        {% else %}
-                            <tbody>
+                        </tr>
+                    </thead>
+                    {% if all_campaign_country_statistics_data %}
+                        <tbody>
+                            {% for country_statistics_data in all_campaign_country_statistics_data %}
                                 <tr>
-                                    <th scope="row">{{ _('Sorry') }}!</th>
-                                    <td></td>
-                                    <td class="text-center">{{ _('There is no data available yet for this campaign') }}</td>
+                                    <th scope="row">{{country_statistics_data['rank']}}</th>
+                                    <td>{{country_statistics_data['country']}}</td>
+                                    <td>{{country_statistics_data['images_improved']}}</td>
                                 </tr>
-                            </tbody>
-                        {% endif %}
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="pt-3 mr-auto">
-            <a id="" href="#" class="btn btn-primary" >{{ _('Download Complete Stats') }}</a>
+                            {% endfor %}
+                        </tbody>
+                    {% else %}
+                        <tbody>
+                            <tr>
+                                <th scope="row">{{ _('Sorry') }}!</th>
+                                <td></td>
+                                <td class="text-center">{{ _('There is no data available yet for this campaign') }}</td>
+                            </tr>
+                        </tbody>
+                    {% endif %}
+            </table>
         </div>
     </div>
-    <br>
-    {% if username != 'Guest' and username != False and username != None %}
-        <div id="campaign_stats_table" class="pb-3 navbar-light bg-light text-center">
-            <br>
-            <div class="container">
-                <div class="row">
-                    <div class="col ml-auto">
-                        <div class="pb-3 ml-auto">{{ _('My Contributions') }}</div>
-                        <table id="my_contributions_table" class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">{{ _('Rank') }}</th>
-                                    <th scope="col">{{ _('Images Improved') }}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">{{current_user_rank}}</th>
-                                    <td>{{current_user_images_improved}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+    <button class="btn btn-primary btn-sm more-stats-btn mt-2">{{ _('Download Complete Stats') }}</button>
+    </div>
+</div>
+
+<div class="container user-stats text-center">
+    <div class="campaign-panel">
+        <div class="campaign-stats-title">
+            <h4>{{ _('My Contributions') }}</h4>
         </div>
+        {% if username != 'Guest' and username != False and username != None %}
+        <div  class="stats-table mx-auto">
+            <table class="table table-sm table-light text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">{{ _('Rank') }}</th>
+                        <th scope="col">{{ _('Images Improved') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  class="table-warning">
+                        <th scope="row">{{current_user_rank}}</th>
+                        <td>{{current_user_images_improved}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<hr>
+
+<div class="container campaign-info justify-content-center text-center">
+    <h3>More About This Campaign</h3>
+    <div class="campaign-dates">
+        <h6><strong>{{ _('START DATE')}}: </strong> {{campaign.start_date}}</h6>
+        <h6><strong>{{ _('END DATE') }}: </strong> {{campaign.end_date}}</h6>	
+    </div>
+    <div class="about-campaign">
+        <p>{{campaign.long_description}}</p>
+    </div>
+    {% if campaign_manager == username %}
+    <a id="" href="{{url_for('campaigns.updateCampaign', id=campaign.id)}}" class="btn btn-danger" >Edit Campaign</a>
     {% endif %}
 </div>
-</div>
+
 {% endblock content%}
 {% block scripts %}
     <script src="{{url_for('static', filename='js/campaign.js')}}"></script>

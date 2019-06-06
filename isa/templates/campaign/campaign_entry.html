@@ -1,6 +1,12 @@
 {% extends "main/layout.html" %}
 {% block content%}
-
+<style> 
+body {padding-bottom: 50px}
+    
+@media (min-width: 992px) {
+body {padding-bottom:0}
+}
+</style>
 <div class="container px-0">
 	<a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: Home Page</a>
 </div>

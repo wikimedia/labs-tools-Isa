@@ -1,34 +1,151 @@
-
-/*************CSS FOR LAYOUT.HTML************/
-
-
-
-/*******REMOVED CLASSES AND REVERTED TO NATIVE BOOTSTRAP STYLES*/
-
-/* Add a black background color to the top navigation */
-/*.topnav {
-    background-color: #332;
-    overflow: hidden;
-}*/
-
-/* Style the links inside the navigation bar */
-/*  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-bottom: 3px solid transparent;
-}*/
-
-
-
-/* Add padding to bottom of page for footer*/
-body {
+/*body {
 	padding-bottom: 80px
+}*/
+
+/****************** NEW CSS FOR HOME PAGE*/
+.page-title h1 {
+    font-family: LinuxBiolinumOBold;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    }
+    .page-title hr {    
+        border-top: 1px solid rgba(0,0,0,.5);
+        margin-top: -10px; 
+        margin-bottom: 5px;
+    }
+    .about-section p {text-align: justify}
+    
+    
+    
+    @media (min-width: 992px) {
+        .page-title hr {width: 50%}
+        .about-section p {text-align: center}
+    }
+
+
+/****************** END NEW CSS FOR HOME PAGE*/
+
+
+
+/******************NEW CSS FOR CAMPIAGN HOME PAGE*/
+
+/*page header*/
+.page-header h1 {
+	font-family: LinuxBiolinumOBold;
+    margin: 0;
+ 	text-transform: uppercase;
 }
+
+.page-header > hr {
+	margin: 0 auto;
+	width:100%
+}
+
+.page-header p {
+	font-weight: 500;
+}
+
+/* re-usable panel*/
+.campaign-panel {
+	background-color: #e9ecef;
+	padding: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* Primary CTA and Country select*/
+.campaign-panel.primary-cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.campaign-country-select {
+	display: flex;
+	align-items: baseline;
+	background-color: #fff;
+	margin-bottom: 10px;
+	justify-content: space-between;
+} 
+ 
+.campaign-country-select p {
+	margin: 0;
+	padding: 0 9px;
+    display: inline-block;
+}
+
+#campaign_countries {	/* display: inline-block; */
+	border-radius: 0;
+	border: none;
+	border-left: 1px solid #ced4da;
+}
+
+
+/*Campaign Stats*/
+.main-stats-label-group {
+	display: flex;
+	justify-content: space-around;
+	/* width: 50%; */;
+}
+.main-stats-label-group .label {
+	min-width: 150px;
+}
+
+.campaign-stats .stats-table {
+	display: none;
+	flex-direction: row;
+	margin-top: 50px;
+	justify-content: space-around;
+}
+
+.top-user-table {
+	width: 100%;
+}
+
+.top-country-table {
+	width: 100%;
+}
+more-stats-btn {
+	margin-top: 20px;
+}
+
+/* User Stats*/
+.user-stats .stats-table th {
+    width: 50%
+}
+
+
+@media (min-width: 992px) {
+/*make the user stats table and main stats labels smaller and centered on desktop*/
+    .user-stats .stats-table {width: 50%}
+    .main-stats-label-group {width:50%}
+
+    /* Show the campaign stats tables on desktop*/  
+    .campaign-stats .stats-table {
+        display: flex;
+    }
+
+/*adjust page header for desktop*/
+    .page-header {
+        padding-top: 30px;
+    }	
+
+    .page-header h1 {
+        font-size: 3.5rem;
+    }	
+    .page-header hr {
+        margin: 0 auto;
+        width:50%
+    }
+}
+/*********************END NEW CAMPAIGN HOME PAGE CSS*/
+
+
+
+
+/*********************NEW LAYOUT.HTML CSS*/
+
 
 /* Custom hover and active states for nav bar buttons*/
 .nav-link:hover {
@@ -61,14 +178,15 @@ select.selectpicker> option  {
 
 /*create sticky footer*/
 .footer{
-	position: fixed;
+/*	position: fixed;*/
 	bottom:0;
     width: 100%;
-    height: 40px;
+/*    height: 40px;*/
     color:#6a6a6a;
 	font-size: 11px;
 	text-align: center;
-	padding: 5px 0
+	padding: 5px 0;
+    margin-top: 50px;
 }
 
 /*make subtle footer links*/
@@ -76,21 +194,12 @@ select.selectpicker> option  {
 	color: #676eb4;
 	text-decoration: underline
 }
-/*********************** end layout.html css*/
+/********************END NEW CSS FOR LAYOUT.HTML */
 
-/* Participate Page - NEW*/
 
-/*#edit_image_info{
-  width: 70%;
-  margin-left: auto;
-  padding-top: 1px;
-  margin-top: 0px;
-}*/
-/*.carousel {
-  width: 550px;
-  max-width: inherit;
-  max-height: inherit;
-}*/
+
+/*******************NEW CSS FOR PARTICIPATE PAGE */
+#campaign_back_button {float: inherit; width: auto}	
 
 /*given height allowed for image holder*/	
 .img-holder   {
@@ -120,16 +229,15 @@ select.selectpicker> option  {
 	padding: 10px;
 }
 	
-/*make space for extra sticky footer*/	
-body {padding-bottom: 100px!important}
+
 	
 	
-	/*allow absolute position for publish btns*/
+/*allow absolute position for publish btns*/
 .edit-box-header {
 		position:relative
 	}
  
-	/*place publish btn top right of edit box*/
+/*place publish btn top right of edit box*/
 .edit-publish-btn-group {
 	position: absolute;
 	right: 0;
@@ -143,11 +251,11 @@ body {padding-bottom: 100px!important}
 	border-radius: 5px;
 }
 	
-	
 /* make depict tag*/	
 .depict-tag-label{
 	display: flex
 }
+
 .depict-tag-label .label {
 	white-space: pre-wrap; 
 	color: #fff;
@@ -155,7 +263,6 @@ body {padding-bottom: 100px!important}
     justify-self: flex-start;
     margin-right: auto;}
 
-	
 .depict-tag-item {
 	margin-top: 3px;
     margin-right: 10px;
@@ -191,27 +298,18 @@ body {padding-bottom: 100px!important}
     padding: 0;
 }
 /* end make depict tag*/
-	
-	
-/*img holder*/
-#participate_image_item {height: 240px}
-#participate_image_item img {height: 100%; width: 100%; object-fit:contain}
-.carousel{width: auto}
-#campaign_back_button {float: inherit; width: auto}	
-	
-	
-	
+
 .participate-nav-footer.container {
 	position: fixed;
 	bottom: 0;
-	margin-bottom: 40px;
 	padding: 0
 }
-	.participate-nav-footer .btn-group {
-		height: 50px;
-	}
+.participate-nav-footer .btn-group {
+	height: 50px;
+}
+@media (min-width: 992px) {.participate-nav-footer.container {position: inherit}}
 
-/* End particiapte CSS*/
+/***********************END NEW CSS FOR PARTICIPATE PAGE*/
 
 
 .main-page {
@@ -240,7 +338,7 @@ body {padding-bottom: 100px!important}
 }
 
 
-.table {
+/*.table {
 	font-family: verdana,arial,sans-serif;
 	font-size:11px;
   width: 95%;
@@ -253,7 +351,7 @@ body {padding-bottom: 100px!important}
 .table td {
 	padding: 2px;
 	background-color: #ffffff;
-}
+}*/
 
 .last_column{
   float: right;
@@ -405,11 +503,11 @@ small {
   padding-top: 20px;
 }
 
-#get_started_btn{
+/*#get_started_btn{
   height: 30px;
   padding-top: 0px;
 }
-
+*/
 
 
 
@@ -429,11 +527,11 @@ small {
   padding-bottom: 5px;
 }
 
-#get_started_btn {
+/*#get_started_btn {
   margin-right: 0px;
   margin-top: 4px;
   margin-left: 215px;
-}
+}*/
 
 #edited_image{
   width: 400px;
@@ -540,7 +638,7 @@ small {
     width: 45px;
 }
 
-@media (min-width: 992px) {.participate-nav-footer.container {position: inherit}}
+
 
 /******** errors ********/
 .error-template {padding: 40px 15px;text-align: center;}
