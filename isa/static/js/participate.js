@@ -1,42 +1,33 @@
 $(document).ready( function () {
 
-    // Retrieve the list of images from the Commons API
-    // TODO: HARD CODED temporary category query - will be replaced with:
-    // - getCapaignCategories(doneCallback, thenCallback)
-    // - .done getSubcategories(categoriesArray) - asynch gets unique list of all subcategories for each campaign category (to specified depth). Includes the root categories as well
-    // - .then getImagesFromCategories(allCatsAndSubcats, allCompleteCallback) - async request images for all subcategories and 
-    // Note: both categorymember API calls will use generalised API call function, with cmtype=subcat / cmtype=file
-    
-    var apiOptions = {
-        action: 'query',
-        list: 'categorymembers',
-        cmtitle: 'Category:Images from Wiki Loves Africa 2019',
-        cmlimit: 'max',
-        cmtype: 'file',
-        format: 'json',
-        origin: '*'
-    };
-    
-    $.ajax({
-        type: 'GET',
-        url: 'https://commons.wikimedia.org/w/api.php',
-        data: apiOptions
-    }).done(function(response) {
-        var results = response.query.categorymembers;
-        var images = results.map(function(result) {
-            var filename = result.title;
-            return result.title;
-        }).filter(function(filename) {
-            // only include filenames with supported extensions
-            var fileExtension = filename.split('.').pop().toLowerCase();
-            var allowedExtensions = ["jpg", "jpeg", "png", "svg"];
-            return allowedExtensions.includes(fileExtension);
+    // Retrieve campaign categories with depth from internal API
+    var campaignId = getCampaignId();
+    $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
+        .done(function(categories) {
+            // Add Category: prefix
+            categories = categories.map(function(element) {
+                return {
+                    name: "Category:" + element.name,
+                    depth: element.depth
+                }
+            });
+            
+            // Get images in categories
+            CategoryMembers.getImages(categories, function(images) {
+                // Now we have all images from processing each category with depth
+                // Start a new editSession using the Participation Manager
+                console.log("Images retrieved!", images)
+                window.editSession = new ParticipationManager(images);
+                
+                // Trigger image changed event to populate the page
+                editSession.imageChanged();
+            })
         })
-        
-        // launch new participationManager using list of images in response from api
-        window.editSession = new ParticipationManager(images);
-        editSession.imageChanged();
-    })
+        .fail(function(err) {
+            console.log("error retrieving campaign categories", err)
+        })
+
+    
     
     // Initialise the depicts search box
     // Results populated via api call
@@ -107,7 +98,6 @@ $(document).ready( function () {
     ParticipationManager = function(images) {
         var imageIndex = 0,
             imageFileName = '',
-            campaignId = getCampaignId(),
             countrySubcategory = getUrlParameters().country, // returns country or undefined
             userCaptionLanguages = ['en', 'fr', 'de', 'es'], // todo: update on startup from user preferences 
             initialData = {depicts: [], captions: []},
@@ -186,16 +176,18 @@ $(document).ready( function () {
         this.postContribution = function(editType) {
             
             // now extend the unsavedChanged data with properties that are the same for all contribution types
-            var universalContributionData = {
+            var additonalContributionData = {
                 image: imageFileName,
                 campaign_id: campaignId,
+                edit_type: editType
             }
+            if (countrySubcategory) additonalContributionData.country = countrySubcategory;
             
             //make deep copy of contribution data to keep original unchanged
             var contributions = $.extend(/*deep*/ true, [], unsavedChanges[editType]);
             
             contributions.map(function (contribution) {
-                return $.extend(contribution, universalContributionData);
+                return $.extend(contribution, additonalContributionData);
             })
             
             var contributionsData = JSON.stringify(contributions);
@@ -555,10 +547,6 @@ $(document).ready( function () {
             return parametersObject;
         };
         
-        function getCampaignId () {
-            return parseInt(window.location.pathname.split("/")[2]);
-        }
-        
         function getStatementHtml(item, label, description, isProminent) {
             var isProminentButtonHtml = isProminent ?
                 '<button class="btn btn-sm btn-warning prominent-btn active" title="Mark this depicted item as NOT prominent">Prominent</button>' :
@@ -581,6 +569,12 @@ $(document).ready( function () {
             $publishBtns.prop('disabled', areButtonsDisabled);
         }
     }
+    
+    
+    function getCampaignId () {
+        return parseInt(window.location.pathname.split("/")[2]);
+    }
+    
     
     /********* event handlers *********/
     $('#next-image-btn').click(function(ev) {
