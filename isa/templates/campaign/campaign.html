@@ -96,13 +96,25 @@
                             <th scope="col">{{ _('Images Improved') }}</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>Cameroon</td>
-                            <td>500</td>
-                            </tr>
-                        </tbody>
+                        {% if all_campaign_country_statistics_data %}
+                            <tbody>
+                                {% for country_statistics_data in all_campaign_country_statistics_data %}
+                                    <tr>
+                                        <th scope="row">{{country_statistics_data['rank']}}</th>
+                                        <td>{{country_statistics_data['country']}}</td>
+                                        <td>{{country_statistics_data['images_improved']}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        {% else %}
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{{ _('Sorry') }}!</th>
+                                    <td></td>
+                                    <td class="text-center">{{ _('There is no data available yet for this campaign') }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
                     </table>
                 </div>
             </div>

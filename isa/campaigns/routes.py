@@ -14,7 +14,7 @@ from isa.models import Campaign, Contribution, User
 from isa.campaigns.utils import (get_actual_image_file_names, get_all_campaign_images, constructEditContent,
                                  get_campaign_category_list, get_country_from_code, compute_campaign_status,
                                  buildCategoryObject)
-from isa.main.utils import testDbCommitSuccess
+from isa.main.utils import testDbCommitSuccess, getCampaignCountryData
 from isa.users.utils import (get_user_language_preferences,
                              getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
 
@@ -84,6 +84,10 @@ def getCampaignById(id):
     # We add rank to all contributor's data
     for user_data in all_contributors_data:
         user_data['rank'] = getUserRanking(all_contributors_data, user_data['username'])
+
+    # We get all the campaign coountry sorted data
+    all_campaign_country_statistics_data = getCampaignCountryData(id)
+
     return render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                            campaign=campaign,
                            campaign_manager=campaign_manager.username,
@@ -95,6 +99,7 @@ def getCampaignById(id):
                            is_wiki_loves_campaign=campaign.campaign_type,
                            all_contributors_data=all_contributors_data,
                            current_user_rank=current_user_rank,
+                           all_campaign_country_statistics_data=all_campaign_country_statistics_data,
                            current_user_images_improved=current_user_images_improved)
 
 
