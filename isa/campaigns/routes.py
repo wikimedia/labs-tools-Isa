@@ -322,6 +322,7 @@ def getCampaignCategories():
 def postContribution():
     contrib_data = json.loads(request.data)
     username = session.get('username', None)
+
     campaign_id = contrib_data[0]['campaign_id']
     
     if not username:
@@ -331,22 +332,23 @@ def postContribution():
         return redirect(url_for('campaigns.contributeToCampaign', id=campaign_id))
     else:
         current_user_id = User.query.filter_by(username=username).first().id
-        edit_content = str(contrib_data[0]['edit_content'])
-        file = contrib_data[0]['image']
-        edit_action = contrib_data[0]['edit_action']
-        edit_type = contrib_data[0]['edit_type']
-        country = contrib_data[0]['country']
-        conribution = Contribution(user_id=current_user_id,
-                                   campaign_id=campaign_id,
-                                   file=file,
-                                   edit_acton=edit_action,
-                                   edit_type=edit_type,
-                                   country=country,
-                                   edit_content=edit_content)
-        db.session.add(conribution)
-        if testDbCommitSuccess():
-            return("Failure")
-        else:
-            # flash(gettext('Thanks for your contribution'), 'success')
-            return("Success!")
+        for data in contrib_data:
+            edit_content = str(data['edit_content'])
+            file = data['image']
+            edit_action = data['edit_action']
+            edit_type = data['edit_type']
+            country = data['country']
+            conribution = Contribution(user_id=current_user_id,
+                                       campaign_id=campaign_id,
+                                       file=file,
+                                       edit_acton=edit_action,
+                                       edit_type=edit_type,
+                                       country=country,
+                                       edit_content=edit_content)
+            db.session.add(conribution)
+            if testDbCommitSuccess():
+                return("Failure")
+            else:
+                # flash(gettext('Thanks for your contribution'), 'success')
+                return("Success!")
     return("Failure")
