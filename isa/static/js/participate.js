@@ -572,7 +572,8 @@ $(document).ready( function () {
     
     
     function getCampaignId () {
-        return parseInt(window.location.pathname.split("/")[2]);
+        var parts = window.location.pathname.split("/");
+        return parseInt(parts[parts.length - 2]);
     }
     
     

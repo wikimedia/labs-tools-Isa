@@ -25,7 +25,7 @@ $(document).ready( function () {
     function updateWikiLovesCountries() {
         var countries = [];
         // find out which categories the campaign has
-        $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
+        $.getJSON("../api/get-campaign-categories?campaign=" + campaignId)
             .done( function(categories) {
             // add "Cateogry:" prefix
             campaignCategories = categories.map(function(element) {
