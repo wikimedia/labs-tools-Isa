@@ -150,7 +150,7 @@ def CreateCampaign():
 def contributeToCampaign(id):
     
     # We get current user in sessions's username
-    username = session.get('username', 'Eugene233')
+    username = session.get('username', None)
 
     # We select the campign whose id comes into the route
     campaign = Campaign.query.filter_by(id=id).first()
@@ -309,7 +309,7 @@ def getCampaignCategories():
     # we get the campaign_id from the route request
     campaign_id = request.args.get('campaign')
     # We get the current user's user_name
-    username = session.get('username', 'Eugene233')
+    username = session.get('username', None)
     if not username:
         return '<stong>' + gettext('Sorry! This Data is available for logged in Users only') + '</strong>'
     else:
@@ -322,7 +322,7 @@ def getCampaignCategories():
 def postContribution():
     contrib_data = request.data.decode('utf8').replace("'", '"')
     contrib_data_list = json.loads(contrib_data)
-    username = session.get('username', 'Eugene233')
+    username = session.get('username', None)
 
     campaign_id = contrib_data_list[0]['campaign_id']
     

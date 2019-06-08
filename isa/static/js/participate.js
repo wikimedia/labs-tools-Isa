@@ -204,8 +204,7 @@ $(document).ready( function () {
             $.post({
                 url: '../../api/post-contribution',
                 data: contributionsData,
-                contentType: 'application/json',
-                dataType: 'json'
+                contentType: 'application/json'
             }).done(function(response) {
                 console.log("Contribution posted - ", response, contributionsData)
                 
