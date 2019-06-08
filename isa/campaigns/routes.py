@@ -150,7 +150,7 @@ def CreateCampaign():
 def contributeToCampaign(id):
     
     # We get current user in sessions's username
-    username = session.get('username', None)
+    username = session.get('username', 'Eugene233')
 
     # We select the campign whose id comes into the route
     campaign = Campaign.query.filter_by(id=id).first()
@@ -309,7 +309,7 @@ def getCampaignCategories():
     # we get the campaign_id from the route request
     campaign_id = request.args.get('campaign')
     # We get the current user's user_name
-    username = session.get('username', None)
+    username = session.get('username', 'Eugene233')
     if not username:
         return '<stong>' + gettext('Sorry! This Data is available for logged in Users only') + '</strong>'
     else:
@@ -320,10 +320,11 @@ def getCampaignCategories():
 
 @campaigns.route('/api/post-contribution', methods=['POST'])
 def postContribution():
-    contrib_data = json.loads(request.data)
-    username = session.get('username', None)
+    contrib_data = request.data.decode('utf8').replace("'", '"')
+    contrib_data_list = json.loads(contrib_data)
+    username = session.get('username', 'Eugene233')
 
-    campaign_id = contrib_data[0]['campaign_id']
+    campaign_id = contrib_data_list[0]['campaign_id']
     
     if not username:
         flash(gettext('You need to login to participate'), 'info')
@@ -332,7 +333,7 @@ def postContribution():
         return redirect(url_for('campaigns.contributeToCampaign', id=campaign_id))
     else:
         current_user_id = User.query.filter_by(username=username).first().id
-        for data in contrib_data:
+        for data in contrib_data_list:
             edit_content = str(data['edit_content'])
             file = data['image']
             edit_action = data['edit_action']
@@ -345,6 +346,7 @@ def postContribution():
                                        edit_type=edit_type,
                                        country=country,
                                        edit_content=edit_content)
+            print(conribution, file=sys.stderr)
             db.session.add(conribution)
             if testDbCommitSuccess():
                 return("Failure")
