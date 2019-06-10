@@ -74,39 +74,31 @@ body {padding-bottom:0}
   <div class="input-group-prepend">
     <span class="input-group-text"><i class="fas fa-edit"></i></span>
   </div>
-  <input type="input" class="form-control caption-input" lang="en" placeholder="write a caption">
-</div>
-    
-<div class="input-group mb-3" style="display: none">
-  <div class="input-group-prepend">
-    <span class="input-group-text"><i class="fas fa-edit"></i></span>
-  </div>
-  <input type="input" class="form-control caption-input" lang="fr" placeholder="write a caption">
-</div>
-    
-<div class="input-group mb-3" style="display: none">
-  <div class="input-group-prepend">
-    <span class="input-group-text"><i class="fas fa-edit"></i></span>
-  </div>
-  <input type="input" class="form-control caption-input" lang="de" placeholder="write a caption">
+  <input type="input" class="form-control caption-input" lang="{{caption_language_pairs[0][0]}}" placeholder="write a caption">
 </div>
 
-<div class="input-group mb-3" style="display: none">
-  <div class="input-group-prepend">
-    <span class="input-group-text"><i class="fas fa-edit"></i></span>
-  </div>
-  <input type="input" class="form-control caption-input" lang="es" placeholder="write a caption">
-</div>
+  {% for language_pair in caption_language_pairs %}
+    {% if language_pair != caption_language_pairs[0] %}
+      <div class="input-group mb-3" style="display: none">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-edit"></i></span>
+        </div>
+        <input type="input" class="form-control caption-input" lang="{{language_pair[0]}}" placeholder="write a caption">
+      </div>
+    {% endif %}
+  {% endfor %}
     
   </div>
 
 <div class="caption-lang-btn-group">
 	<p>{{ _('Change Caption Language') }}</p>
 <div class="btn-group" role="group" aria-label="">
-	<button class="btn btn-small btn-outline-secondary caption-language-btn active" lang="en">{{ _('English') }}</button>
-	<button class="btn btn-small btn-outline-secondary caption-language-btn" lang="fr">{{ _('French') }}</button>
-	<button class="btn btn-small btn-outline-secondary caption-language-btn" lang="de">{{ _('German') }}</button>
-	<button class="btn btn-small btn-outline-secondary caption-language-btn" lang="es">{{ _('Spanish') }}</button>
+  <button class="btn btn-small btn-outline-secondary caption-language-btn active" lang="{{caption_language_pairs[0][0]}}">{{ _(caption_language_pairs[0][1]) }}</button>
+  {% for language_pair in caption_language_pairs %}
+    {% if language_pair != caption_language_pairs[0] %}
+	    <button class="btn btn-small btn-outline-secondary caption-language-btn" lang="{{language_pair[0]}}">{{ _(language_pair[1]) }}</button>
+    {% endif %}
+  {% endfor %}	
 	  </div>
 		<button class="btn btn-sm btn-link">{{ _('CHOOSE AVAILABLE LANGUAGES') }}</button>
 	</div>
