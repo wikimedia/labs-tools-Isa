@@ -8,12 +8,10 @@ import json
 
 from isa import db
 from isa.utils.languages import getLanguages
-from isa.campaigns.forms import CampaignForm, CampaignDepictsSearchForm, CampaignCaptionsForm, UpdateCampaignForm
-from isa.get_category_items import get_category_items
+from isa.campaigns.forms import CampaignForm, UpdateCampaignForm
 from isa.models import Campaign, Contribution, User
-from isa.campaigns.utils import (get_actual_image_file_names, get_all_campaign_images, constructEditContent,
-                                 get_campaign_category_list, get_country_from_code, compute_campaign_status,
-                                 buildCategoryObject)
+from isa.campaigns.utils import (constructEditContent, get_campaign_category_list, get_country_from_code,
+                                 compute_campaign_status, buildCategoryObject)
 from isa.main.utils import testDbCommitSuccess, getCampaignCountryData
 from isa.users.utils import (get_user_language_preferences,
                              getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
@@ -154,98 +152,12 @@ def contributeToCampaign(id):
 
     # We select the campign whose id comes into the route
     campaign = Campaign.query.filter_by(id=id).first()
-    
-    # contribution = Contribution(
-    captions_form = CampaignCaptionsForm(prefix="captions_form")
-    depicts_form = CampaignDepictsSearchForm(prefix="depicts_form")
-
-    campaign_categories = get_campaign_category_list(campaign.categories)
-    # will homd the data about the categores
-    campaign_partcicipate_data = []
-    # we now get content through api call for the images
-    for category in campaign_categories:
-        category_data = get_category_items(category)
-        campaign_partcicipate_data.append(category_data)
-    all_campaign_images = get_all_campaign_images(campaign_partcicipate_data)
-
-    # We take only the images which have the following extensions
-    #  .png .jpeg .jpg .svg
-    all_campaign_desired_images = []
-    for image in all_campaign_images:
-        image_lower = image.lower()
-        if image_lower.endswith('.png') or image_lower.endswith('.jpeg') \
-           or image_lower.endswith('.jpg') or image_lower.endswith('.svg'):
-            all_campaign_desired_images.append(image)
-    # When a form with depict statments is submitted, we process each and
-    # register a contribution for each of the depicts
-    if depicts_form.is_submitted():
-        # We check if there is a user in session
-        if not username:
-            flash(gettext('You need to login to participate'), 'info')
-            # User is not logged in so we set the next url to redirect them after login
-            session['next_url'] = request.url
-            return redirect(url_for('campaigns.contributeToCampaign', id=id))
-        else:
-            current_user_id = User.query.filter_by(username=username).first().id
-            depicts_data = constructEditContent(request.form.getlist('depicts_form-depicts'))
-            if not depicts_data:
-                flash(gettext('please add at least a depict statement'), 'info')
-            else:
-                #  we iterate the depicsts data and create a contribution for each
-                for depict in depicts_data:
-                    contribution = Contribution(
-                        user_id=current_user_id,
-                        campaign_id=id,
-                        edit_type='depicts',
-                        file=depict[1],
-                        edit_acton='Add',
-                        edit_content=depict[0]
-                    )
-                    db.session.add(contribution)
-                    # commit failed
-                    if testDbCommitSuccess():
-                        flash(gettext('Sorry edit could not be registered'), 'danger')
-                    else:
-                        flash(gettext('Thanks for Your contribution'), 'success')
-                        # We make sure that the form data does not remain in browser
-                        return redirect(url_for('campaigns.contributeToCampaign', id=id))
-    if captions_form.is_submitted() and captions_form.submit.data:
-        # We check if there is a user in session
-        if not username:
-            flash(gettext('You need to login to participate', 'info'))
-            # User is not logged in so we set the next url to redirect them after login
-            session['next_url'] = request.url
-            return redirect(url_for('campaigns.contributeToCampaign', id=id))
-        else:
-            captions_image_label = request.form.get('captions_form-image_label')
-            caption_text = request.form.get('captions_form-caption')
-            if captions_image_label and caption_text:
-                contribution = Contribution(
-                    user_id=current_user_id,
-                    campaign_id=id,
-                    edit_type='caption',
-                    file=captions_image_label,
-                    edit_acton='Add',
-                    edit_content=caption_text
-                )
-                db.session.add(contribution)
-                # commit failed
-                if testDbCommitSuccess():
-                    flash(gettext('Sorry edit could not be registered'), 'danger')
-                else:
-                    flash(gettext('Thanks for Your contribution'), 'success')
-                    # We make sure that the form data does not remain in browser
-                    return redirect(url_for('campaigns.contributeToCampaign', id=id))
     return render_template('campaign/campaign_entry.html',
                            title=gettext('%(campaign_name)s - Contribute',
                                          campaign_name=campaign.campaign_name),
                            id=id,
-                           captions_form=captions_form,
-                           depicts_form=depicts_form,
-                           all_campaign_desired_images=all_campaign_desired_images,
                            campaign=campaign,
                            username=username,
-                           campaign_partcicipate_data=campaign_partcicipate_data,
                            user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user)
 
@@ -308,14 +220,10 @@ def updateCampaign(id):
 def getCampaignCategories():
     # we get the campaign_id from the route request
     campaign_id = request.args.get('campaign')
-    # We get the current user's user_name
-    username = session.get('username', None)
-    if not username:
-        return '<stong>' + gettext('Sorry! This Data is available for logged in Users only') + '</strong>'
-    else:
-        # We get the campaign categories
-        campaign = Campaign.query.filter_by(id=campaign_id).first()
-        return campaign.categories
+
+    # We get the campaign categories
+    campaign = Campaign.query.filter_by(id=campaign_id).first()
+    return campaign.categories
 
 
 @campaigns.route('/api/post-contribution', methods=['POST'])

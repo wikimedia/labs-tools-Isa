@@ -37,20 +37,6 @@ class UpdateCampaignForm(FlaskForm):
     submit = SubmitField('Update Campaign')
 
 
-class CampaignDepictsSearchForm(FlaskForm):
-    depicts = SelectField(validators=[DataRequired()], choices=[])
-    sub_categories = StringField()
-    lang = SelectField(validators=[DataRequired()], choices=[('fr', 'fr'), ('en', 'en'), ('de', 'de')])
-    submit = SubmitField('Save')
-
-
-class CampaignCaptionsForm(FlaskForm):
-    image_label = StringField()
-    sub_categories = StringField()
-    caption = StringField(widget=widgets.TextArea())
-    submit = SubmitField('Save')
-
-
 class CaptionsLanguageForm(FlaskForm):
     language_select_1 = SelectField(validators=[DataRequired()], choices=getLanguages())
     language_select_2 = SelectField(validators=[DataRequired()], choices=getLanguages())

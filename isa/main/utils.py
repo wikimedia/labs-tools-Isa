@@ -52,9 +52,6 @@ def getCampaignCountryData(campaign_id):
     for contribution in campaign_contributions:
         if contribution.country != "":
             contribution_countries.append(contribution.country)
-        else:
-            contribution.country = 'All Countries'
-            contribution_countries.append(contribution.country)
     contribution_countries = set(contribution_countries)
 
     for country in contribution_countries:
