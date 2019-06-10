@@ -45,9 +45,9 @@ body {padding-bottom:0}
 <div class="depicts-search">
  <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+    <span class="input-group-text"><i class="fas fa-search"></i></span>
   </div>
-  <select id="depicts-select" class="form-control" placeholder="search for depicts statements" aria-label="search" aria-describedby="basic-addon1"></select>
+  <select id="depicts-select" class="form-control"></select>
 </div>
   </div>
 	
@@ -67,24 +67,46 @@ body {padding-bottom:0}
 	<p>Add a captions for the image</p>	
   </div>
 <div class="depicts-search">
+    
+ 
+<!-- Todo: Generate input groups from user languages on the server. ONLY the lang attribute on the <input> changes -->  
  <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon2"><i class="fas fa-edit"></i></span>
+    <span class="input-group-text"><i class="fas fa-edit"></i></span>
   </div>
-  <input type="input" class="form-control caption-input" lang="en" placeholder="write a caption" aria-label="search" aria-describedby="basic-addon2">
-  <input type="input" class="form-control caption-input" lang="fr" placeholder="write a caption" aria-label="search" aria-describedby="basic-addon2" style="display:none">
-  <input type="input" class="form-control caption-input" lang="de" placeholder="write a caption" aria-label="search" aria-describedby="basic-addon2" style="display:none">
-  <input type="input" class="form-control caption-input" lang="es" placeholder="write a caption" aria-label="search" aria-describedby="basic-addon2" style="display:none">
+  <input type="input" class="form-control caption-input" lang="en" placeholder="write a caption">
 </div>
+    
+<div class="input-group mb-3" style="display: none">
+  <div class="input-group-prepend">
+    <span class="input-group-text"><i class="fas fa-edit"></i></span>
+  </div>
+  <input type="input" class="form-control caption-input" lang="fr" placeholder="write a caption">
+</div>
+    
+<div class="input-group mb-3" style="display: none">
+  <div class="input-group-prepend">
+    <span class="input-group-text"><i class="fas fa-edit"></i></span>
+  </div>
+  <input type="input" class="form-control caption-input" lang="de" placeholder="write a caption">
+</div>
+
+<div class="input-group mb-3" style="display: none">
+  <div class="input-group-prepend">
+    <span class="input-group-text"><i class="fas fa-edit"></i></span>
+  </div>
+  <input type="input" class="form-control caption-input" lang="es" placeholder="write a caption">
+</div>
+    
   </div>
 
 <div class="caption-lang-btn-group">
 	<p>{{ _('Change Caption Language') }}</p>
 <div class="btn-group" role="group" aria-label="">
-	<button class="btn btn-small btn-outline-secondary">{{ _('English') }}</button>
-	<button class="btn btn-small btn-outline-secondary">{{ _('French') }}</button>
-	<button class="btn btn-small btn-outline-secondary">{{ _('German') }}</button>
-	<button class="btn btn-small btn-outline-secondary">{{ _('Spanish') }}</button>
+	<button class="btn btn-small btn-outline-secondary caption-language-btn active" lang="en">{{ _('English') }}</button>
+	<button class="btn btn-small btn-outline-secondary caption-language-btn" lang="fr">{{ _('French') }}</button>
+	<button class="btn btn-small btn-outline-secondary caption-language-btn" lang="de">{{ _('German') }}</button>
+	<button class="btn btn-small btn-outline-secondary caption-language-btn" lang="es">{{ _('Spanish') }}</button>
 	  </div>
 		<button class="btn btn-sm btn-link">{{ _('CHOOSE AVAILABLE LANGUAGES') }}</button>
 	</div>
