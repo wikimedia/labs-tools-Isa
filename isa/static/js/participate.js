@@ -107,7 +107,7 @@ $(document).ready( function () {
     ParticipationManager = function(images) {
         var imageIndex = 0,
             imageFileName = '',
-            userCaptionLanguages = ['en', 'fr', 'de', 'es'], // todo: update on startup from user preferences 
+            userCaptionLanguages = getUserLanguages(), // todo: update on startup from user preferences 
             initialData = {depicts: [], captions: []},
             unsavedChanges = {depicts: [], captions: []};
             
@@ -143,7 +143,7 @@ $(document).ready( function () {
             });
         }
         
-        this.addDepictStatement = function (item, label, description, isProminent) {
+        this.addDepictStatement = function(item, label, description, isProminent) {
             var statementHtml = getStatementHtml(item, label, description, isProminent);
             $('.depict-tag-group').append(statementHtml);
             this.depictDataChanged();
@@ -463,6 +463,9 @@ $(document).ready( function () {
                     var caption = mediaCaptions[userLang];
                     if (caption) {
                         captions.push(caption);
+                        populateCaption(userLang, caption.value)
+                    } else {
+                        populateCaption(userLang, "")
                     }
                 }
                 
@@ -589,6 +592,19 @@ $(document).ready( function () {
         }
         return parametersObject;
     };
+    
+    function populateCaption(language, text) {
+        $('.caption-input[lang=' + language + ']').val(text);
+    }
+    
+    function getUserLanguages() {
+        var languages = []
+        $('.caption-input').each(function() {
+            languages.push( $(this).attr('lang'))
+        })
+        
+        return languages
+    }
 
 
 
