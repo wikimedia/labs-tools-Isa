@@ -190,9 +190,14 @@ $(document).ready( function () {
         }
         
         this.resetCaptions = function () {
-            $('.caption-input').val('');
-            //todo: complete once caption data is populated at startup
-            
+            var initialCaptionsData = initialData.captions;
+             $('.caption-input').val('');
+            for (var i=0; i < initialCaptionsData.length; i++) {
+                var caption = initialCaptionsData[i];
+                var value = caption.value || '',
+                    language = caption.language;
+                $('.caption-input[lang=' + language + ']').val(value)
+            }
         }
         
         // Posts the current unsaved changes to the server as a JSON string
