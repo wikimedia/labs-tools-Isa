@@ -56,8 +56,10 @@ def get_user_language_preferences(username):
         user_pref_options = []
         user_pref_langs = user.pref_lang.split(',')
         for lang in user_pref_langs:
-            if lang != '':
+            if lang != 'None' and lang != '':
                 user_pref_options.append(lang)
+        if len(user_pref_options) == 0:
+            return ['en', 'fr']
         return user_pref_options
 
 

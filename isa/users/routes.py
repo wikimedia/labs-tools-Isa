@@ -10,7 +10,7 @@ from isa.main.utils import testDbCommitSuccess
 from isa.models import User
 from isa.users.forms import CaptionsLanguageForm
 
-from isa.users.utils import buildUserPrefLang
+from isa.users.utils import buildUserPrefLang, get_user_language_preferences
 
 users = Blueprint('users', __name__)
 
@@ -87,20 +87,25 @@ def logout():
 @users.route('/user-settings', methods=['GET', 'POST'])
 def userSettings():
     username = session.get('username', None)
+    if not username:
+        session['next_url'] = request.url
+        flash(gettext('Please login to change your language preferences'), 'info')
+        return redirect(url_for('main.home'))
     captions_lang_form = CaptionsLanguageForm()
     if captions_lang_form.is_submitted():
-        caption_language_1 = request.form.get('language_select_1')
-        caption_language_2 = request.form.get('language_select_2')
-        caption_language_3 = request.form.get('language_select_3')
-        caption_language_4 = request.form.get('language_select_4')
-        caption_language_5 = request.form.get('language_select_5')
-        caption_language_6 = request.form.get('language_select_6')
+        caption_language_1 = str(request.form.get('language_select_1'))
+        caption_language_2 = str(request.form.get('language_select_2'))
+        caption_language_3 = str(request.form.get('language_select_3'))
+        caption_language_4 = str(request.form.get('language_select_4'))
+        caption_language_5 = str(request.form.get('language_select_5'))
+        caption_language_6 = str(request.form.get('language_select_6'))
         user_pref_lang = buildUserPrefLang(caption_language_1, caption_language_2,
                                            caption_language_3, caption_language_4,
                                            caption_language_5, caption_language_6)
         # We select the user with username and update their pref_lang
-        current_user = User.query.filter_by(username=username).first()
-        current_user.pref_lang = user_pref_lang
+        user = User.query.filter_by(username=username).first()
+        user.pref_lang = user_pref_lang
+
         # commit failed
         if testDbCommitSuccess():
             flash(gettext('Captions languages could not be set'), 'danger')
@@ -109,15 +114,18 @@ def userSettings():
             # We make sure that the form data does not remain in browser
             return redirect(url_for('main.home'))
     elif request.method == 'GET':
-        current_user_langs = User.query.filter_by(username=username).first().pref_lang.split(',')
-        captions_lang_form.language_select_1.data = str(current_user_langs[0])
-        captions_lang_form.language_select_2.data = str(current_user_langs[1])
-        captions_lang_form.language_select_3.data = str(current_user_langs[2])
-        captions_lang_form.language_select_4.data = str(current_user_langs[3])
-        captions_lang_form.language_select_5.data = str(current_user_langs[4])
-        captions_lang_form.language_select_6.data = str(current_user_langs[5])
+        user_langs = User.query.filter_by(username=username).first().pref_lang.split(',')
+        captions_lang_form.language_select_1.data = str(user_langs[0])
+        captions_lang_form.language_select_2.data = str(user_langs[1])
+        captions_lang_form.language_select_3.data = str(user_langs[2])
+        captions_lang_form.language_select_4.data = str(user_langs[3])
+        captions_lang_form.language_select_5.data = str(user_langs[4])
+        captions_lang_form.language_select_6.data = str(user_langs[5])
     else:
         flash(gettext('Language settings not available at the moment'), 'info')
     return render_template('users/user_settings.html',
                            title=gettext('%(username)s\'s - Settings', username=username),
+                           current_user=current_user,
+                           user_pref_lang=get_user_language_preferences(username),
+                           username=username,
                            captions_lang_form=captions_lang_form)
