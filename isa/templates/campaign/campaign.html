@@ -17,7 +17,7 @@
             </select>
         </div>           
     {% endif %}
-        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary" >Get Started</a>
+        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary" >{{ _('Get Started') }}</a>
     </div>
 </div>
 
@@ -94,8 +94,11 @@
             </table>
         </div>
     </div>
-    <button class="btn btn-primary btn-sm more-stats-btn mt-2">{{ _('Download Complete Stats') }}</button>
+    <div class="main-stats-label-group mx-auto mt-3">
+        <a id="download_country_stats_btn" href="{{url_for('campaigns.downloadContributionStats', id=campaign.id, filename=contributor_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download Contrib Stats') }}</a>
+        <a id="download_country_stats_btn" href="{{url_for('campaigns.downloadCountryStats', id=campaign.id, filename=country_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download Country Stats') }}</a>
     </div>
+</div>
 </div>
 
 <div class="container user-stats text-center">

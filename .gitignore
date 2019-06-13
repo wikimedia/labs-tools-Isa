@@ -9,3 +9,4 @@ test_db.py
 .tox/
 config.yaml
 .DS_Store
+campaign_stats_files/

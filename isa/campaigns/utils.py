@@ -1,4 +1,5 @@
 import json
+import csv
 import pycountry
 
 from datetime import datetime
@@ -98,3 +99,31 @@ def buildCategoryObject(category):
     cat_object_body['name'] = category
     cat_object_body['depth'] = 0
     return cat_object_body
+
+
+def create_campaign_country_stats_csv(stats_file_directory, campaign_name,
+                                      country_fields, country_stats_data):
+    file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_country_stats.csv'
+    # We build the campaign statistucs file here with the country stats stats
+    with open(file_directory, 'w') as csv_file:
+        writer = csv.writer(csv_file)
+        fields = country_fields
+        writer = csv.DictWriter(csv_file, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(country_stats_data)
+    csv_file.close()
+    return campaign_name.replace(' ', '_') + '_country_stats.csv'
+
+
+def create_campaign_contributor_stats_csv(stats_file_directory, campaign_name,
+                                          contributor_fields, contributor_stats_data):
+    # We build the campaign statistucs file here with the country stats stats
+    file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_stats.csv'
+    with open(file_directory, 'w') as contrib_csv_file:
+        writer = csv.writer(contrib_csv_file)
+        fields = contributor_fields
+        writer = csv.DictWriter(contrib_csv_file, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(contributor_stats_data)
+    contrib_csv_file.close()
+    return campaign_name.replace(' ', '_') + '_stats.csv'

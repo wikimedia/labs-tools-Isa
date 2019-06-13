@@ -16,6 +16,7 @@ app.config.update(
 # Another secret key will be generated later
 app.config['SQLALCHEMY_DATABASE_URI']
 app.config['SECRET_KEY']
+app.config['TEMPLATES_AUTO_RELOAD']
 
 # We hook babel to our app
 babel = Babel(app)

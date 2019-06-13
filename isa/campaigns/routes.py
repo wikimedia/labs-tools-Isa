@@ -1,20 +1,26 @@
-from datetime import datetime
-from flask import render_template, redirect, url_for, flash, request, session, Blueprint
-from isa import gettext
-from flask_login import current_user
+import os
+import csv
 import sys
 import json
+import shutil
+import glob
 
+from datetime import datetime
+from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file
+from isa import gettext
+from flask_login import current_user
 
+from io import StringIO
 from isa import db
-from isa.utils.languages import getLanguages
 from isa.campaigns.forms import CampaignForm, UpdateCampaignForm
 from isa.models import Campaign, Contribution, User
 from isa.campaigns.utils import (constructEditContent, get_campaign_category_list, get_country_from_code,
-                                 compute_campaign_status, buildCategoryObject)
+                                 compute_campaign_status, buildCategoryObject, create_campaign_country_stats_csv,
+                                 create_campaign_contributor_stats_csv)
 from isa.main.utils import testDbCommitSuccess, getCampaignCountryData
 from isa.users.utils import (get_user_language_preferences,
                              getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
+from isa.utils.languages import getLanguages
 
 
 campaigns = Blueprint('campaigns', __name__)
@@ -86,6 +92,42 @@ def getCampaignById(id):
     # We get all the campaign coountry sorted data
     all_campaign_country_statistics_data = getCampaignCountryData(id)
 
+    campaign_stats = {}
+    campaign_stats['all_contributors_data'] = all_contributors_data
+    campaign_stats['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
+
+    # Delete the files in the campaign directory
+    stats_path = os.getcwd() + '/campaign_stats_files/' + str(campaign.id)
+    files = glob.glob(stats_path + '/*')
+    if len(files) > 0:
+        for f in files:
+            os.remove(f)
+            # print('Deleted Existing Campaign file'+ f, file=sys.stderr)
+
+    # We create the campaign stats directory if it does not exist
+    if not os.path.exists(stats_path):
+        os.makedirs(stats_path)
+
+    # We build the campaign statistucs file here with the contributor stats
+    # 1 - country contribution file
+
+    campaign_name = campaign.campaign_name
+    stats_file_directory = stats_path
+    country_fields = ['rank', 'country', 'images_improved']
+    country_stats_data = campaign_stats['all_campaign_country_statistics_data']
+
+    country_csv_file = create_campaign_country_stats_csv(stats_file_directory, campaign_name,
+                                                         country_fields, country_stats_data)
+
+    # 2 - contributors file
+    contributor_fields = ['rank', 'username', 'images_improved']
+    contributor_stats_data = campaign_stats['all_contributors_data']
+    
+    contributor_csv_file = create_campaign_contributor_stats_csv(stats_file_directory,
+                                                                 campaign_name,
+                                                                 contributor_fields,
+                                                                 contributor_stats_data)
+
     return render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                            campaign=campaign,
                            campaign_manager=campaign_manager.username,
@@ -98,7 +140,9 @@ def getCampaignById(id):
                            all_contributors_data=all_contributors_data,
                            current_user_rank=current_user_rank,
                            all_campaign_country_statistics_data=all_campaign_country_statistics_data,
-                           current_user_images_improved=current_user_images_improved)
+                           current_user_images_improved=current_user_images_improved,
+                           contributor_csv_file=contributor_csv_file,
+                           country_csv_file=country_csv_file)
 
 
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
@@ -134,9 +178,13 @@ def CreateCampaign():
                 flash(gettext('Sorry %(campaign_name)s Could not be created',
                               campaign_name=form.campaign_name.data), 'danger')
             else:
+                campaign_stats_path = str(campaign.id)
+                stats_path = os.getcwd() + '/campaign_stats_files/' + campaign_stats_path
+                if not os.path.exists(stats_path):
+                    os.makedirs(stats_path)
                 flash(gettext('%(campaign_name)s Campaign created!',
                               campaign_name=form.campaign_name.data), 'success')
-                return redirect(url_for('campaigns.getCampaigns'))
+                return redirect(url_for('campaigns.getCampaignById', id=campaign.id))
         return render_template('campaign/create_campaign.html', title=gettext('Create a campaign'),
                                form=form, datetime=datetime,
                                username=username,
@@ -273,3 +321,21 @@ def postContribution():
                 # flash(gettext('Thanks for your contribution'), 'success')
                 return("Success!")
     return("Failure")
+
+
+@campaigns.route('/campaigns/<int:id>/contrib_stats_download/<string:filename>', methods=['GET', 'POST'])
+def downloadContributionStats(id, filename):
+    if filename:
+        return send_file(os.getcwd() + '/campaign_stats_files/' + str(id) + '/' + filename,
+                         as_attachment=True, cache_timeout=0, last_modified=True)
+    else:
+        flash('Download may be unavailable now', 'info')
+
+
+@campaigns.route('/campaigns/<int:id>/country_stats_download/<string:filename>', methods=['GET', 'POST'])
+def downloadCountryStats(id, filename):
+    if filename:
+        return send_file(os.getcwd() + '/campaign_stats_files/' + str(id) + '/' + filename,
+                         as_attachment=True, cache_timeout=0, last_modified=True)
+    else:
+        flash('Download may be unavailable now', 'info')
