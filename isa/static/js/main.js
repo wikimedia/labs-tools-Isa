@@ -1,5 +1,11 @@
 $(document).ready( function () {
-    $( '#campaign_table' ).DataTable();
+    $( '#campaign_table' ).DataTable( {
+    responsive: true,
+                  columnDefs: [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: -1 }
+    ]
+} );
 
     $('#captions_lang_select_1').select2({
         tags: false
