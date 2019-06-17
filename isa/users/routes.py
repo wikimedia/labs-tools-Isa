@@ -112,7 +112,7 @@ def userSettings():
         else:
             flash(gettext('Prefered Languages set Successfully'), 'success')
             # We make sure that the form data does not remain in browser
-            return redirect(url_for('main.home'))
+            return redirect(url_for('users.userSettings'))
     elif request.method == 'GET':
         user_langs = User.query.filter_by(username=username).first().pref_lang.split(',')
         captions_lang_form.language_select_1.data = str(user_langs[0])
