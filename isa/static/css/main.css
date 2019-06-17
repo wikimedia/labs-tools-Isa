@@ -387,12 +387,12 @@ input[ type = search ] {
   width: 3100px
 }
 
-form {
+/*form {
   width: 50%;
   margin:10px;
   padding:10px;
   padding-bottom: 1px;
-}
+}*/
 
 
 .stat-display .stat-display__stat {
@@ -408,11 +408,11 @@ form {
   font-weight: 300;
 }
 
-small {
+/*small {
   color: rgba(0,0,0,.35);
   text-indent: 50px;
 }
-
+*/
 .test {
   width: 70px;
   height: 65px;
@@ -434,10 +434,10 @@ small {
   height: 100px;
 }
 
-.form-group {
+/*.form-group {
   padding-top: 0px;
   padding-bottom: 1px;
-}
+}*/
 
 #edit_campaign{
   float: right;
@@ -596,11 +596,11 @@ small {
   margin-left: 15px;
 }
 
-.select2-container {
+/*.select2-container {
   width: 700px !important;
   font-size: 10px !important;
   max-width: 100% !important;
-}
+}*/
 
 .search-result-label {
   font-weight: bold;
