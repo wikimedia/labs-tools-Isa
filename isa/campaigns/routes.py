@@ -49,8 +49,6 @@ def getCampaignById(id):
         flash(gettext('Campaign with id %(id)s does not exist', id=id), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
 
-    # We select the campaign and the manager here
-    campaign_manager = User.query.filter_by(id=campaign.user_id).first()
     # We get all the contributions from the ddatabase
     all_contributions = Contribution.query.all()
     # contributions for campaign
@@ -130,7 +128,7 @@ def getCampaignById(id):
 
     return render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                            campaign=campaign,
-                           campaign_manager=campaign_manager.username,
+                           campaign_manager=campaign.campaign_manager,
                            username=username,
                            campaign_editors=campaign_editors,
                            campaign_contributions=campaign_contributions,
@@ -155,7 +153,6 @@ def CreateCampaign():
         flash(gettext('You need to Login to create a campaign'), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
     else:
-        current_user_id = User.query.filter_by(username=username).first().id
         if form.is_submitted():
             form_categories = ",".join(request.form.getlist('categories'))
             # here we create a campaign
@@ -164,14 +161,14 @@ def CreateCampaign():
                 campaign_name=form.campaign_name.data,
                 categories=form_categories,
                 start_date=form.start_date.data,
+                campaign_manager=username,
                 end_date=form.end_date.data,
                 status=compute_campaign_status(form.end_date.data),
                 short_description=form.short_description.data,
                 long_description=form.long_description.data,
                 depicts_metadata=form.depicts_metadata.data,
                 captions_metadata=form.captions_metadata.data,
-                campaign_type=form.campaign_type.data,
-                user_id=current_user_id)
+                campaign_type=form.campaign_type.data)
             db.session.add(campaign)
             # commit failed
             if testDbCommitSuccess():
@@ -236,6 +233,7 @@ def updateCampaign(id):
         if form.is_submitted():
             campaign = Campaign.query.filter_by(id=id).first()
             campaign.campaign_name = form.campaign_name.data
+            campaign.campaign_manager = username
             campaign.short_description = form.short_description.data
             campaign.long_description = form.long_description.data
             campaign.depicts_metadata = form.depicts_metadata.data
@@ -253,6 +251,11 @@ def updateCampaign(id):
         elif request.method == 'GET':
             # we get the campaign data to place in form fields
             campaign = Campaign.query.filter_by(id=id).first()
+
+            if campaign.campaign_manager != username:
+                flash(gettext('You cannot update this campaign, Contact Manager User:%(campaign_manager)s ',
+                              campaign_manager=campaign.campaign_manager), 'info')
+                return redirect(url_for('campaigns.getCampaignById', id=id))
             form.campaign_name.data = campaign.campaign_name
             form.short_description.data = campaign.short_description
             form.long_description.data = campaign.long_description

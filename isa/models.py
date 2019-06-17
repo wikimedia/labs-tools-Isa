@@ -15,7 +15,6 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(20), unique=True, nullable=False)
     pref_lang = db.Column(db.String(15), nullable=False)
     contrib = db.Column(db.Integer, default=0)
-    campaigns = db.relationship('Campaign', backref='works_on', lazy=True)
     contributions = db.relationship('Contribution', backref='made', lazy=True)
 
     def __repr__(self):
@@ -53,10 +52,11 @@ class Contribution(db.Model):
 
 class Campaign(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    campaign_name = db.Column(db.String(15), nullable=False)
+    campaign_name = db.Column(db.String(25), nullable=False)
     categories = db.Column(db.Text, nullable=False)
     start_date = db.Column(db.Date, nullable=False,
                            default=datetime.now().strftime('%Y-%m-%d'))
+    campaign_manager = db.Column(db.String(15), nullable=False)
     end_date = db.Column(db.Date, nullable=True,
                          default=datetime.now().strftime('%Y-%m-%d'))
     status = db.Column(db.Boolean, nullable=False, default=bool('False'))
@@ -64,7 +64,6 @@ class Campaign(db.Model):
     long_description = db.Column(db.Text, nullable=False)
     categories = db.Column(db.Text, nullable=False)
     campaign_type = db.Column(db.Boolean)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     depicts_metadata = db.Column(db.Boolean)
     captions_metadata = db.Column(db.Boolean)
     contribution = db.relationship('Contribution', backref='made_on', lazy=True)
@@ -73,8 +72,8 @@ class Campaign(db.Model):
         # This is what is shown when object is printed
         return "Campaign( {}, {}, {}, {}, {}, {}, {})".format(
                self.campaign_name,
+               self.campaign_manager,
                self.categories,
-               self.categories_depth,
                self.depicts_metadata,
                self.captions_metadata,
                self.start_date,
