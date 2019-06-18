@@ -52,62 +52,11 @@
       <div class="btn-group">
           <button type="submit" class="btn btn-danger">Undo Changes</button>
           {{ captions_lang_form.submit(class="btn btn-primary", value=_('Save')) }}
-           
-        
-    
+            
        </div>
     </form>
-</div>   
-       <!-- <div id="language_select_2" class="row pb-2">
-                        <div class="col-md-8">
-                            {{ captions_lang_form.language_select_2( id="captions_lang_select_2", class="form-control") }}</td>
-                        </div>
-                        <div class="col-md-2">
-                            <a id="language_select_2_cancel" class="btn btn-light"><i style='color:red' class="fa fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div id="language_select_3" class="row pb-2">
-                        <div class="col-md-8">
-                            {{ captions_lang_form.language_select_3( id="captions_lang_select_3", class="form-control") }}</td>
-                        </div>
-                        <div class="col-md-2">
-                            <a id="language_select_3_cancel" class="btn btn-light"><i style='color:red' class="fa fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div id="language_select_4" class="row pb-2">
-                        <div class="col-md-8">
-                            {{ captions_lang_form.language_select_4( id="captions_lang_select_4", class="form-control") }}</td>
-                        </div>
-                        <div class="col-md-2">
-                            <a id="language_select_4_cancel" class="btn btn-light"><i style='color:red' class="fa fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div id="language_select_5" class="row pb-2">
-                        <div class="col-md-8">
-                            {{ captions_lang_form.language_select_5( id="captions_lang_select_5", class="form-control") }}</td>
-                        </div>
-                        <div class="col-md-2">
-                            <a id="language_select_5_cancel" class="btn btn-light"><i style='color:red' class="fa fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div id="language_select_6" class="row">
-                        <div class="col-md-8">
-                            {{ captions_lang_form.language_select_6( id="captions_lang_select_6", class="form-control") }}</td>
-                        </div>
-                        <div class="col-md-2">
-                            <a id="language_select_6_cancel" class="btn btn-light"><i style='color:red' class="fa fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div id="language_select_6" class="row pt-3">
-                        <div class="col-md-6">
-                            {{ captions_lang_form.submit(class="btn btn-primary", value=_('Save')) }}</td>
-                        </div>
-                        <div class="col-md-6">
-                            <input class="btn btn-danger" type="button" value="Cancel">
-                        </div>
-                    </div>-->
-      
- 
+</div>
+
 {% endblock content %}
 {% block scripts %}
     <script src="{{url_for('static', filename='js/user-settings.js')}}"></script>

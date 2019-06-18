@@ -32,77 +32,81 @@ body {padding-bottom:0}
 </div>
 
 
-
-<div class="container edit-box">
-<div class="edit-box-header">
-	<h4>{{ _('Depicts') }}</h4>
-	<div edit-type="depicts" class="edit-publish-btn-group">
-	<button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
-	<button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
-	</div>
-	<p>Search for things you see in the image</p>	
-  </div>
-<div class="depicts-search">
- <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text"><i class="fas fa-search"></i></span>
-  </div>
-  <select id="depicts-select" class="form-control"></select>
-</div>
-  </div>
-	
- <div class="depict-tag-group">
-    <!-- populated by JavaScript -->
- </div> 
- 
-</div>
-
-<div class="container edit-box">
-<div class="edit-box-header">
-	<h4>{{ _('Caption') }}</h4>
-	<div edit-type="captions" class="edit-publish-btn-group">
-	<button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
-	<button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
-	</div>
-	<p>Add a captions for the image</p>	
-  </div>
-<div class="depicts-search">
-    
- 
-<!-- Todo: Generate input groups from user languages on the server. ONLY the lang attribute on the <input> changes -->  
- <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text"><i class="fas fa-edit"></i></span>
-  </div>
-  <input type="input" class="form-control caption-input" lang="{{caption_language_pairs[0][0]}}" placeholder="write a caption">
-</div>
-
-  {% for language_pair in caption_language_pairs %}
-    {% if language_pair != caption_language_pairs[0] %}
-      <div class="input-group mb-3" style="display: none">
-        <div class="input-group-prepend">
-          <span class="input-group-text"><i class="fas fa-edit"></i></span>
-        </div>
-        <input type="input" class="form-control caption-input" lang="{{language_pair[0]}}" placeholder="write a caption">
+{% if campaign.depicts_metadata %}
+  <div class="container edit-box">
+    <div class="edit-box-header">
+      <h4>{{ _('Depicts') }}</h4>
+      <div edit-type="depicts" class="edit-publish-btn-group">
+        <button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
+        <button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
       </div>
-    {% endif %}
-  {% endfor %}
+      <p>Search for things you see in the image</p>	
+      </div>
+    <div class="depicts-search">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-search"></i></span>
+        </div>
+        <select id="depicts-select" class="form-control"></select>
+      </div>
+    </div>
     
+    <div class="depict-tag-group">
+        <!-- populated by JavaScript -->
+    </div> 
+  
+  </div>
+{% endif %}
+
+{% if campaign.captions_metadata %}
+  <div class="container edit-box">
+  <div class="edit-box-header">
+    <h4>{{ _('Caption') }}</h4>
+    <div edit-type="captions" class="edit-publish-btn-group">
+      <button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
+      <button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
+    </div>
+    <p>Add a captions for the image</p>	
+    </div>
+  <div class="depicts-search">
+      
+  
+  <!-- Todo: Generate input groups from user languages on the server. ONLY the lang attribute on the <input> changes -->  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fas fa-edit"></i></span>
+    </div>
+    <input type="input" class="form-control caption-input" lang="{{caption_language_pairs[0][0]}}" placeholder="write a caption">
   </div>
 
-<div class="caption-lang-btn-group">
-	<p>{{ _('Change Caption Language') }}</p>
-<div class="btn-group" role="group" aria-label="">
-  <button class="btn btn-small btn-outline-secondary caption-language-btn active" lang="{{caption_language_pairs[0][0]}}">{{ _(caption_language_pairs[0][1]) }}</button>
-  {% for language_pair in caption_language_pairs %}
-    {% if language_pair != caption_language_pairs[0] %}
-	    <button class="btn btn-small btn-outline-secondary caption-language-btn" lang="{{language_pair[0]}}">{{ _(language_pair[1]) }}</button>
-    {% endif %}
-  {% endfor %}	
-	  </div>
-		<button class="btn btn-sm btn-link">{{ _('CHOOSE AVAILABLE LANGUAGES') }}</button>
-	</div>
-</div>
+    {% for language_pair in caption_language_pairs %}
+      {% if language_pair != caption_language_pairs[0] %}
+        <div class="input-group mb-3" style="display: none">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-edit"></i></span>
+          </div>
+          <input type="input" class="form-control caption-input" lang="{{language_pair[0]}}" placeholder="write a caption">
+        </div>
+      {% endif %}
+    {% endfor %}
+      
+    </div>
+
+  <div class="caption-lang-btn-group">
+    <p>{{ _('Change Caption Language') }}</p>
+  <div class="btn-group" role="group" aria-label="">
+    <button class="btn btn-small btn-outline-secondary caption-language-btn active" lang="{{caption_language_pairs[0][0]}}">{{ _(caption_language_pairs[0][1]) }}</button>
+    {% for language_pair in caption_language_pairs %}
+      {% if language_pair != caption_language_pairs[0] %}
+        <button class="btn btn-small btn-outline-secondary caption-language-btn" lang="{{language_pair[0]}}">{{ _(language_pair[1]) }}</button>
+      {% endif %}
+    {% endfor %}	
+      </div>
+      <button class="btn btn-sm btn-link">{{ _('CHOOSE AVAILABLE LANGUAGES') }}</button>
+    </div>
+  </div>
+
+{% endif %}
 
  
 <div class="participate-nav-footer container">
