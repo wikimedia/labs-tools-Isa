@@ -138,7 +138,7 @@
     <div class="about-campaign">
         <p>{{campaign.long_description}}</p>
     </div>
-    {% if campaign_manager == username %}
+    {% if campaign_manager ==  username %}
     <a id="" href="{{url_for('campaigns.updateCampaign', id=campaign.id)}}" class="btn btn-danger" >Edit Campaign</a>
     {% endif %}
 </div>
