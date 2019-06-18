@@ -4,12 +4,13 @@
 <div class="container px-0">
     <img src="{{url_for('static', filename='ISA home image.svg')}}" alt=""> <!--Copy the image or use commons link-->
 </div>
-<div class="container text-center ">
-    <div class="page-title">
-        <h1>ISA</h1>
-        <hr width="80%">
+<div class="container text-center page-header">
+     
+        <h1 class="home-page-title">ISA</h1>
+        <hr>
         <h5> {{ _('Easily Add Information about Images on Wikimedia Commons') }}</h5>
     </div>
+<div class="container text-center">
     <p><strong>ISA</strong> is a fun tool aimed at the metadata enhancement of images contributed to the various Wiki Loves competitions on Wikimedia Commons<br>It is being created as a way to quickly add structured information to a collection of pre-defined images.</p>    
     <a href="{{url_for( 'campaigns.getCampaigns' )}}" class="btn btn-lg btn-primary">EXPLORE CAMPAIGNS</a>
     <hr class="my-5">

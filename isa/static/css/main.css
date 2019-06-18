@@ -1,152 +1,119 @@
-/*body {
-	padding-bottom: 80px
-}*/
-
-/****************** NEW CSS FOR HOME PAGE*/
-.page-title h1 {
+/* GLOBAL STYLES */
+ 
+/* style the page titles and page header*/
+.page-header h1 {
     font-family: LinuxBiolinumOBold;
     margin: 0;
     text-transform: uppercase;
-    font-size: 4.5rem;
-    }
-    .page-title hr {    
-        border-top: 1px solid rgba(0,0,0,.5);
-        margin-top: -10px; 
-        margin-bottom: 5px;
-    }
-    .about-section p {text-align: justify}
-    
-    
-    
-    @media (min-width: 992px) {
-        .page-title hr {width: 50%}
-        .about-section p {text-align: center}
-    }
-
-
-/****************** END NEW CSS FOR HOME PAGE*/
-
-
-
-/******************NEW CSS FOR CAMPIAGN HOME PAGE*/
-
-/*page header*/
-.page-header h1 {
-	font-family: LinuxBiolinumOBold;
-    margin: 0;
- 	text-transform: uppercase;
 }
-
 .page-header > hr {
-	margin: 0 auto;
-	width:100%
+    margin: 0 auto;
+    width:100%
 }
-
+ 
+/*make header p more pronounced*/
 .page-header p {
-	font-weight: 500;
+    font-weight: 500;
 }
-
+ 
+/* Justify about sections on mobile*/
+.about-section p {
+    text-align: justify
+}
+     
+.notice {
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+}   
+ 
+/******** errors ********/
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+ /*end global*/
+ 
+ 
+ 
+/********** HOME PAGE ***************/
+ 
+/*make title extra big on home page*/
+.home-page-title {
+    font-size: 4.5rem!important;
+}
+/* end home page*/
+ 
+ 
+ 
+/********* CAMPAIGN PAGE ************/
+ 
 /* re-usable panel*/
 .campaign-panel {
-	background-color: #e9ecef;
-	padding: 10px;
-	margin-bottom: 20px;
-	text-align: center;
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
-
+ 
 /* Primary CTA and Country select*/
 .campaign-panel.primary-cta {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 .campaign-country-select {
-	display: flex;
-	align-items: baseline;
-	background-color: #fff;
-	margin-bottom: 10px;
-	justify-content: space-between;
+    display: flex;
+    align-items: baseline;
+    background-color: #fff;
+    margin-bottom: 10px;
+    justify-content: space-between;
 } 
- 
 .campaign-country-select p {
-	margin: 0;
-	padding: 0 9px;
+    margin: 0;
+    padding: 0 9px;
     display: inline-block;
 }
-
-#campaign_countries {	/* display: inline-block; */
-	border-radius: 0;
-	border: none;
-	border-left: 1px solid #ced4da;
+#campaign_countries {
+    border-radius: 0;
+    border: none;
+    border-left: 1px solid #ced4da;
+    width: 150px;
 }
-
-
+ 
 /*Campaign Stats*/
 .main-stats-label-group {
-	display: flex;
-	justify-content: space-around;
-	/* width: 50%; */;
+    display: flex;
+    justify-content: space-around;
 }
 .main-stats-label-group .label {
-	min-width: 150px;
+    min-width: 150px;
 }
-
 .campaign-stats .stats-table {
-	display: none;
-	flex-direction: row;
-	margin-top: 50px;
-	justify-content: space-around;
+    display: none;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: space-around;
 }
-
 .top-user-table {
-	width: 100%;
+    width: 100%;
 }
-
 .top-country-table {
-	width: 100%;
+    width: 100%;
 }
 more-stats-btn {
-	margin-top: 20px;
+    margin-top: 20px;
 }
-
 /* User Stats*/
 .user-stats .stats-table th {
     width: 50%
 }
-
-
-@media (min-width: 992px) {
-/*make the user stats table and main stats labels smaller and centered on desktop*/
-    .user-stats .stats-table {width: 50%}
-    .main-stats-label-group {width:50%}
-
-    /* Show the campaign stats tables on desktop*/  
-    .campaign-stats .stats-table {
-        display: flex;
-    }
-
-/*adjust page header for desktop*/
-    .page-header {
-        padding-top: 30px;
-    }	
-
-    .page-header h1 {
-        font-size: 3.5rem;
-    }	
-    .page-header hr {
-        margin: 0 auto;
-        width:50%
-    }
-}
-/*********************END NEW CAMPAIGN HOME PAGE CSS*/
-
-
-
-
-/*********************NEW LAYOUT.HTML CSS*/
-
-
+/*end campaign page*/
+ 
+ 
+ 
+/******** LAYOUT TEMPLATE ***********/
+ 
 /* Custom hover and active states for nav bar buttons*/
 .nav-link:hover {
     border-bottom: 3px solid red;
@@ -154,7 +121,7 @@ more-stats-btn {
 .topnav a.active {
     border-bottom: 3px solid red;
 }
-
+ 
 /*re-style select to match standard wiki style*/
 select.selectpicker {
     display: inline-block;
@@ -170,477 +137,194 @@ select.selectpicker {
     border: none;
     color: white;
 }
-
+ 
 /*match select dropdown bg to nav bar*/
 select.selectpicker> option  {
-	background-color: #343A40;
+    background-color: #343A40;
 }
-
-/*create sticky footer*/
+ 
+/* style the footer*/
 .footer{
-/*	position: fixed;*/
-	bottom:0;
     width: 100%;
-/*    height: 40px;*/
     color:#6a6a6a;
-	font-size: 11px;
-	text-align: center;
-	padding: 5px 0;
+    font-size: 11px;
+    text-align: center;
+    padding: 5px 0;
     margin-top: 50px;
 }
-
+ 
 /*make subtle footer links*/
 .footer a {
-	color: #676eb4;
-	text-decoration: underline
+    color: #676eb4;
+    text-decoration: underline
 }
-/********************END NEW CSS FOR LAYOUT.HTML */
-
-
-
-/*******************NEW CSS FOR PARTICIPATE PAGE */
-#campaign_back_button {float: inherit; width: auto}	
-
-/*given height allowed for image holder*/	
+/*end layout template*/
+ 
+ 
+ 
+/********** PARTICIPATE PAGE ************/
+ 
+/*given height allowed for image holder*/  
 .img-holder   {
-	height:300px;
-}	
-/*shrink image to fit in img-holder*/	
+    height:300px;
+}   
+/*shrink image to fit in img-holder*/  
 .img-holder img {
-	height: 100%;
-	width: 100%;
-	object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
-
+ 
+/*style statis meta data text*/
+.image-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 10px;
+}
+/* wrap and ellipse static meta data*/
 .image-desc p {
-	margin: 0;
-	font-weight: 700;
-	overflow: hidden;
+    margin: 0;
+    font-weight: 700;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
 }
+/*reduce font weight of inserted data*/
 .image-desc span {
-		font-weight: 400
-	}
-.image-desc {
-	font-size: 12px;
-	line-height: 1.5;
-	padding: 10px;
-}
-	
-
-	
-	
+    font-weight: 400
+    }
+ 
 /*allow absolute position for publish btns*/
 .edit-box-header {
-		position:relative
-	}
- 
+    position:relative
+    }
+  
 /*place publish btn top right of edit box*/
 .edit-publish-btn-group {
-	position: absolute;
-	right: 0;
-	top: 0;
-}	
-/*adjust padding and spacing*/	
+    position: absolute;
+    right: 0;
+    top: 0;
+}   
+/*adjust padding and spacing*/ 
 .container.edit-box {
-	margin-top: 10px;
-	padding: 10px;
-	border:  solid 1px #a2a9b1;
-	border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    border:  solid 1px #a2a9b1;
+    border-radius: 5px;
 }
-	
-/* make depict tag*/	
+     
+/* make depict tag*/   
 .depict-tag-label{
-	display: flex
+    display: flex
 }
-
 .depict-tag-label .label {
-	white-space: pre-wrap; 
-	color: #fff;
+    white-space: pre-wrap; 
+    color: #fff;
     font-weight: 700;
     justify-self: flex-start;
-    margin-right: auto;}
-
+    margin-right: auto;
+}
 .depict-tag-item {
-	margin-top: 3px;
+    margin-top: 3px;
     margin-right: 10px;
-	display: inline-block;
-	background-color: #4391df!important;
+    display: inline-block;
+    background-color: #4391df!important;
     border-radius: 5px;
     padding: 5px;
-	 
+      
 }
 .depict-tag-item button {
-		white-space: initial;
-	}	
-
+        white-space: initial;
+    }   
 .depict-tag-label btn {
-	padding: 4px 1px
+    padding: 4px 1px
 }
-
 .depict-tag-btn {
-	padding: 0;
+    padding: 0;
     display: flex;
     background-color: white;
     border-radius: 32px;
-	width: 25px;
-	height: 25px;
-	margin-left: 5px;;
-	min-width: 25px;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;;
+    min-width: 25px;
     justify-content: center;
     align-self: center;
 }
-
 .depict-tag-btn button {
-	color: red;
+    color: red;
     padding: 0;
 }
 /* end make depict tag*/
-
+ 
+/* make sticky nav footer for mobile*/
 .participate-nav-footer.container {
-	position: fixed;
-	bottom: 0;
-	padding: 0
+    position: fixed;
+    bottom: 0;
+    padding: 0
 }
 .participate-nav-footer .btn-group {
-	height: 50px;
+    height: 50px;
 }
-@media (min-width: 992px) {.participate-nav-footer.container {position: inherit}}
-
-/***********************END NEW CSS FOR PARTICIPATE PAGE*/
-
-
-.main-page {
-  padding-top: 40px;
-  padding-bottom: 30px;
-}
-
-.main-page h1 {
-    font-weight: 300;
-    margin-bottom: -55px;
-    margin-top: -40px
-}
-
-.explore-campaigns {
-  padding-bottom: 20px;
-}
-
-.form-control {
-  width: 100%;
-}
-
-.campaign-select, .filter-select, .sort-select {
-  cursor: pointer;
-  float: right;
-  margin: 10px 10px 10px 0;
-}
-
-
-/*.table {
-	font-family: verdana,arial,sans-serif;
-	font-size:11px;
-  width: 95%;
-  padding-top: 0px;
-}
-.table th {
-	padding: 2px;
-	background-color: #dedede;
-}
-.table td {
-	padding: 2px;
-	background-color: #ffffff;
-}*/
-
-.last_column{
-  float: right;
-}
-
-#campaign_detail_table{
-  vertical-align:top;
-  padding: 0px;
-}
-
-#my_contributions_table{
-  width: inherit;
-}
-
-#campaign_categories{
-  height: 20%;
-}
-
-.campaign-link {
-  margin-top: 15px;
-}
-
-div.dataTables_wrapper div.dataTables_filter input {
-  margin-left: 0.5em;
-  display: inline-block;
-  width: 100%;
-}
-
-input[ type = search ] {
-  border: 1px dotted #999;
-  border-radius: 0;
-  -webkit-appearance: none;
-  width: 3100px
-}
-
-/*form {
-  width: 50%;
-  margin:10px;
-  padding:10px;
-  padding-bottom: 1px;
-}*/
-
-
-.stat-display .stat-display__stat {
-  margin: 0 20px 20px;
-  text-align: center;
-  width: calc(50% - 40px);
-}
-.stat-display .stat-display__stat .stat-display__value {
-  font-family: inherit;
-  color: #676eb4;
-  font-size: 38px;
-  margin: 0;
-  font-weight: 300;
-}
-
-/*small {
-  color: rgba(0,0,0,.35);
-  text-indent: 50px;
-}
-*/
-.test {
-  width: 70px;
-  height: 65px;
-  background-color: #d17474;
-  display: table;
-}
-
-#next_small::before {
-  content: '\00a0 \00a0 \00a0 \00a0';
-}
-
-.notice {
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-}
-
-.datetimepicker {
-  height: 100px;
-}
-
-/*.form-group {
-  padding-top: 0px;
-  padding-bottom: 1px;
-}*/
-
-#edit_campaign{
-  float: right;
-}
-
-#campaign_back_button {
-  float: left;
-  width: 150px;
-}
-
-#entry_image_card {
-  height: 200px;
-  max-width: 750px;
-  float: left;
-  padding: 0px;
-}
-
-#image_details_left_table {
-  float: left;
-  margin-right: -400pxpx;
-  margin-left: 20px;
-  border-bottom: 1px solid black
-}
-
-#image_details_left_right_table {
-  float: right
-}
-
-.slide-control {
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  margin-bottom: 0px;
-  padding-top: 0px;
-}
-
-#caption_edit_section {
-  margin-top: 0px;
-  margin-top: 200px;
-}
-
-#edit_caption_button {
-  margin-left: 50px;
-  float: left;
-}
-
-.card-body {
-  padding-top: 0.5px;
-  padding-bottom: 60px;
-  margin-bottom: 30px;
-}
-
-.lang_selector {
-  margin-right: 0px;
-}
-
-#campaign_nav{
-  height: 50px;
-  padding-top: 2px;
-}
-
-#campaign_stats_table{
-  padding-top: 20px;
-}
-
-/*#get_started_btn{
-  height: 30px;
-  padding-top: 0px;
-}
-*/
-
-
-
-.btn-new {
-  background-color: white;
-  width: 150px;
-}
-
-.select-option{
-  max-width: inherit;
-}
-
-.campaign_progress_text{
-  padding-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 5px;
-}
-
-/*#get_started_btn {
-  margin-right: 0px;
-  margin-top: 4px;
-  margin-left: 215px;
-}*/
-
-#edited_image{
-  width: 400px;
-  height: 450px;
-  max-width: inherit;
-  max-height: inherit;
-}
-
-
-
-.chip{
-  background-color: #007bff;
-  width: 80px;
-  margin-left: 3px;
-  color: white;
-  font-weight: 0.5px;
-  font-size: 12px;
-  border-radius: 7px;
-  margin-bottom: 2.5px;
-}
-
-#add_depict_btn{
-  width: 100px;
-  margin-right: auto;
-  font-size: 12px;
-}
-
-.captions_text{
-  width: 100%;
-}
-
-.choose_caption_lang_text{
-  font-size: 10px;
-  margin-top: 1px;
-}
-
-
-
-.exampleSearch {
-  width: 250px;
-  margin-right: auto;
-  display: block;
-}
-
-#depicts_form_wrapper {
-  /* display: flexbox;
-  margin-right: 700px; */
-}
-
-#depicts_search_field {
-  /* flex: 0 0 5%; */
-}
-
-#depicts_submit_btn {
-  flex: 1;
-  width: 80px;
-  height: inherit;
-  font-size: 12px;
-}
-
-#depicts_lang_select{
-  margin-left: 15px;
-}
-
-/*.select2-container {
-  width: 700px !important;
-  font-size: 10px !important;
-  max-width: 100% !important;
-}*/
-
-.search-result-label {
-  font-weight: bold;
-}
-
-.search-result-description {
-
-}
-
-
-/******** campaign categories selections ********/
+ 
+/*end participate page/*
+ 
+ 
+ 
+/********** UPDATE & CREATE PAGE **********/
 #selected-categories-header {
     display: none;
 }
-
-.selected-category {
-    border-bottom: solid 1px #ccc;
-    border-top: solid 1px #ccc;
+/*end update & create*/
+ 
+ 
+ 
+ 
+/*******DESKTOP RESPONSIVE*************/
+ 
+@media (min-width: 992px) {
+ /* GLOBAL STYLE */  
+    /*.page-title hr {width: 50%}*/
+     
+    /*center about section on desktop*/
+    .about-section p {text-align: center}
+    /*desktop spacing for page header*/   
+    .page-header {
+        padding-top: 30px;
+    }   
+    /*increase page title on desktop*/
+    .page-header h1 {
+        font-size: 3.5rem;
+    }
+    /*reduce hr width on desktop*/
+    .page-header hr {
+        margin: 0 auto;
+        width:50%
+    }
+ 
+    /*CAMPAIGN PAGE*/
+     
+    /*make the user stats table and main stats labels smaller and centered on desktop*/
+    .user-stats .stats-table {
+        width: 50%
+    }
+    .main-stats-label-group {
+        width:50%
+    }
+ 
+    /* Show the campaign stats tables on desktop*/ 
+    .campaign-stats .stats-table {
+        display: flex;
+    }
+ 
+     
+    /*PARTICIPATE PAGE*/
+    
+    /*temp make nav buttons centralised on desktop*/
+    .participate-nav-footer.container {
+        position: inherit
+    }
+     
 }
-
-.selected-category td {
-    padding: 7px;
-}
-
-#selected-categories-header th{
-    text-align: left;
-    padding: 7px;
-}
-.selected-category .category-name {
-    min-width: 200px;
-    text-align: left;
-}
-
-.selected-category .category-depth-input {
-    width: 45px;
-}
-
-
-
-/******** errors ********/
-.error-template {padding: 40px 15px;text-align: center;}
-.error-actions {margin-top:15px;margin-bottom:15px;}
-.error-actions .btn { margin-right:10px; }
+/*end responsive desktop/*
