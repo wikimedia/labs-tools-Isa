@@ -629,11 +629,11 @@ $(document).ready( function () {
 
 
     /********* event handlers *********/
-    $('#next-image-btn').click(function(ev) {
+    $('.next-image-btn').click(function(ev) {
         editSession.nextImage();
     })
     
-    $('#previous-image-btn').click(function(ev) {
+    $('.previous-image-btn').click(function(ev) {
         editSession.previousImage();
     })
     

@@ -164,9 +164,33 @@ select.selectpicker> option  {
  
 /********** PARTICIPATE PAGE ************/
  
-/*given height allowed for image holder*/  
+/*wrapper to hold image and desktop nav buttons in place*/
+.image-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+/*make image license info overlay image*/
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+}
+/*make chevrons big for desktop nav btns*/
+.desktop-img-nav i {
+    font-size: 3rem;
+    vertical-align: middle;
+}
+/*hide desktop nav btns on mobile*/
+.desktop-img-nav {
+    display: none!important
+}
+
+/*restrict image height, make relative to position overlay.*/  
 .img-holder   {
     height:300px;
+    position: relative;
+    background-color: #444;
 }   
 /*shrink image to fit in img-holder*/  
 .img-holder img {
@@ -174,8 +198,9 @@ select.selectpicker> option  {
     width: 100%;
     object-fit: contain;
 }
+
  
-/*style statis meta data text*/
+/*style static meta data text*/
 .image-desc {
     font-size: 12px;
     line-height: 1.5;
@@ -190,6 +215,12 @@ select.selectpicker> option  {
     white-space: nowrap;
     width: 100%;
 }
+
+/*stop wrapping text - selector used to expand meta box*/
+.image-desc.expand p {
+    white-space: inherit
+}    
+
 /*reduce font weight of inserted data*/
 .image-desc span {
     font-weight: 400
@@ -262,12 +293,22 @@ select.selectpicker> option  {
 .participate-nav-footer.container {
     position: fixed;
     bottom: 0;
-    padding: 0
+    padding: 0;
+    background-color: #fff
 }
 .participate-nav-footer .btn-group {
     height: 50px;
 }
- 
+ .participate-nav-footer button {
+    border-radius: 0;
+}
+/*add spacer between buttons*/
+.participate-nav-footer .previous-image-btn {
+    margin-right: 1px!important;
+}
+.participate-nav-footer .next-image-btn {
+    margin-left: 1px!important;
+}
 /*end participate page/*
  
  
@@ -324,6 +365,14 @@ select.selectpicker> option  {
     /*temp make nav buttons centralised on desktop*/
     .participate-nav-footer.container {
         position: inherit
+    }
+    /*showdesktop nav buttons*/
+    .desktop-img-nav {
+        display: block!important
+    }
+    /*hide mobile nav buttons*/
+    .participate-nav-footer.container {
+        display: none; 
     }
      
 }
