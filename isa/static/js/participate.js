@@ -446,9 +446,13 @@ $(document).ready( function () {
                         locationText = lat.value + ', ' + long.value;
                     cameraLocationHtml = '<a href=' + locationUrl + '>' + locationText + '</a>';
                 }
+                
+                // spacing between categories
+                var categories = metadata.Categories.value.replace(/\|/g,' | ');
+                
                 $('#image_name').html('<a href=' + "https://commons.wikimedia.org/wiki/" + escapedTitle + ' target="_blank">' + title.replace("File:", "") + '</a>');
                 $('#image_description').text(htmlStrippedDescription);
-                $('#image_categories').text(metadata.Categories.value);
+                $('#image_categories').text(categories);
                 $('#image_author').html(metadata.Artist.value);
                 $('#image_camera_location').html(cameraLocationHtml);
                 $('#image_credit').html(metadata.Credit.value);
