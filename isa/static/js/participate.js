@@ -95,6 +95,7 @@ $(document).ready( function () {
             // Add new depict statement to the UI when user selects result
             var selected = ev.params.data;
             editSession.addDepictStatement(selected.id, selected.text, selected.description)
+            $(this).val(null).trigger('change');
         })
       })();
     
