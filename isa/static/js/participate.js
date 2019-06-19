@@ -436,10 +436,25 @@ $(document).ready( function () {
                 var title = response.query.pages[0].title;
                 var escapedTitle = encodeURIComponent(title);
                 var htmlStrippedDescription = $('<span>' + metadata.ImageDescription.value + '</span>').text();
+                
+                var cameraLocationHtml = '(unknown)',
+                    lat = metadata.GPSLatitude,
+                    long = metadata.GPSLongitude;
+                
+                if (lat && long) {
+                    var locationUrl = 'https://www.openstreetmap.org/?mlat=' + lat.value + '&mlon=' + long.value,
+                        locationText = lat.value + ', ' + long.value;
+                    cameraLocationHtml = '<a href=' + locationUrl + '>' + locationText + '</a>';
+                }
                 $('#image_name').html('<a href=' + "https://commons.wikimedia.org/wiki/" + escapedTitle + ' target="_blank">' + title.replace("File:", "") + '</a>');
-                $('#image_description').html(htmlStrippedDescription);
+                $('#image_description').text(htmlStrippedDescription);
                 $('#image_categories').text(metadata.Categories.value);
                 $('#image_author').html(metadata.Artist.value);
+                $('#image_camera_location').html(cameraLocationHtml);
+                $('#image_credit').html(metadata.Credit.value);
+                $('#image_license').html('<a href=' + metadata.LicenseUrl.value + '>' + metadata.LicenseShortName.value + '</a>');
+                
+                //LicenseUrl.valeu
             } );
         }
 
