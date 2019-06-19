@@ -194,17 +194,9 @@ def contributeToCampaign(id):
     
     # We get current user in sessions's username
     username = session.get('username', None)
-
-    languages = getLanguages()
-    user_pref_languages = get_user_language_preferences(username)
-
-    # We store the caption language preference pairs if they are found in user pref languages
-    caption_language_pairs = []
-    for language in languages:
-        for user_pref_lang in user_pref_languages:
-            if language[0] == user_pref_lang:
-                caption_language_pairs.append(language)
-
+    
+    caption_languages = get_user_language_preferences(username)
+   
     # We select the campign whose id comes into the route
     campaign = Campaign.query.filter_by(id=id).first()
     return render_template('campaign/campaign_entry.html',
@@ -213,8 +205,7 @@ def contributeToCampaign(id):
                            id=id,
                            campaign=campaign,
                            username=username,
-                           user_pref_lang=get_user_language_preferences(username),
-                           caption_language_pairs=caption_language_pairs,
+                           caption_languages=caption_languages,
                            current_user=current_user)
 
 

@@ -144,20 +144,6 @@ $(document).ready( function () {
             });
         }
         
-        // Show input and set active state for buttons
-        this.switchCaptionLanguage = function(language) {
-        
-            // set input visibility
-            $('.caption-input[lang=' + captionLanguage + ']').closest('.input-group').hide();
-            $('.caption-input[lang=' + language + ']').closest('.input-group').show()
-            
-            // set button active state
-            $('.caption-language-btn.active').removeClass("active");
-            $('.caption-language-btn[lang=' + language + ']').addClass("active");
-            
-            captionLanguage = language;
-        }
-        
         this.addDepictStatement = function(item, label, description, isProminent) {
             var statementHtml = getStatementHtml(item, label, description, isProminent);
             $('.depict-tag-group').append(statementHtml);
@@ -640,12 +626,6 @@ $(document).ready( function () {
     $('.caption-input').on('input', function() {
         editSession.captionDataChanged();
     })
-    
-    // Click to change caption language
-    $('.caption-lang-btn-group').on('click', 'button', function() {
-        var language = $(this).attr('lang');
-        editSession.switchCaptionLanguage(language);
-    });
     
     // Click to remove depicts tags
     $('.depict-tag-group').on('click','.depict-tag-btn', function(ev) {

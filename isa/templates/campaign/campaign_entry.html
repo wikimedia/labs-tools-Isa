@@ -1,52 +1,3 @@
-<style type="text/css">
-/*.image-wrapper {
-    display: flex;
-    justify-content: space-evenly;
-}
-.desktop-img-nav {display: none!important}
-
-.desktop-img-nav i {
-    font-size: 3rem;
-    vertical-align: middle;
-}
-.participate-nav-footer button {
-    border-radius: 0;
-}
-    
-.image-overlay {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #ffffff;
-}*/
-/*.img-holder {
-    position: relative;
-    background-color: #444;
-}*/
-    
-./*image-desc.expand p {white-space: inherit}    */
-    
-    
-/*@media (min-width: 992px) {
-body {padding-bottom:0}
-    /*showdesktop nav buttons*/
-/*    .desktop-img-nav {
-        display: block!important
-    }
-    /*hide mobile nav buttons*/
- /*   .participate-nav-footer.container {
-        display: none; 
-    }*/
-}*/
-
-    /*add spacer between buttons*/
-/*    .participate-nav-footer .previous-image-btn {
-        margin-right: 1px!important;
-}
-    .participate-nav-footer .next-image-btn {
-        margin-left: 1px!important;
-}*/
-</style>
 {% extends "main/layout.html" %}
 {% block content%}
 <style> 
@@ -125,42 +76,19 @@ body {padding-bottom:0}
     </div>
     <p>Add a captions for the image</p>	
     </div>
-  <div class="caption-search">
-      
-  
-  <!-- Todo: Generate input groups from user languages on the server. ONLY the lang attribute on the <input> changes -->  
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text">EN</span>
-    </div>
-    <input type="input" class="form-control caption-input" lang="{{caption_language_pairs[0][0]}}" placeholder="write a caption">
-  </div>
-
-    {% for language_pair in caption_language_pairs %}
-      {% if language_pair != caption_language_pairs[0] %}
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">FR</span>
-          </div>
-          <input type="input" class="form-control caption-input" lang="{{language_pair[0]}}" placeholder="write a caption">
-        </div>
-      {% endif %}
-    {% endfor %}
-      
-    </div>
-<!-- we are no longer including these buttons, might needs some of the html later -->
-<!--  <div class="caption-lang-btn-group">
-    <p>{{ _('Change Caption Language') }}</p>
-  <div class="btn-group" role="group" aria-label="">
-    <button class="btn btn-small btn-outline-secondary caption-language-btn active" lang="{{caption_language_pairs[0][0]}}">{{ _(caption_language_pairs[0][1]) }}</button>
-    {% for language_pair in caption_language_pairs %}
-      {% if language_pair != caption_language_pairs[0] %}
-        <button class="btn btn-small btn-outline-secondary caption-language-btn" lang="{{language_pair[0]}}">{{ _(language_pair[1]) }}</button>
-      {% endif %}
-    {% endfor %}	
+      <div class="caption-search">
+        {% for lang_code in caption_languages %}
+          
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">{{lang_code}}</span>
+              </div>
+              <input type="input" class="form-control caption-input" lang="{{lang_code}}" placeholder="write a caption">
+            </div>
+        
+        {% endfor %}
       </div>
-      <button class="btn btn-sm btn-link">{{ _('CHOOSE AVAILABLE LANGUAGES') }}</button>
-    </div>-->
+
   </div>
 
 {% endif %}
