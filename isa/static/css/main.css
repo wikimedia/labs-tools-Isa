@@ -114,35 +114,70 @@ more-stats-btn {
  
 /******** LAYOUT TEMPLATE ***********/
  
-/* Custom hover and active states for nav bar buttons*/
-.nav-link:hover {
-    border-bottom: 3px solid red;
+/*Disable hover state on mobile*/
+ .topnav a.active, .nav-link:hover, #language_select:hover {
+    border-bottom: none;
 }
-.topnav a.active {
+
+   .nav-link:hover, #language_select:hover, .lang:hover{
+    color: rgba(255,255,255,.75)
+}
+/*match active style hover style*/
+.topnav .nav-item.active .nav-link {
     border-bottom: 3px solid red;
+    padding-bottom: 3px;
 }
  
-/*re-style select to match standard wiki style*/
+/*re-style select to match dropdowns*/
 select.selectpicker {
-    display: inline-block;
-    width: 100%;
-    height: calc(2.25rem + 2px);
-    padding: .375rem 1.75rem .375rem .75rem;
-    line-height: 1;
-    vertical-align: middle;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
     border: none;
-    color: white;
+    color: #999c9f;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border-radius: 0;
+    padding: .375rem 1.75rem .375rem 1.75rem;
+    font-weight: 600
 }
- 
-/*match select dropdown bg to nav bar*/
-select.selectpicker> option  {
+.custom-select:focus {
+    box-shadow: none
+}
+/*match dropdowns bg to nav bar*/
+select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     background-color: #343A40;
+    color: #fff;
 }
- 
+
+
+/*add down caret to select*/
+.lang {
+    position: relative;
+    width: fit-content;
+    color: #999c9f;
+}
+.lang::after{
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    top: 12px;
+    left:0px;
+    content: "\f1ab";
+    font-weight: 900;
+   
+    font-size: 0.85rem;
+}
+/*add lang icon to nav item*/
+.lang::before{
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    top: 9px;
+    right: 12px;
+    content: "\f0d7";
+    font-weight: 900;
+   /* color: #999c9f;*/
+    font-size: 0.85rem;
+}
+
 /* style the footer*/
 .footer{
     width: 100%;
@@ -325,7 +360,14 @@ select.selectpicker> option  {
 /*******DESKTOP RESPONSIVE*************/
  
 @media (min-width: 992px) {
- /* GLOBAL STYLE */  
+ 
+/*activate hover styles on desktop*/
+    .nav-link:hover, #language_select:hover{
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+   }
+
+    /* GLOBAL STYLE */  
     /*.page-title hr {width: 50%}*/
      
     /*center about section on desktop*/
