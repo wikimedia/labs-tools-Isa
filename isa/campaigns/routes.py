@@ -166,14 +166,15 @@ def CreateCampaign():
                 status=compute_campaign_status(form.end_date.data),
                 short_description=form.short_description.data,
                 long_description=form.long_description.data,
+                creation_date=datetime.now().date(),
                 depicts_metadata=form.depicts_metadata.data,
                 captions_metadata=form.captions_metadata.data,
                 campaign_type=form.campaign_type.data)
             db.session.add(campaign)
             # commit failed
             if testDbCommitSuccess():
-                flash(gettext('Sorry %(campaign_name)s Could not be created',
-                              campaign_name=form.campaign_name.data), 'danger')
+                flash(gettext('Sorry %(campaign_name)s Could not be created, End Date required',
+                              campaign_name=form.campaign_name.data), 'info')
             else:
                 campaign_stats_path = str(campaign.id)
                 stats_path = os.getcwd() + '/campaign_stats_files/' + campaign_stats_path

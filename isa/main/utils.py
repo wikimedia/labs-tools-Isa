@@ -1,3 +1,4 @@
+import sys
 from isa import db
 from operator import itemgetter
 from isa.models import Contribution
@@ -10,7 +11,8 @@ def testDbCommitSuccess():
     """
     try:
         db.session.commit()
-    except Exception:
+    except Exception as e:
+        print(str(e), file=sys.stderr)
         db.session.rollback()
         # for resetting non-commited .add()
         db.session.flush()

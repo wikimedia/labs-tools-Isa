@@ -20,11 +20,12 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">{{ _('Campaign') }}</th>
-                    <th scope="col">Images</th>
-                    <th scope="col">Participants</th>
-                    <th scope="col">Contributions</th>
+                    <th scope="col">{{ _('Images') }}</th>
+                    <th scope="col">{{ _('Participants') }}</th>
+                    <th scope="col">{{ _('Contributions') }}</th>
                     <th scope="col">{{ _('Start Date') }}</th>
                     <th scope="col">{{ _('End Date') }}</th>
+                    <th scope="col">{{ _('Creation Date') }}</th>
                     <th scope="col">{{ _('Status') }}</th>
                     <th scope="col">Get Started</th>
                 </tr>
@@ -38,6 +39,7 @@
                     <td>50</td>
                     <td><span class="">{{ campaign.start_date.strftime("%d-%m-%y") }}</span></td>
                     <td><span class="">{{ campaign.end_date.strftime("%d-%m-%y") }}</span></td>
+                    <td><span class="">{{ campaign.creation_date.strftime("%d-%m-%y") }}</span></td>
                     <td>
                         {% if campaign.end_date.strftime("%d-%m-%y") < datetime.now().strftime("%d-%m-%y") %}
                         <span class=""> {{ _('Closed') }}</span>

@@ -63,6 +63,8 @@ class Campaign(db.Model):
     short_description = db.Column(db.Text, nullable=False)
     long_description = db.Column(db.Text, nullable=False)
     categories = db.Column(db.Text, nullable=False)
+    creation_date = db.Column(db.Date, nullable=True,
+                              default=datetime.now().strftime('%Y-%m-%d'))
     campaign_type = db.Column(db.Boolean)
     depicts_metadata = db.Column(db.Boolean)
     captions_metadata = db.Column(db.Boolean)
@@ -70,11 +72,12 @@ class Campaign(db.Model):
 
     def __repr__(self):
         # This is what is shown when object is printed
-        return "Campaign( {}, {}, {}, {}, {}, {}, {})".format(
+        return "Campaign( {}, {}, {}, {}, {}, {}, {}, {})".format(
                self.campaign_name,
                self.campaign_manager,
                self.categories,
                self.depicts_metadata,
                self.captions_metadata,
+               self.creation_date,
                self.start_date,
                self.end_date)
