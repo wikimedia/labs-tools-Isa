@@ -635,6 +635,19 @@ $(document).ready( function () {
 
 
     /********* event handlers *********/
+    
+    $('#expand-meta-data').click(function() {
+        $('.image-desc').toggleClass('expand');
+        
+        if ($('.image-desc').hasClass('expand')) {
+            // expanded
+            $('#expand-meta-data').html('<i class="fas fa-caret-up"></i>&nbsp;minimise metadata from commons');
+        } else {
+            // collpased
+            $('#expand-meta-data').html('<i class="fas fa-caret-down"></i>&nbsp;show all metadata from commons');
+        }
+    })
+    
     $('.next-image-btn').click(function(ev) {
         editSession.nextImage();
     })
