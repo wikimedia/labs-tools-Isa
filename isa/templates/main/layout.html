@@ -95,19 +95,18 @@
 </nav>
         
 		
-		<div class="d-flex justify-content-center">
-                {% with messages = get_flashed_messages( with_categories = true) %}
-                    {% if messages %}
-                        {% for category, message in messages %}
-                                <div class="notice border-0 pb-0 col-sm-12 alert alert-{{ category }}">
-                                        {{ message }}
-                                </div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
+{% with messages = get_flashed_messages( with_categories = true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="isa-flash-message notice show fade alert .alert-dismissible alert-{{ category }}">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
             </div>
-        {% block content%} {% endblock content%}
-
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+        
+{% block content%} {% endblock content%}
 
 <!-- Footer -->
 <footer class="footer bg-light">

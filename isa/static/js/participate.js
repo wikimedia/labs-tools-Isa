@@ -114,7 +114,7 @@ $(document).ready( function () {
             unsavedChanges = {depicts: [], captions: []};
             
            
-        
+        this.flash = flashMessage;
         this.nextImage = function () {
             imageIndex = (imageIndex + 1) % (images.length);
             this.imageChanged();
@@ -187,6 +187,7 @@ $(document).ready( function () {
             }
         }
         
+        
         // Posts the current unsaved changes to the server as a JSON string
         this.postContribution = function(editType) {
             
@@ -213,22 +214,23 @@ $(document).ready( function () {
                 data: contributionsData,
                 contentType: 'application/json'
             }).done(function(response) {
-                console.log("Contribution posted - ", response, contributionsData)
-                
                 // Contribution accepted by server, now we can update initial data
                 // Button states will return to disabled
                 // Cancel buttons will now reset to the current image data
                 if (editType === "depicts") {
                     saveInitialStructuredData(getCurrentDepictStatements(), false);
                     me.depictDataChanged();
+                    flashMessage('success', '<strong>Success!</strong> Change to depicted items saved to Wikimedia Commons')
                 }
                 if (editType === "captions") {
                     saveInitialStructuredData(false, getCurrentCaptions());
                     me.captionDataChanged();
+                    flashMessage('success', '<strong>Success!</strong> Change to captions saved to Wikimedia Commons')
                 }
                 
             }).fail( function(error) {
                 console.log("Unable to post contributions to ISA server", error)
+                flashMessage('danger', '<strong>Oops!</strong> Something went wrong, your edits were not saved ')
             })
         }
         
@@ -592,6 +594,26 @@ $(document).ready( function () {
                 $publishBtns = $('.edit-publish-btn-group[edit-type=' + editType + '] button'),
                 areButtonsDisabled = currentChanges.length === 0;
             $publishBtns.prop('disabled', areButtonsDisabled);
+        }
+        
+        // Displays flash messages with fade in/out effect
+        // Needs one element for each type to exist in HTML (e.g. danger, success)
+        // Content is replaced when message is shown
+        var visibleFlashType,
+            flashTimer;
+        function flashMessage(type, content) {
+            // prevent timeout close from previously open message of same type
+            if (visibleFlashType === type) {
+                clearTimeout(flashTimer);
+            }
+            var flashSelector = '.isa-flash-message.alert-' + type;
+            $(flashSelector).html(content);
+            $(flashSelector).slideDown().addClass('show');
+            visibleFlashType = type;
+            flashTimer = setTimeout(function() {
+                $(flashSelector).slideUp().removeClass('show');
+                visibleFlashType = undefined;
+            }, 4000);
         }
     }
     
