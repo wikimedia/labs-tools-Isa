@@ -8,6 +8,7 @@ from flask_login import current_user, login_user, logout_user
 from isa import app, gettext
 from isa.main.utils import testDbCommitSuccess
 from isa.models import User
+from isa.utils.languages import getLanguages
 from isa.users.forms import CaptionsLanguageForm
 
 from isa.users.utils import buildUserPrefLang, get_user_language_preferences
@@ -87,6 +88,10 @@ def logout():
 @users.route('/user-settings', methods=['GET', 'POST'])
 def userSettings():
     username = session.get('username', None)
+    user_language_set = []
+    # This will store the repeating languages
+    repeated_language_values = []
+
     if not username:
         session['next_url'] = request.url
         flash(gettext('Please login to change your language preferences'), 'info')
@@ -99,20 +104,53 @@ def userSettings():
         caption_language_4 = str(request.form.get('language_select_4'))
         caption_language_5 = str(request.form.get('language_select_5'))
         caption_language_6 = str(request.form.get('language_select_6'))
-        user_pref_lang = buildUserPrefLang(caption_language_1, caption_language_2,
-                                           caption_language_3, caption_language_4,
-                                           caption_language_5, caption_language_6)
-        # We select the user with username and update their pref_lang
-        user = User.query.filter_by(username=username).first()
-        user.pref_lang = user_pref_lang
 
-        # commit failed
-        if testDbCommitSuccess():
-            flash(gettext('Captions languages could not be set'), 'danger')
-        else:
-            flash(gettext('Prefered Languages set Successfully'), 'success')
-            # We make sure that the form data does not remain in browser
+        # We now check if the user is trying to submit the same language in form
+
+        user_language_set.append(caption_language_1)
+        user_language_set.append(caption_language_2)
+        user_language_set.append(caption_language_3)
+        user_language_set.append(caption_language_4)
+        user_language_set.append(caption_language_5)
+        user_language_set.append(caption_language_6)
+
+        repeated_languages = []
+        for language in user_language_set:
+            repeat_count = user_language_set.count(language)
+            if repeat_count > 1 and language != '':
+                repeated_languages.append(language)
+        # we now get all the individual repeating languages
+        repeated_languages = list(set(repeated_languages))
+
+        if len(repeated_languages) > 0:
+            # In this case at least on language repeats
+            # We get the language from the the set of languages and tell the user
+
+            language_options = getLanguages()
+            for language_option in language_options:
+                if language_option[0] in repeated_languages:
+                    repeated_language_values.append(language_option[1])
+        if len(repeated_language_values) > 0:
+            # In this case there are repeating languages
+            repeated_languages_text = ' - '.join(repeated_language_values)
+            flash(gettext('Sorry you tried to enter %(rep_languages)s multiple times',
+                          rep_languages=repeated_languages_text), 'danger')
             return redirect(url_for('users.userSettings'))
+        else:
+            user_pref_lang = buildUserPrefLang(caption_language_1, caption_language_2,
+                                               caption_language_3, caption_language_4,
+                                               caption_language_5, caption_language_6)
+            # We select the user with username and update their pref_lang
+            user = User.query.filter_by(username=username).first()
+            user.pref_lang = user_pref_lang
+
+            # commit failed
+            if testDbCommitSuccess():
+                flash(gettext('Captions languages could not be set'), 'danger')
+            else:
+                flash(gettext('Prefered Languages set Successfully'), 'success')
+                # We make sure that the form data does not remain in browser
+                return redirect(url_for('users.userSettings'))
     elif request.method == 'GET':
         user_langs = User.query.filter_by(username=username).first().pref_lang.split(',')
         captions_lang_form.language_select_1.data = str(user_langs[0])
