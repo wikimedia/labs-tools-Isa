@@ -350,6 +350,12 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     z-index: 1;
     position: sticky;
     top:0px;
+    margin-bottom: 0px;
+}
+
+/*client side messsages need to be hidden initially*/
+.client-flash-message {
+    display: none;
 }
 
 /*end participate page/*

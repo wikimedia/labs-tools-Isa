@@ -9,8 +9,8 @@
 </style>
 
 <!-- Flash messages displayed and populated via JavaScript -->
-<div class="isa-flash-message notice alert alert-success fade"></div>
-<div class="isa-flash-message notice alert alert-danger fade"></div>
+<div class="isa-flash-message client-flash-message notice alert alert-success fade"></div>
+<div class="isa-flash-message client-flash-message notice alert alert-danger fade"></div>
 
 <div class="container px-0"> <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: Home Page</a> </div>
 
