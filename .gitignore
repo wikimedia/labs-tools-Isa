@@ -1,7 +1,9 @@
 env/
+node_modules/
 isa/__pycache__/
 .vscode/
 __pycache__/
+isa/static/js/
 isa/static/lib/
 isa/database.db
 isa/test_db.py
