@@ -50,9 +50,9 @@
             </div>
         </div>
       <div class="btn-group">
-          <button type="submit" class="btn btn-danger">Undo Changes</button>
-          {{ captions_lang_form.submit(class="btn btn-primary", value=_('Save')) }}
-            
+            <a id="get_started_btn" href="{{url_for('users.userSettings') }}" class="btn btn-danger" >{{ _('Undo Changes') }}</a> &nbsp;
+            {{ captions_lang_form.submit(class="btn btn-primary", value=_('Save')) }}
+
        </div>
     </form>
 </div>
