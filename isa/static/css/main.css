@@ -1,5 +1,17 @@
 /* GLOBAL STYLES */
  
+/*change btn-primary color*/
+.btn-primary {
+    background-color:#006699;
+    border-color: #006699;
+}
+/*change btn-primary disabled state*/
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
 /* style the page titles and page header*/
 .page-header h1 {
     font-family: LinuxBiolinumOBold;
@@ -21,12 +33,24 @@
     text-align: justify
 }
      
-.notice {
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-}   
- 
+
+/*Style and position all pop-up alerts*/
+.isa-flash-message {
+    z-index: 1;
+    position: sticky;
+    top:0px;
+    margin-bottom: 0px;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+/*force server side alerts are visible*/
+.isa-flash-message.show {
+    display: block;
+}
+
+
 /******** errors ********/
 .error-template {padding: 40px 15px;text-align: center;}
 .error-actions {margin-top:15px;margin-bottom:15px;}
@@ -271,8 +295,14 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     position: absolute;
     right: 0;
     top: 0;
-}   
+}
+/*make cancel changed button red*/
+.cancel-edits-btn {
+    color: #990000
+}
+
 /*adjust padding and spacing*/ 
+.container.edit-box.active {border-color: #007bff}
 .container.edit-box {
     margin-top: 10px;
     padding: 10px;
@@ -295,17 +325,34 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     margin-top: 3px;
     margin-right: 10px;
     display: inline-block;
-    background-color: #4391df!important;
+    background-color: #006699!important;
     border-radius: 5px;
     padding: 5px;
       
 }
 .depict-tag-item button {
-        white-space: initial;
-    }   
+    white-space: initial;
+}   
 .depict-tag-label btn {
     padding: 4px 1px
 }
+.depict-tag-label-text{
+    font-size: 1rem
+}
+.depict-tag-qvalue{
+    font-size: 80%;
+    font-weight: 400;
+    padding: .2em;
+}
+.prominent-btn {
+    background-color: transparent;
+    color: #fff;
+    border: thin solid!important;
+ }
+.prom-help i, .prominent-btn.active, .prominent-btn:hover {
+    color: #ffc107!important;
+}
+
 .depict-tag-btn {
     padding: 0;
     display: flex;
@@ -319,8 +366,15 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     align-self: center;
 }
 .depict-tag-btn button {
-    color: red;
+    color: #990000;
     padding: 0;
+}
+.depict-tag-btn button:hover, .cancel-edits-btn:hover{
+    color: red!important
+}
+/*keep hidden till needed*/
+.prom-help {
+    display: none
 }
 /* end make depict tag*/
  
@@ -345,19 +399,28 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     margin-left: 1px!important;
 }
 
-/*flash messages*/
-.isa-flash-message {
-    z-index: 1;
-    position: sticky;
-    top:0px;
-    margin-bottom: 0px;
+/*Fix width and height of bootstrap input prepend*/
+.input-group>.input-group-prepend>.input-group-text {
+    min-width: 45px;
+    height: 38px;
 }
 
-/*client side messsages need to be hidden initially*/
-.client-flash-message {
-    display: none;
+/*match select2 search box to input box*/
+.select2-container--default .select2-selection--single {
+     border: 1px solid #ced4da;
+     border-radius: 0 4px 4px 0;
 }
-
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: .375rem .75rem;
+    line-height: 1.5;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    font-size: 1rem;
+    color: #495057;
+}
+.select2-container .select2-selection--single {
+    height: 38px;
+}
 /*end participate page/*
  
  

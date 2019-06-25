@@ -478,8 +478,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
 
     function getStatementHtml(item, label, description, isProminent) {
         var isProminentButtonHtml = isProminent ?
-            '<button class="btn btn-sm btn-warning prominent-btn active" title="Mark this depicted item as NOT prominent">Prominent</button>' :
-            '<button class="btn btn-sm btn-warning prominent-btn" title="Mark this depicted item as prominent">Prominent</button>'
+            '<button class="btn btn-sm prominent-btn active" title="Mark this depicted item as NOT prominent"><i class="fas fa-flag"></i></button>' :
+            '<button class="btn btn-sm  prominent-btn" title="Mark this depicted item as prominent"><i class="fas fa-flag"></i></button>'
         return [
             '<div class="depict-tag-item" title="' + description + '">',
             '<div class="depict-tag-label">', 

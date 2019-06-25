@@ -1,16 +1,14 @@
 {% extends "main/layout.html" %}
 {% block content%}
 <style> 
-    body {padding-bottom: 50px}
-
-    @media (min-width: 992px) {
-    body {padding-bottom:0}
-    }
+body {padding-bottom: 50px}
+@media (min-width: 992px) {
+body {padding-bottom:0}
 </style>
 
 <!-- Flash messages displayed and populated via JavaScript -->
-<div class="isa-flash-message client-flash-message notice alert alert-success fade"></div>
-<div class="isa-flash-message client-flash-message notice alert alert-danger fade"></div>
+<div class="isa-flash-message alert alert-success fade"></div>
+<div class="isa-flash-message alert alert-danger fade"></div>
 
 <div class="container px-0"> <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: Home Page</a> </div>
 
@@ -55,25 +53,28 @@
     <div class="depict-tag-group"> 
         <!-- populated by JavaScript --> 
     </div>
+    <p class="small text-muted my-1 prom-help"><i class="fas fa-flag mr-2"></i>Mark as Prominent</p>
 </div>
 {% endif %}
 
 {% if campaign.captions_metadata %}
 <div class="container edit-box">
     <div class="edit-box-header">
-        <h4>{{ _('Caption') }}</h4>
+        <h4>{{ _('Captions') }}</h4>
         <div edit-type="captions" class="edit-publish-btn-group">
             <button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
             <button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
         </div>
-        <p>Add a captions for the image</p>
+        <p>Add a caption for the image</p>
     </div>
     <div class="caption-search"> {% for lang_code in caption_languages %}
         <div class="input-group mb-3">
             <div class="input-group-prepend"> <span class="input-group-text">{{lang_code}}</span> </div>
             <input type="input" class="form-control caption-input" lang="{{lang_code}}" placeholder="write a caption">
         </div>
-        {% endfor %} </div>
+        {% endfor %}
+    </div>
+    <p class="small text-muted my-1">Add or change available languages in Caption Languages</p>
 </div>
 {% endif %}
 <div class="participate-nav-footer container">
