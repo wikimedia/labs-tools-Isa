@@ -1,15 +1,15 @@
-# French translations for PROJECT.
+# French translations for ISA.
 # Copyright (C) 2019 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
+# This file is distributed under the same license as the ISA project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-30 16:35+0100\n"
-"PO-Revision-Date: 2019-05-30 16:41+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Project-Id-Version: ISA 0.1.0\n"
+"Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
+"POT-Creation-Date: 2019-07-01 10:22+0100\n"
+"PO-Revision-Date: 2019-07-01 07:49+0100\n"
+"Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
@@ -18,404 +18,631 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: campaigns/routes.py:29 templates/campaign/campaigns.html:6
-#: templates/main/layout.html:41
+#: campaigns/routes.py:34 templates/campaign/campaigns.html:5
+#: templates/main/layout.html:45
 msgid "Campaigns"
-msgstr ""
+msgstr "Campagnes"
 
-#: campaigns/routes.py:44
+#: campaigns/routes.py:49
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr ""
+msgstr "La campagne avec l'id% (id) s n'existe pas"
 
-#: campaigns/routes.py:86
+#: campaigns/routes.py:129
 msgid "Campaign - "
-msgstr ""
+msgstr "Campagne - "
 
-#: campaigns/routes.py:107
+#: campaigns/routes.py:153
 msgid "You need to Login to create a campaign"
-msgstr ""
+msgstr "Vous devez vous connecter pour créer une campagne"
 
-#: campaigns/routes.py:130
+#: campaigns/routes.py:176
 #, python-format
-msgid "Sorry %(campaign_name)s Could not be created"
-msgstr ""
+msgid "Sorry %(campaign_name)s Could not be created, End Date required"
+msgstr "Désolé %(campaign_name)s n'a pas pu être créé, Date de fin requise"
 
-#: campaigns/routes.py:133
+#: campaigns/routes.py:183
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr ""
-
-#: campaigns/routes.py:136
-msgid "Create a campaign"
-msgstr ""
-
-#: campaigns/routes.py:178 campaigns/routes.py:209
-msgid "You need to login to participate"
-msgstr ""
+msgstr "wla Campagne créée!"
 
 #: campaigns/routes.py:186
-msgid "please add at least a depict statement"
-msgstr ""
+msgid "Create a campaign"
+msgstr "Créer une campagne"
 
-#: campaigns/routes.py:201 campaigns/routes.py:228
-msgid "Sorry edit could not be registered"
-msgstr ""
-
-#: campaigns/routes.py:203 campaigns/routes.py:230
-msgid "Thanks for Your contribution"
-msgstr ""
-
-#: campaigns/routes.py:234
+#: campaigns/routes.py:204
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr ""
+msgstr "%(campaign_name)s - Contribuer"
 
-#: campaigns/routes.py:253
+#: campaigns/routes.py:219
 msgid "You need to Login to update a campaign"
-msgstr ""
+msgstr "Vous devez vous connecter pour mettre à jour une campagne."
 
-#: campaigns/routes.py:271
+#: campaigns/routes.py:238
 msgid "Please enter an End Date for this Campaign!"
-msgstr ""
+msgstr "Veuillez entrer une date de fin pour cette campagne!"
 
-#: campaigns/routes.py:273
+#: campaigns/routes.py:240
 msgid "Update Succesfull !"
-msgstr ""
+msgstr "Mise à jour réussie !"
 
-#: campaigns/routes.py:289
+#: campaigns/routes.py:248
+#, python-format
+msgid ""
+"You cannot update this campaign, Contact Manager "
+"User:%(campaign_manager)s "
+msgstr ""
+"Vous ne pouvez pas mettre à jour cette campagne, Contacter le gérant "
+"User:%(campaign_manager)s"
+
+#: campaigns/routes.py:261
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr ""
+msgstr "Booo! %(campaign_name)s Impossible de mettre à jour!"
 
-#: campaigns/routes.py:292
+#: campaigns/routes.py:264
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr ""
+msgstr "%(campaign_name)s - Mise à jour"
 
-#: campaigns/routes.py:308
-msgid "Sorry! This Data is available for logged in Users only"
-msgstr ""
+#: campaigns/routes.py:292
+msgid "You need to login to participate"
+msgstr "Vous devez vous connecter pour participer"
 
-#: templates/campaign/campaign.html:8
+#: templates/campaign/campaign.html:13
 msgid "View images from"
-msgstr ""
+msgstr "Voir les photos des pays suivants"
 
-#: templates/campaign/campaign.html:10
+#: templates/campaign/campaign.html:15
 msgid "All countries"
-msgstr ""
+msgstr "Tous les pays"
 
-#: templates/campaign/campaign.html:35
-msgid "START DATE"
-msgstr ""
+#: templates/campaign/campaign.html:20
+msgid "Get Started"
+msgstr "C'est parti !"
+
+#: templates/campaign/campaign.html:27
+msgid "Campaign Progress"
+msgstr "Progression de la campagne"
+
+#: templates/campaign/campaign.html:30
+msgid "Editors"
+msgstr "Éditeurs"
+
+#: templates/campaign/campaign.html:31 templates/campaign/campaigns.html:25
+msgid "Contributions"
+msgstr "Contributions"
 
 #: templates/campaign/campaign.html:36
-msgid "END DATE"
-msgstr ""
+msgid "Top Contributors"
+msgstr "Meilleur.es. participant.e.s"
 
 #: templates/campaign/campaign.html:40
-msgid "Campaign Progress"
-msgstr ""
+msgid "Contributor"
+msgstr "Participant.e"
 
-#: templates/campaign/campaign.html:47
-msgid "Contributions"
-msgstr ""
-
-#: templates/campaign/campaign.html:53
-msgid "Editors"
-msgstr ""
+#: templates/campaign/campaign.html:41 templates/campaign/campaign.html:72
+#: templates/campaign/campaign.html:115
+msgid "Images Improved"
+msgstr "Images améliorées"
 
 #: templates/campaign/campaign.html:59
-msgid "Top Contributors"
-msgstr ""
-
-#: templates/campaign/campaign.html:64
-msgid "Contributor"
-msgstr ""
-
-#: templates/campaign/campaign.html:65 templates/campaign/campaign.html:96
-#: templates/campaign/campaign.html:126
-msgid "Images Improved"
-msgstr ""
-
-#: templates/campaign/campaign.html:81
-msgid "Sorry"
-msgstr ""
-
-#: templates/campaign/campaign.html:83
 msgid "No partcipants has contributed to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:90
+#: templates/campaign/campaign.html:67
 msgid "Most improved Countries"
-msgstr ""
+msgstr "Pays améliorés"
 
-#: templates/campaign/campaign.html:95
+#: templates/campaign/campaign.html:71
 msgid "Country"
-msgstr ""
+msgstr "Pays"
 
-#: templates/campaign/campaign.html:111
-msgid "Download Complete Stats"
-msgstr ""
+#: templates/campaign/campaign.html:90
+msgid "There is no data available yet for this campaign"
+msgstr "Il n'y a pas encore de données disponibles pour cette campagne"
 
-#: templates/campaign/campaign.html:121
+#: templates/campaign/campaign.html:98
+msgid "Download Contrib Stats"
+msgstr "Télécharger les statistiques de contrib"
+
+#: templates/campaign/campaign.html:99
+msgid "Download Country Stats"
+msgstr "Télécharger les statistiques de pays"
+
+#: templates/campaign/campaign.html:107
 msgid "My Contributions"
-msgstr ""
+msgstr "Mes contributions"
 
-#: templates/campaign/campaign.html:125
+#: templates/campaign/campaign.html:114
 msgid "Rank"
-msgstr ""
+msgstr "Rang"
 
-#: templates/campaign/campaign.html:145
-msgid "More about"
-msgstr ""
+#: templates/campaign/campaign.html:133
+msgid "More About This Campaign"
+msgstr "Plus sur cette campagne"
 
-#: templates/campaign/campaign.html:150
-msgid "Maanager"
-msgstr ""
+#: templates/campaign/campaign.html:135
+msgid "START DATE"
+msgstr "Date de début"
+
+#: templates/campaign/campaign.html:136
+msgid "END DATE"
+msgstr "Date de fin"
+
+#: templates/campaign/campaign.html:142
+msgid "Edit Campaign"
+msgstr "Modifier la campagne"
+
+#: templates/campaign/campaign_entry.html:13
+msgid "Home Page"
+msgstr "accueil"
+
+#: templates/campaign/campaign_entry.html:17
+#: templates/campaign/campaign_entry.html:82
+msgid "PREV IMAGE"
+msgstr "Précédente"
+
+#: templates/campaign/campaign_entry.html:19
+msgid "Own work"
+msgstr "Auteur-trice"
+
+#: templates/campaign/campaign_entry.html:21
+#: templates/campaign/campaign_entry.html:83
+msgid "NEXT IMAGE"
+msgstr "Suivante"
+
+#: templates/campaign/campaign_entry.html:26
+msgid "File"
+msgstr "Fichier"
+
+#: templates/campaign/campaign_entry.html:27
+msgid "Description"
+msgstr "Description"
+
+#: templates/campaign/campaign_entry.html:28
+#: templates/campaign/create_campaign.html:88
+#: templates/campaign/update_campaign.html:88
+msgid "Categories"
+msgstr "Catégories"
+
+#: templates/campaign/campaign_entry.html:29
+msgid "Camera Location"
+msgstr "Géolocalisation"
+
+#: templates/campaign/campaign_entry.html:32
+msgid "show all metadata from commons"
+msgstr "Afficher toutes les metadata"
+
+#: templates/campaign/campaign_entry.html:39
+#: templates/campaign/create_campaign.html:122
+#: templates/campaign/update_campaign.html:122
+msgid "Depicts"
+msgstr "Mots-clés"
+
+#: templates/campaign/campaign_entry.html:41
+#: templates/campaign/campaign_entry.html:65
+msgid "Cancel"
+msgstr "Annuler"
 
 #: templates/campaign/campaign_entry.html:42
-msgid "File"
-msgstr ""
-
-#: templates/campaign/campaign_entry.html:43
-msgid "Description"
-msgstr ""
+#: templates/campaign/campaign_entry.html:66
+#: templates/users/user_settings.html:54
+msgid "Save"
+msgstr "Publier"
 
 #: templates/campaign/campaign_entry.html:44
-#: templates/campaign/create_campaign.html:82
-#: templates/campaign/update_campaign.html:80
-msgid "Categories"
+msgid "Search for things you see in the image"
+msgstr "Lister ce que vous voyez dans cette image"
+
+#: templates/campaign/campaign_entry.html:56
+msgid "Mark as Prominent"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:45
-msgid "Author"
-msgstr ""
+#: templates/campaign/campaign_entry.html:63
+#: templates/campaign/create_campaign.html:137
+#: templates/campaign/update_campaign.html:137
+msgid "Captions"
+msgstr "Légendes"
 
-#: templates/campaign/campaign_entry.html:48
-msgid "show all metadata from commons"
-msgstr ""
+#: templates/campaign/campaign_entry.html:68
+msgid "Add a caption for the image"
+msgstr "Ajouter une légende à l'image"
 
-#: templates/campaign/campaign_entry.html:55
-#: templates/campaign/create_campaign.html:119
-msgid "Depicts"
-msgstr ""
+#: templates/campaign/campaign_entry.html:73
+msgid "write a caption"
+msgstr "écrire une légende"
 
-#: templates/campaign/campaign_entry.html:66
-msgid "Add new"
-msgstr ""
+#: templates/campaign/campaign_entry.html:77
+msgid "Add or change available languages in Caption Languages"
+msgstr "Changer la langue de la légende"
 
-#: templates/campaign/campaign_entry.html:101
-msgid "Caption"
+#: templates/campaign/campaigns.html:7
+msgid ""
+"On this page are the curated campaigns that are currently running as part"
+" of the ISA tool."
 msgstr ""
+"Sur cette page, vous trouverez les campagnes organisées en cours "
+"d'exécution dans le cadre de l'outil ISA."
 
-#: templates/campaign/campaign_entry.html:124
-msgid "Change Caption Language"
+#: templates/campaign/campaigns.html:7
+msgid ""
+"Click on the name of a campaign to get started and add structured data to"
+" an image."
 msgstr ""
+"Cliquez sur le nom d'une campagne pour commencer et ajouter des données "
+"structurées à une image."
 
-#: templates/campaign/campaign_entry.html:124
-msgid "CHOOSE AVAILABLE LANGUAGES"
+#: templates/campaign/campaigns.html:7
+msgid ""
+"You can access information on the previous Campaigns in the Archive "
+"section."
 msgstr ""
+"Vous pouvez accéder aux informations sur les campagnes précédentes dans "
+"la section Archives."
 
-#: templates/campaign/campaign_entry.html:130
-msgid "English"
-msgstr ""
+#: templates/campaign/campaigns.html:10 templates/main/home.html:25
+msgid "Create a new campaign using this tool"
+msgstr "Créer une nouvelle campagne"
 
-#: templates/campaign/campaign_entry.html:133
-msgid "French"
-msgstr ""
-
-#: templates/campaign/campaign_entry.html:136
-msgid "German"
-msgstr ""
-
-#: templates/campaign/campaign_entry.html:139
-msgid "Spanish"
-msgstr ""
-
-#: templates/campaign/campaign_entry.html:151
-msgid "Cancel"
-msgstr ""
-
-#: templates/campaign/campaign_entry.html:154
-msgid "Save"
-msgstr ""
-
-#: templates/campaign/campaigns.html:14
+#: templates/campaign/campaigns.html:16
 msgid "Ongoing Campaigns"
-msgstr ""
-
-#: templates/campaign/campaigns.html:21
-msgid "Campaign"
-msgstr ""
+msgstr "Campagnes"
 
 #: templates/campaign/campaigns.html:22
-#: templates/campaign/create_campaign.html:46
-#: templates/campaign/update_campaign.html:44
-msgid "Start Date"
-msgstr ""
+msgid "Campaign"
+msgstr "Campagne"
 
 #: templates/campaign/campaigns.html:23
-#: templates/campaign/create_campaign.html:62
-#: templates/campaign/update_campaign.html:60
-msgid "End Date"
-msgstr ""
+msgid "Images"
+msgstr "Images"
 
 #: templates/campaign/campaigns.html:24
+msgid "Participants"
+msgstr "Participant.e.s"
+
+#: templates/campaign/campaigns.html:26
+#: templates/campaign/create_campaign.html:54
+#: templates/campaign/update_campaign.html:54
+msgid "Start Date"
+msgstr "Date de début"
+
+#: templates/campaign/campaigns.html:27
+#: templates/campaign/create_campaign.html:69
+#: templates/campaign/update_campaign.html:69
+msgid "End Date"
+msgstr "Date de fin"
+
+#: templates/campaign/campaigns.html:28
+msgid "Creation Date"
+msgstr "Date de création"
+
+#: templates/campaign/campaigns.html:29
 msgid "Status"
-msgstr ""
+msgstr "Statut"
 
-#: templates/campaign/campaigns.html:54
+#: templates/campaign/campaigns.html:45
 msgid "Closed"
-msgstr ""
+msgstr "Fermé"
 
-#: templates/campaign/campaigns.html:56
+#: templates/campaign/campaigns.html:47
 msgid "Open"
-msgstr ""
+msgstr "Ouvert"
+
+#: templates/campaign/campaigns.html:50
+msgid "Go to Campaign"
+msgstr "visiter"
 
 #: templates/campaign/create_campaign.html:4
 msgid "Create new Campaign"
-msgstr ""
+msgstr "Créer une nouvelle campagne"
 
-#: templates/campaign/create_campaign.html:7
+#: templates/campaign/create_campaign.html:6
 msgid "Fill in the form below to create you campaign"
-msgstr ""
+msgstr "Remplissez le formulaire ci-dessous pour créer votre campagne"
 
-#: templates/campaign/create_campaign.html:7
-#: templates/campaign/update_campaign.html:7
+#: templates/campaign/create_campaign.html:6
+#: templates/campaign/update_campaign.html:6
 msgid "Fields marked with * are mandatory"
-msgstr ""
+msgstr "Les champs marqués d'une * sont obligatoires"
 
-#: templates/campaign/create_campaign.html:13
-#: templates/campaign/update_campaign.html:12
+#: templates/campaign/create_campaign.html:15
+#: templates/campaign/update_campaign.html:15
 msgid "Campaign Name"
-msgstr ""
+msgstr "Nom de la campagne"
 
-#: templates/campaign/create_campaign.html:29
-#: templates/campaign/update_campaign.html:27
+#: templates/campaign/create_campaign.html:34
+#: templates/campaign/update_campaign.html:34
 msgid "Short description of Campaign"
-msgstr ""
+msgstr "Description courte de la campagne"
 
-#: templates/campaign/create_campaign.html:101
-#: templates/campaign/update_campaign.html:99
+#: templates/campaign/create_campaign.html:66
+#: templates/campaign/update_campaign.html:66
+msgid "Set campaign start date"
+msgstr "Définir la date de début de la campagne"
+
+#: templates/campaign/create_campaign.html:81
+#: templates/campaign/update_campaign.html:81
+msgid "Set campaign end date"
+msgstr "Définir la date de fin de la campagne"
+
+#: templates/campaign/create_campaign.html:103
+#: templates/campaign/update_campaign.html:103
+msgid "Choose categories to use in the campaign"
+msgstr "Choisissez les catégories à utiliser dans la campagne"
+
+#: templates/campaign/create_campaign.html:107
+#: templates/campaign/update_campaign.html:107
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
-#: templates/campaign/create_campaign.html:102
-#: templates/campaign/update_campaign.html:100
+#: templates/campaign/create_campaign.html:108
+#: templates/campaign/update_campaign.html:108
 msgid "Depth"
-msgstr ""
+msgstr "Profondeur"
 
-#: templates/campaign/create_campaign.html:115
-#: templates/campaign/update_campaign.html:115
-msgid "Metadata to collect in the Cmapign"
-msgstr ""
+#: templates/campaign/create_campaign.html:119
+#: templates/campaign/update_campaign.html:119
+msgid "Metadata to collect in the Campaign"
+msgstr "Données collectées pendant la campagne"
 
-#: templates/campaign/create_campaign.html:135
-#: templates/campaign/update_campaign.html:135
-msgid "Captions"
-msgstr ""
+#: templates/campaign/create_campaign.html:134
+#: templates/campaign/update_campaign.html:134
+msgid "Select to collect Depicts metadata in the campiagn"
+msgstr "Sélectionner pour collecter les métadonnées Dépeint dans la campagne"
 
-#: templates/campaign/create_campaign.html:157
-#: templates/campaign/update_campaign.html:157
+#: templates/campaign/create_campaign.html:149
+#: templates/campaign/update_campaign.html:149
+msgid "Select to collect Caption metadata in the campiagn"
+msgstr ""
+"Sélectionnez cette option pour collecter les métadonnées de légende dans "
+"la campagne."
+
+#: templates/campaign/create_campaign.html:156
+#: templates/campaign/update_campaign.html:156
 msgid "This is a Wiki Loves Campaign"
-msgstr ""
+msgstr "Ceci est une campaign Wiki Loves"
 
-#: templates/campaign/create_campaign.html:175
-msgid "Long description of Campaign(full about info)"
-msgstr ""
+#: templates/campaign/create_campaign.html:168
+msgid "Select if this is a Wiki Loves Campaign (important) "
+msgstr "Sélectionnez s'il s'agit d'une campagne Wiki Loves (important)"
 
-#: templates/campaign/create_campaign.html:189
+#: templates/campaign/create_campaign.html:174
+#: templates/campaign/update_campaign.html:174
+msgid "Long description of Campaign (full about info)"
+msgstr "Description longue de la campagne (infos complète)"
+
+#: templates/campaign/create_campaign.html:192
+#: templates/campaign/update_campaign.html:192
 msgid "Publish Campaign"
-msgstr ""
+msgstr "Publier"
 
 #: templates/campaign/update_campaign.html:4
 msgid "Update Campaign Details"
-msgstr ""
+msgstr "Mettre à jour les détails de la campagne"
 
-#: templates/campaign/update_campaign.html:7
+#: templates/campaign/update_campaign.html:6
 msgid "You are updating"
-msgstr ""
+msgstr "Vous mettez à jour"
 
-#: templates/campaign/update_campaign.html:175
-msgid "Long description of Campaign(full about info"
-msgstr ""
-
-#: templates/campaign/update_campaign.html:189
-msgid "Publish Changes"
-msgstr ""
+#: templates/campaign/update_campaign.html:168
+msgid "Select if this is a Wiki Loves Campaign (important)"
+msgstr "Sélectionnez s'il s'agit d'une campagne Wiki Loves (important)"
 
 #: templates/errors/403.html:8
-msgid "Permission Denied"
-msgstr ""
+msgid "Server Under maintenance"
+msgstr "Serveur en maintenance"
 
 #: templates/errors/403.html:10
-msgid "Please check that You have the rights to perform this task"
-msgstr ""
+msgid "Please check contact support"
+msgstr "S'il vous plaît Contactez le support"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr ""
+msgstr "Accueil"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr ""
+msgstr "Contactez le support"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr ""
+msgstr "Page non trouvée"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "Nous sommes incapables de trouver la page que vous recherchez"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr ""
+msgstr "Accueil"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr ""
+msgstr "Quelque chose s'est mal passé"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "Isa pourrait être en cours de maintenance"
 
-#: templates/main/home.html:8
+#: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "Ajoutez facilement des informations sur les images sur Wikimedia Commons"
 
-#: templates/main/layout.html:36
+#: templates/main/home.html:14
+msgid ""
+"is a fun tool aimed at the metadata enhancement of images contributed to "
+"the various Wiki Loves competitions on Wikimedia Commons"
+msgstr ""
+"est un outil amusant visant à améliorer les métadonnées des images "
+"contribuant à les différents concours Wiki Loves sur Wikimedia Commons"
+
+#: templates/main/home.html:14
+msgid ""
+"It is being created as a way to quickly add structured information to a "
+"collection of pre-defined images."
+msgstr ""
+"Il est créé pour ajouter rapidement des informations structurées à une "
+"collection d’images prédéfinies"
+
+#: templates/main/home.html:15
+msgid "EXPLORE CAMPAIGNS"
+msgstr "Liste des campagnes"
+
+#: templates/main/home.html:18
+msgid "About This Tool"
+msgstr "À propos d'ISA"
+
+#: templates/main/home.html:19
+msgid ""
+"In the long run, the intent behind the tool is to increase the use of the"
+" knowledge that resides within each image."
+msgstr ""
+"À long terme, l'objectif de l'outil est d'accroître l'utilisation des "
+"connaissances contenues dans chaque image."
+
+#: templates/main/home.html:19
+msgid ""
+"The tool is aimed to assist in the usefulness and information of images "
+"donated to the Wiki Loves competitions."
+msgstr ""
+"L’outil a pour but d’aider à l’utilité et à l’information des images "
+"données au concours Wiki Loves"
+
+#: templates/main/home.html:20
+msgid ""
+"It is initially being built to assist in the descriptions of Wiki Loves "
+"Africa images"
+msgstr ""
+"Il est initialement construit pour aider dans les descriptions de Wiki "
+"Loves Images d'Afrique"
+
+#: templates/main/home.html:20
+msgid ""
+"but is being specifically modelled to be useful to all of the Wiki Loves "
+"competitions and beyond."
+msgstr ""
+"mais est spécialement conçu pour être utile à toutes les compétitions de "
+"Wiki Loves et au-delà."
+
+#: templates/main/home.html:21
+msgid "The tool is also designed to be a host of small competitions."
+msgstr "L'outil est également conçu pour être une foule de petites compétitions."
+
+#: templates/main/home.html:22
+msgid ""
+"ISA is a collaboration between Wiki In Africa, Histropedia and the "
+"Structured Data on Commons project."
+msgstr ""
+"ISA est une collaboration entre Wiki In Africa, Histropedia et le projet "
+"Structured Data on Commons."
+
+#: templates/main/home.html:22
+msgid ""
+" ISA is not only an acronym for Information Structured Acceleration, but "
+"is also a chiShona language word for 'put ' or 'place' "
+msgstr ""
+"ISA n'est pas seulement un acronyme pour Information Structured "
+"Acceleration, mais est également un mot chiShona pour «mettre» ou "
+"«placer»"
+
+#: templates/main/layout.html:40
 msgid "Home"
-msgstr ""
+msgstr "Accueil"
 
-#: templates/main/layout.html:47
+#: templates/main/layout.html:51
 msgid "Create New"
-msgstr ""
+msgstr "Nouvelle Campagne"
 
-#: templates/main/layout.html:53
+#: templates/main/layout.html:57
 msgid "Help"
-msgstr ""
+msgstr "Aide"
+
+#: templates/main/layout.html:74 templates/users/user_settings.html:6
+msgid "Caption Languages"
+msgstr "La langue des légendes"
 
 #: templates/main/layout.html:81 templates/main/layout.html:85
 msgid "Logout"
-msgstr ""
+msgstr "Se déconnecter"
 
 #: templates/main/layout.html:89
 msgid "Login"
-msgstr ""
+msgstr "Se connecter"
 
-#: users/routes.py:46
+#: templates/main/layout.html:114
+msgid "ISA tool"
+msgstr "Outil ISA"
+
+#: templates/main/layout.html:115
+msgid ""
+"was developed as a collaboration between Wiki In Africa, Histropedia and "
+"the Structured Data on Commons project."
+msgstr ""
+"a été développé comme une collaboration entre Wiki In Africa, Histropedia"
+" et le projet Structured Data on Commons."
+
+#: templates/main/layout.html:115
+msgid "It is running on"
+msgstr "il est hébergé sur"
+
+#: templates/main/layout.html:117
+msgid "and is subject to the"
+msgstr "et est soumis à la"
+
+#: templates/main/layout.html:119
+msgid "ISA is published under"
+msgstr "ISA est publié sous"
+
+#: templates/main/layout.html:121
+msgid "Content added through the tool to Wikimedia Commons is released under"
+msgstr "Le contenu ajouté via l'outil à Wikimedia Commons est publié sous"
+
+#: templates/users/user_settings.html:9
+msgid "Select upto 6 languages for captions"
+msgstr "Choisissez jusqu'à 6 langues d'affichage pour les légendes"
+
+#: templates/users/user_settings.html:53
+msgid "Undo Changes"
+msgstr "Annuler"
+
+#: users/routes.py:50
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "Le rappel OAuth a échoué. Les cookies sont-ils désactivés?"
 
-#: users/routes.py:67
+#: users/routes.py:71
 #, python-format
-msgid " Welcome  %(username)s!"
-msgstr ""
+msgid "Welcome  %(username)s!"
+msgstr "Bienvenu.e %(username)s!"
 
-#: users/routes.py:80
+#: users/routes.py:84
 msgid "See you next time!"
-msgstr ""
+msgstr "À la prochaine!"
 
+#: users/routes.py:97
+msgid "Please login to change your language preferences"
+msgstr "Veuillez vous connecter pour modifier vos préférences de langue"
+
+#: users/routes.py:136
+#, python-format
+msgid "Sorry you tried to enter %(rep_languages)s multiple times"
+msgstr "Désolé, vous avez essayé d'entrer %(rep_languages)s plusieurs fois"
+
+#: users/routes.py:149
+msgid "Captions languages could not be set"
+msgstr "les langues pour les légendes n'ont pas pu être définies"
+
+#: users/routes.py:151
+msgid "Preferred Languages set Successfully"
+msgstr "Langues préférées définies avec succès"
+
+#: users/routes.py:163
+msgid "Language settings not available at the moment"
+msgstr "Langues préférées définies avec succès"
+
+#: users/routes.py:165
+#, python-format
+msgid "%(username)s's - Settings"
+msgstr "%(username)s's - Réglages"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         {% if title %}
         <title> ISA - {{ title }}</title>
@@ -61,8 +61,12 @@
 		<ul class="navbar-nav">
 			<li class="nav-item lang">
                 <select id="language_select" class="custom-select selectpicker" data-width="fit">
-			   		{% for lang in user_pref_lang %}
-					<option data-content='<span class=""></span> {{ lang }}'> {{ lang }} </option>
+					{% for lang in user_pref_lang %}
+						{% if lang == session_language %}  
+							<option data-content='<span class=""></span> {{ lang }}' selected> {{ lang }} </option>
+						{% else %}
+							<option data-content='<span class=""></span> {{ lang }}'> {{ lang }} </option>
+						{% endif %}
 					<!-- <a href="{{url_for( 'main.set_language', lang=lang )}}"></a> -->
 					{% endfor %}
 				</select>
@@ -71,7 +75,7 @@
 				{% if username %}
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> {{username}}</a>
                 <div class="dropdown-menu">
-				    <a href="{{url_for( 'users.userSettings' )}}" class="nav-link " id="user_name" >Caption Languages</a>
+				    <a href="{{url_for( 'users.userSettings' )}}" class="nav-link " id="user_name" >{{ _('Caption Languages') }}</a>
                 </div>
 				{% endif %}
 			</li>
@@ -107,18 +111,17 @@
 {% endwith %}
         
 {% block content%} {% endblock content%}
-
 <!-- Footer -->
 <footer class="footer bg-light">
 	<div class="container">
-		<a href="https://commons.wikimedia.org/wiki/Commons:ISA_Tool" target="_blank">ISA tool</a> 
-		was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project. It is running on 
+		<a href="https://commons.wikimedia.org/wiki/Commons:ISA_Tool" target="_blank">{{ _('ISA tool') }}</a> 
+		{{ _('was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project.') }} {{ _('It is running on') }}
         <a href="https://tools.wmflabs.org" target="_blank">tools.wmflabs.org</a>
-        , and is subject to the
+        , {{ _('and is subject to the') }}
 		<a href="https://wikitech.wikimedia.org/wiki/Wikitech:Cloud_Services_Terms_of_use" target="_blank">Wikimedia Cloud Services Terms of use</a>
-        . ISA is published under
+        . {{ _('ISA is published under') }}
         <a href="https://www.gnu.org/licenses/quick-guide-gplv3.en.html" target="_blank"> GPLv3</a>
-        . Content added through the tool to Wikimedia Commons is released under
+        . {{ _('Content added through the tool to Wikimedia Commons is released under') }}
         <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">CC0</a>
         .
 	</div>

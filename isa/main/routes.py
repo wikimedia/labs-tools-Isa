@@ -16,9 +16,12 @@ def home():
     directory = os.getcwd() + '/campaign_stats_files/'
     if not os.path.exists(directory):
         os.makedirs(directory)
+    if session['lang']:
+        session_language = session['lang']
     username_for_current_user = add_user_to_db(username)
     return render_template('main/home.html',
                            title='Home',
+                           session_language=session_language,
                            username=username_for_current_user,
                            user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user)

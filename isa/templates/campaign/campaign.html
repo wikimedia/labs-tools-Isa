@@ -54,7 +54,7 @@
                 {% else %}
                 <tbody>
                     <tr>
-                        <th scope="row">{{ _('Sorry') }}!</th>
+                        <th scope="row"></th>
                         <td></td>
                         <td class="text-center">{{ _('No partcipants has contributed to this campaign') }}</td>
                     </tr>
@@ -85,7 +85,7 @@
                     {% else %}
                         <tbody>
                             <tr>
-                                <th scope="row">{{ _('Sorry') }}!</th>
+                                <th scope="row"></th>
                                 <td></td>
                                 <td class="text-center">{{ _('There is no data available yet for this campaign') }}</td>
                             </tr>
@@ -130,7 +130,7 @@
 <hr>
 
 <div class="container campaign-info justify-content-center text-center">
-    <h3>More About This Campaign</h3>
+    <h3>{{ _('More About This Campaign') }}</h3>
     <div class="campaign-dates">
         <h6><strong>{{ _('START DATE')}}: </strong> {{campaign.start_date}}</h6>
         <h6><strong>{{ _('END DATE') }}: </strong> {{campaign.end_date}}</h6>	
@@ -139,7 +139,7 @@
         <p>{{campaign.long_description}}</p>
     </div>
     {% if campaign_manager ==  username %}
-    <a id="" href="{{url_for('campaigns.updateCampaign', id=campaign.id)}}" class="btn btn-danger" >Edit Campaign</a>
+    <a id="" href="{{url_for('campaigns.updateCampaign', id=campaign.id)}}" class="btn btn-danger" >{{ _('Edit Campaign') }}</a>
     {% endif %}
 </div>
 

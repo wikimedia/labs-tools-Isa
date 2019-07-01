@@ -88,6 +88,8 @@ def logout():
 @users.route('/user-settings', methods=['GET', 'POST'])
 def userSettings():
     username = session.get('username', None)
+    if session['lang']:
+        session_language = session['lang']
     user_language_set = []
     # This will store the repeating languages
     repeated_language_values = []
@@ -148,7 +150,7 @@ def userSettings():
             if testDbCommitSuccess():
                 flash(gettext('Captions languages could not be set'), 'danger')
             else:
-                flash(gettext('Prefered Languages set Successfully'), 'success')
+                flash(gettext('Preferred Languages set Successfully'), 'success')
                 # We make sure that the form data does not remain in browser
                 return redirect(url_for('users.userSettings'))
     elif request.method == 'GET':
@@ -164,6 +166,7 @@ def userSettings():
     return render_template('users/user_settings.html',
                            title=gettext('%(username)s\'s - Settings', username=username),
                            current_user=current_user,
+                           session_language=session_language,
                            user_pref_lang=get_user_language_preferences(username),
                            username=username,
                            captions_lang_form=captions_lang_form)

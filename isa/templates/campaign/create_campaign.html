@@ -45,7 +45,7 @@
             {% endif %}
             <small id="short_descriptionHelp" class="form-text text-muted">instructions for input</small>
         </div>
-       
+
         <hr>
         
         <div class="form-row">
@@ -63,7 +63,7 @@
                 {% else %}
                 {{ form.start_date( class="form-control form-control-sm" ) }}
                 {% endif %}
-                <small id="datepick1Help" class="form-text text-muted">Set campaign start date</small>               
+                <small id="datepick1Help" class="form-text text-muted">{{ _('Set campaign start date') }}</small>               
             </div>
             <div class="form-group col-md-6">
                 <label for="datepick2">{{ _('End Date') }}</label>
@@ -78,7 +78,7 @@
                 {% else %}
                 {{ form.end_date( class="form-control form-control-sm" ) }}
                 {% endif %}
-                <small id="datepick2Help" class="form-text text-muted">Set campaign end date</small>            
+                <small id="datepick2Help" class="form-text text-muted">{{ _('Set campaign end date') }}</small>            
             </div>
         </div>     
         
@@ -100,7 +100,7 @@
 
             <!-- Category selection UI which is NOT submitted in the form --> 
             <select id="category-search" class="w-100"></select>
-            <small id="category-searchHelp" class="form-text text-muted">Choose categories to use in the campaign</small>
+            <small id="category-searchHelp" class="form-text text-muted">{{ _('Choose categories to use in the campaign') }}</small>
             <table class="w-100 table table-striped">
                 <thead id="selected-categories-header">
                     <tr>
@@ -131,7 +131,7 @@
                 {% else %}
                 {{ form.depicts_metadata( class="checkbox-inline mt-1" ) }}
                 {% endif %}
-                <small id="depicts-metadataHelp" class="form-text text-muted">Select to collect Depicts metadata in the campiagn</small>       
+                <small id="depicts-metadataHelp" class="form-text text-muted">{{ _('Select to collect Depicts metadata in the campiagn') }}</small>       
             </div>
             <div class="form-group col-md-6">         
                 <label for="captions_metadata">{{ _('Captions') }}</label>
@@ -146,7 +146,7 @@
                 {% else %}
                 {{ form.captions_metadata( class='checkbox-inline mt-1' ) }}
                 {% endif %}
-                <small id="caption-metadataHelp" class="form-text text-muted">Select to collect Caption metadata in the campiagn</small>       
+                <small id="caption-metadataHelp" class="form-text text-muted">{{ _('Select to collect Caption metadata in the campiagn') }}</small>       
             </div>
         </div>
 
@@ -165,7 +165,7 @@
             {% else %}
             {{ form.campaign_type( class="checkbox-inline mt-1" ) }}
             {% endif %}
-            <small id="campaign_typeHelp" class="form-text text-muted">Select if this is a Wiki Loves Campaign (important)</small>       
+            <small id="campaign_typeHelp" class="form-text text-muted">{{ _('Select if this is a Wiki Loves Campaign (important) ') }}</small>       
         </div>
 
         <hr>

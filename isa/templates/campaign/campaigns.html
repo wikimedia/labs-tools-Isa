@@ -4,10 +4,10 @@
     
         <h1>ISA - {{ _('Campaigns') }}</h1>
  <hr>
-    <p>On this page are the curated campaigns that are currently running as part of the ISA tool. Click on the name of a campaign to get started and add structured data to an image. You can access information on the previous Campaigns in the Archive section.</p>
+    <p>{{ _('On this page are the curated campaigns that are currently running as part of the ISA tool.')}} {{ _('Click on the name of a campaign to get started and add structured data to an image.') }} {{ _('You can access information on the previous Campaigns in the Archive section.') }}</p>
     
       {% if username != 'Guest' and username != False and username != None %}
-    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary">Create a new campaign using this tool</a>       
+    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary">{{ _('Create a new campaign using this tool') }}</a>       
     {% endif %}
 </header>
 <div class="container">
@@ -47,9 +47,9 @@
                         <span class="">{{ _('Open') }}</span>
                         {%  endif %}
                     </td>
-                    <td><a href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}">Go to Campaign</a></td>
+                    <td><a href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}">{{ _('Go to Campaign') }}</a></td>
                 </tr>
-            {% endfor%} 
+            {% endfor%}
             </tbody>
         </table>
     </section>
