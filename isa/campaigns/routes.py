@@ -30,8 +30,9 @@ campaigns = Blueprint('campaigns', __name__)
 def getCampaigns():
     campaigns = Campaign.query.all()
     username = session.get('username', None)
-    if session['lang']:
-        session_language = session['lang']
+    session_language = session.get('lang', None)
+    if not session_language:
+        session_language = 'en'
     return render_template('campaign/campaigns.html',
                            title=gettext('Campaigns'),
                            username=username,
@@ -47,8 +48,9 @@ def getCampaigns():
 def getCampaignById(id):
     # We get the current user's user_name
     username = session.get('username', None)
-    if session['lang']:
-        session_language = session['lang']
+    session_language = session.get('lang', None)
+    if not session_language:
+        session_language = 'en'
     campaign = Campaign.query.filter_by(id=id).first()
     if not campaign:
         flash(gettext('Campaign with id %(id)s does not exist', id=id), 'info')
@@ -153,8 +155,9 @@ def getCampaignById(id):
 def CreateCampaign():
     # We get the current user's user_name
     username = session.get('username', None)
-    if session['lang']:
-        session_language = session['lang']
+    session_language = session.get('lang', None)
+    if not session_language:
+        session_language = 'en'
     form = CampaignForm()
     if not username:
         session['next_url'] = request.url
@@ -205,8 +208,9 @@ def contributeToCampaign(id):
     # We get current user in sessions's username
     username = session.get('username', None)
     caption_languages = get_user_language_preferences(username)
-    if session['lang']:
-        session_language = session['lang']
+    session_language = session.get('lang', None)
+    if not session_language:
+        session_language = 'en'
     # We select the campign whose id comes into the route
     campaign = Campaign.query.filter_by(id=id).first()
     return render_template('campaign/campaign_entry.html',
@@ -224,8 +228,9 @@ def contributeToCampaign(id):
 def updateCampaign(id):
     # We get the current user's user_name
     username = session.get('username', None)
-    if session['lang']:
-        session_language = session['lang']
+    session_language = session.get('lang', None)
+    if not session_language:
+        session_language = 'en'
     form = UpdateCampaignForm()
     if not username:
         flash(gettext('You need to Login to update a campaign'), 'info')
@@ -298,8 +303,6 @@ def postContribution():
     contrib_data = request.data.decode('utf8').replace("'", '"')
     contrib_data_list = json.loads(contrib_data)
     username = session.get('username', None)
-    if session['lang']:
-        session_language = session['lang']
     campaign_id = contrib_data_list[0]['campaign_id']
     
     if not username:
@@ -318,7 +321,6 @@ def postContribution():
             conribution = Contribution(user_id=current_user_id,
                                        campaign_id=campaign_id,
                                        file=file,
-                                       session_language=session_language,
                                        edit_acton=edit_action,
                                        edit_type=edit_type,
                                        country=country,

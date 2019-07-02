@@ -88,8 +88,9 @@ def logout():
 @users.route('/user-settings', methods=['GET', 'POST'])
 def userSettings():
     username = session.get('username', None)
-    if session['lang']:
-        session_language = session['lang']
+    session_language = session.get('lang', None)
+    if not session_language:
+        session_language = 'en'
     user_language_set = []
     # This will store the repeating languages
     repeated_language_values = []
@@ -170,3 +171,12 @@ def userSettings():
                            user_pref_lang=get_user_language_preferences(username),
                            username=username,
                            captions_lang_form=captions_lang_form)
+
+
+@users.route('/api/login-test', methods=['GET', 'POST'])
+def checkUserLogin():
+    username = session.get('username', None)
+    if username:
+        return("Success!")
+    else:
+        return("Failure!")

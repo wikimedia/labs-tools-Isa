@@ -14,10 +14,11 @@ main = Blueprint('main', __name__)
 def home():
     username = session.get('username', None)
     directory = os.getcwd() + '/campaign_stats_files/'
+    session_language = session.get('lang', None)
     if not os.path.exists(directory):
         os.makedirs(directory)
-    if session['lang']:
-        session_language = session['lang']
+    if not session_language:
+        session_language = 'en'
     username_for_current_user = add_user_to_db(username)
     return render_template('main/home.html',
                            title='Home',
