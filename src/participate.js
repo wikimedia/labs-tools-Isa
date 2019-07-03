@@ -62,7 +62,7 @@ function searchResultsFormat(state) {
 
 (function setUpDepictsSearch(){
       $( '#depicts-select' ).select2( {
-          placeholder: 'Search for depicts',
+          placeholder: '',
           delay: 250,
           minimumResultsForSearch: 1,
           maximumSelectionLength: 4,
