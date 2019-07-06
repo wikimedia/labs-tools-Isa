@@ -307,34 +307,29 @@ def postContribution():
     contrib_data_list = json.loads(contrib_data)
     username = session.get('username', None)
     campaign_id = contrib_data_list[0]['campaign_id']
-    
     if not username:
         flash(gettext('You need to login to participate'), 'info')
         # User is not logged in so we set the next url to redirect them after login
         session['next_url'] = request.url
         return redirect(url_for('campaigns.contributeToCampaign', id=campaign_id))
     else:
+        contrib_list = []
         current_user_id = User.query.filter_by(username=username).first().id
         for data in contrib_data_list:
-            edit_content = str(data['edit_content'])
-            file = data['image']
-            edit_action = data['edit_action']
-            edit_type = data['edit_type']
-            country = data['country']
-            conribution = Contribution(user_id=current_user_id,
-                                       campaign_id=campaign_id,
-                                       file=file,
-                                       edit_acton=edit_action,
-                                       edit_type=edit_type,
-                                       country=country,
-                                       edit_content=edit_content)
-            print(conribution, file=sys.stderr)
-            db.session.add(conribution)
-            if testDbCommitSuccess():
-                return("Failure")
-            else:
-                # flash(gettext('Thanks for your contribution'), 'success')
-                return("Success!")
+            contribution = Contribution(user_id=current_user_id,
+                                        campaign_id=campaign_id,
+                                        file=data['image'],
+                                        edit_action=data['edit_action'],
+                                        edit_type=data['edit_type'],
+                                        country=data['country'],
+                                        edit_content=str(data['edit_content']))
+            contrib_list.append(contribution)
+        for contrib in contrib_list:
+            db.session.add(contrib)
+        if testDbCommitSuccess():
+            return("Failure")
+        else:
+            return("Success!")
     return("Failure")
 
 

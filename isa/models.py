@@ -29,11 +29,11 @@ class Contribution(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
-    file = db.Column(db.String(35), nullable=False)
+    file = db.Column(db.String(100), nullable=False)
     edit_type = db.Column(db.String(7), nullable=False)
-    edit_acton = db.Column(db.String(7), nullable=False)
+    edit_action = db.Column(db.String(7), nullable=False)
     country = db.Column(db.String(15), nullable=False, default='')
-    edit_content = db.Column(db.String(20), nullable=False)
+    edit_content = db.Column(db.String(150), nullable=False)
 
     def __repr__(self):
         # This is what is shown when object is printed
@@ -73,8 +73,9 @@ class Campaign(db.Model):
 
     def __repr__(self):
         # This is what is shown when object is printed
-        return "Campaign( {}, {}, {}, {}, {}, {}, {}, {})".format(
+        return "Campaign( {}, {}, {}, {}, {}, {}, {}, {}, {})".format(
                self.campaign_name,
+               self.campaign_image,
                self.campaign_manager,
                self.categories,
                self.depicts_metadata,
