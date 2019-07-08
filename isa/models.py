@@ -53,6 +53,7 @@ class Contribution(db.Model):
 class Campaign(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     campaign_name = db.Column(db.String(25), nullable=False)
+    campaign_image = db.Column(db.String(200), nullable=True, default='')
     categories = db.Column(db.Text, nullable=False)
     start_date = db.Column(db.Date, nullable=False,
                            default=datetime.now().strftime('%Y-%m-%d'))

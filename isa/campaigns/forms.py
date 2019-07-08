@@ -17,6 +17,7 @@ class CampaignForm(FlaskForm):
     depicts_metadata = BooleanField()
     captions_metadata = BooleanField()
     campaign_type = BooleanField()
+    campaign_image = StringField('Campaign Image')
     long_description = StringField(widget=widgets.TextArea())
     submit = SubmitField()
 
@@ -32,6 +33,7 @@ class UpdateCampaignForm(FlaskForm):
     depicts_metadata = BooleanField('Depicts')
     captions_metadata = BooleanField('Captions')
     campaign_type = BooleanField('This is a Wiki Loves Campaign')
+    campaign_image = StringField('Campaign Image')
     long_description = StringField('Long description of Campaign(full about info)',
                                    widget=widgets.TextArea())
     submit = SubmitField('Update Campaign')

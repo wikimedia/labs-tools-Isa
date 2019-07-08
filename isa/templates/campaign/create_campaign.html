@@ -169,6 +169,24 @@
         </div>
 
         <hr>
+ 
+        <div class="form-group">
+            <label for="campaign_image">{{ _('Campaign Image') }}</label>
+            <!-- We test for errors in the form data here -->
+            {% if form.campaign_image.errors %}
+            {{ form.campaign_image( class="form-control form-control-sm is-nvalid" ) }}
+            <div class="invalid-feedback">
+                {% for error in form.campaign_name.errors %}
+                <span> {{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.campaign_image( class="form-control form-control-sm" ) }}
+            {% endif %}
+            <small id="campaign_nameHelp" class="form-text text-muted">Instructions for input</small>
+        </div>
+
+        <hr>
         
         <div class="form-group">
             <label for="long_description">{{ _('Long description of Campaign (full about info)') }}</label>
