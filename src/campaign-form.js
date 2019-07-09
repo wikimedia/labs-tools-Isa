@@ -20,7 +20,7 @@ $(document).ready( function () {
     }
 
     $( '#category-search' ).select2( {
-        placeholder: 'Search for Categories here',
+        placeholder: '',
         delay: 250,
         minimumResultsForSearch: 1,
         ajax: {
