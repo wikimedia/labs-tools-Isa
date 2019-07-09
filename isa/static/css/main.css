@@ -223,6 +223,35 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
  
 /********** PARTICIPATE PAGE ************/
  
+/* Loading overlay */
+  
+/* make a fullscreen overlay with centered content*/
+.loading {
+    background-color: #e9ecef;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+/* move the logo to the bottom of the page*/    
+.loading img {
+    position: absolute;
+    bottom: 50px;
+}
+
+/* increase deafult spinner size*/
+.loading .spinner-border {
+    width: 3em;
+    height: 3em;
+}
+/*end overlay*/
+
+
 /*wrapper to hold image and desktop nav buttons in place*/
 .image-wrapper {
     display: flex;

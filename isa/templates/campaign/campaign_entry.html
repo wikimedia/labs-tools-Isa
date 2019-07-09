@@ -2,9 +2,16 @@
 {% block content%}
 <style> 
 body {padding-bottom: 50px}
+
+    
 @media (min-width: 992px) {
-body {padding-bottom:0}
+    body {padding-bottom:0}}
 </style>
+<div class="loading" style="display: none">
+<div class="spinner-border text-secondary" role="status" aria-hidden="true"></div>
+	<img src="{{ url_for('static', filename = 'ISA-Structured-Data-logo_landscape_white.png') }}" height="50" alt="">
+
+</div>
 
 <!-- Flash messages displayed and populated via JavaScript -->
 <div class="isa-flash-message alert alert-success fade"></div>
