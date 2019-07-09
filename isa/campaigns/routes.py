@@ -179,6 +179,7 @@ def CreateCampaign():
                 long_description=form.long_description.data,
                 creation_date=datetime.now().date(),
                 depicts_metadata=form.depicts_metadata.data,
+                campaign_image=form.campaign_image.data,
                 captions_metadata=form.captions_metadata.data,
                 campaign_type=form.campaign_type.data)
             db.session.add(campaign)
@@ -249,6 +250,7 @@ def updateCampaign(id):
             campaign.captions_metadata = form.captions_metadata.data
             campaign.categories = form.categories.data
             campaign.start_date = form.start_date.data
+            campaign.campaign_image = form.campaign_image.data
             campaign.campaign_type = form.campaign_type.data
             campaign.end_date = form.end_date.data
             if testDbCommitSuccess():
@@ -271,6 +273,7 @@ def updateCampaign(id):
             form.categories.data = campaign.categories
             form.start_date.data = campaign.start_date
             form.depicts_metadata.data = campaign.depicts_metadata
+            form.campaign_image.data = campaign.campaign_image
             form.captions_metadata.data = campaign.captions_metadata
             form.campaign_type.data = campaign.campaign_type
             form.end_date.data = campaign.end_date
