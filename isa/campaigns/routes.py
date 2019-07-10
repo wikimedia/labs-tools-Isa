@@ -151,6 +151,23 @@ def getCampaignById(id):
                            country_csv_file=country_csv_file)
 
 
+@campaigns.route('/campaigns/<int:id>/stats')
+def getCampaignStatsById(id):
+    # We get the current user's user_name
+    username = session.get('username', None)
+    session_language = session.get('lang', None)
+    if not session_language:
+        session_language = 'en'
+    campaign = Campaign.query.filter_by(id=id).first()
+    if not campaign:
+        flash(gettext('Campaign with id %(id)s does not exist', id=id), 'info')
+        return redirect(url_for('campaigns.getCampaigns'))
+
+    return render_template('campaign/campaign_stats.html', title=gettext('Campaign - ') + campaign.campaign_name,
+                           campaign=campaign,
+                           username=username)
+
+
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name

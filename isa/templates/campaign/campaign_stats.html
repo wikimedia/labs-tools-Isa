@@ -1,0 +1,11 @@
+{% extends "main/layout.html" %}
+{% block content%}
+<div class="container page-header text-center">
+    <h1>{{ campaign.campaign_name }} - {{ _('Stats') }}</h1>
+    <hr>
+</div>
+
+{% endblock content%}
+{% block scripts %}
+    <script src="{{url_for('static', filename='js/campaign.js')}}"></script>
+{% endblock scripts%}
