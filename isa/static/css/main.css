@@ -134,6 +134,13 @@ more-stats-btn {
 }
 /*end campaign page*/
  
+/********* CAMPAIGN STATS PAGE*******/
+/*overrides to campaign page CSS for stats page layout*/
+    .stats-page .stats-table {display: flex; flex-wrap: wrap}
+    .stats-page .top-user-table, .stats-page .top-country-table {flex: 1 1 350px; }
+    .stats-page.campaign-stats {max-width: 100%}
+    .stats-page.campaign-stats .stats-table {
+    display: flex}
  
  
 /******** LAYOUT TEMPLATE ***********/

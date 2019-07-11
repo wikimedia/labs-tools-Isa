@@ -3,8 +3,86 @@
 <div class="container page-header text-center">
     <h1>{{ campaign.campaign_name }} - {{ _('Stats') }}</h1>
     <hr>
+   <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: {{ _('Home Page') }}</a> 
 </div>
 
+<div class="container campaign-stats stats-page text-center">
+    <div class="campaign-panel">
+        <div class="campaign-stats-title">
+            <h4>{{ _('Campaign Progress') }}</h4>
+        </div>
+    <div class="main-stats-label-group mx-auto">
+        <div class="label btn btn-warning">{{ _('Editors') }}<br>{{ campaign_editors }}</div>
+        <div class="label btn btn-warning">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
+    </div>
+    <div class="stats-table mx-auto">
+                <div class="top-user-table mr-md-4">				
+            <table class="table table-sm table-light text-center">
+                <h6>{{ _('Top Contributors') }}</h6>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">{{ _('Contributor') }}</th>
+                        <th scope="col">{{ _('Images Improved') }}</th>
+                    </tr>
+                </thead>
+                {% if all_contributors_data %}
+                <tbody>
+                {% for contributor_data in all_contributors_data %}
+                    <tr>
+                        <th scope="row">{{contributor_data['rank']}}</th>
+                        <td>{{contributor_data['username']}}</td>
+                        <td>{{contributor_data['images_improved']}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                {% else %}
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td class="text-center">{{ _('No partcipants has contributed to this campaign') }}</td>
+                    </tr>
+                </tbody>
+                {% endif %}
+            </table>
+        </div>
+
+        <div class="top-country-table mr-md-4">
+            <table class="table table-sm table-light text-center">
+                <h6>{{ _('Most improved Countries') }}</h6>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">{{ _('Country') }}</th>
+                            <th scope="col">{{ _('Images Improved') }}</th>
+                        </tr>
+                    </thead>
+                    {% if all_campaign_country_statistics_data %}
+                        <tbody>
+                            {% for country_statistics_data in all_campaign_country_statistics_data %}
+                                <tr>
+                                    <th scope="row">{{country_statistics_data['rank']}}</th>
+                                    <td>{{country_statistics_data['country']}}</td>
+                                    <td>{{country_statistics_data['images_improved']}}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    {% else %}
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td class="text-center">{{ _('There is no data available yet for this campaign') }}</td>
+                            </tr>
+                        </tbody>
+                    {% endif %}
+            </table>
+        </div>
+    </div>
+        <button class="btn btn-sm btn-primary" >{{ _('Download all stats (CSV)') }}</button>
+    
+    </div></div>
 {% endblock content%}
 {% block scripts %}
     <script src="{{url_for('static', filename='js/campaign.js')}}"></script>
