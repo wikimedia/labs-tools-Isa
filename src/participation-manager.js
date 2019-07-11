@@ -12,8 +12,9 @@ import {flashMessage} from './utils';
 export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         var imageIndex = 0,
         imageFileName = '',
+        imageMediaId = '',
+        imageRevId = 0,
         userCaptionLanguages = getUserLanguages(),
-        captionLanguage = userCaptionLanguages[0],
         initialData = {depicts: [], captions: []},
         unsavedChanges = {depicts: [], captions: []};
 
@@ -47,8 +48,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         });
     }
 
-    this.addDepictStatement = function(item, label, description, isProminent) {
-        var statementHtml = getStatementHtml(item, label, description, isProminent);
+    this.addDepictStatement = function(item, label, description, isProminent, statementId) {
+        var statementHtml = getStatementHtml(item, label, description, isProminent, statementId);
         $('.depict-tag-group').append(statementHtml);
         this.depictDataChanged();
     }
@@ -73,8 +74,9 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             var item = depictItem.item,
                 label = depictItem.label,
                 description = depictItem.description,
-                isProminent = depictItem.isProminent;
-            this.addDepictStatement(item, label, description, isProminent)
+                isProminent = depictItem.isProminent,
+                statementId = depictItem.statementId;
+            this.addDepictStatement(item, label, description, isProminent, statementId)
         }
     }
 
@@ -96,6 +98,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         // now extend the unsavedChanged data with properties that are the same for all contribution types
         var additonalContributionData = {
             image: imageFileName,
+            media_id: imageMediaId,
             campaign_id: campaignId,
             edit_type: editType,
             country: wikiLovesCountry
@@ -161,12 +164,14 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             var item = $(element).find('.depict-tag-qvalue').text(),
                 label = $(element).find('.depict-tag-label-text').text(),
                 description = $(element).attr('title'),
-                isProminent = $(element).find('.prominent-btn').hasClass('active');
+                isProminent = $(element).find('.prominent-btn').hasClass('active'),
+                statementId = $(element).attr('statement-id');
             statements.push({
                 item: item,
                 label: label,
                 description: description,
-                isProminent: isProminent
+                isProminent: isProminent,
+                statementId: statementId || ''
             });
         })
         return statements;
@@ -214,6 +219,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                         depictChanges.push({
                             edit_action: "edit",
                             edit_content: editContent,
+                            statement_id: currentStatement.statementId
                         })
                     } // else, no changes to statement
 
@@ -227,6 +233,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                 depictChanges.push({
                     edit_action: "add",
                     edit_content: editContent,
+                    // no statementId assigned before edit is made
                 })
             }
         } // check next statement...
@@ -248,6 +255,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                 depictChanges.push({
                     edit_action: "remove",
                     edit_content: {item: initialStatement.item, isProminent: initialStatement.isProminent},
+                    statement_id: initialStatement.statementId
                 })
             }
         } // check next initial statement...
@@ -380,8 +388,12 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             url: 'https://commons.wikimedia.org/w/api.php',
             data: entitiesApiOptions
         } ).done( function( response ) {
+            
+            console.log(response)
 
-            var mediaId = Object.keys(response.entities)[0];
+            // store imageMediaId for access within ParticipationManager
+            var mediaId = imageMediaId = Object.keys(response.entities)[0]; 
+            imageRevId = response.entities[mediaId].lastrevid;
             var mediaStatements = response.entities[mediaId].statements || {};
             var mediaCaptions = response.entities[mediaId].labels || {};
             var depictItems = [];
@@ -405,7 +417,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                 depictItems = mediaStatements.P180.map(function(depictStatement) {
                     return {
                         item: depictStatement.mainsnak.datavalue.value.id,
-                        isProminent: depictStatement.rank === "preferred"
+                        isProminent: depictStatement.rank === "preferred",
+                        statementId: depictStatement.id
                     }
                 });
             } else {
@@ -445,26 +458,29 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                 // and add the labels and descriptions found to the existing stored data
                 var intialStatementsHtml = "";
                 for (var qvalue in response.entities) {
-                    var storedItemData = getStoredItemData(qvalue);
+                    var storedStatementData = getStoredStatementData(qvalue);
 
                     var itemData = response.entities[qvalue],
                         labelLang = Object.keys(itemData.labels)[0],
                         label = itemData.labels[labelLang].value,
                         descriptionLang = Object.keys(itemData.descriptions)[0],
                         description = itemData.descriptions[descriptionLang].value,
-                        isProminent = storedItemData.isProminent;
-                        //todo: access isProminent value
-                    intialStatementsHtml += getStatementHtml(qvalue, label, description, isProminent);
+                        isProminent = storedStatementData.isProminent,
+                        statementId = storedStatementData.statementId;
+                    
+                    console.log("statementId for existing depicts: ", statementId)
+
+                    intialStatementsHtml += getStatementHtml(qvalue, label, description, isProminent, statementId);
 
                     // save label and description
-                    storedItemData.label = label;
-                    storedItemData.description = description;
+                    storedStatementData.label = label;
+                    storedStatementData.description = description;
                 }
                 $('.depict-tag-group').html(intialStatementsHtml);
 
                 if (callbacks.onUiRendered) callbacks.onUiRendered(); // fires when the the actual HTML has finsihed being added to the page
 
-                function getStoredItemData(qvalue) {
+                function getStoredStatementData(qvalue) {
                     //uses depictItems from previous API call to Commons
                     for (var i=0; i < depictItems.length; i++) {
                         if (depictItems[i].item === qvalue) return depictItems[i];
@@ -476,12 +492,19 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
 
     /////////// General utilities ///////////
 
-    function getStatementHtml(item, label, description, isProminent) {
+    function getStatementHtml(item, label, description, isProminent, statementId) {
+        var statementIdAttribute = (statementId) ? 
+            'statement-id=' + statementId : 
+            '';
+        
+        console.log(statementIdAttribute)
+        
         var isProminentButtonHtml = isProminent ?
             '<button class="btn btn-sm prominent-btn active" title="Mark this depicted item as NOT prominent"><i class="fas fa-flag"></i></button>' :
-            '<button class="btn btn-sm  prominent-btn" title="Mark this depicted item as prominent"><i class="fas fa-flag"></i></button>'
+            '<button class="btn btn-sm  prominent-btn" title="Mark this depicted item as prominent"><i class="fas fa-flag"></i></button>';
+        
         return [
-            '<div class="depict-tag-item" title="' + description + '">',
+            '<div class="depict-tag-item" ' + statementIdAttribute + ' title="' + description + '">',
             '<div class="depict-tag-label">', 
             '<div class="label btn-sm"><span class="depict-tag-label-text">' + label + '</span> <span class="depict-tag-qvalue">' + item + '</span></div>',
             isProminentButtonHtml,
