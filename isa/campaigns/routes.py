@@ -239,6 +239,7 @@ def contributeToCampaign(id):
                            campaign=campaign,
                            username=username,
                            caption_languages=caption_languages,
+                           user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user)
 
 
