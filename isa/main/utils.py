@@ -12,6 +12,7 @@ def testDbCommitSuccess():
     try:
         db.session.commit()
     except Exception as e:
+        print('-------------->>>>>', file=sys.stderr)
         print(str(e), file=sys.stderr)
         db.session.rollback()
         # for resetting non-commited .add()

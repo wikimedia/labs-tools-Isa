@@ -321,7 +321,7 @@ def getCampaignCategories():
 
 @campaigns.route('/api/post-contribution', methods=['POST'])
 def postContribution():
-    contrib_data = request.data.decode('utf8').replace("'", '"')
+    contrib_data = request.data.decode('utf8')
     contrib_data_list = json.loads(contrib_data)
     username = session.get('username', None)
     campaign_id = contrib_data_list[0]['campaign_id']
