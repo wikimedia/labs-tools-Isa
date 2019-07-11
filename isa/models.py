@@ -15,21 +15,19 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(20), unique=True, nullable=False)
     pref_lang = db.Column(db.String(15), nullable=False)
     contrib = db.Column(db.Integer, default=0)
-    contributions = db.relationship('Contribution', backref='made', lazy=True)
 
     def __repr__(self):
         # This is what is shown when object is printed
-        return "User({}, {}, {})".format(
+        return "User({}, {})".format(
                self.username,
-               self.pref_lang,
-               self.contributions)
+               self.pref_lang)
 
 
 class Contribution(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    username = db.Column(db.String(20), unique=True, nullable=False)
     campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
-    file = db.Column(db.String(100), nullable=False)
+    file = db.Column(db.String(150), nullable=False)
     edit_type = db.Column(db.String(7), nullable=False)
     edit_action = db.Column(db.String(7), nullable=False)
     country = db.Column(db.String(15), nullable=False, default='')
@@ -38,11 +36,11 @@ class Contribution(db.Model):
     def __repr__(self):
         # This is what is shown when object is printed
         return "Contribution( {}, {}, {},{},{},{},{})".format(
-               self.user_id,
+               self.username,
                self.campaign_id,
                self.file,
                self.edit_type,
-               self.edit_acton,
+               self.edit_action,
                self.country,
                self.edit_content)
 
@@ -81,5 +79,7 @@ class Campaign(db.Model):
                self.depicts_metadata,
                self.captions_metadata,
                self.creation_date,
+               self.start_date,
+               self.end_date,
                self.start_date,
                self.end_date)

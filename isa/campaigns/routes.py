@@ -63,16 +63,16 @@ def getCampaignById(id):
     # Editor for a particular campaign
     campaign_editors = 0
     # participantids for this campaign
-    campaign_users_ids = []
+    campaign_user_names = []
     # We are querrying all the users who participate in the campaign
     contribs_for_campaign = Contribution.query.filter_by(campaign_id=campaign.id).all()
     for campaign_contribution in contribs_for_campaign:
-        campaign_users_ids.append(campaign_contribution.user_id)
+        campaign_user_names.append(campaign_contribution.username)
     # we get the unique ids so as not to count an id twice
-    campaign_users_ids_set = set(campaign_users_ids)
-    campaign_editors = len(campaign_users_ids_set)
+    campaign_user_names_set = set(campaign_user_names)
+    campaign_editors = len(campaign_user_names_set)
     # We then re-initialize the ids array
-    campaign_users_ids = []
+    campaign_user_names = []
     # We now get the contributor count for this campaign
     for contrib in all_contributions:
         if (contrib.campaign_id == campaign.id):
@@ -81,8 +81,8 @@ def getCampaignById(id):
     # We now obtain the ranking for all the users in the system and their files improved
     all_camapign_users_list = []
     #  We iterate the individual participants id in a campaign and get the user info
-    for user_id in campaign_users_ids_set:
-        user = User.query.filter_by(id=user_id).first()
+    for user_name in campaign_user_names_set:
+        user = User.query.filter_by(username=user_name).first()
         all_camapign_users_list.append(user)
 
     # We get the users and their contribution data
@@ -171,7 +171,7 @@ def getCampaignStatsById(id):
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name
-    username = session.get('username', None)
+    username = session.get('username', 'Eugene233')
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
@@ -332,9 +332,8 @@ def postContribution():
         return redirect(url_for('campaigns.contributeToCampaign', id=campaign_id))
     else:
         contrib_list = []
-        current_user_id = User.query.filter_by(username=username).first().id
         for data in contrib_data_list:
-            contribution = Contribution(user_id=current_user_id,
+            contribution = Contribution(username=username,
                                         campaign_id=campaign_id,
                                         file=data['image'],
                                         edit_action=data['edit_action'],
