@@ -132,23 +132,30 @@ def getCampaignById(id):
                                                                  campaign_name,
                                                                  contributor_fields,
                                                                  contributor_stats_data)
+    # We prepare the campaign stats data to be sent to the next page (stats route)
+    campaign_stats_data = {}
+    campaign_stats_data['campaign_editors'] = campaign_editors
+    campaign_stats_data['campaign_contributions'] = campaign_contributions
+    campaign_stats_data['all_contributors_data'] = all_contributors_data
+    campaign_stats_data['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
 
-    return render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
-                           campaign=campaign,
-                           campaign_manager=campaign.campaign_manager,
-                           username=username,
-                           session_language=session_language,
-                           campaign_editors=campaign_editors,
-                           campaign_contributions=campaign_contributions,
-                           user_pref_lang=get_user_language_preferences(username),
-                           current_user=current_user,
-                           is_wiki_loves_campaign=campaign.campaign_type,
-                           all_contributors_data=all_contributors_data,
-                           current_user_rank=current_user_rank,
-                           all_campaign_country_statistics_data=all_campaign_country_statistics_data,
-                           current_user_images_improved=current_user_images_improved,
-                           contributor_csv_file=contributor_csv_file,
-                           country_csv_file=country_csv_file)
+    return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
+                            campaign=campaign,
+                            campaign_manager=campaign.campaign_manager,
+                            username=username,
+                            session_language=session_language,
+                            campaign_editors=campaign_editors,
+                            campaign_contributions=campaign_contributions,
+                            user_pref_lang=get_user_language_preferences(username),
+                            current_user=current_user,
+                            is_wiki_loves_campaign=campaign.campaign_type,
+                            all_contributors_data=all_contributors_data,
+                            current_user_rank=current_user_rank,
+                            all_campaign_country_statistics_data=all_campaign_country_statistics_data,
+                            current_user_images_improved=current_user_images_improved,
+                            contributor_csv_file=contributor_csv_file,
+                            country_csv_file=country_csv_file),
+            campaign_stats_data)
 
 
 @campaigns.route('/campaigns/<int:id>/stats')
@@ -163,8 +170,19 @@ def getCampaignStatsById(id):
         flash(gettext('Campaign with id %(id)s does not exist', id=id), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
 
+    # We get the values returned from the campaign route and use here in the stats table
+    # campaign_return_data: bundled campaign data from campaign route
+    page, campaign_return_data = getCampaignById(id)
+
     return render_template('campaign/campaign_stats.html', title=gettext('Campaign - ') + campaign.campaign_name,
                            campaign=campaign,
+                           session_language=session_language,
+                           campaign_editors=campaign_return_data['campaign_editors'],
+                           campaign_contributions=campaign_return_data['campaign_contributions'],
+                           user_pref_lang=get_user_language_preferences(username),
+                           current_user=current_user,
+                           all_contributors_data=campaign_return_data['all_contributors_data'],
+                           all_campaign_country_statistics_data=campaign_return_data['all_campaign_country_statistics_data'],
                            username=username)
 
 
