@@ -12,6 +12,10 @@ var campaignId = getCampaignId(),
 
 ///////// Campaign images /////////
 
+// Disable scrolling while loading overlay shows
+// Todo: use CSS once split for different pages
+//$('body').css('overflow', 'hidden');
+
 // Get campaign categories and depth settings from the server
 $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
     .done(function(categories) {
@@ -40,11 +44,20 @@ $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
             // Trigger image changed event to populate the page
             editSession.imageChanged();
             
-            // todo: close loading screen here
+            // Close loading overlay
+            if (images.length > 0) {
+                hideLoadingOverlay();
+            } else {
+                alert("No images found for this campaign");
+                window.location.href = '../' + campaignId;
+            }
+            
         })
     })
     .fail(function(err) {
         console.log("error retrieving campaign categories", err)
+        alert("Something went wrong getting campaign images");
+        window.location.href = '../' + campaignId;
     })
 
 
@@ -185,4 +198,9 @@ function getUserLanguages() {
         languages.push( $(this).attr('lang'))
     })
     return languages
+}
+
+
+function hideLoadingOverlay() {
+    $('.loading').fadeOut('slow');
 }

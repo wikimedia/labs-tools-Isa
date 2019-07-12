@@ -32,11 +32,11 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
     // All actions to complete when a new image has loaded
     this.imageChanged = function () {
         var me = this;
-        var file = getImageFilename ()
-        imageFileName = file;
-        updateImage(file);
-        populateMetadata(file);
-        populateStructuredData(file, /*callbacks*/ {
+        document.documentElement.scrollTop = 0;
+        imageFileName = getImageFilename ()
+        updateImage(imageFileName);
+        populateMetadata(imageFileName);
+        populateStructuredData(imageFileName, /*callbacks*/ {
             onInitialDataReady: saveInitialStructuredData,
             onUiRendered: function () {
                 // run data change events to update button states and other settings
