@@ -1,7 +1,7 @@
 import json
 from operator import itemgetter
 
-from isa.models import User
+from isa.models import User, Contribution
 from isa import db
 from isa.main.utils import testDbCommitSuccess
 
@@ -85,10 +85,10 @@ def getUserContributionsPerCampign(username, campaign_id):
     campaign_id -- the campaign id
     """
 
-    user = User.query.filter_by(username=username).first()
+    user_contribs = Contribution.query.filter_by(username=username).all()
     user_contributed_files = []
     user_contribution_data = {}  # has keys username and images_improved
-    for contrib in user.contributions:
+    for contrib in user_contribs:
         if contrib.campaign_id == campaign_id:
             user_contributed_files.append(contrib.file)
     user_contribution_data['username'] = username
