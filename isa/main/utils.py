@@ -42,6 +42,7 @@ def getCountryContributionImagesImproved(campaign_contributions, country):
     return len(country_improved_files)
 
 
+# TODO: Transfer all these methods to the campaign blueprint
 def getCampaignCountryData(campaign_id):
     # Holds contribution countries for campaign with id: campaign_id
     contribution_countries = []

@@ -16,7 +16,8 @@ from isa.campaigns.forms import CampaignForm, UpdateCampaignForm
 from isa.models import Campaign, Contribution, User
 from isa.campaigns.utils import (constructEditContent, get_campaign_category_list, get_country_from_code,
                                  compute_campaign_status, buildCategoryObject, create_campaign_country_stats_csv,
-                                 create_campaign_contributor_stats_csv)
+                                 create_campaign_contributor_stats_csv, create_campaign_all_stats_csv,
+                                 get_all_camapign_stats_data)
 from isa.main.utils import testDbCommitSuccess, getCampaignCountryData
 from isa.users.utils import (get_user_language_preferences,
                              getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
@@ -132,12 +133,22 @@ def getCampaignById(id):
                                                                  campaign_name,
                                                                  contributor_fields,
                                                                  contributor_stats_data)
+
+    # 3 - We create the all_stats download file
+    # The field in the stats file will be as thus
+    all_stats_fields = ['username', 'file', 'edit_type', 'edit_action', 'country', 'depict_item',
+                        'depict_prominent', 'caption_text', 'caption_language']
+    campaign_all_stats_data = get_all_camapign_stats_data(id)
+    campaign_all_stats_csv_file = create_campaign_all_stats_csv(stats_file_directory, campaign_name,
+                                                                all_stats_fields, campaign_all_stats_data)
+
     # We prepare the campaign stats data to be sent to the next page (stats route)
     campaign_stats_data = {}
     campaign_stats_data['campaign_editors'] = campaign_editors
     campaign_stats_data['campaign_contributions'] = campaign_contributions
     campaign_stats_data['all_contributors_data'] = all_contributors_data
     campaign_stats_data['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
+    campaign_stats_data['campaign_all_stats_csv_file'] = campaign_all_stats_csv_file
 
     return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                             campaign=campaign,
@@ -183,13 +194,14 @@ def getCampaignStatsById(id):
                            current_user=current_user,
                            all_contributors_data=campaign_return_data['all_contributors_data'],
                            all_campaign_country_statistics_data=campaign_return_data['all_campaign_country_statistics_data'],
-                           username=username)
+                           username=username,
+                           campaign_all_stats_csv_file=campaign_return_data['campaign_all_stats_csv_file'])
 
 
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name
-    username = session.get('username', 'Eugene233')
+    username = session.get('username', None)
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
@@ -337,9 +349,10 @@ def getCampaignCategories():
     return campaign.categories
 
 
-@campaigns.route('/api/post-contribution', methods=['POST'])
+@campaigns.route('/api/post-contribution', methods=['POST', 'GET'])
 def postContribution():
     contrib_data = request.data.decode('utf8')
+    contrib_data_list = []
     contrib_data_list = json.loads(contrib_data)
     username = session.get('username', None)
     campaign_id = contrib_data_list[0]['campaign_id']
@@ -352,12 +365,15 @@ def postContribution():
         contrib_list = []
         for data in contrib_data_list:
             contribution = Contribution(username=username,
-                                        campaign_id=campaign_id,
+                                        campaign_id=int(campaign_id),
                                         file=data['image'],
                                         edit_action=data['edit_action'],
                                         edit_type=data['edit_type'],
                                         country=data['country'],
-                                        edit_content=str(data['edit_content']))
+                                        depict_item=data['edit_content']['depict_edit']['item'],
+                                        depict_prominent=data['edit_content']['depict_edit']['isProminent'],
+                                        caption_language=data['edit_content']['caption_edit']['language'],
+                                        caption_text=data['edit_content']['caption_edit']['value'])
             contrib_list.append(contribution)
         for contrib in contrib_list:
             db.session.add(contrib)
@@ -379,6 +395,15 @@ def downloadContributionStats(id, filename):
 
 @campaigns.route('/campaigns/<int:id>/country_stats_download/<string:filename>', methods=['GET', 'POST'])
 def downloadCountryStats(id, filename):
+    if filename:
+        return send_file(os.getcwd() + '/campaign_stats_files/' + str(id) + '/' + filename,
+                         as_attachment=True, cache_timeout=0, last_modified=True)
+    else:
+        flash('Download may be unavailable now', 'info')
+
+
+@campaigns.route('/campaigns/<int:id>/all_stats_download/<string:filename>', methods=['GET', 'POST'])
+def downloadAllCampaignStats(id, filename):
     if filename:
         return send_file(os.getcwd() + '/campaign_stats_files/' + str(id) + '/' + filename,
                          as_attachment=True, cache_timeout=0, last_modified=True)

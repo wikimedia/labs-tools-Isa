@@ -25,24 +25,26 @@ class User(db.Model, UserMixin):
 
 class Contribution(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
+    username = db.Column(db.String(20), nullable=False)
     campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
-    file = db.Column(db.String(150), nullable=False)
+    file = db.Column(db.String(210), nullable=False)
     edit_type = db.Column(db.String(7), nullable=False)
     edit_action = db.Column(db.String(7), nullable=False)
     country = db.Column(db.String(15), nullable=False, default='')
-    edit_content = db.Column(db.String(150), nullable=False)
+    depict_item = db.Column(db.String(15), nullable=True, default='')
+    depict_prominent = db.Column(db.Boolean, nullable=True, default=bool('False'))
+    caption_language = db.Column(db.String(5), nullable=True, default='')
+    caption_text = db.Column(db.String(200), nullable=True, default='')
 
     def __repr__(self):
         # This is what is shown when object is printed
-        return "Contribution( {}, {}, {},{},{},{},{})".format(
+        return "Contribution( {}, {}, {},{},{},{})".format(
                self.username,
                self.campaign_id,
                self.file,
                self.edit_type,
                self.edit_action,
-               self.country,
-               self.edit_content)
+               self.country)
 
     def __getitem__(self, index):
         return self[index]

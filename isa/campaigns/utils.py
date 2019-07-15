@@ -1,8 +1,11 @@
 import json
+import sys
 import csv
 import pycountry
 
 from datetime import datetime
+
+from isa.models import Contribution
 
 
 def get_country_from_code(country_code):
@@ -101,6 +104,24 @@ def buildCategoryObject(category):
     return cat_object_body
 
 
+def get_all_camapign_stats_data(campaign_id):
+    all_campaign_stats_data = []
+    all_campaign_stats = Contribution.query.filter_by(campaign_id=campaign_id).all()
+    for campaign_stat in all_campaign_stats:
+        campaign_stat_data = {}
+        campaign_stat_data['username'] = campaign_stat.username
+        campaign_stat_data['file'] = campaign_stat.file
+        campaign_stat_data['edit_type'] = campaign_stat.edit_type
+        campaign_stat_data['edit_action'] = campaign_stat.edit_action
+        campaign_stat_data['country'] = campaign_stat.country
+        campaign_stat_data['depict_item'] = campaign_stat.depict_item
+        campaign_stat_data['depict_prominent'] = campaign_stat.depict_prominent
+        campaign_stat_data['caption_text'] = campaign_stat.caption_text
+        campaign_stat_data['caption_language'] = campaign_stat.caption_language
+        all_campaign_stats_data.append(campaign_stat_data)
+    return all_campaign_stats_data
+
+
 def create_campaign_country_stats_csv(stats_file_directory, campaign_name,
                                       country_fields, country_stats_data):
     file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_country_stats.csv'
@@ -127,3 +148,17 @@ def create_campaign_contributor_stats_csv(stats_file_directory, campaign_name,
         writer.writerows(contributor_stats_data)
     contrib_csv_file.close()
     return campaign_name.replace(' ', '_') + '_stats.csv'
+
+
+def create_campaign_all_stats_csv(stats_file_directory, campaign_name, all_stats_fields,
+                                  campaign_all_stats_data):
+    # We build the campaign statistucs file here with the country stats stats
+    file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_all_stats.csv'
+    with open(file_directory, 'w') as all_stats_csv_file:
+        writer = csv.writer(all_stats_csv_file)
+        fields = all_stats_fields
+        writer = csv.DictWriter(all_stats_csv_file, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(campaign_all_stats_data)
+    all_stats_csv_file.close()
+    return campaign_name.replace(' ', '_') + '_all_stats.csv'
