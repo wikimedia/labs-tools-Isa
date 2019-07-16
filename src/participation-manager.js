@@ -134,7 +134,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             }
 
         }).fail( function(error) {
-            console.log("Unable to post contributions to ISA server", error)
             flashMessage('danger', '<strong>Oops!</strong> Something went wrong, your edits were not saved ')
         })
     }
@@ -205,20 +204,22 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
 
         // First find any new items, or changes to isProminent
         for (var i=0; i < depictStatements.length; i++) {
-            var currentStatement = depictStatements[i];
-            var editContent = {item: currentStatement.item, isProminent: currentStatement.isProminent};
+            var currentStatement = depictStatements[i],
+                depictItem = currentStatement.item,
+                isProminent = currentStatement.isProminent;
             var found = false;
             for (var j=0; j < intialDepictStatements.length; j++) {
                 // check all intial statements to see if currentStatement q number was there
                 var initialStatement = intialDepictStatements[j];
 
-                if (initialStatement.item === currentStatement.item) {
+                if (depictItem === initialStatement.item) {
                     // the item was there to start with, now check if isProminent has changed
-                    if (currentStatement.isProminent !== initialStatement.isProminent) {
+                    if (isProminent !== initialStatement.isProminent) {
                         // only isProminent has changed
                         depictChanges.push({
                             edit_action: "edit",
-                            edit_content: editContent,
+                            depict_item: depictItem,
+                            depict_prominent: isProminent,
                             statement_id: currentStatement.statementId
                         })
                     } // else, no changes to statement
@@ -232,8 +233,9 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                 // The current depicts item has not been found, it must be an unsaved change
                 depictChanges.push({
                     edit_action: "add",
-                    edit_content: editContent,
-                    // no statementId assigned before edit is made
+                    depict_item: depictItem,
+                    depict_prominent: isProminent,
+                    statement_id: '' // no statementId assigned before edit is made
                 })
             }
         } // check next statement...
@@ -254,7 +256,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             if (!found) {
                 depictChanges.push({
                     edit_action: "remove",
-                    edit_content: {item: initialStatement.item, isProminent: initialStatement.isProminent},
+                    depict_item: initialStatement.item,
+                    depict_prominent: initialStatement.isProminent,
                     statement_id: initialStatement.statementId
                 })
             }
@@ -274,18 +277,20 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
 
         // First, find the added or edited captions
         for (var i=0; i < captions.length; i++) {
-            var currentCaption = captions[i],
+            var captionText = captions[i].value,
+                captionLanguage = captions[i].language
                 found = false;
             for (var j=0; j < intialCaptions.length; j++) {
                 var initialCaption = intialCaptions[j];
 
-                if (currentCaption.language === initialCaption.language) {
+                if (captionLanguage === initialCaption.language) {
                     // this language caption existed intially
                     // has the text changed?
-                    if (currentCaption.value !== initialCaption.value) {
+                    if (captionText !== initialCaption.value) {
                          captionChanges.push({
-                            edit_action: "edit",
-                            edit_content: currentCaption,
+                             edit_action: "edit",
+                             caption_text: captionText,
+                             caption_language: captionLanguage
                         })
                     } // else, no changes to caption
                     found = true;
@@ -297,7 +302,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                 // The current caption has not been found, it must be an unsaved change
                 captionChanges.push({
                     edit_action: "add",
-                    edit_content: currentCaption,
+                    caption_text: captionText,
+                    caption_language: captionLanguage
                 })
             }
         } // check next statement...
@@ -318,7 +324,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             if (!found) {
                 captionChanges.push({
                     edit_action: "remove",
-                    edit_content: initialCaption,
+                    caption_text: initialCaption.value,
+                    caption_language: initialCaption.language,
                 })
             }
         } // check next initial statement...
@@ -388,9 +395,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             url: 'https://commons.wikimedia.org/w/api.php',
             data: entitiesApiOptions
         } ).done( function( response ) {
-            
-            console.log(response)
-
             // store imageMediaId for access within ParticipationManager
             var mediaId = imageMediaId = Object.keys(response.entities)[0]; 
             imageRevId = response.entities[mediaId].lastrevid;
@@ -467,8 +471,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                         description = itemData.descriptions[descriptionLang].value,
                         isProminent = storedStatementData.isProminent,
                         statementId = storedStatementData.statementId;
-                    
-                    console.log("statementId for existing depicts: ", statementId)
 
                     intialStatementsHtml += getStatementHtml(qvalue, label, description, isProminent, statementId);
 
@@ -496,8 +498,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         var statementIdAttribute = (statementId) ? 
             'statement-id=' + statementId : 
             '';
-        
-        console.log(statementIdAttribute)
         
         var isProminentButtonHtml = isProminent ?
             '<button class="btn btn-sm prominent-btn active" title="Mark this depicted item as NOT prominent"><i class="fas fa-flag"></i></button>' :

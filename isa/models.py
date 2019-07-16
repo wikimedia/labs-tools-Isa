@@ -31,10 +31,10 @@ class Contribution(db.Model):
     edit_type = db.Column(db.String(7), nullable=False)
     edit_action = db.Column(db.String(7), nullable=False)
     country = db.Column(db.String(15), nullable=False, default='')
-    depict_item = db.Column(db.String(15), nullable=True, default='')
-    depict_prominent = db.Column(db.Boolean, nullable=True, default=bool('False'))
-    caption_language = db.Column(db.String(5), nullable=True, default='')
-    caption_text = db.Column(db.String(200), nullable=True, default='')
+    depict_item = db.Column(db.String(15), nullable=True)
+    depict_prominent = db.Column(db.Boolean, nullable=True)
+    caption_language = db.Column(db.String(5), nullable=True)
+    caption_text = db.Column(db.String(200), nullable=True)
 
     def __repr__(self):
         # This is what is shown when object is printed

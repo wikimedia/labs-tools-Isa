@@ -370,10 +370,10 @@ def postContribution():
                                         edit_action=data['edit_action'],
                                         edit_type=data['edit_type'],
                                         country=data['country'],
-                                        depict_item=data['edit_content']['depict_edit']['item'],
-                                        depict_prominent=data['edit_content']['depict_edit']['isProminent'],
-                                        caption_language=data['edit_content']['caption_edit']['language'],
-                                        caption_text=data['edit_content']['caption_edit']['value'])
+                                        depict_item=data.get('depict_item'),
+                                        depict_prominent=data.get('depict_prominent'),
+                                        caption_language=data.get('caption_language'),
+                                        caption_text=data.get('caption_text'))
             contrib_list.append(contribution)
         for contrib in contrib_list:
             db.session.add(contrib)
