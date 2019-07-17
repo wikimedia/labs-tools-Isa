@@ -13,7 +13,7 @@ def user_loader(user_id):
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, index=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
-    pref_lang = db.Column(db.String(15), nullable=False)
+    pref_lang = db.Column(db.String(25), nullable=False)
     contrib = db.Column(db.Integer, default=0)
 
     def __repr__(self):
