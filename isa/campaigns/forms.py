@@ -10,9 +10,8 @@ class CampaignForm(FlaskForm):
     campaign_name = StringField(validators=[DataRequired(),
                                 Length(min=2, max=20)])
     short_description = StringField(widget=widgets.TextArea())
-    start_date = DateField(id='datepick1',
-                           format='%Y-%m-%d', validators=[InputRequired()])
-    end_date = DateField(id='datepick2', format='%Y-%m-%d')
+    start_date = StringField(id='start_date_datepicker', validators=[InputRequired()])
+    end_date = StringField(id='end_date_datepicker')
     categories = HiddenField(validators=[DataRequired()])
     depicts_metadata = BooleanField()
     captions_metadata = BooleanField()
@@ -26,9 +25,8 @@ class UpdateCampaignForm(FlaskForm):
     campaign_name = StringField('Campaign Name', validators=[DataRequired(),
                                 Length(min=2, max=20)])
     short_description = StringField('Short description of Campaign', widget=widgets.TextArea())
-    start_date = DateField('Start Date ', id='datepick1',
-                           format='%Y-%m-%d', validators=[InputRequired()])
-    end_date = DateField('Close Date ', id='datepick2', format='%Y-%m-%d')
+    start_date = StringField('Start Date ', id='start_date_datepicker', validators=[InputRequired()])
+    end_date = StringField('Close Date ', id='end_date_datepicker')
     categories = HiddenField(validators=[DataRequired()])
     depicts_metadata = BooleanField('Depicts')
     captions_metadata = BooleanField('Captions')
