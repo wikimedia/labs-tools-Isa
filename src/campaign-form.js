@@ -1,5 +1,13 @@
 $(document).ready( function () {
-    
+
+    $('#start_date_datepicker').datepicker( {
+        format: 'yyyy-mm-dd'
+    });
+
+    $('#end_date_datepicker').datepicker( {
+        format: 'yyyy-mm-dd'
+    } );
+
     // Populate existing categories in the UI if data present in hidden field (on update route)
     var categoryData = $('#categories-data').val();
     if ( categoryData ) {
@@ -109,5 +117,4 @@ $(document).ready( function () {
     $('form').submit(function(event, data) {
         $('#categories-data')[0].value = getJsonCategoryData();
     })
-    
 });
