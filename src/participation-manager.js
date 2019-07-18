@@ -12,12 +12,13 @@ import {flashMessage} from './utils';
 export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         var imageIndex = 0,
         imageFileName = '',
-        imageMediaId = '',
         imageRevId = 0,
         userCaptionLanguages = getUserLanguages(),
         initialData = {depicts: [], captions: []},
         unsavedChanges = {depicts: [], captions: []};
 
+    this.imageMediaId = '';
+    
     this.nextImage = function () {
         imageIndex = (imageIndex + 1) % (images.length);
         this.imageChanged();
@@ -36,8 +37,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         document.documentElement.scrollTop = 0;
         imageFileName = getImageFilename ()
         updateImage(imageFileName);
-        populateMetadata(imageFileName);
-        populateStructuredData(imageFileName, /*callbacks*/ {
+        this.populateMetadata(imageFileName);
+        this.populateStructuredData(imageFileName, /*callbacks*/ {
             onInitialDataReady: saveInitialStructuredData,
             onUiRendered: function () {
                 // run data change events to update button states and other settings
@@ -98,7 +99,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         // now extend the unsavedChanged data with properties that are the same for all contribution types
         var additonalContributionData = {
             image: imageFileName,
-            media_id: imageMediaId,
+            media_id: this.imageMediaId,
             campaign_id: campaignId,
             edit_type: editType,
             country: wikiLovesCountry
@@ -137,6 +138,166 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             flashMessage('danger', '<strong>Oops!</strong> Something went wrong, your edits were not saved ')
         })
     }
+    
+     /////////// Data populating functions ///////////
+
+    this.populateMetadata = function(filename) {
+        var apiOptions = {
+            action: 'query',
+            titles: filename,
+            prop: 'imageinfo',
+            iiprop: 'extmetadata',
+            format: 'json',
+            formatversion: 2,
+            origin: '*'
+        };
+
+        $.ajax( {
+            type: 'GET',
+            url: 'https://commons.wikimedia.org/w/api.php',
+            data: apiOptions
+        } )
+        .done( function( response ) {
+            var metadata = response.query.pages[0].imageinfo[0].extmetadata;
+            var title = response.query.pages[0].title;
+            var escapedTitle = encodeURIComponent(title);
+            var htmlStrippedDescription = $('<span>' + metadata.ImageDescription.value + '</span>').text();
+
+            var cameraLocationHtml = '(unknown)',
+                lat = metadata.GPSLatitude,
+                long = metadata.GPSLongitude;
+
+            if (lat && long) {
+                var locationUrl = 'https://www.openstreetmap.org/?mlat=' + lat.value + '&mlon=' + long.value,
+                    locationText = lat.value + ', ' + long.value;
+                cameraLocationHtml = '<a href=' + locationUrl + '>' + locationText + '</a>';
+            }
+
+            // spacing between categories
+            var categories = metadata.Categories.value.replace(/\|/g,' | ');
+
+            $('#image_name').html('<a href=' + "https://commons.wikimedia.org/wiki/" + escapedTitle + ' target="_blank">' + title.replace("File:", "") + '</a>');
+            $('#image_description').text(htmlStrippedDescription);
+            $('#image_categories').text(categories);
+            $('#image_author').html(metadata.Artist.value);
+            $('#image_camera_location').html(cameraLocationHtml);
+            $('#image_credit').html(metadata.Credit.value);
+            $('#image_license').html('<a href=' + metadata.LicenseUrl.value + '>' + metadata.LicenseShortName.value + '</a>');
+
+        } );
+    }
+    
+    this.populateStructuredData = function(filename, callbacks) {
+        var me = this;
+        $('.depict-tag-group').empty(); //clear previous
+        var entitiesApiOptions = {
+            action: 'wbgetentities',
+            titles: filename,
+            sites: 'commonswiki',
+            format: 'json',
+            origin: '*'
+        };
+        $.ajax( {
+            type: 'GET',
+            url: 'https://commons.wikimedia.org/w/api.php',
+            data: entitiesApiOptions
+        } ).done( function( response ) {
+            // store imageMediaId for access within ParticipationManager
+            var mediaId = me.imageMediaId = Object.keys(response.entities)[0]; 
+            imageRevId = response.entities[mediaId].lastrevid;
+            var mediaStatements = response.entities[mediaId].statements || {};
+            var mediaCaptions = response.entities[mediaId].labels || {};
+            var depictItems = [];
+            var captions = [];
+
+            // process captions
+            for (var i=0; i < userCaptionLanguages.length; i++) {
+                var userLang = userCaptionLanguages[i];
+                var caption = mediaCaptions[userLang];
+                if (caption) {
+                    captions.push(caption);
+                    populateCaption(userLang, caption.value)
+                } else {
+                    populateCaption(userLang, "")
+                }
+            }
+
+            // process statements
+            if ( mediaStatements.P180 ) {
+                // convert results to array of {item, isProminent} objects
+                depictItems = mediaStatements.P180.map(function(depictStatement) {
+                    return {
+                        item: depictStatement.mainsnak.datavalue.value.id,
+                        isProminent: depictStatement.rank === "preferred",
+                        statementId: depictStatement.id
+                    }
+                });
+            } else {
+                //todo: add message to statements container
+                //console.log("this item has no depicts statements yet")
+            }
+
+            // run callback now that data has been retreived
+            if (callbacks.onInitialDataReady) callbacks.onInitialDataReady(depictItems, captions);
+
+            if (depictItems.length === 0) {
+                // fire the UiRendered event now and return as there are no items to get labels for
+                if (callbacks.onUiRendered) callbacks.onUiRendered(); 
+                return;
+            }
+            // now make another call to Wikidata to get the labels for each depcits item
+            var qvalues = depictItems.map(function(statement) {
+                return statement.item;
+            });
+            var secondApiOptions = {
+                action: 'wbgetentities',
+                props: 'labels|descriptions',
+                format: 'json',
+                ids: qvalues.join("|"),
+                languages: 'en',
+                origin: '*',
+                languagefallback: ''
+            };
+            $.ajax( {
+                type: 'GET',
+                url: 'https://www.wikidata.org/w/api.php',
+                data: secondApiOptions
+                })
+            .done( function (response) {
+                // now we have the labels, populate the statements area to show existing depicts items
+                // we need to extract isProminent from results of previous API call to Commons
+                // and add the labels and descriptions found to the existing stored data
+                var intialStatementsHtml = "";
+                for (var qvalue in response.entities) {
+                    var storedStatementData = getStoredStatementData(qvalue);
+
+                    var itemData = response.entities[qvalue],
+                        labelLang = Object.keys(itemData.labels)[0],
+                        label = itemData.labels[labelLang].value,
+                        descriptionLang = Object.keys(itemData.descriptions)[0],
+                        description = itemData.descriptions[descriptionLang].value,
+                        isProminent = storedStatementData.isProminent,
+                        statementId = storedStatementData.statementId;
+
+                    intialStatementsHtml += getStatementHtml(qvalue, label, description, isProminent, statementId);
+
+                    // save label and description
+                    storedStatementData.label = label;
+                    storedStatementData.description = description;
+                }
+                $('.depict-tag-group').html(intialStatementsHtml);
+
+                if (callbacks.onUiRendered) callbacks.onUiRendered(); // fires when the the actual HTML has finsihed being added to the page
+
+                function getStoredStatementData(qvalue) {
+                    //uses depictItems from previous API call to Commons
+                    for (var i=0; i < depictItems.length; i++) {
+                        if (depictItems[i].item === qvalue) return depictItems[i];
+                    }
+                }
+            });
+        });
+}
 
     /////////// Image utilities ///////////
 
@@ -235,7 +396,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
                     edit_action: "add",
                     depict_item: depictItem,
                     depict_prominent: isProminent,
-                    statement_id: '' // no statementId assigned before edit is made
+                    statement_id: currentStatement.statementId
                 })
             }
         } // check next statement...
@@ -332,165 +493,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         unsavedChanges.captions = captionChanges;
     }
 
-    /////////// Data populating functions ///////////
-
-    function populateMetadata(filename) {
-        var apiOptions = {
-            action: 'query',
-            titles: filename,
-            prop: 'imageinfo',
-            iiprop: 'extmetadata',
-            format: 'json',
-            formatversion: 2,
-            origin: '*'
-        };
-
-        $.ajax( {
-            type: 'GET',
-            url: 'https://commons.wikimedia.org/w/api.php',
-            data: apiOptions
-        } )
-        .done( function( response ) {
-            var metadata = response.query.pages[0].imageinfo[0].extmetadata;
-            var title = response.query.pages[0].title;
-            var escapedTitle = encodeURIComponent(title);
-            var htmlStrippedDescription = $('<span>' + metadata.ImageDescription.value + '</span>').text();
-
-            var cameraLocationHtml = '(unknown)',
-                lat = metadata.GPSLatitude,
-                long = metadata.GPSLongitude;
-
-            if (lat && long) {
-                var locationUrl = 'https://www.openstreetmap.org/?mlat=' + lat.value + '&mlon=' + long.value,
-                    locationText = lat.value + ', ' + long.value;
-                cameraLocationHtml = '<a href=' + locationUrl + '>' + locationText + '</a>';
-            }
-
-            // spacing between categories
-            var categories = metadata.Categories.value.replace(/\|/g,' | ');
-
-            $('#image_name').html('<a href=' + "https://commons.wikimedia.org/wiki/" + escapedTitle + ' target="_blank">' + title.replace("File:", "") + '</a>');
-            $('#image_description').text(htmlStrippedDescription);
-            $('#image_categories').text(categories);
-            $('#image_author').html(metadata.Artist.value);
-            $('#image_camera_location').html(cameraLocationHtml);
-            $('#image_credit').html(metadata.Credit.value);
-            $('#image_license').html('<a href=' + metadata.LicenseUrl.value + '>' + metadata.LicenseShortName.value + '</a>');
-
-            //LicenseUrl.valeu
-        } );
-    }
-
-    function populateStructuredData(filename, callbacks) {
-        $('.depict-tag-group').empty(); //clear previous
-        var entitiesApiOptions = {
-            action: 'wbgetentities',
-            titles: filename,
-            sites: 'commonswiki',
-            format: 'json',
-            origin: '*'
-        };
-        $.ajax( {
-            type: 'GET',
-            url: 'https://commons.wikimedia.org/w/api.php',
-            data: entitiesApiOptions
-        } ).done( function( response ) {
-            // store imageMediaId for access within ParticipationManager
-            var mediaId = imageMediaId = Object.keys(response.entities)[0]; 
-            imageRevId = response.entities[mediaId].lastrevid;
-            var mediaStatements = response.entities[mediaId].statements || {};
-            var mediaCaptions = response.entities[mediaId].labels || {};
-            var depictItems = [];
-            var captions = [];
-
-            // process captions
-            for (var i=0; i < userCaptionLanguages.length; i++) {
-                var userLang = userCaptionLanguages[i];
-                var caption = mediaCaptions[userLang];
-                if (caption) {
-                    captions.push(caption);
-                    populateCaption(userLang, caption.value)
-                } else {
-                    populateCaption(userLang, "")
-                }
-            }
-
-            // process statements
-            if ( mediaStatements.P180 ) {
-                // convert results to array of {item, isProminent} objects
-                depictItems = mediaStatements.P180.map(function(depictStatement) {
-                    return {
-                        item: depictStatement.mainsnak.datavalue.value.id,
-                        isProminent: depictStatement.rank === "preferred",
-                        statementId: depictStatement.id
-                    }
-                });
-            } else {
-                //todo: add message to statements container
-                //console.log("this item has no depicts statements yet")
-            }
-
-            // run callback now that data has been retreived
-            if (callbacks.onInitialDataReady) callbacks.onInitialDataReady(depictItems, captions);
-
-            if (depictItems.length === 0) {
-                // fire the UiRendered event now and return as there are no items to get labels for
-                if (callbacks.onUiRendered) callbacks.onUiRendered(); 
-                return;
-            }
-            // now make another call to Wikidata to get the labels for each depcits item
-            var qvalues = depictItems.map(function(statement) {
-                return statement.item;
-            });
-            var secondApiOptions = {
-                action: 'wbgetentities',
-                props: 'labels|descriptions',
-                format: 'json',
-                ids: qvalues.join("|"),
-                languages: 'en',
-                origin: '*',
-                languagefallback: ''
-            };
-            $.ajax( {
-                type: 'GET',
-                url: 'https://www.wikidata.org/w/api.php',
-                data: secondApiOptions
-                })
-            .done( function (response) {
-                // now we have the labels, populate the statements area to show existing depicts items
-                // we need to extract isProminent from results of previous API call to Commons
-                // and add the labels and descriptions found to the existing stored data
-                var intialStatementsHtml = "";
-                for (var qvalue in response.entities) {
-                    var storedStatementData = getStoredStatementData(qvalue);
-
-                    var itemData = response.entities[qvalue],
-                        labelLang = Object.keys(itemData.labels)[0],
-                        label = itemData.labels[labelLang].value,
-                        descriptionLang = Object.keys(itemData.descriptions)[0],
-                        description = itemData.descriptions[descriptionLang].value,
-                        isProminent = storedStatementData.isProminent,
-                        statementId = storedStatementData.statementId;
-
-                    intialStatementsHtml += getStatementHtml(qvalue, label, description, isProminent, statementId);
-
-                    // save label and description
-                    storedStatementData.label = label;
-                    storedStatementData.description = description;
-                }
-                $('.depict-tag-group').html(intialStatementsHtml);
-
-                if (callbacks.onUiRendered) callbacks.onUiRendered(); // fires when the the actual HTML has finsihed being added to the page
-
-                function getStoredStatementData(qvalue) {
-                    //uses depictItems from previous API call to Commons
-                    for (var i=0; i < depictItems.length; i++) {
-                        if (depictItems[i].item === qvalue) return depictItems[i];
-                    }
-                }
-            });
-        });
-    }
+   
 
     /////////// General utilities ///////////
 

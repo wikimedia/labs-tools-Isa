@@ -4,6 +4,7 @@
 import {ParticipationManager} from './participation-manager';
 import {getImagesFromApi} from './category-members';
 import {getUrlParameters} from './utils';
+import {generateGuid} from './guid-generator.js';
 
 var campaignId = getCampaignId(),
     wikiLovesCountry = getWikiLovesCountry(),
@@ -38,12 +39,12 @@ $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
         getImagesFromApi(categories, function(images) {
             // Now we have all images from processing each category with depth
             // Start a new editSession using the Participation Manager
-            console.log("Images retrieved!", images)
+            console.log("Images retrieved!", images.length)
             editSession = new ParticipationManager(images, campaignId, wikiLovesCountry);
 
             // Trigger image changed event to populate the page
             editSession.imageChanged();
-            
+           
             // Close loading overlay
             if (images.length > 0) {
                 hideLoadingOverlay();
@@ -116,11 +117,20 @@ function searchResultsFormat(state) {
     $('#depicts-select').on('select2:select', function(ev) {
         // Add new depict statement to the UI when user selects result
         var selected = ev.params.data;
-        editSession.addDepictStatement(selected.id, selected.text, selected.description)
+        
+        // Generate a new unique statement ID
+        var statementId = generateStatementId(editSession.imageMediaId);
+        
+        editSession.addDepictStatement (
+            selected.id, 
+            selected.text, 
+            selected.description, 
+            false /* isProminent */, 
+            statementId
+        );
         $(this).val(null).trigger('change');
     })
   })();
-
 
 ///////// Event handlers /////////
 
@@ -200,6 +210,9 @@ function getUserLanguages() {
     return languages
 }
 
+function generateStatementId(mediaId) {
+    return mediaId + '$' + generateGuid();
+}
 
 function hideLoadingOverlay() {
     $('.loading').fadeOut('slow');
