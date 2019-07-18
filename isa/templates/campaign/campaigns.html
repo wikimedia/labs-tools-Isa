@@ -34,9 +34,9 @@
             {% for campaign in campaigns %}
                 <tr>
                     <td><span class="">{{ campaign.campaign_name }}</span></td>
-                    <td>5000</td>
-                    <td>100</td>
-                    <td>50</td>
+                    <td>{{ campaign.campaign_images }}</td>
+                    <td>{{ campaign.campaign_participants }}</td>
+                    <td>{{ campaign.campaign_contributions }}</td>
                     <td><span class="">{{ campaign.start_date.strftime("%d-%m-%y") }}</span></td>
                     <td><span class="">{{ campaign.end_date.strftime("%d-%m-%y") }}</span></td>
                     <td><span class="">{{ campaign.creation_date.strftime("%d-%m-%y") }}</span></td>
