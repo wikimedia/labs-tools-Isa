@@ -150,6 +150,10 @@ def getCampaignById(id):
     campaign_stats_data['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
     campaign_stats_data['campaign_all_stats_csv_file'] = campaign_all_stats_csv_file
 
+    campaign.campaign_participants = campaign_editors
+    campaign.campaign_contributions = campaign_contributions
+    if testDbCommitSuccess():
+        print('Campaign info updated successfully!')
     return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                             campaign=campaign,
                             campaign_manager=campaign.campaign_manager,
@@ -381,6 +385,22 @@ def postContribution():
             return("Failure")
         else:
             return("Success!")
+    return("Failure")
+
+
+@campaigns.route('/api/update-campaign-images/<int:id>', methods=['POST', 'GET'])
+def UpdateCampaignImagesCount(id):
+
+    # We get the data from request and convert it to json
+    images_data = json.loads(request.data.decode('utf8'))
+    campaign = Campaign.query.filter_by(id=1).first()
+    # We get the campaign images count and cast before including that into db
+    campaign_images = int(images_data['campaign_images'])
+    campaign.campaign_images = campaign_images
+    if testDbCommitSuccess():
+        return("Failure")
+    else:
+        return("Success!")
     return("Failure")
 
 

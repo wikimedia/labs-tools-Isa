@@ -28,7 +28,7 @@ class Contribution(db.Model):
     username = db.Column(db.String(20), nullable=False)
     campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
     file = db.Column(db.String(210), nullable=False)
-    edit_type = db.Column(db.String(7), nullable=False)
+    edit_type = db.Column(db.String(10), nullable=False)
     edit_action = db.Column(db.String(7), nullable=False)
     country = db.Column(db.String(15), nullable=False, default='')
     depict_item = db.Column(db.String(15), nullable=True)
@@ -53,6 +53,9 @@ class Contribution(db.Model):
 class Campaign(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     campaign_name = db.Column(db.String(25), nullable=False)
+    campaign_images = db.Column(db.Integer, default=0)
+    campaign_contributions = db.Column(db.Integer, default=0)
+    campaign_participants = db.Column(db.Integer, default=0)
     campaign_image = db.Column(db.String(200), nullable=True, default='')
     categories = db.Column(db.Text, nullable=False)
     start_date = db.Column(db.Date, nullable=False,
