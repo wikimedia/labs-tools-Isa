@@ -218,9 +218,9 @@ def CreateCampaign():
             campaign = Campaign(
                 campaign_name=form.campaign_name.data,
                 categories=form_categories,
-                start_date=form.start_date.data,
+                start_date=datetime.strptime(form.start_date.data, '%Y-%m-%d'),
                 campaign_manager=username,
-                end_date=form.end_date.data,
+                end_date=datetime.strptime(form.end_date.data, '%Y-%m-%d'),
                 status=compute_campaign_status(form.end_date.data),
                 short_description=form.short_description.data,
                 long_description=form.long_description.data,
@@ -297,10 +297,10 @@ def updateCampaign(id):
             campaign.depicts_metadata = form.depicts_metadata.data
             campaign.captions_metadata = form.captions_metadata.data
             campaign.categories = form.categories.data
-            campaign.start_date = form.start_date.data
+            campaign.start_date = datetime.strptime(form.start_date.data, '%Y-%m-%d')
             campaign.campaign_image = form.campaign_image.data
             campaign.campaign_type = form.campaign_type.data
-            campaign.end_date = form.end_date.data
+            campaign.end_date = datetime.strptime(form.end_date.data, '%Y-%m-%d')
             if testDbCommitSuccess():
                 flash(gettext('Please enter an End Date for this Campaign!'), 'danger')
             else:

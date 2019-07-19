@@ -41,8 +41,8 @@
                     <td><span class="">{{ campaign.end_date.strftime("%d-%m-%y") }}</span></td>
                     <td><span class="">{{ campaign.creation_date.strftime("%d-%m-%y") }}</span></td>
                     <td>
-                        {% if campaign.end_date.strftime("%d-%m-%y") < datetime.now().strftime("%d-%m-%y") %}
-                        <span class=""> {{ _('Closed') }}</span>
+                        {% if campaign.end_date.strftime("%y-%m-%d") < datetime.now().date().strftime("%y-%m-%d") %}
+                        <span class=""> {{ _('Closed') }} </span>
                         {% else %}
                         <span class="">{{ _('Open') }}</span>
                         {%  endif %}
