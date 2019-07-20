@@ -96,7 +96,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
     // Posts the current unsaved changes to the server as a JSON string
     this.postContribution = function(editType) {
 
-        // now extend the unsavedChanged data with properties that are the same for all contribution types
+        // Define data which is the same for all contribution types
         var additonalContributionData = {
             image: imageFileName,
             media_id: this.imageMediaId,
@@ -105,16 +105,29 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
             country: wikiLovesCountry
         }
 
-        // make deep copy of contribution data to keep original unchanged
+        // Make deep copy of contribution data to keep original unchanged
         var contributions = $.extend(/*deep*/ true, [], unsavedChanges[editType]);
 
-        contributions.map(function (contribution) {
-            return $.extend(contribution, additonalContributionData);
+        contributions.map(function (contribution, index) {
+            // Add common contribution data
+            $.extend(contribution, additonalContributionData);
+            
+            // Get edit API call for this contribution
+            var apiOptions = getEditApiOptions(contribution);
+            
+            // Add the revision id for the first contribution only;
+            // the next api calls will need baserevid from previous call's response
+            if (index === 0) apiOptions.baserevid = imageRevId;
+            
+            contribution.api_options = apiOptions;
+            return contribution;
         })
 
         var contributionsData = JSON.stringify(contributions);
 
         var me = this;
+        
+        console.log(contributions)
         $.post({
             url: '../../api/post-contribution',
             data: contributionsData,
@@ -492,6 +505,61 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
         } // check next initial statement...
         unsavedChanges.captions = captionChanges;
     }
+    
+    
+    /////////// Edit API calls ///////////
+    
+    function getEditApiOptions(contribution) {
+        var editType = contribution.edit_type,
+            editAction = contribution.edit_action;
+        
+        // Depicts edit
+        if (editType === 'depicts') {
+            var depictItem = contribution.depict_item,
+                depictProminent = contribution.depict_prominent,
+                statementId = contribution.statement_id,
+                claim;
+            
+            if (editAction === 'add' || editAction === 'edit') {
+                //action = 'wbsetclaim'
+                claim = {
+                    "type": "statement",
+                    "mainsnak": {
+                        "snaktype": "value",
+                        "property": "P180",
+                        "datavalue": {
+                            "type": "wikibase-entityid",
+                            "value": {
+                                "id": depictItem
+                            }
+                        }
+                    },
+                    "id": statementId,
+                    "rank": (depictProminent) ? "preferred" : "normal"
+                }
+                
+            } else if (editAction === 'remove') {
+                claim = statementId;
+            }
+            return {
+                action: "wbsetclaim",
+                claim: claim
+            };
+        
+        // Captions edit
+        } else if (editType === 'captions') {
+            return {
+                action: "wbsetlabel",
+                id: contribution.media_id,
+                value: contribution.caption_text,
+                language: contribution.caption_language,
+            }
+        };
+        
+        //else
+        return console.log("edit type not recognised, edit API call not generated!");
+    }
+    
 
    
 
