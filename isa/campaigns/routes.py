@@ -158,6 +158,7 @@ def getCampaignById(id):
                             campaign=campaign,
                             campaign_manager=campaign.campaign_manager,
                             username=username,
+                            campaign_image="https://commons.wikimedia.org/wiki/Special:FilePath/" + campaign.campaign_image,
                             session_language=session_language,
                             campaign_editors=campaign_editors,
                             campaign_contributions=campaign_contributions,

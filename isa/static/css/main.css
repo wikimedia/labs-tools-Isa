@@ -14,7 +14,7 @@
 
 /* style the page titles and page header*/
 .page-header h1 {
-    font-family: LinuxBiolinumOBold;
+    /*font-family: LinuxBiolinumOBold;*/
     margin: 0;
     text-transform: uppercase;
 }
@@ -70,7 +70,12 @@
  
  
 /********* CAMPAIGN PAGE ************/
- 
+ /*center and size banner image*/
+    .campaign-image{
+        max-width: 100%; 
+        max-height: 150px;
+}
+
 /* re-usable panel*/
 .campaign-panel {
     background-color: #e9ecef;
@@ -109,6 +114,7 @@
 .main-stats-label-group {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 .main-stats-label-group .label {
     min-width: 150px;
@@ -116,7 +122,7 @@
 .campaign-stats .stats-table {
     display: none;
     flex-direction: row;
-    margin-top: 50px;
+   /* margin-top: 50px;*/
     justify-content: space-around;
 }
 .top-user-table {
@@ -187,6 +193,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     width: fit-content;
     color: #999c9f;
 }
+
 .lang::after{
     position: absolute;
     font-family: 'Font Awesome 5 Free';
@@ -487,7 +494,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     .about-section p {text-align: center}
     /*desktop spacing for page header*/   
     .page-header {
-        padding-top: 30px;
+        padding-top: 20px;
     }   
     /*increase page title on desktop*/
     .page-header h1 {
