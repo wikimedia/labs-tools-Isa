@@ -393,7 +393,7 @@ def UpdateCampaignImagesCount(id):
 
     # We get the data from request and convert it to json
     images_data = json.loads(request.data.decode('utf8'))
-    campaign = Campaign.query.filter_by(id=1).first()
+    campaign = Campaign.query.filter_by(id=id).first()
     # We get the campaign images count and cast before including that into db
     campaign_images = int(images_data['campaign_images'])
     campaign.campaign_images = campaign_images
