@@ -44,9 +44,12 @@ body {padding-bottom: 50px}
 <div class="container edit-box">
     <div class="edit-box-header">
         <h4>{{ _('Depicts') }}</h4>
-        <div edit-type="depicts" class="edit-publish-btn-group">
-            <button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
-            <button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
+        <div edit-type="depicts" class="edit-publish-btn-group text-right">
+            <button class="btn btn-sm btn-link cancel-edits-btn" disabled>{{ _('Cancel') }}</button>
+            <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled>{{ _('Save') }}</button>
+            {% if username == None %}
+            <p class="text-danger">{{_('Log in to publish changes')}}</p>
+            {% endif %}        
         </div>
         <p>{{ _('Search for things you see in the image') }}</p>
     </div>
@@ -68,9 +71,12 @@ body {padding-bottom: 50px}
 <div class="container edit-box">
     <div class="edit-box-header">
         <h4>{{ _('Captions') }}</h4>
-        <div edit-type="captions" class="edit-publish-btn-group">
-            <button class="btn btn-sm btn-link cancel-edits-btn">{{ _('Cancel') }}</button>
-            <button type="submit" class="btn btn-sm btn-primary publish-edits-btn">{{ _('Save') }}</button>
+        <div edit-type="captions" class="edit-publish-btn-group text-right">
+            <button class="btn btn-sm btn-link cancel-edits-btn" disabled>{{ _('Cancel') }}</button>
+            <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled>{{ _('Save') }}</button>
+            {% if username == None %}
+            <p class="text-danger">{{_('Log in to publish changes')}}</p>
+            {% endif %}   
         </div>
         <p>{{ _('Add a caption for the image') }}</p>
     </div>
@@ -92,6 +98,5 @@ body {padding-bottom: 50px}
 </div>
 {% endblock content%}
 {% block scripts %} 
-<script src="{{url_for('static', filename='js/category-members.js')}}"></script> 
 <script src="{{url_for('static', filename='js/participate.js')}}"></script> 
 {% endblock scripts%}
