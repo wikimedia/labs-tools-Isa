@@ -5,6 +5,8 @@ import json
 import shutil
 import glob
 
+from isa import app
+
 from datetime import datetime
 from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file
 from isa import gettext
@@ -385,6 +387,11 @@ def postContribution():
         if testDbCommitSuccess():
             return("Failure")
         else:
+            # We get the session and app credetials for edits on Commons
+            # user_key = session['request_token']['key'].decode('ascii')
+            # user_secret = session['request_token']['secret'].decode('ascii')
+            # app_key = app.config['CONSUMER_KEY']
+            # app_secret = app.config['CONSUMER_SECRET']
             return("Success!")
     return("Failure")
 
