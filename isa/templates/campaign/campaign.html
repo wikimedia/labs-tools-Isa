@@ -1,6 +1,8 @@
 {% extends "main/layout.html" %}
 {% block content%}
 <div class="container page-header text-center">
+        <img class="campaign-image" src="{{ campaign_image }}" alt=""> <!--Copy the image or use commons link-->
+
     <h1>{{ campaign.campaign_name }}</h1>
     <hr>
     <p>{{campaign.short_description}}</p>
@@ -94,18 +96,20 @@
             </table>
         </div>
     </div>
-    <div class="main-stats-label-group mx-auto mt-3">
+                <a href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-primary" >{{ _('View full stats') }}</a>
+
+<!--    <div class="main-stats-label-group mx-auto mt-3">
         <a id="download_country_stats_btn" href="{{url_for('campaigns.downloadContributionStats', id=campaign.id, filename=contributor_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download Contrib Stats') }}</a>
         <a id="download_country_stats_btn" href="{{url_for('campaigns.downloadCountryStats', id=campaign.id, filename=country_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download Country Stats') }}</a>
-    </div>
+    </div>-->
 </div>
 </div>
 
-<div class="container text-center">
+<!--<div class="container text-center">
     <div class="campaign-panel primary-cta">
         <a id="get_started_btn" href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-primary" >{{ _('View full stats') }}</a>
     </div>
-</div>
+</div>-->
 
 <div class="container user-stats text-center">
     <div class="campaign-panel">
