@@ -39,7 +39,6 @@ $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
         getImagesFromApi(categories, function(images) {
             // Now we have all images from processing each category with depth
             // Start a new editSession using the Participation Manager
-            console.log("Images retrieved!", images.length)
             editSession = new ParticipationManager(images, campaignId, wikiLovesCountry);
 
             // Trigger image changed event to populate the page
@@ -52,6 +51,10 @@ $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
                 alert("No images found for this campaign");
                 window.location.href = '../' + campaignId;
             }
+            
+            // Update image count for campaign on each edit session to keep updated with changes
+            // Do not post when a WikiLoves country has been selected as this is a reduced list of images
+            if (!wikiLovesCountry) postCampaignImageCount(images.length);
             
         })
     })
@@ -216,4 +219,16 @@ function generateStatementId(mediaId) {
 
 function hideLoadingOverlay() {
     $('.loading').fadeOut('slow');
+}
+
+function postCampaignImageCount(imageCount) {
+    $.post({
+        url: '../../api/update-campaign-images/' + campaignId,
+        data: JSON.stringify({campaign_images: imageCount}),
+        contentType: 'application/json'
+    }).done(function(response) {
+        console.log("Success! image count updated to " + imageCount + " for campaign with id = " + campaignId)
+    }).fail( function(error) {
+        console.log("Failure! could not update image count for campaign")
+    })
 }
