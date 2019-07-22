@@ -9,7 +9,7 @@
 
 import {flashMessage} from './utils';
 
-export function ParticipationManager(images, campaignId, wikiLovesCountry) {
+export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
         var imageIndex = 0,
         imageFileName = '',
         imageRevId = 0,
@@ -58,13 +58,17 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry) {
     // All actions to complete when depict statement is added/removed/edited
     this.depictDataChanged = function () {
         updateUnsavedDepictChanges();
-        updateButtonStates("depicts");
+        
+        // Keep buttons inactive when user is not logged in
+        if (isUserLoggedIn) updateButtonStates("depicts");
     }
 
     // All actions to complete when caption statement is added/removed/edited
     this.captionDataChanged = function () {
         updateUnsavedCaptionChanges();
-        updateButtonStates("captions");
+        
+        // Keep buttons inactive when user is not logged in
+        if (isUserLoggedIn) updateButtonStates("captions");
     }
 
     this.resetDepictStatements = function () {

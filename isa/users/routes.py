@@ -1,5 +1,5 @@
 import mwoauth
-
+import json
 import sys
 from flask import Blueprint, redirect, url_for, flash, request, session, render_template
 from flask_login import current_user, login_user, logout_user
@@ -176,7 +176,8 @@ def userSettings():
 @users.route('/api/login-test', methods=['GET', 'POST'])
 def checkUserLogin():
     username = session.get('username', None)
-    if username:
-        return("Success!")
-    else:
-        return("Failure!")
+    response_data = {
+        'username': username,
+        'is_logged_in': bool(username is not None)
+    }
+    return json.dumps(response_data)

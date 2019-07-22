@@ -9,17 +9,20 @@ import {generateGuid} from './guid-generator.js';
 var campaignId = getCampaignId(),
     wikiLovesCountry = getWikiLovesCountry(),
     isWikiLovesCampaign = !!wikiLovesCountry, // todo: this should be read from get-campaign-categories api call 
+    isUserLoggedIn = false,
     editSession;
 
 ///////// Campaign images /////////
 
-// Disable scrolling while loading overlay shows
-// Todo: use CSS once split for different pages
-//$('body').css('overflow', 'hidden');
-
-// Get campaign categories and depth settings from the server
-$.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
-    .done(function(categories) {
+// Check if user is logged in
+$.getJSON('../../api/login-test')
+    .then(function(response) {
+        isUserLoggedIn = response.is_logged_in;
+    
+        // Then get campaign categories and depth settings from the server
+        return $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId);
+    })
+    .then(function(categories) {
         // todo: if it's a wiki loves campaign with no country selected, set all depth = 1 (ignore category depth settings)
     
         // Add Category: prefix
@@ -39,7 +42,8 @@ $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
         getImagesFromApi(categories, function(images) {
             // Now we have all images from processing each category with depth
             // Start a new editSession using the Participation Manager
-            editSession = new ParticipationManager(images, campaignId, wikiLovesCountry);
+            console.log("Images retrieved!", images.length)
+            editSession = new ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn);
 
             // Trigger image changed event to populate the page
             editSession.imageChanged();
@@ -48,14 +52,9 @@ $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId)
             if (images.length > 0) {
                 hideLoadingOverlay();
             } else {
-                alert("No images found for this campaign");
+                alert("No images found for this campaign!");
                 window.location.href = '../' + campaignId;
             }
-            
-            // Update image count for campaign on each edit session to keep updated with changes
-            // Do not post when a WikiLoves country has been selected as this is a reduced list of images
-            if (!wikiLovesCountry) postCampaignImageCount(images.length);
-            
         })
     })
     .fail(function(err) {
