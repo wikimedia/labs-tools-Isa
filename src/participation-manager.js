@@ -8,6 +8,7 @@
 // Data is sent via ajax post request instead of default form submit to prevent page reload
 
 import {flashMessage} from './utils';
+import {WIKI_URL} from './options';
 
 export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
         var imageIndex = 0,
@@ -16,6 +17,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         userCaptionLanguages = getUserLanguages(),
         initialData = {depicts: [], captions: []},
         unsavedChanges = {depicts: [], captions: []};
+    
 
     this.imageMediaId = '';
     
@@ -171,7 +173,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
         $.ajax( {
             type: 'GET',
-            url: 'https://commons.wikimedia.org/w/api.php',
+            url: WIKI_URL + 'w/api.php',
             data: apiOptions
         } )
         .done( function( response ) {
@@ -193,7 +195,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             // spacing between categories
             var categories = metadata.Categories.value.replace(/\|/g,' | ');
 
-            $('#image_name').html('<a href=' + "https://commons.wikimedia.org/wiki/" + escapedTitle + ' target="_blank">' + title.replace("File:", "") + '</a>');
+            $('#image_name').html('<a href=' + WIKI_URL + 'wiki/' + escapedTitle + ' target="_blank">' + title.replace("File:", "") + '</a>');
             $('#image_description').text(htmlStrippedDescription);
             $('#image_categories').text(categories);
             $('#image_author').html(metadata.Artist.value);
@@ -210,13 +212,15 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         var entitiesApiOptions = {
             action: 'wbgetentities',
             titles: filename,
-            sites: 'commonswiki',
+            // sites = 'commonswiki' not supported on test-commons
+            // but any supported wiki option chosen will still retrieve the image (strangely!)
+            sites: (WIKI_URL === "https://test-commons.wikimedia.org/") ? 'enwiki' : 'commonswiki', 
             format: 'json',
             origin: '*'
         };
         $.ajax( {
             type: 'GET',
-            url: 'https://commons.wikimedia.org/w/api.php',
+            url: WIKI_URL + 'w/api.php',
             data: entitiesApiOptions
         } ).done( function( response ) {
             // store imageMediaId for access within ParticipationManager
@@ -323,7 +327,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     }
 
     function updateImage(filename) {
-        $('.img-holder img').attr('src', 'https://commons.wikimedia.org/wiki/Special:FilePath/' + filename + '?width=500')
+        $('.img-holder img').attr('src', WIKI_URL + 'wiki/Special:FilePath/' + filename + '?width=500')
     }
 
     /////////// Change tracking functions ///////////

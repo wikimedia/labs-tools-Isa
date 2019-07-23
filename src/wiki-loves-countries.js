@@ -8,6 +8,7 @@
 // When all ajax requests are complete, process the list to create a unique, combined list of countries
 
 import {unique} from './utils';
+import {WIKI_URL} from './options';
 
 var wikiLovesCountries = [],
     campaignCategories = []; // e.g. [{name: "Category:Images from Wiki Loves Love 2018", depth:2}, ...]
@@ -51,7 +52,7 @@ function getSubcategoryAjaxRequests(categories, callback) {
         };
         var ajaxRequest = $.ajax({
             type: 'GET',
-            url: 'https://commons.wikimedia.org/w/api.php',
+            url: WIKI_URL + 'w/api.php',
             data: apiOptions
         })
         .done(function(response) {

@@ -7,6 +7,7 @@
 // Individual steps for each tree are synchronous as previous data is needed for each subsequent step
 
 import {unique} from './utils';
+import {WIKI_URL, ALLOWED_FILE_EXTENSIONS} from './options';
 
 var imagesInCategories = [], // Final image list
     processedCategories = [], // Prevent infinite loops
@@ -22,7 +23,7 @@ var imagesInCategories = [], // Final image list
         origin: '*'
     },
     AJAX_SETTINGS: {
-        url: "https://commons.wikimedia.org/w/api.php",
+        url: WIKI_URL + "w/api.php",
         type: 'GET',
     }
 };
@@ -40,11 +41,10 @@ export function getImagesFromApi (campaignCategories, callback) {
     $.when.apply(null, deferredTreeCalls)
         .then(function() {
             // All trees are complete, run callback on combined unique list
-            var allowedExtensions = ["jpg", "jpeg", "png", "svg"];
             var images = unique(imagesInCategories).filter(function(filename) {
                 // only include filenames with supported extensions
                 var fileExtension = filename.split('.').pop().toLowerCase();
-                return allowedExtensions.includes(fileExtension);
+                return ALLOWED_FILE_EXTENSIONS.includes(fileExtension);
             })
             callback(images)
         })

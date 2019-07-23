@@ -55,6 +55,10 @@ $.getJSON('../../api/login-test')
                 alert("No images found for this campaign!");
                 window.location.href = '../' + campaignId;
             }
+            
+            // Update image count for campaign on each edit session to keep updated with changes
+            // Do not post when a WikiLoves country has been selected as this is a reduced list of images
+            if (!wikiLovesCountry) postCampaignImageCount(images.length);
         })
     })
     .fail(function(err) {
