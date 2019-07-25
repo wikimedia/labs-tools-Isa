@@ -1,4 +1,5 @@
 import {WIKI_URL} from './options';
+import {getImagesFromApi} from './category-members';
 
 $('#start_date_datepicker').datepicker( {
     format: 'yyyy-mm-dd'
@@ -9,10 +10,9 @@ $('#end_date_datepicker').datepicker( {
 } );
 
 // Populate existing categories in the UI if data present in hidden field (on update route)
-var categoryData = $('#categories-data').val();
-if ( categoryData ) {
-    console.log("populate categories");
-    var categories = JSON.parse(categoryData);
+var initialCategoryData = $('#categories-data').val();
+if ( initialCategoryData ) {
+    var categories = JSON.parse(initialCategoryData);
     for (var i=0; i < categories.length; i++) {
         addSelectedCategory(categories[i].name, categories[i].depth);
     }
@@ -85,7 +85,7 @@ $('#selected-categories-content').on("click", "button.close", function(event) {
     // remove the .selected-category parent container the button is within
     $(this).closest(".selected-category").remove();
 
-    //after removing the element, we must hide the table header if there are no rows left
+    // after removing the element, we must hide the table header if there are no rows left
    if ( $('.selected-category').length < 1 ) {
        $('#selected-categories-header').hide();
    }
@@ -101,7 +101,7 @@ function getCategoryRowHtml(name, depth) {
 }
 
 // Returns category data that can be submitted to the server
-function getJsonCategoryData() {
+function getCategoryData() {
     var categoryData = [];
     $('.selected-category').each(function(index, element) {
         var name = $(element).find('.category-name').text();
@@ -111,9 +111,52 @@ function getJsonCategoryData() {
             depth: depth
         })
     })
-    return JSON.stringify(categoryData);
+    return categoryData;
 }
 
-$('form').submit(function(event, data) {
-    $('#categories-data')[0].value = getJsonCategoryData();
+//////////// Form submission ////////////
+
+// Using click instead of submit event, as this triggers form validation
+// Submit event is fired manually once categories have been checked
+// Once categories confirmed checked or unchanged, refire the submit click
+// but this time continue with default submit bahaviour
+// Also continue with default submit if form is invalid to trigger browser warnings
+var categoriesChecked = false,
+    formIsValid = false;
+$('#submit').click(function(ev) {
+    formIsValid = $('form')[0].checkValidity();
+    
+    if (!categoriesChecked && formIsValid) {
+        // Prevent form submission if categories not checked yet
+        console.log("categories changed")
+        ev.preventDefault();
+        var categorySelections = getCategoryData();
+        var finalCategoryData = $('#categories-data')[0].value = JSON.stringify(categorySelections);
+        
+        if (finalCategoryData !== initialCategoryData) {
+            console.log("categories changed", finalCategoryData, initialCategoryData)
+            // Categories are newly added or have changed
+            // Show "checking categories" notice
+            $('#category-checking-notice').removeClass("d-none");
+            
+            // Add Category: prefix
+            categorySelections.forEach(function(category) {
+                category.name = "Category:" + category.name;
+            })
+
+            getImagesFromApi(categorySelections, function(images) {
+                $('#campaign-image-count')[0].value = images.length;
+                categoriesChecked = true;
+
+                // Re-submit form now image count has been added to form
+                $('#submit').click();
+            })
+        } else {
+            // No change to category selections
+            categoriesChecked = true;
+            $('#submit').click();
+        }
+    } 
+    // Categories checked, continue default submit, OR
+    // Form is invalid, default submit to show browser warnings
 })

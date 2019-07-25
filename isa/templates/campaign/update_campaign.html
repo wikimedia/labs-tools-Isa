@@ -7,6 +7,8 @@
 </div>
 
 <div class="container">
+    
+    
     <form  class="" method="POST" action="">
         {{ form.csrf_token }}
         <!-- {{ form.campaign_name.label( class="form-control-label" ) }} -->
@@ -97,7 +99,17 @@
             {% else %}
             {{ form.categories( id="categories-data", class="form-control form-control-sm") }}
             {% endif %}
-
+            
+            {% if form.campaign_images.errors %}
+            {{ form.campaign_images( class="form-control form-control-lg is-invalid" ) }}
+            <div class="invalid-feedback">
+                {% for error in form.campaign_images.errors %}
+                <span> {{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+                {{ form.campaign_images( id="campaign-image-count", class="form-control form-control-sm" ) }}
+            {% endif %}
             <!-- Category selection UI which is NOT submitted in the form --> 
             <select id="category-search" class="w-100"></select>
             <small id="category-searchHelp" class="form-text text-muted">{{ _('Choose categories to use in the campaign') }}</small>
@@ -206,7 +218,13 @@
         
         <div class="form-group text-center">
             {{ form.submit( class="btn btn-primary", value=_('Publish Campaign') ) }}
+            <div id="category-checking-notice" class="mt-3 d-none">
+                <p>Checking category selections...</p>
+                <div class="spinner-border text-secondary" role="status" aria-hidden="true"></div>
+            </div>
         </div>
+        
+       
     </form>
 </div>
 
