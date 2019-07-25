@@ -51,7 +51,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <!--  <div class="input-group date">-->
-                <label for="datepick1">{{ _('Start Date') }}</label>
+                <label for="datepick1">{{ _('Start Date') }}<button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button></label>
                 <!-- We test for errors in the form data here -->
                 {% if form.start_date.errors %}
                 {{ form.start_date( class="form-control form-control-sm is-invalid" ) }}
@@ -66,7 +66,7 @@
                 <small id="datepick1Help" class="form-text text-muted">{{ _('Set campaign start date') }}</small>               
             </div>
             <div class="form-group col-md-6">
-                <label for="datepick2">{{ _('End Date') }}</label>
+                <label for="datepick2">{{ _('End Date') }}<button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button></label>
                 <!-- We test for errors in the form data here -->
                 {% if form.end_date.errors %}
                 {{ form.end_date( class="form-control form-control-md is-invalid" ) }}
@@ -85,7 +85,10 @@
         <hr>
         
         <div class="form-group">
-            <label for="category-search">{{ _('Categories') }}<span><i class="fas fa-question-circle" data-toggle="tooltip" data-placement="right" title="select a category by clicking on it"></i></span></label>
+          
+            <label for="category-search">{{ _('Categories') }}<button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button></label>  
+            
+          
             <!-- We test for errors in the form data here -->
             {% if form.categories.errors %}
             {{ form.categories( class="form-control form-control-lg is-invalid" ) }}
@@ -116,7 +119,7 @@
 
         <hr>
 
-        <h6>{{ _('Metadata to collect in the Campaign') }}</h6>
+        <h6>{{ _('Metadata to collect in the Campaign') }}<button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button></h6>       
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="depicts_metadata">{{ _('Depicts') }}</label>
@@ -153,7 +156,7 @@
         <hr>    
         
         <div class="form-group">
-            <label for="campaign_type">{{ _('This is a Wiki Loves Campaign') }}</label>
+            <label for="campaign_type">{{ _('This is a Wiki Loves Campaign') }} </label>
             <!-- We test for errors in the form data here -->
             {% if form.campaign_type.errors %}
             {{ form.campaign_type( class="form-control form-control-sm is-invalid" ) }}
@@ -163,7 +166,7 @@
                 {% endfor %}
             </div>
             {% else %}
-            {{ form.campaign_type( class="checkbox-inline mt-1" ) }}
+            {{ form.campaign_type( class="checkbox-inline mt-1" ) }}<button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button>
             {% endif %}
             <small id="campaign_typeHelp" class="form-text text-muted">{{ _('Select if this is a Wiki Loves Campaign (important) ') }}</small>       
         </div>
@@ -171,7 +174,7 @@
         <hr>
  
         <div class="form-group">
-            <label for="campaign_image">{{ _('Campaign Image') }}</label>
+            <label for="campaign_image">{{ _('Campaign Image') }} <button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button></label>
             <!-- We test for errors in the form data here -->
             {% if form.campaign_image.errors %}
             {{ form.campaign_image( class="form-control form-control-sm is-nvalid" ) }}
@@ -183,13 +186,13 @@
             {% else %}
             {{ form.campaign_image( class="form-control form-control-sm" ) }}
             {% endif %}
-            <small id="campaign_nameHelp" class="form-text text-muted">Instructions for input</small>
+            <small id="campaign_imageHelp" class="form-text text-muted">Instructions for input</small>
         </div>
 
         <hr>
         
         <div class="form-group">
-            <label for="long_description">{{ _('Long description of Campaign (full about info)') }}</label>
+            <label for="long_description">{{ _('Long description of Campaign (full about info)') }}<button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button></label>
             <!-- We test for errors in the form data here -->
             {% if form.long_description.errors %}
             {{ form.long_description( class="form-control form-control-sm is-invalid" ) }}

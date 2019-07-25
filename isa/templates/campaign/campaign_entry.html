@@ -43,14 +43,16 @@ body {padding-bottom: 50px}
 {% if campaign.depicts_metadata %}
 <div class="container edit-box">
     <div class="edit-box-header">
-        <h4>{{ _('Depicts') }}</h4>
+        <h4>{{ _('Depicts') }}
+        <button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button>
+        </h4>
         <div edit-type="depicts" class="edit-publish-btn-group text-right">
             <button class="btn btn-sm btn-link cancel-edits-btn" disabled>{{ _('Cancel') }}</button>
             <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled>{{ _('Save') }}</button>
-            {% if username == None %}
-            <p class="text-danger">{{_('Log in to publish changes')}}</p>
-            {% endif %}        
         </div>
+        {% if username == None %}
+        <p class="text-danger small mb-1 text-right">{{_('Log in to publish changes')}}</p>
+        {% endif %}  
         <p>{{ _('Search for things you see in the image') }}</p>
     </div>
     <div class="depicts-search">
@@ -70,14 +72,14 @@ body {padding-bottom: 50px}
 {% if campaign.captions_metadata %}
 <div class="container edit-box">
     <div class="edit-box-header">
-        <h4>{{ _('Captions') }}</h4>
+        <h4>{{ _('Captions') }} <button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button></h4>
         <div edit-type="captions" class="edit-publish-btn-group text-right">
             <button class="btn btn-sm btn-link cancel-edits-btn" disabled>{{ _('Cancel') }}</button>
             <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled>{{ _('Save') }}</button>
-            {% if username == None %}
-            <p class="text-danger">{{_('Log in to publish changes')}}</p>
-            {% endif %}   
         </div>
+        {% if username == None %}
+        <p class="text-danger small mb-1 text-right">{{_('Log in to publish changes')}}</p>
+        {% endif %}
         <p>{{ _('Add a caption for the image') }}</p>
     </div>
     <div class="caption-search"> {% for lang_code in caption_languages %}

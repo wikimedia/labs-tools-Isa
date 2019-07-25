@@ -4,6 +4,10 @@
 
 import {getUrlParameters} from './utils';
 
+$(function () {
+  $('[data-toggle="popover"]').popover()
+});
+
 $('#campaign_table').DataTable({
     responsive: true,
     columnDefs: [{
