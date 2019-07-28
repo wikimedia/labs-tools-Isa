@@ -4,6 +4,7 @@ module.exports = {
     entry: {
         'participate': './src/participate.js',
         'campaign': './src/campaign.js',
+        'campaign-directory': './src/campaign-directory.js',
         'campaign-form': './src/campaign-form.js',
         'user-settings': './src/user-settings.js',
         'main': './src/main.js'

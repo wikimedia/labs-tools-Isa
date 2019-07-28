@@ -27,7 +27,10 @@
                     <th scope="col">{{ _('End Date') }}</th>
                     <th scope="col">{{ _('Creation Date') }}</th>
                     <th scope="col">{{ _('Status') }}</th>
-                    <th scope="col">Get Started</th>
+                    <!-- The next column is hidden and used only for filtering --> 
+                    <!-- It stores 1 or 0 to determine open status, so does not depend on UI language -->
+                    <th scope="col"></th>
+                    <th scope="col">{{ _('Get Started') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,13 +43,16 @@
                     <td><span class="">{{ campaign.start_date.strftime("%d-%m-%y") }}</span></td>
                     <td><span class="">{{ campaign.end_date.strftime("%d-%m-%y") }}</span></td>
                     <td><span class="">{{ campaign.creation_date.strftime("%d-%m-%y") }}</span></td>
-                    <td>
-                        {% if campaign.end_date.strftime("%y-%m-%d") < datetime.now().date().strftime("%y-%m-%d") %}
-                        <span class=""> {{ _('Closed') }} </span>
-                        {% else %}
-                        <span class="">{{ _('Open') }}</span>
-                        {%  endif %}
-                    </td>
+                    
+                    <!-- Add status and boolean hidden columns depending on end date -->
+                    {% if campaign.end_date.strftime("%y-%m-%d") < datetime.now().date().strftime("%y-%m-%d") %}
+                        <td><span class=""> {{ _('Closed') }} </span></td>
+                        <td>0</td>
+                    {% else %}
+                        <td><span class="">{{ _('Open') }}</span></td>
+                        <td>1</td>
+                    {%  endif %}
+                    
                     <td><a href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}">{{ _('Go to Campaign') }}</a></td>
                 </tr>
             {% endfor%}
@@ -58,8 +64,9 @@
 
 
 </div>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 {% endblock content%}
 
+{% block scripts %} 
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/b-1.5.6/r-2.2.2/datatables.min.js"></script>
+<script src="{{url_for('static', filename='js/campaign-directory.js')}}"></script> 
+{% endblock scripts%}

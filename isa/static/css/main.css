@@ -66,9 +66,16 @@
     font-size: 4.5rem!important;
 }
 /* end home page*/
- 
- 
- 
+
+/********* CAMPAIGNS PAGE ************/
+
+/* Container for list length controls auto-inserted by DataTables */
+/* Allows the "Show closed campaigns" button to stay on same line as other controls */
+#campaign_table_length {
+    display: inline;
+    margin-right: 10px;
+}
+
 /********* CAMPAIGN PAGE ************/
  /*center and size banner image*/
     .campaign-image{
