@@ -4,6 +4,7 @@ import sys
 import json
 import shutil
 import glob
+import mwoauth
 
 from isa import app
 
@@ -19,7 +20,7 @@ from isa.models import Campaign, Contribution, User
 from isa.campaigns.utils import (constructEditContent, get_campaign_category_list, get_country_from_code,
                                  compute_campaign_status, buildCategoryObject, create_campaign_country_stats_csv,
                                  create_campaign_contributor_stats_csv, create_campaign_all_stats_csv,
-                                 get_all_camapign_stats_data)
+                                 get_all_camapign_stats_data, make_edit_api_call, generate_csrf_token)
 from isa.main.utils import testDbCommitSuccess, getCampaignCountryData
 from isa.users.utils import (get_user_language_preferences,
                              getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
@@ -110,7 +111,6 @@ def getCampaignById(id):
     if len(files) > 0:
         for f in files:
             os.remove(f)
-            # print('Deleted Existing Campaign file'+ f, file=sys.stderr)
 
     # We create the campaign stats directory if it does not exist
     if not os.path.exists(stats_path):
@@ -362,9 +362,20 @@ def getCampaignCategories():
 @campaigns.route('/api/post-contribution', methods=['POST', 'GET'])
 def postContribution():
     contrib_data = request.data.decode('utf8')
+    contrib_options_list = []
     contrib_data_list = []
     contrib_data_list = json.loads(contrib_data)
     username = session.get('username', None)
+    
+    # The most recent rev_id will be stored in latest_base_rev_id
+    # Default is 0 meaning there is none and the edit failed
+    latest_base_rev_id = 0
+    # We get the session and app credetials for edits on Commons
+
+    csrf_token, api_auth_token = generate_csrf_token(app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
+                                                     session.get('access_token')['key'],
+                                                     session.get('access_token')['secret'])
+    
     campaign_id = contrib_data_list[0]['campaign_id']
     if not username:
         flash(gettext('You need to login to participate'), 'info')
@@ -385,17 +396,40 @@ def postContribution():
                                         caption_language=data.get('caption_language'),
                                         caption_text=data.get('caption_text'))
             contrib_list.append(contribution)
-        for contrib in contrib_list:
-            db.session.add(contrib)
+
+        # We write the api_options for the contributions into a list
+        for contrib_data in contrib_data_list:
+            contrib_options_list.append(contrib_data['api_options'])
+
+        for i in range(len(contrib_options_list)):
+            # We make an api call with the current contribution data and get baserevid
+            lastrevid = make_edit_api_call(csrf_token, api_auth_token, username,
+                                           contrib_data_list[i]['api_options'])
+
+            if lastrevid is not None:
+                # We check if the previous edit was successfull
+                # We then add the contribution to the db session
+                db.session.add(contrib_list[i])
+                
+                # Check that there are still elements in the list in order to pop
+                if len(contrib_options_list) > 1:
+                    # We take out the first element of the data list
+                    contrib_options_list.pop(0)
+
+                    # We assign the baserevid of the next data list of api_options
+                    # If there is a next element in the data list
+                    next_api_options = contrib_options_list[0]
+                    next_api_options['baserevid'] = lastrevid
+            else:
+                return("Failure")
+            # We store the latest revision id to be sent to client
+            latest_base_rev_id = lastrevid
+
+        # We attempt to save the changes to db
         if testDbCommitSuccess():
             return("Failure")
         else:
-            # We get the session and app credetials for edits on Commons
-            # user_key = session['request_token']['key'].decode('ascii')
-            # user_secret = session['request_token']['secret'].decode('ascii')
-            # app_key = app.config['CONSUMER_KEY']
-            # app_secret = app.config['CONSUMER_SECRET']
-            return("Success!")
+            return (str(latest_base_rev_id))
     return("Failure")
 
 

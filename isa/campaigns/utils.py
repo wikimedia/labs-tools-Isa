@@ -2,10 +2,17 @@ import json
 import sys
 import csv
 import pycountry
+import requests
+import mwoauth
 
 from datetime import datetime
 
+from mwoauth import ConsumerToken, Handshaker
+
+from flask import request, session
+from isa import app
 from isa.models import Contribution
+from requests_oauthlib import OAuth1
 
 
 def get_country_from_code(country_code):
@@ -163,3 +170,59 @@ def create_campaign_all_stats_csv(stats_file_directory, campaign_name, all_stats
         writer.writerows(campaign_all_stats_data)
     all_stats_csv_file.close()
     return campaign_name.replace(' ', '_') + '_all_stats.csv'
+
+
+def generate_csrf_token(app_key, app_secret, user_key, user_secret):
+    # We authenticate the user using the keys
+    auth = OAuth1(app_key, app_secret, user_key, user_secret)
+
+    # Get token
+    token_request = requests.get('https://commons.wikimedia.org/w/api.php', params={
+        'action': 'query',
+        'meta': 'tokens',
+        'format': 'json',
+    }, auth=auth)
+    token_request.raise_for_status()
+
+    # We get the CSRF token from the result to be used in editing
+    CSRF_TOKEN = token_request.json()['query']['tokens']['csrftoken']
+    return CSRF_TOKEN, auth
+
+
+def make_edit_api_call(csrf_token, api_auth_token, username, params):
+    """
+    Makes an edit API call to make changes to an image.
+
+    Keyword arguments:
+    app_key -- The application configuration key
+    app_secret -- The application configuration secret
+    user_key -- User key generated for user at login
+    user_secret -- User secret generated in token at login
+    username -- username in session
+    params -- APi configuration data from front end
+    """
+    
+    # We check the action type and decide whether to return string or json claim
+    if params['action'] == 'wbsetclaim':
+        params['claim'] = json.dumps(params['claim'])
+        params = json.dumps(params)
+    else:
+        params['claim'] = params['claim']
+        params = json.dumps(params)
+
+    # We convert our object to a dictionary to add other paramters for API call
+    params = json.loads(str(params))
+    params['format'] = 'json'
+    params['token'] = csrf_token
+    params['formatversion'] = 1
+    params['summary'] = username + '@ISA'
+
+    # This is the actual edit post request
+    # We sign that with the authentication
+    response = requests.post('https://commons.wikimedia.org/w/api.php', data=params, auth=api_auth_token)
+    if response.status_code == 200:
+        result = response.json()
+        if result['pageinfo']['lastrevid']:
+            return result['pageinfo']['lastrevid']
+        else:
+            return None

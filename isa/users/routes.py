@@ -59,7 +59,6 @@ def oauth_callback():
             consumer_token,
             mwoauth.RequestToken(**session['request_token']),
             request.query_string)
-
         identity = mwoauth.identify(
             app.config['OAUTH_MWURI'], consumer_token, access_token)
     except Exception:
