@@ -189,7 +189,7 @@ def generate_csrf_token(app_key, app_secret, user_key, user_secret):
     return CSRF_TOKEN, auth
 
 
-def make_edit_api_call(csrf_token, api_auth_token, username, params):
+def make_edit_api_call(csrf_token, api_auth_token, username, contribution_data):
     """
     Makes an edit API call to make changes to an image.
 
@@ -201,17 +201,15 @@ def make_edit_api_call(csrf_token, api_auth_token, username, params):
     username -- username in session
     params -- APi configuration data from front end
     """
+    params = contribution_data['api_options']
+    edit_type = contribution_data['edit_type']
+    edit_action = contribution_data['edit_action']
     
-    # We check the action type and decide whether to return string or json claim
-    if params['action'] == 'wbsetclaim':
+    # Serialise JSON data in 'claim' for depicts edits
+    # but NOT for 'remove' action, as claim is a string in this case
+    if edit_type == 'depicts' and edit_action != "remove":
         params['claim'] = json.dumps(params['claim'])
-        params = json.dumps(params)
-    else:
-        params['claim'] = params['claim']
-        params = json.dumps(params)
-
-    # We convert our object to a dictionary to add other paramters for API call
-    params = json.loads(str(params))
+    
     params['format'] = 'json'
     params['token'] = csrf_token
     params['formatversion'] = 1
@@ -222,7 +220,13 @@ def make_edit_api_call(csrf_token, api_auth_token, username, params):
     response = requests.post('https://commons.wikimedia.org/w/api.php', data=params, auth=api_auth_token)
     if response.status_code == 200:
         result = response.json()
-        if result['pageinfo']['lastrevid']:
-            return result['pageinfo']['lastrevid']
+        revision_id = None
+        if edit_type == 'depicts':
+            page_info = result.get('pageinfo')
+            if page_info is not None:
+                revision_id = page_info.get('lastrevid')
         else:
-            return None
+            entity = result.get('entity')
+            if entity is not None:
+                revision_id = entity.get('lastrevid')
+        return revision_id

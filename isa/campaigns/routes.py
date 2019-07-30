@@ -403,9 +403,11 @@ def postContribution():
 
         for i in range(len(contrib_options_list)):
             # We make an api call with the current contribution data and get baserevid
-            lastrevid = make_edit_api_call(csrf_token, api_auth_token, username,
-                                           contrib_data_list[i]['api_options'])
-
+            lastrevid = make_edit_api_call(csrf_token,
+                                           api_auth_token,
+                                           username,
+                                           contrib_data_list[i])
+            
             if lastrevid is not None:
                 # We check if the previous edit was successfull
                 # We then add the contribution to the db session

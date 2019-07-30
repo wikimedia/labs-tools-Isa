@@ -552,7 +552,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 claim = statementId;
             }
             return {
-                action: "wbsetclaim",
+                action: (editAction === 'remove') ? 'wbremoveclaims' : "wbsetclaim",
                 claim: claim
             };
         
