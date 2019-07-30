@@ -1,0 +1,10 @@
+flask
+pyyaml
+mwoauth
+flask_sqlalchemy
+flask_babel
+flask_login
+flask_wtf
+pycountry
+mysqlclient
+PyMySQL
