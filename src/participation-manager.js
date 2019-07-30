@@ -142,6 +142,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             // Contribution accepted by server, now we can update initial data
             // Button states will return to disabled
             // Cancel buttons will now reset to the current image data
+            
+            imageRevId = response // server sends revision id from final edit as response
             if (editType === "depicts") {
                 saveInitialStructuredData(getCurrentDepictStatements(), false);
                 me.depictDataChanged();
