@@ -5,7 +5,7 @@ from flask_login import current_user
 from isa import gettext
 
 
-from isa.users.utils import add_user_to_db, get_user_language_preferences
+from isa.users.utils import add_user_to_db
 
 main = Blueprint('main', __name__)
 
@@ -24,7 +24,6 @@ def home():
                            title='Home',
                            session_language=session_language,
                            username=username_for_current_user,
-                           user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user)
 
 

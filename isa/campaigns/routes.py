@@ -44,7 +44,6 @@ def getCampaigns():
                            campaigns=campaigns,
                            today_date=datetime.date(datetime.utcnow()),
                            datetime=datetime,
-                           user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user)
 
 
@@ -164,7 +163,6 @@ def getCampaignById(id):
                             session_language=session_language,
                             campaign_editors=campaign_editors,
                             campaign_contributions=campaign_contributions,
-                            user_pref_lang=get_user_language_preferences(username),
                             current_user=current_user,
                             is_wiki_loves_campaign=campaign.campaign_type,
                             all_contributors_data=all_contributors_data,
@@ -197,8 +195,6 @@ def getCampaignStatsById(id):
                            session_language=session_language,
                            campaign_editors=campaign_return_data['campaign_editors'],
                            campaign_contributions=campaign_return_data['campaign_contributions'],
-                           is_wiki_loves_campaign=campaign.campaign_type,
-                           user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user,
                            all_contributors_data=campaign_return_data['all_contributors_data'],
                            all_campaign_country_statistics_data=campaign_return_data['all_campaign_country_statistics_data'],
@@ -255,7 +251,6 @@ def CreateCampaign():
                                form=form, datetime=datetime,
                                username=username,
                                session_language=session_language,
-                               user_pref_lang=get_user_language_preferences(username),
                                current_user=current_user)
 
 
@@ -264,7 +259,6 @@ def contributeToCampaign(id):
     
     # We get current user in sessions's username
     username = session.get('username', None)
-    caption_languages = get_user_language_preferences(username)
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
@@ -275,10 +269,9 @@ def contributeToCampaign(id):
                                          campaign_name=campaign.campaign_name),
                            id=id,
                            session_language=session_language,
+                           caption_languages=get_user_language_preferences(username),
                            campaign=campaign,
                            username=username,
-                           caption_languages=caption_languages,
-                           user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user)
 
 
@@ -345,7 +338,6 @@ def updateCampaign(id):
                                campaign=campaign,
                                form=form,
                                session_language=session_language,
-                               user_pref_lang=get_user_language_preferences(username),
                                current_user=current_user,
                                username=username)
 

@@ -11,7 +11,7 @@ from isa.models import User
 from isa.utils.languages import getLanguages
 from isa.users.forms import CaptionsLanguageForm
 
-from isa.users.utils import buildUserPrefLang, get_user_language_preferences
+from isa.users.utils import buildUserPrefLang
 
 users = Blueprint('users', __name__)
 
@@ -37,8 +37,8 @@ def login():
         else:
             session['request_token'] = dict(zip(
                 request_token._fields, request_token))
-            user = User.query.filter_by(username=session.get('username', 'Guest')).first()
-            if user and user.username != 'Guest':
+            user = User.query.filter_by(username=session.get('username', None)).first()
+            if user and user.username is not None:
                 login_user(user)
             return redirect(redirect_string)
 
@@ -139,12 +139,12 @@ def userSettings():
                           rep_languages=repeated_languages_text), 'danger')
             return redirect(url_for('users.userSettings'))
         else:
-            user_pref_lang = buildUserPrefLang(caption_language_1, caption_language_2,
-                                               caption_language_3, caption_language_4,
-                                               caption_language_5, caption_language_6)
-            # We select the user with username and update their pref_lang
+            user_caption_lang = buildUserPrefLang(caption_language_1, caption_language_2,
+                                                  caption_language_3, caption_language_4,
+                                                  caption_language_5, caption_language_6)
+            # We select the user with username and update their caption_language
             user = User.query.filter_by(username=username).first()
-            user.pref_lang = user_pref_lang
+            user.caption_languages = user_caption_lang
 
             # commit failed
             if testDbCommitSuccess():
@@ -154,20 +154,19 @@ def userSettings():
                 # We make sure that the form data does not remain in browser
                 return redirect(url_for('users.userSettings'))
     elif request.method == 'GET':
-        user_langs = User.query.filter_by(username=username).first().pref_lang.split(',')
-        captions_lang_form.language_select_1.data = str(user_langs[0])
-        captions_lang_form.language_select_2.data = str(user_langs[1])
-        captions_lang_form.language_select_3.data = str(user_langs[2])
-        captions_lang_form.language_select_4.data = str(user_langs[3])
-        captions_lang_form.language_select_5.data = str(user_langs[4])
-        captions_lang_form.language_select_6.data = str(user_langs[5])
+        caption_languages = User.query.filter_by(username=username).first().caption_languages.split(',')
+        captions_lang_form.language_select_1.data = str(caption_languages[0])
+        captions_lang_form.language_select_2.data = str(caption_languages[1])
+        captions_lang_form.language_select_3.data = str(caption_languages[2])
+        captions_lang_form.language_select_4.data = str(caption_languages[3])
+        captions_lang_form.language_select_5.data = str(caption_languages[4])
+        captions_lang_form.language_select_6.data = str(caption_languages[5])
     else:
         flash(gettext('Language settings not available at the moment'), 'info')
     return render_template('users/user_settings.html',
                            title=gettext('%(username)s\'s - Settings', username=username),
                            current_user=current_user,
                            session_language=session_language,
-                           user_pref_lang=get_user_language_preferences(username),
                            username=username,
                            captions_lang_form=captions_lang_form)
 
