@@ -197,6 +197,7 @@ def getCampaignStatsById(id):
                            session_language=session_language,
                            campaign_editors=campaign_return_data['campaign_editors'],
                            campaign_contributions=campaign_return_data['campaign_contributions'],
+                           is_wiki_loves_campaign=campaign.campaign_type,
                            user_pref_lang=get_user_language_preferences(username),
                            current_user=current_user,
                            all_contributors_data=campaign_return_data['all_contributors_data'],

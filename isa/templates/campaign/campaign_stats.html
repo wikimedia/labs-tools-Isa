@@ -47,38 +47,39 @@
                 {% endif %}
             </table>
         </div>
-
-        <div class="top-country-table mr-md-4">
-            <table class="table table-sm table-light text-center">
-                <h6>{{ _('Most improved Countries') }}</h6>
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">{{ _('Country') }}</th>
-                            <th scope="col">{{ _('Images Improved') }}</th>
-                        </tr>
-                    </thead>
-                    {% if all_campaign_country_statistics_data %}
-                        <tbody>
-                            {% for country_statistics_data in all_campaign_country_statistics_data %}
-                                <tr>
-                                    <th scope="row">{{country_statistics_data['rank']}}</th>
-                                    <td>{{country_statistics_data['country']}}</td>
-                                    <td>{{country_statistics_data['images_improved']}}</td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    {% else %}
-                        <tbody>
+        {% if is_wiki_loves_campaign %}
+            <div class="top-country-table mr-md-4">
+                <table class="table table-sm table-light text-center">
+                    <h6>{{ _('Most improved Countries') }}</h6>
+                        <thead>
                             <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td class="text-center">{{ _('There is no data available yet for this campaign') }}</td>
+                                <th scope="col">#</th>
+                                <th scope="col">{{ _('Country') }}</th>
+                                <th scope="col">{{ _('Images Improved') }}</th>
                             </tr>
-                        </tbody>
-                    {% endif %}
-            </table>
-        </div>
+                        </thead>
+                        {% if all_campaign_country_statistics_data %}
+                            <tbody>
+                                {% for country_statistics_data in all_campaign_country_statistics_data %}
+                                    <tr>
+                                        <th scope="row">{{country_statistics_data['rank']}}</th>
+                                        <td>{{country_statistics_data['country']}}</td>
+                                        <td>{{country_statistics_data['images_improved']}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        {% else %}
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td class="text-center">{{ _('There is no data available yet for this campaign') }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                </table>
+            </div>
+        {% endif %}
     </div>
         <a  class="btn btn-sm btn-primary" href="{{url_for('campaigns.downloadAllCampaignStats', id=campaign.id, filename=campaign_all_stats_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download all stats (CSV)') }}</a>
     </div></div>
