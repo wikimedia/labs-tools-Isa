@@ -12,7 +12,7 @@
     </div>
 <div class="container text-center">
     <p><strong>ISA</strong> {{ _('is a fun tool aimed at the metadata enhancement of images contributed to the various Wiki Loves competitions on Wikimedia Commons') }}<br>{{ _('It is being created as a way to quickly add structured information to a collection of pre-defined images.')}}</p>    
-    <a href="{{url_for( 'campaigns.getCampaigns' )}}" class="btn btn-lg btn-primary">{{ _('EXPLORE CAMPAIGNS') }}</a>
+    <a href="{{url_for( 'campaigns.getCampaigns' )}}" class="btn btn-lg btn-primary" title="{{ _('Go to the campaign directory to choose a campaign') }}">{{ _('EXPLORE CAMPAIGNS') }}</a>
     <hr class="my-5">
     <div class="about-section mb-4">
         <h2>{{ _('About This Tool') }}</h2>
@@ -22,7 +22,8 @@
         <p>{{ _('ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project.') }} {{ _(' ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for \'put \' or \'place\' ') }}</p>
     </div>
     {% if username != 'Guest' and username != False and username != None %}
-    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary">{{ _('Create a new campaign using this tool') }}</a>       
+    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>       
     {% endif %}
 </div>
+
 {% endblock content%}

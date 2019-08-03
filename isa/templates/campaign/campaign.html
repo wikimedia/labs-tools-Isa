@@ -13,13 +13,13 @@
     {% if is_wiki_loves_campaign %}
         <div class="campaign-country-select">
             <p>{{_('View images from')}}</p>
-            <select id="campaign_countries" class="fas fa-caret-down custom-select btn-new" data-style="btn-new">
+            <select id="campaign_countries" class="fas fa-caret-down custom-select btn-new" data-style="btn-new" title="{{ _('Choose to only view images from a single country') }}">
                 <option class="select-option" value= "all" select="selected">{{_('All countries')}}</option>
                 <!-- The other obtions will be povided here on front-end -->
             </select>
         </div>           
     {% endif %}
-        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary" >{{ _('Get Started') }}</a>
+        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
     </div>
 </div>
 
@@ -29,8 +29,8 @@
             <h4>{{ _('Campaign progress so far') }}</h4>
         </div>
     <div class="main-stats-label-group mx-auto">
-        <div class="label btn btn-warning">{{ _('Editors') }}<br>{{ campaign_editors }}</div>
-        <div class="label btn btn-warning">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
+        <div class="label btn btn-warning" title="{{ _('Total number of images in this campaign') }}">{{ _('Images') }}<br>{{ campaign.campaign_images }}</div>
+        <div class="label btn btn-warning" title="{{ _('Total number of contributions made to this campaign') }}">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
     </div>
     <div class="stats-table mx-auto">
         <div class="top-user-table mr-4">				
@@ -96,20 +96,13 @@
             </table>
         </div>
     </div>
-                <a href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-primary" >{{ _('View full stats') }}</a>
+                <a href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-primary" title="{{ _('View and download more stats for this campaign') }}">{{ _('View full stats') }}</a>
 
-<!--    <div class="main-stats-label-group mx-auto mt-3">
-        <a id="download_country_stats_btn" href="{{url_for('campaigns.downloadContributionStats', id=campaign.id, filename=contributor_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download Contrib Stats') }}</a>
-        <a id="download_country_stats_btn" href="{{url_for('campaigns.downloadCountryStats', id=campaign.id, filename=country_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download Country Stats') }}</a>
-    </div>-->
+ 
 </div>
 </div>
 
-<!--<div class="container text-center">
-    <div class="campaign-panel primary-cta">
-        <a id="get_started_btn" href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-primary" >{{ _('View full stats') }}</a>
-    </div>
-</div>-->
+ 
 
 <div class="container user-stats text-center">
     <div class="campaign-panel">
@@ -149,7 +142,7 @@
         <p>{{campaign.long_description}}</p>
     </div>
     {% if campaign_manager ==  username %}
-    <a id="" href="{{url_for('campaigns.updateCampaign', id=campaign.id)}}" class="btn btn-danger" >{{ _('Edit Campaign') }}</a>
+    <a id="" href="{{url_for('campaigns.updateCampaign', id=campaign.id)}}" class="btn btn-danger" title="{{ _('Make changes to this campaign') }}">{{ _('Edit Campaign') }}</a>
     {% endif %}
 </div>
 
