@@ -6,6 +6,9 @@ body {padding-bottom: 50px}
     
 @media (min-width: 992px) {
     body {padding-bottom:0}}
+    
+ 
+    
 </style>
 <div class="loading">
 <div class="spinner-border text-secondary" role="status" aria-hidden="true"></div>
@@ -17,26 +20,26 @@ body {padding-bottom: 50px}
 <div class="isa-flash-message alert alert-success fade"></div>
 <div class="isa-flash-message alert alert-danger fade"></div>
 
-<div class="container px-0"> <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: {{ _('Home Page') }}</a> </div>
+<div class="container px-0"> <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm" title="{{ _('Return to the campaign home page') }}"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: {{ _('Home Page') }}</a> </div>
 
 
 <div class="container px-0 image-wrapper bg-light">
-    <button class="previous-image-btn btn btn-link btn-lg desktop-img-nav"> <i class="fas fa-chevron-left"></i>{{ _('PREV IMAGE') }}</button>
+    <button class="previous-image-btn btn btn-link btn-lg desktop-img-nav"  title="{{ _('View the previous image') }}"><i class="fas fa-chevron-left"></i>{{ _('PREV IMAGE') }}</button>
     <div class="img-holder"> <img src="default.jpg" alt=""><!-- src updated by JavaScript -->
         <div class="image-overlay px-3 small"><span id="image_author"></span> - <span id="image_credit">{{ _('Own work') }}</span> | <span id="image_license"><a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a></span></div>
     </div>
-    <button id="" class="next-image-btn btn btn-link desktop-img-nav btn-lg">{{ _('NEXT IMAGE') }}<i class="fas fa-chevron-right"></i></button>
+    <button id="" class="next-image-btn btn btn-link desktop-img-nav btn-lg" title="{{ _('View the next image') }}">{{ _('NEXT IMAGE') }}<i class="fas fa-chevron-right"></i></button>
 </div>
 <div class="container px-0 bg-light">
     <div id="edit_image_info">
         <div class="image-desc">
-            <p>{{ _('File') }}:&nbsp;<span id="image_name"></span></p>
+            <p>{{ _('File') }}:&nbsp;<span id="image_name" title="{{ _('Open this image on Wikimedia Commons') }}"></span></p>
             <p>{{ _('Description') }}:&nbsp;<span id="image_description"></span></p>
             <p>{{ _('Categories') }}:&nbsp;<span id="image_categories"></span></p>
             <p>{{ _('Camera Location') }}:&nbsp;<span id="image_camera_location"></span></p>
         </div>
         <div class="text-center">
-            <button id="expand-meta-data" class="btn btn-sm btn-link"><i class="fas fa-caret-down"></i>&nbsp;{{ _('show all metadata from commons') }}</button>
+            <button id="expand-meta-data" class="btn btn-sm btn-link"><i class="fas fa-caret-down"></i>&nbsp; {{ _('show all metadata from commons') }} </button>
         </div>
     </div>
 </div>
@@ -47,8 +50,8 @@ body {padding-bottom: 50px}
         <button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button>
         </h4>
         <div edit-type="depicts" class="edit-publish-btn-group text-right">
-            <button class="btn btn-sm btn-link cancel-edits-btn" disabled>{{ _('Cancel') }}</button>
-            <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled>{{ _('Save') }}</button>
+            <button class="btn btn-sm btn-link cancel-edits-btn" disabled title="{{ _('Cancel your changes') }}">{{ _('Cancel') }}</button>
+            <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled title="{{ _('Save your edits to Wikimedia Commons') }}">{{ _('Save') }}</button>
         </div>
         {% if username == None %}
         <p class="text-danger small mb-1 text-right">{{_('Log in to publish changes')}}</p>

@@ -7,26 +7,26 @@
     <p>{{ _('On this page are the curated campaigns that are currently running as part of the ISA tool.')}} {{ _('Click on the name of a campaign to get started and add structured data to an image.') }} {{ _('You can access information on the previous Campaigns in the Archive section.') }}</p>
     
       {% if username != 'Guest' and username != False and username != None %}
-    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary">{{ _('Create a new campaign using this tool') }}</a>       
+    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>       
     {% endif %}
 </header>
 <div class="container">
     <section id="campaigns">
-        <div class="section-header">
+<!--        <div class="section-header">
             <h3>{{ _('Ongoing Campaigns') }}</h3>
-        </div>
+        </div>-->
         <br>
         <table id="campaign_table" class="display table table-bordered" style="width: 100%">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">{{ _('Campaign') }}</th>
-                    <th scope="col">{{ _('Images') }}</th>
-                    <th scope="col">{{ _('Participants') }}</th>
-                    <th scope="col">{{ _('Contributions') }}</th>
-                    <th scope="col">{{ _('Start Date') }}</th>
-                    <th scope="col">{{ _('End Date') }}</th>
-                    <th scope="col">{{ _('Creation Date') }}</th>
-                    <th scope="col">{{ _('Status') }}</th>
+                    <th scope="col" title="{{ _('Campaign name') }}">{{ _('Campaign') }}</th>
+                    <th scope="col" title="{{ _('Total number of images in the campaign') }}">{{ _('Images') }}</th>
+                    <th scope="col" title="{{ _('Number of editors that have contributed to the campaign ') }}">{{ _('Participants') }}</th>
+                    <th scope="col" title="{{ _('Total number of contributions to the campaign') }}">{{ _('Contributions') }}</th>
+                    <th scope="col" title="{{ _('Campaign start date') }}">{{ _('Start Date') }}</th>
+                    <th scope="col" title="{{ _('Campaign end date') }}">{{ _('End Date') }}</th>
+                    <th scope="col" title="{{ _('Date the campaign was created') }}">{{ _('Creation Date') }}</th>
+                    <th scope="col" title="{{ _('Campaign status') }}">{{ _('Status') }}</th>
                     <!-- The next column is hidden and used only for filtering --> 
                     <!-- It stores 1 or 0 to determine open status, so does not depend on UI language -->
                     <th scope="col"></th>
@@ -53,7 +53,7 @@
                         <td>1</td>
                     {%  endif %}
                     
-                    <td><a href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}">{{ _('Go to Campaign') }}</a></td>
+                    <td><a href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}" title="{{ _('Go to the campaign home page to get started') }}">{{ _('Go to Campaign') }}</a></td>
                 </tr>
             {% endfor%}
             </tbody>
