@@ -30,7 +30,7 @@ def add_user_to_db(username):
     """
 
     if check_user_existence(username):
-        user = User(username=username, pref_lang='en,fr,,,,')
+        user = User(username=username, caption_languages='en,fr,,,,')
         db.session.add(user)
         if testDbCommitSuccess():
             return False
