@@ -76,6 +76,29 @@
     margin-right: 10px;
 }
 
+/*Custom Checkbox to show closed campaigns - center and spacing for mobile*/
+.show-closed {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/* center pagination navigation buttons on mobile*/
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    justify-content: center!important
+}
+
+@media (min-width: 992px) {
+    /*right align for pagination nav btns on desktop*/
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+        justify-content: flex-end!important
+    }
+    
+    /*adjust align and spacing for desktop*/
+    .show-closed {
+        margin-top: 0px;
+        text-align: left
+    }
+}
 /********* CAMPAIGN PAGE ************/
  /*center and size banner image*/
     .campaign-image{

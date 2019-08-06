@@ -6,9 +6,7 @@
  <hr>
     <p>{{ _('On this page are the curated campaigns that are currently running as part of the ISA tool.')}} {{ _('Click on the name of a campaign to get started and add structured data to an image.') }} {{ _('You can access information on the previous Campaigns in the Archive section.') }}</p>
     
-      {% if username != 'Guest' and username != False and username != None %}
-    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>       
-    {% endif %}
+
 </header>
 <div class="container">
     <section id="campaigns">
@@ -59,9 +57,15 @@
             </tbody>
         </table>
     </section>
+<div class="custom-control custom-checkbox show-closed">
+  <input type="checkbox" class="custom-control-input" id="customCheck1">
+  <label class="custom-control-label" for="customCheck1">Show closed campaigns</label>
+</div>
 </div>
 <div class="container text-center">
-
+      {% if username != 'Guest' and username != False and username != None %}
+    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>       
+    {% endif %}
 
 </div>
 {% endblock content%}
