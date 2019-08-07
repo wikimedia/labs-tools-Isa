@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-07 11:15+0100\n"
+"POT-Creation-Date: 2019-08-07 10:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,21 +31,21 @@ msgstr ""
 msgid "Campaign - "
 msgstr ""
 
-#: campaigns/routes.py:215
+#: campaigns/routes.py:216
 msgid "You need to Login to create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:240
+#: campaigns/routes.py:246
 #, python-format
-msgid "Sorry %(campaign_name)s Could not be created, End Date required"
+msgid "Sorry %(campaign_name)s Could not be created"
 msgstr ""
 
-#: campaigns/routes.py:247
+#: campaigns/routes.py:253
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr ""
 
-#: campaigns/routes.py:250
+#: campaigns/routes.py:256
 msgid "Create a campaign"
 msgstr ""
 
@@ -54,36 +54,36 @@ msgstr ""
 msgid "%(campaign_name)s - Contribute"
 msgstr ""
 
-#: campaigns/routes.py:287
+#: campaigns/routes.py:293
 msgid "You need to Login to update a campaign"
 msgstr ""
 
-#: campaigns/routes.py:308
-msgid "Please enter an End Date for this Campaign!"
+#: campaigns/routes.py:319
+msgid "Campaign update failed please try later!"
 msgstr ""
 
-#: campaigns/routes.py:310
+#: campaigns/routes.py:321
 msgid "Update Succesfull !"
 msgstr ""
 
-#: campaigns/routes.py:318
+#: campaigns/routes.py:329
 #, python-format
 msgid ""
 "You cannot update this campaign, Contact Manager "
 "User:%(campaign_manager)s "
 msgstr ""
 
-#: campaigns/routes.py:333
+#: campaigns/routes.py:344
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr ""
 
-#: campaigns/routes.py:336
+#: campaigns/routes.py:347
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr ""
 
-#: campaigns/routes.py:374
+#: campaigns/routes.py:385
 msgid "You need to login to participate"
 msgstr ""
 
@@ -420,19 +420,23 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: templates/campaign/campaigns.html:49
+#: templates/campaign/campaigns.html:46
+msgid "None"
+msgstr ""
+
+#: templates/campaign/campaigns.html:54
 msgid "Closed"
 msgstr ""
 
-#: templates/campaign/campaigns.html:52
+#: templates/campaign/campaigns.html:57
 msgid "Open"
 msgstr ""
 
-#: templates/campaign/campaigns.html:56
+#: templates/campaign/campaigns.html:61
 msgid "Go to the campaign home page to get started"
 msgstr ""
 
-#: templates/campaign/campaigns.html:56
+#: templates/campaign/campaigns.html:61
 msgid "Go to Campaign"
 msgstr ""
 

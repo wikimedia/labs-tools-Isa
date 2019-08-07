@@ -138,7 +138,7 @@ def getCampaignById(id):
     # 3 - We create the all_stats download file
     # The field in the stats file will be as thus
     all_stats_fields = ['username', 'file', 'edit_type', 'edit_action', 'country', 'depict_item',
-                        'depict_prominent', 'caption_text', 'caption_language']
+                        'depict_prominent', 'caption_text', 'caption_language', 'date']
     campaign_all_stats_data = get_all_camapign_stats_data(id)
     campaign_all_stats_csv_file = create_campaign_all_stats_csv(stats_file_directory, campaign_name,
                                                                 all_stats_fields, campaign_all_stats_data)
@@ -196,6 +196,7 @@ def getCampaignStatsById(id):
                            campaign_editors=campaign_return_data['campaign_editors'],
                            campaign_contributions=campaign_return_data['campaign_contributions'],
                            current_user=current_user,
+                           is_wiki_loves_campaign=campaign.campaign_type,
                            all_contributors_data=campaign_return_data['all_contributors_data'],
                            all_campaign_country_statistics_data=campaign_return_data['all_campaign_country_statistics_data'],
                            username=username,
@@ -205,7 +206,7 @@ def getCampaignStatsById(id):
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name
-    username = session.get('username', None)
+    username = session.get('username', 'Eugene233')
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
@@ -219,14 +220,19 @@ def CreateCampaign():
             form_categories = ",".join(request.form.getlist('categories'))
             # here we create a campaign
             # We add the campaign information to the database
+            campaign_end_date = None
+            if form.end_date.data == '':
+                campaign_end_date = None
+            else:
+                campaign_end_date = datetime.strptime(form.end_date.data, '%Y-%m-%d')
             campaign = Campaign(
                 campaign_name=form.campaign_name.data,
                 categories=form_categories,
                 campaign_images=form.campaign_images.data,
                 start_date=datetime.strptime(form.start_date.data, '%Y-%m-%d'),
                 campaign_manager=username,
-                end_date=datetime.strptime(form.end_date.data, '%Y-%m-%d'),
-                status=compute_campaign_status(form.end_date.data),
+                end_date=campaign_end_date,
+                status=compute_campaign_status(campaign_end_date),
                 short_description=form.short_description.data,
                 long_description=form.long_description.data,
                 creation_date=datetime.now().date(),
@@ -237,7 +243,7 @@ def CreateCampaign():
             db.session.add(campaign)
             # commit failed
             if testDbCommitSuccess():
-                flash(gettext('Sorry %(campaign_name)s Could not be created, End Date required',
+                flash(gettext('Sorry %(campaign_name)s Could not be created',
                               campaign_name=form.campaign_name.data), 'info')
             else:
                 campaign_stats_path = str(campaign.id)
@@ -291,6 +297,11 @@ def updateCampaign(id):
         # TODO: Check if campaign is closed so that it cannot be edited again
         # This is a potential issue/Managerial
         if form.is_submitted():
+            campaign_end_date = None
+            if form.end_date.data == '':
+                campaign_end_date = None
+            else:
+                campaign_end_date = datetime.strptime(form.end_date.data, '%Y-%m-%d')
             campaign = Campaign.query.filter_by(id=id).first()
             campaign.campaign_name = form.campaign_name.data
             campaign.campaign_manager = username
@@ -303,9 +314,9 @@ def updateCampaign(id):
             campaign.start_date = datetime.strptime(form.start_date.data, '%Y-%m-%d')
             campaign.campaign_image = form.campaign_image.data
             campaign.campaign_type = form.campaign_type.data
-            campaign.end_date = datetime.strptime(form.end_date.data, '%Y-%m-%d')
+            campaign.end_date = campaign_end_date
             if testDbCommitSuccess():
-                flash(gettext('Please enter an End Date for this Campaign!'), 'danger')
+                flash(gettext('Campaign update failed please try later!'), 'danger')
             else:
                 flash(gettext('Update Succesfull !'), 'success')
                 return redirect(url_for('campaigns.getCampaignById', id=id))
@@ -387,7 +398,8 @@ def postContribution():
                                         depict_item=data.get('depict_item'),
                                         depict_prominent=data.get('depict_prominent'),
                                         caption_language=data.get('caption_language'),
-                                        caption_text=data.get('caption_text'))
+                                        caption_text=data.get('caption_text'),
+                                        date=datetime.date(datetime.utcnow()))
             contrib_list.append(contribution)
 
         # We write the api_options for the contributions into a list

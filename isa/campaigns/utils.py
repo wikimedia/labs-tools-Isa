@@ -39,12 +39,8 @@ def compute_campaign_status(end_date):
     end_date -- the end date of the campaign
     """
     status = bool('False')
-    end_date = datetime.strptime(end_date, '%Y-%m-%d')
-    if end_date:
-        if (end_date.strftime('%Y-%m-%d %H:%M') < datetime.now().strftime('%Y-%m-%d %H:%M')):
-            status = bool('True')
-    else:
-        return False
+    if end_date is not None and end_date.strftime('%Y-%m-%d %H:%M') < datetime.now().strftime('%Y-%m-%d %H:%M'):
+        status = bool('True')
     return status
 
 
@@ -126,6 +122,7 @@ def get_all_camapign_stats_data(campaign_id):
         campaign_stat_data['depict_prominent'] = campaign_stat.depict_prominent
         campaign_stat_data['caption_text'] = campaign_stat.caption_text
         campaign_stat_data['caption_language'] = campaign_stat.caption_language
+        campaign_stat_data['date'] = campaign_stat.date
         all_campaign_stats_data.append(campaign_stat_data)
     return all_campaign_stats_data
 

@@ -35,6 +35,8 @@ class Contribution(db.Model):
     depict_prominent = db.Column(db.Boolean, nullable=True)
     caption_language = db.Column(db.String(5), nullable=True)
     caption_text = db.Column(db.String(200), nullable=True)
+    date = db.Column(db.Date, nullable=False,
+                     default=datetime.now().strftime('%Y-%m-%d'))
 
     def __repr__(self):
         # This is what is shown when object is printed
@@ -62,7 +64,7 @@ class Campaign(db.Model):
                            default=datetime.now().strftime('%Y-%m-%d'))
     campaign_manager = db.Column(db.String(15), nullable=False)
     end_date = db.Column(db.Date, nullable=True,
-                         default=datetime.now().strftime('%Y-%m-%d'))
+                         default=None)
     status = db.Column(db.Boolean, nullable=False, default=bool('False'))
     short_description = db.Column(db.Text, nullable=False)
     long_description = db.Column(db.Text, nullable=False)
