@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-04 20:17+0100\n"
+"POT-Creation-Date: 2019-08-07 11:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,68 +22,68 @@ msgstr ""
 msgid "Campaigns"
 msgstr ""
 
-#: campaigns/routes.py:60 campaigns/routes.py:188
+#: campaigns/routes.py:59 campaigns/routes.py:186
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr ""
 
-#: campaigns/routes.py:159 campaigns/routes.py:195
+#: campaigns/routes.py:158 campaigns/routes.py:193
 msgid "Campaign - "
 msgstr ""
 
-#: campaigns/routes.py:219
+#: campaigns/routes.py:215
 msgid "You need to Login to create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:244
+#: campaigns/routes.py:240
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created, End Date required"
 msgstr ""
 
-#: campaigns/routes.py:251
+#: campaigns/routes.py:247
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr ""
 
-#: campaigns/routes.py:254
+#: campaigns/routes.py:250
 msgid "Create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:274
+#: campaigns/routes.py:268
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr ""
 
-#: campaigns/routes.py:294
+#: campaigns/routes.py:287
 msgid "You need to Login to update a campaign"
 msgstr ""
 
-#: campaigns/routes.py:315
+#: campaigns/routes.py:308
 msgid "Please enter an End Date for this Campaign!"
 msgstr ""
 
-#: campaigns/routes.py:317
+#: campaigns/routes.py:310
 msgid "Update Succesfull !"
 msgstr ""
 
-#: campaigns/routes.py:325
+#: campaigns/routes.py:318
 #, python-format
 msgid ""
 "You cannot update this campaign, Contact Manager "
 "User:%(campaign_manager)s "
 msgstr ""
 
-#: campaigns/routes.py:340
+#: campaigns/routes.py:333
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr ""
 
-#: campaigns/routes.py:343
+#: campaigns/routes.py:336
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr ""
 
-#: campaigns/routes.py:382
+#: campaigns/routes.py:374
 msgid "You need to login to participate"
 msgstr ""
 
@@ -112,14 +112,18 @@ msgid "Campaign progress so far"
 msgstr ""
 
 #: templates/campaign/campaign.html:32
+#: templates/campaign/campaign_stats.html:15
 msgid "Total number of images in this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:32 templates/campaign/campaigns.html:23
+#: templates/campaign/campaign.html:32
+#: templates/campaign/campaign_stats.html:15
+#: templates/campaign/campaigns.html:23
 msgid "Images"
 msgstr ""
 
 #: templates/campaign/campaign.html:33
+#: templates/campaign/campaign_stats.html:16
 msgid "Total number of contributions made to this campaign"
 msgstr ""
 
@@ -320,10 +324,6 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:12
 msgid "Campaign Progress"
-msgstr ""
-
-#: templates/campaign/campaign_stats.html:15
-msgid "Editors"
 msgstr ""
 
 #: templates/campaign/campaign_stats.html:84
