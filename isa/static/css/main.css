@@ -19,7 +19,7 @@
     text-transform: uppercase;
 }
 .page-header > hr {
-    margin: 0 auto;
+    margin: 0.5rem auto;
     width:100%
 }
  
@@ -532,7 +532,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     }
     /*reduce hr width on desktop*/
     .page-header hr {
-        margin: 0 auto;
+       
         width:50%
     }
  

@@ -132,10 +132,11 @@
     </div>
 </div>
 
-<hr>
 
-<div class="container campaign-info justify-content-center text-center">
-    <h3>{{ _('More About This Campaign') }}</h3>
+<div class="container campaign-info justify-content-center text-center page-header mt-5">
+    <h2>{{ _('More About This Campaign') }}</h2>
+    <hr>
+    <h5><strong>{{ _('Campaign Manager') }}:</strong> {{ campaign.campaign_manager }}</h5>
     <div class="campaign-dates">
         <h6><strong>{{ _('START DATE')}}: </strong> {{campaign.start_date}}</h6>
         <h6><strong>{{ _('END DATE') }}: </strong> {{campaign.end_date}}</h6>	
