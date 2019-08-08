@@ -26,24 +26,16 @@ var campaignTable = $('#campaign_table').DataTable({
     },
     // See https://stackoverflow.com/questions/32252616/ for explanation of dom setting below
     // It's used to get the button in the same line as the other table controls in the header
-    dom: "<'row'<'col-sm-6'lB><'col-sm-6'f>>" +
-        "<'row'<'col-sm-12't>>" +
-        "<'row'<'col-sm-5'i><'col-sm-7'p>>", 
-    buttons: [{
-        text: 'Show closed campaigns',
-        className: "show-closed-campaigns-btn",
-        action: function ( el, dt, node, config ) {
-            var statusColumn = dt.column(booleanStatusColumn)
-            if (statusColumn.search() === '1') {
-                statusColumn.search('').draw();
-                $(node).addClass("active");
-            } else {
-                statusColumn.search(1).draw();
-                $(node).removeClass("active");
-            }
-        }
-    }]
+    dom: "f" +
+         "<'row'<'col-sm-12'tr>>" +
+         "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>"
 });
 
 // Initially, the closed campaigns should be hidden
+// Todo use searchCols datatables option
 campaignTable.columns(booleanStatusColumn).search(1).draw();
+
+$('#show-closed-campaigns-checkbox').change(function() {
+    var statusSearch = (this.checked) ? '' : 1;
+    campaignTable.column(booleanStatusColumn).search(statusSearch).draw();
+});
