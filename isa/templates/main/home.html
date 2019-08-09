@@ -2,7 +2,7 @@
 {% block content%}
 {{ Anthony }}
 <div class="container px-0">
-    <img src="{{url_for('static', filename='ISA home image.svg')}}" alt=""> <!--Copy the image or use commons link-->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/ISA_home_image_no_edit_SVG.svg" alt=""> <!--Copy the image or use commons link-->
 </div>
 <div class="container text-center page-header">
      
@@ -22,7 +22,7 @@
         <p>{{ _('ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project.') }} {{ _(' ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for \'put \' or \'place\' ') }}</p>
     </div>
     {% if username != 'Guest' and username != False and username != None %}
-    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-primary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>       
+    <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-secondary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>       
     {% endif %}
 </div>
 

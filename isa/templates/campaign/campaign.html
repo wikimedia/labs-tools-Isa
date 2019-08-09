@@ -29,8 +29,8 @@
             <h4>{{ _('Campaign progress so far') }}</h4>
         </div>
     <div class="main-stats-label-group mx-auto">
-        <div class="label btn btn-warning" title="{{ _('Total number of images in this campaign') }}">{{ _('Images') }}<br>{{ campaign.campaign_images }}</div>
-        <div class="label btn btn-warning" title="{{ _('Total number of contributions made to this campaign') }}">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
+        <div class="stat-label" title="{{ _('Total number of images in this campaign') }}">{{ _('Images') }}<br>{{ campaign.campaign_images }}</div>
+        <div class="stat-label" title="{{ _('Total number of contributions made to this campaign') }}">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
     </div>
     <div class="stats-table mx-auto">
         <div class="top-user-table mr-4">				
@@ -98,7 +98,7 @@
             </div>
         {% endif %}
     </div>
-                <a href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-primary" title="{{ _('View and download more stats for this campaign') }}">{{ _('View full stats') }}</a>
+                <a href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-secondary" title="{{ _('View and download more stats for this campaign') }}">{{ _('View full stats') }}</a>
 
  
 </div>
@@ -121,7 +121,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr  class="table-warning">
+                    <tr>
                         <th scope="row">{{current_user_rank}}</th>
                         <td>{{current_user_images_improved}}</td>
                     </tr>

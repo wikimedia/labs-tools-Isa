@@ -6,12 +6,20 @@
     border-color: #006699;
 }
 /*change btn-primary disabled state*/
-.btn-primary:disabled {
+.btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
     background-color: #6c757d;
     border-color: #6c757d;
 }
-
+.btn-danger {
+    color: #fff;
+    background-color: #990000;
+    border-color: #990000;
+}
+.btn-outline-danger {
+    color: #990000;
+    border-color: #990000;
+}
 /* style the page titles and page header*/
 .page-header h1 {
     /*font-family: LinuxBiolinumOBold;*/
@@ -146,8 +154,15 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     justify-content: space-around;
     margin-bottom: 30px;
 }
-.main-stats-label-group .label {
+.stat-label {
     min-width: 150px;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #212529;
+    background-color: #fad67d;
 }
 .campaign-stats .stats-table {
     display: none;
@@ -167,6 +182,9 @@ more-stats-btn {
 /* User Stats*/
 .user-stats .stats-table th {
     width: 50%
+}
+.user-stats tbody tr {
+    background-color: #fad67d;
 }
 /*end campaign page*/
  
