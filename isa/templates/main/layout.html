@@ -57,16 +57,11 @@
 		<ul class="navbar-nav">
 			<li class="nav-item lang">
 				<select id="language_select" class="custom-select selectpicker" data-width="fit">
-					{% if session_language != 'en' %}
-							<option data-content='<span class=""></span> fr' selected>fr</option>
-							<option data-content='<span class=""></span>en'>en</option>
-					{% else %}
-						<option data-content='<span class=""></span>fr'>fr</option>
-						<option data-content='<span class=""></span>en'>en</option>
-					<!-- <a href="{{url_for( 'main.set_language', lang=lang )}}"></a> -->
-					{% endif %}
+					<option data-content='<span class=""></span>en'{% if session_language=='en' %} selected="selected" {% endif %}>en</option>
+					<option data-content='<span class=""></span>fr'{% if session_language=='fr' %} selected="selected" {% endif %}>fr</option>
+				<!-- <a href="{{url_for( 'main.set_language', lang=lang )}}"></a> -->
 				</select>
-			</li>     
+			</li>
 			<li class="nav-item dropdown">
 				{% if username %}
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> {{username}}</a>
