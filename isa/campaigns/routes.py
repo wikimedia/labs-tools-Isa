@@ -6,24 +6,22 @@ import shutil
 import glob
 import mwoauth
 
-from isa import app
-
+from io import StringIO
 from datetime import datetime
 from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file
-from isa import gettext
 from flask_login import current_user
 
-from io import StringIO
-from isa import db
+from isa import app, db, gettext
 from isa.campaigns.forms import CampaignForm, UpdateCampaignForm
-from isa.models import Campaign, Contribution, User
-from isa.campaigns.utils import (constructEditContent, get_campaign_category_list, get_country_from_code,
-                                 compute_campaign_status, buildCategoryObject, create_campaign_country_stats_csv,
+from isa.campaigns.utils import (get_campaign_category_list, get_country_from_code,
+                                 compute_campaign_status, create_campaign_country_stats_csv,
                                  create_campaign_contributor_stats_csv, create_campaign_all_stats_csv,
-                                 get_all_camapign_stats_data, make_edit_api_call, generate_csrf_token)
-from isa.main.utils import testDbCommitSuccess, getCampaignCountryData
-from isa.users.utils import (get_user_language_preferences,
-                             getAllUsersContributionsPerCampaign, getUserRanking, getCurrentUserImagesImproved)
+                                 get_all_camapign_stats_data, get_campaign_country_data,
+                                 make_edit_api_call, generate_csrf_token)
+from isa.main.utils import commit_changes_to_db
+from isa.models import Campaign, Contribution, User
+from isa.users.utils import (get_user_language_preferences, get_all_users_contribution_data_per_campaign,
+                             get_user_ranking, get_current_user_images_improved)
 from isa.utils.languages import getLanguages
 
 
@@ -89,16 +87,16 @@ def getCampaignById(id):
         all_camapign_users_list.append(user)
 
     # We get the users and their contribution data
-    all_contributors_data = getAllUsersContributionsPerCampaign(all_camapign_users_list, id)
-    current_user_rank = getUserRanking(all_contributors_data, username)
-    current_user_images_improved = getCurrentUserImagesImproved(all_contributors_data, username)
+    all_contributors_data = get_all_users_contribution_data_per_campaign(all_camapign_users_list, id)
+    current_user_rank = get_user_ranking(all_contributors_data, username)
+    current_user_images_improved = get_current_user_images_improved(all_contributors_data, username)
 
     # We add rank to all contributor's data
     for user_data in all_contributors_data:
-        user_data['rank'] = getUserRanking(all_contributors_data, user_data['username'])
+        user_data['rank'] = get_user_ranking(all_contributors_data, user_data['username'])
 
     # We get all the campaign coountry sorted data
-    all_campaign_country_statistics_data = getCampaignCountryData(id)
+    all_campaign_country_statistics_data = get_campaign_country_data(id)
 
     campaign_stats = {}
     campaign_stats['all_contributors_data'] = all_contributors_data
@@ -153,7 +151,7 @@ def getCampaignById(id):
 
     campaign.campaign_participants = campaign_editors
     campaign.campaign_contributions = campaign_contributions
-    if testDbCommitSuccess():
+    if commit_changes_to_db():
         print('Campaign info updated successfully!')
     return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                             campaign=campaign,
@@ -242,7 +240,7 @@ def CreateCampaign():
                 campaign_type=form.campaign_type.data)
             db.session.add(campaign)
             # commit failed
-            if testDbCommitSuccess():
+            if commit_changes_to_db():
                 flash(gettext('Sorry %(campaign_name)s Could not be created',
                               campaign_name=form.campaign_name.data), 'info')
             else:
@@ -315,7 +313,7 @@ def updateCampaign(id):
             campaign.campaign_image = form.campaign_image.data
             campaign.campaign_type = form.campaign_type.data
             campaign.end_date = campaign_end_date
-            if testDbCommitSuccess():
+            if commit_changes_to_db():
                 flash(gettext('Campaign update failed please try later!'), 'danger')
             else:
                 flash(gettext('Update Succesfull !'), 'success')
@@ -433,7 +431,7 @@ def postContribution():
             latest_base_rev_id = lastrevid
 
         # We attempt to save the changes to db
-        if testDbCommitSuccess():
+        if commit_changes_to_db():
             return("Failure")
         else:
             return (str(latest_base_rev_id))
@@ -449,7 +447,7 @@ def UpdateCampaignImagesCount(id):
     # We get the campaign images count and cast before including that into db
     campaign_images = int(images_data['campaign_images'])
     campaign.campaign_images = campaign_images
-    if testDbCommitSuccess():
+    if commit_changes_to_db():
         return("Failure")
     else:
         return("Success!")

@@ -6,13 +6,13 @@ import requests
 import mwoauth
 
 from datetime import datetime
-
-from mwoauth import ConsumerToken, Handshaker
-
 from flask import request, session
+from mwoauth import ConsumerToken, Handshaker
+from operator import itemgetter
+from requests_oauthlib import OAuth1
+
 from isa import app
 from isa.models import Contribution
-from requests_oauthlib import OAuth1
 
 
 def get_country_from_code(country_code):
@@ -63,52 +63,24 @@ def get_campaign_category_list(categories):
 
 
 def combine_campign_content(content_list):
+    """
+    Add campaign campaign content to a list
+
+    Keyword arguments:
+    content_list -- The list of the campaign content
+    """
     campaign_content = []
     campaign_content.append(content_list)
     return campaign_content
 
 
-def get_all_campaign_images(query_data):
-    campaign_image_list = []
-    for data in query_data:
-        for category_member in data['query']['categorymembers']:
-            campaign_image_list.append(category_member['title'])
-    return campaign_image_list
-
-
-def get_actual_image_file_names(image_list):
-    image_names = []
-    for image in image_list:
-        image_name_without_file = image.split(':')[1]
-        # we now replaces spaces with underscore in image name
-        image_names.append(image_name_without_file.replace(" ", "_"))
-    return image_names
-
-
-def constructEditContent(formdata):
+def get_all_camapign_stats_data(campaign_id):
     """
-    Arranges edit content into objects
+    provides all contributions related to a campaign
 
     Keyword arguments:
-    formdata -- Request data with depict q values
+    campaign_id -- The id of the campaign in question
     """
-    depicts_content = []
-    if formdata:
-        for depict_data in formdata:
-            depicts_content.append(depict_data.split('|'))
-        return depicts_content
-    else:
-        return []
-
-
-def buildCategoryObject(category):
-    cat_object_body = {}
-    cat_object_body['name'] = category
-    cat_object_body['depth'] = 0
-    return cat_object_body
-
-
-def get_all_camapign_stats_data(campaign_id):
     all_campaign_stats_data = []
     all_campaign_stats = Contribution.query.filter_by(campaign_id=campaign_id).all()
     for campaign_stat in all_campaign_stats:
@@ -129,6 +101,15 @@ def get_all_camapign_stats_data(campaign_id):
 
 def create_campaign_country_stats_csv(stats_file_directory, campaign_name,
                                       country_fields, country_stats_data):
+    """
+    Create CSV file with country statistics for a campaign
+
+    Keyword arguments:
+    stats_file_directory -- The directory to save the csv file
+    campaign_name -- The campaign name
+    country_fields -- Fields to add to the csv header
+    country_stats_data -- Country data for csv file
+    """
     file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_country_stats.csv'
     # We build the campaign statistucs file here with the country stats stats
     with open(file_directory, 'w') as csv_file:
@@ -143,6 +124,15 @@ def create_campaign_country_stats_csv(stats_file_directory, campaign_name,
 
 def create_campaign_contributor_stats_csv(stats_file_directory, campaign_name,
                                           contributor_fields, contributor_stats_data):
+    """
+    Create CSV file with contributor statistics for a campaign
+
+    Keyword arguments:
+    stats_file_directory -- The directory to save the csv file
+    campaign_name -- The campaign name
+    country_fields -- Fields to add to the csv header
+    country_stats_data -- Contributor data for csv file
+    """
     # We build the campaign statistucs file here with the country stats stats
     file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_stats.csv'
     with open(file_directory, 'w') as contrib_csv_file:
@@ -157,6 +147,15 @@ def create_campaign_contributor_stats_csv(stats_file_directory, campaign_name,
 
 def create_campaign_all_stats_csv(stats_file_directory, campaign_name, all_stats_fields,
                                   campaign_all_stats_data):
+    """
+    Create CSV file with contributor statistics for a campaign
+
+    Keyword arguments:
+    stats_file_directory -- The directory to save the csv file
+    campaign_name -- The campaign name
+    country_fields -- Fields to add to the csv header
+    country_stats_data -- All campaign stats data for csv file
+    """
     # We build the campaign statistucs file here with the country stats stats
     file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_all_stats.csv'
     with open(file_directory, 'w') as all_stats_csv_file:
@@ -170,6 +169,15 @@ def create_campaign_all_stats_csv(stats_file_directory, campaign_name, all_stats
 
 
 def generate_csrf_token(app_key, app_secret, user_key, user_secret):
+    """
+    Generate CSRF token for edit request
+
+    Keyword arguments:
+    app_key -- The application api auth key
+    app_secret -- The application api auth secret
+    user_key -- User auth key generated at login
+    user_secret -- User secret generated at login
+    """
     # We authenticate the user using the keys
     auth = OAuth1(app_key, app_secret, user_key, user_secret)
 
@@ -188,7 +196,7 @@ def generate_csrf_token(app_key, app_secret, user_key, user_secret):
 
 def make_edit_api_call(csrf_token, api_auth_token, username, contribution_data):
     """
-    Makes an edit API call to make changes to an image.
+    Make edit API call to make changes to an image on Commons.
 
     Keyword arguments:
     app_key -- The application configuration key
@@ -227,3 +235,67 @@ def make_edit_api_call(csrf_token, api_auth_token, username, contribution_data):
             if entity is not None:
                 revision_id = entity.get('lastrevid')
         return revision_id
+
+
+def get_country_ranking(all_contrystats_data, country):
+    """
+    Get a particular Country's ranking
+
+    Keyword arguments:
+    all_contry_stats_data -- sorted list of all country by their contributions
+    country -- the country whic's ranking is to be obtained
+    """
+
+    index = next((i for i, item in enumerate(all_contrystats_data) if item['country'] == country), -1)
+    return index + 1  # we shift from 0
+
+
+def get_country_improved_file_count(campaign_contributions, country):
+    """
+    Count improved files per country in ca campaign
+
+    Keyword arguments:
+    campaign_contributions -- Contributions in said campaign
+    country -- The country whose images are counted
+    """
+    country_improved_files = []
+    for contribution in campaign_contributions:
+        if contribution.country == country:
+            country_improved_files.append(contribution.file)
+    return len(country_improved_files)
+
+
+# TODO: Transfer all these methods to the campaign blueprint
+def get_campaign_country_data(campaign_id):
+    """
+    Fetch campaign country data
+
+    Keyword arguments:
+    campaign_id -- Campaign country for said campaign
+    """
+    # Holds contribution countries for campaign with id: campaign_id
+    contribution_countries = []
+
+    # Holds all countries and images imaproved per country
+    all_country_statistics_data = []
+
+    # We get all the campaign contributions
+    campaign_contributions = Contribution.query.filter_by(campaign_id=campaign_id).all()
+    # We then iterate to get the countries
+    for contribution in campaign_contributions:
+        if contribution.country != "":
+            contribution_countries.append(contribution.country)
+    contribution_countries = set(contribution_countries)
+
+    for country in contribution_countries:
+        country_stats_data = {
+            'country': country,
+            'images_improved': get_country_improved_file_count(campaign_contributions, country)
+        }
+        all_country_statistics_data.append(country_stats_data)
+    all_country_statistics_data = sorted(all_country_statistics_data,
+                                         key=itemgetter('images_improved'), reverse=True)
+
+    for country_stats_data in all_country_statistics_data:
+        country_stats_data['rank'] = get_country_ranking(all_country_statistics_data, country_stats_data['country'])
+    return all_country_statistics_data

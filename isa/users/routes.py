@@ -1,17 +1,16 @@
-import mwoauth
 import json
 import sys
-from flask import Blueprint, redirect, url_for, flash, request, session, render_template
+
+from flask import Blueprint, flash, redirect, render_template, request, session, url_for
 from flask_login import current_user, login_user, logout_user
-# import pycountry
+import mwoauth
 
 from isa import app, gettext
-from isa.main.utils import testDbCommitSuccess
+from isa.main.utils import commit_changes_to_db
 from isa.models import User
-from isa.utils.languages import getLanguages
 from isa.users.forms import CaptionsLanguageForm
-
-from isa.users.utils import buildUserPrefLang
+from isa.utils.languages import getLanguages
+from isa.users.utils import build_user_pref_lang
 
 users = Blueprint('users', __name__)
 
@@ -139,15 +138,15 @@ def userSettings():
                           rep_languages=repeated_languages_text), 'danger')
             return redirect(url_for('users.userSettings'))
         else:
-            user_caption_lang = buildUserPrefLang(caption_language_1, caption_language_2,
-                                                  caption_language_3, caption_language_4,
-                                                  caption_language_5, caption_language_6)
+            user_caption_lang = build_user_pref_lang(caption_language_1, caption_language_2,
+                                                     caption_language_3, caption_language_4,
+                                                     caption_language_5, caption_language_6)
             # We select the user with username and update their caption_language
             user = User.query.filter_by(username=username).first()
             user.caption_languages = user_caption_lang
 
             # commit failed
-            if testDbCommitSuccess():
+            if commit_changes_to_db():
                 flash(gettext('Captions languages could not be set'), 'danger')
             else:
                 flash(gettext('Preferred Languages set Successfully'), 'success')

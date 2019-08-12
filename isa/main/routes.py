@@ -2,9 +2,8 @@ import os
 
 from flask import Blueprint, render_template, session, redirect, url_for
 from flask_login import current_user
+
 from isa import gettext
-
-
 from isa.users.utils import add_user_to_db
 
 main = Blueprint('main', __name__)

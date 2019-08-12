@@ -1,9 +1,10 @@
 import json
+
 from operator import itemgetter
 
+from isa import db, gettext
+from isa.main.utils import commit_changes_to_db
 from isa.models import User, Contribution
-from isa import db
-from isa.main.utils import testDbCommitSuccess
 
 
 def check_user_existence(username):
@@ -32,7 +33,7 @@ def add_user_to_db(username):
     if check_user_existence(username):
         user = User(username=username, caption_languages='en,fr,,,,')
         db.session.add(user)
-        if testDbCommitSuccess():
+        if commit_changes_to_db():
             return False
         else:
             return user.username
@@ -63,7 +64,7 @@ def get_user_language_preferences(username):
         return user_pref_options
 
 
-def getUserRanking(all_contributors_data, username):
+def get_user_ranking(all_contributors_data, username):
     """
     Get a particular user's ranking
 
@@ -76,7 +77,7 @@ def getUserRanking(all_contributors_data, username):
     return index + 1  # we shift from 0
 
 
-def getUserContributionsPerCampign(username, campaign_id):
+def get_user_contrbition_per_campaign(username, campaign_id):
     """
     Get a particular user's contribution per Campaign
 
@@ -96,7 +97,7 @@ def getUserContributionsPerCampign(username, campaign_id):
     return user_contribution_data
 
 
-def getAllUsersContributionsPerCampaign(Users, campaign_id):
+def get_all_users_contribution_data_per_campaign(Users, campaign_id):
     """
     Get all user contributions per Campaign
 
@@ -107,13 +108,13 @@ def getAllUsersContributionsPerCampaign(Users, campaign_id):
 
     all_contributors_data = []
     for user in Users:
-        all_contributors_data.append(getUserContributionsPerCampign(user.username, campaign_id))
+        all_contributors_data.append(get_user_contrbition_per_campaign(user.username, campaign_id))
     #  We sort the users and their contributions data in decreaasing order
     all_contributors_data = sorted(all_contributors_data, key=itemgetter('images_improved'), reverse=True)
     return all_contributors_data
 
 
-def getCurrentUserImagesImproved(all_contributors_data, username):
+def get_current_user_images_improved(all_contributors_data, username):
     """
     Get current user's ranking
 
@@ -126,8 +127,19 @@ def getCurrentUserImagesImproved(all_contributors_data, username):
         if user_data['username'] == username:
             return user_data['images_improved']
         else:
-            return 'N/A'
+            return gettext('None')
 
 
-def buildUserPrefLang(lang_1, lang_2, lang_3, lang_4, lang_5, lang_6):
+def build_user_pref_lang(lang_1, lang_2, lang_3, lang_4, lang_5, lang_6):
+    """
+    Build user preferred language string with language choices
+
+    Keyword arguments:
+    lang_1 -- Language option 1
+    lang_2 -- Language option 2
+    lang_3 -- Language option 3
+    lang_4 -- Language option 4
+    lang_5 -- Language option 5
+    lang_6 -- Language option 6
+    """
     return lang_1 + ',' + lang_2 + ',' + lang_3 + ',' + lang_4 + ',' + lang_5 + ',' + lang_6
