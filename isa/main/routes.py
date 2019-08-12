@@ -26,6 +26,20 @@ def home():
                            current_user=current_user)
 
 
+@main.route('/help')
+def help():
+    username = session.get('username', None)
+    session_language = session.get('lang', None)
+    username_for_current_user = add_user_to_db(username)
+    if not session_language:
+        session_language = 'en'
+    return render_template('main/help.html',
+                           title='Help',
+                           session_language=session_language,
+                           username=username_for_current_user,
+                           current_user=current_user)
+
+
 @main.route('/', methods=['GET', 'POST'])
 def set_language(lang):
     session['lang'] = lang
