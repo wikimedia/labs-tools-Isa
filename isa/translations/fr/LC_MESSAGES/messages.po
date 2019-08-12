@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
-"POT-Creation-Date: 2019-08-07 10:23+0100\n"
+"POT-Creation-Date: 2019-08-12 15:35+0100\n"
 "PO-Revision-Date: 2019-07-01 07:49+0100\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
@@ -106,7 +106,7 @@ msgstr "Tous les pays"
 msgid "Start contributing to this campaign"
 msgstr "Participer à la campagne"
 
-#: templates/campaign/campaign.html:22 templates/campaign/campaigns.html:33
+#: templates/campaign/campaign.html:22 templates/campaign/campaigns.html:31
 msgid "Get Started"
 msgstr "Action"
 
@@ -115,20 +115,24 @@ msgid "Campaign progress so far"
 msgstr "Progression de la campagne"
 
 #: templates/campaign/campaign.html:32
+#: templates/campaign/campaign_stats.html:15
 msgid "Total number of images in this campaign"
 msgstr "Nombre total d'images inclues dans la campagne"
 
-#: templates/campaign/campaign.html:32 templates/campaign/campaigns.html:23
+#: templates/campaign/campaign.html:32
+#: templates/campaign/campaign_stats.html:15
+#: templates/campaign/campaigns.html:21
 msgid "Images"
 msgstr "Images"
 
 #: templates/campaign/campaign.html:33
+#: templates/campaign/campaign_stats.html:16
 msgid "Total number of contributions made to this campaign"
 msgstr "Nombre total de contributions dans le cadre de la campagne"
 
 #: templates/campaign/campaign.html:33
 #: templates/campaign/campaign_stats.html:16
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:23
 msgid "Contributions"
 msgstr "Contributions"
 
@@ -185,23 +189,27 @@ msgstr "Mes contributions"
 msgid "Rank"
 msgstr "Rang"
 
-#: templates/campaign/campaign.html:138
+#: templates/campaign/campaign.html:137
 msgid "More About This Campaign"
 msgstr "À propos de cette campagne"
 
-#: templates/campaign/campaign.html:140
+#: templates/campaign/campaign.html:139
+msgid "Campaign Manager"
+msgstr ""
+
+#: templates/campaign/campaign.html:141
 msgid "START DATE"
 msgstr "Date de début"
 
-#: templates/campaign/campaign.html:141
+#: templates/campaign/campaign.html:142
 msgid "END DATE"
 msgstr "Date de fin"
 
-#: templates/campaign/campaign.html:147
+#: templates/campaign/campaign.html:148
 msgid "Make changes to this campaign"
 msgstr "Apporter des modifications à cette campagne"
 
-#: templates/campaign/campaign.html:147
+#: templates/campaign/campaign.html:148
 msgid "Edit Campaign"
 msgstr "Modifier la campagne"
 
@@ -327,10 +335,6 @@ msgstr "Statistiques"
 msgid "Campaign Progress"
 msgstr "Progression de la campagne"
 
-#: templates/campaign/campaign_stats.html:15
-msgid "Editors"
-msgstr "Éditeurs"
-
 #: templates/campaign/campaign_stats.html:84
 msgid "Download all stats (CSV)"
 msgstr "Télécharger toutes les statistiques"
@@ -359,97 +363,107 @@ msgstr ""
 "Vous pouvez accéder aux informations sur les campagnes précédentes dans "
 "la section Archives."
 
-#: templates/campaign/campaigns.html:10 templates/main/home.html:25
-msgid "Create your own campaign"
-msgstr "Créer une nouvelle campagne"
-
-#: templates/campaign/campaigns.html:10 templates/main/home.html:25
-msgid "Create a new campaign using this tool"
-msgstr "Créer une nouvelle campagne"
-
-#: templates/campaign/campaigns.html:16
+#: templates/campaign/campaigns.html:14
 msgid "Ongoing Campaigns"
 msgstr "Toutes les campagnes"
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:20
 msgid "Campaign name"
 msgstr "Nom de la campagne"
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:20
 msgid "Campaign"
 msgstr "Campagne"
 
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaigns.html:21
 msgid "Total number of images in the campaign"
 msgstr "Nombre total d'images concernées par cette campagne"
 
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:22
 msgid "Number of editors that have contributed to the campaign "
 msgstr "Nombre de personnes ayant participé à la campagne"
 
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:22
 msgid "Participants"
 msgstr "Participant.e.s"
 
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:23
 msgid "Total number of contributions to the campaign"
 msgstr "Nombre total de contributions dans le cadre de la campagne"
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:24
 msgid "Campaign start date"
 msgstr "Date de lancement de la campagne"
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:24
 #: templates/campaign/create_campaign.html:54
 #: templates/campaign/update_campaign.html:56
 msgid "Start Date"
 msgstr "Date de début"
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:25
 msgid "Campaign end date"
 msgstr "Date de cloture de la campagne"
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:25
 #: templates/campaign/create_campaign.html:69
 #: templates/campaign/update_campaign.html:71
 msgid "End Date"
 msgstr "Date de fin"
 
-#: templates/campaign/campaigns.html:28
+#: templates/campaign/campaigns.html:26
 msgid "Date the campaign was created"
 msgstr "Date de création de la campagne"
 
-#: templates/campaign/campaigns.html:28
+#: templates/campaign/campaigns.html:26
 msgid "Creation Date"
 msgstr "Date de création"
 
-#: templates/campaign/campaigns.html:29
+#: templates/campaign/campaigns.html:27
 msgid "Campaign status"
 msgstr "Statut de la campagne"
 
-#: templates/campaign/campaigns.html:29
+#: templates/campaign/campaigns.html:27
 msgid "Status"
 msgstr "Statut"
 
-#: templates/campaign/campaigns.html:46
+#: templates/campaign/campaigns.html:44
 msgid "None"
 msgstr "Aucune"
 
-#: templates/campaign/campaigns.html:54
+#: templates/campaign/campaigns.html:52
 msgid "Closed"
 msgstr "Fermé"
 
-#: templates/campaign/campaigns.html:57
+#: templates/campaign/campaigns.html:55
 msgid "Open"
 msgstr "Ouvert"
 
-#: templates/campaign/campaigns.html:61
+#: templates/campaign/campaigns.html:59
 msgid "Go to the campaign home page to get started"
 msgstr "Accéder à la page de la campagne pour participer"
 
-#: templates/campaign/campaigns.html:61
+#: templates/campaign/campaigns.html:59
 msgid "Go to Campaign"
 msgstr "Modifier"
+
+#: templates/campaign/campaigns.html:67
+msgid "Show closed campaigns"
+msgstr "Voir les campagnes archivées"
+
+#: templates/campaign/campaigns.html:72 templates/campaign/campaigns.html:74
+#: templates/main/home.html:32
+msgid "Create your own campaign"
+msgstr "Créer une nouvelle campagne"
+
+#: templates/campaign/campaigns.html:72 templates/campaign/campaigns.html:74
+#: templates/main/home.html:32
+msgid "Create a new campaign using this tool"
+msgstr "Créer une nouvelle campagne"
+
+#: templates/campaign/campaigns.html:75
+msgid "You must be logged in to create a campaign."
+msgstr "Vous devez être identifié.e pour créer une campagne"
 
 #: templates/campaign/create_campaign.html:4
 msgid "Create new Campaign"
@@ -597,82 +611,97 @@ msgstr "Isa pourrait être en cours de maintenance"
 msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Ajoutez facilement des informations sur les images sur Wikimedia Commons"
 
-#: templates/main/home.html:14
-msgid ""
-"is a fun tool aimed at the metadata enhancement of images contributed to "
-"the various Wiki Loves competitions on Wikimedia Commons"
-msgstr ""
-"est un outil amusant visant à améliorer les métadonnées des images "
-"contribuant à les différents concours Wiki Loves sur Wikimedia Commons"
-
-#: templates/main/home.html:14
-msgid ""
-"It is being created as a way to quickly add structured information to a "
-"collection of pre-defined images."
-msgstr ""
-"Il est créé pour ajouter rapidement des informations structurées à une "
-"collection d’images prédéfinies"
-
 #: templates/main/home.html:15
+msgid ""
+"is a multilingual, mobile-first tool, that makes it easy for people to "
+"add 'micro-contributions' in the form of"
+msgstr ""
+"ISA est un outil de microcontribution, multilingue et orienté mobile, qui"
+" permet d’ajouter, supprimer ou modifier les"
+
+#: templates/main/home.html:16
+msgid "Learn more about structured data"
+msgstr "En savoir plus sur les informations structurées"
+
+#: templates/main/home.html:16
+msgid "structured data"
+msgstr "informations structurées"
+
+#: templates/main/home.html:17
+msgid ""
+"(descriptions, captions, tags, etc.) to images that have been contributed"
+" to Wikimedia Commons by Wiki Loves competitions."
+msgstr "d’images téléversées sur Wikimedia Commons."
+
+#: templates/main/home.html:18
+msgid "Click on Explore Campaigns to begin!"
+msgstr "Cliquez sur Explorer les campagnes pour commencer"
+
+#: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
 msgstr "Cliquez pour voir la liste complète des campagnes"
 
-#: templates/main/home.html:15
-msgid "EXPLORE CAMPAIGNS"
-msgstr "Liste des campagnes"
-
-#: templates/main/home.html:18
-msgid "About This Tool"
-msgstr "À propos d'ISA"
-
 #: templates/main/home.html:19
+msgid "EXPLORE CAMPAIGNS"
+msgstr "LISTE DES CAMPAGNES"
+
+#: templates/main/home.html:22
+msgid "About This Tool"
+msgstr "A propos d’ISA"
+
+#: templates/main/home.html:23
 msgid ""
 "In the long run, the intent behind the tool is to increase the use of the"
-" knowledge that resides within each image."
+" knowledge that is reflected by each image hosted on Wikimedia Commons. "
 msgstr ""
-"À long terme, l'objectif de l'outil est d'accroître l'utilisation des "
-"connaissances contenues dans chaque image."
+"Pour célébrer 5 ans d’existence de Wiki Loves Africa, nous avons imaginé "
+"ISA afin de faciliter et stimuler l’ajout d’informations descriptives aux"
+" images téléversées dans le cadre du concours photo dédié au continent "
+"africain. "
 
-#: templates/main/home.html:19
+#: templates/main/home.html:24
 msgid ""
 "The tool is aimed to assist in the usefulness and information of images "
-"donated to the Wiki Loves competitions."
+"donated during the Wiki Loves competitions."
 msgstr ""
-"L’outil a pour but d’aider à l’utilité et à l’information des images "
-"données au concours Wiki Loves"
+"Créé pour pouvoir rapidemment ajouter des informations structurées à une "
+"collection d’images prédéfinies,"
 
-#: templates/main/home.html:20
+#: templates/main/home.html:25
 msgid ""
-"It is initially being built to assist in the descriptions of Wiki Loves "
-"Africa images"
+" It is initially being built to assist in the descriptions of Wiki Loves "
+"Africa images,"
 msgstr ""
-"Il est initialement construit pour aider dans les descriptions de Wiki "
-"Loves Images d'Afrique"
+"ISA est particulièrement adapté pour être utilisé dans le cadre de toutes"
+" les compétitions Wiki Loves, mais peut être utilisé de façon générale "
+"sur toute collection d’images."
 
-#: templates/main/home.html:20
+#: templates/main/home.html:26
 msgid ""
 "but is being specifically modelled to be useful to all of the Wiki Loves "
 "competitions and beyond."
 msgstr ""
-"mais est spécialement conçu pour être utile à toutes les compétitions de "
-"Wiki Loves et au-delà."
+"L’objectif est d’augmenter l’utilité de ces photos sur les projets "
+"Wikimedia et au delà."
 
-#: templates/main/home.html:21
-msgid "The tool is also designed to be a host of small competitions."
-msgstr "L'outil est également conçu pour être une foule de petites compétitions."
+#: templates/main/home.html:27
+msgid ""
+"The tool is also designed to be a host of micro contribution competitions"
+" proposed by project leaders."
+msgstr ""
+"ISA est un outil pilote du projet Données Structurées sur Wikimedia "
+"Commons."
 
-#: templates/main/home.html:22
+#: templates/main/home.html:28
 msgid ""
 "ISA is a collaboration between Wiki In Africa, Histropedia and the "
 "Structured Data on Commons project."
-msgstr ""
-"ISA est une collaboration entre Wiki In Africa, Histropedia et le projet "
-"Structured Data on Commons."
+msgstr " "
 
-#: templates/main/home.html:22
+#: templates/main/home.html:29
 msgid ""
 " ISA is not only an acronym for Information Structured Acceleration, but "
-"is also a chiShona language word for 'put ' or 'place' "
+"is also a chiShona language word for 'put' or 'place'."
 msgstr ""
 "ISA n'est pas seulement un acronyme pour Information Structured "
 "Acceleration, mais est également un mot chiShona pour «mettre» ou "
@@ -690,47 +719,47 @@ msgstr "Nouvelle Campagne"
 msgid "Help"
 msgstr "Aide"
 
-#: templates/main/layout.html:74
+#: templates/main/layout.html:69
 msgid "Change your available caption languages"
 msgstr "Changer les langues de légende disponibles"
 
-#: templates/main/layout.html:74
+#: templates/main/layout.html:69
 msgid "Languages preferences"
 msgstr "Préférence de langues"
 
-#: templates/main/layout.html:81 templates/main/layout.html:85
+#: templates/main/layout.html:76 templates/main/layout.html:80
 msgid "Logout"
 msgstr "Se déconnecter"
 
-#: templates/main/layout.html:89
+#: templates/main/layout.html:84
 msgid "Login"
 msgstr "Se connecter"
 
-#: templates/main/layout.html:113
+#: templates/main/layout.html:108
 msgid "ISA tool"
 msgstr "Outil ISA"
 
-#: templates/main/layout.html:114
+#: templates/main/layout.html:109
 msgid ""
 "was developed as a collaboration between Wiki In Africa, Histropedia and "
 "the Structured Data on Commons project."
 msgstr ""
-"a été développé comme une collaboration entre Wiki In Africa, Histropedia"
-" et le projet Structured Data on Commons."
+"est une collaboration entre Wiki In Africa, Histropedia et le projet "
+"Données Structurées sur Commons"
 
-#: templates/main/layout.html:114
+#: templates/main/layout.html:109
 msgid "It is running on"
 msgstr "il est hébergé sur"
 
-#: templates/main/layout.html:116
+#: templates/main/layout.html:111
 msgid "and is subject to the"
-msgstr "et est soumis à la"
+msgstr "et est soumis aux conditions d’utilisation des"
 
-#: templates/main/layout.html:118
+#: templates/main/layout.html:113
 msgid "ISA is published under"
 msgstr "ISA est publié sous"
 
-#: templates/main/layout.html:120
+#: templates/main/layout.html:115
 msgid "Content added through the tool to Wikimedia Commons is released under"
 msgstr "Le contenu ajouté via l'outil à Wikimedia Commons est publié sous"
 
@@ -794,3 +823,75 @@ msgstr "Langues préférées définies avec succès"
 #, python-format
 msgid "%(username)s's - Settings"
 msgstr "%(username)s's - Réglages"
+
+#~ msgid "Editors"
+#~ msgstr "Éditeurs"
+
+#~ msgid ""
+#~ "is a fun tool aimed at the "
+#~ "metadata enhancement of images contributed "
+#~ "to the various Wiki Loves competitions"
+#~ " on Wikimedia Commons"
+#~ msgstr ""
+#~ "est un outil amusant visant à "
+#~ "améliorer les métadonnées des images "
+#~ "contribuant à les différents concours "
+#~ "Wiki Loves sur Wikimedia Commons"
+
+#~ msgid ""
+#~ "It is being created as a way "
+#~ "to quickly add structured information to"
+#~ " a collection of pre-defined images."
+#~ msgstr ""
+#~ "Il est créé pour ajouter rapidement "
+#~ "des informations structurées à une "
+#~ "collection d’images prédéfinies"
+
+#~ msgid ""
+#~ "In the long run, the intent behind"
+#~ " the tool is to increase the "
+#~ "use of the knowledge that resides "
+#~ "within each image."
+#~ msgstr ""
+#~ "À long terme, l'objectif de l'outil "
+#~ "est d'accroître l'utilisation des "
+#~ "connaissances contenues dans chaque image."
+
+#~ msgid ""
+#~ "The tool is aimed to assist in "
+#~ "the usefulness and information of images"
+#~ " donated to the Wiki Loves "
+#~ "competitions."
+#~ msgstr ""
+#~ "L’outil a pour but d’aider à "
+#~ "l’utilité et à l’information des images"
+#~ " données au concours Wiki Loves"
+
+#~ msgid ""
+#~ "It is initially being built to "
+#~ "assist in the descriptions of Wiki "
+#~ "Loves Africa images"
+#~ msgstr ""
+#~ "Il est initialement construit pour aider"
+#~ " dans les descriptions de Wiki Loves"
+#~ " Images d'Afrique"
+
+#~ msgid "The tool is also designed to be a host of small competitions."
+#~ msgstr ""
+#~ "L'outil est également conçu pour être"
+#~ " une foule de petites compétitions."
+
+#~ msgid ""
+#~ " ISA is not only an acronym "
+#~ "for Information Structured Acceleration, but"
+#~ " is also a chiShona language word "
+#~ "for 'put ' or 'place' "
+#~ msgstr ""
+#~ "ISA n'est pas seulement un acronyme "
+#~ "pour Information Structured Acceleration, mais"
+#~ " est également un mot chiShona pour"
+#~ " «mettre» ou «placer»"
+
+#~ msgid "Leran more about structured data"
+#~ msgstr ""
+
