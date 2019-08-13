@@ -125,7 +125,8 @@
 		<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/select2/4.0.7/js/select2.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-		<script src="{{url_for('static', filename='js/main.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jed/1.1.1/jed.min.js"></script>
+		<script src="{{url_for('static', filename='js/') + session_language + '/main.js'}}"></script>
 		{% block scripts %} {% endblock scripts %}
 	</body>
 </html>

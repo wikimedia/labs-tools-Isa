@@ -7,7 +7,17 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "webpack --watch --progress --color -d",
-        "build": "webpack -p --progress --color"
+        "build": "webpack -p --progress --color",
+        
+        /*  `-f mf` is used for MessageFormat
+         *  This is a simple key value pair which i18n-webpack-plugin can make use of (it does not support array output for plurals)
+         *  This means that sprintf() variable inserting does not work in JS yet
+         *  Todo: 
+         *      - Get jed-webpack-plugin working instead (parses .mo file directly), or 
+         *      - Use other po to JSON tool which preserves printf expressions, or
+         *      - wait for i18n-webpack-plugin to be improved to parse plural forms!
+        */      
+        "build-fr-json": "po2json ./isa/translations/fr/LC_MESSAGES/messages.po ./isa/translations/fr/LC_MESSAGES/messages.json -f mf"
     },
     "repository": {
         "type": "git",
@@ -16,7 +26,15 @@
     "author": "",
     "license": "GPL-3.0",
     "devDependencies": {
+        "i18n-webpack-plugin": "^1.0.0",
+        "po2json": "^1.0.0-alpha",
         "webpack": "^4.35.0",
         "webpack-cli": "^3.3.4"
+    },
+    "dependencies": {
+        /* sprintf-js added but can't be used until po2json output format is 
+         * adjusted to match i18n-weback-plugin
+         */
+        "sprintf-js": "^1.1.2"
     }
 }

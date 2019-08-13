@@ -13,4 +13,3 @@ config.yaml
 .DS_Store
 campaign_stats_files/
 isa/translations/fr/LC_MESSAGES/messages.mo
-package-lock.json

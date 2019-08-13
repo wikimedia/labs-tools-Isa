@@ -7,8 +7,12 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 });
 
-/**********  SET THE LANGUAGE IN SESSION ***********/
+// EXAMPLE: remove after testing!
+console.log('Example js translation logged below, should change with language selection:')
+console.log( __('You need to Login to update a campaign') ) 
 
+
+/**********  SET THE LANGUAGE IN SESSION ***********/
 function addLanguageToUrl(langCode) {
     var path = window.location.pathname;
     var parametersObject = getUrlParameters();

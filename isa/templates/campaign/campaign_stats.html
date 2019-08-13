@@ -84,6 +84,3 @@
         <a  class="btn btn-sm btn-primary" href="{{url_for('campaigns.downloadAllCampaignStats', id=campaign.id, filename=campaign_all_stats_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download all stats (CSV)') }}</a>
     </div></div>
 {% endblock content%}
-{% block scripts %}
-    <script src="{{url_for('static', filename='js/campaign.js')}}"></script>
-{% endblock scripts%}
