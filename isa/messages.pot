@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-07 10:23+0100\n"
+"POT-Creation-Date: 2019-08-12 15:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:268
+#: campaigns/routes.py:274
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr ""
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Start contributing to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:22 templates/campaign/campaigns.html:33
+#: templates/campaign/campaign.html:22 templates/campaign/campaigns.html:31
 msgid "Get Started"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgstr ""
 
 #: templates/campaign/campaign.html:32
 #: templates/campaign/campaign_stats.html:15
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaigns.html:21
 msgid "Images"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr ""
 
 #: templates/campaign/campaign.html:33
 #: templates/campaign/campaign_stats.html:16
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:23
 msgid "Contributions"
 msgstr ""
 
@@ -186,23 +186,27 @@ msgstr ""
 msgid "Rank"
 msgstr ""
 
-#: templates/campaign/campaign.html:138
+#: templates/campaign/campaign.html:137
 msgid "More About This Campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:140
-msgid "START DATE"
+#: templates/campaign/campaign.html:139
+msgid "Campaign Manager"
 msgstr ""
 
 #: templates/campaign/campaign.html:141
+msgid "START DATE"
+msgstr ""
+
+#: templates/campaign/campaign.html:142
 msgid "END DATE"
 msgstr ""
 
-#: templates/campaign/campaign.html:147
+#: templates/campaign/campaign.html:148
 msgid "Make changes to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:147
+#: templates/campaign/campaign.html:148
 msgid "Edit Campaign"
 msgstr ""
 
@@ -348,96 +352,106 @@ msgid ""
 "section."
 msgstr ""
 
-#: templates/campaign/campaigns.html:10 templates/main/home.html:25
-msgid "Create your own campaign"
-msgstr ""
-
-#: templates/campaign/campaigns.html:10 templates/main/home.html:25
-msgid "Create a new campaign using this tool"
-msgstr ""
-
-#: templates/campaign/campaigns.html:16
+#: templates/campaign/campaigns.html:14
 msgid "Ongoing Campaigns"
 msgstr ""
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:20
 msgid "Campaign name"
 msgstr ""
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:20
 msgid "Campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaigns.html:21
 msgid "Total number of images in the campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:22
 msgid "Number of editors that have contributed to the campaign "
 msgstr ""
 
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:22
 msgid "Participants"
 msgstr ""
 
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:23
 msgid "Total number of contributions to the campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:24
 msgid "Campaign start date"
 msgstr ""
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:24
 #: templates/campaign/create_campaign.html:54
 #: templates/campaign/update_campaign.html:56
 msgid "Start Date"
 msgstr ""
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:25
 msgid "Campaign end date"
 msgstr ""
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:25
 #: templates/campaign/create_campaign.html:69
 #: templates/campaign/update_campaign.html:71
 msgid "End Date"
 msgstr ""
 
-#: templates/campaign/campaigns.html:28
+#: templates/campaign/campaigns.html:26
 msgid "Date the campaign was created"
 msgstr ""
 
-#: templates/campaign/campaigns.html:28
+#: templates/campaign/campaigns.html:26
 msgid "Creation Date"
 msgstr ""
 
-#: templates/campaign/campaigns.html:29
+#: templates/campaign/campaigns.html:27
 msgid "Campaign status"
 msgstr ""
 
-#: templates/campaign/campaigns.html:29
+#: templates/campaign/campaigns.html:27
 msgid "Status"
 msgstr ""
 
-#: templates/campaign/campaigns.html:46
+#: templates/campaign/campaigns.html:44
 msgid "None"
 msgstr ""
 
-#: templates/campaign/campaigns.html:54
+#: templates/campaign/campaigns.html:52
 msgid "Closed"
 msgstr ""
 
-#: templates/campaign/campaigns.html:57
+#: templates/campaign/campaigns.html:55
 msgid "Open"
 msgstr ""
 
-#: templates/campaign/campaigns.html:61
+#: templates/campaign/campaigns.html:59
 msgid "Go to the campaign home page to get started"
 msgstr ""
 
-#: templates/campaign/campaigns.html:61
+#: templates/campaign/campaigns.html:59
 msgid "Go to Campaign"
+msgstr ""
+
+#: templates/campaign/campaigns.html:67
+msgid "Show closed campaigns"
+msgstr ""
+
+#: templates/campaign/campaigns.html:72 templates/campaign/campaigns.html:74
+#: templates/main/home.html:32
+msgid "Create your own campaign"
+msgstr ""
+
+#: templates/campaign/campaigns.html:72 templates/campaign/campaigns.html:74
+#: templates/main/home.html:32
+msgid "Create a new campaign using this tool"
+msgstr ""
+
+#: templates/campaign/campaigns.html:75
+msgid "You must be logged in to create a campaign."
 msgstr ""
 
 #: templates/campaign/create_campaign.html:4
@@ -584,68 +598,82 @@ msgstr ""
 msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr ""
 
-#: templates/main/home.html:14
-msgid ""
-"is a fun tool aimed at the metadata enhancement of images contributed to "
-"the various Wiki Loves competitions on Wikimedia Commons"
-msgstr ""
-
-#: templates/main/home.html:14
-msgid ""
-"It is being created as a way to quickly add structured information to a "
-"collection of pre-defined images."
-msgstr ""
-
 #: templates/main/home.html:15
-msgid "Go to the campaign directory to choose a campaign"
+msgid ""
+"is a multilingual, mobile-first tool, that makes it easy for people to "
+"add 'micro-contributions' in the form of"
 msgstr ""
 
-#: templates/main/home.html:15
-msgid "EXPLORE CAMPAIGNS"
+#: templates/main/home.html:16
+msgid "Learn more about structured data"
+msgstr ""
+
+#: templates/main/home.html:16
+msgid "structured data"
+msgstr ""
+
+#: templates/main/home.html:17
+msgid ""
+"(descriptions, captions, tags, etc.) to images that have been contributed"
+" to Wikimedia Commons by Wiki Loves competitions."
 msgstr ""
 
 #: templates/main/home.html:18
+msgid "Click on Explore Campaigns to begin!"
+msgstr ""
+
+#: templates/main/home.html:19
+msgid "Go to the campaign directory to choose a campaign"
+msgstr ""
+
+#: templates/main/home.html:19
+msgid "EXPLORE CAMPAIGNS"
+msgstr ""
+
+#: templates/main/home.html:22
 msgid "About This Tool"
 msgstr ""
 
-#: templates/main/home.html:19
+#: templates/main/home.html:23
 msgid ""
 "In the long run, the intent behind the tool is to increase the use of the"
-" knowledge that resides within each image."
+" knowledge that is reflected by each image hosted on Wikimedia Commons. "
 msgstr ""
 
-#: templates/main/home.html:19
+#: templates/main/home.html:24
 msgid ""
 "The tool is aimed to assist in the usefulness and information of images "
-"donated to the Wiki Loves competitions."
+"donated during the Wiki Loves competitions."
 msgstr ""
 
-#: templates/main/home.html:20
+#: templates/main/home.html:25
 msgid ""
-"It is initially being built to assist in the descriptions of Wiki Loves "
-"Africa images"
+" It is initially being built to assist in the descriptions of Wiki Loves "
+"Africa images,"
 msgstr ""
 
-#: templates/main/home.html:20
+#: templates/main/home.html:26
 msgid ""
 "but is being specifically modelled to be useful to all of the Wiki Loves "
 "competitions and beyond."
 msgstr ""
 
-#: templates/main/home.html:21
-msgid "The tool is also designed to be a host of small competitions."
+#: templates/main/home.html:27
+msgid ""
+"The tool is also designed to be a host of micro contribution competitions"
+" proposed by project leaders."
 msgstr ""
 
-#: templates/main/home.html:22
+#: templates/main/home.html:28
 msgid ""
 "ISA is a collaboration between Wiki In Africa, Histropedia and the "
 "Structured Data on Commons project."
 msgstr ""
 
-#: templates/main/home.html:22
+#: templates/main/home.html:29
 msgid ""
 " ISA is not only an acronym for Information Structured Acceleration, but "
-"is also a chiShona language word for 'put ' or 'place' "
+"is also a chiShona language word for 'put' or 'place'."
 msgstr ""
 
 #: templates/main/layout.html:36
@@ -660,45 +688,45 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: templates/main/layout.html:74
+#: templates/main/layout.html:69
 msgid "Change your available caption languages"
 msgstr ""
 
-#: templates/main/layout.html:74
+#: templates/main/layout.html:69
 msgid "Languages preferences"
 msgstr ""
 
-#: templates/main/layout.html:81 templates/main/layout.html:85
+#: templates/main/layout.html:76 templates/main/layout.html:80
 msgid "Logout"
 msgstr ""
 
-#: templates/main/layout.html:89
+#: templates/main/layout.html:84
 msgid "Login"
 msgstr ""
 
-#: templates/main/layout.html:113
+#: templates/main/layout.html:108
 msgid "ISA tool"
 msgstr ""
 
-#: templates/main/layout.html:114
+#: templates/main/layout.html:109
 msgid ""
 "was developed as a collaboration between Wiki In Africa, Histropedia and "
 "the Structured Data on Commons project."
 msgstr ""
 
-#: templates/main/layout.html:114
+#: templates/main/layout.html:109
 msgid "It is running on"
 msgstr ""
 
-#: templates/main/layout.html:116
+#: templates/main/layout.html:111
 msgid "and is subject to the"
 msgstr ""
 
-#: templates/main/layout.html:118
+#: templates/main/layout.html:113
 msgid "ISA is published under"
 msgstr ""
 
-#: templates/main/layout.html:120
+#: templates/main/layout.html:115
 msgid "Content added through the tool to Wikimedia Commons is released under"
 msgstr ""
 

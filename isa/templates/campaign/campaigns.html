@@ -64,7 +64,7 @@
     </section>
 <div class="custom-control custom-checkbox show-closed">
   <input type="checkbox" class="custom-control-input" id="show-closed-campaigns-checkbox">
-  <label class="custom-control-label" for="show-closed-campaigns-checkbox">Show closed campaigns</label>
+  <label class="custom-control-label" for="show-closed-campaigns-checkbox">{{_('Show closed campaigns')}}</label>
 </div>
 </div>
 <div class="container text-center">
@@ -72,7 +72,7 @@
     <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-secondary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>
     {% else %}
     <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-secondary disabled" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>
-    <p class="text-danger small">You must be logged in to create a campaign.</p>
+    <p class="text-danger small">{{_('You must be logged in to create a campaign.')}}</p>
     {% endif %}
 
 </div>
