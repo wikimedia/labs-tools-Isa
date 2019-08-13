@@ -47,7 +47,8 @@ body {padding-bottom: 50px}
 <div class="container edit-box">
     <div class="edit-box-header">
         <h4>{{ _('Depicts') }}
-        <button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button>
+        <button type="button" class="btn btn-link py-0" data-container="body" title="Adding Depict Statements" data-toggle="popover" data-placement="right" data-content="Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)
+"><i class="fas fa-question-circle"></i></button>
         </h4>
         <div edit-type="depicts" class="edit-publish-btn-group text-right">
             <button class="btn btn-sm btn-link cancel-edits-btn" disabled title="{{ _('Cancel your changes') }}">{{ _('Cancel') }}</button>
@@ -56,7 +57,7 @@ body {padding-bottom: 50px}
         {% if username == None %}
         <p class="text-danger small mb-1 text-right">{{_('Log in to publish changes')}}</p>
         {% endif %}  
-        <p>{{ _('Search for things you see in the image') }}</p>
+        <p>{{ _('Name the different elements that you can see in this image') }}</p>
     </div>
     <div class="depicts-search">
         <div class="input-group mb-3">
@@ -68,14 +69,14 @@ body {padding-bottom: 50px}
     <div class="depict-tag-group"> 
         <!-- populated by JavaScript --> 
     </div>
-    <p class="small text-muted my-1 prom-help"><i class="fas fa-flag mr-2"></i>{{ _('Mark as Prominent') }}</p>
+    <p class="small text-muted my-1 prom-help">{{ _('To mark the prominent element/s in the image, click on the flag icon') }}<i class="fas fa-flag mr-2"></i></p>
 </div>
 {% endif %}
 
 {% if campaign.captions_metadata %}
 <div class="container edit-box">
     <div class="edit-box-header">
-        <h4>{{ _('Captions') }} <button type="button" class="btn btn-link py-0" data-container="body" title="POP-UP TITLE HERE" data-toggle="popover" data-placement="right" data-content="POP-UP TEXT HERE"><i class="fas fa-question-circle"></i></button></h4>
+        <h4>{{ _('Captions') }} <button type="button" class="btn btn-link py-0" data-container="body" title="Writing Captions" data-toggle="popover" data-placement="right" data-content="Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."><i class="fas fa-question-circle"></i></button></h4>
         <div edit-type="captions" class="edit-publish-btn-group text-right">
             <button class="btn btn-sm btn-link cancel-edits-btn" disabled>{{ _('Cancel') }}</button>
             <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled>{{ _('Save') }}</button>
@@ -83,16 +84,16 @@ body {padding-bottom: 50px}
         {% if username == None %}
         <p class="text-danger small mb-1 text-right">{{_('Log in to publish changes')}}</p>
         {% endif %}
-        <p>{{ _('Add a caption for the image') }}</p>
+        <p>{{ _('Add a caption to better explain the image (max 255 characters)') }}</p>
     </div>
     <div class="caption-search"> {% for lang_code in caption_languages %}
         <div class="input-group mb-3">
             <div class="input-group-prepend"> <span class="input-group-text">{{lang_code}}</span> </div>
-            <input type="input" class="form-control caption-input" lang="{{lang_code}}" placeholder="{{ _('write a caption') }}">
+            <input type="input" class="form-control caption-input" lang="{{lang_code}}" placeholder="{{ _('Briefly explain what you see in this image.') }}">
         </div>
         {% endfor %}
     </div>
-    <p class="small text-muted my-1">{{ _('Add or change available languages in Caption Languages') }}</p>
+    <p class="small text-muted my-1">{{ _('You can add captions in additional languages by selecting Language Preferences from the user menu') }}</p>
 </div>
 {% endif %}
 <div class="participate-nav-footer container">
