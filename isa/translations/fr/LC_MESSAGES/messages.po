@@ -864,6 +864,38 @@ msgstr ""
 msgid "Mark this depicted item as NOT prominent"
 msgstr ""
 
+#: src/campaign-directory.js:27
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr ""
+
+#: src/campaign-directory.js:28
+msgid "No entries"
+msgstr ""
+
+#: src/campaign-directory.js:37
+msgid "Search:"
+msgstr ""
+
+#: src/campaign-directory.js:38
+msgid "No matching records found"
+msgstr ""
+
+#: src/campaign-directory.js:40
+msgid "First"
+msgstr ""
+
+#: src/campaign-directory.js:41
+msgid "Last"
+msgstr ""
+
+#: src/campaign-directory.js:42
+msgid "Next"
+msgstr ""
+
+#: src/campaign-directory.js:43
+msgid "Previous"
+msgstr ""
+
 #~ msgid "Editors"
 #~ msgstr "Éditeurs"
 

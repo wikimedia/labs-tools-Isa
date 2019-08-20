@@ -13,16 +13,35 @@ var campaignTable = $('#campaign_table').DataTable({
         }, 
         {
             targets: [-1],
-            responsivePriority: 2
+            responsivePriority: 2,
+            searchable: false
         },
         {
             targets: booleanStatusColumn,
             visible: false
         },
     ],
-    "language": {
+    language: {
+        //"decimal":        "",
+        //"emptyTable":     "No data available in table",
+        "info":           gettext("Showing _START_ to _END_ of _TOTAL_ entries"),
+        "infoEmpty":      gettext("No entries"),
+
         // Hide the text which shows the total number of campaigns when filters are applied
-        "infoFiltered": ""
+        "infoFiltered":   "",
+        //"infoPostFix":    "",
+        //"thousands":      ",",
+        //"lengthMenu":     "Show _MENU_ entries",
+        //"loadingRecords": "Loading...",
+        //"processing":     "Processing...",
+        "search":         gettext("Search:"),
+        "zeroRecords":    gettext("No matching records found"),
+        "paginate": {
+            "first":      gettext("First"),
+            "last":       gettext("Last"),
+            "next":       gettext("Next"),
+            "previous":   gettext("Previous")
+        }
     },
     // See https://stackoverflow.com/questions/32252616/ for explanation of dom setting below
     // It's used to get the button in the same line as the other table controls in the header
