@@ -147,16 +147,16 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             if (editType === "depicts") {
                 saveInitialStructuredData(getCurrentDepictStatements(), false);
                 me.depictDataChanged();
-                flashMessage('success', '<strong>Success!</strong> Change to depicted items saved to Wikimedia Commons')
+                flashMessage('success', gettext('Success! Depicted items saved to Wikimedia Commons'))
             }
             if (editType === "captions") {
                 saveInitialStructuredData(false, getCurrentCaptions());
                 me.captionDataChanged();
-                flashMessage('success', '<strong>Success!</strong> Change to captions saved to Wikimedia Commons')
+                flashMessage('success', gettext('Success! Captions saved to Wikimedia Commons'))
             }
 
         }).fail( function(error) {
-            flashMessage('danger', '<strong>Oops!</strong> Something went wrong, your edits were not saved ')
+            flashMessage('danger', gettext('Oops! Something went wrong, your edits have not been saved to Wikimedia Commons'))
         })
     }
     
@@ -579,10 +579,12 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         var statementIdAttribute = (statementId) ? 
             'statement-id=' + statementId : 
             '';
-        
+        var prominentHoverText = gettext('Mark this depicted item as prominent');
+        var notProminentHoverText = gettext('Mark this depicted item as NOT prominent');
+            
         var isProminentButtonHtml = isProminent ?
-            '<button class="btn btn-sm prominent-btn active" title="Mark this depicted item as NOT prominent"><i class="fas fa-flag"></i></button>' :
-            '<button class="btn btn-sm  prominent-btn" title="Mark this depicted item as prominent"><i class="fas fa-flag"></i></button>';
+            '<button class="btn btn-sm prominent-btn active" title=' + notProminentHoverText + '><i class="fas fa-flag"></i></button>' :
+            '<button class="btn btn-sm  prominent-btn" title=' + prominentHoverText  + '><i class="fas fa-flag"></i></button>';
         
         return [
             '<div class="depict-tag-item" ' + statementIdAttribute + ' title="' + description + '">',

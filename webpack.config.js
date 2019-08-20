@@ -20,7 +20,11 @@ module.exports = Object.keys(languages).map(function(language) {
             path: path.resolve(__dirname, 'isa/static/js/' + language),
             filename: '[name].js',
         },
-        plugins: [new I18nPlugin(languages[language])]
+        plugins: [
+            new I18nPlugin(languages[language], {
+                'functionName': 'gettext'
+            })
+        ]
     }
 })
 

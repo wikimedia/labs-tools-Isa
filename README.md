@@ -25,12 +25,11 @@ flask run
 
 ## Adding Translations
 
-To add translations, the following steps should be followed
+To add translations, the following steps should be followed while located in the /isa subfolder
 
 - Mark the string to be translated using formats shown below
  * Templates: _('<string>')
- * Python: gettext('<string>')
- * JavaScript: __('<string>')
+ * Python & JavaScript: gettext('<string>')
 
 - run ```pybabel extract -F babel.cfg -o messages.pot --input-dirs=.``` from the *isa* module to extract the strings
 

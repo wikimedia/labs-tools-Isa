@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
-"POT-Creation-Date: 2019-08-12 15:35+0100\n"
+"POT-Creation-Date: 2019-08-20 11:26+0100\n"
 "PO-Revision-Date: 2019-07-01 07:49+0100\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
@@ -18,56 +18,56 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: campaigns/routes.py:41 templates/campaign/campaigns.html:5
+#: campaigns/routes.py:39 templates/campaign/campaigns.html:5
 #: templates/main/layout.html:41
 msgid "Campaigns"
 msgstr "Campagnes"
 
-#: campaigns/routes.py:59 campaigns/routes.py:186
+#: campaigns/routes.py:57 campaigns/routes.py:184
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "La campagne avec l'id% (id) s n'existe pas"
 
-#: campaigns/routes.py:158 campaigns/routes.py:193
+#: campaigns/routes.py:156 campaigns/routes.py:191
 msgid "Campaign - "
 msgstr "Campagne - "
 
-#: campaigns/routes.py:216
+#: campaigns/routes.py:214
 msgid "You need to Login to create a campaign"
 msgstr "Vous devez vous connecter pour créer une campagne"
 
-#: campaigns/routes.py:246
+#: campaigns/routes.py:244
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr "Désolé %(campaign_name)s n'a pas pu être créé"
 
-#: campaigns/routes.py:253
+#: campaigns/routes.py:251
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr "wla Campagne créée!"
 
-#: campaigns/routes.py:256
+#: campaigns/routes.py:254
 msgid "Create a campaign"
 msgstr "Créer une campagne"
 
-#: campaigns/routes.py:274
+#: campaigns/routes.py:272
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Contribuer"
 
-#: campaigns/routes.py:293
+#: campaigns/routes.py:291
 msgid "You need to Login to update a campaign"
 msgstr "Vous devez vous connecter pour mettre à jour une campagne."
 
-#: campaigns/routes.py:319
+#: campaigns/routes.py:317
 msgid "Campaign update failed please try later!"
 msgstr "Échec de la mise à jour, veuillez réessayer ultérieurement"
 
-#: campaigns/routes.py:321
+#: campaigns/routes.py:319
 msgid "Update Succesfull !"
 msgstr "Mise à jour réussie !"
 
-#: campaigns/routes.py:329
+#: campaigns/routes.py:327
 #, python-format
 msgid ""
 "You cannot update this campaign, Contact Manager "
@@ -76,17 +76,17 @@ msgstr ""
 "Vous ne pouvez pas mettre à jour cette campagne, Contacter le gérant "
 "User:%(campaign_manager)s"
 
-#: campaigns/routes.py:344
+#: campaigns/routes.py:342
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr "Booo! %(campaign_name)s Impossible de mettre à jour!"
 
-#: campaigns/routes.py:347
+#: campaigns/routes.py:345
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - Mise à jour"
 
-#: campaigns/routes.py:385
+#: campaigns/routes.py:383
 msgid "You need to login to participate"
 msgstr "Vous devez vous connecter pour participer"
 
@@ -227,7 +227,7 @@ msgid "View the previous image"
 msgstr "Voir l'image précédente"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:100
+#: templates/campaign/campaign_entry.html:101
 msgid "PREV IMAGE"
 msgstr "Précédente"
 
@@ -240,7 +240,7 @@ msgid "View the next image"
 msgstr "Voir l'image suivante"
 
 #: templates/campaign/campaign_entry.html:31
-#: templates/campaign/campaign_entry.html:101
+#: templates/campaign/campaign_entry.html:102
 msgid "NEXT IMAGE"
 msgstr "Suivante"
 
@@ -265,7 +265,7 @@ msgstr "Catégories"
 msgid "Camera Location"
 msgstr "Géolocalisation"
 
-#: templates/campaign/campaign_entry.html:42
+#: src/participate.js:152 templates/campaign/campaign_entry.html:42
 msgid "show all metadata from commons"
 msgstr "Afficher toutes les metadata"
 
@@ -275,57 +275,59 @@ msgstr "Afficher toutes les metadata"
 msgid "Depicts"
 msgstr "Mots-clés ('Depicts')"
 
-#: templates/campaign/campaign_entry.html:53
+#: templates/campaign/campaign_entry.html:54
 msgid "Cancel your changes"
 msgstr "Annuler vos modifications"
 
-#: templates/campaign/campaign_entry.html:53
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:54
+#: templates/campaign/campaign_entry.html:81
 msgid "Cancel"
 msgstr "Annuler"
 
-#: templates/campaign/campaign_entry.html:54
+#: templates/campaign/campaign_entry.html:55
 msgid "Save your edits to Wikimedia Commons"
 msgstr ""
 "Lorsque vous publiez, les informations sont sauvées directement dans "
 "Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:54
-#: templates/campaign/campaign_entry.html:81
+#: templates/campaign/campaign_entry.html:55
+#: templates/campaign/campaign_entry.html:82
 #: templates/users/user_settings.html:54
 msgid "Save"
 msgstr "Publier"
 
-#: templates/campaign/campaign_entry.html:57
-#: templates/campaign/campaign_entry.html:84
+#: templates/campaign/campaign_entry.html:58
+#: templates/campaign/campaign_entry.html:85
 msgid "Log in to publish changes"
 msgstr "Connectez-vous pour publier les modifications"
 
-#: templates/campaign/campaign_entry.html:59
-msgid "Search for things you see in the image"
-msgstr "Lister ce que vous voyez dans cette image"
+#: templates/campaign/campaign_entry.html:60
+msgid "Name the different elements that you can see in this image"
+msgstr ""
 
-#: templates/campaign/campaign_entry.html:71
-msgid "Mark as Prominent"
-msgstr "Marquer comme important"
+#: templates/campaign/campaign_entry.html:72
+msgid "To mark the prominent element/s in the image, click on the flag icon"
+msgstr ""
 
-#: templates/campaign/campaign_entry.html:78
+#: templates/campaign/campaign_entry.html:79
 #: templates/campaign/create_campaign.html:151
 #: templates/campaign/update_campaign.html:149
 msgid "Captions"
 msgstr "Légendes"
 
-#: templates/campaign/campaign_entry.html:86
-msgid "Add a caption for the image"
-msgstr "Ajouter une légende à l'image"
+#: templates/campaign/campaign_entry.html:87
+msgid "Add a caption to better explain the image (max 255 characters)"
+msgstr ""
 
-#: templates/campaign/campaign_entry.html:91
-msgid "write a caption"
-msgstr "écrire une légende"
+#: templates/campaign/campaign_entry.html:92
+msgid "Briefly explain what you see in this image."
+msgstr ""
 
-#: templates/campaign/campaign_entry.html:95
-msgid "Add or change available languages in Caption Languages"
-msgstr "Changer la langue de la légende"
+#: templates/campaign/campaign_entry.html:96
+msgid ""
+"You can add captions in additional languages by selecting Language "
+"Preferences from the user menu"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:4
 msgid "Stats"
@@ -427,7 +429,7 @@ msgstr "Statut de la campagne"
 msgid "Status"
 msgstr "Statut"
 
-#: templates/campaign/campaigns.html:44
+#: templates/campaign/campaigns.html:44 users/utils.py:130
 msgid "None"
 msgstr "Aucune"
 
@@ -785,44 +787,82 @@ msgstr "Annuler vos modifications"
 msgid "Undo Changes"
 msgstr "Annuler"
 
-#: users/routes.py:50
+#: users/routes.py:49
 msgid "OAuth callback failed. Are cookies disabled?"
 msgstr "Le rappel OAuth a échoué. Les cookies sont-ils désactivés?"
 
-#: users/routes.py:70
+#: users/routes.py:69
 #, python-format
 msgid "Welcome  %(username)s!"
 msgstr "Bienvenu.e %(username)s!"
 
-#: users/routes.py:83
+#: users/routes.py:82
 msgid "See you next time!"
 msgstr "À la prochaine!"
 
-#: users/routes.py:99
+#: users/routes.py:98
 msgid "Please login to change your language preferences"
 msgstr "Veuillez vous connecter pour modifier vos préférences de langue"
 
-#: users/routes.py:138
+#: users/routes.py:137
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "Désolé, vous avez essayé d'entrer %(rep_languages)s plusieurs fois"
 
-#: users/routes.py:151
+#: users/routes.py:150
 msgid "Captions languages could not be set"
 msgstr "les langues pour les légendes n'ont pas pu être définies"
 
-#: users/routes.py:153
+#: users/routes.py:152
 msgid "Preferred Languages set Successfully"
 msgstr "Langues préférées définies avec succès"
 
-#: users/routes.py:165
+#: users/routes.py:164
 msgid "Language settings not available at the moment"
 msgstr "Langues préférées définies avec succès"
 
-#: users/routes.py:167
+#: users/routes.py:166
 #, python-format
 msgid "%(username)s's - Settings"
 msgstr "%(username)s's - Réglages"
+
+#: src/participate.js:55
+msgid "No images found for this campaign!"
+msgstr ""
+
+#: src/participate.js:66
+msgid "Something went wrong getting campaign images"
+msgstr ""
+
+#: src/participate.js:85
+msgid "Search for things you see in the image"
+msgstr "Lister ce que vous voyez dans cette image"
+
+#: src/participate.js:148
+msgid "minimise metadata from commons"
+msgstr ""
+
+#: src/participation-manager.js:150
+msgid "Success! Depicted items saved to Wikimedia Commons"
+msgstr ""
+
+#: src/participation-manager.js:155
+msgid "Success! Captions saved to Wikimedia Commons"
+msgstr ""
+
+#: src/participation-manager.js:159
+msgid ""
+"Oops! Something went wrong, your edits have not been saved to Wikimedia "
+"Commons"
+msgstr ""
+
+#: src/participation-manager.js:582
+msgid "Mark this depicted item as prominent"
+msgstr ""
+
+#: src/participation-manager.js:583
+msgid "Mark this depicted item as NOT prominent"
+msgstr ""
 
 #~ msgid "Editors"
 #~ msgstr "Éditeurs"
@@ -894,4 +934,16 @@ msgstr "%(username)s's - Réglages"
 
 #~ msgid "Leran more about structured data"
 #~ msgstr ""
+
+#~ msgid "Mark as Prominent"
+#~ msgstr "Marquer comme important"
+
+#~ msgid "Add a caption for the image"
+#~ msgstr "Ajouter une légende à l'image"
+
+#~ msgid "write a caption"
+#~ msgstr "écrire une légende"
+
+#~ msgid "Add or change available languages in Caption Languages"
+#~ msgstr "Changer la langue de la légende"
 

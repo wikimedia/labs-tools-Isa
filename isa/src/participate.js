@@ -52,7 +52,7 @@ $.getJSON('../../api/login-test')
             if (images.length > 0) {
                 hideLoadingOverlay();
             } else {
-                alert("No images found for this campaign!");
+                alert(gettext("No images found for this campaign!"));
                 window.location.href = '../' + campaignId;
             }
             
@@ -63,7 +63,7 @@ $.getJSON('../../api/login-test')
     })
     .fail(function(err) {
         console.log("error retrieving campaign categories", err)
-        alert("Something went wrong getting campaign images");
+        alert(gettext("Something went wrong getting campaign images"));
         window.location.href = '../' + campaignId;
     })
 
@@ -82,7 +82,7 @@ function searchResultsFormat(state) {
 
 (function setUpDepictsSearch(){
       $( '#depicts-select' ).select2( {
-          placeholder: '',
+          placeholder: gettext('Search for things you see in the image'),
           delay: 250,
           minimumResultsForSearch: 1,
           maximumSelectionLength: 4,
@@ -145,10 +145,12 @@ $('#expand-meta-data').click(function() {
 
     if ($('.image-desc').hasClass('expand')) {
         // expanded
-        $('#expand-meta-data').html('<i class="fas fa-caret-up"></i>&nbsp;minimise metadata from commons');
+        var minimiseText = gettext('minimise metadata from commons');
+        $('#expand-meta-data').html('<i class="fas fa-caret-up"></i>&nbsp; ' + minimiseText);
     } else {
         // collpased
-        $('#expand-meta-data').html('<i class="fas fa-caret-down"></i>&nbsp;show all metadata from commons');
+        var maximiseText = gettext('show all metadata from commons');
+        $('#expand-meta-data').html('<i class="fas fa-caret-down"></i>&nbsp; ' + maximiseText);
     }
 })
 
@@ -230,8 +232,8 @@ function postCampaignImageCount(imageCount) {
         data: JSON.stringify({campaign_images: imageCount}),
         contentType: 'application/json'
     }).done(function(response) {
-        console.log("Success! image count updated to " + imageCount + " for campaign with id = " + campaignId)
+
     }).fail( function(error) {
-        console.log("Failure! could not update image count for campaign")
+        console.log("Error updating image count for campaign")
     })
 }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-12 15:35+0100\n"
+"POT-Creation-Date: 2019-08-20 11:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,73 +17,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: campaigns/routes.py:41 templates/campaign/campaigns.html:5
+#: campaigns/routes.py:39 templates/campaign/campaigns.html:5
 #: templates/main/layout.html:41
 msgid "Campaigns"
 msgstr ""
 
-#: campaigns/routes.py:59 campaigns/routes.py:186
+#: campaigns/routes.py:57 campaigns/routes.py:184
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr ""
 
-#: campaigns/routes.py:158 campaigns/routes.py:193
+#: campaigns/routes.py:156 campaigns/routes.py:191
 msgid "Campaign - "
 msgstr ""
 
-#: campaigns/routes.py:216
+#: campaigns/routes.py:214
 msgid "You need to Login to create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:246
+#: campaigns/routes.py:244
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr ""
 
-#: campaigns/routes.py:253
+#: campaigns/routes.py:251
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr ""
 
-#: campaigns/routes.py:256
+#: campaigns/routes.py:254
 msgid "Create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:274
+#: campaigns/routes.py:272
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr ""
 
-#: campaigns/routes.py:293
+#: campaigns/routes.py:291
 msgid "You need to Login to update a campaign"
 msgstr ""
 
-#: campaigns/routes.py:319
+#: campaigns/routes.py:317
 msgid "Campaign update failed please try later!"
 msgstr ""
 
-#: campaigns/routes.py:321
+#: campaigns/routes.py:319
 msgid "Update Succesfull !"
 msgstr ""
 
-#: campaigns/routes.py:329
+#: campaigns/routes.py:327
 #, python-format
 msgid ""
-"You cannot update this campaign, Contact Manager "
-"User:%(campaign_manager)s "
+"You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
 msgstr ""
 
-#: campaigns/routes.py:344
+#: campaigns/routes.py:342
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr ""
 
-#: campaigns/routes.py:347
+#: campaigns/routes.py:345
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr ""
 
-#: campaigns/routes.py:385
+#: campaigns/routes.py:383
 msgid "You need to login to participate"
 msgstr ""
 
@@ -224,7 +223,7 @@ msgid "View the previous image"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:100
+#: templates/campaign/campaign_entry.html:101
 msgid "PREV IMAGE"
 msgstr ""
 
@@ -237,7 +236,7 @@ msgid "View the next image"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:31
-#: templates/campaign/campaign_entry.html:101
+#: templates/campaign/campaign_entry.html:102
 msgid "NEXT IMAGE"
 msgstr ""
 
@@ -262,7 +261,7 @@ msgstr ""
 msgid "Camera Location"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:42
+#: templates/campaign/campaign_entry.html:42 src/participate.js:152
 msgid "show all metadata from commons"
 msgstr ""
 
@@ -272,54 +271,56 @@ msgstr ""
 msgid "Depicts"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:53
-msgid "Cancel your changes"
-msgstr ""
-
-#: templates/campaign/campaign_entry.html:53
-#: templates/campaign/campaign_entry.html:80
-msgid "Cancel"
-msgstr ""
-
 #: templates/campaign/campaign_entry.html:54
-msgid "Save your edits to Wikimedia Commons"
+msgid "Cancel your changes"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:54
 #: templates/campaign/campaign_entry.html:81
+msgid "Cancel"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:55
+msgid "Save your edits to Wikimedia Commons"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:55
+#: templates/campaign/campaign_entry.html:82
 #: templates/users/user_settings.html:54
 msgid "Save"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:57
-#: templates/campaign/campaign_entry.html:84
+#: templates/campaign/campaign_entry.html:58
+#: templates/campaign/campaign_entry.html:85
 msgid "Log in to publish changes"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:59
-msgid "Search for things you see in the image"
+#: templates/campaign/campaign_entry.html:60
+msgid "Name the different elements that you can see in this image"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:71
-msgid "Mark as Prominent"
+#: templates/campaign/campaign_entry.html:72
+msgid "To mark the prominent element/s in the image, click on the flag icon"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:78
+#: templates/campaign/campaign_entry.html:79
 #: templates/campaign/create_campaign.html:151
 #: templates/campaign/update_campaign.html:149
 msgid "Captions"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:86
-msgid "Add a caption for the image"
+#: templates/campaign/campaign_entry.html:87
+msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:91
-msgid "write a caption"
+#: templates/campaign/campaign_entry.html:92
+msgid "Briefly explain what you see in this image."
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:95
-msgid "Add or change available languages in Caption Languages"
+#: templates/campaign/campaign_entry.html:96
+msgid ""
+"You can add captions in additional languages by selecting Language "
+"Preferences from the user menu"
 msgstr ""
 
 #: templates/campaign/campaign_stats.html:4
@@ -336,20 +337,19 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:7
 msgid ""
-"On this page are the curated campaigns that are currently running as part"
-" of the ISA tool."
+"On this page are the curated campaigns that are currently running as part of "
+"the ISA tool."
 msgstr ""
 
 #: templates/campaign/campaigns.html:7
 msgid ""
-"Click on the name of a campaign to get started and add structured data to"
-" an image."
+"Click on the name of a campaign to get started and add structured data to an "
+"image."
 msgstr ""
 
 #: templates/campaign/campaigns.html:7
 msgid ""
-"You can access information on the previous Campaigns in the Archive "
-"section."
+"You can access information on the previous Campaigns in the Archive section."
 msgstr ""
 
 #: templates/campaign/campaigns.html:14
@@ -416,7 +416,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: templates/campaign/campaigns.html:44
+#: templates/campaign/campaigns.html:44 users/utils.py:130
 msgid "None"
 msgstr ""
 
@@ -600,8 +600,8 @@ msgstr ""
 
 #: templates/main/home.html:15
 msgid ""
-"is a multilingual, mobile-first tool, that makes it easy for people to "
-"add 'micro-contributions' in the form of"
+"is a multilingual, mobile-first tool, that makes it easy for people to add "
+"'micro-contributions' in the form of"
 msgstr ""
 
 #: templates/main/home.html:16
@@ -614,8 +614,8 @@ msgstr ""
 
 #: templates/main/home.html:17
 msgid ""
-"(descriptions, captions, tags, etc.) to images that have been contributed"
-" to Wikimedia Commons by Wiki Loves competitions."
+"(descriptions, captions, tags, etc.) to images that have been contributed to "
+"Wikimedia Commons by Wiki Loves competitions."
 msgstr ""
 
 #: templates/main/home.html:18
@@ -636,8 +636,8 @@ msgstr ""
 
 #: templates/main/home.html:23
 msgid ""
-"In the long run, the intent behind the tool is to increase the use of the"
-" knowledge that is reflected by each image hosted on Wikimedia Commons. "
+"In the long run, the intent behind the tool is to increase the use of the "
+"knowledge that is reflected by each image hosted on Wikimedia Commons. "
 msgstr ""
 
 #: templates/main/home.html:24
@@ -660,8 +660,8 @@ msgstr ""
 
 #: templates/main/home.html:27
 msgid ""
-"The tool is also designed to be a host of micro contribution competitions"
-" proposed by project leaders."
+"The tool is also designed to be a host of micro contribution competitions "
+"proposed by project leaders."
 msgstr ""
 
 #: templates/main/home.html:28
@@ -672,8 +672,8 @@ msgstr ""
 
 #: templates/main/home.html:29
 msgid ""
-" ISA is not only an acronym for Information Structured Acceleration, but "
-"is also a chiShona language word for 'put' or 'place'."
+" ISA is not only an acronym for Information Structured Acceleration, but is "
+"also a chiShona language word for 'put' or 'place'."
 msgstr ""
 
 #: templates/main/layout.html:36
@@ -710,8 +710,8 @@ msgstr ""
 
 #: templates/main/layout.html:109
 msgid ""
-"was developed as a collaboration between Wiki In Africa, Histropedia and "
-"the Structured Data on Commons project."
+"was developed as a collaboration between Wiki In Africa, Histropedia and the "
+"Structured Data on Commons project."
 msgstr ""
 
 #: templates/main/layout.html:109
@@ -752,42 +752,79 @@ msgstr ""
 msgid "Undo Changes"
 msgstr ""
 
-#: users/routes.py:50
+#: users/routes.py:49
 msgid "OAuth callback failed. Are cookies disabled?"
 msgstr ""
 
-#: users/routes.py:70
+#: users/routes.py:69
 #, python-format
 msgid "Welcome  %(username)s!"
 msgstr ""
 
-#: users/routes.py:83
+#: users/routes.py:82
 msgid "See you next time!"
 msgstr ""
 
-#: users/routes.py:99
+#: users/routes.py:98
 msgid "Please login to change your language preferences"
 msgstr ""
 
-#: users/routes.py:138
+#: users/routes.py:137
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr ""
 
-#: users/routes.py:151
+#: users/routes.py:150
 msgid "Captions languages could not be set"
 msgstr ""
 
-#: users/routes.py:153
+#: users/routes.py:152
 msgid "Preferred Languages set Successfully"
 msgstr ""
 
-#: users/routes.py:165
+#: users/routes.py:164
 msgid "Language settings not available at the moment"
 msgstr ""
 
-#: users/routes.py:167
+#: users/routes.py:166
 #, python-format
 msgid "%(username)s's - Settings"
 msgstr ""
 
+#: src/participate.js:55
+msgid "No images found for this campaign!"
+msgstr ""
+
+#: src/participate.js:66
+msgid "Something went wrong getting campaign images"
+msgstr ""
+
+#: src/participate.js:85
+msgid "Search for things you see in the image"
+msgstr ""
+
+#: src/participate.js:148
+msgid "minimise metadata from commons"
+msgstr ""
+
+#: src/participation-manager.js:150
+msgid "Success! Depicted items saved to Wikimedia Commons"
+msgstr ""
+
+#: src/participation-manager.js:155
+msgid "Success! Captions saved to Wikimedia Commons"
+msgstr ""
+
+#: src/participation-manager.js:159
+msgid ""
+"Oops! Something went wrong, your edits have not been saved to Wikimedia "
+"Commons"
+msgstr ""
+
+#: src/participation-manager.js:582
+msgid "Mark this depicted item as prominent"
+msgstr ""
+
+#: src/participation-manager.js:583
+msgid "Mark this depicted item as NOT prominent"
+msgstr ""
