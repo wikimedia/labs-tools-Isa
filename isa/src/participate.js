@@ -3,7 +3,7 @@
 
 import {ParticipationManager} from './participation-manager';
 import {getImagesFromApi} from './category-members';
-import {getUrlParameters} from './utils';
+import {getUrlParameters, shuffle} from './utils';
 import {generateGuid} from './guid-generator.js';
 
 var campaignId = getCampaignId(),
@@ -45,8 +45,11 @@ $.getJSON('../../api/login-test')
         // Get images in categories 
         getImagesFromApi(categories, function(images) {
             // Now we have all images from processing each category with depth
+
+            // Randomise image order
+            shuffle(images);
+
             // Start a new editSession using the Participation Manager
-            console.log("Images retrieved!", images.length)
             editSession = new ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn);
 
             // Trigger image changed event to populate the page
