@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
-"POT-Creation-Date: 2019-08-20 11:26+0100\n"
+"POT-Creation-Date: 2019-08-21 16:06+0100\n"
 "PO-Revision-Date: 2019-07-01 07:49+0100\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
@@ -99,117 +99,118 @@ msgid "Choose to only view images from a single country"
 msgstr "Choisir de ne voir que les images issues d'un pays"
 
 #: templates/campaign/campaign.html:17
-msgid "All countries"
-msgstr "Tous les pays"
+msgid "Loading..."
+msgstr ""
 
-#: templates/campaign/campaign.html:22
+#: templates/campaign/campaign.html:21 templates/campaign/campaign.html:23
 msgid "Start contributing to this campaign"
 msgstr "Participer à la campagne"
 
-#: templates/campaign/campaign.html:22 templates/campaign/campaigns.html:31
+#: templates/campaign/campaign.html:21 templates/campaign/campaign.html:23
+#: templates/campaign/campaigns.html:31
 msgid "Get Started"
 msgstr "Action"
 
-#: templates/campaign/campaign.html:29
+#: templates/campaign/campaign.html:31
 msgid "Campaign progress so far"
 msgstr "Progression de la campagne"
 
-#: templates/campaign/campaign.html:32
+#: templates/campaign/campaign.html:34
 #: templates/campaign/campaign_stats.html:15
 msgid "Total number of images in this campaign"
 msgstr "Nombre total d'images inclues dans la campagne"
 
-#: templates/campaign/campaign.html:32
+#: templates/campaign/campaign.html:34
 #: templates/campaign/campaign_stats.html:15
 #: templates/campaign/campaigns.html:21
 msgid "Images"
 msgstr "Images"
 
-#: templates/campaign/campaign.html:33
+#: templates/campaign/campaign.html:35
 #: templates/campaign/campaign_stats.html:16
 msgid "Total number of contributions made to this campaign"
 msgstr "Nombre total de contributions dans le cadre de la campagne"
 
-#: templates/campaign/campaign.html:33
+#: templates/campaign/campaign.html:35
 #: templates/campaign/campaign_stats.html:16
 #: templates/campaign/campaigns.html:23
 msgid "Contributions"
 msgstr "Contributions"
 
-#: templates/campaign/campaign.html:38
+#: templates/campaign/campaign.html:40
 #: templates/campaign/campaign_stats.html:21
 msgid "Top Contributors"
 msgstr "Meilleur.es. participant.e.s"
 
-#: templates/campaign/campaign.html:42
+#: templates/campaign/campaign.html:44
 #: templates/campaign/campaign_stats.html:25
 msgid "Contributor"
 msgstr "Personnes"
 
-#: templates/campaign/campaign.html:43 templates/campaign/campaign.html:75
-#: templates/campaign/campaign.html:120
+#: templates/campaign/campaign.html:45 templates/campaign/campaign.html:77
+#: templates/campaign/campaign.html:122
 #: templates/campaign/campaign_stats.html:26
 #: templates/campaign/campaign_stats.html:58
 msgid "Images Improved"
 msgstr "Images améliorées"
 
-#: templates/campaign/campaign.html:61
+#: templates/campaign/campaign.html:63
 #: templates/campaign/campaign_stats.html:44
 msgid "No partcipants has contributed to this campaign"
 msgstr "Aucun participant n'a contribué à cette campagne"
 
-#: templates/campaign/campaign.html:70
+#: templates/campaign/campaign.html:72
 #: templates/campaign/campaign_stats.html:53
 msgid "Most improved Countries"
 msgstr "Impact géographique"
 
-#: templates/campaign/campaign.html:74
+#: templates/campaign/campaign.html:76
 #: templates/campaign/campaign_stats.html:57
 msgid "Country"
 msgstr "Pays"
 
-#: templates/campaign/campaign.html:93
+#: templates/campaign/campaign.html:95
 #: templates/campaign/campaign_stats.html:76
 msgid "There is no data available yet for this campaign"
 msgstr "Il n'y a pas encore de données disponibles pour cette campagne"
 
-#: templates/campaign/campaign.html:101
+#: templates/campaign/campaign.html:103
 msgid "View and download more stats for this campaign"
 msgstr "Voir et télécharger des statistiques"
 
-#: templates/campaign/campaign.html:101
+#: templates/campaign/campaign.html:103
 msgid "View full stats"
 msgstr "Voir les statistiques"
 
-#: templates/campaign/campaign.html:112
+#: templates/campaign/campaign.html:114
 msgid "My Contributions"
 msgstr "Mes contributions"
 
-#: templates/campaign/campaign.html:119
+#: templates/campaign/campaign.html:121
 msgid "Rank"
 msgstr "Rang"
 
-#: templates/campaign/campaign.html:137
+#: templates/campaign/campaign.html:139
 msgid "More About This Campaign"
 msgstr "À propos de cette campagne"
 
-#: templates/campaign/campaign.html:139
+#: templates/campaign/campaign.html:141
 msgid "Campaign Manager"
 msgstr ""
 
-#: templates/campaign/campaign.html:141
+#: templates/campaign/campaign.html:143
 msgid "START DATE"
 msgstr "Date de début"
 
-#: templates/campaign/campaign.html:142
+#: templates/campaign/campaign.html:144
 msgid "END DATE"
 msgstr "Date de fin"
 
-#: templates/campaign/campaign.html:148
+#: templates/campaign/campaign.html:150
 msgid "Make changes to this campaign"
 msgstr "Apporter des modifications à cette campagne"
 
-#: templates/campaign/campaign.html:148
+#: templates/campaign/campaign.html:150
 msgid "Edit Campaign"
 msgstr "Modifier la campagne"
 
@@ -265,7 +266,7 @@ msgstr "Catégories"
 msgid "Camera Location"
 msgstr "Géolocalisation"
 
-#: src/participate.js:152 templates/campaign/campaign_entry.html:42
+#: src/participate.js:156 templates/campaign/campaign_entry.html:42
 msgid "show all metadata from commons"
 msgstr "Afficher toutes les metadata"
 
@@ -826,42 +827,8 @@ msgstr "Langues préférées définies avec succès"
 msgid "%(username)s's - Settings"
 msgstr "%(username)s's - Réglages"
 
-#: src/participate.js:55
-msgid "No images found for this campaign!"
-msgstr ""
-
-#: src/participate.js:66
-msgid "Something went wrong getting campaign images"
-msgstr ""
-
-#: src/participate.js:85
-msgid "Search for things you see in the image"
-msgstr "Lister ce que vous voyez dans cette image"
-
-#: src/participate.js:148
-msgid "minimise metadata from commons"
-msgstr ""
-
-#: src/participation-manager.js:150
-msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
-
-#: src/participation-manager.js:155
-msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
-
-#: src/participation-manager.js:159
-msgid ""
-"Oops! Something went wrong, your edits have not been saved to Wikimedia "
-"Commons"
-msgstr ""
-
-#: src/participation-manager.js:582
-msgid "Mark this depicted item as prominent"
-msgstr ""
-
-#: src/participation-manager.js:583
-msgid "Mark this depicted item as NOT prominent"
+#: src/campaign.js:18
+msgid "Unknown country"
 msgstr ""
 
 #: src/campaign-directory.js:27
@@ -894,6 +861,44 @@ msgstr ""
 
 #: src/campaign-directory.js:43
 msgid "Previous"
+msgstr ""
+
+#: src/participate.js:59
+msgid "No images found for this campaign!"
+msgstr ""
+
+#: src/participate.js:70
+msgid "Something went wrong getting campaign images"
+msgstr ""
+
+#: src/participate.js:89
+msgid "Search for things you see in the image"
+msgstr "Lister ce que vous voyez dans cette image"
+
+#: src/participate.js:152
+msgid "minimise metadata from commons"
+msgstr ""
+
+#: src/participation-manager.js:150
+msgid "Success! Depicted items saved to Wikimedia Commons"
+msgstr ""
+
+#: src/participation-manager.js:155
+msgid "Success! Captions saved to Wikimedia Commons"
+msgstr ""
+
+#: src/participation-manager.js:159
+msgid ""
+"Oops! Something went wrong, your edits have not been saved to Wikimedia "
+"Commons"
+msgstr ""
+
+#: src/participation-manager.js:582
+msgid "Mark this depicted item as prominent"
+msgstr ""
+
+#: src/participation-manager.js:583
+msgid "Mark this depicted item as NOT prominent"
 msgstr ""
 
 #~ msgid "Editors"
@@ -978,4 +983,7 @@ msgstr ""
 
 #~ msgid "Add or change available languages in Caption Languages"
 #~ msgstr "Changer la langue de la légende"
+
+#~ msgid "All countries"
+#~ msgstr "Tous les pays"
 

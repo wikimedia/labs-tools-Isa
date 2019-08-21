@@ -14,12 +14,14 @@
         <div class="campaign-country-select">
             <p>{{_('View images from')}}</p>
             <select id="campaign_countries" class="fas fa-caret-down custom-select btn-new" data-style="btn-new" title="{{ _('Choose to only view images from a single country') }}">
-                <option class="select-option" value= "all" select="selected">{{_('All countries')}}</option>
+                <option class="select-option"> {{ _('Loading...') }}</option>
                 <!-- The other obtions will be povided here on front-end -->
             </select>
-        </div>           
-    {% endif %}
+        </div>   
+        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary disabled" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
+    {% else %}
         <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
+    {% endif %}
     </div>
 </div>
 

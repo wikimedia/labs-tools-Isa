@@ -32,8 +32,12 @@ $.getJSON('../../api/login-test')
         
         if (isWikiLovesCampaign && wikiLovesCountry) {
             // Construct country subcategory for each campaign category
+
+            var categoryEndString = (wikiLovesCountry === 'Unknown') ?
+                ' with unknown country' :
+                ' in ' + wikiLovesCountry;
             categories.forEach(function(category) {
-                category.name += ' in ' + wikiLovesCountry;
+                category.name += categoryEndString;
                 category.depth = 0;
             })
         }

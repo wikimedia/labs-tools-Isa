@@ -46,7 +46,7 @@ function getSubcategoryAjaxRequests(categories, callback) {
             list: 'categorymembers',
             cmtitle: categoryName,
             cmtype: 'subcat',
-            cmlimit: 'max', //todo: this only gets up to 500 results, probably enough but add continue params if not
+            cmlimit: 'max', // todo: this only gets up to 500 results, probably enough but add continue params if not
             format: 'json',
             origin: '*'
         };
@@ -56,7 +56,7 @@ function getSubcategoryAjaxRequests(categories, callback) {
             data: apiOptions
         })
         .done(function(response) {
-            //next steps for each request can be added here, e.g. more results
+            // next steps for each request can be added here, e.g. more results
         })
         .fail(function(err) {
             console.log("error retrieving subcategories", err);
@@ -72,32 +72,35 @@ function getSubcategoryAjaxRequests(categories, callback) {
 function combineCountriesFromAjaxRequests(requests, callback) {
     
     $.when.apply(null, requests).done(function() {
-    //Runs when all of the requests have completed successfully
-    //We now have one list of subcategories for each root category
-        console.log("combine countries from ajax", requests)
+    // Runs when all of the requests have completed successfully
+    // We now have one list of subcategories for each root category
+    var hasUnknownCountry = false;
     for (var i=0; i < requests.length; i++) {
-        //reduce each result object to subcategory name only
+        // reduce each result object to subcategory name only
         var subcategories = requests[i].responseJSON.query.categorymembers.map(function(currentValue) {
             return currentValue.title;
         });
 
-        //find the root category, which is in the same order as requests array;
+        // find the root category, which is in the same order as requests array;
         var campaignCategory = campaignCategories[i].name;
 
-        //filter out subcategories that don't match WikiLoves country syntax
+        // filter out subcategories that don't match WikiLoves country syntax
         var countries = subcategories.filter(function(currentCategory) { 
-            return currentCategory.startsWith(campaignCategory + " in ");
+            if (currentCategory === campaignCategory + " with unknown country") hasUnknownCountry = true;
+            return currentCategory.startsWith(campaignCategory + " in ")
+                   
         })
-        //remove the text before the country name
+        // remove the text before the country name
         countries = countries.map(function(currentSubcat) {
             return currentSubcat.replace(campaignCategory + " in ", "");
         })
-        //append countries from this request to wikiLovesCountries array
+        // append countries from this request to wikiLovesCountries array
         wikiLovesCountries = wikiLovesCountries.concat(countries);
     };
-        //sort alphabetically and remove duplicate country names
-        wikiLovesCountries = unique(wikiLovesCountries.sort());
-        console.log(wikiLovesCountries)
-        if (callback) callback(wikiLovesCountries);
+
+    // sort alphabetically and remove duplicate country names
+    wikiLovesCountries = unique(wikiLovesCountries.sort());
+
+    if (callback) callback({list: wikiLovesCountries, hasUnknownCountry: hasUnknownCountry});
     });
 }
