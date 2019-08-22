@@ -7,7 +7,7 @@
 //  - Also used for sending edits to Commons and ISA database when either submit is click 
 // Data is sent via ajax post request instead of default form submit to prevent page reload
 
-import {flashMessage} from './utils';
+import {flashMessage, getHtmlStripped, truncate} from './utils';
 import {WIKI_URL} from './options';
 
 export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
@@ -133,7 +133,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
         var me = this;
         
-        console.log(contributions)
         $.post({
             url: '../../api/post-contribution',
             data: contributionsData,
@@ -179,14 +178,16 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             data: apiOptions
         } )
         .done( function( response ) {
-            var metadata = response.query.pages[0].imageinfo[0].extmetadata;
-            var title = response.query.pages[0].title;
-            var escapedTitle = encodeURIComponent(title);
-            var htmlStrippedDescription = $('<span>' + metadata.ImageDescription.value + '</span>').text();
-
-            var cameraLocationHtml = '(unknown)',
-                lat = metadata.GPSLatitude,
-                long = metadata.GPSLongitude;
+            var metadata = response.query.pages[0].imageinfo[0].extmetadata,
+            title = response.query.pages[0].title,
+            escapedTitle = encodeURIComponent(title),
+            description = (metadata.ImageDescription) ? getHtmlStripped(metadata.ImageDescription.value) : '',
+            author = (metadata.Artist) ? getHtmlStripped(metadata.Artist.value) : '',
+            credit = (metadata.Credit) ? getHtmlStripped(metadata.Credit.value) : '',
+            license = (metadata.LicenseShortName) ? metadata.LicenseShortName.value : '',
+            cameraLocationHtml = '(unknown)',
+            lat = metadata.GPSLatitude,
+            long = metadata.GPSLongitude;
 
             if (lat && long) {
                 var locationUrl = 'https://www.openstreetmap.org/?mlat=' + lat.value + '&mlon=' + long.value,
@@ -194,16 +195,19 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 cameraLocationHtml = '<a href=' + locationUrl + '>' + locationText + '</a>';
             }
 
-            // spacing between categories
+            // Spacing between categories
             var categories = metadata.Categories.value.replace(/\|/g,' | ');
 
+            // Main metadata elements
             $('#image_name').html('<a href=' + WIKI_URL + 'wiki/' + escapedTitle + ' target="_blank">' + title.replace("File:", "") + '</a>');
-            $('#image_description').text(htmlStrippedDescription);
+            $('#image_description').text(description);
             $('#image_categories').text(categories);
-            $('#image_author').html(metadata.Artist.value);
             $('#image_camera_location').html(cameraLocationHtml);
-            $('#image_credit').html(metadata.Credit.value);
-            $('#image_license').html('<a href=' + metadata.LicenseUrl.value + '>' + metadata.LicenseShortName.value + '</a>');
+
+            // Metadata elements floating inset within the image
+            $('#image_author').text(truncate(author));
+            $('#image_credit').text(truncate(credit));
+            $('#image_license').text(truncate(license));
 
         } );
     }
@@ -298,7 +302,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                         labelLang = Object.keys(itemData.labels)[0],
                         label = itemData.labels[labelLang].value,
                         descriptionLang = Object.keys(itemData.descriptions)[0],
-                        description = itemData.descriptions[descriptionLang].value,
+                        description = (descriptionLang) ? itemData.descriptions[descriptionLang].value : '',
                         isProminent = storedStatementData.isProminent,
                         statementId = storedStatementData.statementId;
 

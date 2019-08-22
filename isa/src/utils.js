@@ -60,3 +60,16 @@ export function shuffle(array) {
   
     return array;
   }
+
+  export function getHtmlStripped(string) {
+    return $('<span>' + string + '</span>').text()
+  }
+
+  export function truncate(input, charLimit) {
+      charLimit = charLimit || 18;
+      if (input.length > charLimit) {
+          return input.substring(0,charLimit) + '...';
+      }
+      // else
+      return input;
+ };
