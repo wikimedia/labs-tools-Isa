@@ -101,9 +101,9 @@ function searchResultsFormat(state) {
                   var query = {
                       search: params.term,
                       action: 'wbsearchentities',
-                      language: 'en',
+                      language: UI_LANGUAGE,
                       format: 'json',
-                      uselang: 'en',
+                      uselang: UI_LANGUAGE,
                       origin: '*'
                   };
                   return query;

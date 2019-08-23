@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var I18nPlugin = require("i18n-webpack-plugin");
 var languages = {
 	en: null,
@@ -23,6 +24,10 @@ module.exports = Object.keys(languages).map(function(language) {
         plugins: [
             new I18nPlugin(languages[language], {
                 'functionName': 'gettext'
+            }),
+            new webpack.DefinePlugin({
+                UI_LANGUAGE: JSON.stringify(language),
+                WIKI_URL: JSON.stringify('https://commons.wikimedia.org/')
             })
         ]
     }

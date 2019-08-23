@@ -7,7 +7,7 @@
 // Individual steps for each tree are synchronous as previous data is needed for each subsequent step
 
 import {unique} from './utils';
-import {WIKI_URL, ALLOWED_FILE_EXTENSIONS} from './options';
+import {ALLOWED_FILE_EXTENSIONS} from './options';
 
 var imagesInCategories = [], // Final image list
     processedCategories = [], // Prevent infinite loops

@@ -8,7 +8,6 @@
 // Data is sent via ajax post request instead of default form submit to prevent page reload
 
 import {flashMessage, getHtmlStripped, truncate} from './utils';
-import {WIKI_URL} from './options';
 
 export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
         var imageIndex = 0,
@@ -281,7 +280,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 props: 'labels|descriptions',
                 format: 'json',
                 ids: qvalues.join("|"),
-                languages: 'en',
+                languages: UI_LANGUAGE,
                 origin: '*',
                 languagefallback: ''
             };

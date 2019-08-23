@@ -7,7 +7,6 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 });
 
-
 /**********  SET THE LANGUAGE IN SESSION ***********/
 function addLanguageToUrl(langCode) {
     var path = window.location.pathname;

@@ -1,4 +1,3 @@
-import {WIKI_URL} from './options';
 import {getImagesFromApi} from './category-members';
 
 $('#start_date_datepicker').datepicker( {

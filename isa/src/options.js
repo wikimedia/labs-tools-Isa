@@ -1,6 +1,5 @@
 // Constants and settings for the App
-
-export var WIKI_URL = "https://commons.wikimedia.org/";
+// Note: WIKI_URL and UI_LANGUAGE are set as globals using webpack.DefinePlugin
 
 export var MAX_CAMPAIGN_IMAGES = 10000;
 

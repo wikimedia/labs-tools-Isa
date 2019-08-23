@@ -8,7 +8,6 @@
 // When all ajax requests are complete, process the list to create a unique, combined list of countries
 
 import {unique} from './utils';
-import {WIKI_URL} from './options';
 
 var wikiLovesCountries = [],
     campaignCategories = []; // e.g. [{name: "Category:Images from Wiki Loves Love 2018", depth:2}, ...]
