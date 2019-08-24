@@ -22,6 +22,12 @@ app.config['TEMPLATES_AUTO_RELOAD']
 babel = Babel(app)
 
 
+@app.before_request
+def before_request():
+    # Update session language
+    get_locale()
+
+
 @babel.localeselector
 def get_locale():
     if request.args.get('lang'):
