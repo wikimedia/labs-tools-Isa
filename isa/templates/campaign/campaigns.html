@@ -32,21 +32,21 @@
                 </tr>
             </thead>
             <tbody>
-            {% for campaign in campaigns %}
+{% for campaign in campaigns %}
                 <tr>
                     <td><span class="">{{ campaign.campaign_name }}</span></td>
                     <td>{{ campaign.campaign_images }}</td>
                     <td>{{ campaign.campaign_participants }}</td>
                     <td>{{ campaign.campaign_contributions }}</td>
-                    <td><span class="">{{ campaign.start_date.strftime("%d-%m-%y") }}</span></td>
+                    <td><span class="">{{ campaign.start_date.strftime("%Y-%m-%d") }}</span></td>
 
                     {% if campaign.end_date == None %}
                     <td><span class="">{{ _('None') }}</span></td>
                     {% else %}
-                        <td><span class="">{{ campaign.end_date.strftime("%d-%m-%y") }}</span></td>
+                        <td><span class="">{{ campaign.end_date.strftime("%Y-%m-%d") }}</span></td>
                     {% endif %}
 
-                    <td><span class="">{{ campaign.creation_date.strftime("%d-%m-%y") }}</span></td>
+                    <td><span class="">{{ campaign.creation_date.strftime("%Y-%m-%d") }}</span></td>
                     <!-- Add status and boolean hidden columns depending on end date -->
                     {% if campaign.end_date and campaign.end_date.strftime("%y-%m-%d") < datetime.now().date().strftime("%y-%m-%d") %}
                         <td><span class=""> {{ _('Closed') }} </span></td>
