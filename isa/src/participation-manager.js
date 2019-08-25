@@ -511,7 +511,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             if (!found) {
                 captionChanges.push({
                     edit_action: "remove",
-                    caption_text: initialCaption.value,
+                    caption_text: '',
                     caption_language: initialCaption.language,
                 })
             }
