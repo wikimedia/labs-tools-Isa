@@ -4,7 +4,8 @@
 import {getUrlParameters} from './utils';
 
 $(function () {
-  $('[data-toggle="popover"]').popover()
+ $('[data-toggle="popover"]').popover(
+     {html:true})
 });
 
 /**********  SET THE LANGUAGE IN SESSION ***********/
