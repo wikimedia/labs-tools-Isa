@@ -21,11 +21,13 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     this.imageMediaId = '';
     
     this.nextImage = function () {
+        if (!confirmImageNavigation()) return;
         imageIndex = (imageIndex + 1) % (images.length);
         this.imageChanged();
     }
 
     this.previousImage = function () {
+        if (!confirmImageNavigation()) return;
         imageIndex -= 1;
         // jump to end of list if previous image is called on index=0
         if (imageIndex < 0) imageIndex = images.length - 1;
@@ -574,9 +576,27 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     }
     
 
-   
-
     /////////// General utilities ///////////
+
+    function areChangesUnsaved () {
+        for (var editType in unsavedChanges) {
+            if (!unsavedChanges.hasOwnProperty(editType)) continue;
+            if (unsavedChanges[editType].length > 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function confirmImageNavigation () {
+        if (areChangesUnsaved()) {
+            return confirm(
+                gettext("Are you sure you want to navigate to another image? You have unsaved changes which will be lost.") + "\n" +
+                gettext("Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first.")
+            )
+        }
+        return true;
+    }
 
     function getStatementHtml(item, label, description, isProminent, statementId) {
         var statementIdAttribute = (statementId) ? 
