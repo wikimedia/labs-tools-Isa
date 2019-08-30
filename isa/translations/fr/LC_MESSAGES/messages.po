@@ -304,11 +304,11 @@ msgstr "Connectez-vous pour publier les modifications"
 
 #: templates/campaign/campaign_entry.html:60
 msgid "Name the different elements that you can see in this image"
-msgstr ""
+msgstr "Nommez les différents éléments que vous pouvez voir dans cette image"
 
 #: templates/campaign/campaign_entry.html:72
 msgid "To mark the prominent element/s in the image, click on the flag icon"
-msgstr ""
+msgstr "Cliquez sur le drapeau pour marquer un élément comme remarquable"
 
 #: templates/campaign/campaign_entry.html:79
 #: templates/campaign/create_campaign.html:151
@@ -318,17 +318,17 @@ msgstr "Légendes"
 
 #: templates/campaign/campaign_entry.html:87
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr ""
+msgstr "Ajouter une légende pour mieux décrire l’image"
 
 #: templates/campaign/campaign_entry.html:92
 msgid "Briefly explain what you see in this image."
-msgstr ""
+msgstr "Expliquez brièvement ce que vous voyez dans cette image"
 
 #: templates/campaign/campaign_entry.html:96
 msgid ""
 "You can add captions in additional languages by selecting Language "
 "Preferences from the user menu"
-msgstr ""
+msgstr "Vous pouvez ajouter une légende dans d’autres langues en précisant vos préférences dans le menu utilisateur"
 
 #: templates/campaign/campaign_stats.html:4
 msgid "Stats"
@@ -833,43 +833,43 @@ msgstr ""
 
 #: src/campaign-directory.js:27
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Voir de _START_ à _END_ de _TOTAL_ entrée(s)"
 
 #: src/campaign-directory.js:28
 msgid "No entries"
-msgstr ""
+msgstr "Aucune image"
 
 #: src/campaign-directory.js:37
 msgid "Search:"
-msgstr ""
+msgstr "Chercher:"
 
 #: src/campaign-directory.js:38
 msgid "No matching records found"
-msgstr ""
+msgstr "Aucune correspondance n’a été trouvée"
 
 #: src/campaign-directory.js:40
 msgid "First"
-msgstr ""
+msgstr "Première"
 
 #: src/campaign-directory.js:41
 msgid "Last"
-msgstr ""
+msgstr "Dernière"
 
 #: src/campaign-directory.js:42
 msgid "Next"
-msgstr ""
+msgstr "Suivante"
 
 #: src/campaign-directory.js:43
 msgid "Previous"
-msgstr ""
+msgstr "Précédente"
 
 #: src/participate.js:59
 msgid "No images found for this campaign!"
-msgstr ""
+msgstr "Aucune image trouvée !"
 
 #: src/participate.js:70
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "Quelque chose s’est mal passé :("
 
 #: src/participate.js:89
 msgid "Search for things you see in the image"
@@ -877,113 +877,26 @@ msgstr "Lister ce que vous voyez dans cette image"
 
 #: src/participate.js:152
 msgid "minimise metadata from commons"
-msgstr ""
+msgstr "Réduire"
 
 #: src/participation-manager.js:150
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "Succès ! Vos modifications ont été prises en compte sur Wikimedia Commons"
 
 #: src/participation-manager.js:155
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
+msgstr "Succès ! Vos modifications ont été prises en compte sur Wikimedia Commons"
 
 #: src/participation-manager.js:159
 msgid ""
 "Oops! Something went wrong, your edits have not been saved to Wikimedia "
 "Commons"
-msgstr ""
+msgstr "Quelque chose s’est mal passé :( Vos modifications n’ont pas été prises en compte sur Wikimedia Commons"
 
 #: src/participation-manager.js:582
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "Marquer comme remarquable"
 
 #: src/participation-manager.js:583
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
-
-#~ msgid "Editors"
-#~ msgstr "Éditeurs"
-
-#~ msgid ""
-#~ "is a fun tool aimed at the "
-#~ "metadata enhancement of images contributed "
-#~ "to the various Wiki Loves competitions"
-#~ " on Wikimedia Commons"
-#~ msgstr ""
-#~ "est un outil amusant visant à "
-#~ "améliorer les métadonnées des images "
-#~ "contribuant à les différents concours "
-#~ "Wiki Loves sur Wikimedia Commons"
-
-#~ msgid ""
-#~ "It is being created as a way "
-#~ "to quickly add structured information to"
-#~ " a collection of pre-defined images."
-#~ msgstr ""
-#~ "Il est créé pour ajouter rapidement "
-#~ "des informations structurées à une "
-#~ "collection d’images prédéfinies"
-
-#~ msgid ""
-#~ "In the long run, the intent behind"
-#~ " the tool is to increase the "
-#~ "use of the knowledge that resides "
-#~ "within each image."
-#~ msgstr ""
-#~ "À long terme, l'objectif de l'outil "
-#~ "est d'accroître l'utilisation des "
-#~ "connaissances contenues dans chaque image."
-
-#~ msgid ""
-#~ "The tool is aimed to assist in "
-#~ "the usefulness and information of images"
-#~ " donated to the Wiki Loves "
-#~ "competitions."
-#~ msgstr ""
-#~ "L’outil a pour but d’aider à "
-#~ "l’utilité et à l’information des images"
-#~ " données au concours Wiki Loves"
-
-#~ msgid ""
-#~ "It is initially being built to "
-#~ "assist in the descriptions of Wiki "
-#~ "Loves Africa images"
-#~ msgstr ""
-#~ "Il est initialement construit pour aider"
-#~ " dans les descriptions de Wiki Loves"
-#~ " Images d'Afrique"
-
-#~ msgid "The tool is also designed to be a host of small competitions."
-#~ msgstr ""
-#~ "L'outil est également conçu pour être"
-#~ " une foule de petites compétitions."
-
-#~ msgid ""
-#~ " ISA is not only an acronym "
-#~ "for Information Structured Acceleration, but"
-#~ " is also a chiShona language word "
-#~ "for 'put ' or 'place' "
-#~ msgstr ""
-#~ "ISA n'est pas seulement un acronyme "
-#~ "pour Information Structured Acceleration, mais"
-#~ " est également un mot chiShona pour"
-#~ " «mettre» ou «placer»"
-
-#~ msgid "Leran more about structured data"
-#~ msgstr ""
-
-#~ msgid "Mark as Prominent"
-#~ msgstr "Marquer comme important"
-
-#~ msgid "Add a caption for the image"
-#~ msgstr "Ajouter une légende à l'image"
-
-#~ msgid "write a caption"
-#~ msgstr "écrire une légende"
-
-#~ msgid "Add or change available languages in Caption Languages"
-#~ msgstr "Changer la langue de la légende"
-
-#~ msgid "All countries"
-#~ msgstr "Tous les pays"
-
+msgstr "Marquer comme non remarquable"
