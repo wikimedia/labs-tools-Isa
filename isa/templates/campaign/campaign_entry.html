@@ -47,7 +47,7 @@ body {padding-bottom: 50px}
 <div class="container edit-box">
     <div class="edit-box-header">
         <h4>{{ _('Depicts') }}
-        <button type="button" class="btn btn-link py-0" data-container="body" title="Adding Depict Statements" data-toggle="popover" data-placement="right" data-content="Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)
+        <button type="button" class="btn btn-link py-0" data-container="body" title="{{_('Adding Depict Statements') }}" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="{{_('Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)')}} 
 "><i class="fas fa-question-circle"></i></button>
         </h4>
         <div edit-type="depicts" class="edit-publish-btn-group text-right">
@@ -76,7 +76,7 @@ body {padding-bottom: 50px}
 {% if campaign.captions_metadata %}
 <div class="container edit-box">
     <div class="edit-box-header">
-        <h4>{{ _('Captions') }} <button type="button" class="btn btn-link py-0" data-container="body" title="Writing Captions" data-toggle="popover" data-placement="right" data-content="Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."><i class="fas fa-question-circle"></i></button></h4>
+        <h4>{{ _('Captions') }} <button type="button" class="btn btn-link py-0" data-container="body" title="{{_('Writing Captions')}}" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="{{_('Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer.')}}"><i class="fas fa-question-circle"></i></button></h4>
         <div edit-type="captions" class="edit-publish-btn-group text-right">
             <button class="btn btn-sm btn-link cancel-edits-btn" disabled>{{ _('Cancel') }}</button>
             <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled>{{ _('Save') }}</button>
