@@ -168,8 +168,7 @@ def getCampaignById(id):
                             all_campaign_country_statistics_data=all_campaign_country_statistics_data,
                             current_user_images_improved=current_user_images_improved,
                             contributor_csv_file=contributor_csv_file,
-                            country_csv_file=country_csv_file),
-            campaign_stats_data)
+                            country_csv_file=country_csv_file), json.dumps(campaign_stats_data))
 
 
 @campaigns.route('/campaigns/<int:id>/stats')
@@ -187,6 +186,8 @@ def getCampaignStatsById(id):
     # We get the values returned from the campaign route and use here in the stats table
     # campaign_return_data: bundled campaign data from campaign route
     page, campaign_return_data = getCampaignById(id)
+
+    campaign_return_data = json.loads(campaign_return_data)
 
     return render_template('campaign/campaign_stats.html', title=gettext('Campaign - ') + campaign.campaign_name,
                            campaign=campaign,
