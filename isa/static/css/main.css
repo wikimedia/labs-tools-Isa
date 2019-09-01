@@ -520,6 +520,16 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 #selected-categories-header {
     display: none;
 }
+
+.valid-category .category-name {
+    color:#28a745;
+}
+
+.invalid-category .category-name {
+    color:#dc3545;
+}
+
+
 /*end update & create*/
  
  

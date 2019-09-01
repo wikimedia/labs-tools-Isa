@@ -1,5 +1,8 @@
 import {getImagesFromApi} from './category-members';
 
+var isWikiLovesCampaign = $('#campaign_type')[0].checked;
+var categoriesAreValid = false;
+
 $('#start_date_datepicker').datepicker( {
     format: 'yyyy-mm-dd'
 });
@@ -77,12 +80,15 @@ function addSelectedCategory(name, depth) {
     $('#selected-categories-content').append(getCategoryRowHtml(shortName, depth))
     // show the table header if it's not visible already
     $('#selected-categories-header').show();
+    if (isWikiLovesCampaign) validateWikiLovesCategories();
 } 
 
 // Click event for removing categories
 $('#selected-categories-content').on("click", "button.close", function(event) {
     // remove the .selected-category parent container the button is within
     $(this).closest(".selected-category").remove();
+
+    if (isWikiLovesCampaign) validateWikiLovesCategories();
 
     // after removing the element, we must hide the table header if there are no rows left
    if ( $('.selected-category').length < 1 ) {
@@ -113,6 +119,47 @@ function getCategoryData() {
     return categoryData;
 }
 
+// Check if each category in the UI has the correct syntax for Wiki Loves campaign
+// Add class to show valid/ivalid with green/red border
+function validateWikiLovesCategories() {
+    var hasValidationErrors = false;
+    var isValid;
+    $('.selected-category').each(function() {
+        isValid = validateWikiLovesCategory(this);
+        if (!isValid) hasValidationErrors = true;
+    })
+
+    if (hasValidationErrors) {
+        $('.invalid-wiki-loves-warning').show();
+    } else {
+        $('.invalid-wiki-loves-warning').hide();
+    }
+    categoriesAreValid = !hasValidationErrors;
+}
+
+function validateWikiLovesCategory(element) {
+    var categoryName = $(element).find('.category-name').text();
+    var isValid = isValidWikiLovesSyntax(categoryName);
+    if (isValid) {
+        $(element).removeClass('invalid-category').addClass('valid-category');
+    } else {
+        $(element).removeClass('valid-category').addClass('invalid-category');
+    }
+    return isValid;
+}
+
+function isValidWikiLovesSyntax(categoryName) {
+    var syntaxReg = /Images from Wiki Loves [A-Za-z]* \d{4}$/;
+    return syntaxReg.test(categoryName);
+}
+
+function clearWikiLovesValidation() {
+    $('.selected-category').each(function() {
+        $(this).removeClass('invalid-category').removeClass('valid-category');
+        $('.invalid-wiki-loves-warning').hide();
+    })
+}
+
 //////////// Form submission ////////////
 
 // Using click instead of submit event, as this triggers form validation
@@ -127,9 +174,20 @@ $('#submit').click(function(ev) {
     
     if (!categoriesChecked && formIsValid) {
         // Prevent form submission if categories not checked yet
-        console.log("categories changed")
         ev.preventDefault();
         var categorySelections = getCategoryData();
+
+        if (categorySelections.length === 0) {
+            alert( gettext('You must select at least one category for your campaign.') )
+            return;
+        }
+        if (isWikiLovesCampaign && !categoriesAreValid) {
+            ev.preventDefault();
+            alert( gettext("Some of the categories you have chosen don not have the correct syntax for a Wiki Loves Campaign.") + '\n' + 
+                gettext("Please check your selections and try again."))
+            return;
+        }
+
         var finalCategoryData = $('#categories-data')[0].value = JSON.stringify(categorySelections);
         
         if (finalCategoryData !== initialCategoryData) {
@@ -158,4 +216,15 @@ $('#submit').click(function(ev) {
     } 
     // Categories checked, continue default submit, OR
     // Form is invalid, default submit to show browser warnings
+})
+
+
+$('#campaign_type').on("change", function() {
+    isWikiLovesCampaign = this.checked;
+
+    if (isWikiLovesCampaign) {
+        validateWikiLovesCategories();
+    } else {
+        clearWikiLovesValidation();
+    }
 })

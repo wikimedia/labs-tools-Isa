@@ -83,12 +83,32 @@
         </div>     
         
         <hr>
+
+        <div class="form-group">
+                <label for="campaign_type">{{ _('This is a Wiki Loves Campaign') }} </label>
+                <!-- We test for errors in the form data here -->
+                {% if form.campaign_type.errors %}
+                {{ form.campaign_type( class="form-control form-control-sm is-invalid" ) }}
+                <div class="invalid-feedback">
+                    {% for error in form.campaign_type.errors %}
+                    <span> {{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.campaign_type( class="checkbox-inline mt-1" ) }}<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="{{ _('When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country.') }} {{ _(' You can select multiple categories of the correct type.') }} {{ _('Depth must be set to 0 for all categories in a Wiki Loves campaign.')}} <a href=''>Learn more here</a>"><i class="fas fa-question-circle"></i></button>
+                {% endif %}
+                <small id="campaign_typeHelp" class="form-text text-muted">{{ _('Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)') }}</small>       
+                <div class="invalid-feedback invalid-wiki-loves-warning">
+                        <p>{{ _('Some of the categories chosen below do not have the correct syntax') }}</p>
+                </div> 
+        </div>
+
+        <hr>
         
         <div class="form-group">
           
             <label for="category-search">{{ _('Categories to use in this campaign') }}*<button type="button" class="btn btn-link py-0" data-container="body"  data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="{{ _('Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign.') }} {{ _('If you want a category and ALL of its subcategories use the \'Depth\' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns).') }}"><i class="fas fa-question-circle"></i></button></label>  
             
-          
             <!-- We test for errors in the form data here -->
             {% if form.categories.errors %}
             {{ form.categories( class="form-control form-control-lg is-invalid" ) }}
@@ -126,6 +146,10 @@
                     <!-- populated by JavaScript -->
                 </tbody>
             </table>
+            <div class="invalid-feedback invalid-wiki-loves-warning">
+                    <p>{{ _('The categories in red do not have the correct syntax for the "Wiki Loves campaign" feature') }}</p>
+                    <p>{{ _('Please remove them or untick the "Wiki Loves Campaign" checkbox above') }}</p>
+            </div>
         </div>
 
         <hr>
@@ -162,24 +186,6 @@
                 {% endif %}
                 <small id="caption-metadataHelp" class="form-text text-muted">{{ _('Select to collect Caption metadata in the campiagn') }}</small>       
             </div>
-        </div>
-
-        <hr>    
-        
-        <div class="form-group">
-            <label for="campaign_type">{{ _('This is a Wiki Loves Campaign') }} </label>
-            <!-- We test for errors in the form data here -->
-            {% if form.campaign_type.errors %}
-            {{ form.campaign_type( class="form-control form-control-sm is-invalid" ) }}
-            <div class="invalid-feedback">
-                {% for error in form.campaign_type.errors %}
-                <span> {{ error }}</span>
-                {% endfor %}
-            </div>
-            {% else %}
-            {{ form.campaign_type( class="checkbox-inline mt-1" ) }}<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="{{ _('When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country.') }} {{ _(' You can select multiple categories of the correct type.') }} {{ _('Depth must be set to 0 for all categories in a Wiki Loves campaign.')}} <a href=''>Learn more here</a>"><i class="fas fa-question-circle"></i></button>
-            {% endif %}
-            <small id="campaign_typeHelp" class="form-text text-muted">{{ _('Requires a category showing images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> in <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)') }}</small>       
         </div>
 
         <hr>
