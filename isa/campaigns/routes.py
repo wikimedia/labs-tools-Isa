@@ -13,15 +13,15 @@ from flask_login import current_user
 
 from isa import app, db, gettext
 from isa.campaigns.forms import CampaignForm, UpdateCampaignForm
-from isa.campaigns.utils import (get_campaign_category_list, get_country_from_code,
-                                 compute_campaign_status, create_campaign_country_stats_csv,
-                                 create_campaign_contributor_stats_csv, create_campaign_all_stats_csv,
-                                 get_all_camapign_stats_data, get_campaign_country_data,
-                                 make_edit_api_call, generate_csrf_token)
+from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, get_campaign_category_list,
+                                 get_country_from_code, compute_campaign_status,
+                                 create_campaign_country_stats_csv, create_campaign_contributor_stats_csv,
+                                 create_campaign_all_stats_csv, get_all_camapign_stats_data,
+                                 get_campaign_country_data, make_edit_api_call, generate_csrf_token)
 from isa.main.utils import commit_changes_to_db
 from isa.models import Campaign, Contribution, User
 from isa.users.utils import (get_user_language_preferences, get_all_users_contribution_data_per_campaign,
-                             get_user_ranking, get_current_user_images_improved)
+                             get_user_ranking)
 from isa.utils.languages import getLanguages
 
 
@@ -63,45 +63,14 @@ def getCampaignById(id):
     campaign_contributions = 0
     # Editor for a particular campaign
     campaign_editors = 0
-    # participantids for this campaign
-    campaign_user_names = []
-    # We are querrying all the users who participate in the campaign
-    contribs_for_campaign = Contribution.query.filter_by(campaign_id=campaign.id).all()
-    for campaign_contribution in contribs_for_campaign:
-        campaign_user_names.append(campaign_contribution.username)
-    # we get the unique ids so as not to count an id twice
-    campaign_user_names_set = set(campaign_user_names)
-    campaign_editors = len(campaign_user_names_set)
-    # We then re-initialize the ids array
-    campaign_user_names = []
+    
     # We now get the contributor count for this campaign
     for contrib in all_contributions:
         if (contrib.campaign_id == campaign.id):
             campaign_contributions += 1
 
-    # We now obtain the ranking for all the users in the system and their files improved
-    all_camapign_users_list = []
-    #  We iterate the individual participants id in a campaign and get the user info
-    for user_name in campaign_user_names_set:
-        user = User.query.filter_by(username=user_name).first()
-        all_camapign_users_list.append(user)
-
-    # We get the users and their contribution data
-    all_contributors_data = get_all_users_contribution_data_per_campaign(all_camapign_users_list, id)
-    current_user_rank = get_user_ranking(all_contributors_data, username)
-    current_user_images_improved = get_current_user_images_improved(all_contributors_data, username)
-
-    # We add rank to all contributor's data
-    for user_data in all_contributors_data:
-        user_data['rank'] = get_user_ranking(all_contributors_data, user_data['username'])
-
-    # We get all the campaign coountry sorted data
-    all_campaign_country_statistics_data = get_campaign_country_data(id)
-
-    campaign_stats = {}
-    campaign_stats['all_contributors_data'] = all_contributors_data
-    campaign_stats['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
-
+    campaign_table_stats = get_table_stats(id, username)
+    
     # Delete the files in the campaign directory
     stats_path = os.getcwd() + '/campaign_stats_files/' + str(campaign.id)
     files = glob.glob(stats_path + '/*')
@@ -119,37 +88,20 @@ def getCampaignById(id):
     campaign_name = campaign.campaign_name
     stats_file_directory = stats_path
     country_fields = ['rank', 'country', 'images_improved']
-    country_stats_data = campaign_stats['all_campaign_country_statistics_data']
+    country_stats_data = campaign_table_stats['all_campaign_country_statistics_data']
 
     country_csv_file = create_campaign_country_stats_csv(stats_file_directory, campaign_name,
                                                          country_fields, country_stats_data)
 
     # 2 - contributors file
     contributor_fields = ['rank', 'username', 'images_improved']
-    contributor_stats_data = campaign_stats['all_contributors_data']
+    contributor_stats_data = campaign_table_stats['all_contributors_data']
     
     contributor_csv_file = create_campaign_contributor_stats_csv(stats_file_directory,
                                                                  campaign_name,
                                                                  contributor_fields,
                                                                  contributor_stats_data)
-
-    # 3 - We create the all_stats download file
-    # The field in the stats file will be as thus
-    all_stats_fields = ['username', 'file', 'edit_type', 'edit_action', 'country', 'depict_item',
-                        'depict_prominent', 'caption_text', 'caption_language', 'date']
-    campaign_all_stats_data = get_all_camapign_stats_data(id)
-    campaign_all_stats_csv_file = create_campaign_all_stats_csv(stats_file_directory, campaign_name,
-                                                                all_stats_fields, campaign_all_stats_data)
-
-    # We prepare the campaign stats data to be sent to the next page (stats route)
-    campaign_stats_data = {}
-    campaign_stats_data['campaign_editors'] = campaign_editors
-    campaign_stats_data['campaign_contributions'] = campaign_contributions
-    campaign_stats_data['all_contributors_data'] = all_contributors_data
-    campaign_stats_data['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
-    campaign_stats_data['campaign_all_stats_csv_file'] = campaign_all_stats_csv_file
-
-    campaign.campaign_participants = campaign_editors
+    campaign.campaign_participants = campaign_table_stats['campaign_editors']
     campaign.campaign_contributions = campaign_contributions
     if commit_changes_to_db():
         print('Campaign info updated successfully!')
@@ -163,12 +115,12 @@ def getCampaignById(id):
                             campaign_contributions=campaign_contributions,
                             current_user=current_user,
                             is_wiki_loves_campaign=campaign.campaign_type,
-                            all_contributors_data=all_contributors_data,
-                            current_user_rank=current_user_rank,
-                            all_campaign_country_statistics_data=all_campaign_country_statistics_data,
-                            current_user_images_improved=current_user_images_improved,
+                            all_contributors_data=campaign_table_stats['all_contributors_data'],
+                            current_user_rank=campaign_table_stats['current_user_rank'],
+                            all_campaign_country_statistics_data=campaign_table_stats['all_campaign_country_statistics_data'],
+                            current_user_images_improved=campaign_table_stats['current_user_images_improved'],
                             contributor_csv_file=contributor_csv_file,
-                            country_csv_file=country_csv_file), json.dumps(campaign_stats_data))
+                            country_csv_file=country_csv_file))
 
 
 @campaigns.route('/campaigns/<int:id>/stats')
@@ -183,29 +135,45 @@ def getCampaignStatsById(id):
         flash(gettext('Campaign with id %(id)s does not exist', id=id), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
 
-    # We get the values returned from the campaign route and use here in the stats table
-    # campaign_return_data: bundled campaign data from campaign route
-    page, campaign_return_data = getCampaignById(id)
-
-    campaign_return_data = json.loads(campaign_return_data)
+    stats_file_directory = os.getcwd() + '/campaign_stats_files/' + str(campaign.id)
+    
+    # We create the all_stats download file
+    # The field in the stats file will be as thus
+    all_stats_fields = ['username', 'file', 'edit_type', 'edit_action', 'country', 'depict_item',
+                        'depict_prominent', 'caption_text', 'caption_language', 'date']
+    campaign_all_stats_data = get_all_camapign_stats_data(id)
+    campaign_all_stats_csv_file = create_campaign_all_stats_csv(stats_file_directory,
+                                                                convert_latin_to_english(campaign.campaign_name),
+                                                                all_stats_fields, campaign_all_stats_data)
+    
+    # We get the table stats from the campaign itself
+    campaign_table_stats = get_table_stats(id, username)
+    
+    # We prepare the campaign stats data to be sent to the next page (stats route)
+    all_campaign_stats_data = {}
+    all_campaign_stats_data['campaign_editors'] = campaign.campaign_participants
+    all_campaign_stats_data['campaign_contributions'] = campaign.campaign_contributions
+    all_campaign_stats_data['all_contributors_data'] = campaign_table_stats['all_contributors_data']
+    all_campaign_stats_data['all_campaign_country_statistics_data'] = campaign_table_stats['all_campaign_country_statistics_data']
+    all_campaign_stats_data['campaign_all_stats_csv_file'] = campaign_all_stats_csv_file
 
     return render_template('campaign/campaign_stats.html', title=gettext('Campaign - ') + campaign.campaign_name,
                            campaign=campaign,
                            session_language=session_language,
-                           campaign_editors=campaign_return_data['campaign_editors'],
-                           campaign_contributions=campaign_return_data['campaign_contributions'],
+                           campaign_editors=all_campaign_stats_data['campaign_editors'],
+                           campaign_contributions=all_campaign_stats_data['campaign_contributions'],
                            current_user=current_user,
                            is_wiki_loves_campaign=campaign.campaign_type,
-                           all_contributors_data=campaign_return_data['all_contributors_data'],
-                           all_campaign_country_statistics_data=campaign_return_data['all_campaign_country_statistics_data'],
+                           all_contributors_data=all_campaign_stats_data['all_contributors_data'],
+                           all_campaign_country_statistics_data=all_campaign_stats_data['all_campaign_country_statistics_data'],
                            username=username,
-                           campaign_all_stats_csv_file=campaign_return_data['campaign_all_stats_csv_file'])
+                           campaign_all_stats_csv_file=all_campaign_stats_data['campaign_all_stats_csv_file'])
 
 
 @campaigns.route('/campaigns/create', methods=['GET', 'POST'])
 def CreateCampaign():
     # We get the current user's user_name
-    username = session.get('username', 'Eugene233')
+    username = session.get('username', None)
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
