@@ -4,6 +4,7 @@ import csv
 import pycountry
 import requests
 import mwoauth
+import unicodedata
 
 from datetime import datetime
 from flask import request, session
@@ -12,7 +13,9 @@ from operator import itemgetter
 from requests_oauthlib import OAuth1
 
 from isa import app
-from isa.models import Contribution
+from isa.models import Contribution, User
+from isa.users.utils import (get_all_users_contribution_data_per_campaign, get_user_ranking,
+                             get_current_user_images_improved)
 
 
 def get_country_from_code(country_code):
@@ -112,7 +115,7 @@ def create_campaign_country_stats_csv(stats_file_directory, campaign_name,
     """
     file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_country_stats.csv'
     # We build the campaign statistucs file here with the country stats stats
-    with open(file_directory, 'w') as csv_file:
+    with open(file_directory, 'w', encoding='UTF-8') as csv_file:
         writer = csv.writer(csv_file)
         fields = country_fields
         writer = csv.DictWriter(csv_file, fieldnames=fields)
@@ -135,7 +138,7 @@ def create_campaign_contributor_stats_csv(stats_file_directory, campaign_name,
     """
     # We build the campaign statistucs file here with the country stats stats
     file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_stats.csv'
-    with open(file_directory, 'w') as contrib_csv_file:
+    with open(file_directory, 'w', encoding='UTF-8') as contrib_csv_file:
         writer = csv.writer(contrib_csv_file)
         fields = contributor_fields
         writer = csv.DictWriter(contrib_csv_file, fieldnames=fields)
@@ -158,7 +161,7 @@ def create_campaign_all_stats_csv(stats_file_directory, campaign_name, all_stats
     """
     # We build the campaign statistucs file here with the country stats stats
     file_directory = stats_file_directory + '/' + campaign_name.replace(' ', '_') + '_all_stats.csv'
-    with open(file_directory, 'w') as all_stats_csv_file:
+    with open(file_directory, 'w', encoding='UTF-8') as all_stats_csv_file:
         writer = csv.writer(all_stats_csv_file)
         fields = all_stats_fields
         writer = csv.DictWriter(all_stats_csv_file, fieldnames=fields)
@@ -299,3 +302,65 @@ def get_campaign_country_data(campaign_id):
     for country_stats_data in all_country_statistics_data:
         country_stats_data['rank'] = get_country_ranking(all_country_statistics_data, country_stats_data['country'])
     return all_country_statistics_data
+
+
+def get_table_stats(campaign_id, username):
+    """
+    Fetch campaign table stats
+
+    Keyword arguments:
+    campaign_id -- Campaign id for said campaign
+    username -- username of the current user who's stats will be shown
+    """
+    # participantids for this campaign
+    campaign_user_names = []
+    # We are querrying all the users who participate in the campaign
+    contribs_for_campaign = Contribution.query.filter_by(campaign_id=campaign_id).all()
+    for campaign_contribution in contribs_for_campaign:
+        campaign_user_names.append(campaign_contribution.username)
+    # we get the unique ids so as not to count an id twice
+    campaign_user_names_set = set(campaign_user_names)
+    # We then re-initialize the ids array
+    campaign_user_names = []
+    # We now obtain the ranking for all the users in the system and their files improved
+    all_camapign_users_list = []
+    #  We iterate the individual participants id in a campaign and get the user info
+    for user_name in campaign_user_names_set:
+        user = User.query.filter_by(username=user_name).first()
+        all_camapign_users_list.append(user)
+        
+    # We get the users and their contribution data
+    all_contributors_data = get_all_users_contribution_data_per_campaign(all_camapign_users_list, campaign_id)
+    current_user_rank = get_user_ranking(all_contributors_data, username)
+    current_user_images_improved = get_current_user_images_improved(all_contributors_data, username)
+
+    # We add rank to all contributor's data
+    for user_data in all_contributors_data:
+        user_data['rank'] = get_user_ranking(all_contributors_data, user_data['username'])
+
+    # We get all the campaign coountry sorted data
+    all_campaign_country_statistics_data = get_campaign_country_data(campaign_id)
+    
+    campaign_table_stats = {}
+    campaign_table_stats['all_contributors_data'] = all_contributors_data
+    campaign_table_stats['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
+    campaign_table_stats['current_user_rank'] = current_user_rank
+    campaign_table_stats['current_user_images_improved'] = current_user_images_improved
+    campaign_table_stats['campaign_editors'] = len(campaign_user_names_set)
+    return campaign_table_stats
+
+
+def convert_latin_to_english(text):
+    """
+    Convert campaign names from Latin to English
+
+    Keyword arguments:
+    text -- Text to be converted to english
+    """
+    try:
+        text = text.decode('UTF-8')
+    except (UnicodeDecodeError, AttributeError):
+        pass
+    return "".join(char for char in
+                   unicodedata.normalize('NFKD', text)
+                   if unicodedata.category(char) != 'Mn')

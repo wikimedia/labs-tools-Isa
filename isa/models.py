@@ -20,7 +20,7 @@ class User(db.Model, UserMixin):
         # This is what is shown when object is printed
         return "User({}, {})".format(
                self.username,
-               self.pref_lang)
+               self.caption_languages)
 
 
 class Contribution(db.Model):
