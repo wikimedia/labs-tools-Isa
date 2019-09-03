@@ -44,7 +44,7 @@ msgstr "Désolé %(campaign_name)s n'a pas pu être créé"
 #: campaigns/routes.py:251
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr "wla Campagne créée!"
+msgstr "Campagne créée!"
 
 #: campaigns/routes.py:254
 msgid "Create a campaign"
