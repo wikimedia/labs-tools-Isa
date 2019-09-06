@@ -124,11 +124,11 @@ def get_current_user_images_improved(all_contributors_data, username):
     username -- the user who's images improved is to be obtained
     """
 
-    for user_data in all_contributors_data:
-        if user_data['username'] == username:
-            return user_data['images_improved']
-        else:
-            return gettext('None')
+    current_user_images_improved = 0
+    for contributors_data in all_contributors_data:
+        if contributors_data.get('username') == username:
+            current_user_images_improved = contributors_data.get('images_improved')
+    return current_user_images_improved
 
 
 def build_user_pref_lang(lang_1, lang_2, lang_3, lang_4, lang_5, lang_6):

@@ -14,8 +14,7 @@ from requests_oauthlib import OAuth1
 
 from isa import app
 from isa.models import Contribution, User
-from isa.users.utils import (get_all_users_contribution_data_per_campaign, get_user_ranking,
-                             get_current_user_images_improved)
+from isa.users.utils import (get_all_users_contribution_data_per_campaign, get_user_ranking)
 
 
 def get_country_from_code(country_code):
@@ -332,7 +331,6 @@ def get_table_stats(campaign_id, username):
     # We get the users and their contribution data
     all_contributors_data = get_all_users_contribution_data_per_campaign(all_camapign_users_list, campaign_id)
     current_user_rank = get_user_ranking(all_contributors_data, username)
-    current_user_images_improved = get_current_user_images_improved(all_contributors_data, username)
 
     # We add rank to all contributor's data
     for user_data in all_contributors_data:
@@ -345,7 +343,6 @@ def get_table_stats(campaign_id, username):
     campaign_table_stats['all_contributors_data'] = all_contributors_data
     campaign_table_stats['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
     campaign_table_stats['current_user_rank'] = current_user_rank
-    campaign_table_stats['current_user_images_improved'] = current_user_images_improved
     campaign_table_stats['campaign_editors'] = len(campaign_user_names_set)
     return campaign_table_stats
 

@@ -21,7 +21,7 @@ from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, get_
 from isa.main.utils import commit_changes_to_db
 from isa.models import Campaign, Contribution, User
 from isa.users.utils import (get_user_language_preferences, get_all_users_contribution_data_per_campaign,
-                             get_user_ranking)
+                             get_user_ranking, get_current_user_images_improved)
 from isa.utils.languages import getLanguages
 
 
@@ -97,6 +97,8 @@ def getCampaignById(id):
     contributor_fields = ['rank', 'username', 'images_improved']
     contributor_stats_data = campaign_table_stats['all_contributors_data']
     
+    current_user_images_improved = get_current_user_images_improved(contributor_stats_data, username)
+
     contributor_csv_file = create_campaign_contributor_stats_csv(stats_file_directory,
                                                                  campaign_name,
                                                                  contributor_fields,
@@ -118,7 +120,7 @@ def getCampaignById(id):
                             all_contributors_data=campaign_table_stats['all_contributors_data'],
                             current_user_rank=campaign_table_stats['current_user_rank'],
                             all_campaign_country_statistics_data=campaign_table_stats['all_campaign_country_statistics_data'],
-                            current_user_images_improved=campaign_table_stats['current_user_images_improved'],
+                            current_user_images_improved=current_user_images_improved,
                             contributor_csv_file=contributor_csv_file,
                             country_csv_file=country_csv_file))
 
