@@ -1,9 +1,23 @@
 {% extends "main/layout.html" %}
 {% block content %}
 <div class="container text-center page-header">
-    <h1 class=" pt-1 pb-0 d-flex justify-content-center">{{ _('Create new Campaign') }}</h1>
+    <h1 class=" pt-1 pb-0 d-flex justify-content-center">
+        {% if is_update %}
+            {{ _('Update Campaign Details') }}
+        {% else %}
+            {{ _('Create new Campaign') }}
+        {% endif %}
+    </h1>
     <hr class="pt-0" width="35%">
-    <p> {{ _('Fill in the form below to create you campaign') }}, <br> {{ _('Fields marked with * are mandatory') }}</p>
+    <p> 
+        {% if is_update %}
+            {{ _('You are updating') }} {{ campaign.campaign_name }}
+        {% else %}
+            {{ _('Fill in the form below to create you campaign') }}
+        {% endif %}
+        <br> 
+        {{ _('Fields marked with * are mandatory') }}
+    </p>
 </div>
 
 <div class="container">

@@ -222,7 +222,7 @@ def CreateCampaign():
                 flash(gettext('%(campaign_name)s Campaign created!',
                               campaign_name=form.campaign_name.data), 'success')
                 return redirect(url_for('campaigns.getCampaignById', id=campaign.id))
-        return render_template('campaign/create_campaign.html', title=gettext('Create a campaign'),
+        return render_template('campaign/campaign-form.html', title=gettext('Create a campaign'),
                                form=form, datetime=datetime,
                                username=username,
                                session_language=session_language,
@@ -240,6 +240,7 @@ def contributeToCampaign(id):
     # We select the campign whose id comes into the route
     campaign = Campaign.query.filter_by(id=id).first()
     return render_template('campaign/campaign_entry.html',
+                           is_update=False,
                            title=gettext('%(campaign_name)s - Contribute',
                                          campaign_name=campaign.campaign_name),
                            id=id,
@@ -312,7 +313,8 @@ def updateCampaign(id):
         else:
             flash(gettext('Booo! %(campaign_name)s Could not be updated!',
                           campaign_name=form.campaign_name.data), 'danger')
-        return render_template('campaign/update_campaign.html',
+        return render_template('campaign/campaign-form.html',
+                               is_update=True,
                                title=gettext('%(campaign_name)s - Update',
                                              campaign_name=campaign.campaign_name),
                                campaign=campaign,
