@@ -181,7 +181,7 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.depicts_metadata( class="checkbox-inline mt-1" ) }}
+                {{ form.depicts_metadata( class="checkbox-inline mt-1 metadata-type-checkbox" ) }}
                 {% endif %}
                 <small id="depicts-metadataHelp" class="form-text text-muted">{{ _('Select to collect Depicts metadata in the campiagn') }}</small>       
             </div>
@@ -196,7 +196,7 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.captions_metadata( class='checkbox-inline mt-1' ) }}
+                {{ form.captions_metadata( class='checkbox-inline mt-1 metadata-type-checkbox' ) }}
                 {% endif %}
                 <small id="caption-metadataHelp" class="form-text text-muted">{{ _('Select to collect Caption metadata in the campiagn') }}</small>       
             </div>

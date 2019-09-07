@@ -9,7 +9,7 @@ from wtforms.validators import DataRequired, InputRequired, Length, NumberRange
 class CampaignForm(FlaskForm):
     campaign_name = StringField(validators=[DataRequired(),
                                 Length(min=2, max=20)])
-    short_description = StringField(widget=widgets.TextArea())
+    short_description = StringField(validators=[DataRequired()], widget=widgets.TextArea())
     start_date = StringField(id='start_date_datepicker', validators=[InputRequired()])
     end_date = StringField(id='end_date_datepicker')
     categories = HiddenField()
@@ -20,23 +20,6 @@ class CampaignForm(FlaskForm):
     campaign_image = StringField('Campaign Image')
     long_description = StringField(widget=widgets.TextArea())
     submit = SubmitField()
-
-
-class UpdateCampaignForm(FlaskForm):
-    campaign_name = StringField('Campaign Name', validators=[DataRequired(),
-                                Length(min=2, max=20)])
-    short_description = StringField('Short description of Campaign', widget=widgets.TextArea())
-    start_date = StringField('Start Date ', id='start_date_datepicker', validators=[InputRequired()])
-    end_date = StringField('Close Date ', id='end_date_datepicker')
-    categories = HiddenField()
-    campaign_images = HiddenField()
-    depicts_metadata = BooleanField('Depicts')
-    captions_metadata = BooleanField('Captions')
-    campaign_type = BooleanField('This is a Wiki Loves Campaign')
-    campaign_image = StringField('Campaign Image')
-    long_description = StringField('Long description of Campaign(full about info)',
-                                   widget=widgets.TextArea())
-    submit = SubmitField('Update Campaign')
 
 
 class CaptionsLanguageForm(FlaskForm):

@@ -167,10 +167,13 @@ function clearWikiLovesValidation() {
 // Once categories confirmed checked or unchanged, refire the submit click
 // but this time continue with default submit bahaviour
 // Also continue with default submit if form is invalid to trigger browser warnings
+// Todo: Setup custom validation for all fields as separate function
 var categoriesChecked = false,
     formIsValid = false;
 $('#submit').click(function(ev) {
-    formIsValid = $('form')[0].checkValidity();
+
+    // Checks the simple "required" form fileds
+    formIsValid = $('form')[0].checkValidity(); 
     
     if (!categoriesChecked && formIsValid) {
         // Prevent form submission if categories not checked yet
@@ -178,20 +181,21 @@ $('#submit').click(function(ev) {
         var categorySelections = getCategoryData();
 
         if (categorySelections.length === 0) {
-            alert( gettext('You must select at least one category for your campaign.') )
-            return;
+            return alert(gettext('You must select at least one category for your campaign.'));
         }
         if (isWikiLovesCampaign && !categoriesAreValid) {
-            ev.preventDefault();
-            alert( gettext("Some of the categories you have chosen don not have the correct syntax for a Wiki Loves Campaign.") + '\n' + 
-                gettext("Please check your selections and try again."))
-            return;
+            return alert(gettext('Some of the categories you have chosen don not have the correct syntax for a Wiki Loves Campaign.') + '\n' + 
+                gettext('Please check your selections and try again.'));
         }
+
+        var metadataTypesAreValid = $.makeArray($('.metadata-type-checkbox')).some(function(element) {
+            return element.checked;
+        })
+        if (!metadataTypesAreValid) return alert(gettext('Please select at least one type from the "Metadata to collect" section'));
 
         var finalCategoryData = $('#categories-data')[0].value = JSON.stringify(categorySelections);
         
         if (finalCategoryData !== initialCategoryData) {
-            console.log("categories changed", finalCategoryData, initialCategoryData)
             // Categories are newly added or have changed
             // Show "checking categories" notice
             $('#category-checking-notice').removeClass("d-none");

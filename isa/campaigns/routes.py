@@ -12,7 +12,7 @@ from flask import render_template, redirect, url_for, flash, request, session, B
 from flask_login import current_user
 
 from isa import app, db, gettext
-from isa.campaigns.forms import CampaignForm, UpdateCampaignForm
+from isa.campaigns.forms import CampaignForm
 from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, get_campaign_category_list,
                                  get_country_from_code, compute_campaign_status,
                                  create_campaign_country_stats_csv, create_campaign_contributor_stats_csv,
@@ -258,7 +258,7 @@ def updateCampaign(id):
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
-    form = UpdateCampaignForm()
+    form = CampaignForm()
     if not username:
         flash(gettext('You need to Login to update a campaign'), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
