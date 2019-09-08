@@ -381,7 +381,6 @@ def postContribution():
             # We make an api call with the current contribution data and get baserevid
             lastrevid = make_edit_api_call(csrf_token,
                                            api_auth_token,
-                                           username,
                                            contrib_data_list[i])
             
             if lastrevid is not None:

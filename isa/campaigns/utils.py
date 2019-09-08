@@ -196,7 +196,7 @@ def generate_csrf_token(app_key, app_secret, user_key, user_secret):
     return CSRF_TOKEN, auth
 
 
-def make_edit_api_call(csrf_token, api_auth_token, username, contribution_data):
+def make_edit_api_call(csrf_token, api_auth_token, contribution_data):
     """
     Make edit API call to make changes to an image on Commons.
 
@@ -211,6 +211,7 @@ def make_edit_api_call(csrf_token, api_auth_token, username, contribution_data):
     params = contribution_data['api_options']
     edit_type = contribution_data['edit_type']
     edit_action = contribution_data['edit_action']
+    campaign_id = contribution_data['campaign_id']
     
     # Serialise JSON data in 'claim' for depicts edits
     # but NOT for 'remove' action, as claim is a string in this case
@@ -220,7 +221,7 @@ def make_edit_api_call(csrf_token, api_auth_token, username, contribution_data):
     params['format'] = 'json'
     params['token'] = csrf_token
     params['formatversion'] = 1
-    params['summary'] = username + '@ISA'
+    params['summary'] = 'campaign' + str(campaign_id) + '@ISA'
 
     # This is the actual edit post request
     # We sign that with the authentication
