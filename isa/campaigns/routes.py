@@ -17,7 +17,8 @@ from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, get_
                                  get_country_from_code, compute_campaign_status,
                                  create_campaign_country_stats_csv, create_campaign_contributor_stats_csv,
                                  create_campaign_all_stats_csv, get_all_camapign_stats_data,
-                                 get_campaign_country_data, make_edit_api_call, generate_csrf_token)
+                                 get_campaign_country_data, make_edit_api_call, generate_csrf_token,
+                                 get_stats_data_points)
 from isa.main.utils import commit_changes_to_db
 from isa.models import Campaign, Contribution, User
 from isa.users.utils import (get_user_language_preferences, get_all_users_contribution_data_per_campaign,
@@ -332,6 +333,16 @@ def getCampaignCategories():
     # We get the campaign categories
     campaign = Campaign.query.filter_by(id=campaign_id).first()
     return campaign.categories
+
+
+@campaigns.route('/api/get-campaign-graph-stats-data', methods=['GET', 'POST'])
+def getCampaignGraphStatsData():
+    # we get the campaign_id from the route request
+    campaign_id = request.args.get('campaign')
+    # We get the current user's username
+    username = session.get('username', None)
+    data_points = get_stats_data_points(campaign_id, username)
+    return json.dumps(data_points)
 
 
 @campaigns.route('/api/post-contribution', methods=['POST', 'GET'])

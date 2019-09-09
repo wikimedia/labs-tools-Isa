@@ -15,7 +15,8 @@ module.exports = Object.keys(languages).map(function(language) {
             'campaign-directory': './isa/src/campaign-directory.js',
             'campaign-form': './isa/src/campaign-form.js',
             'user-settings': './isa/src/user-settings.js',
-            'main': './isa/src/main.js'
+            'main': './isa/src/main.js',
+            'stats': './isa/src/stats.js'
         },
         output: {
             path: path.resolve(__dirname, 'isa/static/js/' + language),

@@ -16,6 +16,18 @@
         <div class="stat-label" title="{{ _('Total number of contributions made to this campaign') }}">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
     </div>
     <div class="stats-table mx-auto">
+        <div class="top-user-table mr-md-4">
+            <div id="contributorChartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+
+        {% if is_wiki_loves_campaign %}
+        <div class="top-country-table mr-md-4">
+            <div id="countryChartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+        {% endif %}
+    </div>
+    <br>
+    <div class="stats-table mx-auto">
                 <div class="top-user-table mr-md-4">				
             <table class="table table-sm table-light text-center">
                 <h6>{{ _('Top Contributors') }}</h6>
@@ -81,6 +93,10 @@
             </div>
         {% endif %}
     </div>
+    <br>
         <a  class="btn btn-sm btn-primary" href="{{url_for('campaigns.downloadAllCampaignStats', id=campaign.id, filename=campaign_all_stats_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download all stats (CSV)') }}</a>
     </div></div>
 {% endblock content%}
+{% block scripts%}
+    <script src="{{url_for('static', filename='js/') + session_language + '/stats.js'}}"></script>
+{% endblock scripts%}
