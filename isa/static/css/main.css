@@ -180,6 +180,11 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 more-stats-btn {
     margin-top: 20px;
 }
+.campaign-dates {
+    display: inline-flex;
+    width: 50%;
+    justify-content: space-evenly
+}
 /* User Stats*/
 .user-stats .stats-table th {
     width: 50%
@@ -196,7 +201,9 @@ more-stats-btn {
     .stats-page.campaign-stats {max-width: 100%}
     .stats-page.campaign-stats .stats-table {
     display: flex}
- 
+    .stats-meta p {margin:0; font-size: 80%;}
+    .page-header.stats-page {padding-top: 0}
+    .page-header.stats-page h1 {font-size: 3rem;}
  
 /******** LAYOUT TEMPLATE ***********/
  

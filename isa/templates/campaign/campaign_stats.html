@@ -1,19 +1,23 @@
 {% extends "main/layout.html" %}
-{% block content%}
-<div class="container page-header text-center">
-    <h1>{{ campaign.campaign_name }} - {{ _('Stats') }}</h1>
+{% block content%}   
+<a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm close-stats"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: {{ _('Home Page') }}</a> 
+<h4 class="text-center text-muted">CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN</h4>
+<div class="container page-header stats-page text-center">
+    <h1>{{ campaign.campaign_name }}</h1>
     <hr>
-   <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: {{ _('Home Page') }}</a> 
+<div class="campaign-dates">
+        <h6><strong>{{ _('From')}}: </strong> {{campaign.start_date}}</h6>
+        <h6><strong>{{ _('Till') }}: </strong> {{campaign.end_date}}</h6>	
+    </div>
 </div>
 
 <div class="container campaign-stats stats-page text-center">
-    <div class="campaign-panel">
-        <div class="campaign-stats-title">
-            <h4>{{ _('Campaign Progress') }}</h4>
-        </div>
+    <div class="campaign-panel pt-4">
+
     <div class="main-stats-label-group mx-auto">
-        <div class="stat-label" title="{{ _('Total number of images in this campaign') }}">{{ _('Images') }}<br>{{ campaign.campaign_images }}</div>
-        <div class="stat-label" title="{{ _('Total number of contributions made to this campaign') }}">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
+        <div class="stat-label" title="{{ _('Total number of images in this campaign') }}"><strong>{{ _('Images') }}:</strong> {{ campaign.campaign_images }}</div>
+        <div class="stat-label" title="{{ _('Total number of contributions made to this campaign') }}"><strong>{{ _('Contributions') }}:</strong> {{ campaign_contributions }}</div>
+
     </div>
     <div class="stats-table mx-auto">
         <div class="top-user-table mr-md-4">
@@ -27,7 +31,8 @@
         {% endif %}
     </div>
     <br>
-    <div class="stats-table mx-auto">
+   
+    <!--<div class="stats-table mx-auto">
                 <div class="top-user-table mr-md-4">				
             <table class="table table-sm table-light text-center">
                 <h6>{{ _('Top Contributors') }}</h6>
@@ -92,10 +97,16 @@
                 </table>
             </div>
         {% endif %}
-    </div>
-    <br>
-        <a  class="btn btn-sm btn-primary" href="{{url_for('campaigns.downloadAllCampaignStats', id=campaign.id, filename=campaign_all_stats_csv_file) }}"  class="btn btn-sm btn-primary" >{{ _('Download all stats (CSV)') }}</a>
+    </div>-->
+   
+           <div class="stats-meta mb-3">
+        <p>{{campaign.short_description}}</p>
+        <p>Source: ISA Tool |  <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}"> tools.wmflabs.org{{url_for('campaigns.getCampaignById', id=campaign.id ) }} </a></p>
+         <p>License: CC BY SA 4.0</p>
+        </div>
+        <a  class="btn btn-sm btn-primary" href="{{url_for('campaigns.downloadAllCampaignStats', id=campaign.id, filename=campaign_all_stats_csv_file) }}">{{ _('Download all stats (CSV)') }}</a>
     </div></div>
+ 
 {% endblock content%}
 {% block scripts%}
     <script src="{{url_for('static', filename='js/') + session_language + '/stats.js'}}"></script>
