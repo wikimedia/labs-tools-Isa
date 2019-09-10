@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-21 16:06+0100\n"
+"POT-Creation-Date: 2019-09-10 09:40+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,68 +22,267 @@ msgstr ""
 msgid "Campaigns"
 msgstr ""
 
-#: campaigns/routes.py:57 campaigns/routes.py:184
+#: campaigns/routes.py:57 campaigns/routes.py:137
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr ""
 
-#: campaigns/routes.py:156 campaigns/routes.py:191
+#: campaigns/routes.py:110 campaigns/routes.py:162
 msgid "Campaign - "
 msgstr ""
 
-#: campaigns/routes.py:214
+#: campaigns/routes.py:185
 msgid "You need to Login to create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:244
+#: campaigns/routes.py:215
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr ""
 
-#: campaigns/routes.py:251
+#: campaigns/routes.py:222
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr ""
 
-#: campaigns/routes.py:254
+#: campaigns/routes.py:225
 msgid "Create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:272
+#: campaigns/routes.py:244
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr ""
 
-#: campaigns/routes.py:291
+#: campaigns/routes.py:263
 msgid "You need to Login to update a campaign"
 msgstr ""
 
-#: campaigns/routes.py:317
+#: campaigns/routes.py:289
 msgid "Campaign update failed please try later!"
 msgstr ""
 
-#: campaigns/routes.py:319
+#: campaigns/routes.py:291
 msgid "Update Succesfull !"
 msgstr ""
 
-#: campaigns/routes.py:327
+#: campaigns/routes.py:299
 #, python-format
 msgid ""
-"You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
+"You cannot update this campaign, Contact Manager "
+"User:%(campaign_manager)s "
 msgstr ""
 
-#: campaigns/routes.py:342
+#: campaigns/routes.py:314
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr ""
 
-#: campaigns/routes.py:345
+#: campaigns/routes.py:318
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr ""
 
-#: campaigns/routes.py:383
+#: campaigns/routes.py:356
 msgid "You need to login to participate"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:6
+msgid "Update Campaign Details"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:8
+msgid "Create new Campaign"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:14
+msgid "You are updating"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:16
+msgid "Fill in the form below to create you campaign"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:19
+msgid "Fields marked with * are mandatory"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:29
+msgid "Campaign Name"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:41
+msgid "This is the name specific to your campaign, not the main project."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:41
+msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:48
+msgid "Short description of Campaign (144 characters)"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:60
+msgid "What are users going to be working on"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:68
+#: templates/campaign/campaigns.html:24
+msgid "Start Date"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:80
+msgid "Set campaign start date"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:83
+#: templates/campaign/campaigns.html:25
+msgid "End Date"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:95
+msgid "Set campaign end date"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:102
+msgid "This is a Wiki Loves Campaign"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:112
+msgid ""
+"When set up correctly this option allows participants to choose what "
+"country they want to see images from and records contributions by "
+"country."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:112
+msgid " You can select multiple categories of the correct type."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:112
+msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:114
+msgid ""
+"Requires categories of the form images from Wiki Loves "
+"<strong><em>project</em></strong> in a specific "
+"<strong><em>year</em></strong>, eg “Images from Wiki Loves "
+"<strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change "
+"<strong><em>project</em></strong> and year as "
+"<strong><em>required</em></strong>)"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:116
+msgid "Some of the categories chosen below do not have the correct syntax"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:124
+msgid "Categories to use in this campaign"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:124
+msgid ""
+"Search for the Wikimedia Commons categories that contain the images you "
+"wish to use in your campaign."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:124
+msgid ""
+"If you want a category and ALL of its subcategories use the 'Depth' "
+"option to choose how many levels down you want to go (leave depth on 0 "
+"for Wiki loves campaigns)."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:151
+msgid "Choose categories to use in the campaign"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:155
+msgid "Name"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:156
+msgid "Depth"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:164
+msgid ""
+"The categories in red do not have the correct syntax for the \"Wiki Loves"
+" campaign\" feature"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:165
+msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:171
+msgid "Metadata to collect in the Campaign"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:171
+msgid ""
+"Choose what type of <strong>metadata</strong> you want to collect in your"
+" campaign."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:171
+msgid "You must select at least one of the options below."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:171
+msgid "To learn more about Depicts and Caption meta-data see the help page."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:174
+#: templates/campaign/campaign_entry.html:49
+msgid "Depicts"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:186
+msgid "Select to collect Depicts metadata in the campiagn"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:189
+#: templates/campaign/campaign_entry.html:79
+msgid "Captions"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:201
+msgid "Select to collect Caption metadata in the campiagn"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:208
+msgid "Campaign Image"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:208
+msgid ""
+"The maximum height for the campaign image is 150px. Images should either "
+"be a banner image or a logo."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:208
+msgid "Portrait or square photos are not recommended."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:220
+msgid ""
+"Enter the FILE NAME only of a image from commons to display on the "
+"Campaign home page."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:226
+msgid "Long description of Campaign (full about info)"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:238
+msgid "Why it is important that users contribute to the campaign?"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:244
+msgid "Publish Campaign"
 msgstr ""
 
 #: templates/campaign/campaign.html:15
@@ -127,8 +326,11 @@ msgstr ""
 msgid "Total number of contributions made to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:35
+#: templates/campaign/campaign.html:35 templates/campaign/campaign.html:45
+#: templates/campaign/campaign.html:77 templates/campaign/campaign.html:122
 #: templates/campaign/campaign_stats.html:16
+#: templates/campaign/campaign_stats.html:26
+#: templates/campaign/campaign_stats.html:58
 #: templates/campaign/campaigns.html:23
 msgid "Contributions"
 msgstr ""
@@ -141,13 +343,6 @@ msgstr ""
 #: templates/campaign/campaign.html:44
 #: templates/campaign/campaign_stats.html:25
 msgid "Contributor"
-msgstr ""
-
-#: templates/campaign/campaign.html:45 templates/campaign/campaign.html:77
-#: templates/campaign/campaign.html:122
-#: templates/campaign/campaign_stats.html:26
-#: templates/campaign/campaign_stats.html:58
-msgid "Images Improved"
 msgstr ""
 
 #: templates/campaign/campaign.html:63
@@ -254,7 +449,6 @@ msgid "Description"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/update_campaign.html:90
 msgid "Categories"
 msgstr ""
 
@@ -262,14 +456,18 @@ msgstr ""
 msgid "Camera Location"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:42 src/participate.js:156
+#: templates/campaign/campaign_entry.html:42
 msgid "show all metadata from commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:49
-#: templates/campaign/create_campaign.html:136
-#: templates/campaign/update_campaign.html:134
-msgid "Depicts"
+#: templates/campaign/campaign_entry.html:50
+msgid "Adding Depict Statements"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:50
+msgid ""
+"Make it Simple: Use simple words and concepts to describe what you see in"
+" each image (e.g. cat, mountain, Taj Mahal)"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:54
@@ -305,9 +503,14 @@ msgid "To mark the prominent element/s in the image, click on the flag icon"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:79
-#: templates/campaign/create_campaign.html:151
-#: templates/campaign/update_campaign.html:149
-msgid "Captions"
+msgid "Writing Captions"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:79
+msgid ""
+"Include any culturally specific, scientific or technical information that"
+" you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to"
+" make the information richer."
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:87
@@ -338,19 +541,20 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:7
 msgid ""
-"On this page are the curated campaigns that are currently running as part of "
-"the ISA tool."
+"On this page are the curated campaigns that are currently running as part"
+" of the ISA tool."
 msgstr ""
 
 #: templates/campaign/campaigns.html:7
 msgid ""
-"Click on the name of a campaign to get started and add structured data to an "
-"image."
+"Click on the name of a campaign to get started and add structured data to"
+" an image."
 msgstr ""
 
 #: templates/campaign/campaigns.html:7
 msgid ""
-"You can access information on the previous Campaigns in the Archive section."
+"You can access information on the previous Campaigns in the Archive "
+"section."
 msgstr ""
 
 #: templates/campaign/campaigns.html:14
@@ -385,20 +589,8 @@ msgstr ""
 msgid "Campaign start date"
 msgstr ""
 
-#: templates/campaign/campaigns.html:24
-#: templates/campaign/create_campaign.html:54
-#: templates/campaign/update_campaign.html:56
-msgid "Start Date"
-msgstr ""
-
 #: templates/campaign/campaigns.html:25
 msgid "Campaign end date"
-msgstr ""
-
-#: templates/campaign/campaigns.html:25
-#: templates/campaign/create_campaign.html:69
-#: templates/campaign/update_campaign.html:71
-msgid "End Date"
 msgstr ""
 
 #: templates/campaign/campaigns.html:26
@@ -417,7 +609,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: templates/campaign/campaigns.html:44 users/utils.py:130
+#: templates/campaign/campaigns.html:44
 msgid "None"
 msgstr ""
 
@@ -453,109 +645,6 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:75
 msgid "You must be logged in to create a campaign."
-msgstr ""
-
-#: templates/campaign/create_campaign.html:4
-msgid "Create new Campaign"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:6
-msgid "Fill in the form below to create you campaign"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:6
-#: templates/campaign/update_campaign.html:6
-msgid "Fields marked with * are mandatory"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:15
-#: templates/campaign/update_campaign.html:17
-msgid "Campaign Name"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:34
-#: templates/campaign/update_campaign.html:36
-msgid "Short description of Campaign"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:66
-#: templates/campaign/update_campaign.html:68
-msgid "Set campaign start date"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:81
-#: templates/campaign/update_campaign.html:83
-msgid "Set campaign end date"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:89
-msgid "Categories to use in this campaign"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:117
-#: templates/campaign/update_campaign.html:115
-msgid "Choose categories to use in the campaign"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:121
-#: templates/campaign/update_campaign.html:119
-msgid "Name"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:122
-#: templates/campaign/update_campaign.html:120
-msgid "Depth"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:133
-#: templates/campaign/update_campaign.html:131
-msgid "Metadata to collect in the Campaign"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:148
-#: templates/campaign/update_campaign.html:146
-msgid "Select to collect Depicts metadata in the campiagn"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:163
-#: templates/campaign/update_campaign.html:161
-msgid "Select to collect Caption metadata in the campiagn"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:170
-#: templates/campaign/update_campaign.html:168
-msgid "This is a Wiki Loves Campaign"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:182
-msgid "Select if this is a Wiki Love Campaign"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:188
-#: templates/campaign/update_campaign.html:185
-msgid "Campaign Image"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:206
-#: templates/campaign/update_campaign.html:202
-msgid "Long description of Campaign (full about info)"
-msgstr ""
-
-#: templates/campaign/create_campaign.html:224
-#: templates/campaign/update_campaign.html:220
-msgid "Publish Campaign"
-msgstr ""
-
-#: templates/campaign/update_campaign.html:4
-msgid "Update Campaign Details"
-msgstr ""
-
-#: templates/campaign/update_campaign.html:6
-msgid "You are updating"
-msgstr ""
-
-#: templates/campaign/update_campaign.html:180
-msgid "Select if this is a Wiki Loves Campaign (important)"
 msgstr ""
 
 #: templates/errors/403.html:8
@@ -601,8 +690,8 @@ msgstr ""
 
 #: templates/main/home.html:15
 msgid ""
-"is a multilingual, mobile-first tool, that makes it easy for people to add "
-"'micro-contributions' in the form of"
+"is a multilingual, mobile-first tool, that makes it easy for people to "
+"add 'micro-contributions' in the form of"
 msgstr ""
 
 #: templates/main/home.html:16
@@ -615,8 +704,8 @@ msgstr ""
 
 #: templates/main/home.html:17
 msgid ""
-"(descriptions, captions, tags, etc.) to images that have been contributed to "
-"Wikimedia Commons by Wiki Loves competitions."
+"(descriptions, captions, tags, etc.) to images that have been contributed"
+" to Wikimedia Commons by Wiki Loves competitions."
 msgstr ""
 
 #: templates/main/home.html:18
@@ -637,8 +726,8 @@ msgstr ""
 
 #: templates/main/home.html:23
 msgid ""
-"In the long run, the intent behind the tool is to increase the use of the "
-"knowledge that is reflected by each image hosted on Wikimedia Commons. "
+"In the long run, the intent behind the tool is to increase the use of the"
+" knowledge that is reflected by each image hosted on Wikimedia Commons. "
 msgstr ""
 
 #: templates/main/home.html:24
@@ -661,8 +750,8 @@ msgstr ""
 
 #: templates/main/home.html:27
 msgid ""
-"The tool is also designed to be a host of micro contribution competitions "
-"proposed by project leaders."
+"The tool is also designed to be a host of micro contribution competitions"
+" proposed by project leaders."
 msgstr ""
 
 #: templates/main/home.html:28
@@ -673,8 +762,8 @@ msgstr ""
 
 #: templates/main/home.html:29
 msgid ""
-" ISA is not only an acronym for Information Structured Acceleration, but is "
-"also a chiShona language word for 'put' or 'place'."
+" ISA is not only an acronym for Information Structured Acceleration, but "
+"is also a chiShona language word for 'put' or 'place'."
 msgstr ""
 
 #: templates/main/layout.html:36
@@ -711,8 +800,8 @@ msgstr ""
 
 #: templates/main/layout.html:109
 msgid ""
-"was developed as a collaboration between Wiki In Africa, Histropedia and the "
-"Structured Data on Commons project."
+"was developed as a collaboration between Wiki In Africa, Histropedia and "
+"the Structured Data on Commons project."
 msgstr ""
 
 #: templates/main/layout.html:109
@@ -731,12 +820,26 @@ msgstr ""
 msgid "Content added through the tool to Wikimedia Commons is released under"
 msgstr ""
 
-#: templates/users/user_settings.html:6
+#: templates/users/user_settings.html:6 templates/users/user_settings.html:9
 msgid "Caption Languages"
 msgstr ""
 
 #: templates/users/user_settings.html:9
 msgid "Select upto 6 languages for captions"
+msgstr ""
+
+#: templates/users/user_settings.html:9
+msgid "Captions can be added in multiple languages for each image."
+msgstr ""
+
+#: templates/users/user_settings.html:9
+msgid ""
+"The languages you select on this page will appear on the page when you "
+"are viewing an image."
+msgstr ""
+
+#: templates/users/user_settings.html:9
+msgid "Select all the languages you are comfortable contributing in."
 msgstr ""
 
 #: templates/users/user_settings.html:19 templates/users/user_settings.html:25
@@ -792,76 +895,3 @@ msgstr ""
 msgid "%(username)s's - Settings"
 msgstr ""
 
-#: src/campaign.js:18
-msgid "Unknown country"
-msgstr ""
-
-#: src/campaign-directory.js:27
-msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
-
-#: src/campaign-directory.js:28
-msgid "No entries"
-msgstr ""
-
-#: src/campaign-directory.js:37
-msgid "Search:"
-msgstr ""
-
-#: src/campaign-directory.js:38
-msgid "No matching records found"
-msgstr ""
-
-#: src/campaign-directory.js:40
-msgid "First"
-msgstr ""
-
-#: src/campaign-directory.js:41
-msgid "Last"
-msgstr ""
-
-#: src/campaign-directory.js:42
-msgid "Next"
-msgstr ""
-
-#: src/campaign-directory.js:43
-msgid "Previous"
-msgstr ""
-
-#: src/participate.js:59
-msgid "No images found for this campaign!"
-msgstr ""
-
-#: src/participate.js:70
-msgid "Something went wrong getting campaign images"
-msgstr ""
-
-#: src/participate.js:89
-msgid "Search for things you see in the image"
-msgstr ""
-
-#: src/participate.js:152
-msgid "minimise metadata from commons"
-msgstr ""
-
-#: src/participation-manager.js:150
-msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
-
-#: src/participation-manager.js:155
-msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
-
-#: src/participation-manager.js:159
-msgid ""
-"Oops! Something went wrong, your edits have not been saved to Wikimedia "
-"Commons"
-msgstr ""
-
-#: src/participation-manager.js:582
-msgid "Mark this depicted item as prominent"
-msgstr ""
-
-#: src/participation-manager.js:583
-msgid "Mark this depicted item as NOT prominent"
-msgstr ""
