@@ -339,13 +339,48 @@ def get_table_stats(campaign_id, username):
 
     # We get all the campaign coountry sorted data
     all_campaign_country_statistics_data = get_campaign_country_data(campaign_id)
-    
+
     campaign_table_stats = {}
     campaign_table_stats['all_contributors_data'] = all_contributors_data
     campaign_table_stats['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
     campaign_table_stats['current_user_rank'] = current_user_rank
     campaign_table_stats['campaign_editors'] = len(campaign_user_names_set)
     return campaign_table_stats
+
+
+def get_stats_data_points(campaign_id, username):
+    """
+    Get the data points for the pie charts
+
+    Keyword arguments:
+    campaign_id -- id of the campaign in question
+    username -- username of the currently logged in user
+    """
+    campaign_id = int(campaign_id)
+    campaign_table_stats = get_table_stats(campaign_id, username)
+    all_contributors_data = campaign_table_stats['all_contributors_data']
+    all_campaign_country_statistics_data = campaign_table_stats['all_campaign_country_statistics_data']
+    stats_data_points = {}
+    contributors_datapoints_content = []
+    country_datapoints_content = []
+
+    # We build the data points for the contributor data
+    for contribor_data in all_contributors_data:
+        data_point = {}
+        data_point['label'] = contribor_data.get('username')
+        data_point['y'] = contribor_data.get('images_improved')
+        contributors_datapoints_content.append(data_point)
+
+    # We build the data points for the contributor data
+    for campaign_country_statistics_data in all_campaign_country_statistics_data:
+        data_point = {}
+        data_point['label'] = campaign_country_statistics_data.get('country')
+        data_point['y'] = campaign_country_statistics_data.get('images_improved')
+        country_datapoints_content.append(data_point)
+
+    stats_data_points['0'] = contributors_datapoints_content
+    stats_data_points['1'] = country_datapoints_content
+    return stats_data_points
 
 
 def convert_latin_to_english(text):
