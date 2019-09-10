@@ -50,7 +50,7 @@
                 {% for contributor_data in all_contributors_data %}
                     <tr>
                         <th scope="row">{{contributor_data['rank']}}</th>
-                        <td>{{contributor_data['username']}}</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/User:{{ contributor_data['username'] }}">{{contributor_data['username']}}</a></td>
                         <td>{{contributor_data['images_improved']}}</td>
                     </tr>
                 {% endfor %}
