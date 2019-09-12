@@ -30,7 +30,7 @@ class Contribution(db.Model):
     file = db.Column(db.String(210), nullable=False)
     edit_type = db.Column(db.String(10), nullable=False)
     edit_action = db.Column(db.String(7), nullable=False)
-    country = db.Column(db.String(15), nullable=False, default='')
+    country = db.Column(db.String(50), nullable=False, default='')
     depict_item = db.Column(db.String(15), nullable=True)
     depict_prominent = db.Column(db.Boolean, nullable=True)
     caption_language = db.Column(db.String(5), nullable=True)
