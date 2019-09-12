@@ -13,7 +13,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         var imageIndex = 0,
         imageFileName = '',
         imageRevId = 0,
-        userCaptionLanguages = getUserLanguages(),
+        userCaptionLanguages = getCaptionLanguages(),
         initialData = {depicts: [], captions: []},
         unsavedChanges = {depicts: [], captions: []};
     
@@ -64,6 +64,13 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         
         // Keep buttons inactive when user is not logged in
         if (isUserLoggedIn) updateButtonStates("depicts");
+
+        // Show depict helper text when any statements are present
+        updateDepictHelperVisibility();
+
+        // Highlight to show unsaved changes 
+        updateEditBoxHighlight("depicts");
+
     }
 
     // All actions to complete when caption statement is added/removed/edited
@@ -72,6 +79,9 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         
         // Keep buttons inactive when user is not logged in
         if (isUserLoggedIn) updateButtonStates("captions");
+
+        // Highlight to show unsaved changes 
+        updateEditBoxHighlight("captions");
     }
 
     this.resetDepictStatements = function () {
@@ -84,8 +94,9 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 description = depictItem.description,
                 isProminent = depictItem.isProminent,
                 statementId = depictItem.statementId;
-            this.addDepictStatement(item, label, description, isProminent, statementId)
+            this.addDepictStatement(item, label, description, isProminent, statementId);
         }
+        this.depictDataChanged();
     }
 
     this.resetCaptions = function () {
@@ -97,6 +108,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 language = caption.language;
             $('.caption-input[lang=' + language + ']').val(value)
         }
+        this.captionDataChanged();
     }
 
 
@@ -578,16 +590,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
     /////////// General utilities ///////////
 
-    function areChangesUnsaved () {
-        for (var editType in unsavedChanges) {
-            if (!unsavedChanges.hasOwnProperty(editType)) continue;
-            if (unsavedChanges[editType].length > 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     function confirmImageNavigation () {
         if (areChangesUnsaved()) {
             return confirm(
@@ -619,23 +621,48 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             '</div></div></div>'].join("");
     }
 
+    function areChangesUnsaved () {
+        return areChangesUnsavedFor('depicts') || areChangesUnsavedFor('captions');
+    }
+
+    function areChangesUnsavedFor(editType) {
+        return unsavedChanges[editType].length > 0;
+    }
+
     function updateButtonStates(editType) {
-        var currentChanges = unsavedChanges[editType],
-            $publishBtns = $('.edit-publish-btn-group[edit-type=' + editType + '] button'),
-            areButtonsDisabled = currentChanges.length === 0;
+        var $publishBtns = $('.edit-publish-btn-group[edit-type=' + editType + '] button'),
+        areButtonsDisabled = !areChangesUnsavedFor(editType);
         $publishBtns.prop('disabled', areButtonsDisabled);
+        return !areButtonsDisabled;
+    }
+
+    function updateEditBoxHighlight(editType) {
+        var $editBox = $('.edit-publish-btn-group[edit-type=' + editType + ']').closest('.edit-box');
+        if (areChangesUnsavedFor(editType)) {
+            $editBox.addClass('active');
+        } else {
+            $editBox.removeClass('active');
+        }
+    }
+
+    function updateDepictHelperVisibility() {
+        var isVisible = $('.depict-tag-item').length > 0;
+        if (isVisible) {
+            $('.prom-help').addClass('d-block'); 
+        } else {
+            $('.prom-help').removeClass('d-block');
+        }
     }
 
     function populateCaption(language, text) {
         $('.caption-input[lang=' + language + ']').val(text);
     }
 
-    function getUserLanguages() {
+    function getCaptionLanguages() {
         var languages = []
         $('.caption-input').each(function() {
             languages.push( $(this).attr('lang'))
         })
-
         return languages;
     }
 }
