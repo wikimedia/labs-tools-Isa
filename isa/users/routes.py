@@ -71,7 +71,8 @@ def oauth_callback():
             next_url = session.get('next_url')
             session.pop('next_url', None)
             return redirect(next_url)
-    return redirect(url_for('main.home'))
+        else:
+            return redirect(url_for('main.home'))
 
 
 @users.route('/logout')

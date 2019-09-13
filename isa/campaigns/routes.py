@@ -36,6 +36,7 @@ def getCampaigns():
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
+    session['next_url'] = request.url
     return render_template('campaign/campaigns.html',
                            title=gettext('Campaigns'),
                            username=username,
@@ -108,6 +109,7 @@ def getCampaignById(id):
     campaign.campaign_contributions = campaign_contributions
     if commit_changes_to_db():
         print('Campaign info updated successfully!')
+    session['next_url'] = request.url
     return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                             campaign=campaign,
                             campaign_manager=campaign.campaign_manager,
@@ -159,7 +161,7 @@ def getCampaignStatsById(id):
     all_campaign_stats_data['all_contributors_data'] = campaign_table_stats['all_contributors_data']
     all_campaign_stats_data['all_campaign_country_statistics_data'] = campaign_table_stats['all_campaign_country_statistics_data']
     all_campaign_stats_data['campaign_all_stats_csv_file'] = campaign_all_stats_csv_file
-
+    session['next_url'] = request.url
     return render_template('campaign/campaign_stats.html', title=gettext('Campaign - ') + campaign.campaign_name,
                            campaign=campaign,
                            session_language=session_language,
@@ -240,6 +242,7 @@ def contributeToCampaign(id):
         session_language = 'en'
     # We select the campign whose id comes into the route
     campaign = Campaign.query.filter_by(id=id).first()
+    session['next_url'] = request.url
     return render_template('campaign/campaign_entry.html',
                            is_update=False,
                            title=gettext('%(campaign_name)s - Contribute',
@@ -314,6 +317,7 @@ def updateCampaign(id):
         else:
             flash(gettext('Booo! %(campaign_name)s Could not be updated!',
                           campaign_name=form.campaign_name.data), 'danger')
+        session['next_url'] = request.url
         return render_template('campaign/campaign-form.html',
                                is_update=True,
                                title=gettext('%(campaign_name)s - Update',
