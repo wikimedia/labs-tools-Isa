@@ -11,22 +11,20 @@
         <h5> {{ _('Easily Add Information about Images on Wikimedia Commons') }}</h5>
     </div>
 <div class="container text-center">
-    <p><strong>ISA</strong> 
-        {{ _('is a multilingual, mobile-first tool, that makes it easy for people to add \'micro-contributions\' in the form of') }} 
-        <a href="https://commons.wikimedia.org/wiki/Commons:Structured_data" target="_blank" title="{{ _('Learn more about structured data')}}">{{ _('structured data')}}</a>
-        {{ _('(descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions.')}}
-       <strong> {{ _('Click on Explore Campaigns to begin!')}}</strong></p>    
-    <a href="{{url_for( 'campaigns.getCampaigns' )}}" class="btn btn-lg btn-primary" title="{{ _('Go to the campaign directory to choose a campaign')}}">{{ _('EXPLORE CAMPAIGNS') }}</a>
+    <p>
+        {% trans link_attrs='href=https://commons.wikimedia.org/wiki/Commons:Structured_data target=_blank' %}<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a {{link_attrs}} title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions.{% endtrans%}
+        {{ _('<strong>Click on Explore Campaigns to begin!</strong>') }}
+    </p>    
+    <a href="{{url_for( 'campaigns.getCampaigns' )}}" class="btn btn-lg btn-primary" title="{{ _('Go to the campaign directory to choose a campaign') }}">{{ _('EXPLORE CAMPAIGNS') }}</a>
     <hr class="my-5">
     <div class="about-section mb-4">
         <h2>{{ _('About This Tool') }}</h2>
         <p>{{ _('In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. ') }}</p> 
         <p>{{ _('The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions.') }}
-        {{ _(' It is initially being built to assist in the descriptions of Wiki Loves Africa images,')}} 
-        {{ _('but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond.')}}</p>
+        {{ _('It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond.')}}</p>
         <p>{{ _('The tool is also designed to be a host of micro contribution competitions proposed by project leaders.') }}</p>
         <p>{{ _('ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project.') }}
-        {{ _(' ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for \'put\' or \'place\'.') }}</p>
+        {{ _('ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for \'put\' or \'place\'.') }}</p>
     </div>
     {% if username != 'Guest' and username != False and username != None %}
     <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-secondary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>       

@@ -184,7 +184,7 @@ $('#submit').click(function(ev) {
             return alert(gettext('You must select at least one category for your campaign.'));
         }
         if (isWikiLovesCampaign && !categoriesAreValid) {
-            return alert(gettext('Some of the categories you have chosen don not have the correct syntax for a Wiki Loves Campaign.') + '\n' + 
+            return alert(gettext('Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign.') + '\n' + 
                 gettext('Please check your selections and try again.'));
         }
 

@@ -12,62 +12,159 @@
 </div>
 
 <div class="container help-page">
-    <p><strong>ISA</strong>{{ _( 'is a fun, multilingual, mobile-first tool, that makes it easy for people to add "micro contributions" in the form of') }} <a href="https://commons.wikimedia.org/wiki/Commons:Structured_data" target="_blank">{{ _('structured data') }}</a> {{ _('to images on  Wikimedia Commons that have been added by Wiki Loves competitions.') }}</p>
-    <p>{{ _('ISA is originally built to provide better multilingual and structured descriptions of') }}<a href="https://commons.wikimedia.org/wiki/Wiki_Loves_Africa" target="_blank"><strong>Wiki Loves Africa</strong></a> {{ _('images') }}. {{ _(' But it is also developed to be useful to all of the') }} <a href="https://meta.wikimedia.org/wiki/Wiki_Loves_X" target="_blank"><strong>{{ _('Wiki Loves competitions') }}</strong></a> {{ _('and, ultimately, for') }} <strong>{{ _('all media files') }}</strong> {{ _('on Wikimedia Commons') }}.</p>
+    <p>
+        {% trans link_attrs='href=https://commons.wikimedia.org/wiki/Commons:Structured_data target=_blank' %}<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add "micro contributions" in the form of <a {{link_attrs}}>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions.{% endtrans%}
+    </p>
+    <p>
+        {% trans link_attrs='href=https://commons.wikimedia.org/wiki/Wiki_Loves_Africa target=_blank' %}ISA is originally built to provide better multilingual and structured descriptions of <a {{link_attrs}}>Wiki Loves Africa</a> images.{% endtrans %}
+        {% trans link_attrs='href=https://meta.wikimedia.org/wiki/Wiki_Loves_X target=_blank' %}But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons.{% endtrans %} 
+    </p>
+
     <h5>{{ _('What is Wikimedia Commons?') }}</h5>
-    <p><strong>Wikimedia Commons</strong> {{ _('(also known as \'Commons\') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files') }}. {{ _('All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons') }}.</p>
-    <p>{{ _('Wikimedia Commons grows rapidly, by approximately 5 million new media files per year') }}.</p>
-    <p>{{ _('Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public') }}. {{ _('Media files on Commons are typically') }}:</p>
+
+    <p>
+        {{ _('<strong>Wikimedia Commons</strong> (also known as \'Commons\') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files.') }}
+        {{ _('All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons.') }}
+    </p>
+    <p>
+        {{ _('Wikimedia Commons grows rapidly, by approximately 5 million new media files per year.') }}
+    </p>
+    <p>
+        {{ _('Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public.') }}
+        {{ _('Media files on Commons are typically:') }}
+    </p>
     <ol>
-        <li>{{ _('Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc') }}.;</li>
+        <li>{{ _('Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;') }}</li>
         <li>{{ _('Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and') }}</li>
         <li>{{ _('Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions.') }}</li>
     </ol>
-    <h5>{{ _('What are structured data on Commons ?') }}</h5>
-    <p><strong>{{ _('Structured Data on Commons') }} </strong>{{ _('is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data') }}. {{ _('Structured data is data with a high degree of structured organization') }}. {{ _(' With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and \'understand\' it') }}.</p>
-    <p>{{ _('Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years') }} ! {{ _('There are literally millions of pictures hosted on Wikimedia Commons… that needs attention and love') }}. {{ _('Millions of pictures that are not described with structured data at the moment') }}.</p>
-    <p>{{ _('How are we going to do that ? ') }}</p>
-    <p><strong>{{ _('Curating') }}</strong>, {{ _('or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition') }}. {{ _('This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information') }}. {{ _('In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries...') }}</p>
+
+    <h5>{{ _('What is structured data on Commons ?') }}</h5>
+    <p>
+        {{ _('<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data.') }}
+        {{ _('Structured data is data with a high degree of structured organization.') }}
+        {{ _('With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and \'understand\' it.') }}
+    </p>
+    <p>
+        {{ _('Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !') }}
+        {{ _('There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love.') }}
+        {{ _('Millions of pictures that are not described with structured data at the moment.') }}
+    </p>
+    <p>
+        {{ _('How are we going to do that ? ') }}
+    </p>
+    <p>
+        {{ _('<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition.') }}
+        {{ _('This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information.') }}
+        {{ _('In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries...') }}
+    </p>
 
     <h5>{{ _('So...how does the ISA tool fit in there ?') }}</h5>
 
-    <p>{{ _('The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)') }}. I{{ _('t is a multilingual, mobile-first \'micro-contributions\' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons') }}. </p>
-    <p>{{ _('The tool operates with curated campaigns created by coordinators') }}. {{ _('Anyone with a Wikimedia account may be a coordinator!') }}</p>
-    <p>{{ _('With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself') }}. {{ _('The coordinator can then ask contributors to "tag" these images with multilingual structured metadata (depicts and/or captions)') }}. {{ _('Points are counted for each contribution made by a participant, and therefore it is possible to organize "tagging" or micro-contributions competitions or challenges with ISA') }}.</p>
-    <p>{{ _('Anyone with a Wikimedia account can contribute to add structured metadata to a campaign') }}. {{ _('The only requirement is… to be logged-in') }}.</p>
+    <p>
+        {{ _('The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are).') }}
+        {{ _('It is a multilingual, mobile-first \'micro-contributions\' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons.') }}
+    </p>
+    <p>
+        {{ _('The tool operates with curated campaigns created by coordinators.') }}
+        {{ _('Anyone with a Wikimedia account may be a coordinator!') }}
+    </p>
+    <p>
+        {{ _('With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself.') }}
+        {{ _('The coordinator can then ask contributors to "tag" these images with multilingual structured metadata (depicts and/or captions).') }}
+        {{ _('Points are counted for each contribution made by a participant, and therefore it is possible to organize "tagging" or micro-contributions competitions or challenges with ISA.') }}
+    </p>
+    <p>
+        {{ _('Anyone with a Wikimedia account can contribute to add structured metadata to a campaign.') }}
+        {{ _('The only requirement is… to be logged-in.') }}
+    </p>
 
     <h5>{{ _('Learn more about file captions and depicts') }}</h5>
 
-    <p>{{ _('File captions are a feature part of Structured data') }}. {{ _('They are meant to store short, multilingual description about files') }}. </p>
-    <p>{{ _('What is a good caption ? and what is the difference between our good old file descriptions and captions ?') }}</p>
-    <p>{{ _('First, captions are meant to be simple and short') }}. {{ _('While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links.') }}</p>
-    <p>{{ _('In many cases, the caption will be similar or identical to the description') }}. {{ _('But in other cases,  there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)') }}.</p>
-    <p>{{ _('Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 ("public domain") waiver.') }}</p>
-    <p>{{ _('One of the core benefits of captions is improved language-aware searchability') }}. {{ _('Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates ; and it is not possible to do search search per language.') }}</p>
-    <p>{{ _('Captions are available as part of our structured data, while descriptions are not') }}. {{ _('In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template ; while captions are Wikibase labels.') }}</p>
-    <p>{{ _('As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata.') }} {{ _('As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves.') }}</p>
-    <p>{{ _('Other possible usages of captions can be:') }}</p>
+    <p>
+        {{ _('File captions are a feature part of Structured data.') }}
+        {{ _('They are meant to store short, multilingual description about files.') }}
+    </p>
+    <p>
+        {{ _('What is a good caption ? and what is the difference between our good old file descriptions and captions ?') }}
+    </p>
+    <p>
+        {{ _('First, captions are meant to be simple and short.') }}
+        {{ _('While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links.') }}
+    </p>
+    <p>
+        {{ _('In many cases, the caption will be similar or identical to the description.') }}
+        {{ _('But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image).') }}
+    </p>
+    <p>
+        {{ _('Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 ("public domain") waiver.') }}
+    </p>
+    <p>
+        {{ _('One of the core benefits of captions is improved language-aware searchability.') }}
+        {{ _('Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language.') }}
+    </p>
+    <p>
+        {{ _('Captions are available as part of our structured data, while descriptions are not.') }}
+        {{ _('In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels.') }}
+    </p>
+    <p>
+        {{ _('As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata.') }}
+        {{ _('As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves.') }}
+    </p>
+    <p>
+        {{ _('Other possible usages of captions can be:') }}
+    </p>
     <ul>
         <li>{{ _('filling in infoboxes') }}</li>
         <li>{{ _('query files for missing captions in a given language') }}</li>
         <li>{{ _('building lists for translation of important files needing a caption localized for a project or campaign') }}</li>
     </ul>
-    <p>{{ _('Find more information about Captions here') }} :
-    <a href="https://commons.wikimedia.org/wiki/Commons:File_captions" target="_blank">https://commons.wikimedia.org/wiki/Commons:File_captions</a></p>
-    <p>{{ _('Depicts is also a feature part of Structured data') }}. {{ _('It was enabled on Wikimedia Commons on April 2019.') }} </p>
-    <p>{{ _('To add a depicts statement, simply start typing in the search box to get started.') }} {{ _('Then for each depicted item in the image, find the appropriate item from Wikidata and select it.') }}</p>
-    <p>{{ _('If you have trouble finding the right Wikidata item, test alternative spellings.') }}</p>
-    <p>{{ _('If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example.') }}</p>
-    <p>{{ _('Be as specific as you can with the primary tag.') }} {{ _('If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason.') }} {{ _('For files that depict dozens or hundreds of items (e.g., movies) only list those items which are most prominent.') }}</p>
-    <p>{{ _('There is also an option to mark a particular item as \'prominent\'.') }} {{ _('This property refers to the item\'s prominence in the piece of media.') }}</p>
-    <p>{{ _('More information about depicts may be found here :') }}
-    <a href="https://commons.wikimedia.org/wiki/Commons:Depicts" target="_blank">https://commons.wikimedia.org/wiki/Commons:Depicts</a></p>
+    <p>
+        {{ _('Find more information about Captions here') }} :
+        <a href="https://commons.wikimedia.org/wiki/Commons:File_captions" target="_blank">https://commons.wikimedia.org/wiki/Commons:File_captions</a>
+    </p>
+    <p>
+        {{ _('Depicts is also a feature part of Structured data.') }}
+        {{ _('It was enabled on Wikimedia Commons on April 2019.') }}
+    </p>
+    <p>
+        {{ _('To add a depicts statement, simply start typing in the search box to get started.') }}
+        {{ _('Then for each depicted item in the image, find the appropriate item from Wikidata and select it.') }}
+    </p>
+    <p>
+        {{ _('If you have trouble finding the right Wikidata item, test alternative spellings.') }}
+    </p>
+    <p>
+        {{ _('If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example.') }}
+    </p>
+    <p>
+        {{ _('Be as specific as you can with the primary tag.') }}
+        {{ _('If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason.') }}
+        {{ _('For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent.') }}
+    </p>
+    <p>
+        {{ _('There is also an option to mark a particular item as \'prominent\'.') }}
+        {{ _('This property refers to the item\'s prominence in the piece of media.') }}
+    </p>
+    <p>
+        {{ _('More information about depicts may be found here :') }}
+        <a href="https://commons.wikimedia.org/wiki/Commons:Depicts" target="_blank">https://commons.wikimedia.org/wiki/Commons:Depicts</a>
+    </p>
 
     <h5>{{ _('Using the ISA tool') }}</h5>
     
-    <p>{{ _('More information may be found here:') }} <a href="https://commons.wikimedia.org/wiki/Commons:ISA_Tool/Manual" target="_blank">https://commons.wikimedia.org/wiki/Commons:ISA_Tool/Manual</a></p>
+    <p>
+        {{ _('More information may be found here:') }}
+        <a href="https://commons.wikimedia.org/wiki/Commons:ISA_Tool/Manual" target="_blank">https://commons.wikimedia.org/wiki/Commons:ISA_Tool/Manual</a>
+    </p>
+
     <h5>{{ _('Legal and credits') }}</h5>
-    <p>{{ _('ISA tool') }}{{ _('was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project.') }}  {{ _('It is running on') }} tools.wmflabs.org, {{ _('and is subject to the') }} Wikimedia Cloud Services Terms of use. {{ _('ISA is published under') }} GPLv3. {{ _('Content added through the tool to Wikimedia Commons is released under') }} CC0.</p>
+
+    <p>
+        {{ ('ISA was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project.') }}
+        {{ _('It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use.') }}
+        {{ _('ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0.') }}
+    </p>
     
     <p>{{ _('Image used on the tool :') }}<br>
     Fisherman on the Volta River. Alimdaihli. CC by sa 4.0 <a href="https://commons.wikimedia.org/wiki/File:2017_06_Ali-_00213.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:2017_06_Ali-_00213.jpg</a></p>
