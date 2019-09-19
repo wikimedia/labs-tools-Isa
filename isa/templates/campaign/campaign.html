@@ -3,13 +3,13 @@
 <div class="container page-header text-center">
         <img class="campaign-image" src="{{ campaign_image }}" alt=""> <!--Copy the image or use commons link-->
 
-    <h1>{{ campaign.campaign_name }}</h1>
+    <h2>{{ campaign.campaign_name }}</h2>
     <hr>
     <p>{{campaign.short_description}}</p>
 </div>
 
 <div class="container text-center">
-    <div class="campaign-panel primary-cta">
+    <div class="campaign-panel primary-cta pt-3">
     {% if is_wiki_loves_campaign %}
         <div class="campaign-country-select">
             <p>{{_('View images from')}}</p>
@@ -18,9 +18,9 @@
                 <!-- The other obtions will be povided here on front-end -->
             </select>
         </div>   
-        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary disabled" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
+        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary btn-lg px-5 disabled" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
     {% else %}
-        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
+        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary btn-lg px-5" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
     {% endif %}
     </div>
 </div>

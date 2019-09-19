@@ -22,10 +22,10 @@
 }
 /* style the page titles and page header*/
 .page-header h1 {
-    /*font-family: LinuxBiolinumOBold;*/
     margin: 0;
     text-transform: uppercase;
 }
+
 .page-header > hr {
     margin: 0.5rem auto;
     width:100%
@@ -166,7 +166,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 }
 
 .campaign-stats .stats-table {
-    display: none;
+    /*display: none;*/
     flex-direction: row;
    /* margin-top: 50px;*/
     justify-content: space-around;
@@ -182,7 +182,7 @@ more-stats-btn {
 }
 .campaign-dates {
     display: inline-flex;
-    width: 50%;
+    width: 100%;
     justify-content: space-evenly
 }
 /* User Stats*/
@@ -203,7 +203,13 @@ more-stats-btn {
     display: flex}
     .stats-meta p {margin:0; font-size: 80%;}
     .page-header.stats-page {padding-top: 0}
-    .page-header.stats-page h1 {font-size: 3rem;}
+    /*.page-header.stats-page h1 {font-size: 3rem;}*/
+    .close-stats {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
  
 /******** LAYOUT TEMPLATE ***********/
  
@@ -566,6 +572,10 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     .page-header h1 {
         font-size: 3.5rem;
     }
+    .page-header h2 {
+        font-size: 2.5rem;
+    }
+
     /*reduce hr width on desktop*/
     .page-header hr {
        
@@ -602,6 +612,10 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     .participate-nav-footer.container {
         display: none; 
     }
-     
+    
+    /*STATS PAGE*/
+    .campaign-dates {
+        width: 50%;
+    }
 }
 /*end responsive desktop/*
