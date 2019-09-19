@@ -20,14 +20,11 @@ $.getJSON( "../../api/get-campaign-graph-stats-data?campaign=" + campaign_id )
             },
             axisY2:{
                 interlacedColor: "rgba(1,77,101,.2)",
-                gridColor: "rgba(1,77,101,.1)",
-                title: ""
+                gridColor: "rgba(1,77,101,.1)"
             },
             data: [ {
                 type: "pie",
                 startAngle: 45,
-                showInLegend: "true",
-                legendText: "{label}",
                 indexLabel: "{label} ({y})",
                 yValueFormatString:"#,##0.#"%"",
                 dataPoints: contributors_stats_data_points
@@ -45,14 +42,11 @@ $.getJSON( "../../api/get-campaign-graph-stats-data?campaign=" + campaign_id )
             },
             axisY2:{
                 interlacedColor: "rgba(1,77,101,.2)",
-                gridColor: "rgba(1,77,101,.1)",
-                title: ""
+                gridColor: "rgba(1,77,101,.1)"
             },
             data: [{
                 type: "pie",
-                startAngle: 45,
-                showInLegend: "true",
-                legendText: "{label}",
+                startAngle: 30,
                 indexLabel: "{label} ({y})",
                 yValueFormatString:"#,##0.#"%"",
                 dataPoints: conuntry_stats_data_points
