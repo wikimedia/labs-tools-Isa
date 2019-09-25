@@ -8,3 +8,5 @@ flask_wtf
 pycountry
 mysqlclient
 PyMySQL
+nose2
+coverage
