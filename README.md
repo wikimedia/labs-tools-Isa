@@ -46,3 +46,12 @@ This extracts JavaScript strings and merges them into messages.pot file (along w
 
 - run ``` npm run build-fr-json ``` to convert the .po file to json for use in JavaScript translations.
 Note: generalised system still to be finalised for adding new languages
+
+# Testing the application
+
+- To run tests from the applications root directory, use the command `nose2 -v tests.<test_module_name>`
+
+- To get a blueprint's coverage, run following commands:
+
+    - From the applications root directory, run `coverage run -m unittest discover`
+    - Then run `coverage report -m isa/<blueprint_name>/*.py>`
