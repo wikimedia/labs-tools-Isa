@@ -109,7 +109,8 @@ def get_all_users_contribution_data_per_campaign(Users, campaign_id):
 
     all_contributors_data = []
     for user in Users:
-        all_contributors_data.append(get_user_contrbition_per_campaign(user.username, campaign_id))
+        if user is not None:
+            all_contributors_data.append(get_user_contrbition_per_campaign(user.username, campaign_id))
     #  We sort the users and their contributions data in decreaasing order
     all_contributors_data = sorted(all_contributors_data, key=itemgetter('images_improved'), reverse=True)
     return all_contributors_data
