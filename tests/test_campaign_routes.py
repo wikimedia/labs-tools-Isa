@@ -28,7 +28,11 @@ class TestCampaignRoutes(unittest.TestCase):
 
     def test_get_campaigns_route(self):
         response = self.app.get('/campaigns', follow_redirects=True)
-        self.assertEqual(response.status_code, 200,)
+        self.assertEqual(response.status_code, 200)
+
+    def test_get_campaign_by_id(self):
+        response = self.app.get('/campaigns/1', follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
 
 
 if __name__ == '__main__':
