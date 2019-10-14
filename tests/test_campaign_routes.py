@@ -47,6 +47,10 @@ class TestCampaignRoutes(unittest.TestCase):
         response = self.app.get('/campaigns/1/participate', follow_redirects=True)
         self.assertEqual(response.status_code, 200)
 
+    def test_get_campaign_stats_by_id(self):
+        response = self.app.get('/campaigns/1/stats', follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+
 
 if __name__ == '__main__':
     unittest.main()
