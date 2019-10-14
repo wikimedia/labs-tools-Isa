@@ -43,6 +43,10 @@ class TestCampaignRoutes(unittest.TestCase):
         campaign_category = json.loads(campaign.categories)[0]
         self.assertEqual(data_category['name'], campaign_category['name'])
 
+    def test_contribute_to_campaign(self):
+        response = self.app.get('/campaigns/1/participate', follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+
 
 if __name__ == '__main__':
     unittest.main()
