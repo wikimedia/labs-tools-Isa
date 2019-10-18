@@ -8,7 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2019-11-20 11:47+0100\n"
+=======
+"POT-Creation-Date: 2019-10-18 11:26+0100\n"
+>>>>>>> Profile page with list of own campaigns
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -565,7 +569,7 @@ msgstr ""
 msgid "Campaign name"
 msgstr ""
 
-#: templates/campaign/campaigns.html:20
+#: templates/campaign/campaigns.html:20 templates/users/own_campaigns.html:27
 msgid "Campaign"
 msgstr ""
 
@@ -621,7 +625,7 @@ msgstr ""
 msgid "Open"
 msgstr ""
 
-#: templates/campaign/campaigns.html:59
+#: templates/campaign/campaigns.html:59 templates/users/own_campaigns.html:34
 msgid "Go to the campaign home page to get started"
 msgstr ""
 
@@ -1177,38 +1181,62 @@ msgstr ""
 msgid "Languages preferences"
 msgstr ""
 
-#: templates/main/layout.html:76 templates/main/layout.html:80
+#: templates/main/layout.html:70
+msgid "See your campaigns"
+msgstr ""
+
+#: templates/main/layout.html:70
+msgid "My Campaigns"
+msgstr ""
+
+#: templates/main/layout.html:77 templates/main/layout.html:81
 msgid "Logout"
 msgstr ""
 
-#: templates/main/layout.html:84
+#: templates/main/layout.html:85
 msgid "Login"
 msgstr ""
 
-#: templates/main/layout.html:108
+#: templates/main/layout.html:109
 msgid "ISA tool"
 msgstr ""
 
-#: templates/main/layout.html:109
+#: templates/main/layout.html:110
 msgid ""
 "was developed as a collaboration between Wiki In Africa, Histropedia and "
 "the Structured Data on Commons project."
 msgstr ""
 
-#: templates/main/layout.html:109
+#: templates/main/layout.html:110
 msgid "It is running on"
 msgstr ""
 
-#: templates/main/layout.html:111
+#: templates/main/layout.html:112
 msgid "and is subject to the"
 msgstr ""
 
-#: templates/main/layout.html:113
+#: templates/main/layout.html:114
 msgid "ISA is published under"
 msgstr ""
 
-#: templates/main/layout.html:115
+#: templates/main/layout.html:116
 msgid "Content added through the tool to Wikimedia Commons is released under"
+msgstr ""
+
+#: templates/users/own_campaigns.html:7
+msgid "Your Campaigns"
+msgstr ""
+
+#: templates/users/own_campaigns.html:16
+msgid "Below is a list of your Campaigns"
+msgstr ""
+
+#: templates/users/own_campaigns.html:18
+msgid "You do not have any campaigns"
+msgstr ""
+
+#: templates/users/own_campaigns.html:26
+msgid "#"
 msgstr ""
 
 #: templates/users/user_settings.html:6 templates/users/user_settings.html:9
@@ -1284,5 +1312,10 @@ msgstr ""
 #: users/routes.py:167
 #, python-format
 msgid "%(username)s's - Settings"
+msgstr ""
+
+#: users/routes.py:189
+#, python-format
+msgid "%(username)s's - Campaigns"
 msgstr ""
 

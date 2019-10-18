@@ -1,0 +1,47 @@
+{% extends "main/layout.html" %}
+{% block content%}
+<div class="container page-header text-center">
+    {% if username != 'Guest' and username != False and username != None %}
+        <h2>{{ username }}'s Campaigns</h2>
+    {% else %}
+        <h2>{{ _('Your Campaigns') }}</h2>
+    {% endif %}
+    <hr>
+</div>
+<br>
+<div class="container campaign-stats text-center">
+    <div class="campaign-panel">
+        <div class="campaign-stats-title">
+                {% if username != 'Guest' and username != False and username != None %}
+                    <h4>{{ _('Below is a list of your Campaigns') }}</h4>
+                {% else %}
+                    <h2>{{ _('You do not have any campaigns') }}</h2>
+                    
+                {% endif %}
+        </div>
+        {% if username != 'Guest' and username != False and username != None %}
+        <div  class="stats-table mx-auto">
+            <table class="table table-sm table-light text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">{{ _('#') }}</th>
+                        <th scope="col">{{ _('Campaign') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for campaign in user_own_campaigns %}
+                    <tr>
+                        <th scope="row">{{user_own_campaigns.index(campaign) + 1}}</th>
+                        <td><a href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}" title="{{ _('Go to the campaign home page to get started') }}">{{ campaign.campaign_name }}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock content%}
+{% block scripts%}
+    <script src="{{url_for('static', filename='js/') + session_language + '/own-campaigns.js'}}"></script>
+{% endblock scripts%}
