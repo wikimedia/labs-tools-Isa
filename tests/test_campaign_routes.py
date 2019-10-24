@@ -51,6 +51,12 @@ class TestCampaignRoutes(unittest.TestCase):
         response = self.app.get('/campaigns/1/stats', follow_redirects=True)
         self.assertEqual(response.status_code, 200)
 
+    def test_update_campaign_images_route(self):
+        campaign = Campaign.query.filter_by(id=1).first()
+        response = self.app.post('/api/update-campaign-images/1',
+                                 data=json.dumps({'campaign_images': campaign.campaign_images}))
+        self.assertEqual(response.data.decode('ascii'), "Success!")
+
 
 if __name__ == '__main__':
     unittest.main()
