@@ -64,7 +64,7 @@ def get_campaign_category_list(categories):
         return categories_list
 
 
-def combine_campign_content(content_list):
+def combine_campaign_content(content_list):
     """
     Add campaign campaign content to a list
 
@@ -76,7 +76,7 @@ def combine_campign_content(content_list):
     return campaign_content
 
 
-def get_all_camapign_stats_data(campaign_id):
+def get_all_camapaign_stats_data(campaign_id):
     """
     provides all contributions related to a campaign
 
@@ -323,14 +323,14 @@ def get_table_stats(campaign_id, username):
     # We then re-initialize the ids array
     campaign_user_names = []
     # We now obtain the ranking for all the users in the system and their files improved
-    all_camapign_users_list = []
+    all_camapaign_users_list = []
     #  We iterate the individual participants id in a campaign and get the user info
     for user_name in campaign_user_names_set:
         user = User.query.filter_by(username=user_name).first()
-        all_camapign_users_list.append(user)
+        all_camapaign_users_list.append(user)
         
     # We get the users and their contribution data
-    all_contributors_data = get_all_users_contribution_data_per_campaign(all_camapign_users_list, campaign_id)
+    all_contributors_data = get_all_users_contribution_data_per_campaign(all_camapaign_users_list, campaign_id)
     current_user_rank = get_user_ranking(all_contributors_data, username)
 
     # We add rank to all contributor's data

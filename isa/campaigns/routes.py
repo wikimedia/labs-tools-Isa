@@ -16,7 +16,7 @@ from isa.campaigns.forms import CampaignForm
 from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, get_campaign_category_list,
                                  get_country_from_code, compute_campaign_status,
                                  create_campaign_country_stats_csv, create_campaign_contributor_stats_csv,
-                                 create_campaign_all_stats_csv, get_all_camapign_stats_data,
+                                 create_campaign_all_stats_csv, get_all_camapaign_stats_data,
                                  get_campaign_country_data, make_edit_api_call, generate_csrf_token,
                                  get_stats_data_points)
 from isa.main.utils import commit_changes_to_db
@@ -146,7 +146,7 @@ def getCampaignStatsById(id):
     # The field in the stats file will be as thus
     all_stats_fields = ['username', 'file', 'edit_type', 'edit_action', 'country', 'depict_item',
                         'depict_prominent', 'caption_text', 'caption_language', 'date']
-    campaign_all_stats_data = get_all_camapign_stats_data(id)
+    campaign_all_stats_data = get_all_camapaign_stats_data(id)
     campaign_all_stats_csv_file = create_campaign_all_stats_csv(stats_file_directory,
                                                                 convert_latin_to_english(campaign.campaign_name),
                                                                 all_stats_fields, campaign_all_stats_data)
@@ -240,7 +240,7 @@ def contributeToCampaign(id):
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
-    # We select the campign whose id comes into the route
+    # We select the campaign whose id comes into the route
     campaign = Campaign.query.filter_by(id=id).first()
     session['next_url'] = request.url
     return render_template('campaign/campaign_entry.html',
