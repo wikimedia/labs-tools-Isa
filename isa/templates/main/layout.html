@@ -67,6 +67,7 @@
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> {{username}}</a>
 				<div class="dropdown-menu">
 					<a href="{{url_for( 'users.userSettings' )}}" class="nav-link " id="user_name" title="{{ _('Change your available caption languages') }}">{{ _('Languages preferences') }}</a>
+					<a href="{{url_for( 'users.getMyCampaigns', username=username )}}" class="nav-link " id="user_name" title="{{ _('See your campaigns') }}">{{ _('My Campaigns') }}</a>
 				</div>
 				{% endif %}
 			</li>

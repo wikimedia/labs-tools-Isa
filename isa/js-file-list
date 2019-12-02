@@ -1,6 +1,6 @@
-src/campaign.js
 src/campaign-directory.js
 src/campaign-form.js
+src/campaign.js
 src/category-members.js
 src/guid-generator.js
 src/main.js

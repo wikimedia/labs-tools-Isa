@@ -7,7 +7,7 @@ import mwoauth
 
 from isa import app, gettext
 from isa.main.utils import commit_changes_to_db
-from isa.models import User
+from isa.models import User, Campaign
 from isa.users.forms import CaptionsLanguageForm
 from isa.utils.languages import getLanguages
 from isa.users.utils import build_user_pref_lang
@@ -179,3 +179,15 @@ def checkUserLogin():
         'is_logged_in': bool(username is not None)
     }
     return json.dumps(response_data)
+
+
+@users.route('/users/<string:username>/campaigns')
+def getMyCampaigns(username):
+    username = session.get('username', None)
+    session_language = session.get('lang', 'en')
+    user_own_campaigns = Campaign.query.filter_by(campaign_manager=username).all()
+    return render_template('users/own_campaigns.html',
+                           title=gettext('Campaigns created by %(username)s', username=username),
+                           session_language=session_language,
+                           user_own_campaigns=user_own_campaigns,
+                           username=username)
