@@ -60,19 +60,17 @@ def getCampaignById(id):
         return redirect(url_for('campaigns.getCampaigns'))
 
     # We get all the contributions from the ddatabase
-    all_contributions = Contribution.query.all()
+    all_contributions = Contribution.query.filter_by(campaign_id=campaign.id).all()
     # contributions for campaign
     campaign_contributions = 0
     # Editor for a particular campaign
     campaign_editors = 0
-    
     # We now get the contributor count for this campaign
     for contrib in all_contributions:
         if (contrib.campaign_id == campaign.id):
             campaign_contributions += 1
 
     campaign_table_stats = get_table_stats(id, username)
-    
     # Delete the files in the campaign directory
     stats_path = os.getcwd() + '/campaign_stats_files/' + str(campaign.id)
     files = glob.glob(stats_path + '/*')
@@ -439,24 +437,6 @@ def UpdateCampaignImagesCount(id):
     else:
         return("Success!")
     return("Failure")
-
-
-@campaigns.route('/campaigns/<int:id>/contrib_stats_download/<string:filename>', methods=['GET', 'POST'])
-def downloadContributionStats(id, filename):
-    if filename:
-        return send_file(os.getcwd() + '/campaign_stats_files/' + str(id) + '/' + filename,
-                         as_attachment=True, cache_timeout=0, last_modified=True)
-    else:
-        flash('Download may be unavailable now', 'info')
-
-
-@campaigns.route('/campaigns/<int:id>/country_stats_download/<string:filename>', methods=['GET', 'POST'])
-def downloadCountryStats(id, filename):
-    if filename:
-        return send_file(os.getcwd() + '/campaign_stats_files/' + str(id) + '/' + filename,
-                         as_attachment=True, cache_timeout=0, last_modified=True)
-    else:
-        flash('Download may be unavailable now', 'info')
 
 
 @campaigns.route('/campaigns/<int:id>/all_stats_download/<string:filename>', methods=['GET', 'POST'])
