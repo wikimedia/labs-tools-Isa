@@ -17,7 +17,7 @@
                 <option class="select-option"> {{ _('Loading...') }}</option>
                 <!-- The other obtions will be povided here on front-end -->
             </select>
-        </div>   
+        </div>
         <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary btn-lg px-5 disabled" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
     {% else %}
         <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary btn-lg px-5" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
@@ -35,7 +35,7 @@
         <div class="stat-label" title="{{ _('Total number of contributions made to this campaign') }}">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
     </div>
     <div class="stats-table mx-auto">
-        <div class="top-user-table mr-4">				
+        <div class="top-user-table mr-4">
             <table class="table table-sm table-light text-center">
                 <h6>{{ _('Top Contributors') }}</h6>
                 <thead>
@@ -102,11 +102,11 @@
     </div>
                 <a href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-secondary" title="{{ _('View and download more stats for this campaign') }}">{{ _('View full stats') }}</a>
 
- 
+
 </div>
 </div>
 
- 
+
 
 <div class="container user-stats text-center">
     <div class="campaign-panel">
@@ -141,7 +141,11 @@
     <h5><strong>{{ _('Campaign Manager') }}:</strong> <a href="https://commons.wikimedia.org/wiki/User:{{ campaign.campaign_manager }}">{{ campaign.campaign_manager }}</a></h5>
     <div class="campaign-dates">
         <h6><strong>{{ _('START DATE')}}: </strong> {{campaign.start_date}}</h6>
-        <h6><strong>{{ _('END DATE') }}: </strong> {{campaign.end_date}}</h6>	
+        {% if campaign.end_date == None %}
+            <h6><strong>{{ _('END DATE') }}: </strong> {{ _('Not Set') }}</h6>
+        {% else %}
+            <h6><strong>{{ _('END DATE') }}: </strong> {{campaign.end_date}}</h6>
+        {% endif %}
     </div>
     <div class="about-section">
         <p>{{campaign.long_description}}</p>

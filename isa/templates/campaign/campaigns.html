@@ -1,11 +1,11 @@
 {% extends "main/layout.html" %}
 {% block content%}
 <header class="container page-header text-center">
-    
+
         <h1>ISA - {{ _('Campaigns') }}</h1>
  <hr>
     <p>{{ _('On this page are the curated campaigns that are currently running as part of the ISA tool.')}} {{ _('Click on the name of a campaign to get started and add structured data to an image.') }} {{ _('You can access information on the previous Campaigns in the Archive section.') }}</p>
-    
+
 
 </header>
 <div class="container">
@@ -25,7 +25,7 @@
                     <th scope="col" title="{{ _('Campaign end date') }}">{{ _('End Date') }}</th>
                     <th scope="col" title="{{ _('Date the campaign was created') }}">{{ _('Creation Date') }}</th>
                     <th scope="col" title="{{ _('Campaign status') }}">{{ _('Status') }}</th>
-                    <!-- The next column is hidden and used only for filtering --> 
+                    <!-- The next column is hidden and used only for filtering -->
                     <!-- It stores 1 or 0 to determine open status, so does not depend on UI language -->
                     <th scope="col"></th>
                     <th scope="col">{{ _('Get Started') }}</th>
@@ -41,7 +41,7 @@
                     <td><span class="">{{ campaign.start_date.strftime("%Y-%m-%d") }}</span></td>
 
                     {% if campaign.end_date == None %}
-                    <td><span class="">{{ _('None') }}</span></td>
+                        <td><span class="">{{ _('Not Set') }}</span></td>
                     {% else %}
                         <td><span class="">{{ campaign.end_date.strftime("%Y-%m-%d") }}</span></td>
                     {% endif %}
@@ -55,7 +55,7 @@
                         <td><span class="">{{ _('Open') }}</span></td>
                         <td>1</td>
                     {%  endif %}
-                    
+
                     <td><a href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}" title="{{ _('Go to the campaign home page to get started') }}">{{ _('Go to Campaign') }}</a></td>
                 </tr>
             {% endfor%}
@@ -78,7 +78,7 @@
 </div>
 {% endblock content%}
 
-{% block scripts %} 
+{% block scripts %}
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
 <script src="{{url_for('static', filename='js/') + session_language + '/campaign-directory.js'}}"></script>
 {% endblock scripts%}
