@@ -3,13 +3,17 @@ import {getImagesFromApi} from './category-members';
 var isWikiLovesCampaign = $('#campaign_type')[0].checked;
 var categoriesAreValid = false;
 
-$('#start_date_datepicker').datepicker( {
-    format: 'yyyy-mm-dd'
+$('#start_date_datepicker').attr({'data-toggle': 'datetimepicker', 'data-target': '#start_date_datepicker'});
+$('#start_date_datepicker').datetimepicker({
+    format: 'YYYY-MM-DD',
+    useCurrent: false
 });
 
-$('#end_date_datepicker').datepicker( {
-    format: 'yyyy-mm-dd'
-} );
+$('#end_date_datepicker').attr({'data-toggle': 'datetimepicker', 'data-target': '#end_date_datepicker'});
+$('#end_date_datepicker').datetimepicker({
+    format: 'YYYY-MM-DD',
+    useCurrent: false
+});
 
 // Populate existing categories in the UI if data present in hidden field (on update route)
 var initialCategoryData = $('#categories-data').val();
@@ -68,7 +72,7 @@ $( '#category-search' ).select2( {
 $( '#category-search' ).on('select2:select', function(ev) {
     var category = $(this).val();
     addSelectedCategory(category);
-    $(this).val(null).trigger('change'); // clear the search selection 
+    $(this).val(null).trigger('change'); // clear the search selection
     $(this).select2("close"); // close the dropdown
 })
 
@@ -81,7 +85,7 @@ function addSelectedCategory(name, depth) {
     // show the table header if it's not visible already
     $('#selected-categories-header').show();
     if (isWikiLovesCampaign) validateWikiLovesCategories();
-} 
+}
 
 // Click event for removing categories
 $('#selected-categories-content').on("click", "button.close", function(event) {
@@ -173,8 +177,8 @@ var categoriesChecked = false,
 $('#submit').click(function(ev) {
 
     // Checks the simple "required" form fileds
-    formIsValid = $('form')[0].checkValidity(); 
-    
+    formIsValid = $('form')[0].checkValidity();
+
     if (!categoriesChecked && formIsValid) {
         // Prevent form submission if categories not checked yet
         ev.preventDefault();
@@ -184,7 +188,7 @@ $('#submit').click(function(ev) {
             return alert(gettext('You must select at least one category for your campaign.'));
         }
         if (isWikiLovesCampaign && !categoriesAreValid) {
-            return alert(gettext('Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign.') + '\n' + 
+            return alert(gettext('Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign.') + '\n' +
                 gettext('Please check your selections and try again.'));
         }
 
@@ -194,12 +198,12 @@ $('#submit').click(function(ev) {
         if (!metadataTypesAreValid) return alert(gettext('Please select at least one type from the "Metadata to collect" section'));
 
         var finalCategoryData = $('#categories-data')[0].value = JSON.stringify(categorySelections);
-        
+
         if (finalCategoryData !== initialCategoryData) {
             // Categories are newly added or have changed
             // Show "checking categories" notice
             $('#category-checking-notice').removeClass("d-none");
-            
+
             // Add Category: prefix
             categorySelections.forEach(function(category) {
                 category.name = "Category:" + category.name;
@@ -217,7 +221,7 @@ $('#submit').click(function(ev) {
             categoriesChecked = true;
             $('#submit').click();
         }
-    } 
+    }
     // Categories checked, continue default submit, OR
     // Form is invalid, default submit to show browser warnings
 })

@@ -9,13 +9,13 @@
         {% endif %}
     </h1>
     <hr class="pt-0" width="35%">
-    <p> 
+    <p>
         {% if is_update %}
             {{ _('You are updating') }} {{ campaign.campaign_name }}
         {% else %}
             {{ _('Fill in the form below to create you campaign') }}
         {% endif %}
-        <br> 
+        <br>
         {{ _('Fields marked with * are mandatory') }}
     </p>
 </div>
@@ -40,9 +40,9 @@
             {% endif %}
             <small id="campaign_nameHelp" class="form-text text-muted">{{ _('This is the name specific to your campaign, not the main project.') }}' {{ _('So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”') }}</small>
         </div>
-        
+
         <hr>
-        
+
         <div class="form-group">
             <!-- {{ form.short_description.label( class="form-control-label " ) }} -->
             <label for="short_description">{{ _('Short description of Campaign (144 characters)') }}</label>
@@ -61,14 +61,14 @@
         </div>
 
         <hr>
-        
+
         <div class="form-row">
             <div class="form-group col-md-6">
                 <!--  <div class="input-group date">-->
                 <label for="datepick1">{{ _('Start Date') }}*</label>
                 <!-- We test for errors in the form data here -->
                 {% if form.start_date.errors %}
-                {{ form.start_date( class="form-control form-control-sm is-invalid" ) }}
+                {{ form.start_date( class="form-control form-control-sm datetimepicker-input is-invalid" ) }}
                 <div class="invalid-feedback">
                     {% for error in form.start_date.errors %}
                     <span> {{ error }}</span>
@@ -77,7 +77,7 @@
                 {% else %}
                 {{ form.start_date( class="form-control form-control-sm" ) }}
                 {% endif %}
-                <small id="datepick1Help" class="form-text text-muted">{{ _('Set campaign start date') }}</small>               
+                <small id="datepick1Help" class="form-text text-muted">{{ _('Set campaign start date') }}</small>
             </div>
             <div class="form-group col-md-6">
                 <label for="datepick2">{{ _('End Date') }}</label>
@@ -92,10 +92,10 @@
                 {% else %}
                 {{ form.end_date( class="form-control form-control-sm" ) }}
                 {% endif %}
-                <small id="datepick2Help" class="form-text text-muted">{{ _('Set campaign end date') }}</small>            
+                <small id="datepick2Help" class="form-text text-muted">{{ _('Set campaign end date') }}</small>
             </div>
-        </div>     
-        
+        </div>
+
         <hr>
 
         <div class="form-group">
@@ -111,18 +111,18 @@
                 {% else %}
                 {{ form.campaign_type( class="checkbox-inline mt-1" ) }}<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="{{ _('When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country.') }} {{ _(' You can select multiple categories of the correct type.') }} {{ _('Depth must be set to 0 for all categories in a Wiki Loves campaign.')}} <a href=''>Learn more here</a>"><i class="fas fa-question-circle"></i></button>
                 {% endif %}
-                <small id="campaign_typeHelp" class="form-text text-muted">{{ _('Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)') }}</small>       
+                <small id="campaign_typeHelp" class="form-text text-muted">{{ _('Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)') }}</small>
                 <div class="invalid-feedback invalid-wiki-loves-warning">
                         <p>{{ _('Some of the categories chosen below do not have the correct syntax') }}</p>
-                </div> 
+                </div>
         </div>
 
         <hr>
-        
+
         <div class="form-group">
-          
-            <label for="category-search">{{ _('Categories to use in this campaign') }}*<button type="button" class="btn btn-link py-0" data-container="body"  data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="{{ _('Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign.') }} {{ _('If you want a category and ALL of its subcategories use the \'Depth\' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns).') }}"><i class="fas fa-question-circle"></i></button></label>  
-            
+
+            <label for="category-search">{{ _('Categories to use in this campaign') }}*<button type="button" class="btn btn-link py-0" data-container="body"  data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="{{ _('Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign.') }} {{ _('If you want a category and ALL of its subcategories use the \'Depth\' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns).') }}"><i class="fas fa-question-circle"></i></button></label>
+
             <!-- We test for errors in the form data here -->
             {% if form.categories.errors %}
             {{ form.categories( class="form-control form-control-lg is-invalid" ) }}
@@ -134,7 +134,7 @@
             {% else %}
             {{ form.categories( id="categories-data", class="form-control form-control-sm") }}
             {% endif %}
-            
+
             {% if form.campaign_images.errors %}
             {{ form.campaign_images( class="form-control form-control-lg is-invalid" ) }}
             <div class="invalid-feedback">
@@ -146,7 +146,7 @@
                 {{ form.campaign_images( id="campaign-image-count", class="form-control form-control-sm" ) }}
             {% endif %}
 
-            <!-- Category selection UI which is NOT submitted in the form --> 
+            <!-- Category selection UI which is NOT submitted in the form -->
             <select id="category-search" class="w-100"></select>
             <small id="category-searchHelp" class="form-text text-muted">{{ _('Choose categories to use in the campaign') }}</small>
             <table class="w-100 table table-striped">
@@ -170,7 +170,7 @@
 
         <hr>
 
-        <h6>{{ _('Metadata to collect in the Campaign') }}*<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="{{ _('Choose what type of <strong>metadata</strong> you want to collect in your campaign.') }} {{ _('You must select at least one of the options below.') }} {{ _('To learn more about Depicts and Caption meta-data see the help page.') }}"><i class="fas fa-question-circle"></i></button></h6>       
+        <h6>{{ _('Metadata to collect in the Campaign') }}*<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="{{ _('Choose what type of <strong>metadata</strong> you want to collect in your campaign.') }} {{ _('You must select at least one of the options below.') }} {{ _('To learn more about Depicts and Caption meta-data see the help page.') }}"><i class="fas fa-question-circle"></i></button></h6>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="depicts_metadata">{{ _('Depicts') }}</label>
@@ -185,9 +185,9 @@
                 {% else %}
                 {{ form.depicts_metadata( class="checkbox-inline mt-1 metadata-type-checkbox" ) }}
                 {% endif %}
-                <small id="depicts-metadataHelp" class="form-text text-muted">{{ _('Select to collect Depicts metadata in the campiagn') }}</small>       
+                <small id="depicts-metadataHelp" class="form-text text-muted">{{ _('Select to collect Depicts metadata in the campiagn') }}</small>
             </div>
-            <div class="form-group col-md-6">         
+            <div class="form-group col-md-6">
                 <label for="captions_metadata">{{ _('Captions') }}</label>
                 <!-- We test for errors in the form data here -->
                 {% if form.captions_metadata.errors %}
@@ -200,12 +200,12 @@
                 {% else %}
                 {{ form.captions_metadata( class='checkbox-inline mt-1 metadata-type-checkbox' ) }}
                 {% endif %}
-                <small id="caption-metadataHelp" class="form-text text-muted">{{ _('Select to collect Caption metadata in the campiagn') }}</small>       
+                <small id="caption-metadataHelp" class="form-text text-muted">{{ _('Select to collect Caption metadata in the campiagn') }}</small>
             </div>
         </div>
 
         <hr>
- 
+
         <div class="form-group">
             <label for="campaign_image">{{ _('Campaign Image') }} <button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="{{ _('The maximum height for the campaign image is 150px. Images should either be a banner image or a logo.')}} {{ _('Portrait or square photos are not recommended.') }}"><i class="fas fa-question-circle"></i></button></label>
             <!-- We test for errors in the form data here -->
@@ -223,7 +223,7 @@
         </div>
 
         <hr>
-        
+
         <div class="form-group">
             <label for="long_description">{{ _('Long description of Campaign (full about info)') }}</label>
             <!-- We test for errors in the form data here -->
@@ -237,11 +237,11 @@
             {% else %}
             {{ form.long_description( class="form-control form-control-md" ) }}
             {% endif %}
-            <small id="long_descriptionHelp" class="form-text text-muted">{{ _('Why it is important that users contribute to the campaign?') }}</small>       
+            <small id="long_descriptionHelp" class="form-text text-muted">{{ _('Why it is important that users contribute to the campaign?') }}</small>
         </div>
-        
+
         <hr>
-        
+
         <div class="form-group text-center">
             {{ form.submit( class="btn btn-primary", value=_('Publish Campaign') ) }}
             <div id="category-checking-notice" class="mt-3 d-none">
@@ -254,5 +254,7 @@
 
 {% endblock content %}
 {% block scripts %}
+<link rel="stylesheet" href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+<script type="text/javascript" src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 <script src="{{url_for('static', filename='js/') + session_language + '/campaign-form.js'}}"></script>
 {% endblock scripts%}
