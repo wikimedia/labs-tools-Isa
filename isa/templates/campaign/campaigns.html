@@ -49,9 +49,12 @@
 
                     <td><span class="">{{ campaign.creation_date.strftime("%Y-%m-%d") }}</span></td>
                     <!-- Add status and boolean hidden columns depending on end date -->
-                    {% if campaign.end_date and campaign.end_date.strftime("%y-%m-%d") < datetime.now().date().strftime("%y-%m-%d") %}
+                    {% if campaign.end_date and campaign.end_date < datetime.now().date() %}
                         <td><span class=""> {{ _('Closed') }} </span></td>
                         <td>0</td>
+                    {% elif campaign.start_date >= datetime.now().date() %}
+                        <td><span class=""> {{ _('Not Opened') }} </span></td>
+                        <td>1</td>
                     {% else %}
                         <td><span class="">{{ _('Open') }}</span></td>
                         <td>1</td>
