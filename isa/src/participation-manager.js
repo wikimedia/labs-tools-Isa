@@ -2,9 +2,9 @@
 /*********** Manage the current participation session ***********/
 
 // The initialData property contains an object with inital depicts and captions data retrieved from Commons
-// Difference between current and initialData is used to determine unsavedChanges after each change made in UI 
+// Difference between current and initialData is used to determine unsavedChanges after each change made in UI
 //  - This allows us to update "publish" and "cancel" button states
-//  - Also used for sending edits to Commons and ISA database when either submit is click 
+//  - Also used for sending edits to Commons and ISA database when either submit is click
 // Data is sent via ajax post request instead of default form submit to prevent page reload
 
 import {flashMessage, getHtmlStripped, truncate} from './utils';
@@ -16,10 +16,10 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         userCaptionLanguages = getCaptionLanguages(),
         initialData = {depicts: [], captions: []},
         unsavedChanges = {depicts: [], captions: []};
-    
+
 
     this.imageMediaId = '';
-    
+
     this.nextImage = function () {
         if (!confirmImageNavigation()) return;
         imageIndex = (imageIndex + 1) % (images.length);
@@ -61,14 +61,14 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     // All actions to complete when depict statement is added/removed/edited
     this.depictDataChanged = function () {
         updateUnsavedDepictChanges();
-        
+
         // Keep buttons inactive when user is not logged in
         if (isUserLoggedIn) updateButtonStates("depicts");
 
         // Show depict helper text when any statements are present
         updateDepictHelperVisibility();
 
-        // Highlight to show unsaved changes 
+        // Highlight to show unsaved changes
         updateEditBoxHighlight("depicts");
 
     }
@@ -76,11 +76,11 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     // All actions to complete when caption statement is added/removed/edited
     this.captionDataChanged = function () {
         updateUnsavedCaptionChanges();
-        
+
         // Keep buttons inactive when user is not logged in
         if (isUserLoggedIn) updateButtonStates("captions");
 
-        // Highlight to show unsaved changes 
+        // Highlight to show unsaved changes
         updateEditBoxHighlight("captions");
     }
 
@@ -130,14 +130,14 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         contributions.map(function (contribution, index) {
             // Add common contribution data
             $.extend(contribution, additonalContributionData);
-            
+
             // Get edit API call for this contribution
             var apiOptions = getEditApiOptions(contribution);
-            
+
             // Add the revision id for the first contribution only;
             // the next api calls will need baserevid from previous call's response
             if (index === 0) apiOptions.baserevid = imageRevId;
-            
+
             contribution.api_options = apiOptions;
             return contribution;
         })
@@ -145,7 +145,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         var contributionsData = JSON.stringify(contributions);
 
         var me = this;
-        
+
         $.post({
             url: '../../api/post-contribution',
             data: contributionsData,
@@ -154,7 +154,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             // Contribution accepted by server, now we can update initial data
             // Button states will return to disabled
             // Cancel buttons will now reset to the current image data
-            
+
             imageRevId = response // server sends revision id from final edit as response
             if (editType === "depicts") {
                 saveInitialStructuredData(getCurrentDepictStatements(), false);
@@ -171,7 +171,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             flashMessage('danger', gettext('Oops! Something went wrong, your edits have not been saved to Wikimedia Commons'))
         })
     }
-    
+
      /////////// Data populating functions ///////////
 
     this.populateMetadata = function(filename) {
@@ -224,7 +224,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
         } );
     }
-    
+
     this.populateStructuredData = function(filename, callbacks) {
         var me = this;
         $('.depict-tag-group').empty(); //clear previous
@@ -233,7 +233,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             titles: filename,
             // sites = 'commonswiki' not supported on test-commons
             // but any supported wiki option chosen will still retrieve the image (strangely!)
-            sites: (WIKI_URL === "https://test-commons.wikimedia.org/") ? 'enwiki' : 'commonswiki', 
+            sites: (WIKI_URL === "https://test-commons.wikimedia.org/") ? 'enwiki' : 'commonswiki',
             format: 'json',
             origin: '*'
         };
@@ -243,7 +243,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             data: entitiesApiOptions
         } ).done( function( response ) {
             // store imageMediaId for access within ParticipationManager
-            var mediaId = me.imageMediaId = Object.keys(response.entities)[0]; 
+            var mediaId = me.imageMediaId = Object.keys(response.entities)[0];
             imageRevId = response.entities[mediaId].lastrevid;
             var mediaStatements = response.entities[mediaId].statements || {};
             var mediaCaptions = response.entities[mediaId].labels || {};
@@ -282,7 +282,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
             if (depictItems.length === 0) {
                 // fire the UiRendered event now and return as there are no items to get labels for
-                if (callbacks.onUiRendered) callbacks.onUiRendered(); 
+                if (callbacks.onUiRendered) callbacks.onUiRendered();
                 return;
             }
             // now make another call to Wikidata to get the labels for each depcits item
@@ -346,7 +346,12 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     }
 
     function updateImage(filename) {
-        $('.img-holder img').attr('src', WIKI_URL + 'wiki/Special:FilePath/' + filename + '?width=500')
+        $('.img-holder img').attr('src', WIKI_URL + 'wiki/Special:FilePath/' + filename + '?width=500');
+        $('.img-holder').trigger('zoom.destroy');
+        $('.img-holder').zoom({
+            url: WIKI_URL + 'wiki/Special:FilePath/' + filename + '?width=500',
+            magnify: 2
+        });
     }
 
     /////////// Change tracking functions ///////////
@@ -532,21 +537,21 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         } // check next initial statement...
         unsavedChanges.captions = captionChanges;
     }
-    
-    
+
+
     /////////// Edit API calls ///////////
-    
+
     function getEditApiOptions(contribution) {
         var editType = contribution.edit_type,
             editAction = contribution.edit_action;
-        
+
         // Depicts edit
         if (editType === 'depicts') {
             var depictItem = contribution.depict_item,
                 depictProminent = contribution.depict_prominent,
                 statementId = contribution.statement_id,
                 claim;
-            
+
             if (editAction === 'add' || editAction === 'edit') {
                 //action = 'wbsetclaim'
                 claim = {
@@ -564,7 +569,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                     "id": statementId,
                     "rank": (depictProminent) ? "preferred" : "normal"
                 }
-                
+
             } else if (editAction === 'remove') {
                 claim = statementId;
             }
@@ -572,7 +577,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 action: (editAction === 'remove') ? 'wbremoveclaims' : "wbsetclaim",
                 claim: claim
             };
-        
+
         // Captions edit
         } else if (editType === 'captions') {
             return {
@@ -582,11 +587,11 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 language: contribution.caption_language,
             }
         };
-        
+
         //else
         return console.log("edit type not recognised, edit API call not generated!");
     }
-    
+
 
     /////////// General utilities ///////////
 
@@ -601,19 +606,19 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     }
 
     function getStatementHtml(item, label, description, isProminent, statementId) {
-        var statementIdAttribute = (statementId) ? 
-            'statement-id=' + statementId : 
+        var statementIdAttribute = (statementId) ?
+            'statement-id=' + statementId :
             '';
         var prominentHoverText = gettext('Mark this depicted item as prominent');
         var notProminentHoverText = gettext('Mark this depicted item as NOT prominent');
-            
+
         var isProminentButtonHtml = isProminent ?
             '<button class="btn btn-sm prominent-btn active" title=' + notProminentHoverText + '><i class="fas fa-flag"></i></button>' :
             '<button class="btn btn-sm  prominent-btn" title=' + prominentHoverText  + '><i class="fas fa-flag"></i></button>';
-        
+
         return [
             '<div class="depict-tag-item" ' + statementIdAttribute + ' title="' + description + '">',
-            '<div class="depict-tag-label">', 
+            '<div class="depict-tag-label">',
             '<div class="label btn-sm"><span class="depict-tag-label-text">' + label + '</span> <span class="depict-tag-qvalue">' + item + '</span></div>',
             isProminentButtonHtml,
             '<div class="depict-tag-btn">',
@@ -648,7 +653,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     function updateDepictHelperVisibility() {
         var isVisible = $('.depict-tag-item').length > 0;
         if (isVisible) {
-            $('.prom-help').addClass('d-block'); 
+            $('.prom-help').addClass('d-block');
         } else {
             $('.prom-help').removeClass('d-block');
         }
