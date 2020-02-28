@@ -8,7 +8,7 @@ import {generateGuid} from './guid-generator.js';
 
 var campaignId = getCampaignId(),
     wikiLovesCountry = getWikiLovesCountry(),
-    isWikiLovesCampaign = !!wikiLovesCountry, // todo: this should be read from get-campaign-categories api call 
+    isWikiLovesCampaign = !!wikiLovesCountry, // todo: this should be read from get-campaign-categories api call
     isUserLoggedIn = false,
     editSession;
 
@@ -18,18 +18,18 @@ var campaignId = getCampaignId(),
 $.getJSON('../../api/login-test')
     .then(function(response) {
         isUserLoggedIn = response.is_logged_in;
-    
+
         // Then get campaign categories and depth settings from the server
         return $.getJSON("../../api/get-campaign-categories?campaign=" + campaignId);
     })
     .then(function(categories) {
         // todo: if it's a wiki loves campaign with no country selected, set all depth = 1 (ignore category depth settings)
-    
+
         // Add Category: prefix
         categories.forEach(function(category) {
             category.name = "Category:" + category.name;
         })
-        
+
         if (isWikiLovesCampaign && wikiLovesCountry) {
             // Construct country subcategory for each campaign category
 
@@ -42,7 +42,7 @@ $.getJSON('../../api/login-test')
             })
         }
 
-        // Get images in categories 
+        // Get images in categories
         getImagesFromApi(categories, function(images) {
             // Now we have all images from processing each category with depth
 
@@ -54,7 +54,7 @@ $.getJSON('../../api/login-test')
 
             // Trigger image changed event to populate the page
             editSession.imageChanged();
-           
+
             // Close loading overlay
             if (images.length > 0) {
                 hideLoadingOverlay();
@@ -62,7 +62,7 @@ $.getJSON('../../api/login-test')
                 alert(gettext("No images found for this campaign!"));
                 window.location.href = '../' + campaignId;
             }
-            
+
             // Update image count for campaign on each edit session to keep updated with changes
             // Do not post when a WikiLoves country has been selected as this is a reduced list of images
             if (!wikiLovesCountry) postCampaignImageCount(images.length);
@@ -88,41 +88,17 @@ function searchResultsFormat(state) {
   }
 
 (function setUpDepictsSearch(){
-      $( '#depicts-select' ).select2( {
-          placeholder: gettext('Search for things you see in the image'),
-          delay: 250,
-          minimumResultsForSearch: 1,
-          maximumSelectionLength: 4,
-          ajax: {
-              type: 'GET',
-              dataType:'json',
-              url: 'https://www.wikidata.org/w/api.php',
-              data: function (params) {
-                  var query = {
-                      search: params.term,
-                      action: 'wbsearchentities',
-                      language: UI_LANGUAGE,
-                      format: 'json',
-                      uselang: UI_LANGUAGE,
-                      origin: '*'
-                  };
-                  return query;
-              },
-              processResults: function (data) {
-                  var processedResults = [],
-                      results = data.search;
-                  for (var i=0; i < results.length; i++) {
-                      var result = results[i];
-                      processedResults.push({
-                          id: result.id,
-                          text: result.label || "(no label)",
-                          description: result.description || "" //use "" as default to avoid 'undefined' showing as description
-                      });
-                  }
-                  return {
-                      results: processedResults
-                  };
-              }
+    $( '#depicts-select' ).select2( {
+        placeholder: gettext('Search for things you see in the image'),
+        delay: 250,
+        minimumResultsForSearch: 1,
+        maximumSelectionLength: 4,
+        ajax: {
+            type: 'GET',
+            dataType: 'json',
+            url: function(t) {
+                return '../../api/search-depicts/' + campaignId;
+            },
         },
         templateResult: searchResultsFormat,
     });
@@ -130,15 +106,15 @@ function searchResultsFormat(state) {
     $('#depicts-select').on('select2:select', function(ev) {
         // Add new depict statement to the UI when user selects result
         var selected = ev.params.data;
-        
+
         // Generate a new unique statement ID
         var statementId = generateStatementId(editSession.imageMediaId);
-        
+
         editSession.addDepictStatement (
-            selected.id, 
-            selected.text, 
-            selected.description, 
-            false /* isProminent */, 
+            selected.id,
+            selected.text,
+            selected.description,
+            false /* isProminent */,
             statementId
         );
         $(this).val(null).trigger('change');
@@ -199,7 +175,7 @@ $('.edit-publish-btn-group').on('click', 'button', function() {
 
     if ( $(this).hasClass('publish-edits-btn') ) {
         editSession.postContribution(editType)
-    } 
+    }
 
 })
 

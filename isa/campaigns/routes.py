@@ -1,29 +1,23 @@
-import os
-import csv
-import sys
-import json
-import shutil
-import glob
-import mwoauth
-
-from io import StringIO
 from datetime import datetime
-from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file
+import glob
+import json
+import os
+
+import requests
+from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file, jsonify
 from flask_login import current_user
+from sqlalchemy import func
 
 from isa import app, db, gettext
 from isa.campaigns.forms import CampaignForm
-from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, get_campaign_category_list,
-                                 get_country_from_code, compute_campaign_status,
+from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, compute_campaign_status,
                                  create_campaign_country_stats_csv, create_campaign_contributor_stats_csv,
                                  create_campaign_all_stats_csv, get_all_camapaign_stats_data,
-                                 get_campaign_country_data, make_edit_api_call, generate_csrf_token,
+                                 make_edit_api_call, generate_csrf_token,
                                  get_stats_data_points)
 from isa.main.utils import commit_changes_to_db
-from isa.models import Campaign, Contribution, User
-from isa.users.utils import (get_user_language_preferences, get_all_users_contribution_data_per_campaign,
-                             get_user_ranking, get_current_user_images_improved)
-from isa.utils.languages import getLanguages
+from isa.models import Campaign, Contribution
+from isa.users.utils import (get_user_language_preferences, get_current_user_images_improved)
 
 
 campaigns = Blueprint('campaigns', __name__)
@@ -440,6 +434,76 @@ def UpdateCampaignImagesCount(id):
     else:
         return("Success!")
     return("Failure")
+
+
+@campaigns.route('/api/search-depicts/<int:id>', methods=['POST', 'GET'])
+def searchDepicts(id):
+    search_term = request.args.get('q')
+    user_lang = session.get('lang', 'en')
+    if search_term is None or search_term == '':
+        top_depicts = (Contribution.query
+                       .with_entities(Contribution.depict_item)
+                       .filter_by(campaign_id=id, edit_type="depicts", edit_action="add")
+                       .group_by(Contribution.depict_item)
+                       .order_by(func.count(Contribution.depict_item).desc())
+                       .limit(5)
+                       .all())
+
+        query_titles = '|'.join(depict for depict, in top_depicts)
+        depict_details = requests.get(
+            url='https://www.wikidata.org/w/api.php',
+            params={
+                'action': 'wbgetentities',
+                'format': 'json',
+                'props': 'labels|descriptions',
+                'ids': query_titles,
+                'languages': user_lang,
+                'languagefallback': '',
+                'origin': '*'
+            }
+        ).json()
+
+        top_depicts_return = []
+        if 'entities' in depict_details:
+            for item in depict_details['entities']:
+                item_data = depict_details['entities'][item]
+                top_depicts_return.append({
+                    'id': item,
+                    'text': (item_data['labels'][user_lang]['value']
+                             if user_lang in item_data['labels']
+                             else item),
+                    'description': (item_data['descriptions'][user_lang]['value']
+                                    if user_lang in item_data['descriptions']
+                                    else '')
+                })
+        if top_depicts_return == []:
+            top_depicts_return = None
+        return jsonify({"results": top_depicts_return})
+    else:
+        search_return = []
+        search_result = requests.get(
+            url='https://www.wikidata.org/w/api.php',
+            params={
+                'search': search_term,
+                'action': 'wbsearchentities',
+                'language': user_lang,
+                'format': 'json',
+                'uselang': user_lang,
+                'origin': '*'
+            }
+        ).json()
+
+        for search_result_item in search_result['search']:
+            search_return.append({
+                'id': search_result_item['title'],
+                'text': search_result_item['label'],
+                'description': (search_result_item['description']
+                                if 'description' in search_result_item
+                                else '')
+            })
+        if search_return == []:
+            search_return = None
+        return jsonify({"results": search_return})
 
 
 @campaigns.route('/campaigns/<int:id>/all_stats_download/<string:filename>', methods=['GET', 'POST'])
