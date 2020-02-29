@@ -1,5 +1,5 @@
 /* GLOBAL STYLES */
- 
+
 /*change btn-primary color*/
 .btn-primary {
     background-color:#006699;
@@ -30,17 +30,17 @@
     margin: 0.5rem auto;
     width:100%
 }
- 
+
 /*make header p more pronounced*/
 .page-header p {
     font-weight: 500;
 }
- 
+
 /* Justify about sections on mobile*/
 .about-section p {
     text-align: justify
 }
-     
+
 
 /*Style and position all pop-up alerts*/
 .isa-flash-message {
@@ -64,11 +64,11 @@
 .error-actions {margin-top:15px;margin-bottom:15px;}
 .error-actions .btn { margin-right:10px; }
  /*end global*/
- 
- 
- 
+
+
+
 /********** HOME PAGE ***************/
- 
+
 /*make title extra big on home page*/
 .home-page-title {
     font-size: 4.5rem!important;
@@ -100,7 +100,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     div.dataTables_wrapper div.dataTables_paginate ul.pagination {
         justify-content: flex-end!important
     }
-    
+
     /*adjust align and spacing for desktop*/
     .show-closed {
         margin-top: 0px;
@@ -110,7 +110,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 /********* CAMPAIGN PAGE ************/
  /*center and size banner image*/
     .campaign-image{
-        max-width: 100%; 
+        max-width: 100%;
         max-height: 150px;
 }
 
@@ -121,7 +121,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     margin-bottom: 20px;
     text-align: center;
 }
- 
+
 /* Primary CTA and Country select*/
 .campaign-panel.primary-cta {
     display: flex;
@@ -135,7 +135,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     background-color: #fff;
     margin-bottom: 10px;
     justify-content: space-between;
-} 
+}
 .campaign-country-select p {
     margin: 0;
     padding: 0 9px;
@@ -147,7 +147,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     border-left: 1px solid #ced4da;
     width: 150px;
 }
- 
+
 /*Campaign Stats*/
 .main-stats-label-group {
     display: flex;
@@ -193,7 +193,7 @@ more-stats-btn {
     background-color: #fad67d;
 }
 /*end campaign page*/
- 
+
 /********* CAMPAIGN STATS PAGE*******/
 /*overrides to campaign page CSS for stats page layout*/
     .stats-page .stats-table {display: flex; flex-wrap: wrap}
@@ -210,9 +210,9 @@ more-stats-btn {
         overflow: hidden;
         text-overflow: ellipsis;
     }
- 
+
 /******** LAYOUT TEMPLATE ***********/
- 
+
 /*Disable hover state on mobile*/
  .topnav a.active, .nav-link:hover, #language_select:hover {
     border-bottom: none;
@@ -226,7 +226,7 @@ more-stats-btn {
     border-bottom: 3px solid red;
     padding-bottom: 3px;
 }
- 
+
 /*re-style select to match dropdowns*/
 select.selectpicker {
     border: none;
@@ -263,7 +263,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     left:0px;
     content: "\f1ab";
     font-weight: 900;
-   
+
     font-size: 0.85rem;
 }
 /*add lang icon to nav item*/
@@ -287,20 +287,20 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     padding: 5px 0;
     margin-top: 50px;
 }
- 
+
 /*make subtle footer links*/
 .footer a {
     color: #676eb4;
     text-decoration: underline
 }
 /*end layout template*/
- 
- 
- 
+
+
+
 /********** PARTICIPATE PAGE ************/
- 
+
 /* Loading overlay */
-  
+
 /* make a fullscreen overlay with centered content*/
 .loading {
     background-color: #e9ecef;
@@ -314,7 +314,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     align-items: center;
     display: flex
 }
-/* move the logo to the bottom of the page*/    
+/* move the logo to the bottom of the page*/
 .loading img {
     position: absolute;
     bottom: 50px;
@@ -350,20 +350,20 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     display: none!important
 }
 
-/*restrict image height, make relative to position overlay.*/  
+/*restrict image height, make relative to position overlay.*/
 .img-holder   {
     height:300px;
     position: relative;
     background-color: #444;
-}   
-/*shrink image to fit in img-holder*/  
+}
+/*shrink image to fit in img-holder*/
 .img-holder img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
- 
+
 /*style static meta data text*/
 .image-desc {
     font-size: 12px;
@@ -383,18 +383,18 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 /*stop wrapping text - selector used to expand meta box*/
 .image-desc.expand p {
     white-space: inherit
-}    
+}
 
 /*reduce font weight of inserted data*/
 .image-desc span {
     font-weight: 400
     }
- 
+
 /*allow absolute position for publish btns*/
 .edit-box-header {
     position:relative
     }
-  
+
 /*place publish btn top right of edit box*/
 .edit-publish-btn-group {
     position: absolute;
@@ -406,7 +406,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     color: #990000
 }
 
-/*adjust padding and spacing*/ 
+/*adjust padding and spacing*/
 .container.edit-box.active {border-color: #007bff}
 .container.edit-box {
     margin-top: 10px;
@@ -414,13 +414,13 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     border:  solid 1px #a2a9b1;
     border-radius: 5px;
 }
-     
-/* make depict tag*/   
+
+/* make depict tag*/
 .depict-tag-label{
     display: flex
 }
 .depict-tag-label .label {
-    white-space: pre-wrap; 
+    white-space: pre-wrap;
     color: #fff;
     font-weight: 700;
     justify-self: flex-start;
@@ -433,16 +433,23 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     background-color: #006699!important;
     border-radius: 5px;
     padding: 5px;
-      
+
 }
 .depict-tag-item button {
     white-space: initial;
-}   
+}
 .depict-tag-label btn {
     padding: 4px 1px
 }
 .depict-tag-label-text{
     font-size: 1rem
+}
+.depict-tag-label-text a {
+    color: #FFF;
+    text-decoration: underline;
+}
+.depict-tag-label-text a:hover {
+    color: #CEE8FF;
 }
 .depict-tag-qvalue{
     font-size: 80%;
@@ -482,7 +489,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     display: none
 }
 /* end make depict tag*/
- 
+
 /* make sticky nav footer for mobile*/
 .participate-nav-footer.container {
     position: fixed;
@@ -527,9 +534,9 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     height: 38px;
 }
 /*end participate page/*
- 
- 
- 
+
+
+
 /********** UPDATE & CREATE PAGE **********/
 #selected-categories-header {
     display: none;
@@ -545,29 +552,29 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 
 
 /*end update & create*/
- 
- 
- 
- 
+
+
+
+
 /*******DESKTOP RESPONSIVE*************/
- 
+
 @media (min-width: 992px) {
- 
+
 /*activate hover styles on desktop*/
     .nav-link:hover, #language_select:hover{
     border-bottom: 3px solid red;
     padding-bottom: 3px;
    }
 
-    /* GLOBAL STYLE */  
+    /* GLOBAL STYLE */
     /*.page-title hr {width: 50%}*/
-     
+
     /*center about section on desktop*/
     .about-section p {text-align: center}
-    /*desktop spacing for page header*/   
+    /*desktop spacing for page header*/
     .page-header {
         padding-top: 20px;
-    }   
+    }
     /*increase page title on desktop*/
     .page-header h1 {
         font-size: 3.5rem;
@@ -578,12 +585,12 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 
     /*reduce hr width on desktop*/
     .page-header hr {
-       
+
         width:50%
     }
- 
+
     /*CAMPAIGN PAGE*/
-     
+
     /*make the user stats table and main stats labels smaller and centered on desktop*/
     .user-stats .stats-table {
         width: 50%
@@ -591,15 +598,15 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     .main-stats-label-group {
         width:50%
     }
- 
-    /* Show the campaign stats tables on desktop*/ 
+
+    /* Show the campaign stats tables on desktop*/
     .campaign-stats .stats-table {
         display: flex;
     }
- 
-     
+
+
     /*PARTICIPATE PAGE*/
-    
+
     /*temp make nav buttons centralised on desktop*/
     .participate-nav-footer.container {
         position: inherit
@@ -610,9 +617,9 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     }
     /*hide mobile nav buttons*/
     .participate-nav-footer.container {
-        display: none; 
+        display: none;
     }
-    
+
     /*STATS PAGE*/
     .campaign-dates {
         width: 50%;

@@ -98,7 +98,7 @@ function searchResultsFormat(state) {
             dataType: 'json',
             url: function(t) {
                 return '../../api/search-depicts/' + campaignId;
-            },
+            }
         },
         templateResult: searchResultsFormat,
     });

@@ -619,7 +619,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         return [
             '<div class="depict-tag-item" ' + statementIdAttribute + ' title="' + description + '">',
             '<div class="depict-tag-label">',
-            '<div class="label btn-sm"><span class="depict-tag-label-text">' + label + '</span> <span class="depict-tag-qvalue">' + item + '</span></div>',
+            '<div class="label btn-sm"><span class="depict-tag-label-text"><a href="//www.wikidata.org/wiki/' + item + '" target="_blank">' + label + '</a></span> <span class="depict-tag-qvalue">' + item + '</span></div>',
             isProminentButtonHtml,
             '<div class="depict-tag-btn">',
             '<button class="fas fa-trash btn-link btn" title="Remove this depicted item"></button></div>',
