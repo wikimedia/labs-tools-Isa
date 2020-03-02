@@ -34,6 +34,7 @@
 /*make header p more pronounced*/
 .page-header p {
     font-weight: 500;
+    white-space: pre-wrap;
 }
 
 /* Justify about sections on mobile*/
