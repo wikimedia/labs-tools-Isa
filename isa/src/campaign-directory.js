@@ -4,13 +4,16 @@
 // This allows filtering the same way regardless of UI language setting
 var booleanStatusColumn = [8];
 
+// Campaign description, for searching purposes
+var campaignDescColumn = [9];
+
 var campaignTable = $('#campaign_table').DataTable({
     responsive: true,
     columnDefs: [
         {
             targets: [0],
             responsivePriority: 1
-        }, 
+        },
         {
             targets: [-1],
             responsivePriority: 2,
@@ -20,6 +23,10 @@ var campaignTable = $('#campaign_table').DataTable({
             targets: booleanStatusColumn,
             visible: false
         },
+        {
+            targets: campaignDescColumn,
+            visible: false
+        }
     ],
     language: {
         //"decimal":        "",

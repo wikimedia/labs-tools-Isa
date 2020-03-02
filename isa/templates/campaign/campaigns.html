@@ -28,6 +28,7 @@
                     <!-- The next column is hidden and used only for filtering -->
                     <!-- It stores 1 or 0 to determine open status, so does not depend on UI language -->
                     <th scope="col"></th>
+                    <th scope="col"></th>
                     <th scope="col">{{ _('Get Started') }}</th>
                 </tr>
             </thead>
@@ -55,6 +56,8 @@
                         <td><span class="">{{ _('Open') }}</span></td>
                         <td>1</td>
                     {%  endif %}
+
+                    <td>{{ campaign.short_description }} {{ campaign.long_description }}</td>
 
                     <td><a href="{{url_for('campaigns.getCampaignById', id=campaign.id) }}" title="{{ _('Go to the campaign home page to get started') }}">{{ _('Go to Campaign') }}</a></td>
                 </tr>
