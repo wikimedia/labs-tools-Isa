@@ -96,7 +96,7 @@ def getCampaignById(id):
     # 2 - contributors file
     contributor_fields = ['rank', 'username', 'images_improved']
     contributor_stats_data = campaign_table_stats['all_contributors_data']
-    
+
     current_user_images_improved = get_current_user_images_improved(contributor_stats_data, username)
 
     contributor_csv_file = create_campaign_contributor_stats_csv(stats_file_directory,
@@ -108,11 +108,14 @@ def getCampaignById(id):
     if commit_changes_to_db():
         print('Campaign info updated successfully!')
     session['next_url'] = request.url
+    campaign_image = ('https://commons.wikimedia.org/wiki/Special:FilePath/' + campaign.campaign_image
+                      if campaign.campaign_image != ''
+                      else None)
     return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                             campaign=campaign,
                             campaign_manager=campaign.campaign_manager,
                             username=username,
-                            campaign_image="https://commons.wikimedia.org/wiki/Special:FilePath/" + campaign.campaign_image,
+                            campaign_image=campaign_image,
                             session_language=session_language,
                             campaign_editors=campaign_editors,
                             campaign_contributions=campaign_contributions,
@@ -139,7 +142,7 @@ def getCampaignStatsById(id):
         return redirect(url_for('campaigns.getCampaigns'))
 
     stats_file_directory = os.getcwd() + '/campaign_stats_files/' + str(campaign.id)
-    
+
     # We create the all_stats download file
     # The field in the stats file will be as thus
     all_stats_fields = ['username', 'file', 'edit_type', 'edit_action', 'country', 'depict_item',
@@ -148,10 +151,10 @@ def getCampaignStatsById(id):
     campaign_all_stats_csv_file = create_campaign_all_stats_csv(stats_file_directory,
                                                                 convert_latin_to_english(campaign.campaign_name),
                                                                 all_stats_fields, campaign_all_stats_data)
-    
+
     # We get the table stats from the campaign itself
     campaign_table_stats = get_table_stats(id, username)
-    
+
     # We prepare the campaign stats data to be sent to the next page (stats route)
     all_campaign_stats_data = {}
     all_campaign_stats_data['campaign_editors'] = campaign.campaign_participants
@@ -232,7 +235,7 @@ def CreateCampaign():
 
 @campaigns.route('/campaigns/<int:id>/participate', methods=['GET', 'POST'])
 def contributeToCampaign(id):
-    
+
     # We get current user in sessions's username
     username = session.get('username', None)
     session_language = session.get('lang', None)
@@ -354,7 +357,7 @@ def postContribution():
     contrib_data_list = []
     contrib_data_list = json.loads(contrib_data)
     username = session.get('username', None)
-    
+
     # The most recent rev_id will be stored in latest_base_rev_id
     # Default is 0 meaning there is none and the edit failed
     latest_base_rev_id = 0
@@ -363,7 +366,7 @@ def postContribution():
     csrf_token, api_auth_token = generate_csrf_token(app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
                                                      session.get('access_token')['key'],
                                                      session.get('access_token')['secret'])
-    
+
     campaign_id = contrib_data_list[0]['campaign_id']
     if not username:
         flash(gettext('You need to login to participate'), 'info')
@@ -395,12 +398,12 @@ def postContribution():
             lastrevid = make_edit_api_call(csrf_token,
                                            api_auth_token,
                                            contrib_data_list[i])
-            
+
             if lastrevid is not None:
                 # We check if the previous edit was successfull
                 # We then add the contribution to the db session
                 db.session.add(contrib_list[i])
-                
+
                 # Check that there are still elements in the list in order to pop
                 if len(contrib_options_list) > 1:
                     # We take out the first element of the data list

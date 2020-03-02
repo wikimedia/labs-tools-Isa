@@ -1,11 +1,13 @@
 {% extends "main/layout.html" %}
 {% block content%}
 <div class="container page-header text-center">
+    {% if campaign_image != None %}
         <img class="campaign-image" src="{{ campaign_image }}" alt=""> <!--Copy the image or use commons link-->
+    {% endif %}
 
     <h2>{{ campaign.campaign_name }}</h2>
     <hr>
-    <p>{{campaign.short_description}}</p>
+    <p>{{ campaign.short_description }}</p>
 </div>
 
 <div class="container text-center">
