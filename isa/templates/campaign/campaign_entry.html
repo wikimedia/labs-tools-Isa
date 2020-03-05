@@ -50,7 +50,7 @@ body {padding-bottom: 50px}
             <button class="btn btn-sm btn-link cancel-edits-btn" disabled title="{{ _('Cancel your changes') }}">{{ _('Cancel') }}</button>
             <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled title="{{ _('Save your edits to Wikimedia Commons') }}">{{ _('Save') }}</button>
         </div>
-        {% if username == None %}
+        {% if username is none %}
         <p class="text-danger small mb-1 text-right">{{_('Log in to publish changes')}}</p>
         {% endif %}
         <p>{{ _('Name the different elements that you can see in this image') }}</p>
@@ -77,7 +77,7 @@ body {padding-bottom: 50px}
             <button class="btn btn-sm btn-link cancel-edits-btn" disabled>{{ _('Cancel') }}</button>
             <button type="submit" class="btn btn-sm btn-primary publish-edits-btn" disabled>{{ _('Save') }}</button>
         </div>
-        {% if username == None %}
+        {% if username is none %}
         <p class="text-danger small mb-1 text-right">{{_('Log in to publish changes')}}</p>
         {% endif %}
         <p>{{ _('Add a caption to better explain the image (max 255 characters)') }}</p>

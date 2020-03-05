@@ -41,7 +41,7 @@
                     <td>{{ campaign.campaign_contributions }}</td>
                     <td><span class="">{{ campaign.start_date.strftime("%Y-%m-%d") }}</span></td>
 
-                    {% if campaign.end_date == None %}
+                    {% if campaign.end_date is none %}
                         <td><span class="">{{ _('Not Set') }}</span></td>
                     {% else %}
                         <td><span class="">{{ campaign.end_date.strftime("%Y-%m-%d") }}</span></td>
@@ -74,7 +74,7 @@
 </div>
 </div>
 <div class="container text-center">
-      {% if username != 'Guest' and username != False and username != None %}
+      {% if username != 'Guest' and username is not false and username is not none %}
     <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-secondary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>
     {% else %}
     <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-secondary disabled" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>

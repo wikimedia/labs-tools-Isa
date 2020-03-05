@@ -1,7 +1,7 @@
 {% extends "main/layout.html" %}
 {% block content%}
 <div class="container page-header text-center">
-    {% if campaign_image != None %}
+    {% if campaign_image is not none %}
         <img class="campaign-image" src="{{ campaign_image }}" alt=""> <!--Copy the image or use commons link-->
     {% endif %}
 
@@ -115,7 +115,7 @@
         <div class="campaign-stats-title">
             <h4>{{ _('My Contributions') }}</h4>
         </div>
-        {% if username != 'Guest' and username != False and username != None %}
+        {% if username != 'Guest' and username is not false and username is not none %}
         <div  class="stats-table mx-auto">
             <table class="table table-sm table-light text-center">
                 <thead>
@@ -143,7 +143,7 @@
     <h5><strong>{{ _('Campaign Manager') }}:</strong> <a href="https://commons.wikimedia.org/wiki/User:{{ campaign.campaign_manager }}">{{ campaign.campaign_manager }}</a></h5>
     <div class="campaign-dates">
         <h6><strong>{{ _('START DATE')}}: </strong> {{campaign.start_date}}</h6>
-        {% if campaign.end_date == None %}
+        {% if campaign.end_date is none %}
             <h6><strong>{{ _('END DATE') }}: </strong> {{ _('Not Set') }}</h6>
         {% else %}
             <h6><strong>{{ _('END DATE') }}: </strong> {{campaign.end_date}}</h6>
