@@ -534,6 +534,9 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 .select2-container .select2-selection--single {
     height: 38px;
 }
+.select2-container .select2-selection__arrow {
+    height: 100% !important;
+}
 /*end participate page/*
 
 
