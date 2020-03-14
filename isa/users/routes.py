@@ -1,5 +1,4 @@
 import json
-import sys
 
 from flask import Blueprint, flash, redirect, render_template, request, session, url_for
 from flask_login import current_user, login_user, logout_user
@@ -15,10 +14,16 @@ from isa.users.utils import build_user_pref_lang
 users = Blueprint('users', __name__)
 
 
+@users.route('/api/set-login-url', methods=['POST', 'GET'])
+def setLoginUrl():
+    session['next_url'] = request.args.get('url')
+    return "success"
+
+
 @users.route('/login')
 def login():
     """Initiate an OAuth login.
-    
+
     Call the MediaWiki server to get request secrets and then redirect the
     user to the MediaWiki server to sign the request.
     """

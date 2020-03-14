@@ -63,6 +63,19 @@ $.getJSON('../../api/login-test')
                 window.location.href = '../' + campaignId;
             }
 
+            if (getUrlParameters().imageData) {
+                var imageData = JSON.parse(decodeURIComponent(getUrlParameters().imageData));
+                for (var i = 0; i < images.length; i++) {
+                    if (images[i] === imageData.fileName) {
+                        editSession.setImageIndex(i);
+
+                        editSession.setDepictStatements(imageData.depicts);
+                        editSession.setCaptions(imageData.captions);
+                        break;
+                    }
+                }
+            }
+
             // Update image count for campaign on each edit session to keep updated with changes
             // Do not post when a WikiLoves country has been selected as this is a reduced list of images
             if (!wikiLovesCountry) postCampaignImageCount(images.length);
