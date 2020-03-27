@@ -15,7 +15,7 @@ Install application dependencies using the `get-deps.sh` script:
 ```bash 
 ./get-deps.sh
 ```
-The above script attempts to check system requirements and tell informs user on next steps.
+The above script attempts to check system requirements and informs user on next steps.
 
 ## Quickstart the app
 ```bash
