@@ -78,6 +78,7 @@ def getLanguages():
         ('is', 'Icelandic'),
         ('io', 'Ido'),
         ('ii', 'Sichuan Yi; Nuosu'),
+        ('smn', 'Inari Saami'),
         ('iu', 'Inuktitut'),
         ('ie', 'Interlingue; Occidental'),
         ('ia', 'Interlingua (International Auxiliary Language Association)'),
