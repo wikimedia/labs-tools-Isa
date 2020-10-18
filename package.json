@@ -3,26 +3,20 @@
     "version": "0.1.0",
     "description": "Front end dependency management for ISA tool",
     "private": true,
-    "main": "participate.js",
+    "main": "main.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "webpack --watch --progress --color -d",
-        "build": "webpack -p --progress --color",  
-        "build-fr-json": "po2json ./isa/translations/fr/LC_MESSAGES/messages.po ./isa/translations/fr/LC_MESSAGES/messages.json -f mf"
+        "build": "webpack -p --progress --color"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://navino@gerrit.wikimedia.org:29418/labs/tools/Isa"
+        "url": "https://gerrit.wikimedia.org/r/admin/repos/labs/tools/Isa"
     },
     "author": "",
     "license": "GPL-3.0",
     "devDependencies": {
-        "i18n-webpack-plugin": "^1.0.0",
-        "po2json": "^1.0.0-alpha",
         "webpack": "^4.35.0",
         "webpack-cli": "^3.3.4"
-    },
-    "dependencies": {
-        "sprintf-js": "^1.1.2"
     }
 }

@@ -12,5 +12,5 @@ test_db.py
 config.yaml
 .DS_Store
 campaign_stats_files/
-isa/translations/fr/LC_MESSAGES/messages.mo
+isa/translations/*/LC_MESSAGES/messages.mo
 .coverage

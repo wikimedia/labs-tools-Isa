@@ -1,9 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Eugene233"
-		]
-	},
-	"isa": "{{name}}",
-	"isa-desc": "{{desc|name=ISA|url=https://commons.wikimedia.org/wiki/Commons:ISA_Tool}}"
-}

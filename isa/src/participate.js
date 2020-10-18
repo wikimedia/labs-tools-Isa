@@ -73,6 +73,7 @@ $.getJSON('../../api/login-test')
 
                         editSession.setDepictStatements(imageData.depicts);
                         editSession.setCaptions(imageData.captions);
+                        
                         break;
                     }
                 }

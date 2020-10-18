@@ -10,6 +10,7 @@
 import {flashMessage, getHtmlStripped, truncate} from './utils';
 
 var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
+var UI_LANGUAGE = $('html').attr('lang');
 
 export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
         var imageIndex = 0,
