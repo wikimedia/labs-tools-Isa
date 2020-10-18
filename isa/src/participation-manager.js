@@ -9,6 +9,8 @@
 
 import {flashMessage, getHtmlStripped, truncate} from './utils';
 
+var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
+
 export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
         var imageIndex = 0,
         imageFileName = '',
@@ -192,16 +194,16 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             if (editType === "depicts") {
                 saveInitialStructuredData(getCurrentDepictStatements(), false);
                 me.depictDataChanged();
-                flashMessage('success', gettext('Success! Depicted items saved to Wikimedia Commons'))
+                flashMessage('success', i18nStrings['Success! Depicted items saved to Wikimedia Commons'])
             }
             if (editType === "captions") {
                 saveInitialStructuredData(false, getCurrentCaptions());
                 me.captionDataChanged();
-                flashMessage('success', gettext('Success! Captions saved to Wikimedia Commons'))
+                flashMessage('success', i18nStrings['Success! Captions saved to Wikimedia Commons'])
             }
 
         }).fail( function(error) {
-            flashMessage('danger', gettext('Oops! Something went wrong, your edits have not been saved to Wikimedia Commons'))
+            flashMessage('danger', i18nStrings['Oops! Something went wrong, your edits have not been saved to Wikimedia Commons'])
         })
     }
 
@@ -631,8 +633,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     function confirmImageNavigation () {
         if (areChangesUnsaved()) {
             return confirm(
-                gettext("Are you sure you want to navigate to another image? You have unsaved changes which will be lost.") + "\n" +
-                gettext("Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first.")
+                i18nStrings["Are you sure you want to navigate to another image? You have unsaved changes which will be lost."] + "\n" +
+                i18nStrings["Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."]
             )
         }
         return true;
@@ -642,8 +644,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         var statementIdAttribute = (statementId) ?
             'statement-id=' + statementId :
             '';
-        var prominentHoverText = gettext('Mark this depicted item as prominent');
-        var notProminentHoverText = gettext('Mark this depicted item as NOT prominent');
+        var prominentHoverText = i18nStrings['Mark this depicted item as prominent'];
+        var notProminentHoverText = i18nStrings['Mark this depicted item as NOT prominent'];
 
         var isProminentButtonHtml = isProminent ?
             '<button class="btn btn-sm prominent-btn active" title=' + notProminentHoverText + '><i class="fas fa-flag"></i></button>' :
@@ -655,7 +657,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             '<div class="label btn-sm"><span class="depict-tag-label-text"><a href="//www.wikidata.org/wiki/' + item + '" target="_blank">' + label + '</a></span> <span class="depict-tag-qvalue">' + item + '</span></div>',
             isProminentButtonHtml,
             '<div class="depict-tag-btn">',
-            '<button class="fas fa-trash btn-link btn" title="Remove this depicted item"></button></div>',
+            '<button class="fas fa-trash btn-link btn" title="' + i18nStrings['Remove this depicted item']  + '"></button></div>',
             '</div></div></div>'].join("");
     }
 

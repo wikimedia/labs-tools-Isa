@@ -1,5 +1,7 @@
 /*********** Campaign directory page ***********/
 
+var campaignTableI18nOptions = JSON.parse($('.hidden-i18n-text').text());
+
 // Hidden booleanStatusColumn is used internally to hide/show closed campaigns
 // This allows filtering the same way regardless of UI language setting
 var booleanStatusColumn = [8];
@@ -28,28 +30,10 @@ var campaignTable = $('#campaign_table').DataTable({
             visible: false
         }
     ],
-    language: {
-        //"decimal":        "",
-        //"emptyTable":     "No data available in table",
-        "info":           gettext("Showing _START_ to _END_ of _TOTAL_ entries"),
-        "infoEmpty":      gettext("No entries"),
 
-        // Hide the text which shows the total number of campaigns when filters are applied
-        "infoFiltered":   "",
-        //"infoPostFix":    "",
-        //"thousands":      ",",
-        //"lengthMenu":     "Show _MENU_ entries",
-        //"loadingRecords": "Loading...",
-        //"processing":     "Processing...",
-        "search":         gettext("Search:"),
-        "zeroRecords":    gettext("No matching records found"),
-        "paginate": {
-            "first":      gettext("First"),
-            "last":       gettext("Last"),
-            "next":       gettext("Next"),
-            "previous":   gettext("Previous")
-        }
-    },
+    // Translation text extracted from hidden HTML element
+    language: campaignTableI18nOptions,
+    
     // See https://stackoverflow.com/questions/32252616/ for explanation of dom setting below
     // It's used to get the button in the same line as the other table controls in the header
     dom: "f" +

@@ -6,6 +6,8 @@ import {getImagesFromApi} from './category-members';
 import {getUrlParameters, shuffle} from './utils';
 import {generateGuid} from './guid-generator.js';
 
+var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
+
 var campaignId = getCampaignId(),
     wikiLovesCountry = getWikiLovesCountry(),
     isWikiLovesCampaign = !!wikiLovesCountry, // todo: this should be read from get-campaign-categories api call
@@ -59,7 +61,7 @@ $.getJSON('../../api/login-test')
             if (images.length > 0) {
                 hideLoadingOverlay();
             } else {
-                alert(gettext("No images found for this campaign!"));
+                alert(i18nStrings["No images found for this campaign!"]);
                 window.location.href = '../' + campaignId;
             }
 
@@ -83,7 +85,7 @@ $.getJSON('../../api/login-test')
     })
     .fail(function(err) {
         console.log("error retrieving campaign categories", err)
-        alert(gettext("Something went wrong getting campaign images"));
+        alert(i18nStrings["Something went wrong getting campaign images"]);
         window.location.href = '../' + campaignId;
     })
 
@@ -102,7 +104,7 @@ function searchResultsFormat(state) {
 
 (function setUpDepictsSearch(){
     $( '#depicts-select' ).select2( {
-        placeholder: gettext('Search for things you see in the image'),
+        placeholder: i18nStrings['Search for things you see in the image'],
         delay: 250,
         minimumResultsForSearch: 1,
         maximumSelectionLength: 4,
@@ -141,11 +143,11 @@ $('#expand-meta-data').click(function() {
 
     if ($('.image-desc').hasClass('expand')) {
         // expanded
-        var minimiseText = gettext('minimise metadata from commons');
+        var minimiseText = i18nStrings['minimise metadata from commons'];
         $('#expand-meta-data').html('<i class="fas fa-caret-up"></i>&nbsp; ' + minimiseText);
     } else {
         // collpased
-        var maximiseText = gettext('show all metadata from commons');
+        var maximiseText = i18nStrings['show all metadata from commons'];
         $('#expand-meta-data').html('<i class="fas fa-caret-down"></i>&nbsp; ' + maximiseText);
     }
 })

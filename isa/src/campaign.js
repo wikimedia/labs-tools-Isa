@@ -3,6 +3,8 @@
 
 import {getWikiLovesCountries} from './wiki-loves-countries';
 
+var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
+
 // Use presence of dropdown to test for WikiLoves campaign
 var isWikiLovesCampaign = $('#campaign_countries').length === 1;
     
@@ -15,7 +17,7 @@ if (isWikiLovesCampaign) {
 
         // if the "unknown country" category exists, make it the first <option>
         if (wikiLovesCountries.hasUnknownCountry) {
-            options += '<option value="Unknown" selected>' + gettext('Unknown country') + '</option>';
+            options += '<option value="Unknown" selected>' + i18nStrings['Unknown country'] + '</option>';
         }
 
         for (var i=0; i < wikiLovesCountries.list.length; i++) {

@@ -1,7 +1,7 @@
 {% extends "main/layout.html" %}
 {% block content%}   
 <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm close-stats"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: {{ _('Home Page') }}</a> 
-<h6 class="text-center text-muted">CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN</h6>
+<h6 class="text-center text-muted">{{ _('CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN') }}</h6>
 <div class="container page-header stats-page text-center">
     <h2>{{ campaign.campaign_name }}</h2>
     <hr>
@@ -107,6 +107,12 @@
         <a  class="btn btn-sm btn-primary" href="{{url_for('campaigns.downloadAllCampaignStats', id=campaign.id, filename=campaign_all_stats_csv_file) }}">{{ _('Download all stats (CSV)') }}</a>
     </div></div>
  
+    <div class="hidden-i18n-text">
+        {
+            "Contributor Stats": "{{ _('Contributor Stats') }}",
+            "Country Stats": "{{ _('Country Stats') }}"
+        }
+    </div>
 {% endblock content%}
 {% block scripts%}
     <script src="{{url_for('static', filename='js/') + session_language + '/stats.js'}}"></script>

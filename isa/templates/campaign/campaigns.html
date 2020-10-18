@@ -82,6 +82,23 @@
     {% endif %}
 
 </div>
+
+<!-- This is ready to use directly as Campaigns DataTable "language" option-->
+<div class="hidden-i18n-text">
+    {
+        "info": "{{ _('Showing _START_ to _END_ of _TOTAL_ entries') }}",
+        "infoEmpty": "{{ _('No entries') }}",
+        "infoFiltered": "",
+        "search": "{{ _('Search:') }}",
+        "zeroRecords": "{{ _('No matching records found') }}",
+        "paginate": {
+            "first": "{{ _('First') }}",
+            "last": "{{ _('Last') }}",
+            "next": "{{ _('Next') }}",
+            "previous": "{{ _('Previous') }}"
+        }
+    }
+</div>
 {% endblock content%}
 
 {% block scripts %}

@@ -78,15 +78,12 @@ class Campaign(db.Model):
 
     def __repr__(self):
         # This is what is shown when object is printed
-        return "Campaign( {}, {}, {}, {}, {}, {}, {}, {}, {})".format(
+        return "Campaign( {}, {}, {}, {}, {}, {}, {}, {})".format(
                self.campaign_name,
                self.campaign_image,
                self.campaign_manager,
                self.categories,
-               self.depicts_metadata,
                self.captions_metadata,
                self.creation_date,
-               self.start_date,
-               self.end_date,
                self.start_date,
                self.end_date)

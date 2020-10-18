@@ -157,6 +157,11 @@
     {% endif %}
 </div>
 
+<div class="hidden-i18n-text">
+    {
+        "Unknown country": "{{ _('Unknown country') }}"
+    }
+</div>
 {% endblock content%}
 {% block scripts %}
     <script src="{{url_for('static', filename='js/') + session_language + '/campaign.js'}}"></script>

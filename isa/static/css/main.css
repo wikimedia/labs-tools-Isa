@@ -630,3 +630,9 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     }
 }
 /*end responsive desktop/*
+
+
+/********** hidden i18n text **********/
+.hidden-i18n-text {
+    display: none;
+}

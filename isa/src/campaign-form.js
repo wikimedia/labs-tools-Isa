@@ -1,5 +1,6 @@
 import {getImagesFromApi} from './category-members';
 
+var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
 var isWikiLovesCampaign = $('#campaign_type')[0].checked;
 var categoriesAreValid = false;
 
@@ -185,17 +186,17 @@ $('#submit').click(function(ev) {
         var categorySelections = getCategoryData();
 
         if (categorySelections.length === 0) {
-            return alert(gettext('You must select at least one category for your campaign.'));
+            return alert(i18nStrings['You must select at least one category for your campaign.']);
         }
         if (isWikiLovesCampaign && !categoriesAreValid) {
-            return alert(gettext('Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign.') + '\n' +
-                gettext('Please check your selections and try again.'));
+            return alert(i18nStrings['Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign.']) + '\n' +
+            i18nStrings['Please check your selections and try again.'];
         }
 
         var metadataTypesAreValid = $.makeArray($('.metadata-type-checkbox')).some(function(element) {
             return element.checked;
         })
-        if (!metadataTypesAreValid) return alert(gettext('Please select at least one type from the "Metadata to collect" section'));
+        if (!metadataTypesAreValid) return alert(i18nStrings['Please select at least one type from the Metadata to collect section']);
 
         var finalCategoryData = $('#categories-data')[0].value = JSON.stringify(categorySelections);
 

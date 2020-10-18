@@ -51,7 +51,7 @@
         </div>
       <div class="btn-group">
             <a href="{{url_for('users.userSettings') }}" class="btn btn-danger" title="{{ _('Undo changes to language settings') }}">{{ _('Undo Changes') }}</a> &nbsp;
-            {{ captions_lang_form.submit(class="btn btn-primary", value=_('Save'), title="Update your language settings") }}
+            {{ captions_lang_form.submit(class="btn btn-primary", value=_('Save'), title="{{ _('Update your language settings') }}") }}
 
        </div>
     </form>

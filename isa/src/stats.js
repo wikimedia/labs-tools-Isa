@@ -1,4 +1,6 @@
 
+var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
+
 function getCampaignId () {
     var parts = window.location.pathname.split("/");
     return parseInt(parts[parts.length - 2]);
@@ -13,7 +15,7 @@ $.getJSON( "../../api/get-campaign-graph-stats-data?campaign=" + campaign_id )
         var contributor_pie_chart = new CanvasJS.Chart( "contributorChartContainer", {
             animationEnabled: true,
             title:{
-                text: gettext("Contributor Stats")
+                text: i18nStrings["Contributor Stats"]
             },
             axisX:{
                 interval: 1
@@ -35,7 +37,7 @@ $.getJSON( "../../api/get-campaign-graph-stats-data?campaign=" + campaign_id )
             animationEnabled: true,
 
             title:{
-                text: gettext("Country Stats")
+                text: i18nStrings["Country Stats"]
             },
             axisX:{
                 interval: 1

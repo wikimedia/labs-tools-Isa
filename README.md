@@ -23,29 +23,58 @@ export FLASK_APP=app.py # add --reload parameter to enable Flask auto-compilatio
 flask run
 ```
 
-## Adding Translations
+## Managing Translations
 
-To add translations, the following steps should be followed while located in the /isa subfolder
+Steps 1 to 3a below show how to extract and generate translation files from the
+source code.
 
-- Mark the string to be translated using formats shown below
+Start from step 3b if you are *only* adding a new supported language for the app.
+
+Start from step 4 if you are *only* adding translated text for already supported
+languages.
+
+Skip directly to step 5 if you have pulled changes which include updated
+translations (edited .po files).
+
+*All commands should be run from the /isa subfolder.*
+
+### 1. Add or edit translatable text in source code
+Mark new strings to be translated using formats shown below:
  * Templates: _('<string>')
- * Python & JavaScript: gettext('<string>')
+ * Python: gettext('<string>')
 
-- run ```pybabel extract -F babel.cfg -o messages.pot --input-dirs=.``` from the *isa* module to extract the strings
+### 2. Extract strings to .pot file
+run ```pybabel extract -F babel.cfg -o messages.pot --input-dirs=.```
+This step is only needed after changes have been made to translatable text
+in the source code in step 1.
 
-- run ```find src/*.js -type f -print > js-file-list``` to create/update list of all source JS files needed for next step
+### 3a. Update .po files
+run ```pybabel update -i messages.pot -d translations -l <lang_code>``` 
+Use this command to *update* .po files for each supported language. 
 
-- run ```xgettext --files-from=js-file-list --output=messages.pot --language=JavaScript --from-code=UTF-8 --join-existing --omit-header```
-This extracts JavaScript strings and merges them into messages.pot file (along with existing Python and template strings)
+It will merge in any new strings found in the .pot file generated in step 2.
+Any strings that are no longer found are placed at the bottom of the file, using
+commented out lines beginning with #~
 
-- run ```pybabel init (update in case you are modifying) -i messages.pot -d translations -l <lang_code>``` to generate translations in a new language with code <lang_code>
+### 3b. Create new .po file
+run ```pybabel init -i messages.pot -d translations -l <lang_code>```
+Use this command to create a *new* .po file.
 
-- Enter the strings corresponding translations in 'translations/<lang_code>/LC_MESSAGES/messages.po'
+This step is only needed when adding a new supported language.
+Commit the new .po file to source control.
 
-- run ``` pybabel compile -d translations ``` to compile the translations
+### 4. Add new translations
+Add the actual translated text for each language to the corresponding .po file
+located at isa/translations/<lang_code>/LC_MESSAGES/messages.po
 
-- run ``` npm run build-fr-json ``` to convert the .po file to json for use in JavaScript translations.
-Note: generalised system still to be finalised for adding new languages
+This step should be completed by translators, so can happen at any time.
+Commit any changes to .po files to source control.
+
+### 5. Compile final .mo file
+run ``` pybabel compile -d translations ```
+Once translations are ready from step 4 (or from pulling changes with
+updated .po files), you need run the compile command before seeing the new
+translations in the app.
 
 # Testing the application
 
