@@ -434,8 +434,34 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     background-color: #006699!important;
     border-radius: 5px;
     padding: 5px;
-
 }
+
+#depict-tag-suggestions-container {
+    display: none;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 13px;
+}
+
+.depict-tag-suggestion {
+    cursor: pointer;
+    margin-bottom: 7px;
+    margin-right: 7px;
+    display: inline-block;
+    background-color: #666!important;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.depict-tag-suggestion:hover {
+    background-color: #3d3d3d!important;
+}
+
+.depict-tag-suggestion .depict-tag-confidence {
+    font-weight: normal;
+}
+
 .depict-tag-item button {
     white-space: initial;
 }

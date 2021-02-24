@@ -133,6 +133,11 @@ function searchResultsFormat(state) {
             false /* isProminent */,
             statementId
         );
+        if (editSession.machineVisionActive) {
+            var suggestion = editSession.getDepictSuggestionByItem(selected.id);
+            if (suggestion) suggestion.isAccepted = true;
+            editSession.renderDepictSuggestions();
+        }
         $(this).val(null).trigger('change');
     })
   })();
@@ -167,6 +172,12 @@ $('.caption-input').on('input', function() {
 
 // Click to remove depicts tags
 $('.depict-tag-group').on('click','.depict-tag-btn', function(ev) {
+    if (editSession.machineVisionActive) {
+        // Todo: move to new participation manager method
+        var item = $(this).siblings('.label').children('.depict-tag-qvalue').text(); // todo: fix messy way to retreive item
+        var suggestion = editSession.getDepictSuggestionByItem(item);
+        if (suggestion) suggestion.isAccepted = false;
+    }
     $(this).parents('.depict-tag-item').remove();
     editSession.depictDataChanged();
 })
@@ -175,6 +186,12 @@ $('.depict-tag-group').on('click','.depict-tag-btn', function(ev) {
 $('.depict-tag-group').on('click','.prominent-btn', function(ev) {
     $(this).toggleClass('active');
     editSession.depictDataChanged();
+})
+
+// Click to add Machine Vision depict suggestions
+$('.depict-tag-suggestions').on('click','.depict-tag-suggestion', function(ev) {
+    var item = $(this).find('.depict-tag-qvalue').text(); // todo: fix messy way to retreive item
+    editSession.addDepictBySuggestionItem(item);
 })
 
 $('.edit-publish-btn-group').on('click', 'button', function() {

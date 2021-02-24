@@ -7,19 +7,21 @@
 //  - Also used for sending edits to Commons and ISA database when either submit is click
 // Data is sent via ajax post request instead of default form submit to prevent page reload
 
-import {flashMessage} from '../utils';
+import {flashMessage, getUrlParameters} from '../utils';
 
 export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
     var imageIndex = 0,
-        imageFileName = '',
         initialData = {depicts: [], captions: []},
         unsavedChanges = {depicts: [], captions: []};
 
+    this.imageFileName = '';  
     this.imageMediaId = '';
     this.imageRevId = 0;
     this.uiLanguage = $('html').attr('lang');
     this.i18nStrings = JSON.parse($('.hidden-i18n-text').text());
-
+    this.depictSuggestions = []; // Machine Vision suggestions;
+    this.machineVisionActive = !!getUrlParameters().mv;
+    
     this.nextImage = function() {
         if (!this.confirmImageNavigation()) return;
         imageIndex = (imageIndex + 1) % (images.length);
@@ -54,10 +56,10 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     this.imageChanged = function() {
         var me = this;
         document.documentElement.scrollTop = 0;
-        imageFileName = getImageFilename()
-        updateImage(imageFileName);
-        this.populateMetadata(imageFileName);
-        this.populateStructuredData(imageFileName, /*callbacks*/ {
+        this.imageFileName = getImageFilename()
+        updateImage(this.imageFileName);
+        this.populateMetadata(this.imageFileName);
+        this.populateStructuredData(this.imageFileName, /*callbacks*/ {
             onInitialDataReady: saveInitialStructuredData,
             onUiRendered: function() {
                 // run data change events to update button states and other settings
@@ -66,6 +68,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 me.captionDataChanged();
             }
         });
+
+        if (this.machineVisionActive) this.populateMachineVisionSuggestions();
     }
 
     this.addDepictStatement = function(item, label, description, isProminent, statementId) {
@@ -84,7 +88,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
         // Highlight to show unsaved changes
         updateEditBoxHighlight("depicts");
-
+        
+        if (this.machineVisionActive) this.renderDepictSuggestions();
     }
 
     // All actions to complete when caption statement is added/removed/edited
@@ -123,6 +128,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
     this.resetDepictStatements = function() {
         this.setDepictStatements(initialData.depicts);
+        if (this.machineVisionActive) this.resetDepictSuggestions();
     }
 
     this.resetCaptions = function() {
@@ -131,7 +137,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
     this.redirectLogin = function() {
         var imageData = {
-            fileName: imageFileName,
+            fileName: this.imageFileName,
             depicts: getCurrentDepictStatements(),
             captions: getCurrentCaptions()
         }
@@ -160,7 +166,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
         // Define data which is the same for all contribution types
         var additonalContributionData = {
-            image: imageFileName,
+            image: this.imageFileName,
             media_id: this.imageMediaId,
             campaign_id: campaignId,
             edit_type: editType,
