@@ -71,7 +71,7 @@ ParticipationManager.prototype.addDepictFromSuggestion = function(suggestionData
     var item = suggestionData.wikidata_id,
         label = suggestionData.label,
         description = suggestionData.description,
-        statementId = generateGuid();
+        statementId = this.imageMediaId + '$' + generateGuid();
     this.addDepictStatement(item, label, description, /*isProminent*/ false, statementId)
     suggestionData.isAccepted = true;
 
