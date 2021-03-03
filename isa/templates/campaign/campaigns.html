@@ -74,7 +74,7 @@
 </div>
 </div>
 <div class="container text-center">
-      {% if username != 'Guest' and username is not false and username is not none %}
+    {% if username != 'Guest' and username != None %}
     <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-secondary" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>
     {% else %}
     <a href="{{url_for( 'campaigns.CreateCampaign' )}}" class="btn btn-secondary disabled" title="{{ _('Create your own campaign') }}">{{ _('Create a new campaign using this tool') }}</a>

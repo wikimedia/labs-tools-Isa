@@ -39,7 +39,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				{% if username != 'Guest' and username is not false and username is not none %}
+				{% if username != 'Guest' and username != None %}
 				<a class="nav-link" href="{{url_for( 'campaigns.CreateCampaign' )}}">
 					<i class="fa fa-plus"></i> {{ _('Create New') }}
 				</a>
