@@ -27,6 +27,9 @@ def before_request():
     # Update session language
     get_locale()
 
+    if "ISA_DEV" in os.environ and os.environ["ISA_DEV"]:
+        session['username'] = "Dev"
+
 
 @babel.localeselector
 def get_locale():
