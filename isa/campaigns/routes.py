@@ -4,7 +4,7 @@ import json
 import os
 
 import requests
-from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file, jsonify
+from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file, jsonify, abort
 from flask_login import current_user
 from sqlalchemy import func
 
@@ -346,20 +346,14 @@ def getCampaignGraphStatsData():
 
 @campaigns.route('/api/post-contribution', methods=['POST', 'GET'])
 def postContribution():
-    contrib_data = request.data.decode('utf8')
     contrib_options_list = []
-    contrib_data_list = []
-    contrib_data_list = json.loads(contrib_data)
+    contrib_data_list = request.json
     username = session.get('username', None)
 
     # The most recent rev_id will be stored in latest_base_rev_id
     # Default is 0 meaning there is none and the edit failed
     latest_base_rev_id = 0
     # We get the session and app credetials for edits on Commons
-
-    csrf_token, api_auth_token = generate_csrf_token(app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
-                                                     session.get('access_token')['key'],
-                                                     session.get('access_token')['secret'])
 
     campaign_id = contrib_data_list[0]['campaign_id']
     if not username:
@@ -370,6 +364,14 @@ def postContribution():
     else:
         contrib_list = []
         for data in contrib_data_list:
+            valid_actions = [
+                "wbsetclaim",
+                "wbremoveclaims",
+                "wbsetlabel"
+            ]
+            if data["api_options"]["action"] not in valid_actions:
+                abort(400)
+
             contribution = Contribution(username=username,
                                         campaign_id=int(campaign_id),
                                         file=data['image'],
@@ -389,6 +391,11 @@ def postContribution():
 
         for i in range(len(contrib_options_list)):
             # We make an api call with the current contribution data and get baserevid
+            csrf_token, api_auth_token = generate_csrf_token(
+                app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
+                session.get('access_token')['key'],
+                session.get('access_token')['secret']
+            )
             lastrevid = make_edit_api_call(csrf_token,
                                            api_auth_token,
                                            contrib_data_list[i])
