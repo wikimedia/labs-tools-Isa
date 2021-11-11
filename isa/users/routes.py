@@ -14,7 +14,7 @@ from isa.users.utils import build_user_pref_lang
 users = Blueprint('users', __name__)
 
 
-@users.route('/api/set-login-url', methods=['POST', 'GET'])
+@users.route('/api/set-login-url')
 def setLoginUrl():
     session['next_url'] = request.args.get('url')
     return "success"
@@ -176,7 +176,7 @@ def userSettings():
                            captions_lang_form=captions_lang_form)
 
 
-@users.route('/api/login-test', methods=['GET', 'POST'])
+@users.route('/api/login-test')
 def checkUserLogin():
     username = session.get('username', None)
     response_data = {

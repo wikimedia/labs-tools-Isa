@@ -227,7 +227,7 @@ def CreateCampaign():
                                current_user=current_user)
 
 
-@campaigns.route('/campaigns/<int:id>/participate', methods=['GET', 'POST'])
+@campaigns.route('/campaigns/<int:id>/participate')
 def contributeToCampaign(id):
 
     # We get current user in sessions's username
@@ -324,7 +324,7 @@ def updateCampaign(id):
                                username=username)
 
 
-@campaigns.route('/api/get-campaign-categories', methods=['GET', 'POST'])
+@campaigns.route('/api/get-campaign-categories')
 def getCampaignCategories():
     # we get the campaign_id from the route request
     campaign_id = request.args.get('campaign')
@@ -334,7 +334,7 @@ def getCampaignCategories():
     return campaign.categories
 
 
-@campaigns.route('/api/get-campaign-graph-stats-data', methods=['GET', 'POST'])
+@campaigns.route('/api/get-campaign-graph-stats-data')
 def getCampaignGraphStatsData():
     # we get the campaign_id from the route request
     campaign_id = request.args.get('campaign')
@@ -344,7 +344,7 @@ def getCampaignGraphStatsData():
     return json.dumps(data_points)
 
 
-@campaigns.route('/api/post-contribution', methods=['POST', 'GET'])
+@campaigns.route('/api/post-contribution', methods=['POST'])
 def postContribution():
     contrib_data = request.data.decode('utf8')
     contrib_options_list = []
@@ -420,7 +420,7 @@ def postContribution():
     return("Failure")
 
 
-@campaigns.route('/api/update-campaign-images/<int:id>', methods=['POST', 'GET'])
+@campaigns.route('/api/update-campaign-images/<int:id>', methods=['POST'])
 def UpdateCampaignImagesCount(id):
 
     # We get the data from request and convert it to json
@@ -436,7 +436,7 @@ def UpdateCampaignImagesCount(id):
     return("Failure")
 
 
-@campaigns.route('/api/search-depicts/<int:id>', methods=['POST', 'GET'])
+@campaigns.route('/api/search-depicts/<int:id>')
 def searchDepicts(id):
     search_term = request.args.get('q')
     user_lang = session.get('lang', 'en')
@@ -506,7 +506,7 @@ def searchDepicts(id):
         return jsonify({"results": search_return})
 
 
-@campaigns.route('/campaigns/<int:id>/all_stats_download/<string:filename>', methods=['GET', 'POST'])
+@campaigns.route('/campaigns/<int:id>/all_stats_download/<string:filename>')
 def downloadAllCampaignStats(id, filename):
     if filename:
         return send_file(os.getcwd() + '/campaign_stats_files/' + str(id) + '/' + filename,
