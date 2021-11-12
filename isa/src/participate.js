@@ -97,8 +97,16 @@ function searchResultsFormat(state) {
     if (!state.id) {
       return state.text;
     }
+    var $label = $("<span>")
+        .addClass("search-result-label")
+        .text(state.text);
+    var $description = $("<span>")
+        .addClass("search-result-description")
+        .text(state.description);
     var $state = $(
-      '<span class="search-result-label">' + state.text + '</span> <br> <span class="search-result-description">' + state.description + '</span>'
+        $label,
+        $("<br>"),
+        $description
     );
     return $state;
   }

@@ -139,7 +139,7 @@ ParticipationManager.prototype.populateStructuredData = function(filename, callb
             // now we have the labels, populate the statements area to show existing depicts items
             // we need to extract isProminent from results of previous API call to Commons
             // and add the labels and descriptions found to the existing stored data
-            var intialStatementsHtml = "";
+            $('.depict-tag-group').empty();
             for (var qvalue in response.entities) {
                 var storedStatementData = getStoredStatementData(qvalue);
 
@@ -151,13 +151,19 @@ ParticipationManager.prototype.populateStructuredData = function(filename, callb
                     isProminent = storedStatementData.isProminent,
                     statementId = storedStatementData.statementId;
 
-                intialStatementsHtml += me.getStatementHtml(qvalue, label, description, isProminent, statementId);
+                var $statement = me.getStatement(
+                    qvalue,
+                    label,
+                    description,
+                    isProminent,
+                    statementId
+                );
+                $('.depict-tag-group').append($statement);
 
                 // save label and description
                 storedStatementData.label = label;
                 storedStatementData.description = description;
             }
-            $('.depict-tag-group').html(intialStatementsHtml);
 
             if (callbacks.onUiRendered) callbacks.onUiRendered(); // fires when the the actual HTML has finsihed being added to the page
 
@@ -171,25 +177,74 @@ ParticipationManager.prototype.populateStructuredData = function(filename, callb
     });
 }
 
-ParticipationManager.prototype.getStatementHtml = function(item, label, description, isProminent, statementId) {
+ParticipationManager.prototype.getStatement = function(
+    item,
+    label,
+    description,
+    isProminent,
+    statementId
+) {
     var statementIdAttribute = (statementId) ?
         'statement-id=' + statementId :
         '';
     var prominentHoverText = this.i18nStrings['Mark this depicted item as prominent'];
     var notProminentHoverText = this.i18nStrings['Mark this depicted item as NOT prominent'];
 
-    var isProminentButtonHtml = isProminent ?
-        '<button class="btn btn-sm prominent-btn active" title=' + notProminentHoverText + '><i class="fas fa-flag"></i></button>' :
-        '<button class="btn btn-sm  prominent-btn" title=' + prominentHoverText  + '><i class="fas fa-flag"></i></button>';
+    var $item = $("<div>")
+        .addClass("depict-tag-item")
+        .attr("title", description);
+    if(statementId) {
+        $item.attr("statement-id", statementId);
+    }
 
-    return [
-        '<div class="depict-tag-item" ' + statementIdAttribute + ' title="' + description + '">',
-        '<div class="depict-tag-label">',
-        '<div class="label btn-sm"><span class="depict-tag-label-text"><a href="//www.wikidata.org/wiki/' + item + '" target="_blank">' + label + '</a></span> <span class="depict-tag-qvalue">' + item + '</span></div>',
-        isProminentButtonHtml,
-        '<div class="depict-tag-btn">',
-        '<button class="fas fa-trash btn-link btn" title="' + this.i18nStrings['Remove this depicted item']  + '"></button></div>',
-        '</div></div></div>'].join("");
+    var $container = $("<div>")
+        .addClass("depict-tag-label")
+        .appendTo($item);
+
+    var $label = $("<div>")
+        .addClass("label btn-sm")
+        .appendTo($container);
+
+    var $text = $("<span>")
+        .addClass("depict-tag-label-text")
+        .appendTo($label);
+
+    $("<a>")
+        .attr({
+            href: "//www.wikidata.org/wiki/" + item,
+            target: "_blank"
+        })
+        .text(label)
+        .appendTo($text);
+
+    $("<span>")
+        .addClass("depict-tag-qvalue")
+        .text(item)
+        .appendTo($label);
+
+    var $isProminentButton = $("<button>")
+        .addClass("btn btn-sm prominent-btn")
+        .attr("title", prominentHoverText)
+        .appendTo($container);
+    if(isProminent) {
+        $isProminentButton
+            .addClass("active")
+            .attr("title", notProminentHoverText)
+    }
+    $("<i>")
+        .addClass("fas fa-flag")
+        .appendTo($isProminentButton);
+
+    var $remove = $("<div>")
+        .addClass("depict-tag-btn")
+        .appendTo($container);
+
+    $("<button>")
+        .addClass("fas fa-trash btn-link btn")
+        .attr("title", this.i18nStrings['Remove this depicted item'])
+        .appendTo($remove);
+
+    return $item;
 }
 
 function populateCaption(language, text) {

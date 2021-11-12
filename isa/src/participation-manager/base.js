@@ -73,8 +73,14 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     }
 
     this.addDepictStatement = function(item, label, description, isProminent, statementId) {
-        var statementHtml = this.getStatementHtml(item, label, description, isProminent, statementId);
-        $('.depict-tag-group').append(statementHtml);
+        var $statement = this.getStatement(
+            item,
+            label,
+            description,
+            isProminent,
+            statementId
+        );
+        $('.depict-tag-group').append($statement);
         this.depictDataChanged();
     }
 
