@@ -5,6 +5,7 @@ from flask import Flask, request, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_babel import Babel, gettext
 from flask_login import LoginManager
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 
@@ -44,6 +45,8 @@ login_manager.init_app(app)
 login_manager.login_view = 'main.home'
 login_manager.login_message = 'You Need to Login to Access This Page!'
 login_manager.login_message_category = 'danger'
+
+CSRFProtect(app)
 
 # we import all our blueprint routes here
 from isa.campaigns.routes import campaigns
