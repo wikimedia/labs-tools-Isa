@@ -1,5 +1,3 @@
-import {getImagesFromApi} from './category-members';
-
 var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
 var isWikiLovesCampaign = $('#campaign_type')[0].checked;
 var categoriesAreValid = false;
@@ -198,30 +196,10 @@ $('#submit').click(function(ev) {
         })
         if (!metadataTypesAreValid) return alert(i18nStrings['Please select at least one type from the Metadata to collect section']);
 
-        var finalCategoryData = $('#categories-data')[0].value = JSON.stringify(categorySelections);
+        $('#categories-data')[0].value = JSON.stringify(categorySelections);
 
-        if (finalCategoryData !== initialCategoryData) {
-            // Categories are newly added or have changed
-            // Show "checking categories" notice
-            $('#category-checking-notice').removeClass("d-none");
-
-            // Add Category: prefix
-            categorySelections.forEach(function(category) {
-                category.name = "Category:" + category.name;
-            })
-
-            getImagesFromApi(categorySelections, function(images) {
-                $('#campaign-image-count')[0].value = images.length;
-                categoriesChecked = true;
-
-                // Re-submit form now image count has been added to form
-                $('#submit').click();
-            })
-        } else {
-            // No change to category selections
-            categoriesChecked = true;
-            $('#submit').click();
-        }
+        categoriesChecked = true;
+        $('#submit').click();
     }
     // Categories checked, continue default submit, OR
     // Form is invalid, default submit to show browser warnings

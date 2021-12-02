@@ -1,4 +1,5 @@
 {% extends "main/layout.html" %}
+{% from "campaign/macros.html" import images %}
 {% block content%}
 <header class="container page-header text-center">
 
@@ -36,7 +37,7 @@
 {% for campaign in campaigns %}
                 <tr>
                     <td><span class="">{{ campaign.campaign_name }}</span></td>
-                    <td>{{ campaign.campaign_images }}</td>
+                    <td>{{ images(campaign) }}</td>
                     <td>{{ campaign.campaign_participants }}</td>
                     <td>{{ campaign.campaign_contributions }}</td>
                     <td><span class="">{{ campaign.start_date.strftime("%Y-%m-%d") }}</span></td>

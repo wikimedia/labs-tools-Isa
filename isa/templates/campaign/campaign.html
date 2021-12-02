@@ -1,4 +1,5 @@
 {% extends "main/layout.html" %}
+{% from "campaign/macros.html" import images %}
 {% block content%}
 <div class="container page-header text-center">
     {% if campaign_image is not none %}
@@ -16,14 +17,13 @@
         <div class="campaign-country-select">
             <p>{{_('View images from')}}</p>
             <select id="campaign_countries" class="fas fa-caret-down custom-select btn-new" data-style="btn-new" title="{{ _('Choose to only view images from a single country') }}">
-                <option class="select-option"> {{ _('Loading...') }}</option>
-                <!-- The other obtions will be povided here on front-end -->
+                {% for country in countries %}
+                    <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
             </select>
         </div>
-        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary btn-lg px-5 disabled" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
-    {% else %}
-        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary btn-lg px-5" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
     {% endif %}
+        <a id="get_started_btn" href="{{url_for('campaigns.contributeToCampaign', id=campaign.id ) }}" class="btn btn-primary btn-lg px-5" title="{{ _('Start contributing to this campaign') }}">{{ _('Get Started') }}</a>
     </div>
 </div>
 
@@ -33,7 +33,7 @@
             <h4>{{ _('Campaign progress so far') }}</h4>
         </div>
     <div class="main-stats-label-group mx-auto">
-        <div class="stat-label" title="{{ _('Total number of images in this campaign') }}">{{ _('Images') }}<br>{{ campaign.campaign_images }}</div>
+        <div class="stat-label" title="{{ _('Total number of images in this campaign') }}">{{ _('Images') }}<br>{{ images(campaign) }}</div>
         <div class="stat-label" title="{{ _('Total number of contributions made to this campaign') }}">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
     </div>
     <div class="stats-table mx-auto">

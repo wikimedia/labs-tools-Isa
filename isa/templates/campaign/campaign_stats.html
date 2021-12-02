@@ -1,5 +1,6 @@
 {% extends "main/layout.html" %}
-{% block content%}   
+{% from "campaign/macros.html" import images %}
+{% block content%}
 <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}" class="btn btn-outline-secondary btn-sm close-stats"><i class="fas fa-caret-left"></i> {{ campaign.campaign_name }}: {{ _('Home Page') }}</a> 
 <h6 class="text-center text-muted">{{ _('CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN') }}</h6>
 <div class="container page-header stats-page text-center">
@@ -15,7 +16,7 @@
     <div class="campaign-panel pt-4">
 
     <div class="main-stats-label-group mx-auto">
-        <div class="stat-label" title="{{ _('Total number of images in this campaign') }}"><strong>{{ _('Images') }}:</strong> {{ campaign.campaign_images }}</div>
+        <div class="stat-label" title="{{ _('Total number of images in this campaign') }}"><strong>{{ _('Images') }}:</strong> {{ images(campaign) }}</div>
         <div class="stat-label" title="{{ _('Total number of contributions made to this campaign') }}"><strong>{{ _('Contributions') }}:</strong> {{ campaign_contributions }}</div>
 
     </div>
