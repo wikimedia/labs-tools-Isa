@@ -84,3 +84,6 @@ translations in the app.
 
     - From the applications root directory, run `coverage run -m unittest discover`
     - Then run `coverage report -m isa/<blueprint_name>/*.py>`
+
+# Maintenance scripts
+Maintenance scripts are found in isa/maintenance. Run them as modules in the root directory, e.g. `python -m isa.maintenance.update_store_images`.
