@@ -1,11 +1,8 @@
-# Translation of ISA to French (français)
+# Translation of ISA to Dutch (Nederlands)
 # Exported from translatewiki.net
 #
-# Author: Ajeje Brazorf
-# Author: Gomoko
-# Author: Paraboule
-# Author: Scriptance
-# Author: Verdy p
+# Author: Husky
+# Author: Spinster
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -13,20 +10,13 @@
 msgid ""
 msgstr ""
 ""
-"Project-Id-Version: ISA 0.1.0\n"
-"Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
-"POT-Creation-Date: 2020-10-17 20:31+0100\n"
 "PO-Revision-Date: 2022-01-13 12:14:47+0000\n"
-"Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
-"Language: fr\n"
-"Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"MIME-Version: 1.0\n"
+"X-POT-Import-Date: 2021-12-13 16:57:45+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
-"X-POT-Import-Date: 2021-12-13 16:57:45+0000\n"
+"Language: nl\n"
 "X-Generator: MediaWiki 1.38.0-alpha; Translate 2021-10-25\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: campaigns/routes.py:35 templates/campaign/campaigns.html:5
 #: templates/main/layout.html:38
@@ -36,7 +26,7 @@ msgstr "Campagnes"
 #: campaigns/routes.py:53 campaigns/routes.py:135
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "La campagne d’identifiant %(id)s n’existe pas"
+msgstr "De campagne met nummer %(id)s bestaat niet."
 
 #: campaigns/routes.py:108 campaigns/routes.py:160
 msgid "Campaign - "
@@ -44,290 +34,290 @@ msgstr "Campagne - "
 
 #: campaigns/routes.py:183
 msgid "You need to Login to create a campaign"
-msgstr "Vous devez vous connecter pour créer une campagne"
+msgstr "Je moet inloggen om een campagne aan te kunnen maken."
 
 #: campaigns/routes.py:213
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr "Désolé, %(campaign_name)s n’a pas pu être créé"
+msgstr "Sorry, %(campaign_name)s kon niet aangemaakt worden"
 
 #: campaigns/routes.py:220
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr "Campagne %(campaign_name)s créée !"
+msgstr "De campagne %(campaign_name)s is aangemaakt!"
 
 #: campaigns/routes.py:223
 msgid "Create a campaign"
-msgstr "Créer une campagne"
+msgstr "Maak een campagne aan"
 
 #: campaigns/routes.py:243
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr "%(campaign_name)s – Contribuer"
+msgstr "%(campaign_name)s - Doe mee!"
 
 #: campaigns/routes.py:262
 msgid "You need to Login to update a campaign"
-msgstr "Vous devez vous connecter pour mettre à jour une campagne"
+msgstr "Je moet inloggen om een campagne aan te passen."
 
 #: campaigns/routes.py:288
 msgid "Campaign update failed please try later!"
-msgstr "La mise à jour de la campagne a échoué, veuillez essayer ultérieurement !"
+msgstr "De update van de campagne is mislukt. Probeer later opnieuw!"
 
 #: campaigns/routes.py:290
 msgid "Update Succesfull !"
-msgstr "Mise à jour réussie !"
+msgstr "De update is met succes voltooid."
 
 #: campaigns/routes.py:298
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Vous ne pouvez pas mettre à jour cette campagne, contactez l’utilisateur gestionnaire : %(campaign_manager)s "
+msgstr "Je kan deze campagne niet aanpassen. Neem contact op met de aanmaker ervan: User:%(campaign_manager)s "
 
 #: campaigns/routes.py:313
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr "Bouh ! %(campaign_name)s n’a pas pu être mis à jour !"
+msgstr "Oh jee! %(campaign_name)s kon niet aangepast worden!"
 
 #: campaigns/routes.py:318
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr "%(campaign_name)s – Mise à jour"
+msgstr "%(campaign_name)s - Aanpassing"
 
 #: campaigns/routes.py:366
 msgid "You need to login to participate"
-msgstr "Vous devez vous connecter pour participer"
+msgstr "Je moet inloggen om deel te kunnen nemen."
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr "Mettre à jour les détails de la campagne"
+msgstr "Pas de informatie over de campagne aan"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr "Créer une nouvelle campagne"
+msgstr "Maak een nieuwe campagne aan"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Vous faites la mise à jour"
+msgstr "Je bent aan het updaten"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr "Remplir le formulaire ci-dessous pour créer votre campagne"
+msgstr "Vul het onderstaande formulier in om je campagne aan te maken"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr "Les champs marqués avec * sont obligatoires"
+msgstr "Velden gemarkeerd met * zijn verplicht"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Nom de la campagne"
+msgstr "Naam van de campagne"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr "C’est le nom spécifique à votre campagne, non pas celui du projet principal."
+msgstr "Dit is de naam die specifiek bij je campagne hoort, niet het algemene project."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr "Donc, non pas « Wiki aime l’Afrique », mais plutôt « Musique et danse au Nigeria »"
+msgstr "Dus niet zozeer \"Wiki Loves Monuments\" maar bijvoorbeeld wel \"Monumenten in Delft\""
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr "Description courte de la campagne (144 caractères)"
+msgstr "Korte beschrijving van de campagne (144 karakters)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr "Sur quoi vont travailler les utilisateurs"
+msgstr "Waaraan gaan gebruikers werken?"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:24
 msgid "Start Date"
-msgstr "Date de début"
+msgstr "Startdatum"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr "Définir la date de début de la campagne"
+msgstr "Stel de startdatum van de campagne in"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:25
 msgid "End Date"
-msgstr "Date de fin"
+msgstr "Einddatum"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr "Définir la date de fin de la campagne"
+msgstr "Stel de einddatum van de campagne in"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "C'est une campagne « Wiki aime »"
+msgstr "Dit is een 'Wiki Loves' campagne"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr "Quand elle est bien positionnée, cette option enregistre les contributions par pays et permet alors aux participants de choisir de quel pays ils veulent voir les images."
+msgstr "Wanneer dit (bij afbeeldingen uit een 'Wiki Loves' fotowedstrijd) correct ingesteld is, dan kunnen deelnemers kiezen uit welk land ze afbeeldingen zien, en dan kan je bijdragen per land bijhouden."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr "Vous pouvez sélectionner plusieurs catégories du bon type."
+msgstr "Je kan meerdere categorieën (van het correcte type) selecteren."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr "La profondeur doit être mise à 0 pour toutes les catégories dans une campagne « Wiki aime »."
+msgstr "Bij een 'Wiki Loves' campagne moet de diepte bij alle categorieën op '0' ingesteld worden."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr "Nécessite des catégories des images du formulaire du <strong><em>projet</em></strong> « Wiki aime » dans une <strong><em>année</em></strong> spécifique, par ex. « Images de Wiki aime <strong><em>l’Afrique</em></strong> <strong><em>2019</em></strong>” (modifier le <strong><em>projet</em></strong> et l’année comme <strong><em>demandé</em></strong>)"
+msgstr "Vul hier categorieën in in het formaat images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, bijvoorbeeld \"Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (pas <strong><em>project</em></strong> en jaar aan als <strong><em>nodig</em></strong>)"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr "Certaines des catégories choisies ci-dessous n’ont pas la bonne syntaxe"
+msgstr "Sommige categorieën die hieronder geselecteerd zijn, hebben niet de correcte syntax"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr "Catégories à utiliser dans cette campagne"
+msgstr "Categorieën om in deze campagne te gebruiken"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr "Rechercher les catégories de Wikimédia Commons qui contiennent les images que vous voulez utiliser dans votre campagne."
+msgstr "Zoek de categorieën op Wikimedia Commons die de afbeeldingen bevatten die je in je campagne wil gebruiken."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr "Si vous voulez une catégorie et TOUTES ses sous-catégories, utilisez l’option « Profondeur » pour choisir le nombre de niveaux de profondeur que vous voulez explorer (laisser à 0 pour les campagnes « Wiki aime »)."
+msgstr "Als je een categorie wil gebruiken INCLUSIEF subcategorieën, gebruik dan de 'Diepte' optie om te kiezen hoeveel niveaus diep je wil gaan (laat 'Diepte' op 0 staan bij 'Wiki Loves' campagnes)."
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr "Choisir les catégories à utiliser dans la campagne"
+msgstr "Kies categorieën die je in de campagne wil gebruiken"
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Nom"
+msgstr "Naam"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Profondeur"
+msgstr "Diepte"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr "Les catégories en rouge n’ont pas la bonne syntaxe pour la fonctionnalité « Campagne Wiki aime »."
+msgstr "De categorieën in het rood hebben niet de correcte syntax voor de 'Wiki Loves' campagne-feature."
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr "Veuillez les supprimer ou décocher la case « Campagne Wiki aime » ci-dessus"
+msgstr "Verwijder deze, of deselecteer het 'Wiki Loves campagne' vakje."
 
 #: templates/campaign/campaign-form.html:173
 msgid "Metadata to collect in the Campaign"
-msgstr "Métadonnées à collecter dans la campagne"
+msgstr "Metadata die je in de campagne wil verzamelen"
 
 #: templates/campaign/campaign-form.html:173
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr "Choisir quel type de <strong>métadonnées</strong> vous voulez collecter dans votre campagne."
+msgstr "Kies welke soort <strong>metadata</strong> je wil verzamelen in je campagne."
 
 #: templates/campaign/campaign-form.html:173
 msgid "You must select at least one of the options below."
-msgstr "Vous devez sélectionner au moins une des options ci-dessous."
+msgstr "Je moet minstens één van de opties hieronder uitkiezen."
 
 #: templates/campaign/campaign-form.html:173
 msgid "To learn more about Depicts and Caption meta-data see the help page."
-msgstr "Pour en savoir plus sur les métadonnées « Décrit » et « Légende », voir la page d’aide."
+msgstr "Zie de hulppagina's voor meer info over de 'Beeldt af'- en 'Bijschrift'-metadata."
 
 #: templates/campaign/campaign-form.html:176
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr "Décrit"
+msgstr "Beeldt af"
 
 #: templates/campaign/campaign-form.html:188
 msgid "Select to collect Depicts metadata in the campiagn"
-msgstr "Sélectionner pour collecter les métadonnées « Décrit » dans la campagne"
+msgstr "Selecteer deze optie om 'Beeldt af'-metadata te verzamelen in de campagne"
 
 #: templates/campaign/campaign-form.html:191
 #: templates/campaign/campaign_entry.html:75
 msgid "Captions"
-msgstr "Légendes"
+msgstr "Bijschriften"
 
 #: templates/campaign/campaign-form.html:203
 msgid "Select to collect Caption metadata in the campiagn"
-msgstr "Sélectionner pour collecter les métadonnées « Légende » dans la campagne"
+msgstr "Selecteer deze optie om 'Bijschrift'-metadata te verzamelen in de campagne."
 
 #: templates/campaign/campaign-form.html:210
 msgid "Campaign Image"
-msgstr "Image de la campagne"
+msgstr "Campagne-afbeelding"
 
 #: templates/campaign/campaign-form.html:210
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr "La hauteur maximale pour l’image de la campagne est 150px. Les images doivent être soit une bannière, soit un logo."
+msgstr "De maximale hoogte voor een campagne-afbeelding is 150 pixels. Afbeeldingen moeten een banner of een logo zijn."
 
 #: templates/campaign/campaign-form.html:210
 msgid "Portrait or square photos are not recommended."
-msgstr "Les photos en mode portrait ou carrées ne sont pas recommandées."
+msgstr "Foto's in portretoriëntatie of vierkante foto's zijn niet aan te bevelen."
 
 #: templates/campaign/campaign-form.html:222
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr "Saisir le NOM DE FICHIER seul d’une image des communs pour afficher sur la page d’accueil de la campagne."
+msgstr "Vul hier enkel de BESTANDSNAAM in van een afbeelding op Wikimedia Commons. Deze wordt gebruikt op de homepage van de campagne."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Long description of Campaign (full about info)"
-msgstr "Description longue de la campagne (infos complètes à propos)"
+msgstr "Lange beschrijving van de campagne (volledige info erover)"
 
 #: templates/campaign/campaign-form.html:240
 msgid "Why it is important that users contribute to the campaign?"
-msgstr "Pourquoi est-ce important que les utilisateurs contribuent à la campagne ?"
+msgstr "Waarom is het belangrijk dat mensen aan deze campagne deelnemen?"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Publish Campaign"
-msgstr "Publier la campagne"
+msgstr "Publiceer de campagne"
 
 #: templates/campaign/campaign-form.html:256
 msgid "You must select at least one category for your campaign."
-msgstr "Vous devez sélectionner au moins une catégorie pour votre campagne."
+msgstr "Je moet minstens één categorie selecteren voor je campagne."
 
 #: templates/campaign/campaign-form.html:257
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr "Certaines des catégories que vous avez choisies n’ont pas la bonne syntaxe pour une campagne « Wiki aime »."
+msgstr "Sommige van de gekozen categorieën hebben niet de correcte syntax voor een 'Wiki Loves' campagne."
 
 #: templates/campaign/campaign-form.html:258
 msgid "Please check your selections and try again."
-msgstr "Veuillez vérifier vos sélections et réessayer."
+msgstr "Bekijk je selecties en probeer opnieuw."
 
 #: templates/campaign/campaign-form.html:259
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr "Veuillez sélectionner au moins un type de métadonnées dans la section collecte"
+msgstr "Selecteer minstens één type in het onderdeel 'Metadata te verzamelen'"
 
 #: templates/campaign/campaign.html:17
 msgid "View images from"
-msgstr "Afficher les images de"
+msgstr "Bekijk afbeeldingen van"
 
 #: templates/campaign/campaign.html:18
 msgid "Choose to only view images from a single country"
-msgstr "Choisir de n’afficher que les images d’un unique pays"
+msgstr "Kies om enkel afbeeldingen van 1 land te bekijken"
 
 #: templates/campaign/campaign.html:19
 msgid "Loading..."
-msgstr "Chargement…"
+msgstr "Bezig met laden..."
 
 #: templates/campaign/campaign.html:23 templates/campaign/campaign.html:25
 msgid "Start contributing to this campaign"
-msgstr "Commencer à contribuer à cette campagne"
+msgstr "Begin met bijdragen aan deze campagne"
 
 #: templates/campaign/campaign.html:23 templates/campaign/campaign.html:25
 #: templates/campaign/campaigns.html:32
 msgid "Get Started"
-msgstr "Démarrer"
+msgstr "Aan de slag"
 
 #: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
-msgstr "Progrès de la campagne jusqu’à présent"
+msgstr "Vooruitgang in de campagne tot nu toe"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:18
 msgid "Total number of images in this campaign"
-msgstr "Nombre total d’images dans cette campagne"
+msgstr "Totaal aantal afbeeldingen in deze campagne"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:18
 #: templates/campaign/campaigns.html:21
 msgid "Images"
-msgstr "Images"
+msgstr "Afbeeldingen"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of contributions made to this campaign"
-msgstr "Nombre total de contributions faites dans cette campagne"
+msgstr "Totaal aantal bijdragen aan deze campagne"
 
 #: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
 #: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
@@ -336,296 +326,296 @@ msgstr "Nombre total de contributions faites dans cette campagne"
 #: templates/campaign/campaign_stats.html:75
 #: templates/campaign/campaigns.html:23
 msgid "Contributions"
-msgstr "Contributions"
+msgstr "Bijdragen"
 
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:38
 msgid "Top Contributors"
-msgstr "Meilleurs contributeurs"
+msgstr "Meest actieve bijdragers"
 
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:42
 msgid "Contributor"
-msgstr "Contributeur"
+msgstr "Bijdrager"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:61
 msgid "No partcipants has contributed to this campaign"
-msgstr "Aucun participant n’a contribué à cette campagne"
+msgstr "Aan deze campagne heeft nog niemand deelgenomen."
 
 #: templates/campaign/campaign.html:74
 #: templates/campaign/campaign_stats.html:70
 msgid "Most improved Countries"
-msgstr "Pays les mieux améliorés"
+msgstr "Landen met de meeste bijdragen"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:74
 msgid "Country"
-msgstr "Pays"
+msgstr "Land"
 
 #: templates/campaign/campaign.html:97
 #: templates/campaign/campaign_stats.html:93
 msgid "There is no data available yet for this campaign"
-msgstr "Il n’y a pas encore de données disponibles pour cette campagne"
+msgstr "Er is nog geen data beschikbaar voor deze campagne"
 
 #: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
-msgstr "Afficher et télécharger plus de statistiques pour cette campagne"
+msgstr "Bekijk en download meer statistieken voor deze campagne"
 
 #: templates/campaign/campaign.html:105
 msgid "View full stats"
-msgstr "Afficher les statistiques complètes"
+msgstr "Bekijk de volledige statistieken"
 
 #: templates/campaign/campaign.html:116
 msgid "My Contributions"
-msgstr "Mes contributions"
+msgstr "Mijn bijdragen"
 
 #: templates/campaign/campaign.html:123
 msgid "Rank"
-msgstr "Rang"
+msgstr "Positie"
 
 #: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
-msgstr "Plus au sujet de cette campagne"
+msgstr "Meer info over deze campagne"
 
 #: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
-msgstr "Gestionnaire de la campagne"
+msgstr "Campagnemanager"
 
 #: templates/campaign/campaign.html:145
 msgid "START DATE"
-msgstr "DATE DE DÉBUT"
+msgstr "STARTDATUM"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
-msgstr "DATE DE FIN"
+msgstr "EINDDATUM"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:45
 msgid "Not Set"
-msgstr "Non défini"
+msgstr "Niet ingesteld"
 
 #: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
-msgstr "Faire des modifications de cette campagne"
+msgstr "Maak aanpassingen aan deze campagne"
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
-msgstr "Modifier la campagne"
+msgstr "Campagne bewerken"
 
 #: templates/campaign/campaign.html:162
 msgid "Unknown country"
-msgstr "Pays inconnu"
+msgstr "Onbekend land"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr "Renvoyer vers la page d’accueil de la campagne"
+msgstr "Keer terug naar de homepage van de campagne"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:3
 msgid "Home Page"
-msgstr "Page d’accueil"
+msgstr "Homepagina"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Afficher l’image précédente"
+msgstr "Bekijk de vorige afbeelding"
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:97
 msgid "PREV IMAGE"
-msgstr "IMAGE PRÉC."
+msgstr "VORIGE AFBEELDING"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Travail personnel"
+msgstr "Eigen werk"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Afficher l’image suivante"
+msgstr "Bekijk de volgende afbeelding"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:98
 msgid "NEXT IMAGE"
-msgstr "IMAGE SUIV."
+msgstr "VOLGENDE AFBEELDING"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Fichier"
+msgstr "Bestand"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Ouvrir cette image sur Wikimédia Commons"
+msgstr "Open deze afbeelding op Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Description"
+msgstr "Beschrijving"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Catégories"
+msgstr "Categorieën"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr "Emplacement de l’appareil photo"
+msgstr "Cameralocatie"
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:108
 msgid "show all metadata from commons"
-msgstr "montrer toutes les métadonnées de Commons"
+msgstr "Toon alle metadata van Commons"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr "Ajout des déclarations de description"
+msgstr "'Beeldt af'-eigenschappen toevoegen"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "Faite simple : utilisez des mots et des concepts simples pour décrire ce que vous voyez sur chaque image (par ex. chat, montagne, Taj Mahal)"
+msgstr "Hou het eenvoudig: gebruik eenvoudige woorden om te beschrijven wat je in elke afbeelding ziet (bijvoorbeeld: kat, berg, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
-msgstr "Annuler vos modifications"
+msgstr "Wijzigingen annuleren"
 
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:77
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Annuleren"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr "Enregistrer vos modifications vers Wikimédia Commons"
+msgstr "Bewaar je bewerkingen op Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:78
 #: templates/users/user_settings.html:54
 msgid "Save"
-msgstr "Enregistrer"
+msgstr "Bewaren"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr "Vous allez être redirigé pour vous connecter et revenir ici pour enregistrer vos modifications"
+msgstr "Je wordt doorverwezen naar de login-pagina, en vervolgens terug naar hier, zodat je je wijzigingen kan opslaan"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr "Nommer les différents éléments que vous pouvez voir dans cette image"
+msgstr "Noem de verschillende elementen die je in deze afbeelding kan zien"
 
 #: templates/campaign/campaign_entry.html:68
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr "Pour marquer les éléments importants dans l’image, cliquer sur l’icône drapeau"
+msgstr "Klik op het vlag-icoon om de belangrijkste elementen in de afbeelding aan te duiden"
 
 #: templates/campaign/campaign_entry.html:75
 msgid "Writing Captions"
-msgstr "Rédaction des légendes"
+msgstr "Bijschriften schrijven"
 
 #: templates/campaign/campaign_entry.html:75
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr "Incluez toute information culturellement spécifique, scientifique ou technique, que vous pouvez identifier (par ex. la Cérémonie du café éthiopienne ou « bunna maflat ») pour rendre l’information plus riche."
+msgstr "Beschrijf alle specifieke (ook culturele, wetenschappelijke en technische) informatie die je kan identificeren in de afbeelding (bijvoorbeeld: de Ethiopische koffieceremonie, bunna maflat) om de informatie rijker te maken."
 
 #: templates/campaign/campaign_entry.html:81
 msgid "Log in to publish changes"
-msgstr "Se connecter pour publier les modifications"
+msgstr "Log in om je wijzigingen op te slaan"
 
 #: templates/campaign/campaign_entry.html:83
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr "Ajoutez une légende pour mieux expliquer l’image (255 caractères max)"
+msgstr "Voeg een bijschrift toe om de afbeelding beter te beschrijven (maximaal 255 karakters)"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Briefly explain what you see in this image."
-msgstr "Expliquez brièvement ce que vous voyez dans cette image."
+msgstr "Omschrijf kort wat je in deze afbeelding ziet."
 
 #: templates/campaign/campaign_entry.html:92
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr "Vous pouvez ajouter des légendes dans des langues supplémentaires en sélectionnant Préférences de langue dans le menu utilisateur"
+msgstr "Je kan bijschriften in andere talen toevoegen door Taalvoorkeuren te selecteren in het gebruikersmenu"
 
 #: templates/campaign/campaign_entry.html:104
 msgid "No images found for this campaign!"
-msgstr "Aucune image trouvée pour cette campagne !"
+msgstr "Geen afbeeldingen gevonden in deze campagne!"
 
 #: templates/campaign/campaign_entry.html:105
 msgid "Something went wrong getting campaign images"
-msgstr "Quelque chose s’est mal passé en récupérant les images de la campagne"
+msgstr "Er is iets fout gegaan bij het ophalen van de afbeeldingen van deze campagne"
 
 #: templates/campaign/campaign_entry.html:106
 msgid "Search for things you see in the image"
-msgstr "Rechercher les choses que vous voyez dans l’image"
+msgstr "Zoek naar dingen die je ziet in het plaatje"
 
 #: templates/campaign/campaign_entry.html:107
 msgid "minimise metadata from commons"
-msgstr "minimiser les métadonnées de Commons"
+msgstr "minimaliseer metadata van Commons"
 
 #: templates/campaign/campaign_entry.html:109
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr "Réussi ! Éléments décrits enregistrés dans Wikimédia Commons"
+msgstr "Gelukt! De afgebeelde items zijn opgeslagen op Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr "Réussi ! Légendes enregistrées dans Wikimédia Commons"
+msgstr "Gelukt! De bijschriften zijn opgeslagen op Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr "Oups ! Quelque chose s’est mal passé, vos modifications n’ont pas été enregistrées dans Wikimédia Commons"
+msgstr "Oeps! Er ging iets mis, je bewerkingen zijn helaas niet opgeslagen op Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr "Voulez-vous vraiment naviguer vers une autre image ? Vous avez des modifications non enregistrées qui seront perdues."
+msgstr "Weet je zeker dat je naar een andere afbeelding wilt navigeren? Niet opgeslagen wijzigingen gaan dan verloren."
 
 #: templates/campaign/campaign_entry.html:113
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr "Cliquer sur « OK » pour continuer malgré tout, ou « Annuler » si vous voulez enregistrer d’abord les modifications."
+msgstr "Klik op \"OK\" om verder te gaan, of op \"Annuleren\" als je eerst je wijzigingen wilt opslaan."
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Remove this depicted item"
-msgstr "Supprimer cet élément décrit"
+msgstr "Verwijder dit afgebeelde item"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Mark this depicted item as prominent"
-msgstr "Marquer cet élément décrit comme important"
+msgstr "Markeer dit afgebeelde item als prominent"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Mark this depicted item as NOT prominent"
-msgstr "Marquer cet élément décrit comme NON important"
+msgstr "Markeer dit afgebeelde item als NIET prominent"
 
 #: templates/campaign/campaign_stats.html:4
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr "CONTRIBUTIONS POUR UNE CAMPAGNE DE DONNÉES STRUCTURÉE"
+msgstr "BIJDRAGES AAN EEN GESTRUCTUREERDE-DATA CAMPAGNE"
 
 #: templates/campaign/campaign_stats.html:9
 msgid "From"
-msgstr "De"
+msgstr "Van"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "Till"
-msgstr "Jusqu’à"
+msgstr "Tot"
 
 #: templates/campaign/campaign_stats.html:107
 msgid "Download all stats (CSV)"
-msgstr "Télécharger toutes les statistiques (CSV)"
+msgstr "Download alle statistieken (CSV)"
 
 #: templates/campaign/campaign_stats.html:112
 msgid "Contributor Stats"
-msgstr "Statistiques du contributeur"
+msgstr "Statistieken van bijdragers"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Country Stats"
-msgstr "Statistiques du pays"
+msgstr "Statistieken per land"
 
 #: templates/campaign/campaigns.html:7
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr "Sur cette page se trouvent les campagnes contrôlées qui tournent actuellement comme faisant partie de l’outil ISA."
+msgstr "Op deze pagina staan de campagnes die momenteel actief zijn in de ISA Tool."
 
 #: templates/campaign/campaigns.html:7
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr "Cliquer sur le nom de la campagne pour démarrer et ajouter les données structurées vers une image."
+msgstr "Klik op de naam van een campagne om te starten en om gestructureerde data aan een afbeelding toe te voegen."
 
 #: templates/campaign/campaigns.html:7
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr "Vous pouvez accéder aux informations des campagnes précédentes dans la section Archive."
+msgstr "Je vindt informatie over de voorbije campagnes in het 'Archief'gedeelte."
 
 #: templates/campaign/campaigns.html:14
 msgid "Ongoing Campaigns"
-msgstr "Campagnes en cours"
+msgstr "Huidige campagnes"
 
 #: templates/campaign/campaigns.html:20
 msgid "Campaign name"
-msgstr "Nom de la campagne"
+msgstr "Naam van de campagne"
 
 #: templates/campaign/campaigns.html:20 templates/users/own_campaigns.html:28
 msgid "Campaign"
@@ -633,645 +623,645 @@ msgstr "Campagne"
 
 #: templates/campaign/campaigns.html:21
 msgid "Total number of images in the campaign"
-msgstr "Nombre total d’images dans la campagne"
+msgstr "Totaal aantal afbeeldingen in de campagne"
 
 #: templates/campaign/campaigns.html:22
 msgid "Number of editors that have contributed to the campaign "
-msgstr "Nombre de rédacteurs qui ont contribué à la campagne "
+msgstr "Aantal bewerkers die hebben deelgenomen aan de campagne"
 
 #: templates/campaign/campaigns.html:22
 msgid "Participants"
-msgstr "Participants"
+msgstr "Deelnemers"
 
 #: templates/campaign/campaigns.html:23
 msgid "Total number of contributions to the campaign"
-msgstr "Nombre total de contributions à la campagne"
+msgstr "Totaal aantal deelnemers aan de campagne"
 
 #: templates/campaign/campaigns.html:24
 msgid "Campaign start date"
-msgstr "Date de début de la campagne"
+msgstr "Startdatum van de campagne"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign end date"
-msgstr "Date de fin de la campagne"
+msgstr "Einddatum van de campagne"
 
 #: templates/campaign/campaigns.html:26
 msgid "Date the campaign was created"
-msgstr "Date à laquelle la campagne a été créée"
+msgstr "Datum wanneer de campagne aangemaakt werd"
 
 #: templates/campaign/campaigns.html:26
 msgid "Creation Date"
-msgstr "Date de création"
+msgstr "Aanmaakdatum"
 
 #: templates/campaign/campaigns.html:27
 msgid "Campaign status"
-msgstr "État de la campagne"
+msgstr "Status van de campagne"
 
 #: templates/campaign/campaigns.html:27
 msgid "Status"
-msgstr "État"
+msgstr "Status"
 
 #: templates/campaign/campaigns.html:53
 msgid "Closed"
-msgstr "Close"
+msgstr "Afgesloten"
 
 #: templates/campaign/campaigns.html:56
 msgid "Not Opened"
-msgstr "Non ouverte"
+msgstr "Niet geopend"
 
 #: templates/campaign/campaigns.html:59
 msgid "Open"
-msgstr "Ouverte"
+msgstr "Open"
 
 #: templates/campaign/campaigns.html:65 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr "Aller à la page d’accueil de la campagne pour démarrer"
+msgstr "Ga naar de homepage van de campagne om te starten"
 
 #: templates/campaign/campaigns.html:65
 msgid "Go to Campaign"
-msgstr "Aller à la campagne"
+msgstr "Ga naar campagne"
 
 #: templates/campaign/campaigns.html:73
 msgid "Show closed campaigns"
-msgstr "Afficher les campagnes closes"
+msgstr "Toon afgeronde campagnes"
 
 #: templates/campaign/campaigns.html:78 templates/campaign/campaigns.html:80
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr "Créer votre propre campagne"
+msgstr "Maak je eigen campagne"
 
 #: templates/campaign/campaigns.html:78 templates/campaign/campaigns.html:80
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr "Créer une nouvelle campagne en utilisant cet outil"
+msgstr "Maak een nieuwe campagne met deze tool"
 
 #: templates/campaign/campaigns.html:81
 msgid "You must be logged in to create a campaign."
-msgstr "Vous devez être connecté pour créer une campagne."
+msgstr "Je moet ingelogd zijn om een campagne aan te maken."
 
 #: templates/campaign/campaigns.html:89
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr "Affichage les entrées de _START_ à _END_ sur _TOTAL_"
+msgstr ""
 
 #: templates/campaign/campaigns.html:90
 msgid "No entries"
-msgstr "Aucune entrée"
+msgstr "Geen bijdragen"
 
 #: templates/campaign/campaigns.html:92
 msgid "Search:"
-msgstr "Rechercher :"
+msgstr "Zoeken:"
 
 #: templates/campaign/campaigns.html:93
 msgid "No matching records found"
-msgstr "Aucun enregistrement correspondant trouvé"
+msgstr "Geen overeenkomende resultaten gevonden"
 
 #: templates/campaign/campaigns.html:95
 msgid "First"
-msgstr "Premier"
+msgstr "Eerste"
 
 #: templates/campaign/campaigns.html:96
 msgid "Last"
-msgstr "Dernier"
+msgstr "Laatste"
 
 #: templates/campaign/campaigns.html:97
 msgid "Next"
-msgstr "Suivant"
+msgstr "Volgende"
 
 #: templates/campaign/campaigns.html:98
 msgid "Previous"
-msgstr "Précédent"
+msgstr "Vorige"
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr "Serveur en maintenance"
+msgstr "Server in onderhoudsmodus"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr "Veuillez vérifier le support de contact"
+msgstr "Neem contact op met support"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Me ramener à l’accueil"
+msgstr "Naar de homepage"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Support de contact"
+msgstr "Neem contact op met support"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Page non trouvée"
+msgstr "Pagina niet gevonden"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr "Nous sommes incapables de trouver la page que vous recherchez"
+msgstr "We kunnen deze pagina niet vinden"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Me ramener à l’accueil"
+msgstr "Naar de homepage"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Quelque chose s’est mal passé"
+msgstr "Er is iets misgegaan"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr "''ISA'' est peut-être en maintenance"
+msgstr "De ISA tool is misschien in onderhoudsmodus"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Page d’aide"
+msgstr "Hulppagina"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr "Ajouter facilement des informations aux images sur Wikimédia Commons"
+msgstr "Voeg makkelijk informatie toe aan afbeeldingen op Wikimedia Commons"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> est amusant, multilingue, un outil pensé d’abord pour le mobile, ce qui permet aux gens d’ajouter facilement des « micro-contributions » sous la forme de <a %(link_attrs)s>données structurées</a> aux images sur Wikimédia Commons qui ont été ajoutées par les compétitions « Wiki aime »."
+msgstr ""
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr "ISA est à l’origine conçu pour fournir de meilleures descriptions multilingues et structurées des images de <a %(link_attrs)s>Wiki aime l’Afrique</a>."
+msgstr ""
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr "Mais il a aussi été développé pour être utile à toutes les <a link_attrs>compétitions « Wiki aime«»</a> et, comme but ultime, pour <strong>tous les fichiers média</strong> sur Wikimédia Commons."
+msgstr ""
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr "Qu’est-ce que Wikimédia Commons ?"
+msgstr ""
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr "<strong>Wikimédia Commons</strong> (aussi appelé « Commons ») est un projet Wikimédia, un projet sœur de Wikipédia, et une collection de plus de quarante millions de fichier média gratuits."
+msgstr ""
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr "Tous les photos, fichiers audio et vidéo, PDF et autres médias sous licence libre sur Wikipédia sont stockés dans Commons."
+msgstr ""
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr "Wikimédia Commons croît rapidement, d’approximativement cinq millions de nouveaux fichiers média par an."
+msgstr ""
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr "Des milliers de volontaires téléchargent des fichiers vers Commons, et les intègrent dans les projets Wikimédia, comme Wikipédia, pour illustrer le contenu qui s’y trouve, et pour partager ces médias avec le public."
+msgstr ""
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr "Les fichiers média sur Commons sont typiquement :"
+msgstr ""
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr "Des photographies personnelles et des médias téléchargés par des individus, quelquefois lors des compétitions « Wiki aime », comme « Wiki aime l’Afrique », « Wiki aime les monuments », « Wiki aime la Terre », etc. ;"
+msgstr ""
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr "Des fichiers de média en licence libre de sites web externes comme Flickr, YouTube, des journaux en accès libre, et d’autres dépôts ; et"
+msgstr ""
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr "Des dons d’institutions ou d’organisations avec des collections substantielles de médias, grandes ou petites, allant de l’UNESCO, la NASA et la Bibliothèque britannique, aux petites institutions culturelles locales."
+msgstr ""
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr "Qu’est-ce que les données structurées dans Commons ?"
+msgstr ""
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr "<strong>Données structurées sur Commons</strong> est un projet qui fournit l’infrastructure technique pour compléter le wikitexte, les modèles et les catégories sur Wilimédia Commons avec des données structurées."
+msgstr ""
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr "Les données structurées sont des données avec un haut degré d’organisation structurée."
+msgstr ""
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr "Avec plus de structure, il devient plus facile de réutiliser les données dans d’autres projets Wikimédia et par des parties tierces ; cela permet aussi aux machines de les traiter et les « comprendre »."
+msgstr ""
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr "Données structurées est un projet en cours qui a été lancé en 2019 !… alors que Wikimédia Commons existait depuis des années !"
+msgstr ""
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr "Il y a littéralement des millions d’images hébergées sur Wikimédia Commons… qui ont besoin d’attention et d’affection."
+msgstr ""
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr "Des millions d’images qui ne sont pour l’instant pas décrites avec des données structurées."
+msgstr ""
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr "Comment va-t-on faire ça ? "
+msgstr ""
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr "<strong>Superviser</strong>, ou la supervision, au sens strict, signifie : sélectionner et organiser des œuvres de l’héritage artistique et culturel destinées à une exposition."
+msgstr ""
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr "Ce terme peut aussi être utilisé plus largement, pour décrire toute activité qui implique de sélectionner, organiser et présenter de l’information."
+msgstr ""
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr "Dans le contexte de Données structurées sur Commons, la supervision signifie toutes les activités effectuées par les contributeurs de Commons pour organiser et présenter les fichiers média sur Wikimédia Commons : actions d’administration, ajout de plus et de meilleures métadonnées aux fichiers, les regrouper en catégories, créer des galeries…"
+msgstr ""
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr "Donc… comment l’outil ISA s’insère-t-il dans tout cela ?"
+msgstr ""
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr "L’outil ISA permet d’ajouter deux types différents de données structurées à un ensemble d’images : légendes et descriptions (plus d’explications ci-dessous sur ce que sont les légendes et les descriptions)."
+msgstr ""
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr "C’est un outil multilingue, conçu d’abord pour de « micro-contributions » via mobile, qui facilite l’ajout par chacun de données structurées pour les images contribuées aux compétitions « Wiki aime » sur Wikimédia Commons."
+msgstr ""
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr "L’outil travaille avec les campagnes supervisées créées par les coordonnateurs."
+msgstr ""
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr "N’importe quel utilisateur avec un compte Wikimédia peut devenir coordinateur !"
+msgstr ""
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr "Avec ISA, le coordinateur peut choisir un ensemble prédéfini d’images sur Commons, sélectionner une date de début et une date de fin pour la campagne, ainsi que fournir des informations générales sur la campagne elle-même."
+msgstr ""
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr "Le coordinateur peut alors demander aux contributeurs de « baliser » ces images avec des métadonnées structurées multilingues (descriptions ou légendes)."
+msgstr ""
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr "Les points sont comptés pour chaque contribution faite par un participant, il est donc possible d’organiser avec ISA des compétitions ou des défis de « balisage » ou de micro-contributions."
+msgstr ""
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr "N’importe quel utilisateur avec un compte Wikimédia peut contribuer à l’ajout de métadonnées structurées à une campagne."
+msgstr ""
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr "La seule exigence est… d’être connecté."
+msgstr ""
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr "En savoir plus sur les légendes et descriptions de fichiers"
+msgstr ""
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr "Les légendes de fichiers font partie intégrante des données structurées."
+msgstr ""
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr "Ils sont destinés à stocker des descriptions courtes et multilingues des fichiers."
+msgstr ""
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr "Qu'est-ce qu'une bonne légende ? Et quelle est la différence entre nos bonnes vieilles descriptions de fichiers et les légendes ?"
+msgstr ""
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr "Tout d'abord, les légendes doivent être simples et courtes."
+msgstr ""
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr "Alors que les descriptions peuvent être très étendues, les légendes sont limitées à 255 caractères, ne peuvent pas contenir de balises (comme les liens Wikitext ou HTML) et ne prennent pas en charge les liens externes"
+msgstr ""
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr "Dans de nombreux cas, la légende sera similaire ou identique à la description."
+msgstr ""
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr "Mais dans d'autres cas, il y a une description très complète (jusqu’à 858 caractères et des liens) et la légende est beaucoup plus courte (plus ou moins la même légende que celle utilisée sur les articles de Wikipédia utilisant cette image)."
+msgstr ""
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr "Seul du texte qui est si court qu’il n’est pas protégeable par le droit d’auteur doit être copié dans les légendes, car les légendes sont publiées sous une dérogation CC0 (« domaine public »)."
+msgstr ""
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr "L’un des principaux avantages des sous-titres est l’amélioration des possibilités de recherche en fonction de la langue."
+msgstr ""
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr "Les descriptions des fichiers classiques sont dans le wikitexte et ne sont consultables qu’au moyen de la recherche en texte plein, qui parcourt nécessairement tout le contenu de la page, y compris les catégories et les modèles de licence ; et il n'est pas possible de faire une recherche par langue."
+msgstr ""
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr "Les légendes sont disponibles dans le cadre de nos données structurées, alors que les descriptions ne le sont pas."
+msgstr ""
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr "En termes techniques, une description est un simple wikitexte enveloppé dans un modèle de langue, enveloppé à nouveau dans un modèle Informations, tandis que les légendes sont des libellés de Wikibase."
+msgstr ""
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr "Ainsi, les légendes pourront être recherchées via l'API, ce qui facilitera la recherche, le filtrage et l’extraction des légendes des fichiers en tant que métadonnées."
+msgstr ""
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr "Comme elles sont consultables via l'API, il est également plus facile pour les réutilisateurs tiers de trouver et de réutiliser eux-mêmes les médias et les légendes."
+msgstr ""
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr "D’autres utilisations possibles des légendes peuvent être :"
+msgstr ""
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr "remplir les boîtes d’informations"
+msgstr ""
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr "rechercher des fichiers avec des sous-titres manquants dans une langue donnée"
+msgstr ""
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr "constituer des listes pour la traduction de fichiers importants dont la légende doit être localisée pour un projet ou une campagne"
+msgstr ""
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr "Vous trouverez plus d’informations sur les légendes ici"
+msgstr ""
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr "« Représente » est également une fonctionnalité faisant partie des données structurées."
+msgstr ""
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr "Elle a été activé sur Wikimédia Commons en avril 2019."
+msgstr ""
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
-msgstr "Pour ajouter une représentation, il suffit de commencer à taper dans le champ de recherche pour démarrer."
+msgstr ""
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr "Ensuite, pour chaque élément représenté dans l'image, trouvez l’élément approprié dans Wikidata et sélectionnez-le."
+msgstr ""
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr "Si vous avez des difficultés à trouver le bon élément Wikidata, testez les orthographes alternatives."
+msgstr ""
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr "S’il n’existe pas d’article Wikidata associé au sujet décrit, choisissez un article plus générique couvre ce sujet à titre d’exemple."
+msgstr ""
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr "Soyez aussi précis que possible avec l’étiquette primaire."
+msgstr ""
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr "Si plusieurs éléments sont clairement et délibérément représentés par le fichier média, ils doivent tous être ajoutés en tant que déclarations distinctes, dans la limite du raisonnable."
+msgstr ""
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr "Pour les fichiers qui représentent des dizaines ou des centaines d’éléments (par exemple, des films), n’indiquez que les éléments les plus marquant"
+msgstr ""
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr "Il est également possible de marquer un élément particulier comme étant « proéminent »."
+msgstr ""
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr "Cette propriété fait référence à la proéminence de l’élément au sein du média lui-même, et non pas dans le contexte inverse de ce qu’il peut représenter."
+msgstr ""
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr "Vous trouverez de plus amples informations sur les représentations ici :"
+msgstr ""
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr "Utilisation de l’outil ISA"
+msgstr ""
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr "Vous trouverez de plus amples informations ici :"
+msgstr ""
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr "Mentions légales et crédits"
+msgstr ""
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr "L’outil fonctionne sur tools.wmflabs.org et est soumis aux conditions d’utilisation des services de Wikimédia Cloud."
+msgstr ""
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr "ISA est publié sous licence GPLv3. Le contenu ajouté à Wikimédia Commons au moyen de l’outil est publié sous CC0."
+msgstr ""
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr "Image utilisée sur l’outil :"
+msgstr ""
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr "Ajouter facilement des informations sur les images sur Wikimédia Commons"
+msgstr ""
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> est un outil multilingue et mobile qui permet à chacun d’ajouter facilement des « micro-contributions » sous forme de <a %(link_attrs)s title=\"Apprenez-en davantage sur les données structurées\">données structurées</a> (descriptions, légendes, balises, etc.) aux images qui ont été contribuées à Wikimédia Commons par les concours « Wiki aime »."
+msgstr ""
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr "<strong>Cliquez sur « Explorer les campagnes » pour commencer !<strong>"
+msgstr ""
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr "Allez dans le répertoire des campagnes pour choisir une campagne"
+msgstr ""
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr "EXPLORER LES CAMPAGNES"
+msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "À propos de cet outil"
+msgstr ""
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr "À long terme, l’objectif de cet outil est d’accroître l’utilisation des connaissances que reflète chaque image hébergée sur Wikimédia Commons. "
+msgstr ""
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "L’outil a pour but d’assister chacun en terme d’utilité et d’informations sur les images données lors des concours « Wiki aime »."
+msgstr ""
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr "Il est initialement construit pour aider à la description des images de « Wiki aime l’Afrique », mais il est spécifiquement conçu pour être utile à toutes les compétitions « Wiki aime » et au delà."
+msgstr ""
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr "L’outil est également conçu pour accueillir des concours de micro-contributions proposés par des responsables de projets."
+msgstr ""
 
 #: templates/main/home.html:26
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "ISA est une collaboration entre « Wiki en Afrique », « Histropedia » et le projet « Données structurées sur Commons »."
+msgstr ""
 
 #: templates/main/home.html:27
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr "« ISA » n’est pas seulement l’acronyme en anglais de « Information Structured Acceleration » (Accélération structurée des informations), mais aussi un mot de la langue chiShona signifiant « mettre » ou « placer »."
+msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr "Accueil"
+msgstr ""
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr "Créer un nouveau"
+msgstr ""
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Aide"
+msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr "Modifier vos langues de légende disponibles"
+msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr "Préférences linguistiques"
+msgstr ""
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr "Visualiser vos campagnes"
+msgstr ""
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr "Mes campagnes"
+msgstr ""
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr "Déconnexion"
+msgstr ""
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr "Connexion"
+msgstr ""
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr "Outil ISA"
+msgstr ""
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "a été développé dans le cadre d’une collaboration entre « Wiki en Afrique », « Histropedia » et le projet « Données structurées sur Commons »."
+msgstr ""
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr "Il fonctionne sur"
+msgstr ""
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr "et est soumis à"
+msgstr ""
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr "ISA est publié sous"
+msgstr ""
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr "Le contenu ajouté par l’intermédiaire de l’outil à Wikimédia Commons est publié sous"
+msgstr ""
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr "Vos campagnes"
+msgstr ""
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr "Voici ci-dessous une liste de vos campagnes"
+msgstr ""
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr "Vous n’avez aucune campagne"
+msgstr ""
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr "#"
+msgstr ""
 
 #: templates/users/user_settings.html:6 templates/users/user_settings.html:9
 msgid "Caption Languages"
-msgstr "Langues de légende"
+msgstr ""
 
 #: templates/users/user_settings.html:9
 msgid "Select upto 6 languages for captions"
-msgstr "Sélectionnez jusqu’à 6 langues pour les légendes"
+msgstr ""
 
 #: templates/users/user_settings.html:9
 msgid "Captions can be added in multiple languages for each image."
-msgstr "Des légendes peuvent être ajoutées en plusieurs langues pour chaque image."
+msgstr ""
 
 #: templates/users/user_settings.html:9
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr "Les langues que vous sélectionnez sur cette page apparaissent sur la page lorsque vous visualisez une image."
+msgstr ""
 
 #: templates/users/user_settings.html:9
 msgid "Select all the languages you are comfortable contributing in."
-msgstr "Sélectionnez toutes les langues dans lesquelles vous êtes à l’aise pour contribuer."
+msgstr ""
 
 #: templates/users/user_settings.html:19 templates/users/user_settings.html:25
 #: templates/users/user_settings.html:31 templates/users/user_settings.html:37
 #: templates/users/user_settings.html:43 templates/users/user_settings.html:49
 msgid "Remove language"
-msgstr "Supprimer la langue"
+msgstr ""
 
 #: templates/users/user_settings.html:53
 msgid "Undo changes to language settings"
-msgstr "Annuler les modifications apportées aux paramètres linguistiques"
+msgstr ""
 
 #: templates/users/user_settings.html:53
 msgid "Undo Changes"
-msgstr "Annuler les modifications"
+msgstr ""
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr "Échec du rappel d’OAuth. Les cookies sont-ils désactivés ?"
+msgstr ""
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome  %(username)s!"
-msgstr "Bonjour %(username)s !"
+msgstr ""
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "À bientôt !"
+msgstr ""
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr "Veuillez vous connecter pour modifier vos préférences linguistiques"
+msgstr ""
 
 #: users/routes.py:143
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr "Désolé, vous avez essayé d’entrer %(rep_languages)s plusieurs fois."
+msgstr ""
 
 #: users/routes.py:156
 msgid "Captions languages could not be set"
-msgstr "La langue des sous-titres n’a pas pu être définie"
+msgstr ""
 
 #: users/routes.py:158
 msgid "Preferred Languages set Successfully"
-msgstr "Langues préférées définies avec succès"
+msgstr ""
 
 #: users/routes.py:170
 msgid "Language settings not available at the moment"
-msgstr "Les paramètres de langue ne sont pas disponibles pour le moment"
+msgstr ""
 
 #: users/routes.py:172
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr "Paramètres de %(username)s"
+msgstr ""
 
 #: users/routes.py:195
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr "Campagnes créées par %(username)s"
+msgstr ""
 
