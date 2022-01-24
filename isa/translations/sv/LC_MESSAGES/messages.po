@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-01-20 12:16:24+0000\n"
+"PO-Revision-Date: 2022-01-24 12:16:46+0000\n"
 "X-POT-Import-Date: 2021-12-13 16:57:45+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -239,23 +239,23 @@ msgstr "Kampanjbild"
 
 #: templates/campaign/campaign-form.html:210
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr ""
+msgstr "Kampanjbildens högsta tillåtna höjd är 150px. Bilder borde vara antingen en banderollbild eller en logotyp."
 
 #: templates/campaign/campaign-form.html:210
 msgid "Portrait or square photos are not recommended."
-msgstr ""
+msgstr "Porträtt eller fyrkantiga foton rekommenderas inte."
 
 #: templates/campaign/campaign-form.html:222
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr ""
+msgstr "Ange FILNAMNET endast av en bild från Commons för att visa den på kampanjens hemsida."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Long description of Campaign (full about info)"
-msgstr ""
+msgstr "Lång beskrivning av kampanjen (fullständig information)"
 
 #: templates/campaign/campaign-form.html:240
 msgid "Why it is important that users contribute to the campaign?"
-msgstr ""
+msgstr "Varför är det viktigt att användare kan bidra till kampanjen?"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Publish Campaign"
@@ -305,7 +305,7 @@ msgstr "Kampanjens framsteg hittills"
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:18
 msgid "Total number of images in this campaign"
-msgstr ""
+msgstr "Totalt antal bilder i denna kampanj"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:18
@@ -316,7 +316,7 @@ msgstr "Bilder"
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of contributions made to this campaign"
-msgstr ""
+msgstr "Totalt antal bidrag till denna kampanj"
 
 #: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
 #: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
@@ -490,19 +490,19 @@ msgstr "Spara"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr ""
+msgstr "Du kommer omdirigeras för att logga in och sedan tillbaka hit för att spara dina ändringar"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr ""
+msgstr "Nämn de olika elementen du ser i den här bilden"
 
 #: templates/campaign/campaign_entry.html:68
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr ""
+msgstr "För att markera det framstående i bilden klickar du på flaggikonen"
 
 #: templates/campaign/campaign_entry.html:75
 msgid "Writing Captions"
-msgstr ""
+msgstr "Skriva bildtexter"
 
 #: templates/campaign/campaign_entry.html:75
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."

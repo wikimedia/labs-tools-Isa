@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: MITO
+# Author: Susannaanas
 # Author: Veikk0.ma
 # --
 # Translation for the ISA project
@@ -10,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-01-20 12:16:23+0000\n"
+"PO-Revision-Date: 2022-01-24 12:16:45+0000\n"
 "X-POT-Import-Date: 2021-12-13 16:57:45+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +40,7 @@ msgstr "Sinun on oltava kirjautuneena luodaksesi kampanjan"
 #: campaigns/routes.py:213
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr ""
+msgstr "Pahoittelu, kampanjaa %(campaign_name)s ei voitu luoda"
 
 #: campaigns/routes.py:220
 #, python-format
@@ -53,11 +54,11 @@ msgstr "Luo kampanja"
 #: campaigns/routes.py:243
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr ""
+msgstr "%(campaign_name)s - Osallistu"
 
 #: campaigns/routes.py:262
 msgid "You need to Login to update a campaign"
-msgstr ""
+msgstr "Sinun täytyy kirjautua, jotta voit ylläpitää kampanjaa"
 
 #: campaigns/routes.py:288
 msgid "Campaign update failed please try later!"
@@ -70,17 +71,17 @@ msgstr "Päivitetty onnistuneesti!"
 #: campaigns/routes.py:298
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr ""
+msgstr "Et voi päivittää tätä kampanjaa, ota yhteyttä ylläpitäjään Käyttöjä:%(campaign_manager)s "
 
 #: campaigns/routes.py:313
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr ""
+msgstr "Buu! Kampanjaa %(campaign_name)s ei voitu päivittää!"
 
 #: campaigns/routes.py:318
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr ""
+msgstr "%(campaign_name)s - Päivitä"
 
 #: campaigns/routes.py:366
 msgid "You need to login to participate"
@@ -96,15 +97,15 @@ msgstr "Luo uusi kampanja"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr ""
+msgstr "Päivitys käynnissä"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr ""
+msgstr "Täyttämällä alla olevan lomakkeen voit luoda kampanjasi"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr ""
+msgstr "Tähdellä merkityt kentät ovat pakollisia"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
@@ -112,19 +113,19 @@ msgstr "Kampanjan nimi"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr ""
+msgstr "Tämä nimi koskee kampanjaasi, ei koko projektia."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr ""
+msgstr "Eli ei \"Wiki Loves Africa\" vaan \"Musiikkia ja tanssia Nigeriassa\""
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr ""
+msgstr "Kampanjan lyhyt kuvaus (144 merkkiä)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr ""
+msgstr "Minkä parissa käyttäjät tulevat työskentelemään"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:24
@@ -146,27 +147,27 @@ msgstr "Aseta kampanjan päättymispäivä"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr ""
+msgstr "Tämä on Wiki Loves -kampanja"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr ""
+msgstr "Kun nämä asetukset on tehty oikein, osallistujat voivat valita mistä maasta he haluavat nähdä kuvia ja tallentaa muokkaukset maittan."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr ""
+msgstr "Voit valita useampia sopivia luokkia."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr ""
+msgstr "Syvyys on asetettava arvoon 0 kaikille Wiki Loves -kampanjan luokille."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr ""
+msgstr "Vaatii luokkia muodossa Images from Wiki Loves -<strong><em>projekti</em></strong> tietyltä <strong><em>vuodelta</em></strong>, esim. “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (muuta <strong><em>projekti</em></strong> vuosi <strong><em>tarpeen mukaisesti</em></strong>)"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr ""
+msgstr "Joidenkin alla valittujen luokkien kirjoitusasu ei ole oikein"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
@@ -174,11 +175,11 @@ msgstr "Tässä kampanjassa käytettävät luokat"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr ""
+msgstr "Etsi Wikimedia-luokkia, joissa on niitä kuvia, joita haluat käyttää kampanjassasi."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr ""
+msgstr "Jos haluat luokan ja kaikki sen alaluokat, määritä valinnalla 'syvyys', kuinka monta alatasoa haluat sisällyttää. (Jätä syvyys arvoon 0 kaikille Wiki Loves -kampanjoille.)"
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
@@ -190,40 +191,40 @@ msgstr "Nimi"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr ""
+msgstr "Syvyys"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr ""
+msgstr "Punaisella merkityt luokat eivät ole \"Wiki Loves -kampanjalle\" oikeassa kirjoitusasussa"
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr ""
+msgstr "Poista ne tai poista ruksi yllä olevasta valinnasta \"Wiki Loves -kampanja\""
 
 #: templates/campaign/campaign-form.html:173
 msgid "Metadata to collect in the Campaign"
-msgstr ""
+msgstr "Kampanjaan haettava metadata"
 
 #: templates/campaign/campaign-form.html:173
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr ""
+msgstr "Valitse, millaista <strong>metadataa</strong> haluat kerätä kampanjassasi."
 
 #: templates/campaign/campaign-form.html:173
 msgid "You must select at least one of the options below."
-msgstr ""
+msgstr "Sinun on valittava ainakin yksi alla olevista vaihtoehdoista."
 
 #: templates/campaign/campaign-form.html:173
 msgid "To learn more about Depicts and Caption meta-data see the help page."
-msgstr ""
+msgstr "Lue ohjesivulta lisää Esittää- ja Kuvatekstit-metatiedoista"
 
 #: templates/campaign/campaign-form.html:176
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr ""
+msgstr "Esittää"
 
 #: templates/campaign/campaign-form.html:188
 msgid "Select to collect Depicts metadata in the campiagn"
-msgstr ""
+msgstr "Valitse kerätäksesi kuvien esittämiä aiheita kampanjassa"
 
 #: templates/campaign/campaign-form.html:191
 #: templates/campaign/campaign_entry.html:75
@@ -232,7 +233,7 @@ msgstr "Kuvatekstit"
 
 #: templates/campaign/campaign-form.html:203
 msgid "Select to collect Caption metadata in the campiagn"
-msgstr ""
+msgstr "Valitse kerätäksesi kuvatekstejä kampanjassa"
 
 #: templates/campaign/campaign-form.html:210
 msgid "Campaign Image"
@@ -240,23 +241,23 @@ msgstr "Kampanjan kuva"
 
 #: templates/campaign/campaign-form.html:210
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr ""
+msgstr "Kampanjakuvan maksimikorkeus on 150px. Kuvan tulee olla joko banneri tai logo."
 
 #: templates/campaign/campaign-form.html:210
 msgid "Portrait or square photos are not recommended."
-msgstr ""
+msgstr "Pystykuva tai neliön muotoinen kuva eivät ole suositeltavia."
 
 #: templates/campaign/campaign-form.html:222
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr ""
+msgstr "Anna Wikimedia Commonsin kuvan pelkkä TIEDOSTONIMI, jotta voit näyttää sen kampanjan kotisivulla."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Long description of Campaign (full about info)"
-msgstr ""
+msgstr "Kampanjan pitkä kuvausteksti"
 
 #: templates/campaign/campaign-form.html:240
 msgid "Why it is important that users contribute to the campaign?"
-msgstr ""
+msgstr "Miksi on tärkeätä, että kampanjaan osallistutaan?"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Publish Campaign"
@@ -268,11 +269,11 @@ msgstr "Sinun on valittava kampanjallesi vähintään yksi luokka."
 
 #: templates/campaign/campaign-form.html:257
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr ""
+msgstr "Joidenkin valitsemiesi luokkien kirjoitusasu ei ole oikein Wiki Loves -kampanjaa varten."
 
 #: templates/campaign/campaign-form.html:258
 msgid "Please check your selections and try again."
-msgstr ""
+msgstr "Tarkista valintasi ja yritä uudelleen."
 
 #: templates/campaign/campaign-form.html:259
 msgid "Please select at least one type from the Metadata to collect section"
@@ -280,11 +281,11 @@ msgstr ""
 
 #: templates/campaign/campaign.html:17
 msgid "View images from"
-msgstr ""
+msgstr "Katso kuvia kohteesta"
 
 #: templates/campaign/campaign.html:18
 msgid "Choose to only view images from a single country"
-msgstr ""
+msgstr "Katso kuvia vain yhdestä maasta"
 
 #: templates/campaign/campaign.html:19
 msgid "Loading..."
@@ -301,12 +302,12 @@ msgstr "Aloita"
 
 #: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
-msgstr ""
+msgstr "Kampanjan edistyminen tähän mennessä"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:18
 msgid "Total number of images in this campaign"
-msgstr ""
+msgstr "Kuvien kokonaismäärä tässä kampanjassa"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:18
@@ -331,7 +332,7 @@ msgstr "Muokkaukset"
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:38
 msgid "Top Contributors"
-msgstr ""
+msgstr "Huippumuokkaajat"
 
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:42
@@ -341,12 +342,12 @@ msgstr "Muokkaaja"
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:61
 msgid "No partcipants has contributed to this campaign"
-msgstr ""
+msgstr "Kukaan ei ole vielä muokannut tätä kampanjaa"
 
 #: templates/campaign/campaign.html:74
 #: templates/campaign/campaign_stats.html:70
 msgid "Most improved Countries"
-msgstr ""
+msgstr "Eniten parannetut maat"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:74
@@ -356,7 +357,7 @@ msgstr "Maa"
 #: templates/campaign/campaign.html:97
 #: templates/campaign/campaign_stats.html:93
 msgid "There is no data available yet for this campaign"
-msgstr ""
+msgstr "Tästä kampanjasta ei vielä ole tietoja"
 
 #: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
@@ -364,7 +365,7 @@ msgstr "Näytä ja lataa lisää tämän kampanjan tilastoja"
 
 #: templates/campaign/campaign.html:105
 msgid "View full stats"
-msgstr ""
+msgstr "Katso laajat tilastot"
 
 #: templates/campaign/campaign.html:116
 msgid "My Contributions"
@@ -426,7 +427,7 @@ msgstr "EDELLINEN KUVA"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Oma työ"
+msgstr "Oma teos"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
@@ -460,15 +461,15 @@ msgstr "Kameran sijainti"
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:108
 msgid "show all metadata from commons"
-msgstr ""
+msgstr "Näytä kaikki Wikimedia Commonsin metadata"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr ""
+msgstr "Lisätään Esittää-esitykset"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr ""
+msgstr "Tee se yksinkertaisesti: Käytä yksinkertaisia sanoja ja käsitteitä kuvaamaan kutakin kuvaa (esim. kissa, vuori, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
@@ -491,15 +492,15 @@ msgstr "Tallenna"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr ""
+msgstr "Sinut ohjataan kirjautumissivulle ja takaisin tälle sivulle tallentamaan muokkauksesi"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr ""
+msgstr "Nimeä eri elementit, joita näet tässä kuvassa"
 
 #: templates/campaign/campaign_entry.html:68
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr ""
+msgstr "Klikkaamalla lippukuvaketta voit merkitä kuvan tärkeät elementit"
 
 #: templates/campaign/campaign_entry.html:75
 msgid "Writing Captions"
@@ -507,7 +508,7 @@ msgstr "Kirjoitetaan kuvatekstejä"
 
 #: templates/campaign/campaign_entry.html:75
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr ""
+msgstr "Sisällytä tunnistamasi kulttuurisesti erityinen, tieteellinen tai tekninen tieto (esim. etiopialainen kahviseremonia tai bunna maflat), jotta tiedosta tulee rikkaampaa."
 
 #: templates/campaign/campaign_entry.html:81
 msgid "Log in to publish changes"
@@ -515,7 +516,7 @@ msgstr "Kirjaudu sisään julkaistaksesi muutokset"
 
 #: templates/campaign/campaign_entry.html:83
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr ""
+msgstr "Lisää kuvateksti, jotta kuvaa on helpompi selittää (max. 255 merkkiä)"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Briefly explain what you see in this image."
@@ -523,7 +524,7 @@ msgstr "Selitä lyhyesti mitä näet tässä kuvassa."
 
 #: templates/campaign/campaign_entry.html:92
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr ""
+msgstr "Voit lisätä kuvatekstejä eri kielillä valitsemalla Kieliasetukset käyttäjävalikosta"
 
 #: templates/campaign/campaign_entry.html:104
 msgid "No images found for this campaign!"
@@ -531,11 +532,11 @@ msgstr "Tälle kampanjalle ei löytynyt kuvia!"
 
 #: templates/campaign/campaign_entry.html:105
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "Jokin meni pieleen haettaessa kampanjan kuvia"
 
 #: templates/campaign/campaign_entry.html:106
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "Etsi aiheita, joita näet kuvassa"
 
 #: templates/campaign/campaign_entry.html:107
 msgid "minimise metadata from commons"
@@ -543,7 +544,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:109
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "Onnistu! Kuvaillut kohteet on tallennettu Wikimedia Commonsiin"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Success! Captions saved to Wikimedia Commons"
@@ -551,27 +552,27 @@ msgstr "Onnistui! Kuvatekstit tallennettiin Wikimedia Commonsiin"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "Hups! Jokin meni pieleen, muokkauksiasi ei ole tallennettu Wikimedia Commonsiin"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "Oletko varma, että haluat siirtyä toiseen kuvaan? Sinulla on tallentamattomia muokkauksia, jotka katoavat."
 
 #: templates/campaign/campaign_entry.html:113
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "Klikkaa 'OK' jatkaaksesi siitä huolimatta tai 'Peruuta' jos haluat ensin tallentaa muokkauksesi."
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "Poista tämä kuvailtu kohde"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "Merkitse tämä kuvailtu kohde tärkeäksi"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "Merkitse tämä kuvailtu kohde EI tärkeäksi"
 
 #: templates/campaign/campaign_stats.html:4
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -579,11 +580,11 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:9
 msgid "From"
-msgstr ""
+msgstr "Alkaen"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "Till"
-msgstr ""
+msgstr "Saakka"
 
 #: templates/campaign/campaign_stats.html:107
 msgid "Download all stats (CSV)"
@@ -595,23 +596,23 @@ msgstr "Muokkaustilastot"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Country Stats"
-msgstr ""
+msgstr "Maakohtaiset tilastot"
 
 #: templates/campaign/campaigns.html:7
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr ""
+msgstr "Tällä sivulla esitetään käynnissä olevat ISA-työkalun kuratoidut kampanjat"
 
 #: templates/campaign/campaigns.html:7
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr ""
+msgstr "Klikkaa kampanjan nimeä aloittaaksesi ja lisää rakenteista tietoa kuvaan."
 
 #: templates/campaign/campaigns.html:7
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr ""
+msgstr "Voit tarkastella aikaisempien kampanjoiden tietoja osiossa Arkisto."
 
 #: templates/campaign/campaigns.html:14
 msgid "Ongoing Campaigns"
-msgstr ""
+msgstr "Käynnissä olevat kampanjat"
 
 #: templates/campaign/campaigns.html:20
 msgid "Campaign name"
@@ -623,11 +624,11 @@ msgstr "Kampanja"
 
 #: templates/campaign/campaigns.html:21
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Kuvien kokonaismäärä tässä kampanjassa"
 
 #: templates/campaign/campaigns.html:22
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Tähän kampanjaan osallistuneiden muokkaajien lukumäärä"
 
 #: templates/campaign/campaigns.html:22
 msgid "Participants"
@@ -701,7 +702,7 @@ msgstr "Sinun tulee olla kirjautuneena sisään luodaksesi kampanjan."
 
 #: templates/campaign/campaigns.html:89
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Näytetään _START_–_END_ / _TOTAL_ kohteesta"
 
 #: templates/campaign/campaigns.html:90
 msgid "No entries"
@@ -713,7 +714,7 @@ msgstr "Hae:"
 
 #: templates/campaign/campaigns.html:93
 msgid "No matching records found"
-msgstr ""
+msgstr "Vastaavia kohteita ei löytynyt"
 
 #: templates/campaign/campaigns.html:95
 msgid "First"
@@ -741,7 +742,7 @@ msgstr ""
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr ""
+msgstr "Kotiin"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
@@ -758,7 +759,7 @@ msgstr "Emme löytäneet etsimääsi sivua"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr ""
+msgstr "Kotiin"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
@@ -766,7 +767,7 @@ msgstr "Jotain meni vikaan"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "ISA on mahdollisesti huollettavana"
 
 #: templates/main/help.html:9
 msgid "Help Page"
@@ -774,7 +775,7 @@ msgstr "Ohjesivu"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr ""
+msgstr "Lisää helposti tietoa kuvista Wikimedia Commonsiin"
 
 #: templates/main/help.html:16
 #, python-format
@@ -784,11 +785,11 @@ msgstr ""
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "ISA toteutettiin alkujaan parempien monikielisten ja rakenteisten kuvailujen toteuttamiseksi <a %(link_attrs)s>Wiki Loves Africa</a> -kilpailun kuville."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Toisaalta se tehtiin myös hyödynnettäväksi kaikissa <a link_attrs>Wiki Loves -kilpailuissa</a> ja lopulta kaikille <strong>mediatiedostoille</strong> Wikimedia Commonsissa."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
@@ -808,7 +809,7 @@ msgstr "Wikimedia Commons kasvaa nopeasti, noin 5 miljoonaa uutta tiedostoa tall
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Tuhannet vapaaehtoiset lataavat tiedostoja Wikimedia Commonsiin ja liittävät kuvia Wikimedian projekteihin, kuten kuvittamaan Wikipedian artikkeleita ja jakamaan mediatiedostoja yleisölle."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
@@ -820,15 +821,15 @@ msgstr ""
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "Avoimesti lisensoidut mediatiedostot ulkoisilta sivustoilta kuten Flickristä, YouTubesta, Open Access -julkaisuista ja muista tietovarannoista; ja"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "Instituutioiden ja organisaatioiden tarjoamat merkittävät mediakokoelmat, isot ja pienet, UNESCOsta, NASAsta ja British Librarystä pieniin paikallisiin kulttuurilaitoksiin."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "Mitä on rakenteinen tieto Wikimedia Commonsissa?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."

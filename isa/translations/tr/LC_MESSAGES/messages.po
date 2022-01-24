@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-01-20 12:16:24+0000\n"
+"PO-Revision-Date: 2022-01-24 12:16:46+0000\n"
 "X-POT-Import-Date: 2021-12-13 16:57:45+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,12 +20,12 @@ msgstr ""
 #: campaigns/routes.py:35 templates/campaign/campaigns.html:5
 #: templates/main/layout.html:38
 msgid "Campaigns"
-msgstr ""
+msgstr "Kampanyalar"
 
 #: campaigns/routes.py:53 campaigns/routes.py:135
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr ""
+msgstr "%(id)s id adlı kampanya mevcut değil"
 
 #: campaigns/routes.py:108 campaigns/routes.py:160
 msgid "Campaign - "
@@ -33,7 +33,7 @@ msgstr ""
 
 #: campaigns/routes.py:183
 msgid "You need to Login to create a campaign"
-msgstr ""
+msgstr "Kampanya oluşturmak için Giriş yapmanız gerekiyor"
 
 #: campaigns/routes.py:213
 #, python-format
@@ -43,11 +43,11 @@ msgstr "Üzgünüz, %(campaign_name)s oluşturulamadı"
 #: campaigns/routes.py:220
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr ""
+msgstr "%(campaign_name)s Kampanyası oluşturuldu!"
 
 #: campaigns/routes.py:223
 msgid "Create a campaign"
-msgstr ""
+msgstr "Kampanya Oluştur"
 
 #: campaigns/routes.py:243
 #, python-format
@@ -56,11 +56,11 @@ msgstr "%(campaign_name)s - Katkıda bulun"
 
 #: campaigns/routes.py:262
 msgid "You need to Login to update a campaign"
-msgstr ""
+msgstr "Kampanya güncellemek için giriş yapmanız gerekiyor"
 
 #: campaigns/routes.py:288
 msgid "Campaign update failed please try later!"
-msgstr ""
+msgstr "Kampanya güncellemesi başarısız lütfen tekrar deneyin!"
 
 #: campaigns/routes.py:290
 msgid "Update Succesfull !"
@@ -87,11 +87,11 @@ msgstr "Katılmak için giriş yapmanız gerekiyor"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr ""
+msgstr "Kampanya Ayrntılarını Güncelle"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr ""
+msgstr "Yeni Kampanya Oluştur"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
@@ -107,11 +107,11 @@ msgstr "* işaretli alanlar zorunludur"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr ""
+msgstr "Kampanya Adı"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr ""
+msgstr "Bu kampanyanıza özgü addır, ana projeye değil."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
@@ -119,7 +119,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr ""
+msgstr "Kampanyanın kısa açıklaması (144 karakter)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
@@ -132,7 +132,7 @@ msgstr "Başlangıç Tarihi"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr ""
+msgstr "Kampanya başlangıç tarihi ayarla"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:25
@@ -141,7 +141,7 @@ msgstr "Bitiş Tarihi"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr ""
+msgstr "Kampanya bitiş tarihi ayarla"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
@@ -235,7 +235,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:210
 msgid "Campaign Image"
-msgstr ""
+msgstr "Kampanya Görseli"
 
 #: templates/campaign/campaign-form.html:210
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
@@ -251,7 +251,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:228
 msgid "Long description of Campaign (full about info)"
-msgstr ""
+msgstr "Kampanyanın Uzun Açıklaması (tam hakkında bilgisi)"
 
 #: templates/campaign/campaign-form.html:240
 msgid "Why it is important that users contribute to the campaign?"
@@ -259,11 +259,11 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:246
 msgid "Publish Campaign"
-msgstr ""
+msgstr "Kampanyayı Yayımla"
 
 #: templates/campaign/campaign-form.html:256
 msgid "You must select at least one category for your campaign."
-msgstr ""
+msgstr "Kampanyanız için en az bir kategori seçmek zorundasınız."
 
 #: templates/campaign/campaign-form.html:257
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
@@ -271,7 +271,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:258
 msgid "Please check your selections and try again."
-msgstr ""
+msgstr "Lütfen seçimlerinizi kontrol edin ve tekrar deneyin."
 
 #: templates/campaign/campaign-form.html:259
 msgid "Please select at least one type from the Metadata to collect section"
@@ -300,12 +300,12 @@ msgstr "Başlayın"
 
 #: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
-msgstr ""
+msgstr "Şu ana kadarki kampanya süreci"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:18
 msgid "Total number of images in this campaign"
-msgstr ""
+msgstr "Bu kampanyadaki toplam görsel sayısı"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:18
@@ -399,7 +399,7 @@ msgstr ""
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
-msgstr ""
+msgstr "Kampanyayı Düzenle"
 
 #: templates/campaign/campaign.html:162
 msgid "Unknown country"
@@ -421,7 +421,7 @@ msgstr "Önceki görseli görüntüle"
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:97
 msgid "PREV IMAGE"
-msgstr ""
+msgstr "ÖNCK GÖRSEL"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
@@ -490,11 +490,11 @@ msgstr "Kaydet"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr ""
+msgstr "Değişikliklerinizi kaydetmek için girişe yonlendirilecek ve geri geleceksiniz"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr ""
+msgstr "Bu görselde gördüğünüz farklı ögeleri adlandırın"
 
 #: templates/campaign/campaign_entry.html:68
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -510,7 +510,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:81
 msgid "Log in to publish changes"
-msgstr ""
+msgstr "Değişiklikleri yayımlamak için giriş yap"
 
 #: templates/campaign/campaign_entry.html:83
 msgid "Add a caption to better explain the image (max 255 characters)"
@@ -526,11 +526,11 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:104
 msgid "No images found for this campaign!"
-msgstr ""
+msgstr "Bu kampanya için görsel bulunamadı!"
 
 #: templates/campaign/campaign_entry.html:105
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "Kampanya görselleri alınırken bir şeyler ters gitti"
 
 #: templates/campaign/campaign_entry.html:106
 msgid "Search for things you see in the image"
@@ -618,7 +618,7 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:20 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr ""
+msgstr "Kampanya"
 
 #: templates/campaign/campaigns.html:21
 msgid "Total number of images in the campaign"
@@ -638,11 +638,11 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:24
 msgid "Campaign start date"
-msgstr ""
+msgstr "Kampanya başlangıç tarihi"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign end date"
-msgstr ""
+msgstr "Kampanya bitiş tarihi"
 
 #: templates/campaign/campaigns.html:26
 msgid "Date the campaign was created"
@@ -654,7 +654,7 @@ msgstr "Oluşturma Tarihi"
 
 #: templates/campaign/campaigns.html:27
 msgid "Campaign status"
-msgstr ""
+msgstr "Kampanya durumu"
 
 #: templates/campaign/campaigns.html:27
 msgid "Status"
@@ -995,7 +995,7 @@ msgstr ""
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "Wikimedia Commons'ta Nisan 2019'da etkinleştirildi."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
