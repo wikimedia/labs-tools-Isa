@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2022-01-20 12:16:23+0000\n"
+"PO-Revision-Date: 2022-01-31 12:14:35+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -107,7 +107,7 @@ msgstr "Créer une nouvelle campagne"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Vous faites la mise à jour"
+msgstr "Vous mettez à jour"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
@@ -1075,7 +1075,7 @@ msgstr "Image utilisée sur l’outil :"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr "Ajouter facilement des informations sur les images dans Wikimédia Commons"
+msgstr "Ajouter facilement des informations concernant les images sur Wikimedia Commons"
 
 #: templates/main/home.html:15
 #, python-format
@@ -1188,7 +1188,7 @@ msgstr "Vos campagnes"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr "Voici une liste de vos campagnes ci-dessous"
+msgstr "Voici ci-dessous une liste de vos campagnes"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
