@@ -1405,7 +1405,7 @@ msgstr ""
 
 #: users/routes.py:74
 #, python-format
-msgid "Welcome  %(username)s!"
+msgid "Welcome %(username)s!"
 msgstr ""
 
 #: users/routes.py:88
