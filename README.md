@@ -86,4 +86,4 @@ translations in the app.
     - Then run `coverage report -m isa/<blueprint_name>/*.py>`
 
 # Maintenance scripts
-Maintenance scripts are found in isa/maintenance. Run them as modules in the root directory, e.g. `python -m isa.maintenance.update_store_images`.
+Maintenance scripts are found in isa/maintenance. Run them as modules in the root directory, e.g. `python -m isa.maintenance.update_campaign_images`.
