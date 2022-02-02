@@ -15,8 +15,9 @@ from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, comp
                                  create_campaign_all_stats_csv, get_all_camapaign_stats_data,
                                  make_edit_api_call, generate_csrf_token,
                                  get_stats_data_points)
+from isa.campaigns import image_updater
 from isa.main.utils import commit_changes_to_db
-from isa.models import Campaign, Contribution
+from isa.models import Campaign, Contribution, Country
 from isa.users.utils import (get_user_language_preferences, get_current_user_images_improved)
 
 
@@ -105,6 +106,7 @@ def getCampaignById(id):
     campaign_image = ('https://commons.wikimedia.org/wiki/Special:FilePath/' + campaign.campaign_image
                       if campaign.campaign_image != ''
                       else None)
+    countries = sorted([c.name for c in campaign.countries])
     return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                             campaign=campaign,
                             campaign_manager=campaign.campaign_manager,
@@ -120,7 +122,9 @@ def getCampaignById(id):
                             all_campaign_country_statistics_data=campaign_table_stats['all_campaign_country_statistics_data'],
                             current_user_images_improved=current_user_images_improved,
                             contributor_csv_file=contributor_csv_file,
-                            country_csv_file=country_csv_file))
+                            country_csv_file=country_csv_file,
+                            countries=countries
+                            ))
 
 
 @campaigns.route('/campaigns/<int:id>/stats')
@@ -195,7 +199,6 @@ def CreateCampaign():
             campaign = Campaign(
                 campaign_name=form.campaign_name.data,
                 categories=form_categories,
-                campaign_images=form.campaign_images.data,
                 start_date=datetime.strptime(form.start_date.data, '%Y-%m-%d'),
                 campaign_manager=username,
                 end_date=campaign_end_date,
@@ -213,6 +216,7 @@ def CreateCampaign():
                 flash(gettext('Sorry %(campaign_name)s Could not be created',
                               campaign_name=form.campaign_name.data), 'info')
             else:
+                image_updater.update_images(campaign.id)
                 campaign_stats_path = str(campaign.id)
                 stats_path = os.getcwd() + '/campaign_stats_files/' + campaign_stats_path
                 if not os.path.exists(stats_path):
@@ -229,14 +233,22 @@ def CreateCampaign():
 
 @campaigns.route('/campaigns/<int:id>/participate')
 def contributeToCampaign(id):
+    # We select the campaign whose id comes into the route
+    campaign = Campaign.query.filter_by(id=id).first()
+
+    # Do not allow participating before images have been loaded or if loding failed.
+    if campaign.campaign_images == image_updater.PROCESSING:
+        flash(gettext("Images are being loaded for this campaign. Try again later."), "info")
+        return redirect(url_for("campaigns.getCampaignById", id=id))
+    elif campaign.campaign_images == image_updater.FAILED:
+        flash(gettext("Images failed to load for the campaign. The campaign manager will need to update the campaign."), "danger")
+        return redirect(url_for("campaigns.getCampaignById", id=id))
 
     # We get current user in sessions's username
     username = session.get('username', None)
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
-    # We select the campaign whose id comes into the route
-    campaign = Campaign.query.filter_by(id=id).first()
     session['next_url'] = request.url
     return render_template('campaign/campaign_entry.html',
                            is_update=False,
@@ -279,7 +291,6 @@ def updateCampaign(id):
             campaign.depicts_metadata = form.depicts_metadata.data
             campaign.captions_metadata = form.captions_metadata.data
             campaign.categories = form.categories.data
-            campaign.campaign_images = form.campaign_images.data
             campaign.start_date = datetime.strptime(form.start_date.data, '%Y-%m-%d')
             campaign.campaign_image = form.campaign_image.data
             campaign.campaign_type = form.campaign_type.data
@@ -287,6 +298,7 @@ def updateCampaign(id):
             if commit_changes_to_db():
                 flash(gettext('Campaign update failed please try later!'), 'danger')
             else:
+                image_updater.update_images(id)
                 flash(gettext('Update Succesfull !'), 'success')
                 return redirect(url_for('campaigns.getCampaignById', id=id))
         # User requests to edit so we update the form with Campaign details
@@ -427,22 +439,6 @@ def postContribution():
     return("Failure")
 
 
-@campaigns.route('/api/update-campaign-images/<int:id>', methods=['POST'])
-def UpdateCampaignImagesCount(id):
-
-    # We get the data from request and convert it to json
-    images_data = json.loads(request.data.decode('utf8'))
-    campaign = Campaign.query.filter_by(id=id).first()
-    # We get the campaign images count and cast before including that into db
-    campaign_images = int(images_data['campaign_images'])
-    campaign.campaign_images = campaign_images
-    if commit_changes_to_db():
-        return("Failure")
-    else:
-        return("Success!")
-    return("Failure")
-
-
 @campaigns.route('/api/search-depicts/<int:id>')
 def searchDepicts(id):
     search_term = request.args.get('q')
@@ -520,3 +516,21 @@ def downloadAllCampaignStats(id, filename):
                          as_attachment=True, cache_timeout=0, last_modified=True)
     else:
         flash('Download may be unavailable now', 'info')
+
+
+@campaigns.route('/campaigns/<int:campaign_id>/images', defaults={'country_name': None})
+@campaigns.route('/campaigns/<int:campaign_id>/images/<string:country_name>')
+def get_images(campaign_id, country_name):
+    country = None
+    if country_name:
+        country = Country.query.filter_by(name=country_name).first()
+        if not country:
+            # The country is not in this campaign.
+            return jsonify([])
+
+    campaign = Campaign.query.get(campaign_id)
+    images = []
+    for image in campaign.images:
+        if not country or image.country_id == country.id:
+            images.append(image.page_id)
+    return jsonify(images)

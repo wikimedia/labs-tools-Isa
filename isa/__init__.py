@@ -1,4 +1,5 @@
 import os
+import logging
 
 import yaml
 from flask import Flask, request, session
@@ -7,6 +8,10 @@ from flask_babel import Babel, gettext
 from flask_login import LoginManager
 from flask_wtf.csrf import CSRFProtect
 
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 app = Flask(__name__)
 
 # Load configuration from YAML file

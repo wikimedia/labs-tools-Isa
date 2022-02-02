@@ -56,6 +56,7 @@ class Campaign(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     campaign_name = db.Column(db.String(200), nullable=False)
     campaign_images = db.Column(db.Integer, default=0)
+    images = db.relationship('Image', backref='campaign', lazy=True)
     campaign_contributions = db.Column(db.Integer, default=0)
     campaign_participants = db.Column(db.Integer, default=0)
     campaign_image = db.Column(db.String(200), nullable=True, default='')
@@ -75,6 +76,7 @@ class Campaign(db.Model):
     depicts_metadata = db.Column(db.Boolean)
     captions_metadata = db.Column(db.Boolean)
     contribution = db.relationship('Contribution', backref='made_on', lazy=True)
+    countries = db.relationship('Country', backref='campaign', lazy=True)
 
     def __repr__(self):
         # This is what is shown when object is printed
@@ -87,3 +89,39 @@ class Campaign(db.Model):
                self.creation_date,
                self.start_date,
                self.end_date)
+
+
+class Image(db.Model):
+    id = db.Column(db.Integer, nullable=False, primary_key=True)
+    page_id = db.Column(db.Integer, nullable=False)
+    campaign_id = db.Column(
+        db.Integer,
+        db.ForeignKey('campaign.id'),
+        nullable=False
+    )
+    country_id = db.Column(db.Integer, db.ForeignKey('country.id'))
+
+    def __repr__(self):
+        return "Image({}, {}, {})".format(
+            self.page_id,
+            self.campaign_id,
+            self.country_id
+        )
+
+
+class Country(db.Model):
+    id = db.Column(db.Integer, nullable=False, primary_key=True)
+    name = db.Column(db.Text, nullable=False)
+    campaign_id = db.Column(
+        db.Integer,
+        db.ForeignKey('campaign.id'),
+        nullable=False
+    )
+    images = db.relationship('Image', backref='country', lazy=True)
+
+    def __repr__(self):
+        return "Country({}, {}, {})".format(
+            self.id,
+            self.name,
+            self.campaign_id
+        )

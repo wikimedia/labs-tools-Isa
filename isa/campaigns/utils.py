@@ -17,6 +17,9 @@ from isa.models import Contribution, User
 from isa.users.utils import (get_all_users_contribution_data_per_campaign, get_user_ranking)
 
 
+API_URL = "https://commons.wikimedia.org/w/api.php"
+
+
 def get_country_from_code(country_code):
     """
     Get country label from country code.
@@ -184,7 +187,7 @@ def generate_csrf_token(app_key, app_secret, user_key, user_secret):
     auth = OAuth1(app_key, app_secret, user_key, user_secret)
 
     # Get token
-    token_request = requests.get('https://commons.wikimedia.org/w/api.php', params={
+    token_request = requests.get(API_URL, params={
         'action': 'query',
         'meta': 'tokens',
         'format': 'json',
@@ -225,7 +228,7 @@ def make_edit_api_call(csrf_token, api_auth_token, contribution_data):
 
     # This is the actual edit post request
     # We sign that with the authentication
-    response = requests.post('https://commons.wikimedia.org/w/api.php', data=params, auth=api_auth_token)
+    response = requests.post(API_URL, data=params, auth=api_auth_token)
     if response.status_code == 200:
         result = response.json()
         revision_id = None

@@ -1,0 +1,9 @@
+{% macro images(campaign) -%}
+    {% if campaign.campaign_images == -1 %}
+        {{ _('Processing...') }}
+    {% elif campaign.campaign_images == -2 %}
+        {{ _('Error!') }}
+    {% else %}
+        {{ campaign.campaign_images }}
+    {% endif %}
+{%- endmacro %}

@@ -56,20 +56,22 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     this.imageChanged = function() {
         var me = this;
         document.documentElement.scrollTop = 0;
-        this.imageFileName = getImageFilename()
-        updateImage(this.imageFileName);
-        this.populateMetadata(this.imageFileName);
-        this.populateStructuredData(this.imageFileName, /*callbacks*/ {
-            onInitialDataReady: saveInitialStructuredData,
-            onUiRendered: function() {
-                // run data change events to update button states and other settings
-                // must be done once HTML is rendered as this is used to find differences to start data
-                me.depictDataChanged();
-                me.captionDataChanged();
-            }
-        });
+        getImageFilename().done(function(image) {
+            me.imageFileName = image;
+            updateImage(me.imageFileName);
+            me.populateMetadata(me.imageFileName);
+            me.populateStructuredData(me.imageFileName, /*callbacks*/ {
+                onInitialDataReady: saveInitialStructuredData,
+                onUiRendered: function() {
+                    // run data change events to update button states and other settings
+                    // must be done once HTML is rendered as this is used to find differences to start data
+                    me.depictDataChanged();
+                    me.captionDataChanged();
+                }
+            });
 
-        if (this.machineVisionActive) this.populateMachineVisionSuggestions();
+            if (me.machineVisionActive) me.populateMachineVisionSuggestions();
+        });
     }
 
     this.addDepictStatement = function(item, label, description, isProminent, statementId) {
@@ -231,7 +233,22 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     /////////// Image utilities ///////////
 
     function getImageFilename () {
-        return images[imageIndex];
+        var pageId = images[imageIndex];
+        var deferred = $.Deferred();
+        $.get({
+            url: WIKI_URL + 'w/api.php',
+            data: {
+                action: 'query',
+                pageids: pageId,
+                format: 'json',
+                formatversion: 2,
+                origin: '*'
+            }
+        }).done((data) => {
+            deferred.resolve(data.query.pages[0].title);
+        });
+
+        return deferred;
     }
 
     function updateImage(filename) {
