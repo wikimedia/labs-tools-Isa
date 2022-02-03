@@ -26,7 +26,16 @@ if __name__ == "__main__":
         "--campaign-id",
         "-i",
         type=int,
-        help="Update only the campaign with this id."
+        help="Update only the campaign with this id.",
+        metavar="ID"
+    )
+    parser.add_argument(
+        "--exclude-campaigns",
+        "-e",
+        type=int,
+        nargs="*",
+        help="Ignore campaigns with these ids.",
+        metavar="ID"
     )
     args = parser.parse_args()
 
@@ -36,6 +45,9 @@ if __name__ == "__main__":
         campaigns = Campaign.query.all()
 
     for campaign in campaigns:
+        if campaign.id in args.exclude_campaigns:
+            continue
+
         if args.force or not campaign.images:
             # Make sure the image count is not stuck on processing.
             campaign.campaign_images = image_updater.FAILED
