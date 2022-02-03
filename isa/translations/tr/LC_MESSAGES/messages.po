@@ -9,79 +9,87 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-01-24 12:16:46+0000\n"
-"X-POT-Import-Date: 2021-12-13 16:57:45+0000\n"
+"PO-Revision-Date: 2022-02-03 12:16:39+0000\n"
+"X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tr\n"
 "X-Generator: MediaWiki 1.38.0-alpha; Translate 2022-01-19\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: campaigns/routes.py:35 templates/campaign/campaigns.html:5
+#: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
 msgstr "Kampanyalar"
 
-#: campaigns/routes.py:53 campaigns/routes.py:135
+#: campaigns/routes.py:54 campaigns/routes.py:136
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "%(id)s id adlı kampanya mevcut değil"
 
-#: campaigns/routes.py:108 campaigns/routes.py:160
+#: campaigns/routes.py:109 campaigns/routes.py:161
 msgid "Campaign - "
 msgstr ""
 
-#: campaigns/routes.py:183
+#: campaigns/routes.py:184
 msgid "You need to Login to create a campaign"
 msgstr "Kampanya oluşturmak için Giriş yapmanız gerekiyor"
 
-#: campaigns/routes.py:213
+#: campaigns/routes.py:214
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr "Üzgünüz, %(campaign_name)s oluşturulamadı"
 
-#: campaigns/routes.py:220
+#: campaigns/routes.py:222
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr "%(campaign_name)s Kampanyası oluşturuldu!"
 
-#: campaigns/routes.py:223
+#: campaigns/routes.py:225
 msgid "Create a campaign"
 msgstr "Kampanya Oluştur"
 
-#: campaigns/routes.py:243
+#: campaigns/routes.py:238
+msgid "Images are being loaded for this campaign. Try again later."
+msgstr ""
+
+#: campaigns/routes.py:241
+msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
+msgstr ""
+
+#: campaigns/routes.py:252
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Katkıda bulun"
 
-#: campaigns/routes.py:262
+#: campaigns/routes.py:271
 msgid "You need to Login to update a campaign"
 msgstr "Kampanya güncellemek için giriş yapmanız gerekiyor"
 
-#: campaigns/routes.py:288
+#: campaigns/routes.py:298
 msgid "Campaign update failed please try later!"
 msgstr "Kampanya güncellemesi başarısız lütfen tekrar deneyin!"
 
-#: campaigns/routes.py:290
+#: campaigns/routes.py:301
 msgid "Update Succesfull !"
 msgstr "Güncelleme Başarılı !"
 
-#: campaigns/routes.py:298
+#: campaigns/routes.py:309
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
 msgstr ""
 
-#: campaigns/routes.py:313
+#: campaigns/routes.py:324
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr ""
 
-#: campaigns/routes.py:318
+#: campaigns/routes.py:329
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - Güncelle"
 
-#: campaigns/routes.py:366
+#: campaigns/routes.py:377
 msgid "You need to login to participate"
 msgstr "Katılmak için giriş yapmanız gerekiyor"
 
@@ -126,7 +134,7 @@ msgid "What are users going to be working on"
 msgstr ""
 
 #: templates/campaign/campaign-form.html:68
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:25
 msgid "Start Date"
 msgstr "Başlangıç Tarihi"
 
@@ -135,7 +143,7 @@ msgid "Set campaign start date"
 msgstr "Kampanya başlangıç tarihi ayarla"
 
 #: templates/campaign/campaign-form.html:83
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:26
 msgid "End Date"
 msgstr "Bitiş Tarihi"
 
@@ -225,7 +233,7 @@ msgid "Select to collect Depicts metadata in the campiagn"
 msgstr ""
 
 #: templates/campaign/campaign-form.html:191
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Captions"
 msgstr ""
 
@@ -277,131 +285,131 @@ msgstr "Lütfen seçimlerinizi kontrol edin ve tekrar deneyin."
 msgid "Please select at least one type from the Metadata to collect section"
 msgstr ""
 
-#: templates/campaign/campaign.html:17
+#: templates/campaign/campaign.html:18
 msgid "View images from"
 msgstr ""
 
-#: templates/campaign/campaign.html:18
+#: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
 msgstr ""
 
-#: templates/campaign/campaign.html:19
+#: templates/campaign/campaign.html:20
 msgid "Loading..."
 msgstr "Yükleniyor..."
 
-#: templates/campaign/campaign.html:23 templates/campaign/campaign.html:25
+#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:23 templates/campaign/campaign.html:25
-#: templates/campaign/campaigns.html:32
+#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
+#: templates/campaign/campaigns.html:33
 msgid "Get Started"
 msgstr "Başlayın"
 
-#: templates/campaign/campaign.html:33
+#: templates/campaign/campaign.html:34
 msgid "Campaign progress so far"
 msgstr "Şu ana kadarki kampanya süreci"
 
-#: templates/campaign/campaign.html:36
-#: templates/campaign/campaign_stats.html:18
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
 msgstr "Bu kampanyadaki toplam görsel sayısı"
 
-#: templates/campaign/campaign.html:36
-#: templates/campaign/campaign_stats.html:18
-#: templates/campaign/campaigns.html:21
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:19
+#: templates/campaign/campaigns.html:22
 msgid "Images"
 msgstr "Görseller"
 
-#: templates/campaign/campaign.html:37
-#: templates/campaign/campaign_stats.html:19
+#: templates/campaign/campaign.html:38
+#: templates/campaign/campaign_stats.html:21
 msgid "Total number of contributions made to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
-#: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
-#: templates/campaign/campaign_stats.html:19
-#: templates/campaign/campaign_stats.html:43
-#: templates/campaign/campaign_stats.html:75
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
+#: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
+#: templates/campaign/campaign_stats.html:21
+#: templates/campaign/campaign_stats.html:45
+#: templates/campaign/campaign_stats.html:77
+#: templates/campaign/campaigns.html:24
 msgid "Contributions"
 msgstr "Katkılar"
 
-#: templates/campaign/campaign.html:42
-#: templates/campaign/campaign_stats.html:38
+#: templates/campaign/campaign.html:43
+#: templates/campaign/campaign_stats.html:40
 msgid "Top Contributors"
 msgstr "En çok katkıda bulunanlar"
 
-#: templates/campaign/campaign.html:46
-#: templates/campaign/campaign_stats.html:42
+#: templates/campaign/campaign.html:47
+#: templates/campaign/campaign_stats.html:44
 msgid "Contributor"
 msgstr "Katkıda bulunan"
 
-#: templates/campaign/campaign.html:65
-#: templates/campaign/campaign_stats.html:61
+#: templates/campaign/campaign.html:66
+#: templates/campaign/campaign_stats.html:63
 msgid "No partcipants has contributed to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:70
+#: templates/campaign/campaign.html:75
+#: templates/campaign/campaign_stats.html:72
 msgid "Most improved Countries"
 msgstr "En gelişmiş ülkeler"
 
-#: templates/campaign/campaign.html:78
-#: templates/campaign/campaign_stats.html:74
+#: templates/campaign/campaign.html:79
+#: templates/campaign/campaign_stats.html:76
 msgid "Country"
 msgstr "Ülke"
 
-#: templates/campaign/campaign.html:97
-#: templates/campaign/campaign_stats.html:93
+#: templates/campaign/campaign.html:98
+#: templates/campaign/campaign_stats.html:95
 msgid "There is no data available yet for this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:105
+#: templates/campaign/campaign.html:106
 msgid "View and download more stats for this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:105
+#: templates/campaign/campaign.html:106
 msgid "View full stats"
 msgstr "Tam istatisiği görüntüle"
 
-#: templates/campaign/campaign.html:116
+#: templates/campaign/campaign.html:117
 msgid "My Contributions"
 msgstr "Katkılarım"
 
-#: templates/campaign/campaign.html:123
+#: templates/campaign/campaign.html:124
 msgid "Rank"
 msgstr "Sıralama"
 
-#: templates/campaign/campaign.html:141
+#: templates/campaign/campaign.html:142
 msgid "More About This Campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:143
+#: templates/campaign/campaign.html:144
 msgid "Campaign Manager"
 msgstr ""
 
-#: templates/campaign/campaign.html:145
+#: templates/campaign/campaign.html:146
 msgid "START DATE"
 msgstr "BAŞLANGIÇ TARİHİ"
 
-#: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
+#: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
 msgid "END DATE"
 msgstr "BİTİŞ TARİHİ"
 
-#: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:45
+#: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
 msgid "Not Set"
 msgstr "Ayarlanmadı"
 
-#: templates/campaign/campaign.html:156
+#: templates/campaign/campaign.html:157
 msgid "Make changes to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:156
+#: templates/campaign/campaign.html:157
 msgid "Edit Campaign"
 msgstr "Kampanyayı Düzenle"
 
-#: templates/campaign/campaign.html:162
+#: templates/campaign/campaign.html:163
 msgid "Unknown country"
 msgstr "Bilinmeyen Ülke"
 
@@ -410,7 +418,7 @@ msgid "Return to the campaign home page"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:19
-#: templates/campaign/campaign_stats.html:3
+#: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
 msgstr "Ana Sayfa"
 
@@ -419,7 +427,7 @@ msgid "View the previous image"
 msgstr "Önceki görseli görüntüle"
 
 #: templates/campaign/campaign_entry.html:23
-#: templates/campaign/campaign_entry.html:97
+#: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
 msgstr "ÖNCK GÖRSEL"
 
@@ -432,7 +440,7 @@ msgid "View the next image"
 msgstr "Sonraki görseli görüntüle"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:98
+#: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
 msgstr "SONRK GÖRSEL"
 
@@ -457,7 +465,7 @@ msgid "Camera Location"
 msgstr "Kamera Konumu"
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:108
+#: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
 msgstr ""
 
@@ -474,7 +482,7 @@ msgid "Cancel your changes"
 msgstr "Değişiklerinizi iptal et"
 
 #: templates/campaign/campaign_entry.html:50
-#: templates/campaign/campaign_entry.html:77
+#: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
 msgstr "İptal"
 
@@ -483,7 +491,7 @@ msgid "Save your edits to Wikimedia Commons"
 msgstr "Düzenlemelerinizi Wikimedia Commons'a kaydedin"
 
 #: templates/campaign/campaign_entry.html:51
-#: templates/campaign/campaign_entry.html:78
+#: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:54
 msgid "Save"
 msgstr "Kaydet"
@@ -496,239 +504,247 @@ msgstr "Değişikliklerinizi kaydetmek için girişe yonlendirilecek ve geri gel
 msgid "Name the different elements that you can see in this image"
 msgstr "Bu görselde gördüğünüz farklı ögeleri adlandırın"
 
-#: templates/campaign/campaign_entry.html:68
+#: templates/campaign/campaign_entry.html:73
 msgid "To mark the prominent elements in the image, click on the flag icon"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:81
+#: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
 msgstr "Değişiklikleri yayımlamak için giriş yap"
 
-#: templates/campaign/campaign_entry.html:83
+#: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:88
+#: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
 msgstr "Bu görselde ne gördüğünüzü kısaca açıklayın."
 
-#: templates/campaign/campaign_entry.html:92
+#: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:104
+#: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
 msgstr "Bu kampanya için görsel bulunamadı!"
 
-#: templates/campaign/campaign_entry.html:105
+#: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
 msgstr "Kampanya görselleri alınırken bir şeyler ters gitti"
 
-#: templates/campaign/campaign_entry.html:106
+#: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:107
+#: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:109
+#: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:110
+#: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:111
+#: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:112
+#: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:113
+#: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:114
+#: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:115
+#: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:116
+#: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:4
+#: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:9
+#: templates/campaign/campaign_stats.html:10
 msgid "From"
 msgstr "Kimden"
 
-#: templates/campaign/campaign_stats.html:10
+#: templates/campaign/campaign_stats.html:11
 msgid "Till"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:107
+#: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
 msgstr "Tüm istatistikleri indir (CSV)"
 
-#: templates/campaign/campaign_stats.html:112
+#: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
 msgstr "Katkıda bulunanların İstatistikleri"
 
-#: templates/campaign/campaign_stats.html:113
+#: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
 msgstr "Ülke İstatistikleri"
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
 msgstr ""
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
 msgstr ""
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
 msgstr ""
 
-#: templates/campaign/campaigns.html:14
+#: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
 msgstr ""
 
-#: templates/campaign/campaigns.html:20
+#: templates/campaign/campaigns.html:21
 msgid "Campaign name"
 msgstr ""
 
-#: templates/campaign/campaigns.html:20 templates/users/own_campaigns.html:28
+#: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
 msgstr "Kampanya"
 
-#: templates/campaign/campaigns.html:21
+#: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
 msgstr ""
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:23
 msgid "Participants"
 msgstr "Katılımcılar"
 
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
 msgstr "Kampanya başlangıç tarihi"
 
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
 msgstr "Kampanya bitiş tarihi"
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
 msgstr ""
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:27
 msgid "Creation Date"
 msgstr "Oluşturma Tarihi"
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:28
 msgid "Campaign status"
 msgstr "Kampanya durumu"
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:28
 msgid "Status"
 msgstr "Durum"
 
-#: templates/campaign/campaigns.html:53
+#: templates/campaign/campaigns.html:54
 msgid "Closed"
 msgstr "Kapalı"
 
-#: templates/campaign/campaigns.html:56
+#: templates/campaign/campaigns.html:57
 msgid "Not Opened"
 msgstr "Açık Değil"
 
-#: templates/campaign/campaigns.html:59
+#: templates/campaign/campaigns.html:60
 msgid "Open"
 msgstr "Açık"
 
-#: templates/campaign/campaigns.html:65 templates/users/own_campaigns.html:35
+#: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
 msgstr ""
 
-#: templates/campaign/campaigns.html:65
+#: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:73
+#: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
 msgstr ""
 
-#: templates/campaign/campaigns.html:78 templates/campaign/campaigns.html:80
+#: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:78 templates/campaign/campaigns.html:80
+#: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
 msgstr ""
 
-#: templates/campaign/campaigns.html:81
+#: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
 msgstr ""
 
-#: templates/campaign/campaigns.html:89
+#: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
 msgstr ""
 
-#: templates/campaign/campaigns.html:90
+#: templates/campaign/campaigns.html:91
 msgid "No entries"
 msgstr "Girdi yok"
 
-#: templates/campaign/campaigns.html:92
+#: templates/campaign/campaigns.html:93
 msgid "Search:"
 msgstr "Ara:"
 
-#: templates/campaign/campaigns.html:93
+#: templates/campaign/campaigns.html:94
 msgid "No matching records found"
 msgstr "Eşleşen kayıt bulunamadı"
 
-#: templates/campaign/campaigns.html:95
+#: templates/campaign/campaigns.html:96
 msgid "First"
 msgstr "İlk"
 
-#: templates/campaign/campaigns.html:96
+#: templates/campaign/campaigns.html:97
 msgid "Last"
 msgstr "Son"
 
-#: templates/campaign/campaigns.html:97
+#: templates/campaign/campaigns.html:98
 msgid "Next"
 msgstr "Sonraki"
 
-#: templates/campaign/campaigns.html:98
+#: templates/campaign/campaigns.html:99
 msgid "Previous"
 msgstr "Önceki"
+
+#: templates/campaign/macros.html:3
+msgid "Processing..."
+msgstr ""
+
+#: templates/campaign/macros.html:5
+msgid "Error!"
+msgstr ""
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"

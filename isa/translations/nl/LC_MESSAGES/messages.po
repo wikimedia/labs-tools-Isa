@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Husky
+# Author: Robin van der Vliet
 # Author: Spinster
 # --
 # Translation for the ISA project
@@ -10,79 +11,87 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-01-20 12:16:24+0000\n"
-"X-POT-Import-Date: 2021-12-13 16:57:45+0000\n"
+"PO-Revision-Date: 2022-02-03 12:16:39+0000\n"
+"X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
 "X-Generator: MediaWiki 1.38.0-alpha; Translate 2022-01-19\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: campaigns/routes.py:35 templates/campaign/campaigns.html:5
+#: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
 msgstr "Campagnes"
 
-#: campaigns/routes.py:53 campaigns/routes.py:135
+#: campaigns/routes.py:54 campaigns/routes.py:136
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "De campagne met nummer %(id)s bestaat niet."
 
-#: campaigns/routes.py:108 campaigns/routes.py:160
+#: campaigns/routes.py:109 campaigns/routes.py:161
 msgid "Campaign - "
 msgstr "Campagne - "
 
-#: campaigns/routes.py:183
+#: campaigns/routes.py:184
 msgid "You need to Login to create a campaign"
 msgstr "Je moet inloggen om een campagne aan te kunnen maken."
 
-#: campaigns/routes.py:213
+#: campaigns/routes.py:214
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr "Sorry, %(campaign_name)s kon niet aangemaakt worden"
 
-#: campaigns/routes.py:220
+#: campaigns/routes.py:222
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr "De campagne %(campaign_name)s is aangemaakt!"
 
-#: campaigns/routes.py:223
+#: campaigns/routes.py:225
 msgid "Create a campaign"
 msgstr "Maak een campagne aan"
 
-#: campaigns/routes.py:243
+#: campaigns/routes.py:238
+msgid "Images are being loaded for this campaign. Try again later."
+msgstr "Afbeeldingen worden geladen voor deze campagne. Probeer het later nog eens."
+
+#: campaigns/routes.py:241
+msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
+msgstr "Afbeeldingen konden niet worden geladen voor de campagne. De campagnebeheerder zal de campagne moeten bijwerken."
+
+#: campaigns/routes.py:252
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Doe mee!"
 
-#: campaigns/routes.py:262
+#: campaigns/routes.py:271
 msgid "You need to Login to update a campaign"
 msgstr "Je moet inloggen om een campagne aan te passen."
 
-#: campaigns/routes.py:288
+#: campaigns/routes.py:298
 msgid "Campaign update failed please try later!"
 msgstr "De update van de campagne is mislukt. Probeer later opnieuw!"
 
-#: campaigns/routes.py:290
+#: campaigns/routes.py:301
 msgid "Update Succesfull !"
 msgstr "De update is met succes voltooid."
 
-#: campaigns/routes.py:298
+#: campaigns/routes.py:309
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
 msgstr "Je kan deze campagne niet aanpassen. Neem contact op met de aanmaker ervan: User:%(campaign_manager)s "
 
-#: campaigns/routes.py:313
+#: campaigns/routes.py:324
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr "Oh jee! %(campaign_name)s kon niet aangepast worden!"
 
-#: campaigns/routes.py:318
+#: campaigns/routes.py:329
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - Aanpassing"
 
-#: campaigns/routes.py:366
+#: campaigns/routes.py:377
 msgid "You need to login to participate"
 msgstr "Je moet inloggen om deel te kunnen nemen."
 
@@ -127,7 +136,7 @@ msgid "What are users going to be working on"
 msgstr "Waaraan gaan gebruikers werken?"
 
 #: templates/campaign/campaign-form.html:68
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:25
 msgid "Start Date"
 msgstr "Startdatum"
 
@@ -136,7 +145,7 @@ msgid "Set campaign start date"
 msgstr "Stel de startdatum van de campagne in"
 
 #: templates/campaign/campaign-form.html:83
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:26
 msgid "End Date"
 msgstr "Einddatum"
 
@@ -226,7 +235,7 @@ msgid "Select to collect Depicts metadata in the campiagn"
 msgstr "Selecteer deze optie om 'Beeldt af'-metadata te verzamelen in de campagne"
 
 #: templates/campaign/campaign-form.html:191
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Captions"
 msgstr "Bijschriften"
 
@@ -278,131 +287,131 @@ msgstr "Bekijk je selecties en probeer opnieuw."
 msgid "Please select at least one type from the Metadata to collect section"
 msgstr "Selecteer minstens één type in het onderdeel 'Metadata te verzamelen'"
 
-#: templates/campaign/campaign.html:17
+#: templates/campaign/campaign.html:18
 msgid "View images from"
 msgstr "Bekijk afbeeldingen van"
 
-#: templates/campaign/campaign.html:18
+#: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
 msgstr "Kies om enkel afbeeldingen van 1 land te bekijken"
 
-#: templates/campaign/campaign.html:19
+#: templates/campaign/campaign.html:20
 msgid "Loading..."
 msgstr "Bezig met laden..."
 
-#: templates/campaign/campaign.html:23 templates/campaign/campaign.html:25
+#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
 msgstr "Begin met bijdragen aan deze campagne"
 
-#: templates/campaign/campaign.html:23 templates/campaign/campaign.html:25
-#: templates/campaign/campaigns.html:32
+#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
+#: templates/campaign/campaigns.html:33
 msgid "Get Started"
 msgstr "Aan de slag"
 
-#: templates/campaign/campaign.html:33
+#: templates/campaign/campaign.html:34
 msgid "Campaign progress so far"
 msgstr "Vooruitgang in de campagne tot nu toe"
 
-#: templates/campaign/campaign.html:36
-#: templates/campaign/campaign_stats.html:18
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
 msgstr "Totaal aantal afbeeldingen in deze campagne"
 
-#: templates/campaign/campaign.html:36
-#: templates/campaign/campaign_stats.html:18
-#: templates/campaign/campaigns.html:21
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:19
+#: templates/campaign/campaigns.html:22
 msgid "Images"
 msgstr "Afbeeldingen"
 
-#: templates/campaign/campaign.html:37
-#: templates/campaign/campaign_stats.html:19
+#: templates/campaign/campaign.html:38
+#: templates/campaign/campaign_stats.html:21
 msgid "Total number of contributions made to this campaign"
 msgstr "Totaal aantal bijdragen aan deze campagne"
 
-#: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
-#: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
-#: templates/campaign/campaign_stats.html:19
-#: templates/campaign/campaign_stats.html:43
-#: templates/campaign/campaign_stats.html:75
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
+#: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
+#: templates/campaign/campaign_stats.html:21
+#: templates/campaign/campaign_stats.html:45
+#: templates/campaign/campaign_stats.html:77
+#: templates/campaign/campaigns.html:24
 msgid "Contributions"
 msgstr "Bijdragen"
 
-#: templates/campaign/campaign.html:42
-#: templates/campaign/campaign_stats.html:38
+#: templates/campaign/campaign.html:43
+#: templates/campaign/campaign_stats.html:40
 msgid "Top Contributors"
 msgstr "Meest actieve bijdragers"
 
-#: templates/campaign/campaign.html:46
-#: templates/campaign/campaign_stats.html:42
+#: templates/campaign/campaign.html:47
+#: templates/campaign/campaign_stats.html:44
 msgid "Contributor"
 msgstr "Bijdrager"
 
-#: templates/campaign/campaign.html:65
-#: templates/campaign/campaign_stats.html:61
+#: templates/campaign/campaign.html:66
+#: templates/campaign/campaign_stats.html:63
 msgid "No partcipants has contributed to this campaign"
 msgstr "Aan deze campagne heeft nog niemand deelgenomen."
 
-#: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:70
+#: templates/campaign/campaign.html:75
+#: templates/campaign/campaign_stats.html:72
 msgid "Most improved Countries"
 msgstr "Landen met de meeste bijdragen"
 
-#: templates/campaign/campaign.html:78
-#: templates/campaign/campaign_stats.html:74
+#: templates/campaign/campaign.html:79
+#: templates/campaign/campaign_stats.html:76
 msgid "Country"
 msgstr "Land"
 
-#: templates/campaign/campaign.html:97
-#: templates/campaign/campaign_stats.html:93
+#: templates/campaign/campaign.html:98
+#: templates/campaign/campaign_stats.html:95
 msgid "There is no data available yet for this campaign"
 msgstr "Er is nog geen data beschikbaar voor deze campagne"
 
-#: templates/campaign/campaign.html:105
+#: templates/campaign/campaign.html:106
 msgid "View and download more stats for this campaign"
 msgstr "Bekijk en download meer statistieken voor deze campagne"
 
-#: templates/campaign/campaign.html:105
+#: templates/campaign/campaign.html:106
 msgid "View full stats"
 msgstr "Bekijk de volledige statistieken"
 
-#: templates/campaign/campaign.html:116
+#: templates/campaign/campaign.html:117
 msgid "My Contributions"
 msgstr "Mijn bijdragen"
 
-#: templates/campaign/campaign.html:123
+#: templates/campaign/campaign.html:124
 msgid "Rank"
 msgstr "Positie"
 
-#: templates/campaign/campaign.html:141
+#: templates/campaign/campaign.html:142
 msgid "More About This Campaign"
 msgstr "Meer info over deze campagne"
 
-#: templates/campaign/campaign.html:143
+#: templates/campaign/campaign.html:144
 msgid "Campaign Manager"
 msgstr "Campagnemanager"
 
-#: templates/campaign/campaign.html:145
+#: templates/campaign/campaign.html:146
 msgid "START DATE"
 msgstr "STARTDATUM"
 
-#: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
+#: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
 msgid "END DATE"
 msgstr "EINDDATUM"
 
-#: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:45
+#: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
 msgid "Not Set"
 msgstr "Niet ingesteld"
 
-#: templates/campaign/campaign.html:156
+#: templates/campaign/campaign.html:157
 msgid "Make changes to this campaign"
 msgstr "Maak aanpassingen aan deze campagne"
 
-#: templates/campaign/campaign.html:156
+#: templates/campaign/campaign.html:157
 msgid "Edit Campaign"
 msgstr "Campagne bewerken"
 
-#: templates/campaign/campaign.html:162
+#: templates/campaign/campaign.html:163
 msgid "Unknown country"
 msgstr "Onbekend land"
 
@@ -411,7 +420,7 @@ msgid "Return to the campaign home page"
 msgstr "Keer terug naar de homepage van de campagne"
 
 #: templates/campaign/campaign_entry.html:19
-#: templates/campaign/campaign_stats.html:3
+#: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
 msgstr "Homepagina"
 
@@ -420,7 +429,7 @@ msgid "View the previous image"
 msgstr "Bekijk de vorige afbeelding"
 
 #: templates/campaign/campaign_entry.html:23
-#: templates/campaign/campaign_entry.html:97
+#: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
 msgstr "VORIGE AFBEELDING"
 
@@ -433,7 +442,7 @@ msgid "View the next image"
 msgstr "Bekijk de volgende afbeelding"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:98
+#: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
 msgstr "VOLGENDE AFBEELDING"
 
@@ -458,7 +467,7 @@ msgid "Camera Location"
 msgstr "Cameralocatie"
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:108
+#: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
 msgstr "Toon alle metadata van Commons"
 
@@ -475,7 +484,7 @@ msgid "Cancel your changes"
 msgstr "Wijzigingen annuleren"
 
 #: templates/campaign/campaign_entry.html:50
-#: templates/campaign/campaign_entry.html:77
+#: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -484,7 +493,7 @@ msgid "Save your edits to Wikimedia Commons"
 msgstr "Bewaar je bewerkingen op Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
-#: templates/campaign/campaign_entry.html:78
+#: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:54
 msgid "Save"
 msgstr "Bewaren"
@@ -497,239 +506,247 @@ msgstr "Je wordt doorverwezen naar de login-pagina, en vervolgens terug naar hie
 msgid "Name the different elements that you can see in this image"
 msgstr "Noem de verschillende elementen die je in deze afbeelding kan zien"
 
-#: templates/campaign/campaign_entry.html:68
+#: templates/campaign/campaign_entry.html:73
 msgid "To mark the prominent elements in the image, click on the flag icon"
 msgstr "Klik op het vlag-icoon om de belangrijkste elementen in de afbeelding aan te duiden"
 
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
 msgstr "Bijschriften schrijven"
 
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
 msgstr "Beschrijf alle specifieke (ook culturele, wetenschappelijke en technische) informatie die je kan identificeren in de afbeelding (bijvoorbeeld: de Ethiopische koffieceremonie, bunna maflat) om de informatie rijker te maken."
 
-#: templates/campaign/campaign_entry.html:81
+#: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
 msgstr "Log in om je wijzigingen op te slaan"
 
-#: templates/campaign/campaign_entry.html:83
+#: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr "Voeg een bijschrift toe om de afbeelding beter te beschrijven (maximaal 255 karakters)"
 
-#: templates/campaign/campaign_entry.html:88
+#: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
 msgstr "Omschrijf kort wat je in deze afbeelding ziet."
 
-#: templates/campaign/campaign_entry.html:92
+#: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
 msgstr "Je kan bijschriften in andere talen toevoegen door Taalvoorkeuren te selecteren in het gebruikersmenu"
 
-#: templates/campaign/campaign_entry.html:104
+#: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
 msgstr "Geen afbeeldingen gevonden in deze campagne!"
 
-#: templates/campaign/campaign_entry.html:105
+#: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
 msgstr "Er is iets fout gegaan bij het ophalen van de afbeeldingen van deze campagne"
 
-#: templates/campaign/campaign_entry.html:106
+#: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
 msgstr "Zoek naar dingen die je ziet in het plaatje"
 
-#: templates/campaign/campaign_entry.html:107
+#: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
 msgstr "minimaliseer metadata van Commons"
 
-#: templates/campaign/campaign_entry.html:109
+#: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
 msgstr "Gelukt! De afgebeelde items zijn opgeslagen op Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:110
+#: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
 msgstr "Gelukt! De bijschriften zijn opgeslagen op Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:111
+#: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
 msgstr "Oeps! Er ging iets mis, je bewerkingen zijn helaas niet opgeslagen op Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:112
+#: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
 msgstr "Weet je zeker dat je naar een andere afbeelding wilt navigeren? Niet opgeslagen wijzigingen gaan dan verloren."
 
-#: templates/campaign/campaign_entry.html:113
+#: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
 msgstr "Klik op \"OK\" om verder te gaan, of op \"Annuleren\" als je eerst je wijzigingen wilt opslaan."
 
-#: templates/campaign/campaign_entry.html:114
+#: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
 msgstr "Verwijder dit afgebeelde item"
 
-#: templates/campaign/campaign_entry.html:115
+#: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
 msgstr "Markeer dit afgebeelde item als prominent"
 
-#: templates/campaign/campaign_entry.html:116
+#: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
 msgstr "Markeer dit afgebeelde item als NIET prominent"
 
-#: templates/campaign/campaign_stats.html:4
+#: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
 msgstr "BIJDRAGES AAN EEN GESTRUCTUREERDE-DATA CAMPAGNE"
 
-#: templates/campaign/campaign_stats.html:9
+#: templates/campaign/campaign_stats.html:10
 msgid "From"
 msgstr "Van"
 
-#: templates/campaign/campaign_stats.html:10
+#: templates/campaign/campaign_stats.html:11
 msgid "Till"
 msgstr "Tot"
 
-#: templates/campaign/campaign_stats.html:107
+#: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
 msgstr "Download alle statistieken (CSV)"
 
-#: templates/campaign/campaign_stats.html:112
+#: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
 msgstr "Statistieken van bijdragers"
 
-#: templates/campaign/campaign_stats.html:113
+#: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
 msgstr "Statistieken per land"
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
 msgstr "Op deze pagina staan de campagnes die momenteel actief zijn in de ISA Tool."
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
 msgstr "Klik op de naam van een campagne om te starten en om gestructureerde data aan een afbeelding toe te voegen."
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
 msgstr "Je vindt informatie over de voorbije campagnes in het 'Archief'gedeelte."
 
-#: templates/campaign/campaigns.html:14
+#: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
 msgstr "Huidige campagnes"
 
-#: templates/campaign/campaigns.html:20
+#: templates/campaign/campaigns.html:21
 msgid "Campaign name"
 msgstr "Naam van de campagne"
 
-#: templates/campaign/campaigns.html:20 templates/users/own_campaigns.html:28
+#: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
 msgstr "Campagne"
 
-#: templates/campaign/campaigns.html:21
+#: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
 msgstr "Totaal aantal afbeeldingen in de campagne"
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
 msgstr "Aantal bewerkers die hebben deelgenomen aan de campagne"
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:23
 msgid "Participants"
 msgstr "Deelnemers"
 
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
 msgstr "Totaal aantal deelnemers aan de campagne"
 
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
 msgstr "Startdatum van de campagne"
 
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
 msgstr "Einddatum van de campagne"
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
 msgstr "Datum wanneer de campagne aangemaakt werd"
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:27
 msgid "Creation Date"
 msgstr "Aanmaakdatum"
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:28
 msgid "Campaign status"
 msgstr "Status van de campagne"
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:28
 msgid "Status"
 msgstr "Status"
 
-#: templates/campaign/campaigns.html:53
+#: templates/campaign/campaigns.html:54
 msgid "Closed"
 msgstr "Afgesloten"
 
-#: templates/campaign/campaigns.html:56
+#: templates/campaign/campaigns.html:57
 msgid "Not Opened"
 msgstr "Niet geopend"
 
-#: templates/campaign/campaigns.html:59
+#: templates/campaign/campaigns.html:60
 msgid "Open"
 msgstr "Open"
 
-#: templates/campaign/campaigns.html:65 templates/users/own_campaigns.html:35
+#: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
 msgstr "Ga naar de homepage van de campagne om te starten"
 
-#: templates/campaign/campaigns.html:65
+#: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
 msgstr "Ga naar campagne"
 
-#: templates/campaign/campaigns.html:73
+#: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
 msgstr "Toon afgeronde campagnes"
 
-#: templates/campaign/campaigns.html:78 templates/campaign/campaigns.html:80
+#: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
 msgstr "Maak je eigen campagne"
 
-#: templates/campaign/campaigns.html:78 templates/campaign/campaigns.html:80
+#: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
 msgstr "Maak een nieuwe campagne met deze tool"
 
-#: templates/campaign/campaigns.html:81
+#: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
 msgstr "Je moet ingelogd zijn om een campagne aan te maken."
 
-#: templates/campaign/campaigns.html:89
+#: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
 msgstr ""
 
-#: templates/campaign/campaigns.html:90
+#: templates/campaign/campaigns.html:91
 msgid "No entries"
 msgstr "Geen bijdragen"
 
-#: templates/campaign/campaigns.html:92
+#: templates/campaign/campaigns.html:93
 msgid "Search:"
 msgstr "Zoeken:"
 
-#: templates/campaign/campaigns.html:93
+#: templates/campaign/campaigns.html:94
 msgid "No matching records found"
 msgstr "Geen overeenkomende resultaten gevonden"
 
-#: templates/campaign/campaigns.html:95
+#: templates/campaign/campaigns.html:96
 msgid "First"
 msgstr "Eerste"
 
-#: templates/campaign/campaigns.html:96
+#: templates/campaign/campaigns.html:97
 msgid "Last"
 msgstr "Laatste"
 
-#: templates/campaign/campaigns.html:97
+#: templates/campaign/campaigns.html:98
 msgid "Next"
 msgstr "Volgende"
 
-#: templates/campaign/campaigns.html:98
+#: templates/campaign/campaigns.html:99
 msgid "Previous"
 msgstr "Vorige"
+
+#: templates/campaign/macros.html:3
+msgid "Processing..."
+msgstr "Verwerken..."
+
+#: templates/campaign/macros.html:5
+msgid "Error!"
+msgstr "Fout!"
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"

@@ -1,7 +1,9 @@
-# Translation of ISA to Portuguese (português)
+# Translation of ISA to Russian (русский)
 # Exported from translatewiki.net
 #
-# Author: Darwin
+# Author: Kaganer
+# Author: Kareyac
+# Author: Tanzun
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -13,159 +15,159 @@ msgstr ""
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt\n"
+"Language: ru\n"
 "X-Generator: MediaWiki 1.38.0-alpha; Translate 2022-01-19\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10 == 1 && n%100 != 11) ? 0 : ( (n%10 >= 2 && n%10 <= 4 && (n%100 < 10 || n%100 >= 20)) ? 1 : 2 );\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
-msgstr "Campanhas"
+msgstr "Кампании"
 
 #: campaigns/routes.py:54 campaigns/routes.py:136
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "A campanha com o id %(id)s não existe"
+msgstr "Кампания с идентификатором %(id)s не существует"
 
 #: campaigns/routes.py:109 campaigns/routes.py:161
 msgid "Campaign - "
-msgstr "Campanha - "
+msgstr "Кампания — "
 
 #: campaigns/routes.py:184
 msgid "You need to Login to create a campaign"
-msgstr "É necessário iniciar sessão para criar uma campanha"
+msgstr "Чтобы создать кампанию, нужно войти на сайт"
 
 #: campaigns/routes.py:214
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr "Lamentamos, mas não foi possível criar %(campaign_name)s"
+msgstr "К сожалению, кампанию «%(campaign_name)s» создать не удалось"
 
 #: campaigns/routes.py:222
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr "%(campaign_name)s Campanha criada!"
+msgstr "Кампания «%(campaign_name)s» создана!"
 
 #: campaigns/routes.py:225
 msgid "Create a campaign"
-msgstr "Criar nova campanha"
+msgstr "Создать кампанию"
 
 #: campaigns/routes.py:238
 msgid "Images are being loaded for this campaign. Try again later."
-msgstr ""
+msgstr "Изображения для этой кампании ещё загружаются. Попробуйте снова чуть позже."
 
 #: campaigns/routes.py:241
 msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr ""
+msgstr "Изображения для кампании загрузить не удалось. Менеджеру кампании необходимо будет обновить кампанию."
 
 #: campaigns/routes.py:252
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr "%(campaign_name)s - Contribuir"
+msgstr "%(campaign_name)s — сделать вклад"
 
 #: campaigns/routes.py:271
 msgid "You need to Login to update a campaign"
-msgstr "É necessário iniciar sessão para criar uma campanha"
+msgstr "Чтобы обновить сведения о кампании, нужно войти на сайт"
 
 #: campaigns/routes.py:298
 msgid "Campaign update failed please try later!"
-msgstr "A atualização da campanha falhou, por favor tente mais tarde."
+msgstr "Обновление кампании не удалось — пожалуйста, попробуйте позже!"
 
 #: campaigns/routes.py:301
 msgid "Update Succesfull !"
-msgstr "Atualizado com sucesso!"
+msgstr "Успешно обновлено !"
 
 #: campaigns/routes.py:309
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Não pode atualizar esta campanha, por favor contacte o organizador: %(campaign_manager)s "
+msgstr "Вы не можете обновить сведения о кампании; контактное лицо — User:%(campaign_manager)s "
 
 #: campaigns/routes.py:324
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr "Lamentamos, mas não foi possível criar %(campaign_name)s"
+msgstr "Бууу! Кампанию «%(campaign_name)s» обновить не удалось!"
 
 #: campaigns/routes.py:329
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr "%(campaign_name)s - Atualiza"
+msgstr "%(campaign_name)s — обновить"
 
 #: campaigns/routes.py:377
 msgid "You need to login to participate"
-msgstr "É necessário iniciar sessão para participar"
+msgstr "Чтобы участвовать, нужно войти на сайт"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr "Atualizar detalhes da campanha"
+msgstr "Обновить сведения о кампании"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr "Criar nova campanha"
+msgstr "Создать новую кампанию"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Atualização em curso"
+msgstr "Вы обновляете"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr "Preencha o formulário abaixo para criar uma campanha"
+msgstr "Чтобы создать свою кампанию, заполните форму ниже"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr "Os campos marcados com * são de preenchimento obrigatório"
+msgstr "Поля, отмеченные знаком «*», обязательны для заполнения"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Nome da campanha"
+msgstr "Название кампании"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr "Este é o nome específico da sua campanha, não do projeto principal."
+msgstr ""
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr "Assim, não deve usar “Wiki Loves Africa”, mas sim “Musica e Dança em Angola”"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr "Descrição curta da campanha (144 caracteres)"
+msgstr "Краткое описание кампании (144 символа)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr "Em que poderão trabalhar os utilizadores"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
 msgid "Start Date"
-msgstr "Data de início"
+msgstr "Дата начала"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr "Defina a data de início da campanha"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
 msgid "End Date"
-msgstr "Data de fim"
+msgstr "Дата окончания"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr "Defina a data de finalização da campanha"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "Esta é uma campanha de Wiki Loves"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr "Quando configurada corretamente, esta opção permite aos participantes escolher qual o país do qual querem ver imagens, e grava as contribuições por país."
+msgstr ""
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr "Pode selecionar várias categorias do tipo correto."
+msgstr ""
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr "A profundidade deve ser 0 para todas as categorias de uma campanha Wiki Loves."
+msgstr ""
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
@@ -177,7 +179,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr "Categorias a ser usadas nesta campanha"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
@@ -189,15 +191,15 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr "Escolher categorias a usar na campanha"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Nome"
+msgstr "Название"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Profundidade"
+msgstr "Глубина"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
@@ -209,7 +211,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:173
 msgid "Metadata to collect in the Campaign"
-msgstr "Metadados a recolher na campanha"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:173
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
@@ -226,7 +228,7 @@ msgstr ""
 #: templates/campaign/campaign-form.html:176
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr "Representa"
+msgstr "Изображает"
 
 #: templates/campaign/campaign-form.html:188
 msgid "Select to collect Depicts metadata in the campiagn"
@@ -235,7 +237,7 @@ msgstr ""
 #: templates/campaign/campaign-form.html:191
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
-msgstr "Legendas"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:203
 msgid "Select to collect Caption metadata in the campiagn"
@@ -243,7 +245,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:210
 msgid "Campaign Image"
-msgstr "Imagem da Campanha"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:210
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
@@ -267,15 +269,15 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:246
 msgid "Publish Campaign"
-msgstr "Publicar Campanha"
+msgstr "Опубликовать кампанию"
 
 #: templates/campaign/campaign-form.html:256
 msgid "You must select at least one category for your campaign."
-msgstr "Tem de selecionar no mínimo uma categoria para a sua campanha."
+msgstr ""
 
 #: templates/campaign/campaign-form.html:257
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr "Algumas das categorias escolhidas não obedecem à sintaxe correta de uma Campanha Wiki Loves."
+msgstr ""
 
 #: templates/campaign/campaign-form.html:258
 msgid "Please check your selections and try again."
@@ -287,7 +289,7 @@ msgstr ""
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
-msgstr "Ver imagens de"
+msgstr ""
 
 #: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
@@ -295,36 +297,36 @@ msgstr ""
 
 #: templates/campaign/campaign.html:20
 msgid "Loading..."
-msgstr "A carregar..."
+msgstr "Загрузка…"
 
 #: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
-msgstr ""
+msgstr "Начать участие в этой кампании"
 
 #: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 #: templates/campaign/campaigns.html:33
 msgid "Get Started"
-msgstr "Começar"
+msgstr "Начать"
 
 #: templates/campaign/campaign.html:34
 msgid "Campaign progress so far"
-msgstr ""
+msgstr "Ход кампании на данный момент"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
-msgstr ""
+msgstr "Общее число изображений в кампании"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
-msgstr "Imagens"
+msgstr "Изображения"
 
 #: templates/campaign/campaign.html:38
 #: templates/campaign/campaign_stats.html:21
 msgid "Total number of contributions made to this campaign"
-msgstr ""
+msgstr "Общее число правок, сделанных в рамках эой кампании"
 
 #: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
 #: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
@@ -333,136 +335,136 @@ msgstr ""
 #: templates/campaign/campaign_stats.html:77
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr "Contribuições"
+msgstr "Вклад"
 
 #: templates/campaign/campaign.html:43
 #: templates/campaign/campaign_stats.html:40
 msgid "Top Contributors"
-msgstr "Maiores Contribuidores"
+msgstr "Участники с наибольшим вкладом"
 
 #: templates/campaign/campaign.html:47
 #: templates/campaign/campaign_stats.html:44
 msgid "Contributor"
-msgstr "Contribuidor"
+msgstr "Участник"
 
 #: templates/campaign/campaign.html:66
 #: templates/campaign/campaign_stats.html:63
 msgid "No partcipants has contributed to this campaign"
-msgstr ""
+msgstr "Ни у кого из участников нет вклада в рамках этой кампании"
 
 #: templates/campaign/campaign.html:75
 #: templates/campaign/campaign_stats.html:72
 msgid "Most improved Countries"
-msgstr ""
+msgstr "Наиболее улучшенные страны"
 
 #: templates/campaign/campaign.html:79
 #: templates/campaign/campaign_stats.html:76
 msgid "Country"
-msgstr "País"
+msgstr "Страна"
 
 #: templates/campaign/campaign.html:98
 #: templates/campaign/campaign_stats.html:95
 msgid "There is no data available yet for this campaign"
-msgstr ""
+msgstr "Для этой кампании пока нет доступных данных"
 
 #: templates/campaign/campaign.html:106
 msgid "View and download more stats for this campaign"
-msgstr ""
+msgstr "Посмотреть и скачат больше статистики по этой кампании"
 
 #: templates/campaign/campaign.html:106
 msgid "View full stats"
-msgstr "Ver estatísticas completas"
+msgstr "Смотреть полную статистику"
 
 #: templates/campaign/campaign.html:117
 msgid "My Contributions"
-msgstr "As minhas contribuições"
+msgstr "Мой вклад"
 
 #: templates/campaign/campaign.html:124
 msgid "Rank"
-msgstr "Classificação"
+msgstr "Ранг"
 
 #: templates/campaign/campaign.html:142
 msgid "More About This Campaign"
-msgstr "Mais sobre esta Campanha"
+msgstr "Подробнее о кампании"
 
 #: templates/campaign/campaign.html:144
 msgid "Campaign Manager"
-msgstr "Organizador da Campanha"
+msgstr "Менеджер кампании"
 
 #: templates/campaign/campaign.html:146
 msgid "START DATE"
-msgstr "DATA INÍCIO"
+msgstr "ДАТА НАЧАЛА"
 
 #: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
 msgid "END DATE"
-msgstr "DATA FIM"
+msgstr "ДАТА ОКОНЧАНИЯ"
 
 #: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
 msgid "Not Set"
-msgstr "Não definida"
+msgstr "Не задано"
 
 #: templates/campaign/campaign.html:157
 msgid "Make changes to this campaign"
-msgstr "Modificar esta campanha"
+msgstr "Внести изменения в эту кампанию"
 
 #: templates/campaign/campaign.html:157
 msgid "Edit Campaign"
-msgstr "Editar Campanha"
+msgstr "Изменить данные кампании"
 
 #: templates/campaign/campaign.html:163
 msgid "Unknown country"
-msgstr "País desconhecido"
+msgstr "Неизвестная страна"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr ""
+msgstr "Вернуться на основную страницу кампании"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
-msgstr "Página inicial"
+msgstr "Домашняя страница"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Ver imagem seguinte"
+msgstr "Смотреть предыдущее изображение"
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
-msgstr "IMAGEM ANTERIOR"
+msgstr "ПРЕДЫДУЩЕЕ"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Trabalho próprio"
+msgstr "Собственная работа"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Ver imagem seguinte"
+msgstr "Смотреть следующее изображение"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
-msgstr "PRÓXIMA IMAGEM"
+msgstr "СЛЕДУЮЩЕЕ"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Ficheiro"
+msgstr "Файл"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Abre esta imagem no Wikimedia Commons"
+msgstr "Открыть изображение на Викискладе"
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Descrição"
+msgstr "Описание"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Categorias"
+msgstr "Категории"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr "Localização da câmara"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:113
@@ -475,26 +477,26 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "Simplifique: Use palavras e conceitos simples por descrever o que observa em cada imagem (p. ex. gato, montanha, Taj Mahal)"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
-msgstr "Cancelar alterações"
+msgstr "Отменить ваши изменения"
 
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Отменить"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr "Gravar edições no Wikimedia Commons"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:54
 msgid "Save"
-msgstr "Gravar"
+msgstr "Сохранить"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
@@ -510,7 +512,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr "Escrevendo as legendas"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
@@ -518,7 +520,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr "Inicie sessão para publicar as alterações"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
@@ -570,7 +572,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr "Remover o item representado"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
@@ -582,15 +584,15 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr ""
+msgstr "ВКЛАД В КАМПАНИЮ СТРУКТУРИРОВАННЫХ ДАННЫХ"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr "De"
+msgstr "от"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr "Até"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
@@ -598,11 +600,11 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
-msgstr "Estatísticas do contribuidor"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
-msgstr "Estatísticas do País"
+msgstr ""
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
@@ -618,15 +620,15 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr "Campanhas Ativas"
+msgstr "Текущие кампании"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr "Nome da campanha"
+msgstr "Название кампании"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr "Campanha"
+msgstr "Кампания"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
@@ -638,7 +640,7 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr "Participantes"
+msgstr "Участники"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
@@ -646,11 +648,11 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr "Data de início da campanha"
+msgstr ""
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr "Data de finalização da campanha"
+msgstr ""
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
@@ -658,134 +660,134 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr "Data de criação"
+msgstr ""
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr "Estado da campanha"
+msgstr ""
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr "Estado"
+msgstr ""
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr "Fechadas"
+msgstr "Закрыта"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr "Não Abertas"
+msgstr "Не открыта"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Abertas"
+msgstr "Открыта"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr ""
+msgstr "Чтобы начать, перейдите на основную страницу кампании"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr "Ir para a Campanha"
+msgstr "Перейти к кампании"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr "Mostrar campanhas fechadas"
+msgstr "Показать закрытые кампании"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr "Criar a sua própria campanha"
+msgstr "Создать собственную кампанию"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr ""
+msgstr "Создайте новую кампанию с помощью этого инструмента"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr "É necessário iniciar sessão para criar uma campanha"
+msgstr "Чтобы создать кампанию, нужно войти на сайт."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr "A mostrar entradas _START_ a _END_, de _TOTAL_"
+msgstr "Показаны записи с _START_ по _END_ из _TOTAL_"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr "Sem entradas"
+msgstr "Нет записей"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr "Procurar:"
+msgstr "Поиск:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr "Não foram encontrados registos correspondentes"
+msgstr "Соответствующие записи не найдены"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr "Primeiro"
+msgstr "Первая"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr "Último"
+msgstr "Последняя"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr "Seguinte"
+msgstr "Следующая"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr "Anterior"
+msgstr "Предыдущая"
 
 #: templates/campaign/macros.html:3
 msgid "Processing..."
-msgstr ""
+msgstr "Обработка…"
 
 #: templates/campaign/macros.html:5
 msgid "Error!"
-msgstr ""
+msgstr "Ошибка!"
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr "Servidor em manutenção"
+msgstr "Сервер на обслуживании"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr ""
+msgstr "Пожалуйста, обратитесь в службу поддержки"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr ""
+msgstr "Вернуться домой"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Contacto do suporte técnico"
+msgstr "Обратитесь в службу поддержки"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Página não encontrada"
+msgstr "Страница не найдена"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "Мы не можем найти страницу, которую вы ищете"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr ""
+msgstr "Вернуться домой"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Ocorreu um problema"
+msgstr "Что-то пошло не так"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "Возможно, Isa проходит техническое обслуживание"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Ajuda"
+msgstr "Страница справки"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
@@ -807,7 +809,7 @@ msgstr ""
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr "O que é o Wikimedia Commons?"
+msgstr ""
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
@@ -871,7 +873,7 @@ msgstr ""
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr "Como vamos fazer isto ? "
+msgstr ""
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1063,7 +1065,7 @@ msgstr ""
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr "Aviso legal e créditos"
+msgstr ""
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
@@ -1100,7 +1102,7 @@ msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "Sobre esta ferramenta"
+msgstr "Об этом инструменте"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1128,43 +1130,43 @@ msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr "Início"
+msgstr "Главная"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr "Criar nova"
+msgstr "Создать новую"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Ajuda"
+msgstr "Справка"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "Изменить доступные языки подписей"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr "Preferências de idioma"
+msgstr "Языковые настройки"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr "Ver as suas campanhas"
+msgstr "Смотрите свои кампании"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr "As minhas campanhas"
+msgstr "Мои кампании"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr "Sair"
+msgstr "Выйти"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr "Iniciar sessão"
+msgstr "Войти"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr "A ferramenta ISA"
+msgstr "Инструментарий ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
@@ -1188,95 +1190,95 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr "As suas Campanhas"
+msgstr "Ваши кампании"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr ""
+msgstr "Ниже приведён список ваших кампаний"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "У вас нет никаких кампаний"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr "#"
+msgstr "№"
 
 #: templates/users/user_settings.html:6 templates/users/user_settings.html:9
 msgid "Caption Languages"
-msgstr ""
+msgstr "Языки подписей"
 
 #: templates/users/user_settings.html:9
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "Выберите до 6 языков для подписей"
 
 #: templates/users/user_settings.html:9
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "Для каждого изображения можно добавить подписи на нескольких языках."
 
 #: templates/users/user_settings.html:9
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "Языки, выбранные вами на этой странице, появятся при просмотре страницы описания изображения."
 
 #: templates/users/user_settings.html:9
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "Выберите все языки, на которых вам удобно делать свой вклад."
 
 #: templates/users/user_settings.html:19 templates/users/user_settings.html:25
 #: templates/users/user_settings.html:31 templates/users/user_settings.html:37
 #: templates/users/user_settings.html:43 templates/users/user_settings.html:49
 msgid "Remove language"
-msgstr "Remover idioma"
+msgstr "Удалить язык"
 
 #: templates/users/user_settings.html:53
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "Отменить изменения языковых настроек"
 
 #: templates/users/user_settings.html:53
 msgid "Undo Changes"
-msgstr "Desfazer alterações"
+msgstr "Отменить изменения"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr "O ''callback'' do OAuth falhou. Será que tem os ''cookies'' desativados?"
+msgstr "Ошибка обратного вызова OAuth. Возможно, файлы cookie отключены?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome  %(username)s!"
-msgstr ""
+msgstr "Добро пожаловать,  %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "Até à próxima!"
+msgstr "Увидимся в следующий раз!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr "Por favor inicie sessão para alterar as preferências de idioma"
+msgstr "Чтобы изменить свои языковые настройки, нужно войти на сайт."
 
 #: users/routes.py:143
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr "Lamentamos, tentou introduzir %(rep_languages)s várias vezes"
+msgstr "Извините, но вы пытались ввести %(rep_languages)s несколько раз"
 
 #: users/routes.py:156
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "Не удалось задать языки подписей"
 
 #: users/routes.py:158
 msgid "Preferred Languages set Successfully"
-msgstr ""
+msgstr "Предпочитаемые языки успешно установлены"
 
 #: users/routes.py:170
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "Языковые настройки в данный момент недоступны"
 
 #: users/routes.py:172
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s's — Настройки"
 
 #: users/routes.py:195
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Кампании, которые создал(а) %(username)s"
 

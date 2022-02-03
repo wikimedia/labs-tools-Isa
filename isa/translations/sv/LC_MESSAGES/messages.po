@@ -9,79 +9,87 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-01-24 12:16:46+0000\n"
-"X-POT-Import-Date: 2021-12-13 16:57:45+0000\n"
+"PO-Revision-Date: 2022-02-03 12:16:39+0000\n"
+"X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sv\n"
 "X-Generator: MediaWiki 1.38.0-alpha; Translate 2022-01-19\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: campaigns/routes.py:35 templates/campaign/campaigns.html:5
+#: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
 msgstr "Kampanjer"
 
-#: campaigns/routes.py:53 campaigns/routes.py:135
+#: campaigns/routes.py:54 campaigns/routes.py:136
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "Kampanjen med ID %(id)s finns inte"
 
-#: campaigns/routes.py:108 campaigns/routes.py:160
+#: campaigns/routes.py:109 campaigns/routes.py:161
 msgid "Campaign - "
 msgstr "Kampanj - "
 
-#: campaigns/routes.py:183
+#: campaigns/routes.py:184
 msgid "You need to Login to create a campaign"
 msgstr "Du behöver logga in för att skapa en kampanj"
 
-#: campaigns/routes.py:213
+#: campaigns/routes.py:214
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr "Tyvärr, %(campaign_name)s kunde inte skapas"
 
-#: campaigns/routes.py:220
+#: campaigns/routes.py:222
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr "Kampanjen %(campaign_name)s skapades!"
 
-#: campaigns/routes.py:223
+#: campaigns/routes.py:225
 msgid "Create a campaign"
 msgstr "Skapa en kampanj"
 
-#: campaigns/routes.py:243
+#: campaigns/routes.py:238
+msgid "Images are being loaded for this campaign. Try again later."
+msgstr ""
+
+#: campaigns/routes.py:241
+msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
+msgstr ""
+
+#: campaigns/routes.py:252
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Bidra"
 
-#: campaigns/routes.py:262
+#: campaigns/routes.py:271
 msgid "You need to Login to update a campaign"
 msgstr "Du behöver logga in för att uppdatera en kampanj"
 
-#: campaigns/routes.py:288
+#: campaigns/routes.py:298
 msgid "Campaign update failed please try later!"
 msgstr "Kunde inte uppdatera kampanj, försök igen senare!"
 
-#: campaigns/routes.py:290
+#: campaigns/routes.py:301
 msgid "Update Succesfull !"
 msgstr "Uppdaterades!"
 
-#: campaigns/routes.py:298
+#: campaigns/routes.py:309
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
 msgstr "Du kan inte uppdatera denna kampanj, kontakta den ansvariga användaren: %(campaign_manager)s "
 
-#: campaigns/routes.py:313
+#: campaigns/routes.py:324
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr "Surt! %(campaign_name)s kunde inte uppdateras!"
 
-#: campaigns/routes.py:318
+#: campaigns/routes.py:329
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - Uppdatera"
 
-#: campaigns/routes.py:366
+#: campaigns/routes.py:377
 msgid "You need to login to participate"
 msgstr "Du behöver logga in för att delta"
 
@@ -126,7 +134,7 @@ msgid "What are users going to be working on"
 msgstr "Vad användare kommer arbeta på"
 
 #: templates/campaign/campaign-form.html:68
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:25
 msgid "Start Date"
 msgstr "Startdatum"
 
@@ -135,7 +143,7 @@ msgid "Set campaign start date"
 msgstr "Ange kampanjens startdatum"
 
 #: templates/campaign/campaign-form.html:83
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:26
 msgid "End Date"
 msgstr "Slutdatum"
 
@@ -225,7 +233,7 @@ msgid "Select to collect Depicts metadata in the campiagn"
 msgstr "Välj för att samla in motivmetadata i kampanjen"
 
 #: templates/campaign/campaign-form.html:191
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Captions"
 msgstr "Bildtexter"
 
@@ -277,131 +285,131 @@ msgstr "Kontrollera dina val och försök igen."
 msgid "Please select at least one type from the Metadata to collect section"
 msgstr "Välj minst en typ från avsnittet Metadata att samla in"
 
-#: templates/campaign/campaign.html:17
+#: templates/campaign/campaign.html:18
 msgid "View images from"
 msgstr "Visa bilder från"
 
-#: templates/campaign/campaign.html:18
+#: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
 msgstr "Välj att bara visa bilder från ett enda land"
 
-#: templates/campaign/campaign.html:19
+#: templates/campaign/campaign.html:20
 msgid "Loading..."
 msgstr "Laddar..."
 
-#: templates/campaign/campaign.html:23 templates/campaign/campaign.html:25
+#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
 msgstr "Börja bidra till denna kampanj"
 
-#: templates/campaign/campaign.html:23 templates/campaign/campaign.html:25
-#: templates/campaign/campaigns.html:32
+#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
+#: templates/campaign/campaigns.html:33
 msgid "Get Started"
 msgstr "Kom igång"
 
-#: templates/campaign/campaign.html:33
+#: templates/campaign/campaign.html:34
 msgid "Campaign progress so far"
 msgstr "Kampanjens framsteg hittills"
 
-#: templates/campaign/campaign.html:36
-#: templates/campaign/campaign_stats.html:18
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
 msgstr "Totalt antal bilder i denna kampanj"
 
-#: templates/campaign/campaign.html:36
-#: templates/campaign/campaign_stats.html:18
-#: templates/campaign/campaigns.html:21
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:19
+#: templates/campaign/campaigns.html:22
 msgid "Images"
 msgstr "Bilder"
 
-#: templates/campaign/campaign.html:37
-#: templates/campaign/campaign_stats.html:19
+#: templates/campaign/campaign.html:38
+#: templates/campaign/campaign_stats.html:21
 msgid "Total number of contributions made to this campaign"
 msgstr "Totalt antal bidrag till denna kampanj"
 
-#: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
-#: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
-#: templates/campaign/campaign_stats.html:19
-#: templates/campaign/campaign_stats.html:43
-#: templates/campaign/campaign_stats.html:75
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
+#: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
+#: templates/campaign/campaign_stats.html:21
+#: templates/campaign/campaign_stats.html:45
+#: templates/campaign/campaign_stats.html:77
+#: templates/campaign/campaigns.html:24
 msgid "Contributions"
 msgstr "Bidrag"
 
-#: templates/campaign/campaign.html:42
-#: templates/campaign/campaign_stats.html:38
+#: templates/campaign/campaign.html:43
+#: templates/campaign/campaign_stats.html:40
 msgid "Top Contributors"
 msgstr "Toppbidragsgivare"
 
-#: templates/campaign/campaign.html:46
-#: templates/campaign/campaign_stats.html:42
+#: templates/campaign/campaign.html:47
+#: templates/campaign/campaign_stats.html:44
 msgid "Contributor"
 msgstr "Bidragsgivare"
 
-#: templates/campaign/campaign.html:65
-#: templates/campaign/campaign_stats.html:61
+#: templates/campaign/campaign.html:66
+#: templates/campaign/campaign_stats.html:63
 msgid "No partcipants has contributed to this campaign"
 msgstr "Inga deltagare har bidragit till denna kampanj"
 
-#: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:70
+#: templates/campaign/campaign.html:75
+#: templates/campaign/campaign_stats.html:72
 msgid "Most improved Countries"
 msgstr "Mest förbättrade länderna"
 
-#: templates/campaign/campaign.html:78
-#: templates/campaign/campaign_stats.html:74
+#: templates/campaign/campaign.html:79
+#: templates/campaign/campaign_stats.html:76
 msgid "Country"
 msgstr "Land"
 
-#: templates/campaign/campaign.html:97
-#: templates/campaign/campaign_stats.html:93
+#: templates/campaign/campaign.html:98
+#: templates/campaign/campaign_stats.html:95
 msgid "There is no data available yet for this campaign"
 msgstr "Det finns ännu ingen data tillgänglig för denna kampanj"
 
-#: templates/campaign/campaign.html:105
+#: templates/campaign/campaign.html:106
 msgid "View and download more stats for this campaign"
 msgstr "Visa och ladda ner mer statistik för denna kampanj"
 
-#: templates/campaign/campaign.html:105
+#: templates/campaign/campaign.html:106
 msgid "View full stats"
 msgstr "Visa fullständig statistik"
 
-#: templates/campaign/campaign.html:116
+#: templates/campaign/campaign.html:117
 msgid "My Contributions"
 msgstr "Mina bidrag"
 
-#: templates/campaign/campaign.html:123
+#: templates/campaign/campaign.html:124
 msgid "Rank"
 msgstr "Rank"
 
-#: templates/campaign/campaign.html:141
+#: templates/campaign/campaign.html:142
 msgid "More About This Campaign"
 msgstr "Mer om kampanjen"
 
-#: templates/campaign/campaign.html:143
+#: templates/campaign/campaign.html:144
 msgid "Campaign Manager"
 msgstr "Kampanjansvarig"
 
-#: templates/campaign/campaign.html:145
+#: templates/campaign/campaign.html:146
 msgid "START DATE"
 msgstr "STARDATUM"
 
-#: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
+#: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
 msgid "END DATE"
 msgstr "SLUTDAUM"
 
-#: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:45
+#: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
 msgid "Not Set"
 msgstr "Inte angivet"
 
-#: templates/campaign/campaign.html:156
+#: templates/campaign/campaign.html:157
 msgid "Make changes to this campaign"
 msgstr "Gör ändringar i denna kampanj"
 
-#: templates/campaign/campaign.html:156
+#: templates/campaign/campaign.html:157
 msgid "Edit Campaign"
 msgstr "Redigera kampanj"
 
-#: templates/campaign/campaign.html:162
+#: templates/campaign/campaign.html:163
 msgid "Unknown country"
 msgstr "Okänt land"
 
@@ -410,7 +418,7 @@ msgid "Return to the campaign home page"
 msgstr "Återvänd till kampanjens hemsida"
 
 #: templates/campaign/campaign_entry.html:19
-#: templates/campaign/campaign_stats.html:3
+#: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
 msgstr "Hemsida"
 
@@ -419,7 +427,7 @@ msgid "View the previous image"
 msgstr "Visa tidigare bild"
 
 #: templates/campaign/campaign_entry.html:23
-#: templates/campaign/campaign_entry.html:97
+#: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
 msgstr "TIDIG. BILD"
 
@@ -432,7 +440,7 @@ msgid "View the next image"
 msgstr "Visa nästa bild"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:98
+#: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
 msgstr "NÄSTA BILD"
 
@@ -457,7 +465,7 @@ msgid "Camera Location"
 msgstr "Kameraplats"
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:108
+#: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
 msgstr "visa all metadata från commons"
 
@@ -474,7 +482,7 @@ msgid "Cancel your changes"
 msgstr "Avbryt dina ändringar"
 
 #: templates/campaign/campaign_entry.html:50
-#: templates/campaign/campaign_entry.html:77
+#: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -483,7 +491,7 @@ msgid "Save your edits to Wikimedia Commons"
 msgstr "Spara dina redigeringar på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
-#: templates/campaign/campaign_entry.html:78
+#: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:54
 msgid "Save"
 msgstr "Spara"
@@ -496,238 +504,246 @@ msgstr "Du kommer omdirigeras för att logga in och sedan tillbaka hit för att 
 msgid "Name the different elements that you can see in this image"
 msgstr "Nämn de olika elementen du ser i den här bilden"
 
-#: templates/campaign/campaign_entry.html:68
+#: templates/campaign/campaign_entry.html:73
 msgid "To mark the prominent elements in the image, click on the flag icon"
 msgstr "För att markera det framstående i bilden klickar du på flaggikonen"
 
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
 msgstr "Skriva bildtexter"
 
-#: templates/campaign/campaign_entry.html:75
+#: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:81
+#: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:83
+#: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:88
+#: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:92
+#: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:104
+#: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:105
+#: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:106
+#: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:107
+#: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:109
+#: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:110
+#: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:111
+#: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:112
+#: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:113
+#: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:114
+#: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:115
+#: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
 msgstr ""
 
-#: templates/campaign/campaign_entry.html:116
+#: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:4
+#: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:9
+#: templates/campaign/campaign_stats.html:10
 msgid "From"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:10
+#: templates/campaign/campaign_stats.html:11
 msgid "Till"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:107
+#: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:112
+#: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:113
+#: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
 msgstr ""
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
 msgstr ""
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
 msgstr ""
 
-#: templates/campaign/campaigns.html:7
+#: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
 msgstr ""
 
-#: templates/campaign/campaigns.html:14
+#: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
 msgstr ""
 
-#: templates/campaign/campaigns.html:20
+#: templates/campaign/campaigns.html:21
 msgid "Campaign name"
 msgstr "Kampanjnamn"
 
-#: templates/campaign/campaigns.html:20 templates/users/own_campaigns.html:28
+#: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:21
+#: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
 msgstr ""
 
-#: templates/campaign/campaigns.html:22
+#: templates/campaign/campaigns.html:23
 msgid "Participants"
 msgstr ""
 
-#: templates/campaign/campaigns.html:23
+#: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:24
+#: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
 msgstr ""
 
-#: templates/campaign/campaigns.html:25
+#: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
 msgstr "Kampanjens slutdatum"
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
 msgstr "Datumet kampanjen skapades"
 
-#: templates/campaign/campaigns.html:26
+#: templates/campaign/campaigns.html:27
 msgid "Creation Date"
 msgstr ""
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:28
 msgid "Campaign status"
 msgstr "Kampanjstatus"
 
-#: templates/campaign/campaigns.html:27
+#: templates/campaign/campaigns.html:28
 msgid "Status"
 msgstr ""
 
-#: templates/campaign/campaigns.html:53
+#: templates/campaign/campaigns.html:54
 msgid "Closed"
 msgstr ""
 
-#: templates/campaign/campaigns.html:56
+#: templates/campaign/campaigns.html:57
 msgid "Not Opened"
 msgstr ""
 
-#: templates/campaign/campaigns.html:59
+#: templates/campaign/campaigns.html:60
 msgid "Open"
 msgstr ""
 
-#: templates/campaign/campaigns.html:65 templates/users/own_campaigns.html:35
+#: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
 msgstr "Gå till föregående kampanjs hemsida för att komma igång"
 
-#: templates/campaign/campaigns.html:65
+#: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:73
+#: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
 msgstr "Visa stängda kampanjer"
 
-#: templates/campaign/campaigns.html:78 templates/campaign/campaigns.html:80
+#: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
 msgstr ""
 
-#: templates/campaign/campaigns.html:78 templates/campaign/campaigns.html:80
+#: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
 msgstr "Skapa en ny kampanj med detta verktyg"
 
-#: templates/campaign/campaigns.html:81
+#: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
 msgstr "Du måste vara inloggad för att skapa en kampanj."
 
-#: templates/campaign/campaigns.html:89
+#: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
 msgstr ""
 
-#: templates/campaign/campaigns.html:90
+#: templates/campaign/campaigns.html:91
 msgid "No entries"
 msgstr ""
 
-#: templates/campaign/campaigns.html:92
+#: templates/campaign/campaigns.html:93
 msgid "Search:"
 msgstr ""
 
-#: templates/campaign/campaigns.html:93
+#: templates/campaign/campaigns.html:94
 msgid "No matching records found"
 msgstr ""
 
-#: templates/campaign/campaigns.html:95
+#: templates/campaign/campaigns.html:96
 msgid "First"
 msgstr ""
 
-#: templates/campaign/campaigns.html:96
+#: templates/campaign/campaigns.html:97
 msgid "Last"
 msgstr ""
 
-#: templates/campaign/campaigns.html:97
+#: templates/campaign/campaigns.html:98
 msgid "Next"
 msgstr ""
 
-#: templates/campaign/campaigns.html:98
+#: templates/campaign/campaigns.html:99
 msgid "Previous"
+msgstr ""
+
+#: templates/campaign/macros.html:3
+msgid "Processing..."
+msgstr ""
+
+#: templates/campaign/macros.html:5
+msgid "Error!"
 msgstr ""
 
 #: templates/errors/403.html:8
