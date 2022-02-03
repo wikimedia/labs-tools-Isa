@@ -115,7 +115,7 @@ class ImageUpdater:
         for page_id, country in self._images.items():
             number_of_images += 1
             image = Image(page_id=page_id, campaign_id=self._campaign_id)
-            if country:
+            if campaign.campaign_type and country:
                 country_id = Country.query.filter_by(name=country)[0].id
                 image.country_id = country_id
             db.session.add(image)
