@@ -1,4 +1,5 @@
 import os
+from glob import glob
 import logging
 
 import yaml
@@ -64,3 +65,17 @@ app.register_blueprint(campaigns)
 app.register_blueprint(main)
 app.register_blueprint(users)
 app.register_blueprint(errors)
+
+
+@app.context_processor
+def inject_language_choices():
+    languages = ["en"]
+    for language in os.scandir("isa/translations"):
+        if language.name == "qqq":
+            continue
+
+        mo_file = glob("isa/translations/{}/LC_MESSAGES/*.mo".format(language.name))
+        if mo_file:
+            languages.append(language.name)
+
+    return dict(languages=languages)
