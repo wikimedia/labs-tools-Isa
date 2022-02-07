@@ -1,7 +1,8 @@
-# Translation of ISA to Luxembourgish (Lëtzebuergesch)
+# Translation of ISA to Ukrainian (українська)
 # Exported from translatewiki.net
 #
-# Author: Robby
+# Author: DDPAT
+# Author: Ата
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -9,322 +10,322 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-02-07 12:15:19+0000\n"
+"PO-Revision-Date: 2022-02-07 12:15:20+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lb\n"
+"Language: uk\n"
 "X-Generator: MediaWiki 1.38.0-alpha; Translate 2022-01-19\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10 == 1 && n%100 != 11) ? 0 : ( (n%10 >= 2 && n%10 <= 4 && (n%100 < 10 || n%100 >= 20)) ? 1 : 2 );\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
-msgstr "Campagnen"
+msgstr "Кампанії"
 
 #: campaigns/routes.py:54 campaigns/routes.py:136
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr ""
+msgstr "Кампанія з ідентифікатором %(id)s не існує"
 
 #: campaigns/routes.py:109 campaigns/routes.py:161
 msgid "Campaign - "
-msgstr ""
+msgstr "Кампанія — "
 
 #: campaigns/routes.py:184
 msgid "You need to Login to create a campaign"
-msgstr ""
+msgstr "Щоб створити кампанію, потрібно увійти в систему"
 
 #: campaigns/routes.py:214
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr ""
+msgstr "Вибачте, не вдалося створити «%(campaign_name)s»"
 
 #: campaigns/routes.py:222
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr ""
+msgstr "Кампанія %(campaign_name)s створена!"
 
 #: campaigns/routes.py:225
 msgid "Create a campaign"
-msgstr ""
+msgstr "Створити кампанію"
 
 #: campaigns/routes.py:238
 msgid "Images are being loaded for this campaign. Try again later."
-msgstr ""
+msgstr "Зображення для цієї кампанії ще завантажуються. Спробуйте пізніше."
 
 #: campaigns/routes.py:241
 msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr ""
+msgstr "Не вдалося завантажити зображення для кампанії. Менеджеру кампанії треба буде її оновити."
 
 #: campaigns/routes.py:252
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr ""
+msgstr "%(campaign_name)s — Зробити свій внесок"
 
 #: campaigns/routes.py:271
 msgid "You need to Login to update a campaign"
-msgstr "Dir musst Iech alogge fir eng Campagne z'aktualiséieren"
+msgstr "Вам потрібно увійти, щоб оновити кампанію"
 
 #: campaigns/routes.py:298
 msgid "Campaign update failed please try later!"
-msgstr ""
+msgstr "Помилка оновлення кампанії, спробуйте пізніше!"
 
 #: campaigns/routes.py:301
 msgid "Update Succesfull !"
-msgstr "Aktualiséierung ofgeschloss!"
+msgstr "Оновлено успішно!"
 
 #: campaigns/routes.py:309
-#, python-format
+#, fuzzy, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr ""
+msgstr "Ви не можете оновити цю кампанію, користувач менеджера контактів:%(campaign_manager)s "
 
 #: campaigns/routes.py:324
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr ""
+msgstr "Буу! Не вдалося оновити «%(campaign_name)s»!"
 
 #: campaigns/routes.py:329
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr ""
+msgstr "%(campaign_name)s — Оновити"
 
 #: campaigns/routes.py:377
 msgid "You need to login to participate"
-msgstr ""
+msgstr "Для участі потрібно увійти"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr ""
+msgstr "Оновити деталі кампанії"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr ""
+msgstr "Створити нову кампанію"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Dir aktualiséiert"
+msgstr "Ви оновлюєте"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr ""
+msgstr "Заповніть форму нижче, щоб створити свою кампанію"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr ""
+msgstr "Поля, позначені *, є обов'язковими для заповнення"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Numm vun der Campagne"
+msgstr "Назва кампанії"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr ""
+msgstr "Це назва, яка стосується вашої кампанії, а не основного проєкту."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr ""
+msgstr "Отже, не «Вікі любить Африку», а скоріше «Музика та танці в Нігерії»"
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr ""
+msgstr "Короткий опис кампанії (144 символи)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr ""
+msgstr "Над чим збираються працювати користувачі"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
 msgid "Start Date"
-msgstr "Ufanksdatum"
+msgstr "Дата початку"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr ""
+msgstr "Встановіть дату початку кампанії"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
 msgid "End Date"
-msgstr "Schlussdatum"
+msgstr "Дата закінчення"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr ""
+msgstr "Встановіть дату завершення кампанії"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "Dëst ass eng Wiki Loves Campagne"
+msgstr "Це кампанія Wiki Loves"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr ""
+msgstr "Якщо цей параметр правильно налаштований, він дає користувачам вибирати, з якої країни вони хочуть бачити зображення, і записує внески за країнами."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr ""
+msgstr " Ви можете вибрати кілька категорій правильного типу."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr ""
+msgstr "Глибина має бути встановлена на 0 для всіх категорій у кампанії Wiki Loves."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr ""
+msgstr "Потрібні категорії зображень форми з <strong><em>проєкту</em></strong> Wiki Loves у певний <strong><em>рік</em></strong>, наприклад, «Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>» (замініть <strong><em>проєкт</em></strong> і рік за <strong><em>потребою</em></strong>)"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr ""
+msgstr "Деякі з вибраних нижче категорій не мають правильного синтаксису"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr ""
+msgstr "Категорії для використання в цій кампанії"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr ""
+msgstr "Знайдіть категорії Вікісховища, які містять зображення, які ви хочете використовувати у своїй кампанії."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr ""
+msgstr "Якщо вам потрібна категорія та ВСІ її підкатегорії, скористайтеся опцією «Глибина», щоб вибрати, на скільки рівнів ви хочете перейти (для кампаній Wiki loves залиште глибину 0)."
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr ""
+msgstr "Виберіть категорії для використання в кампанії"
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Numm"
+msgstr "Назва"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Déift"
+msgstr "Глибина"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr ""
+msgstr "Категорії, виділені червоним кольором, не мають правильного синтаксису для функції «кампанія Wiki Loves»."
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr ""
+msgstr "Будь ласка, вилучіть їх або зніміть прапорець «Кампанія Wiki Loves» вище"
 
 #: templates/campaign/campaign-form.html:173
 msgid "Metadata to collect in the Campaign"
-msgstr ""
+msgstr "Метадані для збору під час кампанії"
 
 #: templates/campaign/campaign-form.html:173
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr ""
+msgstr "Виберіть, який тип <strong>метаданих</strong> ви хочете збирати у своїй кампанії."
 
 #: templates/campaign/campaign-form.html:173
 msgid "You must select at least one of the options below."
-msgstr ""
+msgstr "Ви маєте обрати хоча б одну з опцій нижче."
 
 #: templates/campaign/campaign-form.html:173
 msgid "To learn more about Depicts and Caption meta-data see the help page."
-msgstr ""
+msgstr "Щоб дізнатися більше про метадані Зображує та Підпис, перейдіть на довідкову сторінку."
 
 #: templates/campaign/campaign-form.html:176
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr ""
+msgstr "Зображує"
 
 #: templates/campaign/campaign-form.html:188
 msgid "Select to collect Depicts metadata in the campiagn"
-msgstr ""
+msgstr "Виберіть цю опцію для збору метаданих «Зображує» у кампанії"
 
 #: templates/campaign/campaign-form.html:191
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
-msgstr ""
+msgstr "Підписи"
 
 #: templates/campaign/campaign-form.html:203
 msgid "Select to collect Caption metadata in the campiagn"
-msgstr ""
+msgstr "Виберіть цю опцію для збору метаданих «Підпис» у цій кампанії"
 
 #: templates/campaign/campaign-form.html:210
 msgid "Campaign Image"
-msgstr "Bild vun der Campagne"
+msgstr "Зображення кампанії"
 
 #: templates/campaign/campaign-form.html:210
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr ""
+msgstr "Максимальна висота зображення кампанії — 150 px. Зображення має бути або банером, або логотипом."
 
 #: templates/campaign/campaign-form.html:210
 msgid "Portrait or square photos are not recommended."
-msgstr ""
+msgstr "Портретні або квадратні фото не рекомендуються."
 
 #: templates/campaign/campaign-form.html:222
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr ""
+msgstr "Уведіть НАЗВУ ФАЙЛУ зображення (лише з Вікісховища) для відображення на домашній сторінці кампанії."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Long description of Campaign (full about info)"
-msgstr ""
+msgstr "Докладний опис кампанії (повна інформація про неї)"
 
 #: templates/campaign/campaign-form.html:240
 msgid "Why it is important that users contribute to the campaign?"
-msgstr ""
+msgstr "Чому важливо, щоб користувачі зробити внесок у цю кампанію?"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Publish Campaign"
-msgstr ""
+msgstr "Опублікувати кампанію"
 
 #: templates/campaign/campaign-form.html:256
 msgid "You must select at least one category for your campaign."
-msgstr ""
+msgstr "Ми маєте обрати для своєї кампанії хоча б одну категорію."
 
 #: templates/campaign/campaign-form.html:257
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr ""
+msgstr "Деякі з вибраних вами категорій не мають коректного синтаксису для кампаній Wiki Loves."
 
 #: templates/campaign/campaign-form.html:258
 msgid "Please check your selections and try again."
-msgstr ""
+msgstr "Будь ласка, перевірте свій вибір і спробуйте ще раз."
 
 #: templates/campaign/campaign-form.html:259
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr ""
+msgstr "Будь ласка, оберіть хоча б один тип у розділі Метадані для збору"
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
-msgstr ""
+msgstr "Переглянути зображення з"
 
 #: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
-msgstr ""
+msgstr "Виберіть перегляд зображень лише з однієї країни"
 
 #: templates/campaign/campaign.html:20
 msgid "Loading..."
-msgstr "Lueden..."
+msgstr "Завантаження…"
 
 #: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
-msgstr ""
+msgstr "Почати свою участь у цій кампанії"
 
 #: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 #: templates/campaign/campaigns.html:33
 msgid "Get Started"
-msgstr "Fir unzefänken"
+msgstr "Розпочати"
 
 #: templates/campaign/campaign.html:34
 msgid "Campaign progress so far"
-msgstr ""
+msgstr "Поточний хід кампанії"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
-msgstr ""
+msgstr "Загальне число зображень у цій кампанії"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
-msgstr "Biller"
+msgstr "Зображення"
 
 #: templates/campaign/campaign.html:38
 #: templates/campaign/campaign_stats.html:21
 msgid "Total number of contributions made to this campaign"
-msgstr ""
+msgstr "Загальна кількість редагувань, зроблених у цій кампанії"
 
 #: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
 #: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
@@ -333,505 +334,505 @@ msgstr ""
 #: templates/campaign/campaign_stats.html:77
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr "Kontributiounen"
+msgstr "Внесок"
 
 #: templates/campaign/campaign.html:43
 #: templates/campaign/campaign_stats.html:40
 msgid "Top Contributors"
-msgstr ""
+msgstr "Учасники з найбільшим внеском"
 
 #: templates/campaign/campaign.html:47
 #: templates/campaign/campaign_stats.html:44
 msgid "Contributor"
-msgstr ""
+msgstr "Учасник"
 
 #: templates/campaign/campaign.html:66
 #: templates/campaign/campaign_stats.html:63
 msgid "No partcipants has contributed to this campaign"
-msgstr ""
+msgstr "У цій кампанії ще немає учасників"
 
 #: templates/campaign/campaign.html:75
 #: templates/campaign/campaign_stats.html:72
 msgid "Most improved Countries"
-msgstr ""
+msgstr "Найбільш поліпшені країни"
 
 #: templates/campaign/campaign.html:79
 #: templates/campaign/campaign_stats.html:76
 msgid "Country"
-msgstr "Land"
+msgstr "Країна"
 
 #: templates/campaign/campaign.html:98
 #: templates/campaign/campaign_stats.html:95
 msgid "There is no data available yet for this campaign"
-msgstr ""
+msgstr "Для цієї кампанії ще немає доступних даних"
 
 #: templates/campaign/campaign.html:106
 msgid "View and download more stats for this campaign"
-msgstr "Méi Statistike fir dës Campagne weisen an eroflueden"
+msgstr "Переглянути і завантажити більше статистики для цієї кампанії"
 
 #: templates/campaign/campaign.html:106
 msgid "View full stats"
-msgstr "Komplett Statistike weisen"
+msgstr "Переглянути повну статистику"
 
 #: templates/campaign/campaign.html:117
 msgid "My Contributions"
-msgstr "Meng Kontributiounen"
+msgstr "Мій внесок"
 
 #: templates/campaign/campaign.html:124
 msgid "Rank"
-msgstr "Klassement"
+msgstr "Ранг"
 
 #: templates/campaign/campaign.html:142
 msgid "More About This Campaign"
-msgstr "Méi iwwer dës Campagne"
+msgstr "Більше про цю кампанію"
 
 #: templates/campaign/campaign.html:144
 msgid "Campaign Manager"
-msgstr ""
+msgstr "Менеджер кампанії"
 
 #: templates/campaign/campaign.html:146
 msgid "START DATE"
-msgstr "UFANKSDATUM"
+msgstr "ДАТА ПОЧАТКУ"
 
 #: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
 msgid "END DATE"
-msgstr "SCHLUSSDATUM"
+msgstr "ДАТА ЗАКІНЧЕННЯ"
 
 #: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
 msgid "Not Set"
-msgstr "Net agestallt"
+msgstr "Не задано"
 
 #: templates/campaign/campaign.html:157
 msgid "Make changes to this campaign"
-msgstr "Ännerungen un dëser Campagne maachen"
+msgstr "Внести змінити у цю кампанію"
 
 #: templates/campaign/campaign.html:157
 msgid "Edit Campaign"
-msgstr "Campagne änneren"
+msgstr "Редагувати кампанію"
 
 #: templates/campaign/campaign.html:163
 msgid "Unknown country"
-msgstr "Onbekannt d'Land"
+msgstr "Невідома країна"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr ""
+msgstr "Повернутися на домашню сторінку кампанії"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
-msgstr "Haaptsäit"
+msgstr "Домашня сторінка"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Dat viregt Bild weisen"
+msgstr "Переглянути попереднє зображення"
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
-msgstr "BILD VIRDRUN"
+msgstr "ПОПЕРЕДНЄ"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Eegent Wierk"
+msgstr "Власна робота"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Dat nächst Bild weisen"
+msgstr "Переглянути наступне зображення"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
-msgstr "NÄCHST BILD"
+msgstr "НАСТУПНЕ"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Fichier"
+msgstr "Файл"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Dëst Bil op Wikimedia Commons opmaachen"
+msgstr "Відкрити це зображення у Вікісховищі"
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Beschreiwung"
+msgstr "Опис"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Kategorien"
+msgstr "Категорії"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr ""
+msgstr "Місцеположення камери"
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
-msgstr ""
+msgstr "показати усі метадані з Вікісховища"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr ""
+msgstr "Додавання твердження «Зображує»"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr ""
+msgstr "Зробіть це просто: використовуйте прості слова та поняття, щоб описати те, що ви бачите на кожному зображенні (наприклад, кішка, гора, Тадж-Махал)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
-msgstr "Annuléiert Är Ännerungen"
+msgstr "Скасувати свої зміни"
 
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
-msgstr "Ofbriechen"
+msgstr "Скасувати"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr ""
+msgstr "Зберегти свої редагування у Вікісховищі"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:54
 msgid "Save"
-msgstr "Späicheren"
+msgstr "Зберегти"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr ""
+msgstr "Вас буде перенаправлено на сторінку входу, а тоді назад сюди для збереження змін"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr ""
+msgstr "Назвіть різні елементи, які ви бачите на цьому зображенні"
 
 #: templates/campaign/campaign_entry.html:73
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr ""
+msgstr "Щоб відзначити головні елементи зображення, натисніть на іконку прапорця"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr ""
+msgstr "Написання підписів"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr ""
+msgstr "Включіть будь-яку культурну, наукову чи технічну інформацію, яку ви можете визначити (наприклад, «Ефіопська кавова церемонія, або ж бунна мафлат»), щоб зробити інформацію насиченішою."
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr "Logg Iech a fir Ännerungen ze publizéieren"
+msgstr "Увійдіть, щоб опублікувати зміни"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr ""
+msgstr "Додайте підпис, щоб краще пояснити зображення (макс. 255 символів)"
 
 #: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
-msgstr ""
+msgstr "Коротко опишіть, що ви бачите на цьому зображенні."
 
 #: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr ""
+msgstr "Ви можете додавати підписи додатковими мовами, вибравши «Налаштування мови» у меню користувача"
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr "Keng Biller fonnt fir dës Campagne!"
+msgstr "У цій кампанії не знайдено зображень!"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "Щось пішло не так під час отримання зображень кампанії"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "Шукати речі, які ви бачите на зображенні"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr ""
+msgstr "мінімізувати метадані з Вікісховища"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "Чудово! Зображені елементи збережено у Вікісховищі"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
+msgstr "Чудово! Підписи збережено у Вікісховищі"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "Ой! Щось пішло не так, і ваші редагування не збережено у Вікісховищі"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "Ви впевнені, що хочете перейти до іншого зображення? У вас є незбережені зміни, які буде втрачено."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "Натисніть «OK», щоб все одно перейти, або «Скасувати», якщо хочете спочатку зберегти зміни."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "Вилучити цей елемент зображеного"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "Позначити цей зображений елемент визначним"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "Позначити цей зображений елемент НЕзначним"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr ""
+msgstr "ВНЕСОК У КАМПАНІЮ СТРУКТУРОВАНИХ ДАНИХ"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr "Vum"
+msgstr "Від"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr "Bis"
+msgstr "До"
 
 #: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
-msgstr "All Statistiken eroflueden (CSV)"
+msgstr "Завантажити усю статистику (CSV)"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
-msgstr ""
+msgstr "Статистика учасника"
 
 #: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
-msgstr "Länner-Statistiken"
+msgstr "Статистика країни"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr ""
+msgstr "На цій сторінці представлені усі підтримувані кампанії, які наразі чинні в інструменті ISA."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr ""
+msgstr "Натисніть на назву кампанії, щоб розпочати і додавати структуровані дані до зображення."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr ""
+msgstr "Ви можете отримати доступ до інформації попередніх кампаній з архіву."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr ""
+msgstr "Поточні кампанії"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr "Numm vun der Campagne"
+msgstr "Назва кампанії"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr "Campagne"
+msgstr "Кампанія"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Загальне число зображень у кампанії"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Кількість редакторів, які зробили внесок у кампанію "
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr "Participanten"
+msgstr "Учасники"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr ""
+msgstr "Загальна кількість редагувань, зроблених під час кампанії"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr ""
+msgstr "Дата початку кампанії"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr ""
+msgstr "Дата завершення кампанії"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr ""
+msgstr "Дата створення кампанії"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr ""
+msgstr "Дата створення"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr ""
+msgstr "Стан кампанії"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr "Status"
+msgstr "Статус"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr "Zou"
+msgstr "Закрита"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr "Net Opgemaach"
+msgstr "Не відкрита"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Opmaachen"
+msgstr "Відкрита"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr ""
+msgstr "Перейти на домашню сторінку кампанії, щоб розпочати"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr ""
+msgstr "Перейти до кампанії"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr ""
+msgstr "Показати закриті кампанії"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr ""
+msgstr "Створити власну кампанію"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr ""
+msgstr "Створити нову кампанію з допомогою цього інструмента"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr ""
+msgstr "Вам треба увійти в систему, щоб створити кампанію."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Відображення записів від _START_ по _END_ з _TOTAL_"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr ""
+msgstr "Немає записів"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr "Sichen:"
+msgstr "Пошук:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr ""
+msgstr "Нічого не знайдено відповідно до критеріїв пошуку"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr "Éischt"
+msgstr "Перша"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr "Lescht"
+msgstr "Остання"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr "Weider"
+msgstr "Наступна"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr "Vireg"
+msgstr "Попередня"
 
 #: templates/campaign/macros.html:3
 msgid "Processing..."
-msgstr "Verschaffen..."
+msgstr "Обробка…"
 
 #: templates/campaign/macros.html:5
 msgid "Error!"
-msgstr "Feeler!"
+msgstr "Помилка!"
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr ""
+msgstr "Сервер на обслуговуванні"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr ""
+msgstr "Будь ласка, зверніться у службу підтримки"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Bréng mech zréck"
+msgstr "Повернутися на домашню"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Support kontaktéieren"
+msgstr "Зв'язатися зі службою підтримки"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Säit Net Fonnt"
+msgstr "Сторінку не знайдено"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "Нам не вдалося знайти сторінку, яку ви шукаєте"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Bréng mech zréck"
+msgstr "Повернутися на домашню"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Et ass eppes schif gaangen"
+msgstr "Щось пішло не так"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "Можливо, Isa проходить технічне обслуговування"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Hëllef-Säit"
+msgstr "Довідка"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr ""
+msgstr "Швидко додавайте інформацію про зображення у Вікісховище"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> — це веселий, багатомовний інструмент для мобільних пристроїв, який дозволяє людям легко додавати «мікровнески» у вигляді <a %(link_attrs)s>структурованих даних</a> до зображень у Вікісховищі, вивантажених під час конкурсів Wiki Loves."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "На початку ISA розробляли для забезпечення кращих багатомовних і структурованих описів зображень із <a %(link_attrs)s>Wiki Loves Africa</a>."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Але наразі цей інструмент розвинувся на користь усіх <a link_attrs>конкурсів Wiki Loves</a> і, зрештою, <strong>усіх медіафайлів</strong> у Вікісховищі."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "Що таке Вікісховище?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>Вікісховище</strong> (<i>Wikimedia Commons</i>, або ж інколи <i>Commons</i>) — це проєкт Вікімедіа, сестринський проєкт Вікіпедії, колекція десятків мільйонів вільних медіафайлів."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "Усі вільноліцензовані фотографії, аудіо- та відео файли, PDF та інші медіафайли, використані у Вікіпедії, зберігаються у Вікісховищі."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "Вікісховище швидко росте, отримуючи близько 5 мільйонів нових медіафайлів щороку."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Тисячі волонтерів вивантажують файли у Вікісховище й використовують їх у таких проєктах Вікімедіа, як Вікіпедія, щоб проілюструвати їхній вміст і поділитися цими медіафайлами з громадськістю."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr "Mediefichieren op Commons sinn typescherweis:"
+msgstr "Зазвичай у Вікісховище потрапляють такі медіафайли:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "Власноруч зроблені фотографії та записи, завантажені окремими людьми, інколи під час конкурсів Wiki Loves, таких як Вікі любить Африку, Вікі любить пам'ятки, Вікі любить Землю тощо;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
@@ -843,7 +844,7 @@ msgstr ""
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr "Wat si strukturéiert Donnéeën (structured data) op Commons?"
+msgstr ""
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
@@ -871,7 +872,7 @@ msgstr ""
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr "Wéi maache mir dat? "
+msgstr ""
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -991,7 +992,7 @@ msgstr ""
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr "Infoboxen afëllen"
+msgstr ""
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
@@ -1059,7 +1060,7 @@ msgstr ""
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr "Méi Informatioune kënnen hei fonnt ginn:"
+msgstr ""
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
@@ -1100,7 +1101,7 @@ msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "Iwwer dëst Geschier"
+msgstr ""
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1128,7 +1129,7 @@ msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr "Haaptsäit"
+msgstr ""
 
 #: templates/main/layout.html:44
 msgid "Create New"
@@ -1136,7 +1137,7 @@ msgstr ""
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Hëllef"
+msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
@@ -1156,11 +1157,11 @@ msgstr ""
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr "Ausloggen"
+msgstr ""
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr "Aloggen"
+msgstr ""
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
@@ -1226,7 +1227,7 @@ msgstr ""
 #: templates/users/user_settings.html:31 templates/users/user_settings.html:37
 #: templates/users/user_settings.html:43 templates/users/user_settings.html:49
 msgid "Remove language"
-msgstr "Sprooch ewechhuelen"
+msgstr ""
 
 #: templates/users/user_settings.html:53
 msgid "Undo changes to language settings"
@@ -1238,16 +1239,16 @@ msgstr ""
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr "OAuth-Réckruff huet net funktionéiert. Sinn d'Cookien ausgeschalt?"
+msgstr ""
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome  %(username)s!"
-msgstr "Wëllomm %(username)s!"
+msgstr ""
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "Bis déi nächst Kéier!"
+msgstr ""
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
@@ -1268,12 +1269,12 @@ msgstr ""
 
 #: users/routes.py:170
 msgid "Language settings not available at the moment"
-msgstr "Sproochastellungen den Ament net disponibel"
+msgstr ""
 
 #: users/routes.py:172
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr "%(username)s - Astellungen"
+msgstr ""
 
 #: users/routes.py:195
 #, python-format

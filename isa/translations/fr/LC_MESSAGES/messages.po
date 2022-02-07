@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2022-02-03 12:16:38+0000\n"
+"PO-Revision-Date: 2022-02-07 12:15:18+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -95,7 +95,7 @@ msgstr "Vous ne pouvez pas mettre à jour cette campagne, contactez l’utilisat
 #: campaigns/routes.py:324
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr "Snif ! %(campaign_name)s n’a pas pu être mis à jour !"
+msgstr "Désolé, %(campaign_name)s n’a pas pu être mis à jour !"
 
 #: campaigns/routes.py:329
 #, python-format
@@ -166,7 +166,7 @@ msgstr "Définissez la date de fin de la campagne"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "C’est une campagne « Wiki aime »"
+msgstr "Ceci est une campagne « Wiki aime »"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."

@@ -1,6 +1,7 @@
 # Translation of ISA to Swedish (svenska)
 # Exported from translatewiki.net
 #
+# Author: Jon Harald Søby
 # Author: Sabelöga
 # --
 # Translation for the ISA project
@@ -9,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-02-03 12:16:39+0000\n"
+"PO-Revision-Date: 2022-02-07 12:15:19+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,11 +52,11 @@ msgstr "Skapa en kampanj"
 
 #: campaigns/routes.py:238
 msgid "Images are being loaded for this campaign. Try again later."
-msgstr ""
+msgstr "Bilder laddas in för denna kampanj. Försök igen senare."
 
 #: campaigns/routes.py:241
 msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr ""
+msgstr "Bilder kunde inte laddas in för kampanjen. Den kampanjansvarige behöver uppdatera kampanjen."
 
 #: campaigns/routes.py:252
 #, python-format
@@ -391,7 +392,7 @@ msgstr "Kampanjansvarig"
 
 #: templates/campaign/campaign.html:146
 msgid "START DATE"
-msgstr "STARDATUM"
+msgstr "STARTDATUM"
 
 #: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
 msgid "END DATE"
@@ -514,111 +515,111 @@ msgstr "Skriva bildtexter"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr ""
+msgstr "Ta med all kulturspecifika, vetenskapliga eller tekniska information som du ser (t.ex. etiopisk kaffeceremoni eller bunna maflat) för att berika informationen."
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr ""
+msgstr "Logga in för att publicera ändringarna"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr ""
+msgstr "Lägg till en bildtext för att bättre förklara bilden (max 255 tecken)"
 
 #: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
-msgstr ""
+msgstr "Förklara kortfattat vad du ser i bilden."
 
 #: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr ""
+msgstr "Du kan lägga till bildtexter på flera språk genom att välja Språkinställningar i användarmenyn"
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr ""
+msgstr "Inga bilder hittades för kampanjen!"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "Något blev fel när kampanjbilderna skulle hämtas"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "Sök efter saker du ser i bilden"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr ""
+msgstr "minimera metadata från commons"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "Det lyckades! Motiv-objekt sparades på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
+msgstr "Det lyckades! Biltexterna sparades på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "Hoppsan! Nånting blev fel, dina redigeringar har inte sparats på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "Är du säker på att du vill gå till en annan bild? Du har osparade ändringar som kommer gå förlorade."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "Klicka \"OK\" för att göra det ändå, eller \"Avbryt\" om du vill spara ändringarna först."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "Ta bort detta motiv-objekt"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "Markera detta motiv-objekt som framträdande"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "Markera detta motiv-objekt som INTE framträdande"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr ""
+msgstr "BIDRAG TILL EN STRUKTURERAD DATA-KAMPANJ"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr ""
+msgstr "Från"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr ""
+msgstr "Till"
 
 #: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
-msgstr ""
+msgstr "Ladda ner all statistik (CSV)"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
-msgstr ""
+msgstr "Bidragsstatistik"
 
 #: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
-msgstr ""
+msgstr "Landsstatistik"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr ""
+msgstr "På den här sidan finns de utvalda kampanjer som för tillfället körs som en del av ISA-verktyget."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr ""
+msgstr "Klicka på kampanjens namn för att komma igång och lägga till strukturerad data till en bild."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr ""
+msgstr "Du kan komma åt information på tidigare kampanjer från arkivavsnittet."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr ""
+msgstr "Pågående kampanjer"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
@@ -626,27 +627,27 @@ msgstr "Kampanjnamn"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr ""
+msgstr "Kampanj"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Totalt antal bilder i kampanjen"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Antalet redigerare som har bidragit till kampanjen "
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr ""
+msgstr "Deltagare"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr ""
+msgstr "Totalt antal bidragsgivare i kampanjen"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr ""
+msgstr "Kampanjens startdatum"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
@@ -658,7 +659,7 @@ msgstr "Datumet kampanjen skapades"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr ""
+msgstr "Datum skapad"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
@@ -666,19 +667,19 @@ msgstr "Kampanjstatus"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr ""
+msgstr "Stängd"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr ""
+msgstr "Inte öppnad"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr ""
+msgstr "Öppen"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
@@ -686,7 +687,7 @@ msgstr "Gå till föregående kampanjs hemsida för att komma igång"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr ""
+msgstr "Gå till kampanj"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
@@ -695,7 +696,7 @@ msgstr "Visa stängda kampanjer"
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr ""
+msgstr "Skapa din egen kampanj"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
@@ -708,170 +709,170 @@ msgstr "Du måste vara inloggad för att skapa en kampanj."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Visa inlägg med _START_ till _END_ av _TOTAL_"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr ""
+msgstr "Inga inlägg"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr ""
+msgstr "Sök:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr ""
+msgstr "Inga matchande poster hittades"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr ""
+msgstr "Först"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr ""
+msgstr "Sist"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr ""
+msgstr "Nästa"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr ""
+msgstr "Föregående"
 
 #: templates/campaign/macros.html:3
 msgid "Processing..."
-msgstr ""
+msgstr "Bearbetar..."
 
 #: templates/campaign/macros.html:5
 msgid "Error!"
-msgstr ""
+msgstr "Fel!"
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr ""
+msgstr "Servern genomgår underhåll"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr ""
+msgstr "Kontrollera kontaktsupport"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr ""
+msgstr "Ta hem mig"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr ""
+msgstr "Kontakta supporten"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr ""
+msgstr "Sidan kunde inte hittas"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "Vi kunde inte hitta sidan du letar efter"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr ""
+msgstr "Ta hem mig"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr ""
+msgstr "Något blev fel"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "Isa kan genomgå underhåll"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr ""
+msgstr "Hjälpsida"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr ""
+msgstr "Enkelt lägga till information om bilder på Wikimedia Commons"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> är ett kul, flerspråkigt, mobil-främst-verktyg som underlättar för folk att lägga till \"mikrobidrag\" i form av <a %(link_attrs)s>strukturerad data</a> för bilder på Wikimedia Commons som har lagts till i Wiki Loves-tävlingar."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "ISA byggdes ursprungligen för att erbjuda bättre flerspråkiga och strukturerade bidrag för bilder i <a %(link_attrs)s>Wiki Loves Africa</a>."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Men det utvecklades också för att vara användbart för alla <a link_attrs>Wiki Loves-tävlingar</a> och, slutligen, för <strong>alla mediefiler</strong> på Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "Vad är Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>Wikimedia Commons</strong> (även känd som \"Commons\") är ett Wikimediaprojekt, ett systerprojekt till Wikipedia och en samling på fler än 40 miljoner fria mediefiler."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "Alla de fritt licensierade fotografierna, ljud- och videofilerna, PDF:erna och annan media på Wikipedia lagras på Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "Wikimedia Commons växer i snabb takt, med cirka 5 miljoner nya mediefiler om året."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Tusentals volontärer laddar upp filer på Commons och integrerar dem på Wikimedias projekt, som Wikipedia, för att illustrera innehållet där och för att dela median med offentligheten."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr ""
+msgstr "Mediefiler på Commons är oftast:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "Personliga fotografier och media som laddats upp av individer, ibland under Wiki Loves-tävlingar som Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth osv;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "Fritt licensierade mediefiler från externa webbplatser som Flickr, YouTube, öppna journaler och andra samlingar; och"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "Donationer från institutioner och organisationer med bastanta mediesamlingar, stora som små, från UNSECO, NASA brittiska biblioteket till lokala kulturinstitutioner."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "Vad är strukturerad data på Commons?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>Strukturerad data på Commons</strong> är ett projekt som erbjuder en teknisk infrastruktur för att komplettera wikitext, mallar och kategorier på Wikimedia Commons med strukturerad data."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "Strukturerad data är data med en hög grad av strukturerad organisering."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "Med mer struktur blir det lättare att återanvända data på andra Wikimediaprojekt och andra tredje parter; det möjliggör också för datorer att bearbeta och \"förstå\" det."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "Strukturerad data är ett pågående projekt som lanserades 2019! ... medan Wikimedia Commons har funnits i åratal!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "Det finns bokstavligen miljoner bilder på Wikimedia Commons... som behöver uppmärksamhet och kärlek."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "Miljoner bilder som inte är beskrivna med strukturerad data för tillfället."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr ""
+msgstr "Hur ska vi göra detta? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1088,19 +1089,19 @@ msgstr ""
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr ""
+msgstr "<strong>Klicka på Utforska kampanjer för att börja!</strong>"
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr ""
+msgstr "Gå till kampanjkatalogen för att välja kampanj"
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "UTFORSKA KAMPANJER"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "Om verktyget"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1128,23 +1129,23 @@ msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr ""
+msgstr "Hem"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "Skapa ny"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr ""
+msgstr "Hjälp"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "Ändra dina tillgängliga språk för bildtexter"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "Språkinställningar"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
@@ -1152,39 +1153,39 @@ msgstr "Visa dina kampanjer"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "Mina kampanjer"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr ""
+msgstr "Logga ut"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr ""
+msgstr "Logga in"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "ISA-verktyg"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "utvecklades som ett samarbete mellan Wiki In Africa, Histropedia och projektet Strukturerad data på Commons."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr ""
+msgstr "Det drivs av"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr ""
+msgstr "och är föremål för"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr ""
+msgstr "ISA publiceras under"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "Innehåll som läggs till med verktyget på Wikimedia Commons publiceras under"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
@@ -1196,7 +1197,7 @@ msgstr "Nedan följer en lisa över dina kampanjer"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "Du har inga kampanjer"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
@@ -1204,76 +1205,76 @@ msgstr ""
 
 #: templates/users/user_settings.html:6 templates/users/user_settings.html:9
 msgid "Caption Languages"
-msgstr ""
+msgstr "Språk för bildtexter"
 
 #: templates/users/user_settings.html:9
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "Välj upp till 6 språk för bildtexter"
 
 #: templates/users/user_settings.html:9
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "Bildtexter kan läggas till på flera språk för varje bild."
 
 #: templates/users/user_settings.html:9
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "Språken du valt på den här sidan kommer visas på sidan när du visas bilden."
 
 #: templates/users/user_settings.html:9
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "Välj alla språk du känner dig bekväm med att bidra på."
 
 #: templates/users/user_settings.html:19 templates/users/user_settings.html:25
 #: templates/users/user_settings.html:31 templates/users/user_settings.html:37
 #: templates/users/user_settings.html:43 templates/users/user_settings.html:49
 msgid "Remove language"
-msgstr ""
+msgstr "Ta bort språk"
 
 #: templates/users/user_settings.html:53
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "Ångra ändringar av språkinställningarna"
 
 #: templates/users/user_settings.html:53
 msgid "Undo Changes"
-msgstr ""
+msgstr "Ångra ändringar"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "OAuth-anrop misslyckades. Har kakor aktiverats?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome  %(username)s!"
-msgstr ""
+msgstr "Välkommen %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "Ses nästa gång!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Logga in för att ändra dina språkinställningar"
 
 #: users/routes.py:143
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "Du har tyvärr försökt ange %(rep_languages)s flera gånger"
 
 #: users/routes.py:156
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "Språket för bildtexter kunde inte anges"
 
 #: users/routes.py:158
 msgid "Preferred Languages set Successfully"
-msgstr ""
+msgstr "Föredragna språk har angetts"
 
 #: users/routes.py:170
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "Språkinställningarna är för tillfället inte tillgängliga"
 
 #: users/routes.py:172
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s - inställningar"
 
 #: users/routes.py:195
 #, python-format

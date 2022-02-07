@@ -1,7 +1,7 @@
-# Translation of ISA to Luxembourgish (Lëtzebuergesch)
+# Translation of ISA to Norwegian Bokmål (norsk bokmål)
 # Exported from translatewiki.net
 #
-# Author: Robby
+# Author: Jon Harald Søby
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -13,159 +13,159 @@ msgstr ""
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lb\n"
+"Language: nb\n"
 "X-Generator: MediaWiki 1.38.0-alpha; Translate 2022-01-19\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
-msgstr "Campagnen"
+msgstr "Kampanjer"
 
 #: campaigns/routes.py:54 campaigns/routes.py:136
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr ""
+msgstr "Det finnes ingen kampanje med ID %(id)s"
 
 #: campaigns/routes.py:109 campaigns/routes.py:161
 msgid "Campaign - "
-msgstr ""
+msgstr "Kampanje – "
 
 #: campaigns/routes.py:184
 msgid "You need to Login to create a campaign"
-msgstr ""
+msgstr "Du må logge inn for å opprette en kampanje"
 
 #: campaigns/routes.py:214
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr ""
+msgstr "Beklager, %(campaign_name)s kunne ikke opprettes"
 
 #: campaigns/routes.py:222
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr ""
+msgstr "Kampanjen %(campaign_name)s ble opprettet!"
 
 #: campaigns/routes.py:225
 msgid "Create a campaign"
-msgstr ""
+msgstr "Opprett en kampanje"
 
 #: campaigns/routes.py:238
 msgid "Images are being loaded for this campaign. Try again later."
-msgstr ""
+msgstr "Bildene lastes inn for denne kampanjen. Prøv igjen senere."
 
 #: campaigns/routes.py:241
 msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr ""
+msgstr "Bildene for denne kampanjen kunne ikke lastes inn. Kampanjelederen må oppdatere kampanjen."
 
 #: campaigns/routes.py:252
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr ""
+msgstr "%(campaign_name)s – Bidra"
 
 #: campaigns/routes.py:271
 msgid "You need to Login to update a campaign"
-msgstr "Dir musst Iech alogge fir eng Campagne z'aktualiséieren"
+msgstr "Du må logge inn for å oppdatere en kampanje"
 
 #: campaigns/routes.py:298
 msgid "Campaign update failed please try later!"
-msgstr ""
+msgstr "Oppdatering av kampanje mislyktes. Prøv igjen senere."
 
 #: campaigns/routes.py:301
 msgid "Update Succesfull !"
-msgstr "Aktualiséierung ofgeschloss!"
+msgstr "Oppdatering lyktes."
 
 #: campaigns/routes.py:309
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr ""
+msgstr "Du kan ikke oppdatere denne kampanjen. Kontakt kampanjelederen, User:%(campaign_manager)s "
 
 #: campaigns/routes.py:324
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr ""
+msgstr "Buu! %(campaign_name)s kunne ikke oppdateres."
 
 #: campaigns/routes.py:329
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr ""
+msgstr "%(campaign_name)s – Oppdater"
 
 #: campaigns/routes.py:377
 msgid "You need to login to participate"
-msgstr ""
+msgstr "Du må logge inn for å delta"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr ""
+msgstr "Oppdater kampanjedetaljer"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr ""
+msgstr "Opprett en ny kampanje"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Dir aktualiséiert"
+msgstr "Du oppdaterer"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr ""
+msgstr "Fyll inn skjemaet nedenfor for å opprette kampanjen din"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr ""
+msgstr "Felter merket med * er obligatoriske"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Numm vun der Campagne"
+msgstr "Kampanjenavn"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr ""
+msgstr "Dette er navnet på kampanjen spesifikt, ikke på hovedprosjektet."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr ""
+msgstr "Så ikke «Wiki Loves Africa», men heller «Music and Dance in Nigeria»"
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr ""
+msgstr "Kort beskrivelse av kampanjen (<144 tegn)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr ""
+msgstr "Hva brukerne vil jobbe med"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
 msgid "Start Date"
-msgstr "Ufanksdatum"
+msgstr "Startdato"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr ""
+msgstr "Sett startdatoen for kampanjen"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
 msgid "End Date"
-msgstr "Schlussdatum"
+msgstr "Sluttdato"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr ""
+msgstr "Sett sluttdatoen for kampanjen"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "Dëst ass eng Wiki Loves Campagne"
+msgstr "Dette er en Wiki Loves-kampanje"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr ""
+msgstr "Når dette alternativet er satt opp riktig vil deltakerne kunne velge hvilket land de ønsker å se bilder fra, og dele inn bidrag etter land."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr ""
+msgstr "Du kan velge flere kategorier av rett type."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr ""
+msgstr "Dybden må være satt til 0 for alle kategorier i en Wiki Loves-kampanje."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
@@ -177,47 +177,47 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr ""
+msgstr "Kategorier som skal brukes i denne kampanjen"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr ""
+msgstr "Søk etter Wikimedia Commons-kategorier som inneholder bilder du ønsker å bruke i kampanjen din."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr ""
+msgstr "Hvis du ønsker å bruke en kategori og ALLE underkategoriene dens, bruk «Dybde»-valget for å velge hvor mange undernivåer du ønsker å inkludere (men la dybden være 0 for Wiki Loves-kampanjer)."
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr ""
+msgstr "Velg kategorier som skal brukes i kampanjen"
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Numm"
+msgstr "Navn"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Déift"
+msgstr "Dybde"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr ""
+msgstr "Kategoriene i rødt har ikke riktig syntaks for «Wiki Loves»-funksjonaliteten."
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr ""
+msgstr "Fjern dem eller fjern merkingen av «Wiki Loves-kampanjen» ovenfor"
 
 #: templates/campaign/campaign-form.html:173
 msgid "Metadata to collect in the Campaign"
-msgstr ""
+msgstr "Metadata som skal samles inn i kampanjen"
 
 #: templates/campaign/campaign-form.html:173
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr ""
+msgstr "Velg hvilke typer <strong>metadata</strong> du ønsker å samle inn i kampanjen din."
 
 #: templates/campaign/campaign-form.html:173
 msgid "You must select at least one of the options below."
-msgstr ""
+msgstr "Du må velge minst ett av alternativene nedenfor."
 
 #: templates/campaign/campaign-form.html:173
 msgid "To learn more about Depicts and Caption meta-data see the help page."
@@ -243,15 +243,15 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:210
 msgid "Campaign Image"
-msgstr "Bild vun der Campagne"
+msgstr "Kampanjebilde"
 
 #: templates/campaign/campaign-form.html:210
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr ""
+msgstr "Maksimumshøyden for kampanjebildet er 150px. Bilder bør enten være et bannerbilde eller en logo."
 
 #: templates/campaign/campaign-form.html:210
 msgid "Portrait or square photos are not recommended."
-msgstr ""
+msgstr "Bilder i portrett- eller kvadratformat anbefales ikke."
 
 #: templates/campaign/campaign-form.html:222
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
@@ -263,68 +263,68 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:240
 msgid "Why it is important that users contribute to the campaign?"
-msgstr ""
+msgstr "Hvorfor er det viktig at brukere deltar i kampanjen?"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Publish Campaign"
-msgstr ""
+msgstr "Publiser kampanje"
 
 #: templates/campaign/campaign-form.html:256
 msgid "You must select at least one category for your campaign."
-msgstr ""
+msgstr "Du må velge minst én kategori for kampanjen din."
 
 #: templates/campaign/campaign-form.html:257
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr ""
+msgstr "Noen av kategoriene du har valgt har ikke riktig syntaks for en Wiki Loves-kampanje."
 
 #: templates/campaign/campaign-form.html:258
 msgid "Please check your selections and try again."
-msgstr ""
+msgstr "Sjekk valgene dine og prøv igjen."
 
 #: templates/campaign/campaign-form.html:259
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr ""
+msgstr "Velg minst én type fra seksjonen «Metadata som skal samles inn»"
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
-msgstr ""
+msgstr "Vis bilder fra"
 
 #: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
-msgstr ""
+msgstr "Velg å bare vise bilder fra ett enkelt land"
 
 #: templates/campaign/campaign.html:20
 msgid "Loading..."
-msgstr "Lueden..."
+msgstr "Laster …"
 
 #: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
-msgstr ""
+msgstr "Begynn å bidra til denne kampanjen"
 
 #: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
 #: templates/campaign/campaigns.html:33
 msgid "Get Started"
-msgstr "Fir unzefänken"
+msgstr "Kom i gang"
 
 #: templates/campaign/campaign.html:34
 msgid "Campaign progress so far"
-msgstr ""
+msgstr "Kampanjeframgang så langt"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
-msgstr ""
+msgstr "Totalt antall bilder i denne kampanjen"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
-msgstr "Biller"
+msgstr "Bilder"
 
 #: templates/campaign/campaign.html:38
 #: templates/campaign/campaign_stats.html:21
 msgid "Total number of contributions made to this campaign"
-msgstr ""
+msgstr "Totalt antall bidrag gjort i denne kampanjen"
 
 #: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
 #: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
@@ -333,27 +333,27 @@ msgstr ""
 #: templates/campaign/campaign_stats.html:77
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr "Kontributiounen"
+msgstr "Bidrag"
 
 #: templates/campaign/campaign.html:43
 #: templates/campaign/campaign_stats.html:40
 msgid "Top Contributors"
-msgstr ""
+msgstr "Toppbidragsytere"
 
 #: templates/campaign/campaign.html:47
 #: templates/campaign/campaign_stats.html:44
 msgid "Contributor"
-msgstr ""
+msgstr "Bidragsyter"
 
 #: templates/campaign/campaign.html:66
 #: templates/campaign/campaign_stats.html:63
 msgid "No partcipants has contributed to this campaign"
-msgstr ""
+msgstr "Ingen har bidratt til denne kampanjen ennå"
 
 #: templates/campaign/campaign.html:75
 #: templates/campaign/campaign_stats.html:72
 msgid "Most improved Countries"
-msgstr ""
+msgstr "Mest forbedrede land"
 
 #: templates/campaign/campaign.html:79
 #: templates/campaign/campaign_stats.html:76
@@ -363,111 +363,111 @@ msgstr "Land"
 #: templates/campaign/campaign.html:98
 #: templates/campaign/campaign_stats.html:95
 msgid "There is no data available yet for this campaign"
-msgstr ""
+msgstr "Det er ikke noen tilgjengelige data for denne kampanjen ennå"
 
 #: templates/campaign/campaign.html:106
 msgid "View and download more stats for this campaign"
-msgstr "Méi Statistike fir dës Campagne weisen an eroflueden"
+msgstr "Vis og last ned mer statistikk for denne kampanjen"
 
 #: templates/campaign/campaign.html:106
 msgid "View full stats"
-msgstr "Komplett Statistike weisen"
+msgstr "Vis fullstendig statistikk"
 
 #: templates/campaign/campaign.html:117
 msgid "My Contributions"
-msgstr "Meng Kontributiounen"
+msgstr "Mine bidrag"
 
 #: templates/campaign/campaign.html:124
 msgid "Rank"
-msgstr "Klassement"
+msgstr "Rangering"
 
 #: templates/campaign/campaign.html:142
 msgid "More About This Campaign"
-msgstr "Méi iwwer dës Campagne"
+msgstr "Mer om denne kampanjen"
 
 #: templates/campaign/campaign.html:144
 msgid "Campaign Manager"
-msgstr ""
+msgstr "Kampanjeleder"
 
 #: templates/campaign/campaign.html:146
 msgid "START DATE"
-msgstr "UFANKSDATUM"
+msgstr "STARTDATO"
 
 #: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
 msgid "END DATE"
-msgstr "SCHLUSSDATUM"
+msgstr "SLUTTDATO"
 
 #: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
 msgid "Not Set"
-msgstr "Net agestallt"
+msgstr "Ikke satt"
 
 #: templates/campaign/campaign.html:157
 msgid "Make changes to this campaign"
-msgstr "Ännerungen un dëser Campagne maachen"
+msgstr "Gjør endringer i denne kampanjen"
 
 #: templates/campaign/campaign.html:157
 msgid "Edit Campaign"
-msgstr "Campagne änneren"
+msgstr "Rediger kampanje"
 
 #: templates/campaign/campaign.html:163
 msgid "Unknown country"
-msgstr "Onbekannt d'Land"
+msgstr "Ukjent land"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr ""
+msgstr "Tilbake til kampanjeforsiden"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
-msgstr "Haaptsäit"
+msgstr "Forside"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Dat viregt Bild weisen"
+msgstr "Vis forrige bilde"
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
-msgstr "BILD VIRDRUN"
+msgstr "FORRIGE BILDE"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Eegent Wierk"
+msgstr "Eget verk"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Dat nächst Bild weisen"
+msgstr "Vis neste bilde"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
-msgstr "NÄCHST BILD"
+msgstr "NESTE BILDE"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Fichier"
+msgstr "Fil"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Dëst Bil op Wikimedia Commons opmaachen"
+msgstr "Åpne dette bildet på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Beschreiwung"
+msgstr "Beskrivelse"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Kategorien"
+msgstr "Kategorier"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr ""
+msgstr "Kameraplassering"
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
-msgstr ""
+msgstr "vis alle metadata fra Commons"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
@@ -479,26 +479,26 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
-msgstr "Annuléiert Är Ännerungen"
+msgstr "Avbryt endringene dine"
 
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
-msgstr "Ofbriechen"
+msgstr "Avbryt"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr ""
+msgstr "Lagre redigeringene dine på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:54
 msgid "Save"
-msgstr "Späicheren"
+msgstr "Lagre"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr ""
+msgstr "Du blir omdirigert til innlogging, og blir så sendt tilbake hit for å lagre endringene dine"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
@@ -518,7 +518,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr "Logg Iech a fir Ännerungen ze publizéieren"
+msgstr "Logg inn for å publisere endringene"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
@@ -534,7 +534,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr "Keng Biller fonnt fir dës Campagne!"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
@@ -586,15 +586,15 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr "Vum"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr "Bis"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
-msgstr "All Statistiken eroflueden (CSV)"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
@@ -602,7 +602,7 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
-msgstr "Länner-Statistiken"
+msgstr ""
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
@@ -618,51 +618,51 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr ""
+msgstr "Pågående kampanjer"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr "Numm vun der Campagne"
+msgstr "Kampanjenavn"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr "Campagne"
+msgstr "Kampanje"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Totalt antall bilder i kampanjen"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Antall bidragsytere som har bidratt til kampanjen "
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr "Participanten"
+msgstr "Deltakere"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr ""
+msgstr "Totalt antall bidrag til kampanjen"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr ""
+msgstr "Kampanjens startdato"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr ""
+msgstr "Kampanjens sluttdato"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr ""
+msgstr "Datoen kampanjen ble opprettet"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr ""
+msgstr "Opprettelsesdato"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr ""
+msgstr "Kampanjestatus"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
@@ -670,53 +670,53 @@ msgstr "Status"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr "Zou"
+msgstr "Lukket"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr "Net Opgemaach"
+msgstr "Ikke åpnet"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Opmaachen"
+msgstr "Åpen"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr ""
+msgstr "Gå til kampanjeforsiden for å komme i gang"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr ""
+msgstr "Gå til kampanjen"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr ""
+msgstr "Vis lukkede kampanjer"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr ""
+msgstr "Opprett din egen kampanje"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr ""
+msgstr "Opprett en ny kampanje med dette verktøyet"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr ""
+msgstr "Du må være logget inn for å opprette en kampanje."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Viser _START_ til _END_ of totalt _TOTAL_ oppføringer"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr ""
+msgstr "Ingen oppføringer"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr "Sichen:"
+msgstr "Søk:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
@@ -724,31 +724,31 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr "Éischt"
+msgstr "Første"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr "Lescht"
+msgstr "Siste"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr "Weider"
+msgstr "Neste"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr "Vireg"
+msgstr "Forrige"
 
 #: templates/campaign/macros.html:3
 msgid "Processing..."
-msgstr "Verschaffen..."
+msgstr "Behandler …"
 
 #: templates/campaign/macros.html:5
 msgid "Error!"
-msgstr "Feeler!"
+msgstr "Feil!"
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr ""
+msgstr "Tjeneren er under vedlikehold"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
@@ -756,28 +756,28 @@ msgstr ""
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Bréng mech zréck"
+msgstr ""
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Support kontaktéieren"
+msgstr ""
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Säit Net Fonnt"
+msgstr "Side ikke funnet"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "Vi kunne ikke finne siden du leter etter"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Bréng mech zréck"
+msgstr ""
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Et ass eppes schif gaangen"
+msgstr "Noe gikk galt"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
@@ -785,7 +785,7 @@ msgstr ""
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Hëllef-Säit"
+msgstr "Hjelpeside"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
@@ -827,7 +827,7 @@ msgstr ""
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr "Mediefichieren op Commons sinn typescherweis:"
+msgstr ""
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
@@ -843,7 +843,7 @@ msgstr ""
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr "Wat si strukturéiert Donnéeën (structured data) op Commons?"
+msgstr ""
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
@@ -871,7 +871,7 @@ msgstr ""
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr "Wéi maache mir dat? "
+msgstr ""
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -991,7 +991,7 @@ msgstr ""
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr "Infoboxen afëllen"
+msgstr ""
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
@@ -1059,7 +1059,7 @@ msgstr ""
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr "Méi Informatioune kënnen hei fonnt ginn:"
+msgstr ""
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
@@ -1100,7 +1100,7 @@ msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "Iwwer dëst Geschier"
+msgstr "Om dette verktøyet"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1128,15 +1128,15 @@ msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr "Haaptsäit"
+msgstr "Hjem"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "Opprett ny"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Hëllef"
+msgstr "Hjelp"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
@@ -1144,31 +1144,31 @@ msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "Språkinnstillinger"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr ""
+msgstr "Se kampanjene dine"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "Mine kampanjer"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr "Ausloggen"
+msgstr "Logg it"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr "Aloggen"
+msgstr "Logg inn"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "ISA-verktøyet"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ble utviklet som et samarbeid mellom Wiki In Africa, Histropedia og prosjektet Structured Data on Commons."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
@@ -1188,19 +1188,19 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "Dine kampanjer"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr ""
+msgstr "Nedenfor er ei liste over dine kampanjer"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "Du har ingen kampanjer"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "Nr."
 
 #: templates/users/user_settings.html:6 templates/users/user_settings.html:9
 msgid "Caption Languages"
@@ -1220,38 +1220,38 @@ msgstr ""
 
 #: templates/users/user_settings.html:9
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "Velg alle språk du føler deg bekvem med å bidra på."
 
 #: templates/users/user_settings.html:19 templates/users/user_settings.html:25
 #: templates/users/user_settings.html:31 templates/users/user_settings.html:37
 #: templates/users/user_settings.html:43 templates/users/user_settings.html:49
 msgid "Remove language"
-msgstr "Sprooch ewechhuelen"
+msgstr "Fjern språk"
 
 #: templates/users/user_settings.html:53
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "Angre endringer i språkinnstillinger"
 
 #: templates/users/user_settings.html:53
 msgid "Undo Changes"
-msgstr ""
+msgstr "Angre endringer"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr "OAuth-Réckruff huet net funktionéiert. Sinn d'Cookien ausgeschalt?"
+msgstr "OAuth-tilbakekall feilet. Er informasjonskapsler slått av?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome  %(username)s!"
-msgstr "Wëllomm %(username)s!"
+msgstr "Velkommen, %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "Bis déi nächst Kéier!"
+msgstr "Ses neste gang!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Logg inn for å endre språkinnstillingene dine"
 
 #: users/routes.py:143
 #, python-format
@@ -1268,15 +1268,15 @@ msgstr ""
 
 #: users/routes.py:170
 msgid "Language settings not available at the moment"
-msgstr "Sproochastellungen den Ament net disponibel"
+msgstr "Språkinnstillingene er for tiden ikke tilgjengelige"
 
 #: users/routes.py:172
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr "%(username)s - Astellungen"
+msgstr "%(username)s – innstillinger"
 
 #: users/routes.py:195
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Kampanjer opprettet av %(username)s"
 

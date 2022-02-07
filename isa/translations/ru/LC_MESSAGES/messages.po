@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-02-03 12:16:39+0000\n"
+"PO-Revision-Date: 2022-02-07 12:15:19+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -121,11 +121,11 @@ msgstr "Название кампании"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr ""
+msgstr "Это название именно вашей кампании, а не основного проекта."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr ""
+msgstr "Так что, должно быть не «Вики любит Африку», но скорее что-то вроде «Музыка и танцы в Нигерии»"
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
@@ -142,7 +142,7 @@ msgstr "Дата начала"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr ""
+msgstr "Задать дату начала кампании"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
@@ -151,7 +151,7 @@ msgstr "Дата окончания"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr ""
+msgstr "Задать дату окончания кампании"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
@@ -237,7 +237,7 @@ msgstr ""
 #: templates/campaign/campaign-form.html:191
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
-msgstr ""
+msgstr "Подписи"
 
 #: templates/campaign/campaign-form.html:203
 msgid "Select to collect Caption metadata in the campiagn"
@@ -369,7 +369,7 @@ msgstr "Для этой кампании пока нет доступных да
 
 #: templates/campaign/campaign.html:106
 msgid "View and download more stats for this campaign"
-msgstr "Посмотреть и скачат больше статистики по этой кампании"
+msgstr "Посмотреть и скачать больше статистики по этой кампании"
 
 #: templates/campaign/campaign.html:106
 msgid "View full stats"
@@ -464,16 +464,16 @@ msgstr "Категории"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr ""
+msgstr "Местоположение камеры"
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
-msgstr ""
+msgstr "показать все метаданные с Викисклада"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr ""
+msgstr "Добавление утверждений для отображаемого"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
@@ -490,7 +490,7 @@ msgstr "Отменить"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr ""
+msgstr "Сохранить ваши правки на Викискладе"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
@@ -644,31 +644,31 @@ msgstr "Участники"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr ""
+msgstr "Общее число правок, сделанных в рамках кампании"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr ""
+msgstr "Дата начала кампании"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr ""
+msgstr "Дата окончания кампании"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr ""
+msgstr "Дата, когда кампания была создана"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr ""
+msgstr "Дата создания"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr ""
+msgstr "Состояние кампании"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr ""
+msgstr "Состояние"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
@@ -1053,19 +1053,19 @@ msgstr ""
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "Более подробна о том, кто/что изображено, можно найти тут:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "Использование инструментария ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "Более подробнеы сведения можно найти тут:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "Правовые вопросы и благодарности"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
@@ -1073,15 +1073,15 @@ msgstr ""
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA публикуется по лицензии GPLv3. Контент, добавляемый с помощью этого инструмента на Викисклад, публикуется по лицензии CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "Изображения, использованные в этом инструментарии:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "Упрощает добавление на Викисклад информации об изображениях"
 
 #: templates/main/home.html:15
 #, python-format
@@ -1098,7 +1098,7 @@ msgstr ""
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "ИЗУЧИТЬ КАМПАНИИ"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
@@ -1138,7 +1138,7 @@ msgstr "Создать новую"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Справка"
+msgstr "Помощь"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
@@ -1182,11 +1182,11 @@ msgstr ""
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr ""
+msgstr "ISA публикуется по лицензии"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "Контент, добавляемый с помощью этого инструмента на Викисклад, публикуется по лицензии"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"

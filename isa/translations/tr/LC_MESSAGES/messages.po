@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Can
+# Author: Hedda
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -9,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-02-03 12:16:39+0000\n"
+"PO-Revision-Date: 2022-02-07 12:15:20+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,15 +26,15 @@ msgstr "Kampanyalar"
 #: campaigns/routes.py:54 campaigns/routes.py:136
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "%(id)s id adlı kampanya mevcut değil"
+msgstr "%(id)s kimliğine sahip kampanya mevcut değil"
 
 #: campaigns/routes.py:109 campaigns/routes.py:161
 msgid "Campaign - "
-msgstr ""
+msgstr "Kampanya - "
 
 #: campaigns/routes.py:184
 msgid "You need to Login to create a campaign"
-msgstr "Kampanya oluşturmak için Giriş yapmanız gerekiyor"
+msgstr "Kampanya oluşturmak için oturum açmanız gerekiyor"
 
 #: campaigns/routes.py:214
 #, python-format
@@ -47,15 +48,15 @@ msgstr "%(campaign_name)s Kampanyası oluşturuldu!"
 
 #: campaigns/routes.py:225
 msgid "Create a campaign"
-msgstr "Kampanya Oluştur"
+msgstr "Bir kampanya oluştur"
 
 #: campaigns/routes.py:238
 msgid "Images are being loaded for this campaign. Try again later."
-msgstr ""
+msgstr "Bu kampanya için görseller yükleniyor. Daha sonra tekrar deneyin."
 
 #: campaigns/routes.py:241
 msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr ""
+msgstr "Kampanya için görseller yüklenemedi. Kampanya yöneticisinin kampanyayı güncellemesi gerekecek."
 
 #: campaigns/routes.py:252
 #, python-format
@@ -64,11 +65,11 @@ msgstr "%(campaign_name)s - Katkıda bulun"
 
 #: campaigns/routes.py:271
 msgid "You need to Login to update a campaign"
-msgstr "Kampanya güncellemek için giriş yapmanız gerekiyor"
+msgstr "Kampanyayı güncellemek için oturum açmanız gerekiyor"
 
 #: campaigns/routes.py:298
 msgid "Campaign update failed please try later!"
-msgstr "Kampanya güncellemesi başarısız lütfen tekrar deneyin!"
+msgstr "Kampanya güncellemesi başarısız oldu, lütfen daha sonra deneyin!"
 
 #: campaigns/routes.py:301
 msgid "Update Succesfull !"
@@ -77,12 +78,12 @@ msgstr "Güncelleme Başarılı !"
 #: campaigns/routes.py:309
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr ""
+msgstr "Bu kampanyayı güncelleyemezsiniz,  Şu kullanıcıyla iletişime geçin: Kullanıcı:%(campaign_manager)s "
 
 #: campaigns/routes.py:324
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr ""
+msgstr "Pes! %(campaign_name)s Güncellenemedi!"
 
 #: campaigns/routes.py:329
 #, python-format
@@ -91,7 +92,7 @@ msgstr "%(campaign_name)s - Güncelle"
 
 #: campaigns/routes.py:377
 msgid "You need to login to participate"
-msgstr "Katılmak için giriş yapmanız gerekiyor"
+msgstr "Katılmak için oturum açmanız gerekiyor"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
@@ -107,7 +108,7 @@ msgstr "Güncelliyorsunuz"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr ""
+msgstr "Kampanyanızı oluşturmak için aşağıdaki formu doldurun"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
@@ -119,11 +120,11 @@ msgstr "Kampanya Adı"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr "Bu kampanyanıza özgü addır, ana projeye değil."
+msgstr "Bu, ana projeye değil; kampanyanıza özel bir addır."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr ""
+msgstr "Yani “Wiki Afrika'yı Seviyor” değil de “Nijerya'da Müzik ve Dans” gibi"
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
@@ -131,7 +132,7 @@ msgstr "Kampanyanın kısa açıklaması (144 karakter)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr ""
+msgstr "Kullanıcılar ne üzerinde çalışacak"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
@@ -140,7 +141,7 @@ msgstr "Başlangıç Tarihi"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr "Kampanya başlangıç tarihi ayarla"
+msgstr "Kampanyanın başlangıç tarihini ayarla"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
@@ -149,19 +150,19 @@ msgstr "Bitiş Tarihi"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr "Kampanya bitiş tarihi ayarla"
+msgstr "Kampanyanın bitiş tarihini ayarla"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr ""
+msgstr "Bu bir Viki Kampanyayı Seviyor'dur"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr ""
+msgstr "Doğru ayarlandığı takdirde bu seçenek, katılımcıların hangi ülkeden görüntüler görmek istediklerini seçmelerine ve ülkelere göre katkıları kaydetmelerine olanak tanır."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr ""
+msgstr " Doğru türden birden fazla kategori seçebilirsiniz."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."

@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-02-03 12:16:39+0000\n"
+"PO-Revision-Date: 2022-02-07 12:15:19+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -558,127 +558,127 @@ msgstr "Úspech! Titulky uložené do Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "Och! Niečo sa pokazilo. Vaše úpravy neboli uložené do Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "Ste si istý/á, že chcete prejsť na iný obrázok? Vaše neuložené zmeny sa stratia."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "Kliknite \"OK\" pre pokračovanie, alebo \"Zrušiť\"  ak chcete zmeny najprv uložiť."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "Odstrániť túto vykreslenú položku"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "Označiť túto vykreslenú položku ako prominentnú"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "Označiť túto vykreslenú položku ako nie prominentnú"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr ""
+msgstr "PRÍSPEVKY DO KAMPANE SO ŠTRUKTÚROVANÝMI ÚDAJMI"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr ""
+msgstr "Od"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr ""
+msgstr "Do"
 
 #: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
-msgstr ""
+msgstr "Stiahnuť všetky štatistiky (CSV)"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
-msgstr ""
+msgstr "Štatistiky prispievateľov"
 
 #: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
-msgstr ""
+msgstr "Štatistiky krajín"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr ""
+msgstr "Na tejto stránke sú kampane, ktoré aktuálne prebiehajú ako čas nástroja ISA."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr ""
+msgstr "Kliknite na názov kampane pre začatie a pridajte štruktúrované údaje pre nejaký obrázok."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr ""
+msgstr "Informácie o predchádzajúcich kampaniach môžete nájsť v sekcii archívu."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr ""
+msgstr "Prebiehajúce kampane"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr ""
+msgstr "Názov kampane"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr ""
+msgstr "Kampaň"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Celkový počet obrázkov v kampani"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Počet editorov, ktorí prispeli ku kampani"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr ""
+msgstr "Účastníci"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr ""
+msgstr "Celkový počet prispievateľov pre kampaň"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr ""
+msgstr "Dátum začiatku kampane"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr ""
+msgstr "Dátum konca kampane"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr ""
+msgstr "Dátum vytvorenia kampane"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr ""
+msgstr "Dátum vytvorenia"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr ""
+msgstr "Stav kampane"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr ""
+msgstr "Stav"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr ""
+msgstr "Zatvorená"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr ""
+msgstr "Neotvorená"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr ""
+msgstr "Otvorená"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
