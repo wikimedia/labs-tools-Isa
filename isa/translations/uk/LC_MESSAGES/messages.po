@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-02-07 12:15:20+0000\n"
+"PO-Revision-Date: 2022-02-10 12:16:52+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -76,9 +76,9 @@ msgid "Update Succesfull !"
 msgstr "Оновлено успішно!"
 
 #: campaigns/routes.py:309
-#, fuzzy, python-format
+#, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Ви не можете оновити цю кампанію, користувач менеджера контактів:%(campaign_manager)s "
+msgstr "Ви не можете оновити цю кампанію, контактна особа — Користувач:%(campaign_manager)s "
 
 #: campaigns/routes.py:324
 #, python-format
@@ -836,448 +836,448 @@ msgstr "Власноруч зроблені фотографії та запис
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "Вільноліцензовані медіафайли з таких зовнішніх вебсайтів як Flickr, YouTube, журнали з відкритим доступом та інші репозиторії; та"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "Пожертви від інституцій та організацій, що мають значні медіаколекції, великих і малих: від ЮНЕСКО, НАСА та Британської бібліотеки до малих локальних культурних установ."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "Що таке структуровані дані у Вікісховищі?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>Структуровані дані у Вікісховищі</strong> — це проєкт, що забезпечує технічну інфраструктуру для доповнення вікітексту, шаблонів і категорій у Вікісховищі структурованими даними."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "Структуровані дані — це дані з високим рівнем структурованої організації."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "Чим більш вони структуровані, тим легше повторно використовувати дані в інших проєктах Вікімедіа і третіми сторонами; також структурованість даних дозволяє комп'ютерам обробляти і «розуміти» їх."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "Структуровані дані — це чинний проєкт, який запустили у 2019 році,… тоді як Вікісховище існує роками!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "У Вікісховищі є буквально мільйони зображень,… які потребують уваги і піклування."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "Мільйони зображень, які наразі не описані з використанням структурованих даних."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr ""
+msgstr "Як ви збираєтеся це зробити? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "<strong>Курування</strong>, чи курація, у вузькому розумінні, означає добір й організацію зразків мистецтва і культурної спадщини для виставки."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "Цей термін також можна використовувати ширше, для опису будь-якої діяльності, яка передбачає відбір, організування й представлення інформації."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "У контексті структурованих даних у Вікісховищі курування означає усю діяльність, яку виконують дописувачі Вікісховища для того, щоб організувати й представити медіафайли у Вікісховищі: адміністративні дії, додавання більшої кількості і кращих метаданих до файлів, групування їх за категоріями, створення галерей…"
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr ""
+msgstr "Тож… як інструмент ISA вписується в цю картину?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "Інструмент ISA дозволяє додавати два різні типи структурованих даних до набору зображень: «підписи» та «зображує» (більше пояснень про ці типи даних дивіться нижче)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "Це багатомовний інструмент для мобільних пристроїв, який дозволяє людям легко робити «мікровнески», додаючи структуровані дані до зображень у Вікісховищі, вивантажених під час конкурсів Wiki Loves."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr ""
+msgstr "Інструмент працює з курованими кампаніями, які створюють координатори."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "Будь-хто з обліковим записом Вікімедіа може бути координатором!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr ""
+msgstr "В ISA координатор може вибрати попередньовизначений набір зображень у Вікісховищі, вказати дати початку і закінчення кампанії й дати загальний опис самій кампанії."
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr ""
+msgstr "Далі координатор просить дописувачів «додавати» у ці зображення багатомовні структуровані метадані (зображує і/або підписи)."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr ""
+msgstr "За кожне редагування, зроблене учасником, нараховуються бали, і тому в ISA можна організувати конкурс або виклик із робіння мікровнеску."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr ""
+msgstr "Будь-хто з обліковим записом Вікімедіа може робити внесок, додаючи структуровані метадані у рамках кампанії."
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr ""
+msgstr "Єдина умова — …увійти в систему."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "Детальніше про підписи файлів та «зображує»"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "Підписи файлів — це можливість у рамках структурованих даних."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "Вони мають бути короткими багатомовними описами файлів."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "Що є гарним підписом? і яка різниця між старими-добрими описами файлів і підписами?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "По-перше, підписи мають бути простими й короткими."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "У той час, як описи можуть бути дуже детальними, підписи обмежені до 255 символів довжиною і не можуть містити розмітки (на зразок вікітекстових посилання чи HTML), а також не підтримують зовнішніх посилань."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "У багатьох випадках, підпис буде подібний або й ідентичний до опису."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "Але в інших випадках існує дуже детальний опис (858 символів, ще й посилання), а підпис набагато коротший (приблизно такий, як підписи у статтях Вікіпедії, які використовують це зображення)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "У підпис можна додати лише текст, який є настільки коротким, що не підпадає під захист авторських прав, тому що підписи публікуються під CC0 (із відмовою від авторських прав і передачею в «суспільне надбання»)."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "Одна з ключових вигод підписів — покращення пошуку конкретними мовами."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "Класичні описи файлів робляться вікітекстом і знаходяться лише при повнотекстовому пошуку, коли пошук здійснюється по всьому вмісту сторінки, включно з категоріями і шаблонами ліцензій; і неможливо здійснювати такий пошук за конкретною мовою."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "Підписи доступні як частина структурованих даних, тоді як описи — ні."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "З технічного боку, опис є простим вікітекстом, розміщеним у шаблоні мови, розміщеним у свою чергу у шаблоні Information; тоді як підписи — це мітки Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "Таким чином, підписи можна шукати через API, і їх легко знайти/відфільтрувати/витягнути з файлів як метадані."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "Оскільки їх можна шукати через API, то і для третіх сторін легше знаходити й повторно використовувати медіафайли і самі підписи."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "Інші можливі способи використання підписів:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "заповнення карток"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "виведення переліку файлів, яким бракує підписів певною мовою"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "створення списків на переклад із важливих файлів, підписи яких треба локалізувати для проєкту чи кампанії"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "Більше про підписи дізнаєтесь тут:"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr ""
+msgstr "«Зображує» — це також функція структурованих даних."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "Її увімкнули у Вікісховищі у квітні 2019 року."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
-msgstr ""
+msgstr "Щоб додати твердження «зображує», просто почніть друкувати у полі пошуку."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr ""
+msgstr "Далі, для кожного елемента, зображеного на зображенні, знайдіть відповідний елемент у Вікіданих і виберіть його."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr ""
+msgstr "Якщо у вас не виходить знайти підхожий елемент Вікіданих, спробуйте інше написання."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr ""
+msgstr "Якщо для зображеного предмета немає відповідного елемента Вікіданих, виберіть більш загальний елемент, який включає ваш предмет."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr ""
+msgstr "Намагайтеся бути якомога конкретними."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr ""
+msgstr "Якщо є багато елементів, чітко і зумисне зображених у медіафайлів, усі їх треба додати як окремі твердження «зображує», в межах розумного."
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr ""
+msgstr "Для файлів, що зображують десятки чи сотні елементів (наприклад, фільмів), вказуйте лише найбільш визначальні елементи."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr ""
+msgstr "Також є можливість позначити певний елемент як «головний»."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "Ця властивість підкреслює важливість елемента у цьому медіа."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "Більше інформації про «зображує» можна знайти тут:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "Використання інструменту ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "Більше інформації можна знайти тут:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "Правові питання й автори"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr ""
+msgstr "Інструмент працює на tools.wmflabs.org і підлягає Умовам використання Хмарних сервісів Вікімедіа."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA опублікований під ліцензією GPLv3. Вміст, доданий у Вікісховище через інструмент, публікується на умовах CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "Зображення, використане в інструменті:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "Швидко додавайте інформацію про зображення у Вікісховище"
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> — це багатомовний інструмент для мобільних пристроїв, який дозволяє людям легко додавати «мікровнески» у вигляді <a %(link_attrs)s title='Дізнайтеся більше про структуровані дані'>структурованих даних</a> (описів, підписів, тегів тощо) до зображень у Вікісховищі, вивантажених під час конкурсів Wiki Loves."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr ""
+msgstr "<strong>Натисніть на «Дослідити кампанії», щоб почати!</strong>"
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr ""
+msgstr "Перейти до каталогу кампанії для вибору кампанії"
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "ДОСЛІДИТИ КАМПАНІЇ"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "Про цей інструмент"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr ""
+msgstr "У довгостроковій перспективі, мета цього інструменту — підвищити використання знань, які несе в собі кожне зображення, розміщене у Вікісховищі. "
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "Інструмент націлений на допомогу з корисністю й інформативністю зображень, наданих під час конкурсів Wiki Loves."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "Початково його розробляли для допомоги з підписами зображень конкурсу «Вікі любить Африку», але далі його моделюють так, що він був корисним для усіх конкурсів Wiki Loves і поза ними."
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr ""
+msgstr "Інструмент також розроблений як центр проведення конкурсів із мікровнесків, пропонованих лідерами проєктів."
 
 #: templates/main/home.html:26
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ISA — це колаборація між Wiki In Africa, Histropedia та проєктом структурованих даних у Вікісховищі."
 
 #: templates/main/home.html:27
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA — це не лише акронім Information Structured Acceleration, але ще й слово «класти» або «розташовувати» мовою шишона."
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr ""
+msgstr "Домашня"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "Створити нову"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr ""
+msgstr "Довідка"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "Змінити доступні для вас мови підписів"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "Мовні налаштування"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr ""
+msgstr "Переглянути свої кампанії"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "Мої кампанії"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr ""
+msgstr "Вийти"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr ""
+msgstr "Увійти"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "Інструмент ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "розроблено у співпраці між Wiki In Africa, Histropedia та проєктом структурованих даних у Вікісховищі."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr ""
+msgstr "Працює на"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr ""
+msgstr "і підлягає під"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr ""
+msgstr "ISA опубліковано під"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "Вміст, доданий через цей інструмент у Вікісховище, публікується під"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "Ваші кампанії"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr ""
+msgstr "Нижче подано список ваших кампаній"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "У вас немає кампаній"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "№"
 
 #: templates/users/user_settings.html:6 templates/users/user_settings.html:9
 msgid "Caption Languages"
-msgstr ""
+msgstr "Мови підписів"
 
 #: templates/users/user_settings.html:9
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "Оберіть до 6 мов для підписів"
 
 #: templates/users/user_settings.html:9
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "До кожного зображення можна додавати підписи кількома мовами."
 
 #: templates/users/user_settings.html:9
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "Мови, які ви вкажете на цій сторінці, показуватимуться на сторінці перегляду зображень."
 
 #: templates/users/user_settings.html:9
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "Оберіть усі мови, якими вам комфортно писати."
 
 #: templates/users/user_settings.html:19 templates/users/user_settings.html:25
 #: templates/users/user_settings.html:31 templates/users/user_settings.html:37
 #: templates/users/user_settings.html:43 templates/users/user_settings.html:49
 msgid "Remove language"
-msgstr ""
+msgstr "Вилучити мову"
 
 #: templates/users/user_settings.html:53
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "Скасувати зміни до мовних налаштувань"
 
 #: templates/users/user_settings.html:53
 msgid "Undo Changes"
-msgstr ""
+msgstr "Скасувати зміни"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "Виклик OAuth зазнав невдачі. Може у вас вимкнено куки?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome  %(username)s!"
-msgstr ""
+msgstr "Вітаємо, %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "Побачимося наступного разу!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Будь ласка, увійдіть, щоб змінити свої мовні налаштування."
 
 #: users/routes.py:143
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "Вибачте, ви намагалися ввести %(rep_languages)s кілька разів"
 
 #: users/routes.py:156
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "Не вдалося налаштувати мови підписів"
 
 #: users/routes.py:158
 msgid "Preferred Languages set Successfully"
-msgstr ""
+msgstr "Бажані мови успішно налаштовано"
 
 #: users/routes.py:170
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "Мовні налаштування наразі недоступні"
 
 #: users/routes.py:172
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s's — Налаштування"
 
 #: users/routes.py:195
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Кампанії, створені %(username)s"
 
