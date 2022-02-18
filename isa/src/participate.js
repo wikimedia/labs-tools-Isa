@@ -83,7 +83,7 @@ function searchResultsFormat(state) {
     var $description = $("<span>")
         .addClass("search-result-description")
         .text(state.description);
-    var $state = $(
+    var $state = $("<div>").append(
         $label,
         $("<br>"),
         $description

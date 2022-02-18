@@ -563,6 +563,13 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 .select2-container .select2-selection__arrow {
     height: 100% !important;
 }
+.search-result-label {
+    font-size: larger;
+    font-weight: bold;
+}
+.select2-results__option {
+    border-bottom: solid thin lightgray;
+}
 /*end participate page/*
 
 
