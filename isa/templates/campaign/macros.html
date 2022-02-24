@@ -1,9 +1,12 @@
 {% macro images(campaign) -%}
-    {% if campaign.campaign_images == -1 %}
-        {{ _('Processing...') }}
-    {% elif campaign.campaign_images == -2 %}
-        {{ _('Error!') }}
-    {% else %}
-        {{ campaign.campaign_images }}
+    {{ campaign.campaign_images }}
+    {% if campaign.update_status == 1 %}
+    <button type="button" class="btn btn-link py-0" data-container="body" title="{{_('Updating images') }}" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="{{ _('The images for this campaign are being updated.') }} {{ _('More images will be added.') }} {{ _('You can still participate in the campaign.') }}">
+      <i class="fa fa-clock"></i>
+    </button>
+    {% elif campaign.update_status == 2 %}
+    <button type="button" class="btn btn-link py-0" data-container="body" title="{{_('Failed to update images') }}" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="{{ _('There was an error while updating the images for this campaign.') }} {{ _('Some images will be missing.') }} {{ _('You can still participate in the campaign.') }} {{ _('The campaign manager can retry by updating the campaign.') }}">
+      <i class="fa fa-exclamation-circle"></i>
+    </button>
     {% endif %}
 {%- endmacro %}

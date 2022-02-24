@@ -19,6 +19,7 @@ class CampaignForm(FlaskForm):
     campaign_type = BooleanField()
     campaign_image = StringField('Campaign Image')
     long_description = StringField(widget=widgets.TextArea())
+    update_images = BooleanField()
     submit = SubmitField()
 
 

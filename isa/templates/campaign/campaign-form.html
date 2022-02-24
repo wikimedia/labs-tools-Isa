@@ -168,6 +168,12 @@
             </div>
         </div>
 
+        {% if is_update %}
+        <label for="update_images">{{ _('Update images') }}</label>
+        {{ form.update_images( class="checkbox-inline mt-1 metadata-type-checkbox" ) }}
+        <small class="form-text text-muted">{{ _('Collect images from the categories.') }} {{ _('This will replace any current images.') }} {{ _('Use if you changed the categories or if there was an error updating previously.') }}</small>
+        {% endif %}
+
         <hr>
 
         <h6>{{ _('Metadata to collect in the Campaign') }}*<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="{{ _('Choose what type of <strong>metadata</strong> you want to collect in your campaign.') }} {{ _('You must select at least one of the options below.') }} {{ _('To learn more about Depicts and Caption meta-data see the help page.') }}"><i class="fas fa-question-circle"></i></button></h6>
