@@ -87,7 +87,8 @@ def get_user_contrbition_per_campaign(username, campaign_id):
     campaign_id -- the campaign id
     """
 
-    user_contribs = Contribution.query.filter_by(username=username).all()
+    user = User.query.filter_by(username=username).first()
+    user_contribs = Contribution.query.filter_by(user=user).all()
     user_contributed_files = []
     user_contribution_data = {}  # has keys username and images_improved
     for contrib in user_contribs:

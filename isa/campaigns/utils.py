@@ -90,7 +90,7 @@ def get_all_camapaign_stats_data(campaign_id):
     all_campaign_stats = Contribution.query.filter_by(campaign_id=campaign_id).all()
     for campaign_stat in all_campaign_stats:
         campaign_stat_data = {}
-        campaign_stat_data['username'] = campaign_stat.username
+        campaign_stat_data['username'] = campaign_stat.user.username
         campaign_stat_data['file'] = campaign_stat.file
         campaign_stat_data['edit_type'] = campaign_stat.edit_type
         campaign_stat_data['edit_action'] = campaign_stat.edit_action
@@ -320,7 +320,7 @@ def get_table_stats(campaign_id, username):
     # We are querrying all the users who participate in the campaign
     contribs_for_campaign = Contribution.query.filter_by(campaign_id=campaign_id).all()
     for campaign_contribution in contribs_for_campaign:
-        campaign_user_names.append(campaign_contribution.username)
+        campaign_user_names.append(campaign_contribution.user.username)
     # we get the unique ids so as not to count an id twice
     campaign_user_names_set = set(campaign_user_names)
     # We then re-initialize the ids array

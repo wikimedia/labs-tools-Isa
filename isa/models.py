@@ -12,9 +12,10 @@ def user_loader(user_id):
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, index=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
+    username = db.Column(db.String(255), unique=True, nullable=False)
     caption_languages = db.Column(db.String(25), nullable=False)
     contrib = db.Column(db.Integer, default=0)
+    managed_campaigns = db.relationship('Campaign', backref='user', lazy=True)
 
     def __repr__(self):
         # This is what is shown when object is printed
@@ -25,7 +26,9 @@ class User(db.Model, UserMixin):
 
 class Contribution(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), nullable=False)
+    username = db.Column(db.String(20))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship('User', backref='contribution', lazy=True)
     campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
     file = db.Column(db.String(210), nullable=False)
     edit_type = db.Column(db.String(10), nullable=False)
@@ -41,7 +44,7 @@ class Contribution(db.Model):
     def __repr__(self):
         # This is what is shown when object is printed
         return "Contribution( {}, {}, {},{},{},{})".format(
-               self.username,
+               self.user_id,
                self.campaign_id,
                self.file,
                self.edit_type,
@@ -64,7 +67,9 @@ class Campaign(db.Model):
     categories = db.Column(db.Text, nullable=False)
     start_date = db.Column(db.Date, nullable=False,
                            default=datetime.now().strftime('%Y-%m-%d'))
-    campaign_manager = db.Column(db.String(15), nullable=False)
+    campaign_manager = db.Column(db.String(15))
+    manager_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    manager = db.relationship('User', backref='campaign', lazy=True)
     end_date = db.Column(db.Date, nullable=True,
                          default=None)
     status = db.Column(db.Boolean, nullable=False, default=bool('False'))

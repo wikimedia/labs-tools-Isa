@@ -140,7 +140,7 @@
 <div class="container campaign-info justify-content-center text-center page-header mt-5">
     <h2>{{ _('More About This Campaign') }}</h2>
     <hr>
-    <h5><strong>{{ _('Campaign Manager') }}:</strong> <a href="https://commons.wikimedia.org/wiki/User:{{ campaign.campaign_manager }}">{{ campaign.campaign_manager }}</a></h5>
+    <h5><strong>{{ _('Campaign Manager') }}:</strong> <a href="https://commons.wikimedia.org/wiki/User:{{ campaign.manager.username }}">{{ campaign.manager.username }}</a></h5>
     <div class="campaign-dates">
         <h6><strong>{{ _('START DATE')}}: </strong> {{campaign.start_date}}</h6>
         {% if campaign.end_date is none %}
@@ -152,7 +152,7 @@
     <div class="about-section">
         <p>{{campaign.long_description}}</p>
     </div>
-    {% if campaign_manager ==  username %}
+    {% if campaign.manager.username == username %}
     <a id="" href="{{url_for('campaigns.updateCampaign', id=campaign.id)}}" class="btn btn-danger" title="{{ _('Make changes to this campaign') }}">{{ _('Edit Campaign') }}</a>
     {% endif %}
 </div>
