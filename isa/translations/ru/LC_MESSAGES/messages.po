@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-02-17 12:15:59+0000\n"
+"PO-Revision-Date: 2022-03-03 12:16:12+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -134,7 +134,7 @@ msgstr "Краткое описание кампании (144 символа)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr ""
+msgstr "Над чем будут работать участники"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
@@ -156,15 +156,15 @@ msgstr "Задать дату окончания кампании"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr ""
+msgstr "Это кампания из серии «Вики любит...»"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr ""
+msgstr "Будучи правильно настроен, этот параметр позволяет участникам выбирать, изображения из какой страны они хотят видеть, а такэе учитывать вклад по странам."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr ""
+msgstr "Вы можете выбрать несколько категорий правильного типа."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
@@ -246,27 +246,27 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:210
 msgid "Campaign Image"
-msgstr ""
+msgstr "Изображение кампании"
 
 #: templates/campaign/campaign-form.html:210
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr ""
+msgstr "Максимальная высота изображения кампании составляет 150 пикселей. Изображения должны быть в виде либо баннера, либо логотипа."
 
 #: templates/campaign/campaign-form.html:210
 msgid "Portrait or square photos are not recommended."
-msgstr ""
+msgstr "Портретные или квадратные фотографии не рекомендуются."
 
 #: templates/campaign/campaign-form.html:222
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr ""
+msgstr "Введите только ИМЯ ФАЙЛА изображения с Викисклада для отображения на базовой странице Кампании."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Long description of Campaign (full about info)"
-msgstr ""
+msgstr "Подробное описание кампании (полная информация о кампании)"
 
 #: templates/campaign/campaign-form.html:240
 msgid "Why it is important that users contribute to the campaign?"
-msgstr ""
+msgstr "Почему важно, чтобы пользователи делали свой вклад в рамках кампании?"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Publish Campaign"
@@ -274,27 +274,27 @@ msgstr "Опубликовать кампанию"
 
 #: templates/campaign/campaign-form.html:256
 msgid "You must select at least one category for your campaign."
-msgstr ""
+msgstr "Вы должны выбрать хотя бы одну категорию для своей кампании."
 
 #: templates/campaign/campaign-form.html:257
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr ""
+msgstr "Некоторые из выбранных вами категорий не имеют правильного синтаксиса для кампании «Вики любит...»."
 
 #: templates/campaign/campaign-form.html:258
 msgid "Please check your selections and try again."
-msgstr ""
+msgstr "Пожалуйста, проверьте свой выбор и повторите попытку."
 
 #: templates/campaign/campaign-form.html:259
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr ""
+msgstr "Пожалуйста, выберите хотя бы один тип из раздела «Метаданные для сбора»"
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
-msgstr ""
+msgstr "Просмотр изображений с"
 
 #: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
-msgstr ""
+msgstr "Выберите просмотр изображений только из одной страны"
 
 #: templates/campaign/campaign.html:20
 msgid "Loading..."
@@ -597,15 +597,15 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:109
 msgid "Download all stats (CSV)"
-msgstr ""
+msgstr "Скачать всю статистику (CSV)"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Contributor Stats"
-msgstr ""
+msgstr "Статистика вклада участников"
 
 #: templates/campaign/campaign_stats.html:115
 msgid "Country Stats"
-msgstr ""
+msgstr "Статистика по странам"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
@@ -633,11 +633,11 @@ msgstr "Кампания"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Общее количество изображений в кампании"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Количество редакторов, внёсших свой вклад в кампанию "
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -1070,7 +1070,7 @@ msgstr "Правовые вопросы и благодарности"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr ""
+msgstr "Он работает на tools.wmflabs.org и подпадает под действие Условий использования облачных сервисов Викимедиа (Wikimedia Cloud Services Terms of use)."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
@@ -1107,15 +1107,15 @@ msgstr "Об этом инструменте"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr ""
+msgstr "В долгосрочной перспективе цель этого инструмента состоит в том, чтобы расширить использование знаний, отраженных в каждом размещённом на Викискладе изображении."
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "Этот инструмент призван помочь повысить полезность и информативность изображений, предоставленных во время конкурсов «Вики любит...»."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "Первоначально он был создан для помощи в описании изображений конкурса «Вики любит Африку», но специально спроектирован так, чтобы быть полезным для всего семейства конкурсов «Вики любит...», а также за их пределами."
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
@@ -1171,15 +1171,15 @@ msgstr "Инструментарий ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "был разработан в рамках сотрудничества между проектами «Вики в Африке», «Histropedia» и проектом «Структурированные данные на Викискладе»."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr ""
+msgstr "Он работает на"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr ""
+msgstr "и подпадает под действие"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"

@@ -1,6 +1,7 @@
 # Translation of ISA to Spanish (español)
 # Exported from translatewiki.net
 #
+# Author: Constanza Verón WMAR
 # Author: Marfossatti
 # --
 # Translation for the ISA project
@@ -9,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-02-24 12:17:38+0000\n"
+"PO-Revision-Date: 2022-03-03 12:16:11+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -510,7 +511,7 @@ msgstr "Para marcar los elementos destacados de la imagen, haz clic en el icono 
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr "Escribir Leyendas"
+msgstr "Escribir leyendas"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
@@ -724,362 +725,362 @@ msgstr "No se han encontrado registros que coincidan"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr ""
+msgstr "Primero"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr ""
+msgstr "Último"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: templates/campaign/macros.html:3
 msgid "Processing..."
-msgstr ""
+msgstr "Procesando…"
 
 #: templates/campaign/macros.html:5
 msgid "Error!"
-msgstr ""
+msgstr "¡Error!"
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr ""
+msgstr "Servidor en mantenimiento"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr ""
+msgstr "Por favor, contáctate con el soporte de ayuda."
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr ""
+msgstr "Llévame al inicio"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr ""
+msgstr "Contacto de ayuda"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr ""
+msgstr "Página no encontrada"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "No podemos encontrar la página que estás buscando"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr ""
+msgstr "Llévame al inicio"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr ""
+msgstr "Algo salió mal"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "ISA podría estar bajo mantenimiento"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr ""
+msgstr "Página de ayuda"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr ""
+msgstr "Fácilmente añade información sobre imágenes en Wikimedia Commons"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> es una herramienta divertida, multilingüe y orientada a los dispositivos móviles, que facilita a los usuarios añadir \"microcontribuciones\" en forma de <a %(link_attrs)s> datos estructurados a imágenes en Wikimedia Commons que han sido añadidas por las competencias Wiki Loves"
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "ISA fue originalmente construido para proporcionar una mejor estructuración multilingue en las descripciones de las imágenes de <a %(link_attrs)s> Wiki Loves Africa</a>."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Pero también se ha desarrollado para que sea útil para todos las competencias <a>Wiki Loves</a>  y, en última instancia, para <strong>todos los archivos multimedia</strong> en Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "¿Qué es Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>Wikimedia Commons</strong> (también conocida como 'Commons') es un proyecto Wikimedia, un proyecto hermano de Wikipedia, y una colección de más de 40 millones de archivos multimedia libres."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "Todas las fotos, archivos de audio y vídeo, PDFs y otros medios de Wikipedia con licencia libre están almacenados en Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "Wikimedia Commons crece rápidamente, en aproximadamente 5 millones de archivos multimedia nuevos por año."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Miles de personas voluntarias suben archivos a Commons y los integran en los proyectos de Wikimedia, como Wikipedia, para ilustrar el contenido y compartirlo con el público."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr ""
+msgstr "Los archivos multimedia en Commons suelen ser:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "Fotografías personales y medios subidos por particulares, a veces durante concursos de Wiki Loves como Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth, etc;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "Archivos multimedia con licencia libre de sitios web externos como Flickr, YouTube, revistas de acceso abierto y otros repositorios; y"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "Donaciones de instituciones y organizaciones con importantes colecciones multimedia, grandes y pequeñas, que van desde la UNESCO, la NASA y la Biblioteca Británica hasta pequeñas instituciones culturales locales."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "¿Qué son los datos estructurados en Commons?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>Datos estructurados en Commons</strong> es un proyecto que proporciona la infraestructura técnica para complementar el wikitexto, las plantillas y las categorías de Wikimedia Commons con datos estructurados."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "Datos estructurados son datos con un alto grado de organización estructurada."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "Con más estructura, es más fácil reutilizar los datos en otros proyectos de Wikimedia y por terceros; también permite que los ordenadores los procesen y \"entiendan\"."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "¡Los datos estructurados son un proyecto en curso que se puso en marcha en 2019 ! ... mientras que Wikimedia Commons existe desde hace años !"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "Hay literalmente millones de imágenes alojadas en Wikimedia Commons … que necesitan atención y amor."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "Millones de imágenes que no están descritas con datos estructurados por el momento."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr ""
+msgstr "¿Cómo vamos a hacer eso? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "<strong>Curanr</strong>, o curaduría, en sentido estricto significa: seleccionar y organizar piezas de arte y patrimonio cultural para una exposición."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "Este término también puede utilizarse de forma más amplia, para describir cualquier actividad que implique seleccionar, organizar y presentar la información."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "En el contexto de los Datos Estructurados en Commons, curaduría implica todas las actividades realizadas por las personas que colaboran en Commons para organizar y presentar los archivos multimedia en Wikimedia Commons: acciones administrativas, añadir más y mejores metadatos a los archivos, agruparlos en categorías, crear galerías..."
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr ""
+msgstr "Entonces... ¿Cómo encaja la herramienta ISA ahí?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "La herramienta ISA permite añadir dos tipos diferentes de datos estructurados al conjunto de imágenes: pies de foto y representaciones (más adelante se explica qué son los pies de foto y las representaciones)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "Se trata de una herramienta de \"microcontribuciones\" multilingüe y orientada a los dispositivos móviles, que facilita la adición de datos estructurados a las imágenes aportadas a los concursos de Wiki Loves en Wikimedia Commons."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr ""
+msgstr "La herramienta funciona con campañas creadas por quienes coordinan."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "Cualquiera que tenga una cuenta en Wikimedia puede coordinar."
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr ""
+msgstr "Con ISA, quien coordina puede elegir un conjunto predefinido de imágenes en Commons, seleccionar una fecha de inicio y otra de finalización de la campaña, y proporcionar información general sobre la propia campaña."
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr ""
+msgstr "Quien coordina puede pedir a las personas que colaboran que \"etiqueten\" estas imágenes con metadatos estructurados multilingües (representaciones y/o leyendas)."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr ""
+msgstr "Los puntos se contabilizan por cada contribución realizada por un participante, por lo que es posible organizar concursos o retos de \"etiquetado\" o microcontribuciones con ISA."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr ""
+msgstr "Cualquier persona con una cuenta de Wikimedia puede contribuir a añadir metadatos estructurados a una campaña."
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr ""
+msgstr "El único requisito es... haber iniciado sesión."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "Más información sobre las leyendas (o pie de fotos) de los archivos y las representaciones"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "Las leyendas o pie de fotos de los archivos son una característica que forma parte de los datos estructurados."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "Están pensadas para almacenar descripciones breves y multilingües sobre los archivos."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "¿Qué es un buen pie de foto? y ¿cuál es la diferencia entre nuestras antiguas descripciones de archivos y los pies de foto?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "En primer lugar, los pies de foto deben ser simples y cortos."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "Mientras que las descripciones pueden ser muy amplias, los pies de foto están limitados a 255 caracteres de longitud, y no pueden contener marcas (como los enlaces Wikitext o HTML) y no admiten enlaces externos."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "En muchos casos, el pie de foto será similar o idéntica a la descripción."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "Pero en otros casos, hay una descripción muy extensa (858 caracteres, y enlaces) y el pie de foto es mucho más corto (más o menos el mismo pie de foto utilizado en los artículos de Wikipedia que utilizan esa imagen)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "Sólo debe copiarse en los pies de foto el texto que sea tan breve que no pueda ser objeto de derechos de autor, ya que los pies de foto se publican bajo una exención CC0 (\"dominio público\")."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "Una de las principales ventajas de las leyendas es la mejora de la capacidad de búsqueda en función del idioma."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "Las descripciones clásicas de los archivos están en el wikitexto, y sólo se pueden buscar a través de la búsqueda de texto completo, que necesariamente busca en todo el contenido de la página, incluidas las categorías y las plantillas de licencia; y no es posible hacer búsquedas por idioma."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "Los subtítulos están disponibles como parte de nuestros datos estructurados, mientras que las descripciones no lo están."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "En términos técnicos, una descripción es un wikitexto plano envuelto en una plantilla de idioma, envuelto de nuevo en una plantilla de información; mientras que los pies de foto son etiquetas de Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "De este modo, los subtítulos podrán buscarse a través de la API, lo que facilitará la búsqueda, el filtrado y la extracción de subtítulos de los archivos como metadatos."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "Como se pueden buscar a través de la API, también es más fácil para los reutilizadores de terceros encontrar y reutilizar los medios y los propios subtítulos."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "Otros usos posibles de los subtítulos pueden ser:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "rellenar los infoboxes"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "consultar los archivos para buscar los subtítulos que faltan en un idioma determinado"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "creación de listas para la traducción de archivos importantes que necesiten un subtítulo localizado para un proyecto o campaña"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "Encuentre más información sobre pie de fotos/leyendas aquí"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr ""
+msgstr "Depicts (Representa a...) también forma parte de los datos estructurados."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "Se habilitó en Wikimedia Commons en abril de 2019."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
-msgstr ""
+msgstr "Para añadir una declaración de \"representa a...\", simplemente empiece a escribir en el cuadro de búsqueda para empezar."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr ""
+msgstr "A continuación, para cada elemento representado en la imagen, busque el elemento apropiado en Wikidata y selecciónelo"
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr ""
+msgstr "Si tiene problemas para encontrar el elemento de Wikidata correcto, pruebe las ortografías alternativas."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr ""
+msgstr "Si no hay ningún elemento de Wikidata asociado al tema representado, elija un elemento más genérico que incluya su tema como ejemplo"
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr ""
+msgstr "Sea tan específico como pueda con la etiqueta principal."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr ""
+msgstr "Si hay varios elementos representados clara y deliberadamente por el archivo multimedia, todos deben añadirse como declaraciones de representación separadas, dentro de lo razonable."
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr ""
+msgstr "En el caso de los archivos que muestran docenas o cientos de elementos (por ejemplo, películas), sólo se enumeran los elementos más destacados."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr ""
+msgstr "También hay una opción para marcar un elemento concreto como \"destacado\"."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "Esta propiedad se refiere a la prominencia del elemento en el soporte."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "Puede encontrar más información sobre las representaciones aquí :"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "Utilización de la herramienta ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "Puede encontrar más información aquí:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "Legal y créditos"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr ""
+msgstr "Se ejecuta en tools.wmflabs.org, y está sujeto a las condiciones de uso de los servicios de la nube de Wikimedia."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA se publica bajo GPLv3. Los contenidos añadidos a través de la herramienta a Wikimedia Commons están publicados bajo CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "La imagen utilizada en la herramienta :"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "Fácilmente añade información sobre imágenes en Wikimedia Commons"
 
 #: templates/main/home.html:15
 #, python-format
