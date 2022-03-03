@@ -1,5 +1,6 @@
 import os
 from glob import glob
+import json
 import logging
 
 import yaml
@@ -27,6 +28,15 @@ app.config['TEMPLATES_AUTO_RELOAD']
 
 # We hook babel to our app
 babel = Babel(app)
+
+
+@app.context_processor
+def utility_processor():
+    def translate(s):
+        # Translate and JSON encode a string. Removes the leading and
+        # trailing double quote that encoding adds.
+        return(json.dumps(gettext(s))[1:-1])
+    return {"_": translate}
 
 
 @app.before_request
