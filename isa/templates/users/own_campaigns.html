@@ -1,7 +1,7 @@
 {% extends "main/layout.html" %}
 {% block content%}
 <div class="container page-header text-center">
-    {% if username != 'Guest' and username is not false and username is not none %}
+    {% if username != 'Guest' and username %}
         <h2>{{ username }}'s Campaigns</h2>
     {% else %}
         <h2>{{ _('Your Campaigns') }}</h2>
@@ -12,14 +12,14 @@
 <div class="container campaign-stats text-center">
     <div class="campaign-panel">
         <div class="campaign-stats-title">
-                {% if username != 'Guest' and username is not false and username is not none %}
+                {% if username != 'Guest' and username %}
                     <h4>{{ _('Below is a list of your Campaigns') }}</h4>
                 {% else %}
                     <h2>{{ _('You do not have any campaigns') }}</h2>
                     
                 {% endif %}
         </div>
-        {% if username != 'Guest' and username is not false and username is not none %}
+        {% if username != 'Guest' and username %}
         <div  class="stats-table mx-auto">
             <table class="table table-sm table-light text-center">
                 <thead>
