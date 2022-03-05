@@ -15,8 +15,9 @@ from isa.models import Country
 from isa.campaigns.utils import API_URL
 
 # Statuses used when processing. Set as Campaign.campaign_images.
-PROCESSING = -1
-FAILED = -2
+DONE = 0
+PROCESSING = 1
+FAILED = 2
 
 # Add files with these extensions as images.
 ALLOWED_FILE_EXTENISONS = ["jpg", "jpeg", "png", "svg", "gif"]
@@ -26,27 +27,28 @@ API_TIMEOUT = 5
 MAX_RETRIES = 5
 # Wait this long (in seconds) before retrying to send an API request.
 RETRY_DELAY = 1
+# Commit this many images at a time to database.
+IMAGES_PER_COMMIT = 1000
 
 
 class UpdateImageException(Exception):
     pass
 
 
-def update_images(campaign_id):
+def update_in_thread(campaign_id):
     """
     Update campaign images in a separate thread
 
     Keyword arguments:
     campaign_id -- Id of the campaign to update.
     """
-    thread = Thread(target=_update, args=(campaign_id,))
+    thread = Thread(target=update, args=(campaign_id,))
     thread.start()
 
 
-def _update(campaign_id):
+def update(campaign_id):
     """
     Updated images for a campaign
-
 
     Keyword arguments:
     campaign_id -- Id of the campaign to update.
@@ -59,7 +61,7 @@ def _update(campaign_id):
             campaign_id
         ))
         campaign = Campaign.query.filter_by(id=campaign_id).first()
-        campaign.campaign_images = FAILED
+        campaign.update_status = FAILED
         commit_changes_to_db()
 
 
@@ -69,10 +71,11 @@ class ImageUpdater:
         Keyword arguments:
         campaign_id -- Id of the campaign to update.
         """
-        self._campaign_id = campaign_id
+        self._campaign = Campaign.query.get(campaign_id)
         self._images = {}
-        self._wiki_loves_categories = []
         self._processed_categories = set()
+        self._image_commits = 0
+        self._uncommited_images = 0
 
     def update_images(self):
         """
@@ -81,84 +84,56 @@ class ImageUpdater:
         Exceptions:
         UpdateImageException -- When committing to the database fails.
         """
-        logging.info("Updating images for campaign {}.".format(self._campaign_id))
+        logging.info("Updating images for campaign {}.".format(self._campaign.id))
         start_time = time.time()
-        campaign = Campaign.query.filter_by(id=self._campaign_id).first()
-        if campaign.campaign_images == PROCESSING:
-            logging.info("Image update for Campaign {} already in progress.".format(
-                self._campaign_id
-            ))
-            return
-
-        campaign.campaign_images = PROCESSING
+        self._campaign.update_status = PROCESSING
         if commit_changes_to_db():
             raise UpdateImageException("Committing to database failed.")
 
         # Clear images for the campaign to ensure that images that have
         # been removed from categories do not remain.
-        deleted = Image.query.filter_by(campaign_id=self._campaign_id).delete()
-        campaign.images.clear()
-        number_of_images = 0
-        if campaign.campaign_type:
-            # If this is a Wiki Loves campaign get the subcategories that contain the images for the contest.
-            self._fetch_wiki_loves_categories(campaign)
-            categories = self._wiki_loves_categories
-        else:
-            categories = json.loads(campaign.categories)
-
-        # Fetch all page ids.
-        for category in categories:
-            depth = int(category["depth"])
-            self._fetch_page_ids(category["name"], depth)
-
-        # Fetch info for pages and add them to the database.
-        for page_id, country in self._images.items():
-            number_of_images += 1
-            image = Image(page_id=page_id, campaign_id=self._campaign_id)
-            if campaign.campaign_type and country:
-                country_id = Country.query.filter_by(name=country)[0].id
-                image.country_id = country_id
-            db.session.add(image)
-            logging.debug("Adding image with page id {} to campaign {}.".format(
-                page_id,
-                self._campaign_id
-            ))
-        campaign.campaign_images = number_of_images
+        Image.query.filter_by(campaign_id=self._campaign.id).delete()
+        self._campaign.images.clear()
+        self._campaign.campaign_images = 0
         if commit_changes_to_db():
-            campaign.campaign_images = FAILED
             raise UpdateImageException("Committing to database failed.")
 
-        logging.info("Deleted {} images from campaign {}.".format(
-            deleted,
-            self._campaign_id
-        ))
-        logging.info("{} images committed for campaign {} in {} seconds.".format(
-            number_of_images,
-            self._campaign_id,
-            int(time.time() - start_time)
-        ))
+        categories = json.loads(self._campaign.categories)
+        for category in categories:
+            if self._campaign.campaign_type:
+                depth = 1
+            else:
+                depth = int(category["depth"])
+            self._fetch_images(category["name"], depth)
 
-    def _fetch_wiki_loves_categories(self, campaign):
-        """
-        Fetch the subcategories for a wiki loves categories that contain images
-        """
-        Country.query.filter_by(campaign_id=self._campaign_id).delete()
-        campaign.countries.clear()
-        for category in json.loads(campaign.categories):
-            self._fetch_page_ids(category["name"], 0, True)
+        self._commit_images()
+        logging.info(
+            "{} images committed for campaign {} in {} seconds "
+            "and {} commits."
+            .format(
+                self._campaign.campaign_images,
+                self._campaign.id,
+                int(time.time() - start_time),
+                self._image_commits
+            )
+        )
+        self._campaign.update_status = DONE
+        if commit_changes_to_db():
+            raise UpdateImageException("Committing to database failed.")
 
-    def _fetch_page_ids(self, category, depth, wiki_loves_categories=False, continue_string=None):
+    def _fetch_images(self, category, depth, continue_string=None):
         """
-        Fetch the page ids for a category and its subcategories
+        Add images for a category to the campaign
 
-        Filters out pages that do not match file extensions for images.
+        Fetches all images in the given category and if, `depth` is
+        more than 0, its subcategories. Filters out pages that do not
+        match file extensions for images.
 
         Keyword arguments:
         category -- Id of the campaign to fetch images for. Accepts both
           with and without "Category:" prefix.
         depth -- The number of subcategories down to go. 0 means no
           subcategories.
-        wiki_loves_categories -- Only get subcategories for Wiki Loves images. Defaults to False.
         continue_string -- Used for API requests. Defaults to None.
         """
         if not category.startswith("Category:"):
@@ -166,21 +141,19 @@ class ImageUpdater:
         if category in self._processed_categories and not continue_string:
             # Skip the category if it has already been processed, except
             # if we are continuing on the same category.
-            logging.debug("Skipping already processed category {}.".format(category))
+            logging.debug('Skipping already processed category "{}".'.format(category))
             return
 
-        logging.debug("Fetching page ids for category {}.".format(category))
+        if not continue_string:
+            logging.debug('Fetching page ids for category "{}".'.format(category))
         self._processed_categories.add(category)
-        cmtype = "subcat"
-        if not wiki_loves_categories:
-            cmtype += "|file"
         parameters = {
             "action": "query",
             "list": "categorymembers",
             "cmtitle": category,
             "cmlimit": "max",
             "cmprop": "title|type|ids",
-            "cmtype": cmtype
+            "cmtype": "subcat|file"
         }
         if continue_string:
             parameters["cmcontinue"] = continue_string
@@ -188,21 +161,45 @@ class ImageUpdater:
 
         for member in response["query"]["categorymembers"]:
             if member["type"] == "file" and self._is_allowed(member["title"]):
-                country_name = self._get_country(category)
-                self._images[member["pageid"]] = country_name
-            elif depth and member["type"] == "subcat":
-                self._fetch_page_ids(member["title"], depth - 1)
-            elif wiki_loves_categories and member["type"] == "subcat":
-                wiki_loves_category = member["title"]
-                country_name = self._get_country(wiki_loves_category)
-                if country_name:
-                    self._wiki_loves_categories.append({"name": wiki_loves_category, "depth": 0})
-                    if Country.query.filter_by(name=country_name, campaign_id=self._campaign_id).count() == 0:
-                        country = Country(name=country_name, campaign_id=self._campaign_id)
+                image = Image(
+                    page_id=member["pageid"],
+                    campaign_id=self._campaign.id
+                )
+                if self._campaign.campaign_type:
+                    country_name = self._get_country(category)
+                    if not country_name:
+                        # Skip categories without countries.
+                        continue
+
+                    if Country.query.filter_by(name=country_name).count() == 0:
+                        # Make sure that the country is in the
+                        # database.
+                        country = Country(name=country_name)
+                        logging.debug('Adding new country "{}".'.format(country_name))
                         db.session.add(country)
+                    country_id = Country.query.filter_by(name=country_name)[0].id
+                    image.country_id = country_id
+
+                db.session.add(image)
+                self._uncommited_images += 1
+                if self._uncommited_images % IMAGES_PER_COMMIT == 0:
+                    self._commit_images()
+                    self._uncommited_images = 0
+            elif depth and member["type"] == "subcat":
+                self._fetch_images(member["title"], depth - 1)
         if "continue" in response:
             new_continue_string = response["continue"]["cmcontinue"]
-            self._fetch_page_ids(category, depth, wiki_loves_categories, new_continue_string)
+            self._fetch_images(category, depth, new_continue_string)
+
+    def _commit_images(self):
+        """
+        Commit images to database
+        """
+        self._campaign.campaign_images = len(self._campaign.images)
+        if commit_changes_to_db():
+            raise UpdateImageException("Committing to database failed.")
+
+        self._image_commits += 1
 
     def _get_country(self, category):
         """

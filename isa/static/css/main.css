@@ -20,6 +20,11 @@
     color: #990000;
     border-color: #990000;
 }
+button.btn.btn-link {
+    border: 0;
+    vertical-align: baseline;
+}
+
 /* style the page titles and page header*/
 .page-header h1 {
     margin: 0;

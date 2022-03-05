@@ -20,13 +20,14 @@ if __name__ == "__main__":
         "--force",
         "-f",
         action="store_true",
-        help="Update campaigns even if it has images or is processing."
+        help="Update campaigns even if it is processing."
     )
     parser.add_argument(
-        "--campaign-id",
+        "--campaign-ids",
         "-i",
         type=int,
-        help="Update only the campaign with this id.",
+        nargs="*",
+        help="Update only the campaign with these ids.",
         metavar="ID"
     )
     parser.add_argument(
@@ -34,22 +35,19 @@ if __name__ == "__main__":
         "-e",
         type=int,
         nargs="*",
-        help="Ignore campaigns with these ids.",
+        help="Do not update campaigns with these ids.",
         metavar="ID"
     )
     args = parser.parse_args()
 
-    if args.campaign_id:
-        campaigns = [Campaign.query.get(args.campaign_id)]
-    else:
-        campaigns = Campaign.query.all()
+    query = Campaign.query
+    if args.campaign_ids:
+        query = Campaign.query.filter(Campaign.id.in_(args.campaign_ids))
+    if args.exclude_campaigns:
+        query = query.filter(Campaign.id.notin_(args.exclude_campaigns))
+    if not args.force:
+        query = query.filter(Campaign.update_status != image_updater.PROCESSING)
+    campaigns = query.all()
 
     for campaign in campaigns:
-        if campaign.id in args.exclude_campaigns:
-            continue
-
-        if args.force or not campaign.images:
-            # Make sure the image count is not stuck on processing.
-            campaign.campaign_images = image_updater.FAILED
-            commit_changes_to_db()
-            ImageUpdater(campaign.id).update_images()
+        image_updater.update(campaign.id)

@@ -73,7 +73,12 @@ $( '#category-search' ).on('select2:select', function(ev) {
     addSelectedCategory(category);
     $(this).val(null).trigger('change'); // clear the search selection
     $(this).select2("close"); // close the dropdown
+    $("#update_images").prop("checked", true);
 })
+
+$(".category-depth-input").change(function () {
+    $("#update_images").prop("checked", true);
+});
 
 // Main function to add the UI elements for a new category row
 // Used when category is added via search, or populating from existing campaign categories
@@ -94,9 +99,10 @@ $('#selected-categories-content').on("click", "button.close", function(event) {
     if (isWikiLovesCampaign) validateWikiLovesCategories();
 
     // after removing the element, we must hide the table header if there are no rows left
-   if ( $('.selected-category').length < 1 ) {
-       $('#selected-categories-header').hide();
-   }
+    if ( $('.selected-category').length < 1 ) {
+        $('#selected-categories-header').hide();
+    }
+    $("#update_images").prop("checked", true);
 })
 
 // Returns the html for an individual category row, including depth option and remove button
@@ -152,7 +158,7 @@ function validateWikiLovesCategory(element) {
 }
 
 function isValidWikiLovesSyntax(categoryName) {
-    var syntaxReg = /Images from Wiki Loves [A-Za-z]* \d{4}$/;
+    var syntaxReg = /Images from Wiki Loves [\w\s]+ \d{4}$/;
     return syntaxReg.test(categoryName);
 }
 
