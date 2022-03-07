@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-03-03 12:16:11+0000\n"
+"PO-Revision-Date: 2022-03-07 12:16:53+0000\n"
 "X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -876,7 +876,7 @@ msgstr "¿Cómo vamos a hacer eso? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr "<strong>Curanr</strong>, o curaduría, en sentido estricto significa: seleccionar y organizar piezas de arte y patrimonio cultural para una exposición."
+msgstr "<strong>Curaduría</strong>, o comisariado, en sentido estricto significa: seleccionar y organizar piezas de arte y patrimonio cultural para una exposición."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
@@ -952,7 +952,7 @@ msgstr "Mientras que las descripciones pueden ser muy amplias, los pies de foto 
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr "En muchos casos, el pie de foto será similar o idéntica a la descripción."
+msgstr "En muchos casos, el pie de foto será similar o idéntico a la descripción."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
@@ -1085,199 +1085,199 @@ msgstr "Fácilmente añade información sobre imágenes en Wikimedia Commons"
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> es una herramienta multilingüe y orientada a los dispositivos móviles, que facilita a los usuarios la adición de \"microcontribuciones\" en forma de <a %(link_attrs)s title='Más información sobre los datos estructurados'>structured data</a> (descripciones, leyendas, etiquetas, etc.) a las imágenes que han sido aportadas a Wikimedia Commons por las competiciones de Wiki Loves."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr ""
+msgstr "<strong>Click en explorar campañas para comenzar!</strong>"
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr ""
+msgstr "Ve al directorio de campañas para elegir una"
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "EXPLORE CAMPAÑAS"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "Acerca de esta herramienta"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr ""
+msgstr "A largo plazo, la intención de la herramienta es aumentar el uso del conocimiento que refleja cada imagen alojada en Wikimedia Commons.\\"
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "La herramienta tiene como objetivo ayudar a la utilidad e información de las imágenes liberadas durante los concursos Wiki Loves."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "Inicialmente se está construyendo para ayudar en las descripciones de las imágenes de Wiki Loves Africa, pero se está modelando específicamente para que sea útil para todas las competiciones de Wiki Loves y más allá."
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr ""
+msgstr "La herramienta también está diseñada para acoger concursos de microcontribución propuestos por los responsables de los proyectos."
 
 #: templates/main/home.html:26
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ISA es una colaboración entre Wiki In Africa, Histropedia y el proyecto Structured Data on Commons."
 
 #: templates/main/home.html:27
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA no es sólo un acrónimo de Information Structured Acceleration (aceleración estructurada de la información), sino que también es una palabra de la lengua chiShona que significa \"poner\" o \"lugar\"."
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr ""
+msgstr "Inicio"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "Crear nuevo"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr ""
+msgstr "Ayuda"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "Cambiar los idiomas de los epígrafes disponibles"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "Preferencias de idioma"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr ""
+msgstr "Ver tus campañas"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "Mis campañas"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr ""
+msgstr "Salir"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr ""
+msgstr "Ingresar"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "Herramienta ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "se desarrolló como una colaboración entre Wiki In Africa, Histropedia y el proyecto Structured Data on Commons."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr ""
+msgstr "Se está ejecutando en"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr ""
+msgstr "y está sujeta a la"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr ""
+msgstr "ISA se publica en"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "El contenido añadido a través de la herramienta a Wikimedia Commons se libera bajo"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "Tus campañas"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr ""
+msgstr "Debajo hay una lista de tus campañas"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "No tienes ninguna campaña"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: templates/users/user_settings.html:6 templates/users/user_settings.html:9
 msgid "Caption Languages"
-msgstr ""
+msgstr "Idioma de las leyendas"
 
 #: templates/users/user_settings.html:9
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "Seleccione hasta 6 idiomas para los pies de foto"
 
 #: templates/users/user_settings.html:9
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "Se pueden añadir leyendas en varios idiomas para cada imagen."
 
 #: templates/users/user_settings.html:9
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "Los idiomas que seleccione en esta página aparecerán en la página cuando esté viendo una imagen."
 
 #: templates/users/user_settings.html:9
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "Seleccione todas las lenguas en las que se sienta cómodo para contribuir."
 
 #: templates/users/user_settings.html:19 templates/users/user_settings.html:25
 #: templates/users/user_settings.html:31 templates/users/user_settings.html:37
 #: templates/users/user_settings.html:43 templates/users/user_settings.html:49
 msgid "Remove language"
-msgstr ""
+msgstr "Quitar idioma"
 
 #: templates/users/user_settings.html:53
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "Deshacer los cambios en la configuración del idioma"
 
 #: templates/users/user_settings.html:53
 msgid "Undo Changes"
-msgstr ""
+msgstr "Deshacer cambios"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "Fallo en OAuth. ¿Están deshabilitadas las cookies?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome  %(username)s!"
-msgstr ""
+msgstr "Bienvenido %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "Hasta la próxima"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Inicie sesión para cambiar sus preferencias de idioma"
 
 #: users/routes.py:143
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "Siento que hayas intentado introducir %(rep_languages)s varias veces"
 
 #: users/routes.py:156
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "No se han podido establecer los idiomas de los subtítulos"
 
 #: users/routes.py:158
 msgid "Preferred Languages set Successfully"
-msgstr ""
+msgstr "Lenguas preferidas establecidas con éxito"
 
 #: users/routes.py:170
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "La configuración del idioma no está disponible por el momento"
 
 #: users/routes.py:172
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s - Configuración"
 
 #: users/routes.py:195
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Campañas creadas por %(username)s"
 
