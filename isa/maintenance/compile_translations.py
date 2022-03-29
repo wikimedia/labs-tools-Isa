@@ -1,23 +1,45 @@
 """Compile translation files
 
 Pulls git updates and preprocesses and compiles all .po files in the
-translation directory.
+translation directory. Reverts to previous git branch when
+finished. NOTE: this will throw away any uncommited changes.
 
 """
 
 import argparse
 import glob
+import subprocess
+from subprocess import run as run_subprocess
+import sys
 
 from babel.messages import pofile
-
-from .utils import run
 
 
 PO_PATH = "isa/translations/*/LC_MESSAGES/messages.po"
 
 
+def get_branch():
+    process = run("git rev-parse --abbrev-ref HEAD")
+    return process.stdout
+
+
 def update_repo():
-    run("git pull")
+    run("git checkout -B tmp-i18n")
+    run("git pull origin master")
+
+
+def run(command):
+    print("\033[0;34m> {}\033[00m".format(command))
+    process = run_subprocess(
+        command,
+        shell=True,
+        stdout=subprocess.PIPE,
+        universal_newlines=True
+    )
+    if process.returncode:
+        raise Exception("Error while running command, see above.")
+
+    return process
 
 
 def preprocess_files():
@@ -59,6 +81,11 @@ def compile_translations():
             run(command + " {}".format(catalog.locale.language))
 
 
+def revert_repo(branch):
+    run("git checkout .")
+    run("git checkout {}".format(branch))
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -72,6 +99,10 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    update_repo()
-    preprocess_files()
-    compile_translations()
+    try:
+        branch = get_branch()
+        update_repo()
+        preprocess_files()
+        compile_translations()
+    finally:
+        revert_repo(branch)

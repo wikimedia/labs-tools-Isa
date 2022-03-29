@@ -9,7 +9,6 @@ from isa import db
 from isa.models import Campaign
 from isa.models import Contribution
 from isa.models import User
-from .utils import run
 
 
 def execute_db(statement):
