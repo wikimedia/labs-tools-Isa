@@ -110,8 +110,8 @@
  
     <div class="hidden-i18n-text">
         {
-            "Contributor Stats": "{{ _('Contributor Stats') }}",
-            "Country Stats": "{{ _('Country Stats') }}"
+            "Contributor Stats": {{ _('Contributor Stats')|tojson }},
+            "Country Stats": {{ _('Country Stats')|tojson }}
         }
     </div>
 {% endblock content%}

@@ -106,19 +106,19 @@ body {padding-bottom: 50px}
 
 <div class="hidden-i18n-text">
     {
-        "No images found for this campaign!": "{{ _('No images found for this campaign!') }}",
-        "Something went wrong getting campaign images": "{{ _('Something went wrong getting campaign images') }}",
-        "Search for things you see in the image": "{{ _('Search for things you see in the image') }}",
-        "minimise metadata from commons": "{{ _('minimise metadata from commons') }}",
-        "show all metadata from commons": "{{ _('show all metadata from commons') }}",
-        "Success! Depicted items saved to Wikimedia Commons": "{{ _('Success! Depicted items saved to Wikimedia Commons') }}",
-        "Success! Captions saved to Wikimedia Commons": "{{ _('Success! Captions saved to Wikimedia Commons') }}",
-        "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons": "{{ _('Oops! Something went wrong, your edits have not been saved to Wikimedia Commons') }}",
-        "Are you sure you want to navigate to another image? You have unsaved changes which will be lost.": "{{ _('Are you sure you want to navigate to another image? You have unsaved changes which will be lost.') }}",
-        "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first.": "{{ _('Click \'OK\' to proceed anyway, or \'Cancel\' if you want to save changes first.') }}",
-        "Remove this depicted item": "{{ _('Remove this depicted item') }}",
-        "Mark this depicted item as prominent": "{{ _('Mark this depicted item as prominent') }}",
-        "Mark this depicted item as NOT prominent": "{{ _('Mark this depicted item as NOT prominent') }}"
+        "No images found for this campaign!": {{ _('No images found for this campaign!')|tojson }},
+        "Something went wrong getting campaign images": {{ _('Something went wrong getting campaign images')|tojson }},
+        "Search for things you see in the image": {{ _('Search for things you see in the image')|tojson }},
+        "minimise metadata from commons": {{ _('minimise metadata from commons')|tojson }},
+        "show all metadata from commons": {{ _('show all metadata from commons')|tojson }},
+        "Success! Depicted items saved to Wikimedia Commons": {{ _('Success! Depicted items saved to Wikimedia Commons')|tojson }},
+        "Success! Captions saved to Wikimedia Commons": {{ _('Success! Captions saved to Wikimedia Commons')|tojson }},
+        "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons": {{ _('Oops! Something went wrong, your edits have not been saved to Wikimedia Commons')|tojson }},
+        "Are you sure you want to navigate to another image? You have unsaved changes which will be lost.": {{ _('Are you sure you want to navigate to another image? You have unsaved changes which will be lost.')|tojson }},
+        "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first.": {{ _("Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first.")|tojson }},
+        "Remove this depicted item": {{ _('Remove this depicted item')|tojson }},
+        "Mark this depicted item as prominent": {{ _('Mark this depicted item as prominent')|tojson }},
+        "Mark this depicted item as NOT prominent": {{ _('Mark this depicted item as NOT prominent')|tojson }}
     }
 </div>
 {% endblock content%}
