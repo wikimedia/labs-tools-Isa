@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2022-03-17 12:17:32+0000\n"
+"PO-Revision-Date: 2022-04-04 11:16:28+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -766,7 +766,7 @@ msgstr "Serveur en maintenance"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr "Veuillez vérifier le support de contact"
+msgstr "Veuillez vérifier le contact d’assistance"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -775,7 +775,7 @@ msgstr "Me ramener à l’accueil"
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Support de contact"
+msgstr "Contacter l’assistance"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
