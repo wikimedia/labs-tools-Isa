@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2022-04-04 11:16:28+0000\n"
+"PO-Revision-Date: 2022-04-11 11:17:45+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -861,7 +861,7 @@ msgstr "Que sont les données structurées sur Commons ?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr "<strong>Données structurées sur Commons</strong> est un projet qui fournit l’infrastructure technique pour apporter des données structurées en complément du wikitexte, des modèles et des catégories sur Wikimedia Commons."
+msgstr "<strong>Données structurées sur Commons</strong> est un projet qui fournit l’infrastructure technique pour apporter des données structurées en complément du wikicode, des modèles et des catégories sur Wikimedia Commons."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
@@ -989,7 +989,7 @@ msgstr "Les légendes sont disponibles dans le cadre de nos données structurée
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr "En termes techniques, une description est un simple wikitexte enveloppé dans un modèle de langue, enveloppé à nouveau dans un modèle Informations, tandis que les légendes sont des libellés de Wikibase."
+msgstr "En termes techniques, une description est du simple wikicode enveloppé dans un modèle de langue, lui-même enveloppé dans un modèle Informations, tandis que les légendes sont des libellés de Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
