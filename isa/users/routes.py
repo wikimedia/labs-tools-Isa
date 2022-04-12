@@ -7,7 +7,7 @@ import mwoauth
 from isa import app, gettext
 from isa.main.utils import commit_changes_to_db
 from isa.models import User, Campaign
-from isa.users.forms import CaptionsLanguageForm
+from isa.users.forms import LanguageForm
 from isa.utils.languages import getLanguages
 from isa.users.utils import build_user_pref_lang
 
@@ -103,14 +103,16 @@ def userSettings():
         session['next_url'] = request.url
         flash(gettext('Please login to change your language preferences'), 'info')
         return redirect(url_for('main.home'))
-    captions_lang_form = CaptionsLanguageForm()
-    if captions_lang_form.is_submitted():
-        caption_language_1 = str(request.form.get('language_select_1'))
-        caption_language_2 = str(request.form.get('language_select_2'))
-        caption_language_3 = str(request.form.get('language_select_3'))
-        caption_language_4 = str(request.form.get('language_select_4'))
-        caption_language_5 = str(request.form.get('language_select_5'))
-        caption_language_6 = str(request.form.get('language_select_6'))
+
+    user = User.query.filter_by(username=username).first()
+    lang_form = LanguageForm()
+    if lang_form.is_submitted():
+        caption_language_1 = str(request.form.get('caption_language_select_1'))
+        caption_language_2 = str(request.form.get('caption_language_select_2'))
+        caption_language_3 = str(request.form.get('caption_language_select_3'))
+        caption_language_4 = str(request.form.get('caption_language_select_4'))
+        caption_language_5 = str(request.form.get('caption_language_select_5'))
+        caption_language_6 = str(request.form.get('caption_language_select_6'))
 
         # We now check if the user is trying to submit the same language in form
 
@@ -148,8 +150,8 @@ def userSettings():
                                                      caption_language_3, caption_language_4,
                                                      caption_language_5, caption_language_6)
             # We select the user with username and update their caption_language
-            user = User.query.filter_by(username=username).first()
             user.caption_languages = user_caption_lang
+            user.depicts_language = request.form.get("depicts_language_select")
 
             # commit failed
             if commit_changes_to_db():
@@ -159,13 +161,14 @@ def userSettings():
                 # We make sure that the form data does not remain in browser
                 return redirect(url_for('users.userSettings'))
     elif request.method == 'GET':
-        caption_languages = User.query.filter_by(username=username).first().caption_languages.split(',')
-        captions_lang_form.language_select_1.data = str(caption_languages[0])
-        captions_lang_form.language_select_2.data = str(caption_languages[1])
-        captions_lang_form.language_select_3.data = str(caption_languages[2])
-        captions_lang_form.language_select_4.data = str(caption_languages[3])
-        captions_lang_form.language_select_5.data = str(caption_languages[4])
-        captions_lang_form.language_select_6.data = str(caption_languages[5])
+        caption_languages = user.caption_languages.split(',')
+        lang_form.caption_language_select_1.data = str(caption_languages[0])
+        lang_form.caption_language_select_2.data = str(caption_languages[1])
+        lang_form.caption_language_select_3.data = str(caption_languages[2])
+        lang_form.caption_language_select_4.data = str(caption_languages[3])
+        lang_form.caption_language_select_5.data = str(caption_languages[4])
+        lang_form.caption_language_select_6.data = str(caption_languages[5])
+        lang_form.depicts_language_select.data = user.depicts_language
     else:
         flash(gettext('Language settings not available at the moment'), 'info')
     return render_template('users/user_settings.html',
@@ -173,7 +176,7 @@ def userSettings():
                            current_user=current_user,
                            session_language=session_language,
                            username=username,
-                           captions_lang_form=captions_lang_form)
+                           lang_form=lang_form)
 
 
 @users.route('/api/login-test')

@@ -16,36 +16,39 @@ $('#captions_lang_select_5').select2({
 $('#captions_lang_select_6').select2({
     tags: false
 });
+$('#depicts_lang_select').select2({
+    tags: false
+});
 
 
 
-$( '#language_select_1_cancel' ).click( function (ev) {
-    $( '#language_select_1' ).slideUp();
-    $( '#language_select_1' ).empty();
+$( '#caption_language_select_1_cancel' ).click( function (ev) {
+    $( '#caption_language_select_1' ).slideUp();
+    $( '#caption_language_select_1' ).empty();
 } );
 
-$( '#language_select_2_cancel' ).click( function (ev) {
-    $('#language_select_2').slideUp();
-    $( '#language_select_2' ).empty();
+$( '#caption_language_select_2_cancel' ).click( function (ev) {
+    $('#caption_language_select_2').slideUp();
+    $( '#caption_language_select_2' ).empty();
 
 } );
 
-$( '#language_select_3_cancel' ).click( function (ev) {
-    $('#language_select_3' ).slideUp();
-    $( '#language_select_3' ).empty();
+$( '#caption_language_select_3_cancel' ).click( function (ev) {
+    $('#caption_language_select_3' ).slideUp();
+    $( '#caption_language_select_3' ).empty();
 } );
 
-$( '#language_select_4_cancel' ).click( function (ev) {
-    $('#language_select_4' ).slideUp();
-    $( '#language_select_4' ).empty();
+$( '#caption_language_select_4_cancel' ).click( function (ev) {
+    $('#caption_language_select_4' ).slideUp();
+    $( '#caption_language_select_4' ).empty();
 } );
 
-$( '#language_select_5_cancel' ).click( function (ev) {
-    $( '#language_select_5' ).slideUp();
-    $( '#language_select_5' ).empty();
+$( '#caption_language_select_5_cancel' ).click( function (ev) {
+    $( '#caption_language_select_5' ).slideUp();
+    $( '#caption_language_select_5' ).empty();
 } );
 
-$( '#language_select_6_cancel' ).click( function (ev) {
-    $( '#language_select_6' ).slideUp();
-    $( '#language_select_6' ).empty();
+$( '#caption_language_select_6_cancel' ).click( function (ev) {
+    $( '#caption_language_select_6' ).slideUp();
+    $( '#caption_language_select_6' ).empty();
 } );

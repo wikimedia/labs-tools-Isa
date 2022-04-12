@@ -2,56 +2,60 @@
 {% block content %}
 <div class="container text-center page-header">
 
-                    <h2>
-                        {{ _('Caption Languages') }}
-                    </h2> 
-    <hr> 
-    <h4>{{ _('Select upto 6 languages for captions') }}<button type="button" class="btn btn-link py-0" data-container="body" title="{{ _('Caption Languages') }}" data-toggle="popover" data-placement="right" data-trigger="focus"  data-content="{{ _('Captions can be added in multiple languages for each image.')}} {{ _('The languages you select on this page will appear on the page when you are viewing an image.')}} {{_('Select all the languages you are comfortable contributing in.')}}"><i class="fas fa-question-circle"></i></button></h4>
+  <h2>
+    {{ _('Language preferences') }}
+  </h2>
+  <hr>
 </div>
 <div class="container text-center pb-4" style="max-width: 540px; background-color: #eaecf0">
    
     <hr>
     <form class="" method="POST">
-        {{ captions_lang_form.csrf_token }}
-        <div id="language_select_1" class="input-group mb-3">
-            {{ captions_lang_form.language_select_1( id="captions_lang_select_1", class="form-control") }}
+      {{ lang_form.csrf_token }}
+         <h4>{{ _('Depicts language') }}<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="{{ _('The selected language will be used for searching for elements depicted in images.')}} {{_('If &quot;Same as interface&quot; is selected the language selected in the top menu will be used.')}}"><i class="fas fa-question-circle"></i></button></h4>
+         <div id="depicts_language_select" class="input-group mb-3">
+            {{ lang_form.depicts_language_select( id="depicts_lang_select", class="form-control") }}
+         </div>
+         <h4>{{ _('Select upto 6 languages for captions') }}<button type="button" class="btn btn-link py-0" data-container="body" title="{{ _('Caption Languages') }}" data-toggle="popover" data-placement="right" data-trigger="focus"  data-content="{{ _('Captions can be added in multiple languages for each image.')}} {{ _('The languages you select on this page will appear on the page when you are viewing an image.')}} {{_('Select all the languages you are comfortable contributing in.')}}"><i class="fas fa-question-circle"></i></button></h4>
+        <div id="caption_language_select_1" class="input-group mb-3">
+            {{ lang_form.caption_language_select_1( id="captions_lang_select_1", class="form-control") }}
             <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button" id="language_select_1_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
+                <button class="btn btn-outline-danger" type="button" id="caption_language_select_1_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
             </div>
         </div>
-        <div id="language_select_2" class="input-group mb-3">
-            {{ captions_lang_form.language_select_2( id="captions_lang_select_2", class="form-control") }}
+        <div id="caption_language_select_2" class="input-group mb-3">
+            {{ lang_form.caption_language_select_2( id="captions_lang_select_2", class="form-control") }}
             <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button" id="language_select_2_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
+                <button class="btn btn-outline-danger" type="button" id="caption_language_select_2_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
             </div>
         </div>
-        <div id="language_select_3" class="input-group mb-3">
-            {{ captions_lang_form.language_select_3( id="captions_lang_select_3", class="form-control") }}
+        <div id="caption_language_select_3" class="input-group mb-3">
+            {{ lang_form.caption_language_select_3( id="captions_lang_select_3", class="form-control") }}
             <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button" id="language_select_3_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
+                <button class="btn btn-outline-danger" type="button" id="caption_language_select_3_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
             </div>
         </div>
-        <div id="language_select_4" class="input-group mb-3">
-            {{ captions_lang_form.language_select_4( id="captions_lang_select_4", class="form-control") }}
+        <div id="caption_language_select_4" class="input-group mb-3">
+            {{ lang_form.caption_language_select_4( id="captions_lang_select_4", class="form-control") }}
             <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button" id="language_select_4_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
+                <button class="btn btn-outline-danger" type="button" id="caption_language_select_4_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
             </div>
         </div>
-        <div id="language_select_5" class="input-group mb-3">
-            {{ captions_lang_form.language_select_5( id="captions_lang_select_5", class="form-control") }}
+        <div id="caption_language_select_5" class="input-group mb-3">
+            {{ lang_form.caption_language_select_5( id="captions_lang_select_5", class="form-control") }}
             <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button" id="language_select_5_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
+                <button class="btn btn-outline-danger" type="button" id="caption_language_select_5_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
             </div>
         </div>        
-         <div id="language_select_6" class="input-group mb-3">
-            {{ captions_lang_form.language_select_6( id="captions_lang_select_6", class="form-control") }}
+        <div id="caption_language_select_6" class="input-group mb-3">
+            {{ lang_form.caption_language_select_6( id="captions_lang_select_6", class="form-control") }}
             <div class="input-group-append">
-                <button class="btn btn-outline-danger" type="button" id="language_select_6_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
+                <button class="btn btn-outline-danger" type="button" id="caption_language_select_6_cancel" title="{{ _('Remove language') }}"><i class="fa fa-trash"></i></button>
             </div>
         </div>
       <div class="btn-group">
             <a href="{{url_for('users.userSettings') }}" class="btn btn-danger" title="{{ _('Undo changes to language settings') }}">{{ _('Undo Changes') }}</a> &nbsp;
-            {{ captions_lang_form.submit(class="btn btn-primary", value=_('Save'), title="{{ _('Update your language settings') }}") }}
+            {{ lang_form.submit(class="btn btn-primary", value=_('Save'), title="{{ _('Update your language settings') }}") }}
 
        </div>
     </form>
