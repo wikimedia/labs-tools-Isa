@@ -30,15 +30,6 @@ app.config['TEMPLATES_AUTO_RELOAD']
 babel = Babel(app)
 
 
-@app.context_processor
-def utility_processor():
-    def translate(s):
-        # Translate and JSON encode a string. Removes the leading and
-        # trailing double quote that encoding adds.
-        return(json.dumps(gettext(s))[1:-1])
-    return {"_": translate}
-
-
 @app.before_request
 def before_request():
     # Update session language
@@ -88,4 +79,4 @@ def inject_language_choices():
         if mo_file:
             languages.append(language.name)
 
-    return dict(languages=languages)
+    return dict(languages=sorted(languages))

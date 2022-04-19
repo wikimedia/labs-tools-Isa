@@ -87,16 +87,16 @@
 <!-- This is ready to use directly as Campaigns DataTable "language" option-->
 <div class="hidden-i18n-text">
     {
-        "info": "{{ _('Showing _START_ to _END_ of _TOTAL_ entries') }}",
-        "infoEmpty": "{{ _('No entries') }}",
+        "info": {{ _('Showing _START_ to _END_ of _TOTAL_ entries')|tojson }},
+        "infoEmpty": {{ _('No entries')|tojson }},
         "infoFiltered": "",
-        "search": "{{ _('Search:') }}",
-        "zeroRecords": "{{ _('No matching records found') }}",
+        "search": {{ _('Search:')|tojson }},
+        "zeroRecords": {{ _('No matching records found')|tojson }},
         "paginate": {
-            "first": "{{ _('First') }}",
-            "last": "{{ _('Last') }}",
-            "next": "{{ _('Next') }}",
-            "previous": "{{ _('Previous') }}"
+            "first": {{ _('First')|tojson }},
+            "last": {{ _('Last')|tojson }},
+            "next": {{ _('Next')|tojson }},
+            "previous": {{ _('Previous')|tojson }}
         }
     }
 </div>
