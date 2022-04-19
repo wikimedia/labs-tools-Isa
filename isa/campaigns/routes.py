@@ -17,7 +17,7 @@ from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, comp
                                  get_stats_data_points)
 from isa.campaigns import image_updater
 from isa.main.utils import commit_changes_to_db
-from isa.models import Campaign, Contribution, Country, Image
+from isa.models import Campaign, Contribution, Country, Image, User
 from isa.users.utils import (get_user_language_preferences, get_current_user_images_improved)
 
 
@@ -436,7 +436,12 @@ def postContribution():
 @campaigns.route('/api/search-depicts/<int:id>')
 def searchDepicts(id):
     search_term = request.args.get('q')
-    user_lang = session.get('lang', 'en')
+    username = session.get('username', None)
+    user = User.query.filter_by(username=username).first()
+    if user.depicts_language:
+        user_lang = user.depicts_language
+    else:
+        user_lang = session.get('lang', 'en')
     if search_term is None or search_term == '':
         top_depicts = (Contribution.query
                        .with_entities(Contribution.depict_item)

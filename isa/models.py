@@ -14,6 +14,9 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, index=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     caption_languages = db.Column(db.String(25), nullable=False)
+    # Maximum length for language code is 13 because that's the
+    # maximum length in MediaWiki\Languages\Data\Names.
+    depicts_language = db.Column(db.String(13), nullable=False)
     contrib = db.Column(db.Integer, default=0)
 
     def __repr__(self):

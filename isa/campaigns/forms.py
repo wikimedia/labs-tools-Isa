@@ -21,13 +21,3 @@ class CampaignForm(FlaskForm):
     long_description = StringField(widget=widgets.TextArea())
     update_images = BooleanField()
     submit = SubmitField()
-
-
-class CaptionsLanguageForm(FlaskForm):
-    language_select_1 = SelectField(validators=[DataRequired()], choices=getLanguages())
-    language_select_2 = SelectField(validators=[DataRequired()], choices=getLanguages())
-    language_select_3 = SelectField(validators=[DataRequired()], choices=getLanguages())
-    language_select_4 = SelectField(validators=[DataRequired()], choices=getLanguages())
-    language_select_5 = SelectField(validators=[DataRequired()], choices=getLanguages())
-    language_select_6 = SelectField(validators=[DataRequired()], choices=getLanguages())
-    submit = SubmitField()
