@@ -172,7 +172,7 @@ def userSettings():
     else:
         flash(gettext('Language settings not available at the moment'), 'info')
     return render_template('users/user_settings.html',
-                           title=gettext('%(username)s\'s - Settings', username=username),
+                           title=gettext('%(username)s\'s Settings', username=username),
                            current_user=current_user,
                            session_language=session_language,
                            username=username,
