@@ -10,3 +10,4 @@ mysqlclient
 PyMySQL
 nose2
 coverage
+Flask-Migrate>=3.0.1,==3.*

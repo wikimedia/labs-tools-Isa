@@ -192,8 +192,9 @@ def checkUserLogin():
 @users.route('/users/<string:username>/campaigns')
 def getMyCampaigns(username):
     username = session.get('username', None)
+    user = User.query.filter_by(username=username).first()
     session_language = session.get('lang', 'en')
-    user_own_campaigns = Campaign.query.filter_by(campaign_manager=username).all()
+    user_own_campaigns = user.managed_campaigns
     return render_template('users/own_campaigns.html',
                            title=gettext('Campaigns created by %(username)s', username=username),
                            session_language=session_language,

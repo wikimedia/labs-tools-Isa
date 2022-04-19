@@ -7,10 +7,10 @@ translation directory.
 
 import argparse
 import glob
-from subprocess import run as run_subprocess
-import sys
 
 from babel.messages import pofile
+
+from .utils import run
 
 
 PO_PATH = "isa/translations/*/LC_MESSAGES/messages.po"
@@ -18,14 +18,6 @@ PO_PATH = "isa/translations/*/LC_MESSAGES/messages.po"
 
 def update_repo():
     run("git pull")
-
-
-def run(command):
-    print("\033[0;34m> {}\033[00m".format(command))
-    process = run_subprocess(command, shell=True)
-    if process.returncode:
-        print("\033[0;31mError while running command, see above.\033[00m", file=sys.stderr)
-        sys.exit(1)
 
 
 def preprocess_files():

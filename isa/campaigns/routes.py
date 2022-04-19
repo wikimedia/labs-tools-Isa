@@ -49,7 +49,7 @@ def getCampaignById(id):
     session_language = session.get('lang', None)
     if not session_language:
         session_language = 'en'
-    campaign = Campaign.query.filter_by(id=id).first()
+    campaign = Campaign.query.get(id)
     if not campaign:
         flash(gettext('Campaign with id %(id)s does not exist', id=id), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
@@ -110,7 +110,7 @@ def getCampaignById(id):
     country_names = sorted([c.name for c in countries])
     return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
                             campaign=campaign,
-                            campaign_manager=campaign.campaign_manager,
+                            manager=campaign.manager,
                             username=username,
                             campaign_image=campaign_image,
                             session_language=session_language,
@@ -197,11 +197,12 @@ def CreateCampaign():
                 campaign_end_date = None
             else:
                 campaign_end_date = datetime.strptime(form.end_date.data, '%Y-%m-%d')
+            user = User.query.filter_by(username=username).first()
             campaign = Campaign(
                 campaign_name=form.campaign_name.data,
                 categories=form_categories,
                 start_date=datetime.strptime(form.start_date.data, '%Y-%m-%d'),
-                campaign_manager=username,
+                manager=user,
                 end_date=campaign_end_date,
                 status=compute_campaign_status(campaign_end_date),
                 short_description=form.short_description.data,
@@ -266,68 +267,71 @@ def updateCampaign(id):
     if not username:
         flash(gettext('You need to Login to update a campaign'), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
-    else:
-        # when the form is submitted, we update the campaign
-        # TODO: Check if campaign is closed so that it cannot be edited again
-        # This is a potential issue/Managerial
-        if form.is_submitted():
-            campaign_end_date = None
-            if form.end_date.data == '':
-                campaign_end_date = None
-            else:
-                campaign_end_date = datetime.strptime(form.end_date.data, '%Y-%m-%d')
-            campaign = Campaign.query.filter_by(id=id).first()
-            campaign.campaign_name = form.campaign_name.data
-            campaign.campaign_manager = username
-            campaign.short_description = form.short_description.data
-            campaign.long_description = form.long_description.data
-            campaign.depicts_metadata = form.depicts_metadata.data
-            campaign.captions_metadata = form.captions_metadata.data
-            campaign.categories = form.categories.data
-            campaign.start_date = datetime.strptime(form.start_date.data, '%Y-%m-%d')
-            campaign.campaign_image = form.campaign_image.data
-            campaign.campaign_type = form.campaign_type.data
-            campaign.end_date = campaign_end_date
-            if commit_changes_to_db():
-                flash(gettext('Campaign update failed please try later!'), 'danger')
-            else:
-                if form.update_images.data:
-                    image_updater.update_in_thread(id)
-                flash(gettext('Update Succesfull !'), 'success')
-                return redirect(url_for('campaigns.getCampaignById', id=id))
-        # User requests to edit so we update the form with Campaign details
-        elif request.method == 'GET':
-            # we get the campaign data to place in form fields
-            campaign = Campaign.query.filter_by(id=id).first()
 
-            if campaign.campaign_manager != username:
-                flash(gettext('You cannot update this campaign, Contact Manager User:%(campaign_manager)s ',
-                              campaign_manager=campaign.campaign_manager), 'info')
-                return redirect(url_for('campaigns.getCampaignById', id=id))
-            form.campaign_name.data = campaign.campaign_name
-            form.short_description.data = campaign.short_description
-            form.long_description.data = campaign.long_description
-            form.categories.data = campaign.categories
-            form.campaign_images.data = campaign.campaign_images
-            form.start_date.data = campaign.start_date
-            form.depicts_metadata.data = campaign.depicts_metadata
-            form.campaign_image.data = campaign.campaign_image
-            form.captions_metadata.data = campaign.captions_metadata
-            form.campaign_type.data = campaign.campaign_type
-            form.end_date.data = campaign.end_date
+    user = User.query.filter_by(username=username).first()
+    # when the form is submitted, we update the campaign
+    # TODO: Check if campaign is closed so that it cannot be edited again
+    # This is a potential issue/Managerial
+    if form.is_submitted():
+        campaign_end_date = None
+        if form.end_date.data == '':
+            campaign_end_date = None
         else:
-            flash(gettext('Booo! %(campaign_name)s Could not be updated!',
-                          campaign_name=form.campaign_name.data), 'danger')
-        session['next_url'] = request.url
-        return render_template('campaign/campaign-form.html',
-                               is_update=True,
-                               title=gettext('%(campaign_name)s - Update',
-                                             campaign_name=campaign.campaign_name),
-                               campaign=campaign,
-                               form=form,
-                               session_language=session_language,
-                               current_user=current_user,
-                               username=username)
+            campaign_end_date = datetime.strptime(form.end_date.data, '%Y-%m-%d')
+        campaign = Campaign.query.get(id)
+        campaign.campaign_name = form.campaign_name.data
+        campaign.manager = user
+        campaign.short_description = form.short_description.data
+        campaign.long_description = form.long_description.data
+        campaign.depicts_metadata = form.depicts_metadata.data
+        campaign.captions_metadata = form.captions_metadata.data
+        campaign.categories = form.categories.data
+        campaign.start_date = datetime.strptime(form.start_date.data, '%Y-%m-%d')
+        campaign.campaign_image = form.campaign_image.data
+        campaign.campaign_type = form.campaign_type.data
+        campaign.end_date = campaign_end_date
+        if commit_changes_to_db():
+            flash(gettext('Campaign update failed please try later!'), 'danger')
+        else:
+            if form.update_images.data:
+                image_updater.update_in_thread(id)
+            flash(gettext('Update Succesfull !'), 'success')
+            return redirect(url_for('campaigns.getCampaignById', id=id))
+
+    # User requests to edit so we update the form with Campaign details
+    elif request.method == 'GET':
+        # we get the campaign data to place in form fields
+        campaign = Campaign.query.filter_by(id=id).first()
+
+        if campaign.manager != user:
+            flash(gettext('You cannot update this campaign, Contact Manager User:%(username)s ',
+                          username=campaign.manager.username), 'info')
+            return redirect(url_for('campaigns.getCampaignById', id=id))
+
+        form.campaign_name.data = campaign.campaign_name
+        form.short_description.data = campaign.short_description
+        form.long_description.data = campaign.long_description
+        form.categories.data = campaign.categories
+        form.campaign_images.data = campaign.campaign_images
+        form.start_date.data = campaign.start_date
+        form.depicts_metadata.data = campaign.depicts_metadata
+        form.campaign_image.data = campaign.campaign_image
+        form.captions_metadata.data = campaign.captions_metadata
+        form.campaign_type.data = campaign.campaign_type
+        form.end_date.data = campaign.end_date
+    else:
+        flash(gettext('Booo! %(campaign_name)s Could not be updated!',
+                      campaign_name=form.campaign_name.data), 'danger')
+    session['next_url'] = request.url
+    return render_template('campaign/campaign-form.html',
+                           is_update=True,
+                           title=gettext('%(campaign_name)s - Update',
+                                         campaign_name=campaign.campaign_name),
+                           campaign=campaign,
+                           form=form,
+                           session_language=session_language,
+                           current_user=current_user,
+                           username=username)
 
 
 @campaigns.route('/api/get-campaign-categories')
@@ -367,69 +371,71 @@ def postContribution():
         # User is not logged in so we set the next url to redirect them after login
         session['next_url'] = request.url
         return redirect(url_for('campaigns.contributeToCampaign', id=campaign_id))
-    else:
-        contrib_list = []
-        for data in contrib_data_list:
-            valid_actions = [
-                "wbsetclaim",
-                "wbremoveclaims",
-                "wbsetlabel"
-            ]
-            if data["api_options"]["action"] not in valid_actions:
-                abort(400)
 
-            contribution = Contribution(username=username,
-                                        campaign_id=int(campaign_id),
-                                        file=data['image'],
-                                        edit_action=data['edit_action'],
-                                        edit_type=data['edit_type'],
-                                        country=data['country'],
-                                        depict_item=data.get('depict_item'),
-                                        depict_prominent=data.get('depict_prominent'),
-                                        caption_language=data.get('caption_language'),
-                                        caption_text=data.get('caption_text'),
-                                        date=datetime.date(datetime.utcnow()))
-            contrib_list.append(contribution)
+    user = User.query.filter_by(username=username).first()
+    contrib_list = []
+    for data in contrib_data_list:
+        valid_actions = [
+            "wbsetclaim",
+            "wbremoveclaims",
+            "wbsetlabel"
+        ]
+        if data["api_options"]["action"] not in valid_actions:
+            abort(400)
 
-        # We write the api_options for the contributions into a list
-        for contrib_data in contrib_data_list:
-            contrib_options_list.append(contrib_data['api_options'])
+        contribution = Contribution(user=user,
+                                    campaign_id=int(campaign_id),
+                                    file=data['image'],
+                                    edit_action=data['edit_action'],
+                                    edit_type=data['edit_type'],
+                                    country=data['country'],
+                                    depict_item=data.get('depict_item'),
+                                    depict_prominent=data.get('depict_prominent'),
+                                    caption_language=data.get('caption_language'),
+                                    caption_text=data.get('caption_text'),
+                                    date=datetime.date(datetime.utcnow()))
+        contrib_list.append(contribution)
 
-        for i in range(len(contrib_options_list)):
-            # We make an api call with the current contribution data and get baserevid
-            csrf_token, api_auth_token = generate_csrf_token(
-                app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
-                session.get('access_token')['key'],
-                session.get('access_token')['secret']
-            )
-            lastrevid = make_edit_api_call(csrf_token,
-                                           api_auth_token,
-                                           contrib_data_list[i])
+    # We write the api_options for the contributions into a list
+    for contrib_data in contrib_data_list:
+        contrib_options_list.append(contrib_data['api_options'])
 
-            if lastrevid is not None:
-                # We check if the previous edit was successfull
-                # We then add the contribution to the db session
-                db.session.add(contrib_list[i])
+    for i in range(len(contrib_options_list)):
+        # We make an api call with the current contribution data and get baserevid
+        csrf_token, api_auth_token = generate_csrf_token(
+            app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
+            session.get('access_token')['key'],
+            session.get('access_token')['secret']
+        )
+        lastrevid = make_edit_api_call(csrf_token,
+                                       api_auth_token,
+                                       contrib_data_list[i])
 
-                # Check that there are still elements in the list in order to pop
-                if len(contrib_options_list) > 1:
-                    # We take out the first element of the data list
-                    contrib_options_list.pop(0)
+        if lastrevid is not None:
+            # We check if the previous edit was successfull
+            # We then add the contribution to the db session
+            db.session.add(contrib_list[i])
 
-                    # We assign the baserevid of the next data list of api_options
-                    # If there is a next element in the data list
-                    next_api_options = contrib_options_list[0]
-                    next_api_options['baserevid'] = lastrevid
-            else:
-                return("Failure")
-            # We store the latest revision id to be sent to client
-            latest_base_rev_id = lastrevid
+            # Check that there are still elements in the list in order to pop
+            if len(contrib_options_list) > 1:
+                # We take out the first element of the data list
+                contrib_options_list.pop(0)
 
-        # We attempt to save the changes to db
-        if commit_changes_to_db():
-            return("Failure")
+                # We assign the baserevid of the next data list of api_options
+                # If there is a next element in the data list
+                next_api_options = contrib_options_list[0]
+                next_api_options['baserevid'] = lastrevid
         else:
-            return (str(latest_base_rev_id))
+            return("Failure")
+        # We store the latest revision id to be sent to client
+        latest_base_rev_id = lastrevid
+
+    # We attempt to save the changes to db
+    if commit_changes_to_db():
+        return("Failure")
+    else:
+        return (str(latest_base_rev_id))
+
     return("Failure")
 
 
