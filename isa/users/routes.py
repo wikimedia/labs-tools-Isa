@@ -71,7 +71,7 @@ def oauth_callback():
         session['access_token'] = dict(zip(
             access_token._fields, access_token))
         session['username'] = identity['username']
-        flash(gettext('Welcome  %(username)s!', username=session['username']), 'success')
+        flash(gettext('Welcome %(username)s!', username=session['username']), 'success')
         if session.get('next_url'):
             next_url = session.get('next_url')
             session.pop('next_url', None)
