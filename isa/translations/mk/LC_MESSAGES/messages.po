@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-03-17 12:17:32+0000\n"
-"X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
+"PO-Revision-Date: 2022-04-21 11:17:17+0000\n"
+"X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: mk\n"
@@ -22,74 +22,66 @@ msgstr ""
 msgid "Campaigns"
 msgstr "Походи"
 
-#: campaigns/routes.py:54 campaigns/routes.py:136
+#: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "Не постои поход со назнаката %(id)s"
 
-#: campaigns/routes.py:109 campaigns/routes.py:161
+#: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
 msgstr "Поход - "
 
-#: campaigns/routes.py:184
+#: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
 msgstr "Ќе треба да се најавите за да созададете поход"
 
-#: campaigns/routes.py:214
+#: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr "За жал, не можев да го создадам походот %(campaign_name)s"
 
-#: campaigns/routes.py:222
+#: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr "Создаден е походот %(campaign_name)s!"
 
-#: campaigns/routes.py:225
+#: campaigns/routes.py:228
 msgid "Create a campaign"
 msgstr "Создај поход"
 
-#: campaigns/routes.py:238
-msgid "Images are being loaded for this campaign. Try again later."
-msgstr "Се вчитуваат сликите за овој поход. Обидете се подоцна."
-
-#: campaigns/routes.py:241
-msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr "Не успеав да ги вчитам сликите за походот. Поодот ќе треба да се поднови од неговиот раководител."
-
-#: campaigns/routes.py:252
+#: campaigns/routes.py:248
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s — Учествувајте"
 
-#: campaigns/routes.py:271
+#: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
 msgstr "Ќе треба да се најавите за да подновите поход"
 
-#: campaigns/routes.py:298
+#: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
 msgstr "Подновата на походот не успеа. Обидете се подоцна!"
 
-#: campaigns/routes.py:301
+#: campaigns/routes.py:296
 msgid "Update Succesfull !"
 msgstr "Обновата е успешна!"
 
-#: campaigns/routes.py:309
+#: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
 msgstr "Не можете да го подновите овој похо. Обратете се кај раководителот User:%(campaign_manager)s "
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:319
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr "За жал, не можев да го подновам походот %(campaign_name)s!"
 
-#: campaigns/routes.py:329
+#: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s — Поднова"
 
-#: campaigns/routes.py:377
+#: campaigns/routes.py:366
 msgid "You need to login to participate"
 msgstr "Ќе треба да се најавите за да учествувате"
 
@@ -207,81 +199,97 @@ msgstr "Категориите со црвено немаат исправна �
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
 msgstr "Отстранете го елементот или отштиклирајте го „Поход Вики сака“ горе"
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:172
+msgid "Update images"
+msgstr "Поднови слики"
+
+#: templates/campaign/campaign-form.html:174
+msgid "Collect images from the categories."
+msgstr "Собери слики од категориите."
+
+#: templates/campaign/campaign-form.html:174
+msgid "This will replace any current images."
+msgstr "Ова ќе ги замени тековните слики."
+
+#: templates/campaign/campaign-form.html:174
+msgid "Use if you changed the categories or if there was an error updating previously."
+msgstr "Ако ги имате сменето категориите или наидовте на грешка при претходна поднова."
+
+#: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
 msgstr "Метаподатоци за собирање во походот"
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
 msgstr "Изберете кои видови на <strong>метаподатоци</strong> сакате да собирате во походот."
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
 msgstr "Мора да изберете барем една од долунаведените можности."
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data see the help page."
 msgstr "За да дознаете повеќе за метаподатоците за прикажано и толкување, погледајте ја помошната страница."
 
-#: templates/campaign/campaign-form.html:176
+#: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
 msgstr "Прикажува"
 
-#: templates/campaign/campaign-form.html:188
+#: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
 msgstr "Изберете за да собирате метаподатоци за прикажување во походот"
 
-#: templates/campaign/campaign-form.html:191
+#: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
 msgstr "Толкувања"
 
-#: templates/campaign/campaign-form.html:203
+#: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
 msgstr "Изберете за да собирате метаподатоци за толкување во походот"
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
 msgstr "Слика на походот"
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
 msgstr "Најголемата допуштена висина на сликата на походот изнесува 150 пиксели. Сликите треба да имаат долгнавест плакатен облик или да бидат логоа."
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
 msgstr "Не се препорачуваат исправени или квадратни слики."
 
-#: templates/campaign/campaign-form.html:222
+#: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
 msgstr "Внесете го само ИМЕТО НА ПОДАТОТЕКАТА на сликата од Ризницата која ќе се прикажува на главната страница за походот."
 
-#: templates/campaign/campaign-form.html:228
+#: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
 msgstr "Долг опис на походот (целосни информации за него)"
 
-#: templates/campaign/campaign-form.html:240
+#: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
 msgstr "Зошто е важно да се учествува на походот?"
 
-#: templates/campaign/campaign-form.html:246
+#: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
 msgstr "Објави поход"
 
-#: templates/campaign/campaign-form.html:256
+#: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
 msgstr "Мора да изберете барем една категорија за вашиот поход."
 
-#: templates/campaign/campaign-form.html:257
+#: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
 msgstr "Некои од избраните категории немаат исправна синтакса за поход „Вики сака“."
 
-#: templates/campaign/campaign-form.html:258
+#: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
 msgstr "Проверете си го избраното и обидете се пак."
 
-#: templates/campaign/campaign-form.html:259
+#: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
 msgstr "Изберете барем еден вид на метаподаток за собирање"
 
@@ -293,123 +301,118 @@ msgstr "Погл. слики од"
 msgid "Choose to only view images from a single country"
 msgstr "Изберете да гледате слики само од една земја"
 
-#: templates/campaign/campaign.html:20
-msgid "Loading..."
-msgstr "Вчитувам..."
-
-#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
+#: templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
 msgstr "Почнете со учество во походов"
 
-#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
-#: templates/campaign/campaigns.html:33
+#: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
 msgstr "Започнете"
 
-#: templates/campaign/campaign.html:34
+#: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
 msgstr "Досегашен напредок на походот"
 
-#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
 msgstr "Вкупно слики во походов"
 
-#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
 msgstr "Слики"
 
-#: templates/campaign/campaign.html:38
-#: templates/campaign/campaign_stats.html:21
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
 msgstr "Вкупно придонеси кон походов"
 
-#: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
-#: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
-#: templates/campaign/campaign_stats.html:21
-#: templates/campaign/campaign_stats.html:45
-#: templates/campaign/campaign_stats.html:77
+#: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
+#: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
+#: templates/campaign/campaign_stats.html:20
+#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
 msgstr "Придонеси"
 
-#: templates/campaign/campaign.html:43
-#: templates/campaign/campaign_stats.html:40
+#: templates/campaign/campaign.html:42
+#: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
 msgstr "Најплодни учесници"
 
-#: templates/campaign/campaign.html:47
-#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign.html:46
+#: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
 msgstr "Учесник"
 
-#: templates/campaign/campaign.html:66
-#: templates/campaign/campaign_stats.html:63
+#: templates/campaign/campaign.html:65
+#: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
 msgstr "Во походов не учествувал ниеден учесник"
 
-#: templates/campaign/campaign.html:75
-#: templates/campaign/campaign_stats.html:72
+#: templates/campaign/campaign.html:74
+#: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
 msgstr "Најподобрени земји"
 
-#: templates/campaign/campaign.html:79
-#: templates/campaign/campaign_stats.html:76
+#: templates/campaign/campaign.html:78
+#: templates/campaign/campaign_stats.html:75
 msgid "Country"
 msgstr "Земја"
 
-#: templates/campaign/campaign.html:98
-#: templates/campaign/campaign_stats.html:95
+#: templates/campaign/campaign.html:97
+#: templates/campaign/campaign_stats.html:94
 msgid "There is no data available yet for this campaign"
 msgstr "Засега нема расположиви податоци за овој поход"
 
-#: templates/campaign/campaign.html:106
+#: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
 msgstr "Погледајте и преземете повеќе статистики за походов"
 
-#: templates/campaign/campaign.html:106
+#: templates/campaign/campaign.html:105
 msgid "View full stats"
 msgstr "Подл. сите статистики"
 
-#: templates/campaign/campaign.html:117
+#: templates/campaign/campaign.html:116
 msgid "My Contributions"
 msgstr "Мои придонеси"
 
-#: templates/campaign/campaign.html:124
+#: templates/campaign/campaign.html:123
 msgid "Rank"
 msgstr "Ранг"
 
-#: templates/campaign/campaign.html:142
+#: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
 msgstr "Повеќе за походов"
 
-#: templates/campaign/campaign.html:144
+#: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
 msgstr "Раководител на походот"
 
-#: templates/campaign/campaign.html:146
+#: templates/campaign/campaign.html:145
 msgid "START DATE"
 msgstr "ПОЧЕТЕН ДАТУМ"
 
-#: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
+#: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
 msgstr "ЗАВРШЕН ДАТУМ"
 
-#: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
+#: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
 msgstr "Незададено"
 
-#: templates/campaign/campaign.html:157
+#: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
 msgstr "Направете измени во походов"
 
-#: templates/campaign/campaign.html:157
+#: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
 msgstr "Уреди поход"
 
-#: templates/campaign/campaign.html:163
+#: templates/campaign/campaign.html:162
 msgid "Unknown country"
 msgstr "Непозната земја"
 
@@ -492,7 +495,7 @@ msgstr "Зачувајте си ги уредувањата на Ризница�
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
-#: templates/users/user_settings.html:54
+#: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "Зачувај"
 
@@ -592,15 +595,15 @@ msgstr "Од"
 msgid "Till"
 msgstr "До"
 
-#: templates/campaign/campaign_stats.html:109
+#: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
 msgstr "Преземи ги сите статистики (CSV)"
 
-#: templates/campaign/campaign_stats.html:114
+#: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
 msgstr "Статистика за учесниците"
 
-#: templates/campaign/campaign_stats.html:115
+#: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
 msgstr "Статистика за земјите"
 
@@ -738,13 +741,37 @@ msgstr "Следно"
 msgid "Previous"
 msgstr "Претходно"
 
-#: templates/campaign/macros.html:3
-msgid "Processing..."
-msgstr "Обработувам..."
+#: templates/campaign/macros.html:4
+msgid "Updating images"
+msgstr "Поднова на слики"
 
-#: templates/campaign/macros.html:5
-msgid "Error!"
-msgstr "Грешка!"
+#: templates/campaign/macros.html:4
+msgid "The images for this campaign are being updated."
+msgstr "Сликите за овој поход се подновуваат."
+
+#: templates/campaign/macros.html:4
+msgid "More images will be added."
+msgstr "Ќе бидат додадени уште слики."
+
+#: templates/campaign/macros.html:4 templates/campaign/macros.html:8
+msgid "You can still participate in the campaign."
+msgstr "Сè уште можете да учествувате во походот."
+
+#: templates/campaign/macros.html:8
+msgid "Failed to update images"
+msgstr "Не успеав да ги подновам сликите"
+
+#: templates/campaign/macros.html:8
+msgid "There was an error while updating the images for this campaign."
+msgstr "Се појави грешка при подновувањето на сликите за овој поход."
+
+#: templates/campaign/macros.html:8
+msgid "Some images will be missing."
+msgstr "Некои слики ќе недостасуваат."
+
+#: templates/campaign/macros.html:8
+msgid "The campaign manager can retry by updating the campaign."
+msgstr "Раководителот на походот повторно ќе се обиде да го поднови походот."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
@@ -1202,39 +1229,59 @@ msgstr "Немате ниеден поход"
 msgid "#"
 msgstr "Бр."
 
-#: templates/users/user_settings.html:6 templates/users/user_settings.html:9
-msgid "Caption Languages"
-msgstr "Јазици на толкувањето"
+#: templates/users/user_settings.html:6
+msgid "Language preferences"
+msgstr "Јазични нагодувања"
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:15
+msgid "Depicts language"
+msgstr "Јазик на прикажаното"
+
+#: templates/users/user_settings.html:15
+msgid "The selected language will be used for searching for elements depicted in images."
+msgstr "Избраниот јазик ќе се користи за пребарување на елементи прикажани во сликите."
+
+#: templates/users/user_settings.html:15
+msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
+msgstr "Ако е избрано „Исто како посредникот“, ќе се користи јазикот избран во менито најгоре."
+
+#: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
 msgstr "Изберете до 6 јазици за толкувањата"
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
+msgid "Caption Languages"
+msgstr "Јазици на толкувањето"
+
+#: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
 msgstr "Толкувањата можат да се додадат на повеќе јазици за секоја слика."
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
 msgstr "Јазиците што ги избирате на оваа страница ќе прикажуваат на страницата кога гледате слика."
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
 msgstr "Изберете ги сите јазици на кои лесно умеете да придонесувате."
 
-#: templates/users/user_settings.html:19 templates/users/user_settings.html:25
-#: templates/users/user_settings.html:31 templates/users/user_settings.html:37
-#: templates/users/user_settings.html:43 templates/users/user_settings.html:49
+#: templates/users/user_settings.html:23 templates/users/user_settings.html:29
+#: templates/users/user_settings.html:35 templates/users/user_settings.html:41
+#: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
 msgstr "Отстрани јазик"
 
-#: templates/users/user_settings.html:53
+#: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
 msgstr "Откажи промени во јазичните нагодувања"
 
-#: templates/users/user_settings.html:53
+#: templates/users/user_settings.html:57
 msgid "Undo Changes"
 msgstr "Откажи промени"
+
+#: users/forms.py:26
+msgid "Same as interface"
+msgstr "Исто како посредникот"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
@@ -1242,7 +1289,7 @@ msgstr "Повикувањето на OAuth не успеа. Да не ви се
 
 #: users/routes.py:74
 #, python-format
-msgid "Welcome  %(username)s!"
+msgid "Welcome %(username)s!"
 msgstr "Добре дојдовте %(username)s!"
 
 #: users/routes.py:88
@@ -1253,29 +1300,29 @@ msgstr "Се гледаме нареден пат!"
 msgid "Please login to change your language preferences"
 msgstr "Најавете се за да ги измените јазичните нагодувања"
 
-#: users/routes.py:143
+#: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "Се обидовте да внесете %(rep_languages)s повеќе пати"
 
-#: users/routes.py:156
+#: users/routes.py:157
 msgid "Captions languages could not be set"
 msgstr "Не можев да ги зададам јазиците на толкувањата"
 
-#: users/routes.py:158
+#: users/routes.py:159
 msgid "Preferred Languages set Successfully"
 msgstr "Претпочитаните јазици се успешно зададени"
 
-#: users/routes.py:170
+#: users/routes.py:172
 msgid "Language settings not available at the moment"
 msgstr "Јазичните нагодувања во моментов се недостапни"
 
-#: users/routes.py:172
+#: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
 msgstr "%(username)s's — Нагодувања"
 
-#: users/routes.py:195
+#: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Походи создадени од %(username)s"

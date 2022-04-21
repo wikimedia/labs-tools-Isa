@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2022-04-11 11:17:45+0000\n"
+"PO-Revision-Date: 2022-04-21 11:17:17+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
-"X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
+"X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "X-Generator: MediaWiki 1.39.0-alpha; Translate 2022-01-19\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
@@ -36,74 +36,66 @@ msgstr ""
 msgid "Campaigns"
 msgstr "Campagnes"
 
-#: campaigns/routes.py:54 campaigns/routes.py:136
+#: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "La campagne d’identifiant %(id)s n’existe pas"
 
-#: campaigns/routes.py:109 campaigns/routes.py:161
+#: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
 msgstr "Campagne – "
 
-#: campaigns/routes.py:184
+#: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
 msgstr "Vous devez vous connecter pour créer une campagne"
 
-#: campaigns/routes.py:214
+#: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr "Désolé, %(campaign_name)s n’a pas pu être créée"
 
-#: campaigns/routes.py:222
+#: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr "Campagne %(campaign_name)s créée !"
 
-#: campaigns/routes.py:225
+#: campaigns/routes.py:228
 msgid "Create a campaign"
 msgstr "Créer une campagne"
 
-#: campaigns/routes.py:238
-msgid "Images are being loaded for this campaign. Try again later."
-msgstr "Des images sont en cours de chargement pour cette campagne. Veuillez réessayer plus tard."
-
-#: campaigns/routes.py:241
-msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr "Le chargement des images pour la campagne a échoué. Le gestionnaire de cette campagne devra la mettre à jour."
-
-#: campaigns/routes.py:252
+#: campaigns/routes.py:248
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s – Contribuer"
 
-#: campaigns/routes.py:271
+#: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
 msgstr "Vous devez vous connecter pour mettre à jour une campagne"
 
-#: campaigns/routes.py:298
+#: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
 msgstr "La mise à jour de la campagne a échoué, veuillez essayer ultérieurement !"
 
-#: campaigns/routes.py:301
+#: campaigns/routes.py:296
 msgid "Update Succesfull !"
 msgstr "Mise à jour réussie !"
 
-#: campaigns/routes.py:309
+#: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
 msgstr "Vous ne pouvez pas mettre à jour cette campagne, contactez l’utilisateur gestionnaire : %(campaign_manager)s "
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:319
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr "Désolé, %(campaign_name)s n’a pas pu être mis à jour !"
 
-#: campaigns/routes.py:329
+#: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s – Mise à jour"
 
-#: campaigns/routes.py:377
+#: campaigns/routes.py:366
 msgid "You need to login to participate"
 msgstr "Vous devez vous connecter pour participer"
 
@@ -221,81 +213,97 @@ msgstr "Les catégories en rouge n’ont pas la bonne syntaxe pour la fonctionna
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
 msgstr "Veuillez les supprimer ou décocher la case « Campagne Wiki aime » ci-dessus"
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:172
+msgid "Update images"
+msgstr "Mettre à jour les images"
+
+#: templates/campaign/campaign-form.html:174
+msgid "Collect images from the categories."
+msgstr "Collecter les images depuis les catégories."
+
+#: templates/campaign/campaign-form.html:174
+msgid "This will replace any current images."
+msgstr "Cela remplacera toutes les images actuelles."
+
+#: templates/campaign/campaign-form.html:174
+msgid "Use if you changed the categories or if there was an error updating previously."
+msgstr "Utilisez ceci si vous avez changé les catégories ou si une erreur de mise à jour est précédemment survenue."
+
+#: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
 msgstr "Métadonnées à collecter dans la campagne"
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
 msgstr "Choisir quel type de <strong>métadonnées</strong> vous voulez collecter dans votre campagne."
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
 msgstr "Vous devez sélectionner au moins une des options ci-dessous."
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data see the help page."
 msgstr "Pour en savoir plus sur les métadonnées « Décrit » (''Depict'') et « Légende » (''Caption''), voir la page d’aide."
 
-#: templates/campaign/campaign-form.html:176
+#: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
 msgstr "Décrit"
 
-#: templates/campaign/campaign-form.html:188
+#: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
 msgstr "Sélectionner pour collecter les métadonnées « Décrit » dans la campagne"
 
-#: templates/campaign/campaign-form.html:191
+#: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
 msgstr "Légendes"
 
-#: templates/campaign/campaign-form.html:203
+#: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
 msgstr "Sélectionner pour collecter les métadonnées « Légende » dans la campagne"
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
 msgstr "Image de la campagne"
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
 msgstr "La hauteur maximale pour l’image de la campagne est 150px. Les images doivent être soit une bannière, soit un logo."
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
 msgstr "Les photos en mode portrait ou carrées ne sont pas recommandées."
 
-#: templates/campaign/campaign-form.html:222
+#: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
 msgstr "Saisir le NOM DE FICHIER seulement d’une image hébergée sur Wikimedia Commons à afficher sur la page d’accueil de la campagne."
 
-#: templates/campaign/campaign-form.html:228
+#: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
 msgstr "Description longue de la campagne (infos complètes à propos)"
 
-#: templates/campaign/campaign-form.html:240
+#: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
 msgstr "Pourquoi est-ce important que les utilisateurs contribuent à la campagne ?"
 
-#: templates/campaign/campaign-form.html:246
+#: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
 msgstr "Publier la campagne"
 
-#: templates/campaign/campaign-form.html:256
+#: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
 msgstr "Vous devez sélectionner au moins une catégorie pour votre campagne."
 
-#: templates/campaign/campaign-form.html:257
+#: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
 msgstr "Certaines des catégories que vous avez choisies n’ont pas la bonne syntaxe pour une campagne « Wiki Love »."
 
-#: templates/campaign/campaign-form.html:258
+#: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
 msgstr "Veuillez vérifier vos sélections et réessayer."
 
-#: templates/campaign/campaign-form.html:259
+#: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
 msgstr "Veuillez sélectionner au moins un type de métadonnées dans la section collecte"
 
@@ -307,123 +315,118 @@ msgstr "Afficher les images de"
 msgid "Choose to only view images from a single country"
 msgstr "Choisir de n’afficher que les images d’un unique pays"
 
-#: templates/campaign/campaign.html:20
-msgid "Loading..."
-msgstr "Chargement en cours..."
-
-#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
+#: templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
 msgstr "Commencer à contribuer à cette campagne"
 
-#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
-#: templates/campaign/campaigns.html:33
+#: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
 msgstr "Démarrer"
 
-#: templates/campaign/campaign.html:34
+#: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
 msgstr "Progrès de la campagne jusqu’à présent"
 
-#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
 msgstr "Nombre total d’images dans cette campagne"
 
-#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
 msgstr "Images"
 
-#: templates/campaign/campaign.html:38
-#: templates/campaign/campaign_stats.html:21
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
 msgstr "Nombre total de contributions faites dans cette campagne"
 
-#: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
-#: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
-#: templates/campaign/campaign_stats.html:21
-#: templates/campaign/campaign_stats.html:45
-#: templates/campaign/campaign_stats.html:77
+#: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
+#: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
+#: templates/campaign/campaign_stats.html:20
+#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
 msgstr "Contributions"
 
-#: templates/campaign/campaign.html:43
-#: templates/campaign/campaign_stats.html:40
+#: templates/campaign/campaign.html:42
+#: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
 msgstr "Meilleurs contributeurs"
 
-#: templates/campaign/campaign.html:47
-#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign.html:46
+#: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
 msgstr "Contributeur"
 
-#: templates/campaign/campaign.html:66
-#: templates/campaign/campaign_stats.html:63
+#: templates/campaign/campaign.html:65
+#: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
 msgstr "Aucun participant n’a contribué à cette campagne"
 
-#: templates/campaign/campaign.html:75
-#: templates/campaign/campaign_stats.html:72
+#: templates/campaign/campaign.html:74
+#: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
 msgstr "Pays les mieux améliorés"
 
-#: templates/campaign/campaign.html:79
-#: templates/campaign/campaign_stats.html:76
+#: templates/campaign/campaign.html:78
+#: templates/campaign/campaign_stats.html:75
 msgid "Country"
 msgstr "Pays"
 
-#: templates/campaign/campaign.html:98
-#: templates/campaign/campaign_stats.html:95
+#: templates/campaign/campaign.html:97
+#: templates/campaign/campaign_stats.html:94
 msgid "There is no data available yet for this campaign"
 msgstr "Il n’y a pas encore de données disponibles pour cette campagne"
 
-#: templates/campaign/campaign.html:106
+#: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
 msgstr "Afficher et télécharger plus de statistiques pour cette campagne"
 
-#: templates/campaign/campaign.html:106
+#: templates/campaign/campaign.html:105
 msgid "View full stats"
 msgstr "Afficher les statistiques complètes"
 
-#: templates/campaign/campaign.html:117
+#: templates/campaign/campaign.html:116
 msgid "My Contributions"
 msgstr "Mes contributions"
 
-#: templates/campaign/campaign.html:124
+#: templates/campaign/campaign.html:123
 msgid "Rank"
 msgstr "Rang"
 
-#: templates/campaign/campaign.html:142
+#: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
 msgstr "Plus au sujet de cette campagne"
 
-#: templates/campaign/campaign.html:144
+#: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
 msgstr "Gestionnaire de la campagne"
 
-#: templates/campaign/campaign.html:146
+#: templates/campaign/campaign.html:145
 msgid "START DATE"
 msgstr "DATE DE DÉBUT"
 
-#: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
+#: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
 msgstr "DATE DE FIN"
 
-#: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
+#: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
 msgstr "Non défini"
 
-#: templates/campaign/campaign.html:157
+#: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
 msgstr "Modifier la campagne"
 
-#: templates/campaign/campaign.html:157
+#: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
 msgstr "Modifier la campagne"
 
-#: templates/campaign/campaign.html:163
+#: templates/campaign/campaign.html:162
 msgid "Unknown country"
 msgstr "Pays inconnu"
 
@@ -506,7 +509,7 @@ msgstr "Enregistrer vos modifications vers Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
-#: templates/users/user_settings.html:54
+#: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "Enregistrer"
 
@@ -606,15 +609,15 @@ msgstr "De"
 msgid "Till"
 msgstr "Jusqu’à"
 
-#: templates/campaign/campaign_stats.html:109
+#: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
 msgstr "Télécharger toutes les statistiques (CSV)"
 
-#: templates/campaign/campaign_stats.html:114
+#: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
 msgstr "Statistiques de contribution"
 
-#: templates/campaign/campaign_stats.html:115
+#: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
 msgstr "Statistiques du pays"
 
@@ -752,13 +755,37 @@ msgstr "Suivant"
 msgid "Previous"
 msgstr "Précédent"
 
-#: templates/campaign/macros.html:3
-msgid "Processing..."
-msgstr "Traitement en cours..."
+#: templates/campaign/macros.html:4
+msgid "Updating images"
+msgstr "Mise à jour en cours des images"
 
-#: templates/campaign/macros.html:5
-msgid "Error!"
-msgstr "Erreur !"
+#: templates/campaign/macros.html:4
+msgid "The images for this campaign are being updated."
+msgstr "Les images pour cette campagne sont en cours de mise à jour."
+
+#: templates/campaign/macros.html:4
+msgid "More images will be added."
+msgstr "Davantage d’images seront ajoutées."
+
+#: templates/campaign/macros.html:4 templates/campaign/macros.html:8
+msgid "You can still participate in the campaign."
+msgstr "Vous pouvez encore participer à la campagne."
+
+#: templates/campaign/macros.html:8
+msgid "Failed to update images"
+msgstr "Échec de mise à jour des images"
+
+#: templates/campaign/macros.html:8
+msgid "There was an error while updating the images for this campaign."
+msgstr "Une erreur est survenue lors de la mise à jour des images pour cette campagne."
+
+#: templates/campaign/macros.html:8
+msgid "Some images will be missing."
+msgstr "Certaines images seront manquantes."
+
+#: templates/campaign/macros.html:8
+msgid "The campaign manager can retry by updating the campaign."
+msgstr "Le gestionnaire de campagne peut essayer à nouveau en mettant à jour la campagne."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
@@ -1216,39 +1243,59 @@ msgstr "Vous n’avez aucune campagne"
 msgid "#"
 msgstr "#"
 
-#: templates/users/user_settings.html:6 templates/users/user_settings.html:9
-msgid "Caption Languages"
-msgstr "Langues de légende"
+#: templates/users/user_settings.html:6
+msgid "Language preferences"
+msgstr "Préférences de langue"
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:15
+msgid "Depicts language"
+msgstr "Dépeint la langue"
+
+#: templates/users/user_settings.html:15
+msgid "The selected language will be used for searching for elements depicted in images."
+msgstr "La langue sélectionnée sera utilisée pour rechercher les éléments dépeints dans les images."
+
+#: templates/users/user_settings.html:15
+msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
+msgstr "Si vous sélectionnez « La même que l’interface », la langue sélectionnée dans le menu en haut sera utilisée."
+
+#: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
 msgstr "Sélectionnez jusqu’à 6 langues pour les légendes"
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
+msgid "Caption Languages"
+msgstr "Langues de légende"
+
+#: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
 msgstr "Des légendes peuvent être ajoutées en plusieurs langues pour chaque image."
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
 msgstr "Les langues que vous sélectionnez sur cette page apparaissent sur la page lorsque vous visualisez une image."
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
 msgstr "Sélectionnez toutes les langues dans lesquelles vous êtes à l’aise pour contribuer."
 
-#: templates/users/user_settings.html:19 templates/users/user_settings.html:25
-#: templates/users/user_settings.html:31 templates/users/user_settings.html:37
-#: templates/users/user_settings.html:43 templates/users/user_settings.html:49
+#: templates/users/user_settings.html:23 templates/users/user_settings.html:29
+#: templates/users/user_settings.html:35 templates/users/user_settings.html:41
+#: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
 msgstr "Supprimer la langue"
 
-#: templates/users/user_settings.html:53
+#: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
 msgstr "Annuler les modifications apportées aux paramètres linguistiques"
 
-#: templates/users/user_settings.html:53
+#: templates/users/user_settings.html:57
 msgid "Undo Changes"
 msgstr "Annuler les modifications"
+
+#: users/forms.py:26
+msgid "Same as interface"
+msgstr "La même que l’interface"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
@@ -1256,7 +1303,7 @@ msgstr "Échec du rappel d’OAuth. Les cookies sont-ils désactivés ?"
 
 #: users/routes.py:74
 #, python-format
-msgid "Welcome  %(username)s!"
+msgid "Welcome %(username)s!"
 msgstr "Bonjour %(username)s !"
 
 #: users/routes.py:88
@@ -1267,29 +1314,29 @@ msgstr "À bientôt !"
 msgid "Please login to change your language preferences"
 msgstr "Veuillez vous connecter pour modifier vos préférences linguistiques"
 
-#: users/routes.py:143
+#: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "Désolé, vous avez essayé d’entrer %(rep_languages)s plusieurs fois."
 
-#: users/routes.py:156
+#: users/routes.py:157
 msgid "Captions languages could not be set"
 msgstr "La langue des sous-titres n’a pas pu être définie"
 
-#: users/routes.py:158
+#: users/routes.py:159
 msgid "Preferred Languages set Successfully"
 msgstr "Langues préférées définies avec succès"
 
-#: users/routes.py:170
+#: users/routes.py:172
 msgid "Language settings not available at the moment"
 msgstr "Les paramètres de langue ne sont pas disponibles pour le moment"
 
-#: users/routes.py:172
+#: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
 msgstr "Paramètres de %(username)s"
 
-#: users/routes.py:195
+#: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Campagnes créées par %(username)s"

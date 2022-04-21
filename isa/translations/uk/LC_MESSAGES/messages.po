@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-03-17 12:17:33+0000\n"
-"X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
+"PO-Revision-Date: 2022-04-21 11:17:18+0000\n"
+"X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
@@ -24,74 +24,66 @@ msgstr ""
 msgid "Campaigns"
 msgstr "Кампанії"
 
-#: campaigns/routes.py:54 campaigns/routes.py:136
+#: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "Кампанія з ідентифікатором %(id)s не існує"
 
-#: campaigns/routes.py:109 campaigns/routes.py:161
+#: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
 msgstr "Кампанія — "
 
-#: campaigns/routes.py:184
+#: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
 msgstr "Щоб створити кампанію, потрібно увійти в систему"
 
-#: campaigns/routes.py:214
+#: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr "Вибачте, не вдалося створити «%(campaign_name)s»"
 
-#: campaigns/routes.py:222
+#: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr "Кампанія %(campaign_name)s створена!"
 
-#: campaigns/routes.py:225
+#: campaigns/routes.py:228
 msgid "Create a campaign"
 msgstr "Створити кампанію"
 
-#: campaigns/routes.py:238
-msgid "Images are being loaded for this campaign. Try again later."
-msgstr "Зображення для цієї кампанії ще завантажуються. Спробуйте пізніше."
-
-#: campaigns/routes.py:241
-msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr "Не вдалося завантажити зображення для кампанії. Менеджеру кампанії треба буде її оновити."
-
-#: campaigns/routes.py:252
+#: campaigns/routes.py:248
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s — Зробити свій внесок"
 
-#: campaigns/routes.py:271
+#: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
 msgstr "Вам потрібно увійти, щоб оновити кампанію"
 
-#: campaigns/routes.py:298
+#: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
 msgstr "Помилка оновлення кампанії, спробуйте пізніше!"
 
-#: campaigns/routes.py:301
+#: campaigns/routes.py:296
 msgid "Update Succesfull !"
 msgstr "Оновлено успішно!"
 
-#: campaigns/routes.py:309
+#: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
 msgstr "Ви не можете оновити цю кампанію, контактна особа — Користувач:%(campaign_manager)s "
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:319
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr "Буу! Не вдалося оновити «%(campaign_name)s»!"
 
-#: campaigns/routes.py:329
+#: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s — Оновити"
 
-#: campaigns/routes.py:377
+#: campaigns/routes.py:366
 msgid "You need to login to participate"
 msgstr "Для участі потрібно увійти"
 
@@ -209,81 +201,97 @@ msgstr "Категорії, виділені червоним кольором, 
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
 msgstr "Будь ласка, вилучіть їх або зніміть прапорець «Кампанія Wiki Loves» вище"
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:172
+msgid "Update images"
+msgstr ""
+
+#: templates/campaign/campaign-form.html:174
+msgid "Collect images from the categories."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:174
+msgid "This will replace any current images."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:174
+msgid "Use if you changed the categories or if there was an error updating previously."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
 msgstr "Метадані для збору під час кампанії"
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
 msgstr "Виберіть, який тип <strong>метаданих</strong> ви хочете збирати у своїй кампанії."
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
 msgstr "Ви маєте обрати хоча б одну з опцій нижче."
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data see the help page."
 msgstr "Щоб дізнатися більше про метадані Зображує та Підпис, перейдіть на довідкову сторінку."
 
-#: templates/campaign/campaign-form.html:176
+#: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
 msgstr "Зображує"
 
-#: templates/campaign/campaign-form.html:188
+#: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
 msgstr "Виберіть цю опцію для збору метаданих «Зображує» у кампанії"
 
-#: templates/campaign/campaign-form.html:191
+#: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
 msgstr "Підписи"
 
-#: templates/campaign/campaign-form.html:203
+#: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
 msgstr "Виберіть цю опцію для збору метаданих «Підпис» у цій кампанії"
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
 msgstr "Зображення кампанії"
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
 msgstr "Максимальна висота зображення кампанії — 150 px. Зображення має бути або банером, або логотипом."
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
 msgstr "Портретні або квадратні фото не рекомендуються."
 
-#: templates/campaign/campaign-form.html:222
+#: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
 msgstr "Уведіть НАЗВУ ФАЙЛУ зображення (лише з Вікісховища) для відображення на домашній сторінці кампанії."
 
-#: templates/campaign/campaign-form.html:228
+#: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
 msgstr "Докладний опис кампанії (повна інформація про неї)"
 
-#: templates/campaign/campaign-form.html:240
+#: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
 msgstr "Чому важливо, щоб користувачі зробити внесок у цю кампанію?"
 
-#: templates/campaign/campaign-form.html:246
+#: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
 msgstr "Опублікувати кампанію"
 
-#: templates/campaign/campaign-form.html:256
+#: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
 msgstr "Ми маєте обрати для своєї кампанії хоча б одну категорію."
 
-#: templates/campaign/campaign-form.html:257
+#: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
 msgstr "Деякі з вибраних вами категорій не мають коректного синтаксису для кампаній Wiki Loves."
 
-#: templates/campaign/campaign-form.html:258
+#: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
 msgstr "Будь ласка, перевірте свій вибір і спробуйте ще раз."
 
-#: templates/campaign/campaign-form.html:259
+#: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
 msgstr "Будь ласка, оберіть хоча б один тип у розділі Метадані для збору"
 
@@ -295,123 +303,118 @@ msgstr "Переглянути зображення з"
 msgid "Choose to only view images from a single country"
 msgstr "Виберіть перегляд зображень лише з однієї країни"
 
-#: templates/campaign/campaign.html:20
-msgid "Loading..."
-msgstr "Завантаження…"
-
-#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
+#: templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
 msgstr "Почати свою участь у цій кампанії"
 
-#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
-#: templates/campaign/campaigns.html:33
+#: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
 msgstr "Розпочати"
 
-#: templates/campaign/campaign.html:34
+#: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
 msgstr "Поточний хід кампанії"
 
-#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
 msgstr "Загальне число зображень у цій кампанії"
 
-#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
 msgstr "Зображення"
 
-#: templates/campaign/campaign.html:38
-#: templates/campaign/campaign_stats.html:21
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
 msgstr "Загальна кількість редагувань, зроблених у цій кампанії"
 
-#: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
-#: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
-#: templates/campaign/campaign_stats.html:21
-#: templates/campaign/campaign_stats.html:45
-#: templates/campaign/campaign_stats.html:77
+#: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
+#: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
+#: templates/campaign/campaign_stats.html:20
+#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
 msgstr "Внесок"
 
-#: templates/campaign/campaign.html:43
-#: templates/campaign/campaign_stats.html:40
+#: templates/campaign/campaign.html:42
+#: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
 msgstr "Учасники з найбільшим внеском"
 
-#: templates/campaign/campaign.html:47
-#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign.html:46
+#: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
 msgstr "Учасник"
 
-#: templates/campaign/campaign.html:66
-#: templates/campaign/campaign_stats.html:63
+#: templates/campaign/campaign.html:65
+#: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
 msgstr "У цій кампанії ще немає учасників"
 
-#: templates/campaign/campaign.html:75
-#: templates/campaign/campaign_stats.html:72
+#: templates/campaign/campaign.html:74
+#: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
 msgstr "Найбільш поліпшені країни"
 
-#: templates/campaign/campaign.html:79
-#: templates/campaign/campaign_stats.html:76
+#: templates/campaign/campaign.html:78
+#: templates/campaign/campaign_stats.html:75
 msgid "Country"
 msgstr "Країна"
 
-#: templates/campaign/campaign.html:98
-#: templates/campaign/campaign_stats.html:95
+#: templates/campaign/campaign.html:97
+#: templates/campaign/campaign_stats.html:94
 msgid "There is no data available yet for this campaign"
 msgstr "Для цієї кампанії ще немає доступних даних"
 
-#: templates/campaign/campaign.html:106
+#: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
 msgstr "Переглянути і завантажити більше статистики для цієї кампанії"
 
-#: templates/campaign/campaign.html:106
+#: templates/campaign/campaign.html:105
 msgid "View full stats"
 msgstr "Переглянути повну статистику"
 
-#: templates/campaign/campaign.html:117
+#: templates/campaign/campaign.html:116
 msgid "My Contributions"
 msgstr "Мій внесок"
 
-#: templates/campaign/campaign.html:124
+#: templates/campaign/campaign.html:123
 msgid "Rank"
 msgstr "Ранг"
 
-#: templates/campaign/campaign.html:142
+#: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
 msgstr "Більше про цю кампанію"
 
-#: templates/campaign/campaign.html:144
+#: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
 msgstr "Менеджер кампанії"
 
-#: templates/campaign/campaign.html:146
+#: templates/campaign/campaign.html:145
 msgid "START DATE"
 msgstr "ДАТА ПОЧАТКУ"
 
-#: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
+#: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
 msgstr "ДАТА ЗАКІНЧЕННЯ"
 
-#: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
+#: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
 msgstr "Не задано"
 
-#: templates/campaign/campaign.html:157
+#: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
 msgstr "Внести змінити у цю кампанію"
 
-#: templates/campaign/campaign.html:157
+#: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
 msgstr "Редагувати кампанію"
 
-#: templates/campaign/campaign.html:163
+#: templates/campaign/campaign.html:162
 msgid "Unknown country"
 msgstr "Невідома країна"
 
@@ -494,7 +497,7 @@ msgstr "Зберегти свої редагування у Вікісховищ
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
-#: templates/users/user_settings.html:54
+#: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "Зберегти"
 
@@ -594,15 +597,15 @@ msgstr "Від"
 msgid "Till"
 msgstr "До"
 
-#: templates/campaign/campaign_stats.html:109
+#: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
 msgstr "Завантажити усю статистику (CSV)"
 
-#: templates/campaign/campaign_stats.html:114
+#: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
 msgstr "Статистика учасника"
 
-#: templates/campaign/campaign_stats.html:115
+#: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
 msgstr "Статистика країни"
 
@@ -740,13 +743,37 @@ msgstr "Наступна"
 msgid "Previous"
 msgstr "Попередня"
 
-#: templates/campaign/macros.html:3
-msgid "Processing..."
-msgstr "Обробка…"
+#: templates/campaign/macros.html:4
+msgid "Updating images"
+msgstr ""
 
-#: templates/campaign/macros.html:5
-msgid "Error!"
-msgstr "Помилка!"
+#: templates/campaign/macros.html:4
+msgid "The images for this campaign are being updated."
+msgstr ""
+
+#: templates/campaign/macros.html:4
+msgid "More images will be added."
+msgstr ""
+
+#: templates/campaign/macros.html:4 templates/campaign/macros.html:8
+msgid "You can still participate in the campaign."
+msgstr ""
+
+#: templates/campaign/macros.html:8
+msgid "Failed to update images"
+msgstr ""
+
+#: templates/campaign/macros.html:8
+msgid "There was an error while updating the images for this campaign."
+msgstr ""
+
+#: templates/campaign/macros.html:8
+msgid "Some images will be missing."
+msgstr ""
+
+#: templates/campaign/macros.html:8
+msgid "The campaign manager can retry by updating the campaign."
+msgstr ""
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
@@ -1204,39 +1231,59 @@ msgstr "У вас немає кампаній"
 msgid "#"
 msgstr "№"
 
-#: templates/users/user_settings.html:6 templates/users/user_settings.html:9
-msgid "Caption Languages"
-msgstr "Мови підписів"
+#: templates/users/user_settings.html:6
+msgid "Language preferences"
+msgstr ""
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:15
+msgid "Depicts language"
+msgstr ""
+
+#: templates/users/user_settings.html:15
+msgid "The selected language will be used for searching for elements depicted in images."
+msgstr ""
+
+#: templates/users/user_settings.html:15
+msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
+msgstr ""
+
+#: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
 msgstr "Оберіть до 6 мов для підписів"
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
+msgid "Caption Languages"
+msgstr "Мови підписів"
+
+#: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
 msgstr "До кожного зображення можна додавати підписи кількома мовами."
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
 msgstr "Мови, які ви вкажете на цій сторінці, показуватимуться на сторінці перегляду зображень."
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
 msgstr "Оберіть усі мови, якими вам комфортно писати."
 
-#: templates/users/user_settings.html:19 templates/users/user_settings.html:25
-#: templates/users/user_settings.html:31 templates/users/user_settings.html:37
-#: templates/users/user_settings.html:43 templates/users/user_settings.html:49
+#: templates/users/user_settings.html:23 templates/users/user_settings.html:29
+#: templates/users/user_settings.html:35 templates/users/user_settings.html:41
+#: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
 msgstr "Вилучити мову"
 
-#: templates/users/user_settings.html:53
+#: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
 msgstr "Скасувати зміни до мовних налаштувань"
 
-#: templates/users/user_settings.html:53
+#: templates/users/user_settings.html:57
 msgid "Undo Changes"
 msgstr "Скасувати зміни"
+
+#: users/forms.py:26
+msgid "Same as interface"
+msgstr ""
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
@@ -1244,7 +1291,7 @@ msgstr "Виклик OAuth зазнав невдачі. Може у вас ви�
 
 #: users/routes.py:74
 #, python-format
-msgid "Welcome  %(username)s!"
+msgid "Welcome %(username)s!"
 msgstr "Вітаємо, %(username)s!"
 
 #: users/routes.py:88
@@ -1255,29 +1302,29 @@ msgstr "Побачимося наступного разу!"
 msgid "Please login to change your language preferences"
 msgstr "Будь ласка, увійдіть, щоб змінити свої мовні налаштування."
 
-#: users/routes.py:143
+#: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "Вибачте, ви намагалися ввести %(rep_languages)s кілька разів"
 
-#: users/routes.py:156
+#: users/routes.py:157
 msgid "Captions languages could not be set"
 msgstr "Не вдалося налаштувати мови підписів"
 
-#: users/routes.py:158
+#: users/routes.py:159
 msgid "Preferred Languages set Successfully"
 msgstr "Бажані мови успішно налаштовано"
 
-#: users/routes.py:170
+#: users/routes.py:172
 msgid "Language settings not available at the moment"
 msgstr "Мовні налаштування наразі недоступні"
 
-#: users/routes.py:172
+#: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
 msgstr "%(username)s's — Налаштування"
 
-#: users/routes.py:195
+#: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Кампанії, створені %(username)s"

@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-03-17 12:17:32+0000\n"
-"X-POT-Import-Date: 2022-02-02 15:30:22+0000\n"
+"PO-Revision-Date: 2022-04-21 11:17:17+0000\n"
+"X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko\n"
@@ -22,74 +22,66 @@ msgstr ""
 msgid "Campaigns"
 msgstr "캠페인"
 
-#: campaigns/routes.py:54 campaigns/routes.py:136
+#: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr ""
 
-#: campaigns/routes.py:109 campaigns/routes.py:161
+#: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
 msgstr "캠페인 - "
 
-#: campaigns/routes.py:184
+#: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
 msgstr "캠페인을 만들려면 로그인해야 합니다"
 
-#: campaigns/routes.py:214
+#: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
 msgstr ""
 
-#: campaigns/routes.py:222
+#: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
 msgstr "%(campaign_name)s 캠페인을 만들었습니다!"
 
-#: campaigns/routes.py:225
+#: campaigns/routes.py:228
 msgid "Create a campaign"
 msgstr "캠페인 만들기"
 
-#: campaigns/routes.py:238
-msgid "Images are being loaded for this campaign. Try again later."
-msgstr ""
-
-#: campaigns/routes.py:241
-msgid "Images failed to load for the campaign. The campaign manager will need to update the campaign."
-msgstr ""
-
-#: campaigns/routes.py:252
+#: campaigns/routes.py:248
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - 기여"
 
-#: campaigns/routes.py:271
+#: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
 msgstr "캠페인을 업데이트하려면 로그인해야 합니다"
 
-#: campaigns/routes.py:298
+#: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
 msgstr ""
 
-#: campaigns/routes.py:301
+#: campaigns/routes.py:296
 msgid "Update Succesfull !"
 msgstr "업데이트 성공 !"
 
-#: campaigns/routes.py:309
+#: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
 msgstr ""
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:319
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
 msgstr ""
 
-#: campaigns/routes.py:329
+#: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - 업데이트"
 
-#: campaigns/routes.py:377
+#: campaigns/routes.py:366
 msgid "You need to login to participate"
 msgstr "참가하려면 로그인해야 합니다"
 
@@ -207,81 +199,97 @@ msgstr ""
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
 msgstr ""
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:172
+msgid "Update images"
+msgstr "이미지 업데이트"
+
+#: templates/campaign/campaign-form.html:174
+msgid "Collect images from the categories."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:174
+msgid "This will replace any current images."
+msgstr "이것은 현재의 이미지를 대체합니다."
+
+#: templates/campaign/campaign-form.html:174
+msgid "Use if you changed the categories or if there was an error updating previously."
+msgstr ""
+
+#: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
 msgstr ""
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
 msgstr ""
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
 msgstr "아래의 옵션 중 적어도 하나를 선택해야 합니다."
 
-#: templates/campaign/campaign-form.html:173
+#: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data see the help page."
 msgstr ""
 
-#: templates/campaign/campaign-form.html:176
+#: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
 msgstr ""
 
-#: templates/campaign/campaign-form.html:188
+#: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
 msgstr ""
 
-#: templates/campaign/campaign-form.html:191
+#: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
 msgstr "캡션"
 
-#: templates/campaign/campaign-form.html:203
+#: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
 msgstr ""
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
 msgstr "캠페인 이미지"
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
 msgstr ""
 
-#: templates/campaign/campaign-form.html:210
+#: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
 msgstr ""
 
-#: templates/campaign/campaign-form.html:222
+#: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
 msgstr ""
 
-#: templates/campaign/campaign-form.html:228
+#: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
 msgstr "캠페인의 긴 설명 (전체 정보)"
 
-#: templates/campaign/campaign-form.html:240
+#: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
 msgstr "사용자가 캠페인에 기여하는 것이 왜 중요합니까?"
 
-#: templates/campaign/campaign-form.html:246
+#: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
 msgstr "캠페인 게시"
 
-#: templates/campaign/campaign-form.html:256
+#: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
 msgstr "캠페인에는 적어도 분류 하나를 선택해야 합니다."
 
-#: templates/campaign/campaign-form.html:257
+#: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
 msgstr ""
 
-#: templates/campaign/campaign-form.html:258
+#: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
 msgstr "선택 항목을 확인하고 다시 시도해 주십시오."
 
-#: templates/campaign/campaign-form.html:259
+#: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
 msgstr ""
 
@@ -293,123 +301,118 @@ msgstr ""
 msgid "Choose to only view images from a single country"
 msgstr ""
 
-#: templates/campaign/campaign.html:20
-msgid "Loading..."
-msgstr "불러오는 중..."
-
-#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
+#: templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
 msgstr "이 캠페인에 기여를 시작하기"
 
-#: templates/campaign/campaign.html:24 templates/campaign/campaign.html:26
-#: templates/campaign/campaigns.html:33
+#: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
 msgstr "시작하기"
 
-#: templates/campaign/campaign.html:34
+#: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
 msgstr "현재까지의 캠페인 진척도"
 
-#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
 msgstr "이 캠페인의 총 이미지 수"
 
-#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
 msgstr "이미지"
 
-#: templates/campaign/campaign.html:38
-#: templates/campaign/campaign_stats.html:21
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
 msgstr "이 캠페인의 총 기여 수"
 
-#: templates/campaign/campaign.html:38 templates/campaign/campaign.html:48
-#: templates/campaign/campaign.html:80 templates/campaign/campaign.html:125
-#: templates/campaign/campaign_stats.html:21
-#: templates/campaign/campaign_stats.html:45
-#: templates/campaign/campaign_stats.html:77
+#: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
+#: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
+#: templates/campaign/campaign_stats.html:20
+#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
 msgstr "기여"
 
-#: templates/campaign/campaign.html:43
-#: templates/campaign/campaign_stats.html:40
+#: templates/campaign/campaign.html:42
+#: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
 msgstr "최상위 기여자"
 
-#: templates/campaign/campaign.html:47
-#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign.html:46
+#: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
 msgstr "기여자"
 
-#: templates/campaign/campaign.html:66
-#: templates/campaign/campaign_stats.html:63
+#: templates/campaign/campaign.html:65
+#: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
 msgstr "이 캠페인에 기여한 참가자가 없습니다"
 
-#: templates/campaign/campaign.html:75
-#: templates/campaign/campaign_stats.html:72
+#: templates/campaign/campaign.html:74
+#: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
 msgstr ""
 
-#: templates/campaign/campaign.html:79
-#: templates/campaign/campaign_stats.html:76
+#: templates/campaign/campaign.html:78
+#: templates/campaign/campaign_stats.html:75
 msgid "Country"
 msgstr "국가"
 
-#: templates/campaign/campaign.html:98
-#: templates/campaign/campaign_stats.html:95
+#: templates/campaign/campaign.html:97
+#: templates/campaign/campaign_stats.html:94
 msgid "There is no data available yet for this campaign"
 msgstr "이 캠페인에서 사용할 수 있는 데이터가 아직 없습니다"
 
-#: templates/campaign/campaign.html:106
+#: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
 msgstr "이 캠페인의 더 많은 통계를 보고 다운로드"
 
-#: templates/campaign/campaign.html:106
+#: templates/campaign/campaign.html:105
 msgid "View full stats"
 msgstr "전체 통계 보기"
 
-#: templates/campaign/campaign.html:117
+#: templates/campaign/campaign.html:116
 msgid "My Contributions"
 msgstr "내 기여"
 
-#: templates/campaign/campaign.html:124
+#: templates/campaign/campaign.html:123
 msgid "Rank"
 msgstr "순위"
 
-#: templates/campaign/campaign.html:142
+#: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
 msgstr "이 캠페인의 추가 정보"
 
-#: templates/campaign/campaign.html:144
+#: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
 msgstr "캠페인 관리자"
 
-#: templates/campaign/campaign.html:146
+#: templates/campaign/campaign.html:145
 msgid "START DATE"
 msgstr "시작일"
 
-#: templates/campaign/campaign.html:148 templates/campaign/campaign.html:150
+#: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
 msgstr "종료일"
 
-#: templates/campaign/campaign.html:148 templates/campaign/campaigns.html:46
+#: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
 msgstr "설정되지 않음"
 
-#: templates/campaign/campaign.html:157
+#: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
 msgstr ""
 
-#: templates/campaign/campaign.html:157
+#: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
 msgstr "캠페인 편집"
 
-#: templates/campaign/campaign.html:163
+#: templates/campaign/campaign.html:162
 msgid "Unknown country"
 msgstr "알 수 없는 국가"
 
@@ -492,7 +495,7 @@ msgstr "위키미디어 공용의 내 편집 저장"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
-#: templates/users/user_settings.html:54
+#: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "저장"
 
@@ -592,15 +595,15 @@ msgstr ""
 msgid "Till"
 msgstr ""
 
-#: templates/campaign/campaign_stats.html:109
+#: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
 msgstr "모든 통계 다운로드 (CSV)"
 
-#: templates/campaign/campaign_stats.html:114
+#: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
 msgstr "기여자 통계"
 
-#: templates/campaign/campaign_stats.html:115
+#: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
 msgstr ""
 
@@ -738,12 +741,36 @@ msgstr "다음"
 msgid "Previous"
 msgstr "이전"
 
-#: templates/campaign/macros.html:3
-msgid "Processing..."
+#: templates/campaign/macros.html:4
+msgid "Updating images"
 msgstr ""
 
-#: templates/campaign/macros.html:5
-msgid "Error!"
+#: templates/campaign/macros.html:4
+msgid "The images for this campaign are being updated."
+msgstr ""
+
+#: templates/campaign/macros.html:4
+msgid "More images will be added."
+msgstr ""
+
+#: templates/campaign/macros.html:4 templates/campaign/macros.html:8
+msgid "You can still participate in the campaign."
+msgstr ""
+
+#: templates/campaign/macros.html:8
+msgid "Failed to update images"
+msgstr "이미지 업데이트 실패"
+
+#: templates/campaign/macros.html:8
+msgid "There was an error while updating the images for this campaign."
+msgstr ""
+
+#: templates/campaign/macros.html:8
+msgid "Some images will be missing."
+msgstr ""
+
+#: templates/campaign/macros.html:8
+msgid "The campaign manager can retry by updating the campaign."
 msgstr ""
 
 #: templates/errors/403.html:8
@@ -1202,39 +1229,59 @@ msgstr "캠페인이 없습니다"
 msgid "#"
 msgstr "#"
 
-#: templates/users/user_settings.html:6 templates/users/user_settings.html:9
-msgid "Caption Languages"
-msgstr "캡션 언어"
+#: templates/users/user_settings.html:6
+msgid "Language preferences"
+msgstr "언어 환경 설정"
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:15
+msgid "Depicts language"
+msgstr ""
+
+#: templates/users/user_settings.html:15
+msgid "The selected language will be used for searching for elements depicted in images."
+msgstr ""
+
+#: templates/users/user_settings.html:15
+msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
+msgstr ""
+
+#: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
 msgstr "캡션에 최대 6개 언어를 선택"
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
+msgid "Caption Languages"
+msgstr "캡션 언어"
+
+#: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
 msgstr "캡션은 각 이미지에 여러 언어로 추가할 수 있습니다."
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
 msgstr "이 문서에 선택한 언어는 이미지를 볼 때 문서에 표시됩니다."
 
-#: templates/users/user_settings.html:9
+#: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
 msgstr "기여하기 편안한 언어를 모두 선택하십시오."
 
-#: templates/users/user_settings.html:19 templates/users/user_settings.html:25
-#: templates/users/user_settings.html:31 templates/users/user_settings.html:37
-#: templates/users/user_settings.html:43 templates/users/user_settings.html:49
+#: templates/users/user_settings.html:23 templates/users/user_settings.html:29
+#: templates/users/user_settings.html:35 templates/users/user_settings.html:41
+#: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
 msgstr "언어 제거"
 
-#: templates/users/user_settings.html:53
+#: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
 msgstr "언어 설정의 변경 내용을 되돌리기"
 
-#: templates/users/user_settings.html:53
+#: templates/users/user_settings.html:57
 msgid "Undo Changes"
 msgstr "변경 내용 취소"
+
+#: users/forms.py:26
+msgid "Same as interface"
+msgstr ""
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
@@ -1242,7 +1289,7 @@ msgstr "OAuth 콜백을 실패했습니다. 쿠키가 비활성화되어 있습�
 
 #: users/routes.py:74
 #, python-format
-msgid "Welcome  %(username)s!"
+msgid "Welcome %(username)s!"
 msgstr "%(username)s님 환영합니다!"
 
 #: users/routes.py:88
@@ -1253,29 +1300,29 @@ msgstr "다음에 또 봐요!"
 msgid "Please login to change your language preferences"
 msgstr "언어 환경 설정을 변경하려면 로그인해 주십시오"
 
-#: users/routes.py:143
+#: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr ""
 
-#: users/routes.py:156
+#: users/routes.py:157
 msgid "Captions languages could not be set"
 msgstr "캡션 언어를 설정하지 못했습니다"
 
-#: users/routes.py:158
+#: users/routes.py:159
 msgid "Preferred Languages set Successfully"
 msgstr "선호하는 언어를 성공적으로 설정했습니다"
 
-#: users/routes.py:170
+#: users/routes.py:172
 msgid "Language settings not available at the moment"
 msgstr "지금은 언어 설정을 사용할 수 없습니다"
 
-#: users/routes.py:172
+#: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
 msgstr "%(username)s's - 설정"
 
-#: users/routes.py:195
+#: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr ""
