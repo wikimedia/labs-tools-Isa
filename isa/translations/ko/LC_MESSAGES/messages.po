@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-04-28 11:18:03+0000\n"
+"PO-Revision-Date: 2022-05-02 11:16:50+0000\n"
 "X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -751,7 +751,7 @@ msgstr ""
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr ""
+msgstr "더 많은 이미지가 추가됩니다."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
@@ -1281,7 +1281,7 @@ msgstr "변경 내용 취소"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "인터페이스와 동일"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"

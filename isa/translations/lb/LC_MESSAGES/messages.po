@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-04-28 11:18:04+0000\n"
+"PO-Revision-Date: 2022-05-02 11:16:50+0000\n"
 "X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -201,7 +201,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr ""
+msgstr "Biller aktualiséieren"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
@@ -743,7 +743,7 @@ msgstr "Vireg"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr ""
+msgstr "Biller aktualiséieren"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
@@ -1231,7 +1231,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "Astellunge fir d'Sproochen"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"

@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-04-28 11:18:04+0000\n"
+"PO-Revision-Date: 2022-05-02 11:16:50+0000\n"
 "X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -762,7 +762,7 @@ msgstr ""
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr ""
+msgstr "Не удалось обновить изображения"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
