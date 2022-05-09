@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-04-28 11:18:04+0000\n"
+"PO-Revision-Date: 2022-05-09 11:17:14+0000\n"
 "X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -201,15 +201,15 @@ msgstr "Prosím odstráňte ich alebo odznačte kampaň Wiki Loves v políčku v
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr ""
+msgstr "Aktualizovať obrázky"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
-msgstr ""
+msgstr "Zbierať obrázky z kategórií."
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."
-msgstr ""
+msgstr "Toto nahradí aktuálne obrázky."
 
 #: templates/campaign/campaign-form.html:174
 msgid "Use if you changed the categories or if there was an error updating previously."

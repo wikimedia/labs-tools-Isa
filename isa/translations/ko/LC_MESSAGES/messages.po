@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-05-02 11:16:50+0000\n"
+"PO-Revision-Date: 2022-05-09 11:17:13+0000\n"
 "X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -205,7 +205,7 @@ msgstr "이미지 업데이트"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
-msgstr ""
+msgstr "분류에서 이미지를 모읍니다."
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."

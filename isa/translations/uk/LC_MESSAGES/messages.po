@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-04-28 11:18:05+0000\n"
+"PO-Revision-Date: 2022-05-09 11:17:14+0000\n"
 "X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -203,11 +203,11 @@ msgstr "Будь ласка, вилучіть їх або зніміть пра�
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr ""
+msgstr "Оновити зображення"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
-msgstr ""
+msgstr "Збирайте зображення з категорій."
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."
