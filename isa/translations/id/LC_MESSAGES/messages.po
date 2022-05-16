@@ -1,9 +1,8 @@
-# Translation of ISA to Turkish (Türkçe)
+# Translation of ISA to Indonesian (Bahasa Indonesia)
 # Exported from translatewiki.net
 #
-# Author: Can
-# Author: Cobija
-# Author: Hedda
+# Author: Mnam23
+# Author: NFarras
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -11,325 +10,325 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-05-16 11:17:49+0000\n"
+"PO-Revision-Date: 2022-05-16 11:17:48+0000\n"
 "X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
+"Language: id\n"
 "X-Generator: MediaWiki 1.39.0-alpha; Translate 2022-04-26\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
-msgstr "Kampanyalar"
+msgstr "Kampanye"
 
 #: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "%(id)s kimliğine sahip kampanya mevcut değil"
+msgstr "Kampanye dengan id %(id)s tidak ada"
 
 #: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
-msgstr "Kampanya - "
+msgstr "Kampanye - "
 
 #: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
-msgstr "Kampanya oluşturmak için oturum açmanız gerekiyor"
+msgstr "Anda harus masuk log untuk membuat kampanye"
 
 #: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr "Üzgünüz, %(campaign_name)s oluşturulamadı"
+msgstr "Maaf %(campaign_name)s tidak bisa dibuat"
 
 #: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr "%(campaign_name)s Kampanyası oluşturuldu!"
+msgstr "Kampanye %(campaign_name)s dibuat!"
 
 #: campaigns/routes.py:228
 msgid "Create a campaign"
-msgstr "Bir kampanya oluştur"
+msgstr "Buat kampanye"
 
 #: campaigns/routes.py:248
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr "%(campaign_name)s - Katkıda bulun"
+msgstr "%(campaign_name)s - Berkontribusi"
 
 #: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
-msgstr "Kampanyayı güncellemek için oturum açmanız gerekiyor"
+msgstr "Anda harus masuk log untuk memperbarui kampanye"
 
 #: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
-msgstr "Kampanya güncellemesi başarısız oldu, lütfen daha sonra deneyin!"
+msgstr "Pembaruan kampanye gagal mohon coba ulang nanti!"
 
 #: campaigns/routes.py:296
 msgid "Update Succesfull !"
-msgstr "Güncelleme Başarılı !"
+msgstr "Pembaruan Sukses!"
 
 #: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Bu kampanyayı güncelleyemezsiniz,  Şu kullanıcıyla iletişime geçin: Kullanıcı:%(campaign_manager)s "
+msgstr "Anda tidak bisa memperbarui kampanye ini, Hubungi Pengguna Pengelola:%(campaign_manager)s "
 
 #: campaigns/routes.py:319
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr "Pes! %(campaign_name)s Güncellenemedi!"
+msgstr "Huu! %(campaign_name)s tidak bisa diperbarui!"
 
 #: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr "%(campaign_name)s - Güncelle"
+msgstr "%(campaign_name)s - Pembaruan"
 
 #: campaigns/routes.py:366
 msgid "You need to login to participate"
-msgstr "Katılmak için oturum açmanız gerekiyor"
+msgstr "Anda harus masuk log untuk berpartisipasi"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr "Kampanya Ayrntılarını Güncelle"
+msgstr "Perbarui Rincian Kampanye"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr "Yeni Kampanya Oluştur"
+msgstr "Buat Kampanye baru"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Güncelliyorsunuz"
+msgstr "Anda sedang memperbarui"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr "Kampanyanızı oluşturmak için aşağıdaki formu doldurun"
+msgstr "Isi formulir di bawah untuk membuatkan Anda kampanye"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr "* işaretli alanlar zorunludur"
+msgstr "Bidang yang ditandai dengan * adalah wajib"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Kampanya Adı"
+msgstr "Nama Kampanye"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr "Bu, ana projeye değil; kampanyanıza özel bir addır."
+msgstr "Ini adalah nama yang spesifik untuk kampanye Anda, bukan proyek utama."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr "Yani “Wiki Afrika'yı Seviyor” değil de “Nijerya'da Müzik ve Dans” gibi"
+msgstr "Jadi, bukan \"Wiki Cinta Afrika\" tapi lebih kepada \"Musik dan Tarian di Nigeria\""
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr "Kampanyanın kısa açıklaması (144 karakter)"
+msgstr "Deskripsi singkat Kampanye (144 karakter)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr "Kullanıcılar ne üzerinde çalışacak"
+msgstr "Apa yang akan dikerjakan pengguna"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
 msgid "Start Date"
-msgstr "Başlangıç Tarihi"
+msgstr "Tanggal Mulai"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr "Kampanyanın başlangıç tarihini ayarla"
+msgstr "Atur tanggal mulai kampanye"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
 msgid "End Date"
-msgstr "Bitiş Tarihi"
+msgstr "Tanggal Selesai"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr "Kampanyanın bitiş tarihini ayarla"
+msgstr "Atur tanggal selesai kampanye"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "Bu bir Viki Kampanyayı Seviyor'dur"
+msgstr "Ini adalah Wiki Cinta Kampanye"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr "Doğru ayarlandığı takdirde bu seçenek, katılımcıların hangi ülkeden görüntüler görmek istediklerini seçmelerine ve ülkelere göre katkıları kaydetmelerine olanak tanır."
+msgstr "Saat diatur dengan benar pilihan ini memperbolehkan peserta untuk memilih negara mana mereka ingin melihat asal gambar dan merekam kontribusi berdasar negara."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr " Doğru türden birden fazla kategori seçebilirsiniz."
+msgstr "Anda bisa memilih berbagai kategori dari tipe yang benar."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr ""
+msgstr "Kedalaman harus diatur menjadi 0 untuk semua kategori di dalam Wiki Cinta Kampanye."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr ""
+msgstr "Memerlukan kategori untuk bentuk gambar dari Wiki Cinta <strong><em>proyek</em></strong> dalam <strong><em>tahun</em></strong> spesifik, misalnya \"Gambar dari Wiki Cinta <strong><em>Afrika</em></strong> <strong><em>2019</em></strong>\" (ubah <strong><em>proyek</em></strong> dan tahun sebagaimana <strong><em>diperlukan</em></strong>)"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr ""
+msgstr "Beberapa kategori terpilih di bawah tidak memiliki sintaks yang benar"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr ""
+msgstr "Kategori untuk digunakan dalam kampanye ini"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr ""
+msgstr "Cari kategori Wikimedia Commons yang berisi gambar-gambar yang Anda ingin gunakan dalam kampanye Anda."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr ""
+msgstr "Jika Anda menginginkan sebuah kategori dan SEMUA dari subkategorinya gunakan pilihan 'Kedalaman' untuk memilih berapa tingkat ke dalam Anda ingin pergi (biarkan 'kedalaman' pada 0 untuk Wiki Cinta Kampanye)."
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr ""
+msgstr "Pilih kategori untuk digunakan dalam kampanye ini"
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Ad"
+msgstr "Nama"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Derinlik"
+msgstr "Kedalaman"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr ""
+msgstr "Kategori berwarna merah tidak memiliki sintaks yang benar untuk fitur \"Wiki Cinta kampanye\"."
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr ""
+msgstr "Mohon hapus mereka atau hapus centang dari kotak centang \"Wiki Cinta Kampanye\" di atas"
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr ""
+msgstr "Perbarui gambar"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
-msgstr ""
+msgstr "Kumpulkan gambar dari kategori."
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."
-msgstr ""
+msgstr "Ini akan mengganti gambar sekarang."
 
 #: templates/campaign/campaign-form.html:174
 msgid "Use if you changed the categories or if there was an error updating previously."
-msgstr ""
+msgstr "Gunakan jika Anda mengubah kategori atau jika terjadi galat pembaruan sebelumnya."
 
 #: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
-msgstr ""
+msgstr "Metadata untuk dikumpulkan dalam Kampanye"
 
 #: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr ""
+msgstr "Pilih tipe <strong>metadata</strong> yang ingin Anda kumpulkan dalam kampanye."
 
 #: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
-msgstr "Aşağıdaki seçeneklerden en az birini seçmek zorundasınız."
+msgstr "Anda harus memilih setidaknya satu pilihan di bawah."
 
 #: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data see the help page."
-msgstr ""
+msgstr "Untuk belajar selebihnya tentang meta-data Menggambarkan dan Takarir lihat halaman bantuan."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr ""
+msgstr "Menggambarkan"
 
 #: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
-msgstr ""
+msgstr "Pilih untuk mengumpulkan metadata Menggambarkan dalam kampanye"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
-msgstr ""
+msgstr "Takarir"
 
 #: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
-msgstr ""
+msgstr "Pilih untuk mengumpulkan metadata Takarir dalam kampanye"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
-msgstr "Kampanya Görseli"
+msgstr "Gambar Kampanye"
 
 #: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr ""
+msgstr "Tinggi maksimum dari gambar kampanye adalah 150px. Gambar harus antara gambar panji atau logo."
 
 #: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
-msgstr ""
+msgstr "Potret atau foto persegi tidak disarankan."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr ""
+msgstr "Masukkan hanya NAMA BERKAS dari gambar Commons untuk ditampilkan pada halaman beranda Kampanye."
 
 #: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
-msgstr "Kampanyanın Uzun Açıklaması (tam hakkında bilgisi)"
+msgstr "Rincian panjang dari Kampanye (info keterangan penuh)"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
-msgstr ""
+msgstr "Mengapa penting bagi para pengguna untuk berkontribusi pada kampanye?"
 
 #: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
-msgstr "Kampanyayı Yayımla"
+msgstr "Publikasikan Kampanye"
 
 #: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
-msgstr "Kampanyanız için en az bir kategori seçmek zorundasınız."
+msgstr "Anda harus memilih setidaknya satu kategori untuk kampanye Anda."
 
 #: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr ""
+msgstr "Beberapa kategori yang Anda pilih tidak memiliki sintaks yang benar untuk Wiki Cinta Kampanye."
 
 #: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
-msgstr "Lütfen seçimlerinizi kontrol edin ve tekrar deneyin."
+msgstr "Mohon periksa pilihan Anda dan coba lagi."
 
 #: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr ""
+msgstr "Mohon pilih setidaknya satu tipe dari bagian Metadata untuk dikumpulkan."
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
-msgstr ""
+msgstr "Lihat gambar dari"
 
 #: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
-msgstr ""
+msgstr "Pilih untuk hanya melihat gambar dari negara tunggal"
 
 #: templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
-msgstr ""
+msgstr "Mulai berkontribusi ke kampanye ini"
 
 #: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
-msgstr "Başlayın"
+msgstr "Memulai"
 
 #: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
-msgstr "Şu ana kadarki kampanya süreci"
+msgstr "Kemajuan kampanye"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
-msgstr "Bu kampanyadaki toplam görsel sayısı"
+msgstr "Jumlah total gambar dalam kampanye ini"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
-msgstr "Görseller"
+msgstr "Gambar"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
-msgstr ""
+msgstr "Jumlah total kontribusi yang dibuat dalam kampanye ini"
 
 #: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
 #: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
@@ -338,697 +337,697 @@ msgstr ""
 #: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr "Katkılar"
+msgstr "Kontribusi"
 
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
-msgstr "En çok katkıda bulunanlar"
+msgstr "Kontributor Teratas"
 
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr "Katkıda bulunan"
+msgstr "Kontributor"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
-msgstr ""
+msgstr "Belum ada partisipan yang berkontribusi ke kampanye ini"
 
 #: templates/campaign/campaign.html:74
 #: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
-msgstr "En gelişmiş ülkeler"
+msgstr "Negara yang paling berkembang"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
 msgid "Country"
-msgstr "Ülke"
+msgstr "Negara"
 
 #: templates/campaign/campaign.html:97
 #: templates/campaign/campaign_stats.html:94
 msgid "There is no data available yet for this campaign"
-msgstr ""
+msgstr "Belum ada data yang tersedia untuk kampanye ini"
 
 #: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
-msgstr ""
+msgstr "Lihat dan unduh statistik selengkapnya untuk kampanye ini"
 
 #: templates/campaign/campaign.html:105
 msgid "View full stats"
-msgstr "Tam istatisiği görüntüle"
+msgstr "Lihat statistik penuh"
 
 #: templates/campaign/campaign.html:116
 msgid "My Contributions"
-msgstr "Katkılarım"
+msgstr "Kontribusi Saya"
 
 #: templates/campaign/campaign.html:123
 msgid "Rank"
-msgstr "Sıralama"
+msgstr "Peringkat"
 
 #: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
-msgstr ""
+msgstr "Selengkapnya Tentang Kampanye Ini"
 
 #: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
-msgstr ""
+msgstr "Pengelola Kampanye"
 
 #: templates/campaign/campaign.html:145
 msgid "START DATE"
-msgstr "BAŞLANGIÇ TARİHİ"
+msgstr "TANGGAL MULAI"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
-msgstr "BİTİŞ TARİHİ"
+msgstr "TANGGAL SELESAI"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
-msgstr "Ayarlanmadı"
+msgstr "Belum Diatur"
 
 #: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
-msgstr ""
+msgstr "Buat perubahan untuk kampanye ini"
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
-msgstr "Kampanyayı Düzenle"
+msgstr "Sunting Kampanye"
 
 #: templates/campaign/campaign.html:162
 msgid "Unknown country"
-msgstr "Bilinmeyen Ülke"
+msgstr "Negara tidak diketahui"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr ""
+msgstr "Kembali ke halaman beranda kampanye"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
-msgstr "Anasayfa"
+msgstr "Beranda"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Önceki görseli görüntüle"
+msgstr "Lihat gambar sebelumnya"
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
-msgstr "ÖNCK GÖRSEL"
+msgstr "GAMBAR SEBELUMNYA"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Kendi çalışması"
+msgstr "Karya sendiri"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Sonraki görseli görüntüle"
+msgstr "Lihat gambar selanjutnya"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
-msgstr "SONRK GÖRSEL"
+msgstr "GAMBAR SELANJUTNYA"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Dosya"
+msgstr "Berkas"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Bu görseli Wikimedia Commons'ta aç"
+msgstr "Buka gambar ini di Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Açıklama"
+msgstr "Deskripsi"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Kategoriler"
+msgstr "Kategori"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr "Kamera Konumu"
+msgstr "Lokasi Kamera"
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
-msgstr ""
+msgstr "tampilkan seluruh metadata dari Commons"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr ""
+msgstr "Menambahkan Pernyataan Menggambarkan"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr ""
+msgstr "Buat Sederhana: Gunakan kata sederhana dan konsep untuk menjelaskan apa yang Anda lihat di tiap gambar (cth. kucing, gunung, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
-msgstr "Değişiklerinizi iptal et"
+msgstr "Batalkan perubahan Anda"
 
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
-msgstr "İptal"
+msgstr "Batal"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr "Düzenlemelerinizi Wikimedia Commons'a kaydedin"
+msgstr "Simpan suntingan Anda ke Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:58
 msgid "Save"
-msgstr "Kaydet"
+msgstr "Simpan"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr "Değişikliklerinizi kaydetmek için girişe yonlendirilecek ve geri geleceksiniz"
+msgstr "Anda akan dialihkan ke masuk log dan kembali ke sini untuk menyimpan perubahan Anda"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr "Bu görselde gördüğünüz farklı ögeleri adlandırın"
+msgstr "Sebutkan elemen berbeda yang bisa Anda lihat di gambar ini"
 
 #: templates/campaign/campaign_entry.html:73
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr ""
+msgstr "Untuk menandai elemen menonjol dalam gambar, klik ikon bendera"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr ""
+msgstr "Menulis Takarir"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr ""
+msgstr "Sertakan informasi budaya tertentu, ilmiah atau teknis yang dapat Anda identifikasi (misalnya Upacara Kopi Ethiopia atau bunna maflat) untuk membuat informasi lebih kaya."
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr "Değişiklikleri yayımlamak için giriş yap"
+msgstr "Masuk untuk mempublikasikan perubahan"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr ""
+msgstr "Tambahkan takarir untuk menjelaskan gambar lebih baik (maksimal 255 karakter)"
 
 #: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
-msgstr "Bu görselde ne gördüğünüzü kısaca açıklayın."
+msgstr "Jelaskan secara singkat apa yang Anda lihat dalam gambar ini."
 
 #: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr ""
+msgstr "Anda bisa menambahkan takarir dalam bahasa tambahan dengan memilih Preferensi Bahasa dari menu pengguna"
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr "Bu kampanya için görsel bulunamadı!"
+msgstr "Tidak ada gambar ditemukan untuk kampanye ini!"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
-msgstr "Kampanya görselleri alınırken bir şeyler ters gitti"
+msgstr "Terjadi kesalahan saat mengambil gambar kampanye"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "Cari hal yang Anda lihat di gambar"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr ""
+msgstr "minimalisir metadata dari Commons"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "Sukses! Item yang telah digambarkan tersimpan ke Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
+msgstr "Sukses! Takarir tersimpan ke Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "Ups! Terjadi kesalahan, suntingan Anda belum tersimpan ke Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "Apakah Anda yakin untuk beralih ke gambar lainnya? Anda memiliki perubahan tidak tersimpan yang akan hilang."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "Klik 'OK' untuk melanjutkan, atau 'Batalkan' jika Anda ingin menyimpan perubahan terlebih dahulu."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "Menghapus item yang digambarkan ini"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "Tandai item yang digambarkan ini sebagai yang menonjol"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "Tandai item yang digambarkan ini sebagai TIDAK menonjol"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr ""
+msgstr "KONTRIBUSI UNTUK KAMPANYE DATA TERSTRUKTUR"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr "Kimden"
+msgstr "Dari"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr ""
+msgstr "Sampai"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
-msgstr "Tüm istatistikleri indir (CSV)"
+msgstr "Unduh semua statistik (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
-msgstr "Katkıda bulunanların İstatistikleri"
+msgstr "Statistik Kontributor"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
-msgstr "Ülke İstatistikleri"
+msgstr "Statistik Negara"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr ""
+msgstr "Di halaman ini adalah kampanye yang dikuratori yang saat ini berjalan sebagai bagian dari alat ISA."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr ""
+msgstr "Klik nama kampanye untuk memulai dan menambahkan data terstruktur ke gambar."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr ""
+msgstr "Anda dapat mengakses informasi tentang Kampanye sebelumnya di bagian Arsip."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr ""
+msgstr "Kampanye Berlangsung"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr ""
+msgstr "Nama Kampanye"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr "Kampanya"
+msgstr "Kampanye"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Jumlah total gambar pada kampanye"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Jumlah penyunting yang telah berkontribusi pada kampanye "
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr "Katılımcılar"
+msgstr "Peserta"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr ""
+msgstr "Jumlah total kontribusi untuk kampanye"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr "Kampanya başlangıç tarihi"
+msgstr "Tanggal mulai Kampanye"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr "Kampanya bitiş tarihi"
+msgstr "Tanggal selesai Kampanye"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr ""
+msgstr "Tanggal kampanye dibuat"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr "Oluşturma Tarihi"
+msgstr "Tanggal Pembuatan"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr "Kampanya durumu"
+msgstr "Status Kampanye"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr "Durum"
+msgstr "Status"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr "Kapalı"
+msgstr "Ditutup"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr "Açık Değil"
+msgstr "Tidak Dibuka"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Açık"
+msgstr "Dibuka"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr ""
+msgstr "Buka halaman beranda kampanye untuk memulai"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr ""
+msgstr "Pergi ke Kampanye"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr ""
+msgstr "Tampilkan kampanye yang telah ditutup"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr ""
+msgstr "Buat kampanye Anda sendiri"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr ""
+msgstr "Buat kampanye menggunakan perkakas ini"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr ""
+msgstr "Anda harus masuk untuk membuat kampanye."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Memperlihatkan _START_ ke _END_ dari entri _TOTAL_"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr "Girdi yok"
+msgstr "Tidak ada entri"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr "Ara:"
+msgstr "Cari:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr "Eşleşen kayıt bulunamadı"
+msgstr "Tidak ada catatan yang cocok ditemukan"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr "İlk"
+msgstr "Pertama"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr "Son"
+msgstr "Terakhir"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr "Sonraki"
+msgstr "Selanjutnya"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr "Önceki"
+msgstr "Sebelumnya"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr ""
+msgstr "Perbarui gambar"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr ""
+msgstr "Gambar untuk kampanye ini sedang diperbarui."
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr ""
+msgstr "Lebih banyak gambar akan ditambahkan."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr ""
+msgstr "Anda masih dapat berpartisipasi dalam kampanye."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr ""
+msgstr "Gagal memperbarui gambar"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
-msgstr ""
+msgstr "Ada kesalahan saat memperbarui gambar untuk kampanye ini."
 
 #: templates/campaign/macros.html:8
 msgid "Some images will be missing."
-msgstr ""
+msgstr "Beberapa gambar akan hilang."
 
 #: templates/campaign/macros.html:8
 msgid "The campaign manager can retry by updating the campaign."
-msgstr ""
+msgstr "Pengelola kampanye dapat mencoba kembali dengan memperbarui kampanye."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr "Sunucu bakım altındadır"
+msgstr "Peladen Dalam Pemeliharaan"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr ""
+msgstr "Silakan periksa kontak dukungan"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr ""
+msgstr "Bawa Aku Pulang"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Destek ile iletişime geçin"
+msgstr "Hubungi Dukungan"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Sayfa Bulunamadı"
+msgstr "Halaman Tidak Ditemukan"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr "Aradığınız sayfayı bulamadık"
+msgstr "Kami Tidak Dapat Menemukan Halaman yang Anda Cari"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr ""
+msgstr "Bawa Aku Pulang"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Bir şeyler yanlış gitti"
+msgstr "Ada yang Tidak Beres"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr "Isa bakım altına alınıyor olabilir"
+msgstr "Isa mungkin sedang menjalani pemeliharaan"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Yardım Sayfası"
+msgstr "Halaman Bantuan"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr "Kolayca Wikimedia Commons'taki görseller hakkında bilgi ekle"
+msgstr "Tambahkan informasi tentang gambar dengan mudah di Wikimedia Commons"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> adalah alat yang menyenangkan, multibahasa, mobile-first, yang memudahkan orang untuk menambahkan \"kontribusi mikro\" dalam bentu <a %(link_attrs)s>data terstruktur</a> ke gambar di Wikimedia Commons yang telah ditambahkan oleh kompetisi Wiki Cinta."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "ISA awalnya dibangun untuk memberikan deskripsi multibahasa dan terstruktur yang lebih baik tentang gambar <a %(link_attrs)s>Wiki Cinta Afrika</a>"
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Tetapi juga dikembangkan agar berguna bagi semua kompetisi <a link_attrs>Wiki Cinta</a> dan, pada akhirnya, untuk <strong>semua file media</strong> di Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr "Wikimedia Commons nedir?"
+msgstr "Apa itu Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>Wikimedia Commons</strong> (juga dikenal sebagai 'Commons') adalah proyek Wikimedia, proyek saudara wikipedia, dan koleksi lebih dari 40 juta berkas media gratis."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "Semua foto berlisensi bebas, berkas audio dan video, PDF dan media lain di Wikipedia disimpan di Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "Wikimedia Commons berkembang pesat, sekitar 5 juta berkas media baru per tahun."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Ribuan sukarelawan mengunggah file ke Commons, dan mengintegrasikannya ke dalam proyek-proyek Wikimedia, seperti Wikipedia, untuk mengilustrasikan konten di sana dan untuk berbagi media itu dengan publik."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr ""
+msgstr "Berkas media di Commons biasanya:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "Fotografi pribadi dan media yang diunggah oleh individu, kadang-kadang selama kompetisi Wiki Loves seperti Wiki Cinta Afrika, Wiki Cinta Monument, Wiki Cinta Bumi dll;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "Berkas media berlisensi bebas dari situs web eksternal seperti Flickr, YouTube, jurnal akses terbuka, dan repositori lainnya; dan"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "Sumbangan dari lembaga dan organisasi dengan koleksi media yang substansial, besar dan kecil, mulai dari UNESCO, NASA dan British Library hingga lembaga budaya lokal kecil."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "Apa itu data terstruktur di Commons?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>Data Terstruktur di Commons</strong> adalah proyek yang menyediakan infrastruktur teknis untuk melengkapi teks wiki, templat, dan kategori di Wikimedia Commons dengan data terstruktur."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "Data terstruktur adalah data dengan tingkat organisasi terstruktur yang tinggi."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "Dengan lebih banyak struktur, menjadi lebih mudah untuk menggunakan kembali data dalam proyek Wikimedia lainnya dan oleh pihak ketiga; hal ini juga memungkinkan komputer untuk memproses dan 'memahami' itu."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "Data Terstruktur adalah proyek berkelanjutan yang diluncurkan pada tahun 2019! ... sementara Wikimedia Commons telah ada selama bertahun-tahun!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "Ada jutaan gambar yang diinangi di Wikimedia Commons … yang membutuhkan perhatian dan cinta."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "Jutaan gambar tidak dijelaskan dengan data terstruktur saat ini."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr "Bunu nasıl yapacağız ? "
+msgstr "Bagaimana kita akan melakukan itu? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "<strong>Kurasi</strong>, dalam arti sempit, berarti: memilih dan mengatur karya seni dan warisan budaya untuk pameran."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "Istilah ini juga dapat digunakan secara lebih luas, untuk menggambarkan setiap kegiatan yang melibatkan pemilihan, pengorganisasian dan penyajian informasi."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "Dalam konteks Data Terstruktur di Commons, kurasi berarti semua kegiatan yang dilakukan oleh kontributor Commons untuk mengatur dan menyajikan berkas media di Wikimedia Commons: tindakan administratif, menambahkan metadata yang lebih banyak dan lebih baik ke berkas, mengelompokkannya dalam kategori, membuat galeri..."
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr ""
+msgstr "Jadi ... bagaimana perkakas ISA cocok di sana?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "Perkakas ISA memungkinkan untuk menambahkan dua jenis data terstruktur ke rangkaian gambar: keterangan dan gambar (penjelasan lebih lanjut di bawah ini tentang apa itu keterangan dan gambarkan)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "Ini adalah alat 'kontribusi mikro' multibahasa, mobile-first, yang memudahkan orang untuk menambahkan data terstruktur ke gambar yang berkontribusi pada kompetisi Wiki Cinta di Wikimedia Commons."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr ""
+msgstr "Alat ini beroperasi dengan kampanye yang dikuratori yang dibuat oleh koordinator."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "Siapa pun yang memiliki akun Wikimedia dapat menjadi koordinator!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr ""
+msgstr "Dengan ISA, koordinator dapat memilih satu rangkaian gambar yang telah ditentukan di Commons, memilih tanggal mulai dan tanggal selesai untuk kampanye, dan memberikan informasi umum tentang kampanye itu sendiri."
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr ""
+msgstr "Koordinator kemudian dapat meminta kontributor untuk \"menandai\" gambar-gambar ini dengan metadata terstruktur multibahasa (menggambarkan dan/atau keterangan)."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr ""
+msgstr "Poin dihitung untuk setiap kontribusi yang dibuat oleh peserta, dan oleh karena itu dimungkinkan untuk mengatur kompetisi atau tantangan \"penandaan\" atau kontribusi mikro dengan ISA."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr ""
+msgstr "Siapa pun yang memiliki akun Wikimedia dapat berkontribusi untuk menambahkan metadata terstruktur ke kampanye."
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr "Tek gereken şey... giriş yapmak."
+msgstr "Satu-satunya persyaratan adalah ... masuk log."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "Pelajari lebih lanjut tentang takarir berkas dan gambarkan"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "Takarir berkas adalah bagian fitur dari data Terstruktur."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "Mereka dimaksudkan untuk menyimpan deskripsi singkat dan multibahasa tentang berkas."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "Apa itu takarir yang bagus? dan apa perbedaan antara deskripsi berkas lama dan takarir kami yang bagus?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "Pertama, takarir dimaksudkan sederhana dan singkat."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "Meskipun deskripsi bisa sangat luas, takarir dibatasi hingga 255 karakter panjangnya, dan tidak dapat berisi markup (seperti tautan Wikitext atau HTML) dan tidak mendukung tautan eksternal."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "Dalam banyak kasus, takarir akan serupa atau identik dengan deskripsi."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "Tetapi dalam kasus lain, ada deskripsi yang sangat luas (858 karakter, dan tautan) dan takarirnya jauh lebih pendek (kurang lebih takarir yang sama yang digunakan pada artikel Wikipedia menggunakan gambar itu)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "Hanya teks yang sangat pendek sehingga tidak dapat dilindungi hak cipta yang harus disalin ke dalam teks, karena keterangan diterbitkan di bawah pengabaian CC0 (\"domain publik\")."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "Salah satu manfaat inti dari keterangan adalah peningkatan kemampuan pencarian sadar bahasa."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "Deskripsi file klasik ada di teks wiki, dan hanya dapat dicari melalui pencarian teks lengkap, yang tentu saja mencari melalui seluruh konten halaman, termasuk kategori dan templat lisensi; dan tidak mungkin untuk melakukan pencarian pencarian per bahasa."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "Takarir tersedia sebagai bagian dari data terstruktur kami, sementara deskripsi tidak."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "Dalam istilah teknis, deskripsi adalah teks wiki biasa yang dibungkus dalam template bahasa, dibungkus lagi dalam template Informasi; sementara takarir adalah label Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "Dengan demikian, keterangan akan dapat dicari melalui API, sehingga mudah untuk menemukan/memfilter/menarik takarir dari berkas sebagai metadata."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "Karena mereka dapat dicari melalui API, juga lebih mudah bagi pengguna ulang pihak ke-3 untuk menemukan dan menggunakan kembali media dan takarir itu sendiri."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "Kemungkinan penggunaan takarir lainnya dapat berupa:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "mengisi kotak info"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "berkas kueri untuk takarir yang hilang dalam bahasa tertentu"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "membuat daftar untuk terjemahan berkas penting yang memerlukan keterangan yang dilokalkan untuk proyek atau kampanye"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
@@ -1040,7 +1039,7 @@ msgstr ""
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr "Wikimedia Commons'ta Nisan 2019'da etkinleştirildi."
+msgstr ""
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
@@ -1084,11 +1083,11 @@ msgstr ""
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr "ISA aracını kullanmak"
+msgstr ""
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr "Daha fazla bilgi burada bulunabilir:"
+msgstr ""
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
@@ -1129,7 +1128,7 @@ msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "Bu araç hakkında"
+msgstr ""
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1157,15 +1156,15 @@ msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr "Anasayfa"
+msgstr ""
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr "Yeni... Oluştur"
+msgstr "Buat Baru"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Yardım"
+msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
@@ -1173,7 +1172,7 @@ msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr "Dil tercihleri"
+msgstr ""
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
@@ -1185,15 +1184,15 @@ msgstr ""
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr "Çıkış yap"
+msgstr ""
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr "Giriş yap"
+msgstr ""
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr "ISA aracı"
+msgstr ""
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
@@ -1229,7 +1228,7 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr "#"
+msgstr ""
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
@@ -1271,7 +1270,7 @@ msgstr ""
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr "Dil kaldır"
+msgstr ""
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
@@ -1279,7 +1278,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr "Değişiklikleri Geri Al"
+msgstr ""
 
 #: users/forms.py:26
 msgid "Same as interface"
@@ -1287,25 +1286,25 @@ msgstr ""
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr "OAuth çağrısı başarısız. Çerezler devre dışı mı?"
+msgstr ""
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr "Hoş geldin %(username)s!"
+msgstr ""
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "Görüşürüz!"
+msgstr ""
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr "Dil tercihlerinizi değiştirmek için lütfen giriş yapın"
+msgstr ""
 
 #: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr "Üzgünüz, %(rep_languages)s kez giriş yapmaya çalıştınız"
+msgstr ""
 
 #: users/routes.py:157
 msgid "Captions languages could not be set"
@@ -1313,16 +1312,16 @@ msgstr ""
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
-msgstr "Tercih edilen diller başarıyla ayarlandı"
+msgstr ""
 
 #: users/routes.py:172
 msgid "Language settings not available at the moment"
-msgstr "Dil ayarları şu an mevcut değil"
+msgstr ""
 
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr "%(username)s kullanıcısı - Ayarlar"
+msgstr ""
 
 #: users/routes.py:197
 #, python-format
