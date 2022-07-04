@@ -18,6 +18,25 @@ Install application dependencies using the `get-deps.sh` script:
 The above script attempts to check system requirements and informs user on next steps.
 
 ## Quickstart the app
+
+Add a database, e.g. for Mysql:
+```
+create database isa;
+```
+
+and create all the tables. in Python run:
+```
+from isa import db
+from isa.models import *
+db.create_all()
+```
+
+Then set the config variable in config.yaml, e.g.:
+```
+SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://localhost/isa'
+```
+
+Then start Flask:
 ```bash
 export FLASK_APP=app.py # add --reload parameter to enable Flask auto-compilation feature
 flask run
