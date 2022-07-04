@@ -402,14 +402,19 @@ def postContribution():
 
     for i in range(len(contrib_options_list)):
         # We make an api call with the current contribution data and get baserevid
-        csrf_token, api_auth_token = generate_csrf_token(
-            app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
-            session.get('access_token')['key'],
-            session.get('access_token')['secret']
-        )
-        lastrevid = make_edit_api_call(csrf_token,
-                                       api_auth_token,
-                                       contrib_data_list[i])
+        if "ISA_DEV" in app.config and app.config["ISA_DEV"]:
+            # Just pretend that everything went fine without touching
+            # commons.
+            lastrevid = 1
+        else:
+            csrf_token, api_auth_token = generate_csrf_token(
+                app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
+                session.get('access_token')['key'],
+                session.get('access_token')['secret']
+            )
+            lastrevid = make_edit_api_call(csrf_token,
+                                           api_auth_token,
+                                           contrib_data_list[i])
 
         if lastrevid is not None:
             # We check if the previous edit was successfull

@@ -23,6 +23,15 @@ export FLASK_APP=app.py # add --reload parameter to enable Flask auto-compilatio
 flask run
 ```
 
+### Development
+If you want to run ISA during development you can set the config variable `ISA_DEV` to `true`. This will allow you to use it as normal with all actions being made by the user "Dev". No changes will be made to Commons.
+
+You need to create the user manually by running the following Python code:
+```
+from isa.users.utils import add_user_to_db
+add_user_to_db("Dev")
+```
+
 ## Managing Translations
 
 Steps 1 to 3a below show how to extract and generate translation files from the
