@@ -5,6 +5,7 @@ flask_sqlalchemy
 flask_babel
 flask_login
 flask_wtf
+WTForms==2.*
 pycountry
 mysqlclient
 PyMySQL
