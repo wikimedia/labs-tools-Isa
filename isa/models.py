@@ -16,7 +16,7 @@ class User(db.Model, UserMixin):
     caption_languages = db.Column(db.String(25), nullable=False)
     # Maximum length for language code is 13 because that's the
     # maximum length in MediaWiki\Languages\Data\Names.
-    depicts_language = db.Column(db.String(13), nullable=False)
+    depicts_language = db.Column(db.String(13), nullable=False, default='')
     contrib = db.Column(db.Integer, default=0)
     managed_campaigns = db.relationship('Campaign', backref='user', lazy=True)
 
