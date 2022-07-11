@@ -20,7 +20,7 @@ PROCESSING = 1
 FAILED = 2
 
 # Add files with these extensions as images.
-ALLOWED_FILE_EXTENISONS = ["jpg", "jpeg", "png", "svg", "gif"]
+ALLOWED_FILE_EXTENISONS = ["jpg", "jpeg", "png", "svg", "gif", "tif", "tiff"]
 # Wait this long (in seconds) before timing out API request.
 API_TIMEOUT = 5
 # Retry sending API request at most this many times before giving up.
