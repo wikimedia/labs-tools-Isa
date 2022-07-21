@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-05-09 11:17:14+0000\n"
-"X-POT-Import-Date: 2022-04-20 05:08:08+0000\n"
+"PO-Revision-Date: 2022-07-21 11:19:27+0000\n"
+"X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
@@ -213,7 +213,7 @@ msgstr "Toto nahradí aktuálne obrázky."
 
 #: templates/campaign/campaign-form.html:174
 msgid "Use if you changed the categories or if there was an error updating previously."
-msgstr ""
+msgstr "Použite, ak ste zmenili kategórie, alebo ak sa predtým vyskytla chyba pri aktualizácii."
 
 #: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
@@ -685,449 +685,449 @@ msgstr "Otvorená"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr ""
+msgstr "Ak chcete začať, prejdite na domovskú stránku kampane"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr ""
+msgstr "Prejsť na kampaň"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr ""
+msgstr "Zobraziť uzavreté kampane"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr ""
+msgstr "Vytvoriť vlastnú kampaň"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr ""
+msgstr "Vytvoriť novú kampaň pomocou tohto nástroja"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr ""
+msgstr "Ak chcete vytvoriť kampaň, musíte byť prihlásený/á."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Zobrazuje sa _START_ až _END_ z _TOTAL_ záznamov"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr ""
+msgstr "Žiadne záznamy"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr ""
+msgstr "Hľadať:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr ""
+msgstr "Nenašli sa žiadne zodpovedajúce záznamy"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr ""
+msgstr "Prvý"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr ""
+msgstr "Posledný"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr ""
+msgstr "Ďalší"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr ""
+msgstr "Predchádzajúci"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr ""
+msgstr "Aktualizácia obrázkov"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr ""
+msgstr "Obrázky pre túto kampaň sa aktualizujú."
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr ""
+msgstr "Ďalšie obrázky budú pridané."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr ""
+msgstr "Stále sa môžete zapojiť do kampane."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr ""
+msgstr "Aktualizácia obrázkov zlyhala"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
-msgstr ""
+msgstr "Pri aktualizácii obrázkov pre túto kampaň sa vyskytla chyba."
 
 #: templates/campaign/macros.html:8
 msgid "Some images will be missing."
-msgstr ""
+msgstr "Niektoré obrázky budú chýbať."
 
 #: templates/campaign/macros.html:8
 msgid "The campaign manager can retry by updating the campaign."
-msgstr ""
+msgstr "Správca kampane to môže skúsiť znova aktualizáciou kampane."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr ""
+msgstr "Prebieha údržba servera"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr ""
+msgstr "Skontrolujte kontakt na podporu"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr ""
+msgstr "Vezmi ma domov"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr ""
+msgstr "Kontaktujte podporu"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr ""
+msgstr "Stránka nenájdená"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "Nemôžeme nájsť stránku, ktorú hľadáte"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr ""
+msgstr "Vezmi ma domov"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr ""
+msgstr "Niečo sa pokazilo"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "Isa možno prechádza údržbou"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr ""
+msgstr "Stránka pomocníka"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr ""
+msgstr "Jednoducho pridajte informácie o obrázkoch na Wikimedia Commons"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> je zábavný, viacjazyčný nástroj určený predovšetkým pre mobilné zariadenia, ktorý ľuďom uľahčuje pridávanie „mikro príspevkov“ vo forme <a %(link_attrs)s>štruktúrovaných údajov</a> k obrázkom na Wikimedia Commons, ktoré boli pridané súťažou Wiki Loves."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "ISA je pôvodne vytvorený tak, aby poskytoval lepšie viacjazyčné a štruktúrované popisy obrázkov <a %(link_attrs)s>Wiki Loves Africa</a> ."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Je však tiež vyvinutý tak, aby bol užitočný pre všetky <a link_attrs>súťaže Wiki Loves</a> a v konečnom dôsledku pre <strong>všetky mediálne súbory</strong> na Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "Čo je Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>Wikimedia Commons</strong> (tiež známy ako „Commons“) je projekt Wikimedia, sesterský projekt Wikipédie a zbierka viac ako 40 miliónov bezplatných mediálnych súborov."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "Všetky voľne licencované fotografie, audio a video súbory, súbory PDF a ďalšie médiá na Wikipédii sú uložené na Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "Wikimedia Commons rýchlo rastie, približne o 5 miliónov nových mediálnych súborov ročne."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Tisíce dobrovoľníkov nahrávajú súbory na Commons a integrujú ich do projektov Wikimedia, ako je Wikipedia, aby ilustrovali obsah a zdieľali tieto médiá s verejnosťou."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr ""
+msgstr "Mediálne súbory na Commons sú zvyčajne:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "Osobné fotografie a médiá odovzdané jednotlivcami, niekedy počas súťaží  ako je Wiki miluje Afriku, Wiki miluje pamiatky, Wiki miluje Zem atď.;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "Voľne licencované mediálne súbory z externých webových stránok, ako sú Flickr, YouTube, časopisy s otvoreným prístupom a iné úložiská; a"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "Dary od inštitúcií a organizácií s rozsiahlymi zbierkami médií, veľkými aj malými, od UNESCO, NASA a Britskej knižnice až po malé miestne kultúrne inštitúcie."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "Čo sú to štruktúrované údaje na Commons?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>Štruktúrované údaje na  Commons</strong> je projekt, ktorý poskytuje technickú infraštruktúru na doplnenie wikitextu, šablón a kategórií na Wikimedia Commons o štruktúrované údaje."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "Štruktúrované dáta sú dáta s vysokým stupňom štruktúrovanej organizácie."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "S väčšou štruktúrou sa stáva jednoduchšie opätovné použitie údajov v iných projektoch Wikimedia a tretími stranami; umožňuje aj počítačom, aby ich spracovali a „porozumeli“ im."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "Štruktúrované dáta sú prebiehajúci projekt, ktorý bol spustený v roku 2019! … zatiaľ čo Wikimedia Commons existuje už roky!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "Na Wikimedia Commons sú doslova milióny obrázkov, ktoré si vyžadujú pozornosť a lásku."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "Milióny obrázkov, ktoré momentálne nie sú popísané štruktúrovanými dátami."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr ""
+msgstr "Ako to urobíme? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "<strong>Kurátorstvo</strong> alebo kurátorstvo v užšom zmysle znamená: výber a organizovanie umeleckých diel a kultúrneho dedičstva na výstavu."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "Tento výraz možno použiť aj širšie, na označenie akejkoľvek činnosti, ktorá zahŕňa výber, organizáciu a prezentáciu informácií."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "V kontexte Štruktúrované dáta na Commons kurátorstvo znamená všetky činnosti vykonávané prispievateľmi Commons na organizáciu a prezentáciu mediálnych súborov na Wikimedia Commons: administratívne úkony, pridávanie ďalších a lepších metadát do súborov, ich zoskupovanie do kategórií, vytváranie galérií. ."
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr ""
+msgstr "Takže...ako tam zapadá nástroj ISA?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "Nástroj ISA umožňuje pridať do súboru obrázkov dva rôzne typy štruktúrovaných údajov: popisky a vyobrazenia (viac vysvetlení nižšie o tom, čo sú popisky a vyobrazenia)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "Ide o viacjazyčný nástroj „mikro príspevkov“ určený pre mobilné zariadenia, ktorý ľuďom uľahčuje pridávanie štruktúrovaných údajov k obrázkom pridávaných počas súťaží Wiki Loves na Wikimedia Commons."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr ""
+msgstr "Nástroj pracuje s kurátorskými kampaňami vytvorenými koordinátormi."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "Koordinátorom môže byť ktokoľvek s účtom na Wikimedia!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr ""
+msgstr "Pomocou ISA si koordinátor môže vybrať preddefinovanú sadu obrázkov na Commons, vybrať dátum začiatku a dátum ukončenia kampane a poskytnúť všeobecné informácie o samotnej kampani."
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr ""
+msgstr "Koordinátor potom môže požiadať prispievateľov, aby tieto obrázky „označili“ viacjazyčnými štruktúrovanými metadátami (obrázky a/alebo titulky)."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr ""
+msgstr "Body sa počítajú za každý príspevok účastníka, a preto je možné s ISA organizovať „tagovacie“ alebo mikro príspevkové súťaže či výzvy."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr ""
+msgstr "Ktokoľvek s účtom Wikimedia môže prispieť k pridaniu štruktúrovaných metadát do kampane."
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr ""
+msgstr "Jedinou podmienkou je... byť prihlásený."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "Získajte viac informácií o titulkoch a vyobrazeniach súborov"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "Popisky súborov sú súčasťou štruktúrovaných údajov."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "Sú určené na ukladanie krátkych, viacjazyčných popisov o súboroch."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "Čo je dobrý nadpis? a aký je rozdiel medzi našimi starými dobrými popismi súborov a titulkami?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "Po prvé, titulky majú byť jednoduché a krátke."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "Zatiaľ čo popisy môžu byť veľmi rozsiahle, titulky sú obmedzené na 255 znakov a nemôžu obsahovať značky (napríklad odkazy na Wikitext alebo HTML) a nepodporujú externé odkazy."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "V mnohých prípadoch bude nadpis podobný alebo rovnaký ako popis."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "Ale v iných prípadoch je tam veľmi rozsiahly popis (858 znakov a odkazov) a popis je oveľa kratší (viac-menej rovnaký popis ako v článkoch na Wikipédii, ktoré používajú tento obrázok)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "Do titulkov by sa mal skopírovať iba text, ktorý je taký krátky, že sa naň nevzťahujú autorské práva, pretože titulky sú zverejnené na základe výnimky CC0 („public domain“)."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "Jednou z hlavných výhod titulkov je lepšia možnosť vyhľadávania podľa jazyka."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "Klasické popisy súborov sú vo wikitexte a dajú sa vyhľadávať iba prostredníctvom fulltextového vyhľadávania, ktoré nevyhnutne prehľadáva celý obsah stránky vrátane kategórií a licenčných šablón; a nie je možné vyhľadávať podľa jazyka."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "Titulky sú k dispozícii ako súčasť našich štruktúrovaných údajov, zatiaľ čo popisy nie."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "Technicky povedané, popis je obyčajný wikitext zabalený do jazykovej šablóny, opäť zabalený do informačnej šablóny; zatiaľ čo titulky sú štítky Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "Titulky sa budú dať vyhľadávať prostredníctvom rozhrania API, vďaka čomu bude ľahké nájsť/filtrovať/vytiahnuť titulky zo súborov ako metadáta."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "Keďže ich možno vyhľadávať prostredníctvom rozhrania API, pre opätovných používateľov tretích strán je tiež jednoduchšie nájsť a znova použiť médiá a samotné titulky."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "Ďalšie možné použitia titulkov môžu byť:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "vypĺňanie infoboxov"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "súbory dotazov na chýbajúce titulky v danom jazyku"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "vytváranie zoznamov na preklad dôležitých súborov, ktoré potrebujú titulok lokalizovaný pre projekt alebo kampaň"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "Viac informácií o titulkoch nájdete tu"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr ""
+msgstr "Vyobrazovanie je tiež súčasťou štruktúrovaných údajov."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "To bolo povolené na Wikimedia Commons v apríli 2019."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
-msgstr ""
+msgstr "Ak chcete pridať vyhlásenie s vyobrazením, jednoducho začnite písať do vyhľadávacieho poľa."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr ""
+msgstr "Potom pre každú zobrazenú položku na obrázku nájdite príslušnú položku z Wikiúdajov a vyberte ju."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr ""
+msgstr "Ak máte problém nájsť správnu položku Wikidata, vyskúšajte alternatívne pravopisy."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr ""
+msgstr "Ak so zobrazeným predmetom nie je spojená žiadna položka Wikiúdajov, vyberte všeobecnejšiu položku, ktorá zahŕňa váš predmet ako príklad."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr ""
+msgstr "S primárnou značkou buďte čo najkonkrétnejší."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr ""
+msgstr "Ak je v mediálnom súbore jasne a zámerne zobrazených viacero položiek, všetky by sa mali v rozumnom zmysle pridať ako samostatné vyobrazenia."
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr ""
+msgstr "Pre súbory, ktoré zobrazujú desiatky alebo stovky položiek (napr. filmy), uveďte iba tie položky, ktoré sú najvýraznejšie."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr ""
+msgstr "Existuje aj možnosť označiť konkrétnu položku ako „výraznú“."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "Táto vlastnosť sa vzťahuje na význam položky v médiu."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "Viac informácií o vyobrazeniach nájdete tu:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "Pomocou nástroja ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "Viac informácií možno nájsť tu:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "Právne informácie a zásluhy"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr ""
+msgstr "Beží na tools.wmflabs.org a podlieha podmienkam používania cloudových služieb Wikimedia."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA je publikovaný pod GPLv3. Obsah pridaný prostredníctvom nástroja na Wikimedia Commons je vydaný pod CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "Obrázok použitý na nástroji:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "Jednoducho pridajte informácie o obrázkoch na Wikimedia Commons"
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> je viacjazyčný nástroj určený predovšetkým pre mobilné zariadenia, ktorý ľuďom uľahčuje pridávanie „mikro príspevkov“ vo forme <a %(link_attrs)s title=\"Získajte viac informácií o štruktúrovaných údajoch\">štruktúrované údaje</a> (popisy, titulky, značky atď.) k obrázkom, ktoré do Wikimedia Commons pridala Wiki Miluje súťaže."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr ""
+msgstr "<strong>Začnite kliknutím na Preskúmať kampane!</strong>"
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr ""
+msgstr "Prejdite do adresára kampane a vyberte kampaň"
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "PRESKÚMAŤ KAMPANE"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "O tomto nástroji"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
