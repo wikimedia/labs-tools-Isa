@@ -9,12 +9,12 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-07-21 11:19:27+0000\n"
+"PO-Revision-Date: 2022-07-28 11:21:24+0000\n"
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
-"X-Generator: MediaWiki 1.39.0-alpha; Translate 2022-04-26\n"
+"X-Generator: MediaWiki 1.39.0-alpha; Translate 2022-07-28\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : 2 );\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
@@ -1131,199 +1131,199 @@ msgstr "O tomto nástroji"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr ""
+msgstr "Z dlhodobého hľadiska je zámerom tohto nástroja zvýšiť využitie znalostí, ktoré sa odrážajú v každom obrázku hosťovanom na Wikimedia Commons. "
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "Tento nástroj je zameraný na pomoc pri užitočnosti a informovanosti obrázkov darovaných počas súťaží Wiki Loves."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "Pôvodne bol vytvorený tak, aby pomáhal pri popise obrázkov Wiki miluje Afriku, ale je špeciálne modelovaný tak, aby bol užitočný pre všetky súťaže Wiki Loves a mimo nich."
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr ""
+msgstr "Tento nástroj je tiež navrhnutý tak, aby predstavoval množstvo súťaží o mikro príspevky, ktoré navrhujú vedúci projektov."
 
 #: templates/main/home.html:26
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ISA je spolupráca medzi Wiki In Africa, Histropedia a projektom Structured Data on Commons."
 
 #: templates/main/home.html:27
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA nie je len skratka pre Information Structured Acceleration, ale je to aj slovo v jazyku chiShona pre „umiestniť“ alebo „miesto“."
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr ""
+msgstr "Domov"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "Vytvoriť nový"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr ""
+msgstr "Pomoc"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "Zmeňte dostupné jazyky titulkov"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "Predvoľby jazykov"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr ""
+msgstr "Pozrite svoje kampane"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "Moje kampane"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr ""
+msgstr "Odhlásenie"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr ""
+msgstr "Prihlásenie"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "Nástroj ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "bol vyvinutý ako spolupráca medzi Wiki In Africa, Histropedia a projektom Structured Data on Commons."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr ""
+msgstr "Beží ďalej"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr ""
+msgstr "a podlieha"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr ""
+msgstr "ISA je zverejnený pod"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "Obsah pridaný prostredníctvom nástroja na Wikimedia Commons je vydaný pod"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "Vaše kampane"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr ""
+msgstr "Nižšie je uvedený zoznam vašich kampaní"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "Nemáte žiadne kampane"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "Predvoľby jazykov"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr ""
+msgstr "Zobrazuje jazyk"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr ""
+msgstr "Zvolený jazyk sa použije na vyhľadávanie prvkov zobrazených na obrázkoch."
 
 #: templates/users/user_settings.html:15
 msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
-msgstr ""
+msgstr "Ak zvolíte \"Rovnaké ako rozhranie\", použije sa jazyk vybraný v hornom menu."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "Vyberte až 6 jazykov pre titulky"
 
 #: templates/users/user_settings.html:19
 msgid "Caption Languages"
-msgstr ""
+msgstr "Jazyky titulkov"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "Ku každému obrázku je možné pridať titulky vo viacerých jazykoch."
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "Jazyky, ktoré vyberiete na tejto stránke, sa zobrazia na stránke, keď si prezeráte obrázok."
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "Vyberte všetky jazyky, v ktorých môžete prispievať."
 
 #: templates/users/user_settings.html:23 templates/users/user_settings.html:29
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr ""
+msgstr "Odstrániť jazyk"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "Vráťte späť zmeny nastavení jazyka"
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr ""
+msgstr "Vrátiť späť zmeny"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "Rovnaké ako rozhranie"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "Spätné volanie OAuth zlyhalo. Sú cookies zakázané?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "Vitajte %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "Uvidíme sa nabudúce!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Ak chcete zmeniť predvoľby jazyka, prihláste sa"
 
 #: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "Je nám ľúto, že ste sa pokúsili zadať %(rep_languages)s viackrát"
 
 #: users/routes.py:157
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "Jazyky titulkov sa nepodarilo nastaviť"
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
-msgstr ""
+msgstr "Preferované jazyky boli úspešne nastavené"
 
 #: users/routes.py:172
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "Nastavenia jazyka momentálne nie sú k dispozícii"
 
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s's – Nastavenia"
 
 #: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Kampane vytvorené používateľom %(username)s"
 
