@@ -4,6 +4,7 @@
 # Author: MITO
 # Author: Susannaanas
 # Author: Veikk0.ma
+# Author: Yupik
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -11,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-07-28 11:21:22+0000\n"
+"PO-Revision-Date: 2022-08-01 11:22:01+0000\n"
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,7 +46,7 @@ msgstr "Pahoittelu, kampanjaa %(campaign_name)s ei voitu luoda"
 #: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr "%(campaign_name)s Kampanja luotu!"
+msgstr "Kampanja %(campaign_name)s luotu!"
 
 #: campaigns/routes.py:228
 msgid "Create a campaign"
