@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-08-01 11:22:01+0000\n"
+"PO-Revision-Date: 2022-08-04 11:19:17+0000\n"
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,7 +72,7 @@ msgstr "Päivitetty onnistuneesti!"
 #: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Et voi päivittää tätä kampanjaa, ota yhteyttä ylläpitäjään Käyttöjä:%(campaign_manager)s "
+msgstr "Et voi päivittää tätä kampanjaa, ota yhteyttä ylläpitäjään Käyttäjä:%(campaign_manager)s "
 
 #: campaigns/routes.py:319
 #, python-format
@@ -176,7 +176,7 @@ msgstr "Tässä kampanjassa käytettävät luokat"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr "Etsi Wikimedia-luokkia, joissa on niitä kuvia, joita haluat käyttää kampanjassasi."
+msgstr "Etsi Wikimedia Commonsin luokkia, joissa on niitä kuvia, joita haluat käyttää kampanjassasi."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
