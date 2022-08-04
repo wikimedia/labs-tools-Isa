@@ -14,3 +14,4 @@ config.yaml
 campaign_stats_files/
 isa/translations/*/LC_MESSAGES/messages.mo
 .coverage
+isa/__init__.pyc

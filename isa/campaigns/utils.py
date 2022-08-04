@@ -31,7 +31,7 @@ def get_country_from_code(country_code):
     countries = [(country.alpha_2, country.name) for country in pycountry.countries]
     for country_index in range(len(countries)):
         # index 0 is the country code selected from the form
-        if(countries[country_index][0] == country_code):
+        if (countries[country_index][0] == country_code):
             country.append(countries[country_index])
     return country[0][1]
 

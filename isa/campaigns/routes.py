@@ -431,17 +431,17 @@ def postContribution():
                 next_api_options = contrib_options_list[0]
                 next_api_options['baserevid'] = lastrevid
         else:
-            return("Failure")
+            return ("Failure")
         # We store the latest revision id to be sent to client
         latest_base_rev_id = lastrevid
 
     # We attempt to save the changes to db
     if commit_changes_to_db():
-        return("Failure")
+        return ("Failure")
     else:
         return (str(latest_base_rev_id))
 
-    return("Failure")
+    return ("Failure")
 
 
 @campaigns.route('/api/search-depicts/<int:id>')
