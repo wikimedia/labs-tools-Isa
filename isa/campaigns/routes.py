@@ -17,7 +17,7 @@ from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, comp
                                  get_stats_data_points)
 from isa.campaigns import image_updater
 from isa.main.utils import commit_changes_to_db
-from isa.models import Campaign, Contribution, Country, Image, User
+from isa.models import Campaign, Contribution, Country, Image, User, Suggestion
 from isa.users.utils import (get_user_language_preferences, get_current_user_images_improved)
 
 
@@ -374,6 +374,7 @@ def postContribution():
 
     user = User.query.filter_by(username=username).first()
     contrib_list = []
+    suggestion_list = []
     for data in contrib_data_list:
         valid_actions = [
             "wbsetclaim",
@@ -395,6 +396,14 @@ def postContribution():
                                     caption_text=data.get('caption_text'),
                                     date=datetime.date(datetime.utcnow()))
         contrib_list.append(contribution)
+
+        # We also create a new suggestion by testing for GoogleVision
+        if data['isGoogleVision']:
+            suggestion = Suggestion(campaign_id=campaign_id,
+                                    file=data['image'],
+                                    depict_item=data['depict_item'],
+                                    google_vision=1)
+            suggestion_list.append(suggestion)
 
     # We write the api_options for the contributions into a list
     for contrib_data in contrib_data_list:
@@ -434,6 +443,10 @@ def postContribution():
             return ("Failure")
         # We store the latest revision id to be sent to client
         latest_base_rev_id = lastrevid
+
+    #  Before we commit changes we add the suggestions:
+    for suggestion in suggestion_list:
+        db.session.add(suggestion)
 
     # We attempt to save the changes to db
     if commit_changes_to_db():
@@ -505,7 +518,6 @@ def searchDepicts(id):
                 'origin': '*'
             }
         ).json()
-
         for search_result_item in search_result['search']:
             search_return.append({
                 'id': search_result_item['title'],

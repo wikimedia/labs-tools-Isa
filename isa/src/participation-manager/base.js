@@ -13,7 +13,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     var imageIndex = 0,
         initialData = {depicts: [], captions: []},
         unsavedChanges = {depicts: [], captions: []};
-
+    
     this.imageFileName = '';  
     this.imageMediaId = '';
     this.imageRevId = 0;
@@ -69,7 +69,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                     me.captionDataChanged();
                 }
             });
-
             if (me.machineVisionActive) me.populateMachineVisionSuggestions();
         });
     }
@@ -88,7 +87,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
     // All actions to complete when depict statement is added/removed/edited
     this.depictDataChanged = function() {
-        updateUnsavedDepictChanges();
+        this.updateUnsavedDepictChanges();
         updateButtonStates("depicts");
 
         // Show depict helper text when any statements are present
@@ -203,7 +202,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         var contributionsData = JSON.stringify(contributions);
 
         var me = this;
-
         $.post({
             url: '../../api/post-contribution',
             data: contributionsData,
@@ -304,8 +302,20 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         return captions;
     }
 
+    function isGoogleVision (depictItem, suggestions){
+        // checks if a suggestion is from GoogleVision
+        var gvSuggested = 0;
+        for(var i = 0; i < suggestions.length; i++){
+            if(depictItem === suggestions[i].wikidata_id){
+                gvSuggested = 1;
+                break;
+            }
+        }
+        return gvSuggested;
+    }
+
     //todo: create generalised updateUnsavedChanges which work for depicts and captions
-    function updateUnsavedDepictChanges () {
+    this.updateUnsavedDepictChanges = function() {
         // Compare current selection to initialData to see if there are any unsaved changes
 
         var depictStatements = getCurrentDepictStatements();
@@ -343,11 +353,13 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
             if (!found) {
                 // The current depicts item has not been found, it must be an unsaved change
+                // then we set Google_vision key to true
                 depictChanges.push({
                     edit_action: "add",
                     depict_item: depictItem,
                     depict_prominent: isProminent,
-                    statement_id: currentStatement.statementId
+                    statement_id: currentStatement.statementId,
+                    isGoogleVision: isGoogleVision(depictItem, this.depictSuggestions)
                 })
             }
         } // check next statement...
@@ -374,7 +386,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 })
             }
         } // check next initial statement...
-
         unsavedChanges.depicts = depictChanges;
     }
 
