@@ -127,3 +127,23 @@ class Country(db.Model):
             self.id,
             self.name,
         )
+
+
+class Suggestion(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
+    file = db.Column(db.String(240), nullable=False)
+    depict_item = db.Column(db.String(15), nullable=True)
+    update_status = db.Column(db.Integer, default=0)
+    google_vision = db.Column(db.Boolean, nullable=True)
+    metadata_to_concept = db.Column(db.Boolean, nullable=True)
+
+    def __repr__(self):
+        # This is what is shown when object is printed
+        return "Suggestion({}, {}, {}, {}, {}, {})".format(
+               self.campaign_id,
+               self.file,
+               self.depict_item,
+               self.google_vision,
+               self.metadata_to_concept,
+               self.update_status)
