@@ -1,8 +1,7 @@
-# Translation of ISA to Polish (polski)
+# Translation of ISA to Skolt Sami (nuõrttsääʹmǩiõll)
 # Exported from translatewiki.net
 #
-# Author: Kareyac
-# Author: Matlin
+# Author: Yupik
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -14,139 +13,139 @@ msgstr ""
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
+"Language: sms\n"
 "X-Generator: MediaWiki 1.39.0-alpha; Translate 2022-07-28\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n%10 >= 2 && n%10 <= 4 && (n%100 < 10 || n%100 >= 20)) ? 1 : 2 );\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
-msgstr "Kampanie"
+msgstr "Kampaanj"
 
 #: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "Kampania o id %(id)s nie istnieje"
+msgstr ""
 
 #: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
-msgstr "Kampania - "
+msgstr "Kampanjj - "
 
 #: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
-msgstr "Musisz się zalogować, aby utworzyć kampanię"
+msgstr "Ton õõlǥak leeʹd sizz ǩeeʹrjtõõttâm, jõs haaʹlääk kampaanj raajjâd."
 
 #: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr "Przepraszamy, kampania %(campaign_name)s nie może zostać utworzona."
+msgstr "Žaaʹll lij, što kampanja %(campaign_name)s raajjmõš ij oʹnnstam"
 
 #: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr "%(campaign_name)s Kampania utworzona!"
+msgstr "Kampanja %(campaign_name)s raʹjješ!"
 
 #: campaigns/routes.py:228
 msgid "Create a campaign"
-msgstr "Utwórz kampanię"
+msgstr "Raaj kampaanj"
 
 #: campaigns/routes.py:248
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr "%(campaign_name)s - Bierz udział"
+msgstr "%(campaign_name)s - Vuässõõđ"
 
 #: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
-msgstr "Musisz się zalogować, aby zaktualizować kampanię"
+msgstr "Ton õõlǥak leeʹd sizz ǩeeʹrjtõõttâm, jõs haaʹlääk kampaanj peiʹvveed."
 
 #: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
-msgstr "Aktualizacja kampanii nie powiodła się, spróbuj później!"
+msgstr ""
 
 #: campaigns/routes.py:296
 msgid "Update Succesfull !"
-msgstr "Aktualizacja powiodła się !"
+msgstr "Peiʹvvummuš oʹnnsti!"
 
 #: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Nie możesz zaktualizować tej kampanii, skontaktuj się z zarządzającym kampanią User:%(campaign_manager)s "
+msgstr ""
 
 #: campaigns/routes.py:319
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr "Booo! Kampania %(campaign_name)s nie może zostać zaktualizowana."
+msgstr "Vuõi ij, kampanja %(campaign_name)s peiʹvvummuš ij oʹnnstam!"
 
 #: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr "%(campaign_name)s - aktualizacja"
+msgstr "%(campaign_name)s - Peiʹvved"
 
 #: campaigns/routes.py:366
 msgid "You need to login to participate"
-msgstr "Aby wziąć udział, musisz się zalogować"
+msgstr "Ton õõlǥak leeʹd sizz ǩeeʹrjtõõttâm, jõs haaʹlääk kampaʹnjje vuässõõttâd"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr "Zaktualizuj szczegóły kampanii"
+msgstr "Peiʹvved kampaanj teâđaid"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr "Utwórz nową kampanię"
+msgstr "Raaj ođđ kampaanj"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Aktualizujesz"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr "Wypełnij poniższy formularz, aby utworzyć kampanię"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr "Pola oznaczone * są obowiązkowe"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Nazwa kampanii"
+msgstr "Kampanjjnõmm"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr ""
+msgstr "Tät lij tuu kampaanj nõmm, ij-ǥa vueiʹvvprojeeʹkt nõmm."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr ""
+msgstr "Leʹbe ij \"Wiki Loves Africa\", a \"Musikk da pleässjummuš Nigeriast\""
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr "Krótki opis kampanii (144 znaki)"
+msgstr "Kampaanj vuäʹnkõs deskriptt"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr "Nad czym będą pracować użytkownicy"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
 msgid "Start Date"
-msgstr "Data rozpoczęcia"
+msgstr "Äʹlǧǧempeiʹvv"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr "Ustaw datę rozpoczęcia kampanii"
+msgstr "Peiʹvvmieʹrr, kuäʹss kampanjj älgg"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
 msgid "End Date"
-msgstr "Data zakończenia"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr "Ustaw datę zakończenia kampanii"
+msgstr "Peiʹvvmieʹrr, kuäʹss kampanjj poott"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr ""
+msgstr "Tät lij Wiki Loves -kampanjj"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
@@ -154,27 +153,27 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr "Możesz wybrać wiele kategorii odpowiedniego typu."
+msgstr ""
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr ""
+msgstr "Wiki Loves -kampaanj kategoriai čiŋŋâlvuõtt âlgg leeʹd 0."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr ""
+msgstr "Kampaanj kategorianõmm âlgg leeʹd ååʹblǩest Images from Wiki Loves <strong><em>projeʹkttnõmm</em></strong> <strong><em>eeʹǩǩ</em></strong>, ouddmiârkkân “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>”. (muuʹtt projeʹkttnõõm da eeʹjj <strong><em>taarb mieʹldd</em></strong>.)"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr "Niektóre z wybranych poniżej kategorii nie mają poprawnej składni"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr "Kategorie do wykorzystania w tej kampanii"
+msgstr "Kategoria, koid ââʹnet tän kampaanjâst"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr ""
+msgstr "Ooʒʒ Wikimedia Commons -kategoriaid, koin lie kaart da snimldõõǥǥ, koid haaʹlääk ââʹnned kampaanjâst"
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
@@ -182,15 +181,15 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr "Wybierz kategorie do wykorzystania w kampanii"
+msgstr "Vaʹlljed kampaanj kategoriaid"
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Nazwa"
+msgstr "Nõmm"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Głębokość"
+msgstr "Čiŋŋâlvuõtt"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
@@ -202,7 +201,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr "Zaktualizuj obrazy"
+msgstr "Peiʹvved kaartid leʹbe snimldõõǥǥid"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
@@ -235,7 +234,7 @@ msgstr ""
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr "Przedstawia"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
@@ -244,7 +243,7 @@ msgstr ""
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
-msgstr "Podpisy"
+msgstr "Kartt- leʹbe snimldõkteeʹkst"
 
 #: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
@@ -252,7 +251,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
-msgstr "Obraz kampanii"
+msgstr "Kampanjjsnimldõk"
 
 #: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
@@ -268,19 +267,19 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
-msgstr ""
+msgstr "Kampaanj kuʹǩes deskriptt"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
-msgstr ""
+msgstr "Maainâst mõõn diõtt lij vääžnai, što õõʹnni vuässâʹtte kampaʹnjje."
 
 #: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
-msgstr "Opublikuj kampanię"
+msgstr "Õlmstââʹtt kampaanj"
 
 #: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
-msgstr "Musisz wybrać co najmniej jedną kategorię dla swojej kampanii."
+msgstr "Ton õõlǥak vaʹlljeed kampaʹnjje uuʹccmõsân õõut kategoria."
 
 #: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
@@ -308,27 +307,27 @@ msgstr ""
 
 #: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
-msgstr "Rozpocznij"
+msgstr "Ääʹlj"
 
 #: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
-msgstr "Dotychczasowy postęp kampanii"
+msgstr ""
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
-msgstr "Całkowita liczba obrazów w tej kampanii"
+msgstr "Kaarti leʹbe snimldõõǥǥi obbmieʹrr tän kampaanjâst"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
-msgstr "Obrazy"
+msgstr "Snimldõõǥǥ"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
-msgstr ""
+msgstr "Muttsi obbmieʹrr tän kampaanjâst"
 
 #: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
 #: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
@@ -337,7 +336,7 @@ msgstr ""
 #: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr ""
+msgstr "Muttâz"
 
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:39
@@ -347,12 +346,12 @@ msgstr ""
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr ""
+msgstr "Vuässõõtti"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
-msgstr ""
+msgstr "Tän kampaanjâst ij leäkku ni õhtt vuässõõtti."
 
 #: templates/campaign/campaign.html:74
 #: templates/campaign/campaign_stats.html:71
@@ -362,7 +361,7 @@ msgstr ""
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
 msgid "Country"
-msgstr "Państwo"
+msgstr "Valdia"
 
 #: templates/campaign/campaign.html:97
 #: templates/campaign/campaign_stats.html:94
@@ -375,35 +374,35 @@ msgstr ""
 
 #: templates/campaign/campaign.html:105
 msgid "View full stats"
-msgstr "Zobacz pełne statystyki"
+msgstr ""
 
 #: templates/campaign/campaign.html:116
 msgid "My Contributions"
-msgstr "Mój wkład"
+msgstr "Muttâz"
 
 #: templates/campaign/campaign.html:123
 msgid "Rank"
-msgstr "Ranking"
+msgstr ""
 
 #: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
-msgstr "Więcej o tej kampanii"
+msgstr "Lââʹssteâđ tän kampaanjâst"
 
 #: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
-msgstr "Menadżer kampanii"
+msgstr ""
 
 #: templates/campaign/campaign.html:145
 msgid "START DATE"
-msgstr "DATA ROZPOCZĘCIA"
+msgstr "ÄʹLǦǦEMPEIʹVV"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
-msgstr "DATA ZAKOŃCZENIA"
+msgstr ""
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
-msgstr "Nie ustawione"
+msgstr ""
 
 #: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
@@ -411,67 +410,67 @@ msgstr ""
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
-msgstr "Edytuj kampanię"
+msgstr "Muuʹtt kampaanj"
 
 #: templates/campaign/campaign.html:162
 msgid "Unknown country"
-msgstr "Nieznany kraj"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr "Wróć do strony głównej kampanii"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
-msgstr "Strona główna"
+msgstr "Ouddseidd"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Zobacz poprzedni obraz"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
-msgstr "POPRZEDNI OBRAZ"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Własna praca"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Zobacz następny obraz"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
-msgstr "NASTĘPNY OBRAZ"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Plik"
+msgstr "Teâttõs"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Otwórz ten obraz na Wikimedia Commons"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Opis"
+msgstr "Deskriptt"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Kategorie"
+msgstr "Kategoria"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr "Lokalizacja aparatu"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
-msgstr "pokaż wszystkie metadane z commons"
+msgstr "Čuäʹjet puk metateâđai Wikimedia Commons&nbsp;-seiddõõzzâst"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
@@ -488,7 +487,7 @@ msgstr ""
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
-msgstr "Anuluj"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
@@ -498,7 +497,7 @@ msgstr ""
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:58
 msgid "Save"
-msgstr "Zapisz"
+msgstr "Ruõkk"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
@@ -522,7 +521,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr "Zaloguj się, aby opublikować zmiany"
+msgstr "Ǩeeʹrjtõõđ sizz, jõs haaʹlääk muttsid õlmstâʹtted"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
@@ -590,15 +589,15 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr "Od"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr "Do"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
-msgstr "Pobierz wszystkie statystyki (CSV)"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
@@ -606,7 +605,7 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
-msgstr "Statystyki kraju"
+msgstr ""
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
@@ -622,19 +621,19 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr "Trwające kampanie"
+msgstr ""
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr "Nazwa kampanii"
+msgstr "Kampanjjnõmm"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr "Kampania"
+msgstr "Kampanjj"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr "Całkowita liczba obrazów w tej kampanii"
+msgstr ""
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
@@ -642,7 +641,7 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr "Uczestnicy"
+msgstr ""
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
@@ -650,11 +649,11 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr "Data rozpoczęcia kampanii"
+msgstr "Kampaanj äʹlǧǧempeiʹvv"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr "Data zakończenia kampanii"
+msgstr ""
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
@@ -662,53 +661,53 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr "Data utworzenia"
+msgstr ""
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr "Status kampanii"
+msgstr ""
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr "Zamknięte"
+msgstr ""
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr "Nie otwarte"
+msgstr ""
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Otwórz"
+msgstr ""
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr "Przejdź do strony głównej kampanii, aby rozpocząć"
+msgstr ""
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr "Przejdź do kampanii"
+msgstr ""
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr "Pokaż zamknięte kampanie"
+msgstr ""
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr "Stwórz własną kampanię"
+msgstr ""
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr "Utwórz nową kampanię za pomocą tego narzędzia"
+msgstr ""
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr ""
+msgstr "Ton õõlǥak leeʹd sizz ǩeeʹrjtõõttâm, jõs haaʹlääk kampaanj raajjâd."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
@@ -716,11 +715,11 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr "Brak wpisów"
+msgstr ""
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr "Szukaj:"
+msgstr "Ooʒʒ:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
@@ -728,7 +727,7 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr ""
+msgstr "Vuõssmõs"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
@@ -756,11 +755,11 @@ msgstr ""
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr ""
+msgstr "Ton vuäitak kampaʹnjje vuässõõttâd."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr "Nie udało się zaktualizować obrazów"
+msgstr ""
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
@@ -784,7 +783,7 @@ msgstr ""
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Zabierz mnie do domu"
+msgstr ""
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
@@ -793,7 +792,7 @@ msgstr ""
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Nie odnaleziono strony"
+msgstr "Seidd ij käunnʼjam"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
@@ -801,23 +800,23 @@ msgstr ""
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Zabierz mnie do domu"
+msgstr "Ouddsijddu"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Coś poszło nie tak"
+msgstr ""
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr "Isa może przechodzić prace konserwacyjne"
+msgstr ""
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Strona pomocy"
+msgstr "Vuäʹpstõs-seidd"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr "Łatwo dodawaj informacje o obrazach na Wikimedia Commons"
+msgstr ""
 
 #: templates/main/help.html:16
 #, python-format
@@ -835,7 +834,7 @@ msgstr ""
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr "Co to jest Wikimedia Commons?"
+msgstr ""
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
@@ -951,7 +950,7 @@ msgstr ""
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr "Jedynym wymogiem jest… zalogowanie się."
+msgstr ""
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1083,7 +1082,7 @@ msgstr ""
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr "Korzystanie z narzędzia ISA"
+msgstr ""
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
@@ -1103,7 +1102,7 @@ msgstr ""
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr "Obraz użyty w narzędziu :"
+msgstr ""
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
@@ -1124,11 +1123,11 @@ msgstr ""
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr "PRZEGLĄDAJ KAMPANIE"
+msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "O tym narzędziu"
+msgstr "Lââʹssteâđ ISA-neävv pirr"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1156,15 +1155,15 @@ msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr "Strona główna"
+msgstr "Ouddseidd"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "Raaj ođđ kampaanj"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Pomoc"
+msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
@@ -1172,27 +1171,27 @@ msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr "Preferencje językowe"
+msgstr "Ǩiõllasetõõzz"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr "Zobacz swoje kampanie"
+msgstr ""
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr "Moje kampanie"
+msgstr ""
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr "Wyloguj się"
+msgstr "Ǩeeʹrjtõõđ åålǥas"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr "Zaloguj się"
+msgstr "Ǩeeʹrjtõõđ sizz"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr "Narzędzie ISA"
+msgstr "ISA-neävv"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
@@ -1216,23 +1215,23 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr "Twoje kampanie"
+msgstr ""
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr "Poniżej znajduje się lista Twoich kampanii"
+msgstr ""
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr "Nie masz żadnych kampanii"
+msgstr ""
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr "#"
+msgstr ""
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr "Preferencje językowe"
+msgstr "Ǩiõllasetõõzz"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
@@ -1252,7 +1251,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:19
 msgid "Caption Languages"
-msgstr ""
+msgstr "Kartt- leʹbe snimldõkteeʹkstid ǩiõl"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
@@ -1270,15 +1269,15 @@ msgstr ""
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr "Usuń język"
-
-#: templates/users/user_settings.html:57
-msgid "Undo changes to language settings"
 msgstr ""
 
 #: templates/users/user_settings.html:57
+msgid "Undo changes to language settings"
+msgstr "Kååʹmet muttsid ǩiõllasetõõzzid"
+
+#: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr "Cofnij zmiany"
+msgstr "Kååʹmet muttsid"
 
 #: users/forms.py:26
 msgid "Same as interface"
@@ -1291,15 +1290,15 @@ msgstr ""
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr "Witamy %(username)s!"
+msgstr "Puäʹđ tiõrvân %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "Do zobaczenia następnym razem!"
+msgstr ""
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Ǩeeʹrjtõõđ sizz, jõs haaʹlääk jiiʹjjes ǩiõllasetõõzzid muʹtted."
 
 #: users/routes.py:144
 #, python-format
@@ -1312,19 +1311,19 @@ msgstr ""
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
-msgstr "Preferowane języki zostały ustawione pomyślnie"
+msgstr ""
 
 #: users/routes.py:172
 msgid "Language settings not available at the moment"
-msgstr "Ustawienia językowe są w tej chwili niedostępne"
+msgstr ""
 
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr "%(username)s - Ustawienia"
+msgstr "Õõʹnni %(username)s - asetõõzz"
 
 #: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Kampaanj, koid õõʹnni %(username)s lij raajjâm"
 
