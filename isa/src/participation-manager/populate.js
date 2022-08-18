@@ -93,17 +93,18 @@ ParticipationManager.prototype.populateStructuredData = function(filename, callb
                 populateCaption(userLang, "")
             }
         }
-
         // process statements
         if ( mediaStatements.P180 ) {
             // convert results to array of {item, isProminent} objects
-            depictItems = mediaStatements.P180.map(function(depictStatement) {
-                return {
-                    item: depictStatement.mainsnak.datavalue.value.id,
-                    isProminent: depictStatement.rank === "preferred",
-                    statementId: depictStatement.id
+            for(var depictStatement of mediaStatements.P180) {
+                if(depictStatement.mainsnak.hasOwnProperty("datavalue")) {
+                    depictItems.push({
+                        item: depictStatement.mainsnak.datavalue.value.id,
+                        isProminent: depictStatement.rank === "preferred",
+                            statementId: depictStatement.id
+                    });
                 }
-            });
+            }
         } else {
             //todo: add message to statements container
             //console.log("this item has no depicts statements yet")
@@ -118,9 +119,10 @@ ParticipationManager.prototype.populateStructuredData = function(filename, callb
             return;
         }
         // now make another call to Wikidata to get the labels for each depcits item
-        var qvalues = depictItems.map(function(statement) {
-            return statement.item;
+        var qvalues = depictItems.map(function(statement){
+            return statement.item
         });
+
         var secondApiOptions = {
             action: 'wbgetentities',
             props: 'labels|descriptions',
