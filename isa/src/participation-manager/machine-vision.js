@@ -25,7 +25,7 @@ ParticipationManager.prototype.populateMachineVisionSuggestions = function() {
     var me = this;
     this.getMachineVisionSuggestions().then(function(data) {
         me.depictSuggestions = (data.query.pages[0].imagelabels || [])
-            .filter(function(suggestion) {return suggestion.state !== 'accepted';})
+            .filter(function(suggestion) {return suggestion.state === 'unreviewed';})
             .sort(function(a,b) {return b.confidence.google - a.confidence.google})
         me.renderDepictSuggestions();
     });
