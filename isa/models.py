@@ -135,8 +135,8 @@ class Suggestion(db.Model, UserMixin):
     file = db.Column(db.String(240), nullable=False)
     depict_item = db.Column(db.String(15), nullable=True)
     update_status = db.Column(db.Integer, default=0)
-    google_vision = db.Column(db.Boolean, nullable=True)
-    metadata_to_concept = db.Column(db.Boolean, nullable=True)
+    google_vision = db.Column(db.Integer, default=0)
+    metadata_to_concept = db.Column(db.Integer, default=0)
 
     def __repr__(self):
         # This is what is shown when object is printed
