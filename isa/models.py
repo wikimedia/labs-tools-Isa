@@ -19,6 +19,7 @@ class User(db.Model, UserMixin):
     depicts_language = db.Column(db.String(13), nullable=False, default='')
     contrib = db.Column(db.Integer, default=0)
     managed_campaigns = db.relationship('Campaign', backref='user', lazy=True)
+    suggestion = db.relationship('Suggestion', backref='user', lazy=True)
 
     def __repr__(self):
         # This is what is shown when object is printed
@@ -139,13 +140,15 @@ class Suggestion(db.Model, UserMixin):
     metadata_to_concept = db.Column(db.Integer, default=0)
     metadata_to_concept_confidence = db.Column(db.Float)
     google_vision_confidence = db.Column(db.Float)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
         # This is what is shown when object is printed
-        return "Suggestion({}, {}, {}, {}, {}, {})".format(
+        return "Suggestion({}, {}, {}, {}, {}, {}, {})".format(
                self.campaign_id,
                self.file,
                self.depict_item,
                self.google_vision,
                self.metadata_to_concept,
-               self.update_status)
+               self.update_status,
+               self.user_id)
