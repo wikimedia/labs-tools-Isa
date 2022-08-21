@@ -137,6 +137,8 @@ class Suggestion(db.Model, UserMixin):
     update_status = db.Column(db.Integer, default=0)
     google_vision = db.Column(db.Integer, default=0)
     metadata_to_concept = db.Column(db.Integer, default=0)
+    metadata_to_concept_confidence = db.Column(db.Float)
+    google_vision_confidence = db.Column(db.Float)
 
     def __repr__(self):
         # This is what is shown when object is printed

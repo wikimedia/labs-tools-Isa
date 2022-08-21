@@ -402,7 +402,8 @@ def postContribution():
             suggestion = Suggestion(campaign_id=campaign_id,
                                     file=data['image'],
                                     depict_item=data['depict_item'],
-                                    google_vision=1)
+                                    google_vision=1,
+                                    google_vision_confidence=data['google_vision_confidence'])
             suggestion_list.append(suggestion)
 
     # We write the api_options for the contributions into a list

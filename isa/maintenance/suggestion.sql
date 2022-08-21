@@ -9,5 +9,7 @@ CREATE TABLE suggestion (
     google_vision INT DEFAULT 0,
     metadata_to_concept INT DEFAULT 0,
     campaign_id INT NOT NULL,
+    google_vision_confidence FLOAT,
+    metadata_to_concept_confidence FLOAT,
         FOREIGN KEY (campaign_id) REFERENCES campaign(id)
 );

@@ -314,6 +314,15 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         return gvSuggested;
     }
 
+    function getSuggestConfidence (depicItem, suggestions){
+        for (var i=0; i < suggestions.length; i++){
+            if(depicItem === suggestions[i].wikidata_id){
+                return suggestions[i].confidence.google
+            }
+        }
+        return 0.0
+    }
+
     //todo: create generalised updateUnsavedChanges which work for depicts and captions
     this.updateUnsavedDepictChanges = function() {
         // Compare current selection to initialData to see if there are any unsaved changes
@@ -359,7 +368,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                     depict_item: depictItem,
                     depict_prominent: isProminent,
                     statement_id: currentStatement.statementId,
-                    isGoogleVision: isGoogleVision(depictItem, this.depictSuggestions)
+                    isGoogleVision: isGoogleVision(depictItem, this.depictSuggestions),
+                    google_vision_confidence: getSuggestConfidence(depictItem, this.depictSuggestions)
                 })
             }
         } // check next statement...
