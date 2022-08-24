@@ -56,7 +56,7 @@ ParticipationManager.prototype.getSuggestionHtml = function(suggestionData) {
         description = 'State: ' + suggestionData.state + '\n\n' + suggestionData.description,
         confidence = Math.round(suggestionData.confidence.google * 100);
         
-    var confidenceString = ' (' + confidence + "%)";
+    var confidenceString = ' (' + confidence + "%) ";
     return [
         '<div class="depict-tag-suggestion" title="' + description + '">',
         '<div class="depict-tag-label">',
@@ -64,6 +64,8 @@ ParticipationManager.prototype.getSuggestionHtml = function(suggestionData) {
         '<span class="depict-tag-label-text">'+ label + '</span> ' ,
         '<span class="depict-tag-qvalue">' + item + '</span>',
         '<span class="depict-tag-confidence">' + confidenceString + '</span>',
+        '<button class="accept-depict fa fa-check-circle"></button>',
+        '<button class="reject-depict fa fa-times-circle"></button>',
         '</div></div></div>'].join("");
 }
 

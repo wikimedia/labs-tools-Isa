@@ -325,8 +325,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
     //todo: create generalised updateUnsavedChanges which work for depicts and captions
     this.updateUnsavedDepictChanges = function() {
-        // Compare current selection to initialData to see if there are any unsaved changes
-
         var depictStatements = getCurrentDepictStatements();
         var intialDepictStatements = initialData.depicts;
         var depictChanges = [];

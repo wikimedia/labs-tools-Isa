@@ -176,11 +176,24 @@ $('.depict-tag-group').on('click','.prominent-btn', function(ev) {
     editSession.depictDataChanged();
 })
 
-// Click to add Machine Vision depict suggestions
-$('.depict-tag-suggestions').on('click','.depict-tag-suggestion', function(ev) {
-    var item = $(this).find('.depict-tag-qvalue').text(); // todo: fix messy way to retreive item
+$('#depict-tag-suggestions-container').on('click','.accept-depict', function() {
+    var item = $(this).siblings('.depict-tag-qvalue').text();
     editSession.addDepictBySuggestionItem(item);
-})
+});
+
+
+$('#depict-tag-suggestions-container').on('click', '.reject-depict', function() {
+    var item = $(this).siblings('.depict-tag-qvalue').text();
+    
+    var newSuggestions = editSession.depictSuggestions.filter(data => data.wikidata_id !== item);
+    editSession.depictSuggestions = newSuggestions
+    
+    // TODO: make api call to backend /reject-statement/<item>
+
+    // remove item from the parent on interface 
+    $(this).parents('.depict-tag-suggestion').remove();
+});
+
 
 $('.edit-publish-btn-group').on('click', 'button', function() {
     var editType = $(this).parent().attr('edit-type');
