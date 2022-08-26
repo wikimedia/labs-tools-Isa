@@ -4,7 +4,7 @@ import json
 import os
 
 import requests
-from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file, jsonify, abort
+from flask import make_response, render_template, redirect, url_for, flash, request, session, Blueprint, send_file, jsonify, abort
 from flask_login import current_user
 from sqlalchemy import func
 
@@ -400,10 +400,11 @@ def postContribution():
         # We also create a new suggestion by testing for GoogleVision
         if data['isGoogleVision']:
             suggestion = Suggestion(campaign_id=campaign_id,
-                                    file=data['image'],
+                                    file_name=data['image'],
                                     depict_item=data['depict_item'],
                                     google_vision=1,
                                     google_vision_confidence=data['google_vision_confidence'],
+                                    update_status=1,
                                     user_id=user.id)
             suggestion_list.append(suggestion)
 
@@ -558,3 +559,33 @@ def get_images(campaign_id, country_name):
         if not country or image.country_id == country.id:
             images.append(image.page_id)
     return jsonify(images)
+
+
+@campaigns.route('/api/reject-suggestion', methods=['POST'])
+def save_reject_statements():
+
+    username = session.get('username')
+    if not username:
+        abort(401)
+
+    request_keys = set(request.json.keys())
+    expected_keys = {'file', 'depict_item', 'google_vision_confidence', 'campaign_id', 'google_vision'}
+
+    if request.data and request_keys == expected_keys:
+        rejection_data = request.json
+        campaign_id = rejection_data['campaign_id']
+
+        user = User.query.filter_by(username=username).first()
+        rejected_suggestion = Suggestion(campaign_id=campaign_id,
+                                         file_name=rejection_data['file'],
+                                         depict_item=rejection_data['depict_item'],
+                                         google_vision=1,
+                                         google_vision_confidence=rejection_data['google_vision_confidence'],
+                                         user_id=user.id)
+
+        db.session.add(rejected_suggestion)
+        if commit_changes_to_db():
+            abort(400)
+        else:
+            return "success", 200
+    abort(400)

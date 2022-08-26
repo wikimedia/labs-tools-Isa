@@ -133,7 +133,7 @@ class Country(db.Model):
 class Suggestion(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, index=True)
     campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
-    file = db.Column(db.String(240), nullable=False)
+    file_name = db.Column(db.String(240), nullable=False)
     depict_item = db.Column(db.String(15), nullable=True)
     update_status = db.Column(db.Integer, default=0)
     google_vision = db.Column(db.Integer, default=0)

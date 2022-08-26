@@ -2,7 +2,7 @@
 /*********** Participate page ***********/
 
 import {ParticipationManager} from './participation-manager';
-import {getUrlParameters, shuffle} from './utils';
+import {getUrlParameters, shuffle, flashMessage} from './utils';
 import {generateGuid} from './guid-generator.js';
 
 var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
@@ -176,7 +176,7 @@ $('.depict-tag-group').on('click','.prominent-btn', function(ev) {
     editSession.depictDataChanged();
 })
 
-$('#depict-tag-suggestions-container').on('click','.accept-depict', function() {
+$('#depict-tag-suggestions-container').on('click', '.accept-depict', function() {
     var item = $(this).siblings('.depict-tag-qvalue').text();
     editSession.addDepictBySuggestionItem(item);
 });
@@ -184,14 +184,31 @@ $('#depict-tag-suggestions-container').on('click','.accept-depict', function() {
 
 $('#depict-tag-suggestions-container').on('click', '.reject-depict', function() {
     var item = $(this).siblings('.depict-tag-qvalue').text();
-    
-    var newSuggestions = editSession.depictSuggestions.filter(data => data.wikidata_id !== item);
-    editSession.depictSuggestions = newSuggestions
-    
-    // TODO: make api call to backend /reject-statement/<item>
+    var rejectedSuggestion = editSession.getDepictSuggestionByItem(item);
+    var gvConfidence = !!rejectedSuggestion ? rejectedSuggestion.confidence.google : 0
+    var rejectedSuggestionData = JSON.stringify({
+        file: editSession.imageFileName,
+        campaign_id: getCampaignId(),
+        depict_item: item,
+        google_vision: !!rejectedSuggestion,
+        google_vision_confidence: gvConfidence
+    });
+    var me = $(this);
 
-    // remove item from the parent on interface 
-    $(this).parents('.depict-tag-suggestion').remove();
+    $.post({
+        url: '/api/reject-suggestion',
+        data: rejectedSuggestionData,
+        contentType: 'application/json'
+    }).done(function(response) {
+        // Contribution accepted by server, we can remove suggestion from list
+        var newSuggestions = editSession.depictSuggestions.filter(data => data.wikidata_id !== item);
+            editSession.depictSuggestions = newSuggestions;
+            // remove item from the parent on interface
+            me.parents('.depict-tag-suggestion').remove();
+            flashMessage('success', i18nStrings['Suggestion removed from list']);
+    }).fail( function(error) {
+        flashMessage('danger', i18nStrings['Oops! Suggestion might not have been removed'])
+    });
 });
 
 
@@ -222,6 +239,7 @@ function getWikiLovesCountry () {
     var country = getUrlParameters().country;
     return (country) ? decodeURIComponent(country) : '';
 }
+
 
 function populateCaption(language, text) {
     $('.caption-input[lang=' + language + ']').val(text);
