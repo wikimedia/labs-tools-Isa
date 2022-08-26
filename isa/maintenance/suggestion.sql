@@ -3,6 +3,7 @@
 
 CREATE TABLE suggestion (
     id INT NOT NULL AUTO_INCREMENT,
+    id INT  NOT NULL PRIMARY KEY AUTO_INCREMENT,
     depict_item VARCHAR(15),
     file_name VARCHAR(240) NOT NULL,
     update_status INT DEFAULT 0,

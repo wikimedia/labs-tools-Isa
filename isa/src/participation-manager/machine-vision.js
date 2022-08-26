@@ -27,6 +27,7 @@ ParticipationManager.prototype.populateMachineVisionSuggestions = function() {
         me.depictSuggestions = (data.query.pages[0].imagelabels || [])
             .filter(function(suggestion) {return suggestion.state === 'unreviewed';})
             .sort(function(a,b) {return b.confidence.google - a.confidence.google})
+            .map((suggestion) => {return {...suggestion, isGoogleVision: true}})
         me.renderDepictSuggestions();
     });
 }
@@ -55,12 +56,16 @@ ParticipationManager.prototype.getSuggestionHtml = function(suggestionData) {
         label = suggestionData.label,
         description = 'State: ' + suggestionData.state + '\n\n' + suggestionData.description,
         confidence = Math.round(suggestionData.confidence.google * 100);
-        
+
     var confidenceString = ' (' + confidence + "%) ";
     return [
         '<div class="depict-tag-suggestion" title="' + description + '">',
         '<div class="depict-tag-label">',
         '<div class="label btn-sm">',
+        '<div class="suggestion">',
+        suggestionData.isGoogleVision ? '<span class="service-type-gv"></span>' : '',
+        suggestionData.isMetadataToConcept ? '<span class="service-type-md"></span>': '',
+        '</div>',
         '<span class="depict-tag-label-text">'+ label + '</span> ' ,
         '<span class="depict-tag-qvalue">' + item + '</span>',
         '<span class="depict-tag-confidence">' + confidenceString + '</span>',
