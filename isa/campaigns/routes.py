@@ -449,7 +449,7 @@ def searchDepicts(id):
     search_term = request.args.get('q')
     username = session.get('username', None)
     user = User.query.filter_by(username=username).first()
-    if user.depicts_language:
+    if user and user.depicts_language:
         user_lang = user.depicts_language
     else:
         user_lang = session.get('lang', 'en')
