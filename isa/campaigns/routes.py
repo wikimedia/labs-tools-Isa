@@ -588,4 +588,21 @@ def save_reject_statements():
             return "error", 400
         else:
             return "success", 200
-    return "error", 400
+    abort(400)
+
+
+@campaigns.route('/api/get-rejected-statements', methods=['GET'])
+def getRejectedStatements():
+    username = session.get('username', None)
+    if not username:
+        abort(401)
+    else:
+        file_name = request.args.get('file')
+        user = User.query.filter_by(username=username).first()
+        if user and file_name:
+            reject_suggestions = (Suggestion.query
+                                  .filter_by(user_id=user.id, file_name=file_name, update_status=0)
+                                  .all())
+            return jsonify([data.depict_item for data in reject_suggestions])
+        else:
+            abort(400)
