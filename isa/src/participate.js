@@ -38,8 +38,16 @@ $.getJSON('../../api/login-test')
             // Start a new editSession using the Participation Manager
             editSession = new ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn);
 
-            // Trigger image changed event to populate the page
-            editSession.imageChanged();
+            if (getUrlParameters().image) {
+                var image = Number.parseInt(getUrlParameters().image);
+                var imageIndex = images.indexOf(image);
+                if (imageIndex !== -1) {
+                    editSession.setImageIndex(imageIndex);
+                }
+            } else {
+                // Trigger image changed event to populate the page
+                editSession.imageChanged();
+            }
 
             // Close loading overlay
             if (images.length > 0) {
@@ -49,19 +57,6 @@ $.getJSON('../../api/login-test')
                 window.location.href = '../' + campaignId;
             }
 
-            if (getUrlParameters().imageData) {
-                var imageData = JSON.parse(decodeURIComponent(getUrlParameters().imageData));
-                for (var i = 0; i < images.length; i++) {
-                    if (images[i] === imageData.fileName) {
-                        editSession.setImageIndex(i);
-
-                        editSession.setDepictStatements(imageData.depicts);
-                        editSession.setCaptions(imageData.captions);
-                        
-                        break;
-                    }
-                }
-            }
         })
     })
     .fail(function(err) {
