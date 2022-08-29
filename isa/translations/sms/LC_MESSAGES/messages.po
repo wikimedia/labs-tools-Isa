@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-08-15 11:17:11+0000\n"
+"PO-Revision-Date: 2022-08-29 11:18:36+0000\n"
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -487,7 +487,7 @@ msgstr ""
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
-msgstr ""
+msgstr "Jõõsk"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
