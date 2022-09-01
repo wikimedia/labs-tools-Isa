@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2022-07-28 11:21:22+0000\n"
+"PO-Revision-Date: 2022-09-01 11:22:00+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -810,7 +810,7 @@ msgstr "Page non trouvée"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr "Nous sommes dans l’incapacité de trouver la page que vous recherchez"
+msgstr "Nous ne parvenons pas à trouver la page que vous recherchez"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
