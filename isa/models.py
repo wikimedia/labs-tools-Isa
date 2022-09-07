@@ -140,6 +140,8 @@ class Suggestion(db.Model, UserMixin):
     metadata_to_concept = db.Column(db.Integer, default=0)
     metadata_to_concept_confidence = db.Column(db.Float)
     google_vision_confidence = db.Column(db.Float)
+    google_vision_submitted = db.Column(db.Integer, default=0)
+    metadata_to_concept_submitted = db.Column(db.Integer, default=0)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):

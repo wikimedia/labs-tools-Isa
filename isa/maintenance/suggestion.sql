@@ -8,6 +8,8 @@ CREATE TABLE suggestion (
     update_status INT DEFAULT 0,
     google_vision INT DEFAULT 0,
     metadata_to_concept INT DEFAULT 0,
+    google_vision_submitted INT DEFAULT 0,
+    metadata_to_concept_submitted INT DEFAULT 0,
     google_vision_confidence FLOAT,
     metadata_to_concept_confidence FLOAT,
     campaign_id INT NOT NULL,
