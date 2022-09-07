@@ -21,13 +21,27 @@ ParticipationManager.prototype.getMachineVisionSuggestions = function() {
     })
 }
 
+ParticipationManager.prototype.getRejectedSuggestions = function() {
+    return $.ajax({
+        type: 'GET',
+        url: '/api/get-rejected-statements?file=' + this.imageFileName,
+    })
+}
+
 ParticipationManager.prototype.populateMachineVisionSuggestions = function() {
     var me = this;
-    this.getMachineVisionSuggestions().then(function(data) {
+    var mvPromise = this.getMachineVisionSuggestions();
+    var rejectionPromise = this.getRejectedSuggestions();
+
+    Promise.all([mvPromise, rejectionPromise]).then(function(responseArray){
+        var data = responseArray[0];
+        var rejections = responseArray[1];
         me.depictSuggestions = (data.query.pages[0].imagelabels || [])
-            .filter(function(suggestion) {return suggestion.state === 'unreviewed';})
+            .filter(function(suggestion) {
+                return suggestion.state === 'unreviewed' &&
+                       !rejections.includes(suggestion.wikidata_id);
+            })
             .sort(function(a,b) {return b.confidence.google - a.confidence.google})
-            .map((suggestion) => {return {...suggestion, isGoogleVision: true}})
         me.renderDepictSuggestions();
     });
 }
