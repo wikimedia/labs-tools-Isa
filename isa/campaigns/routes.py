@@ -564,11 +564,11 @@ def get_images(campaign_id, country_name):
 @campaigns.route('/api/reject-suggestion', methods=['POST'])
 def save_reject_statements():
 
-    username = session.get('username', 'Eugene233')
+    username = session.get('username')
     if not username:
-        return "error", 400
+        abort(401)
 
-    request_keys = set(list(request.json.keys()))
+    request_keys = set(request.json.keys())
     expected_keys = {'file', 'depict_item', 'google_vision_confidence', 'campaign_id', 'google_vision'}
 
     if request.data and request_keys == expected_keys:
