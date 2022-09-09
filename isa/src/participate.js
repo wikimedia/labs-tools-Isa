@@ -198,11 +198,23 @@ $('#depict-tag-suggestions-container').on('click', '.reject-depict', function() 
         // Contribution accepted by server, we can remove suggestion from list
         var newSuggestions = editSession.depictSuggestions.filter(data => data.wikidata_id !== item);
             editSession.depictSuggestions = newSuggestions;
+<<<<<<< HEAD
             // remove item from the parent on interface
             me.parents('.depict-tag-suggestion').remove();
             flashMessage('success', i18nStrings['Suggestion removed from list']);
     }).fail( function(error) {
         flashMessage('danger', i18nStrings['Oops! Suggestion might not have been removed'])
+=======
+        if(response === "success"){
+            // remove item from the parent on interface
+            me.parents('.depict-tag-suggestion').remove();
+            flashMessage('success', i18nStrings['Suggestion removed from list']);
+        }else{
+            flashMessage('danger', i18nStrings['Please check that you are logged in'])
+        }
+    }).fail( function(error) {
+        flashMessage('danger', editSession.i18nStrings['Oops! Suggestion might not have been removed'])
+>>>>>>> 29ec729 (Indicate which service depict suggestions come from)
     });
 });
 

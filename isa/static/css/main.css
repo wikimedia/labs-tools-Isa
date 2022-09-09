@@ -441,6 +441,31 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     padding: 5px;
 }
 
+.suggestion{
+    float: left;
+    display: flex;
+    flex-direction:column;
+    height: 2px;
+}
+
+.suggestion span{
+    font-weight: 150;
+    font-family: fantasy;
+    font-size: small;
+}
+
+.service-type-md{
+    margin-top: -5px;
+}
+
+.service-type-gv::before{
+    content: 'G';
+}
+
+.service-type-md::before{
+    content: 'M';
+}
+
 #depict-tag-suggestions-container {
     display: none;
     background-color: #eeeeee;
@@ -482,7 +507,8 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     padding: 4px 1px
 }
 .depict-tag-label-text{
-    font-size: 1rem
+    font-size: 1rem;
+    margin-left: 5px;
 }
 .depict-tag-label-text a {
     color: #FFF;
