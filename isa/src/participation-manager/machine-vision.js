@@ -42,6 +42,7 @@ ParticipationManager.prototype.populateMachineVisionSuggestions = function() {
                        !rejections.includes(suggestion.wikidata_id);
             })
             .sort(function(a,b) {return b.confidence.google - a.confidence.google})
+            .map(suggestion => ({...suggestion, isGoogleVision: true }))
         me.renderDepictSuggestions();
     });
 }
