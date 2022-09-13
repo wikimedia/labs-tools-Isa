@@ -450,7 +450,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 
 .suggestion span{
     font-weight: 150;
-    font-family: fantasy;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: small;
 }
 
