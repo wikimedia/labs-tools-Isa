@@ -115,3 +115,11 @@ translations in the app.
 
 # Maintenance scripts
 Maintenance scripts are found in isa/maintenance. Run them as modules in the root directory, e.g. `python -m isa.maintenance.update_campaign_images`.
+
+# Sponsors
+ISA development has been supported by:
+- Wikimedia Foundation (https://wikimediafoundation.org)
+- Wiki in Africa (https://meta.wikimedia.org/wiki/Wiki_In_Africa)
+- Wikimedia Sverige (https://wikimedia.se)
+- SWITCH (https://www.switch.ch)
+- Bern University of Applied Sciences (https://www.bfh.ch)
