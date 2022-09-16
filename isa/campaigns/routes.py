@@ -398,7 +398,7 @@ def postContribution():
         contrib_list.append(contribution)
 
         # We also create a new suggestion by testing for GoogleVision
-        if data['isGoogleVision']:
+        if data.get('isGoogleVision'):
             suggestion = Suggestion(campaign_id=campaign_id,
                                     file_name=data['image'],
                                     depict_item=data['depict_item'],
