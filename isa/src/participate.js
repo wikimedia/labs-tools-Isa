@@ -259,3 +259,23 @@ function generateStatementId(mediaId) {
 function hideLoadingOverlay() {
     $('.loading').fadeOut('slow');
 }
+
+// Toggle display of suggested items
+$("#suggest-toggle").click(function () {
+    var toggleIndicator = $('#toggle-indicator'),
+        toggleLabel = $('#toggle-label'),
+        suggestionCntainer = $('.depict-tag-suggestions'),
+        hideText = i18nStrings['Hide Suggestions'],
+        showText = i18nStrings['Show Suggestions'];
+
+    suggestionCntainer.toggleClass('collapsed');
+    if(suggestionCntainer.hasClass('collapsed')){
+        toggleIndicator.removeClass('fa-caret-up');
+        toggleIndicator.addClass('fa-caret-down');
+        toggleLabel.text(showText)
+    }else{
+        toggleIndicator.removeClass('fa-caret-down');
+        toggleIndicator.addClass('fa-caret-up');
+        toggleLabel.text(hideText)
+    }
+});

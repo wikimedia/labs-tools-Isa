@@ -454,6 +454,19 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     font-size: small;
 }
 
+.collapsed {
+    display: none;
+}
+
+#suggest-toggle {
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+#toggle-label{
+    cursor: pointer;
+}
+
 .service-type-md{
     margin-top: -5px;
 }
