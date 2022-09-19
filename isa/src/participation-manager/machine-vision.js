@@ -81,7 +81,7 @@ ParticipationManager.prototype.getSuggestionHtml = function(suggestionData) {
         suggestionData.isGoogleVision ? '<span class="service-type-gv"></span>' : '',
         suggestionData.isMetadataToConcept ? '<span class="service-type-md"></span>': '',
         '</div>',
-        '<span class="depict-tag-label-text">'+ label + '</span> ' ,
+        '<span class="depict-tag-label-text"><a href="https://www.wikidata.org/wiki/'+ item +'" target="_blank">'+ label + '</a></span> ' ,
         '<span class="depict-tag-qvalue">' + item + '</span>',
         '<span class="depict-tag-confidence">' + confidenceString + '</span>',
         '<button class="accept-depict fa fa-check-circle"></button>',
