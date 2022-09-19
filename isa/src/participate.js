@@ -189,21 +189,25 @@ $('#depict-tag-suggestions-container').on('click', '.reject-depict', function() 
         google_vision_confidence: gvConfidence
     });
     var me = $(this);
+    var conformRemoveMessageHead = i18nStrings['Are you sure you want to reject this suggestion?'],
+        conformRemoveMessageExplain = i18nStrings['Are you sure explanation for reject suggestion'];
 
-    $.post({
-        url: '/api/reject-suggestion',
-        data: rejectedSuggestionData,
-        contentType: 'application/json'
-    }).done(function(response) {
-        // Contribution accepted by server, we can remove suggestion from list
-        var newSuggestions = editSession.depictSuggestions.filter(data => data.wikidata_id !== item);
-            editSession.depictSuggestions = newSuggestions;
-            // remove item from the parent on interface
-            me.parents('.depict-tag-suggestion').remove();
-            flashMessage('success', i18nStrings['Suggestion removed from list']);
-    }).fail( function(error) {
-        flashMessage('danger', i18nStrings['Oops! Suggestion might not have been removed'])
-    });
+    if (confirm(conformRemoveMessageHead + "\n\n" + conformRemoveMessageExplain)) {
+        $.post({
+            url: '/api/reject-suggestion',
+            data: rejectedSuggestionData,
+            contentType: 'application/json'
+        }).done(function(response) {
+            // Contribution accepted by server, we can remove suggestion from list
+            var newSuggestions = editSession.depictSuggestions.filter(data => data.wikidata_id !== item);
+                editSession.depictSuggestions = newSuggestions;
+                // remove item from the parent on interface
+                me.parents('.depict-tag-suggestion').remove();
+                flashMessage('success', i18nStrings['Suggestion removed from list']);
+        }).fail( function(error) {
+            flashMessage('danger', i18nStrings['Oops! Suggestion might not have been removed'])
+        });
+    }
 });
 
 
