@@ -143,6 +143,8 @@ class Suggestion(db.Model, UserMixin):
     google_vision_submitted = db.Column(db.Integer, default=0)
     metadata_to_concept_submitted = db.Column(db.Integer, default=0)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    date = db.Column(db.Date, nullable=False,
+                     default=datetime.now())
 
     def __repr__(self):
         # This is what is shown when object is printed

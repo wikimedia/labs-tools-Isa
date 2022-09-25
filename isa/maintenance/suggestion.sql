@@ -14,6 +14,7 @@ CREATE TABLE suggestion (
     metadata_to_concept_confidence FLOAT,
     campaign_id INT NOT NULL,
     user_id INT NOT NULL,
+    date date,
         PRIMARY KEY (id),
         FOREIGN KEY (campaign_id) REFERENCES campaign(id),
         FOREIGN KEY (user_id) REFERENCES user(id)
