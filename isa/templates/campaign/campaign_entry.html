@@ -62,6 +62,27 @@ body {padding-bottom: 50px}
             </select>
         </div>
     </div>
+
+   <!-- Used to perform action on suggestion while using small screens -->
+    <div class="modal" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>
+                        <a class="modal-label-link" target="_blank"></a>
+                        <span class="modal-item"></span>
+                        <span class="modal-confidence"></span>
+                    </h5>
+                    <i class="fa fa-times close-modal" aria-hidden="true"></i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary accept-depict-mobile">{{ _('Accept') }}</button>
+                    <button type="button" class="btn btn-danger reject-depict-mobile" data-dismiss="modal">{{ _('Reject') }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="depict-tag-suggestions-container">
         <div id="suggest-toggle">
             <i id="toggle-indicator" class="fas fa-caret-up"></i>

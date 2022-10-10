@@ -124,6 +124,39 @@ function searchResultsFormat(state) {
     })
   })();
 
+///////// Rejecting statements /////////
+
+function rejectStatement(item, element){
+    var rejectedSuggestion = editSession.getDepictSuggestionByItem(item);
+    var rejectedSuggestionData = JSON.stringify({
+        file: editSession.imageFileName,
+        campaign_id: getCampaignId(),
+        depict_item: item,
+        google_vision: rejectedSuggestion.google_vision || null,
+        google_vision_confidence: rejectedSuggestion.confidence.google || null,
+        metadata_to_concept: rejectedSuggestion.metadata_to_concept || null,
+        metadata_to_concept_confidence: rejectedSuggestion.confidence.metadata_to_concept || null,
+    });
+
+    var conformRemoveMessageHead = i18nStrings['Are you sure you want to reject this suggestion?'],
+        conformRemoveMessageExplain = i18nStrings['Are you sure explanation for reject suggestion'];
+
+    if (confirm(conformRemoveMessageHead + "\n\n" + conformRemoveMessageExplain)) {
+        $.post({
+            url: '/api/reject-suggestion',
+            data: rejectedSuggestionData,
+            contentType: 'application/json'
+        }).done(function(response) {
+            // Contribution accepted by server, we can remove suggestion from list
+            rejectedSuggestion.isRejectedByUser = true;
+            editSession.renderDepictSuggestions();
+            flashMessage('success', i18nStrings['Suggestion removed from list']);
+        }).fail( function(error) {
+            flashMessage('danger', i18nStrings['Oops! Suggestion might not have been removed'])
+        });
+    }
+}
+
 ///////// Event handlers /////////
 
 $('#expand-meta-data').click(function() {
@@ -175,36 +208,52 @@ $('#depict-tag-suggestions-container').on('click', '.accept-depict', function() 
     editSession.addDepictBySuggestionItem(item);
 });
 
+function displayModal(item, label, confidence){
+    $('.modal-label-link').text(label);
+    $('.modal-label-link').attr('href', 'https://www.wikidata.org/wiki/' + item);
+    $('.modal-item').text(item);
+    $('.modal-confidence').text(confidence);
+    $('.modal').show();
+    $('#depict-tag-suggestions-container').addClass('blur')
+}
+
+function clearModal(){
+    $('.modal').hide();
+    $('#depict-tag-suggestions-container').removeClass('blur');
+}
+
+$('.depict-tag-suggestions').on('click', '.depict-tag-suggestion', function(e){
+    if (!editSession.isMobile) return;
+    var suggestion = $(this);
+    var item = suggestion.find('.depict-tag-qvalue').text();
+    var label = suggestion.find('.depict-tag-label-text').text();
+    var confidence = suggestion.find('.depict-tag-confidence').text();
+    displayModal(item, label, confidence);
+});
+
+$('.modal').on('click', '.close-modal', function(){
+   clearModal();
+});
+
+function getItemFromModal(){
+    return $('.modal-item').text();
+}
+
+$('.modal').on('click', '.accept-depict-mobile', function(){
+    var item = getItemFromModal();
+    editSession.addDepictBySuggestionItem(item);
+    clearModal();
+});
+
+$('.modal').on('click', '.reject-depict-mobile', function(){
+    var item = getItemFromModal();
+    rejectStatement(item, $(this));
+    clearModal()
+});
 
 $('#depict-tag-suggestions-container').on('click', '.reject-depict', function() {
     var item = $(this).siblings('.depict-tag-qvalue').text();
-    var rejectedSuggestion = editSession.getDepictSuggestionByItem(item);
-    var rejectedSuggestionData = JSON.stringify({
-        file: editSession.imageFileName,
-        campaign_id: getCampaignId(),
-        depict_item: item,
-        google_vision: rejectedSuggestion.google_vision || null,
-        google_vision_confidence: rejectedSuggestion.confidence.google || null,
-        metadata_to_concept: rejectedSuggestion.metadata_to_concept || null,
-        metadata_to_concept_confidence: rejectedSuggestion.confidence.metadata_to_concept || null,
-    });
-    var me = $(this);
-    var conformRemoveMessageHead = i18nStrings['Are you sure you want to reject this suggestion?'],
-        conformRemoveMessageExplain = i18nStrings['Are you sure explanation for reject suggestion'];
-
-    if (confirm(conformRemoveMessageHead + "\n\n" + conformRemoveMessageExplain)) {
-        $.post({
-            url: '/api/reject-suggestion',
-            data: rejectedSuggestionData,
-            contentType: 'application/json'
-        }).done(function(response) {
-            editSession.getDepictSuggestionByItem(item).isRejectedByUser = true;
-            editSession.renderDepictSuggestions();
-            flashMessage('success', i18nStrings['Suggestion removed from list']);
-        }).fail( function(error) {
-            flashMessage('danger', i18nStrings['Oops! Suggestion might not have been removed'])
-        });
-    }
+    rejectStatement(item, $(this)); 
 });
 
 

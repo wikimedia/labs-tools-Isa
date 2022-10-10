@@ -12,7 +12,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     var imageIndex = 0,
         initialData = {depicts: [], captions: []},
         unsavedChanges = {depicts: [], captions: []};
-    
+
+
     this.imageFileName = '';  
     this.imageMediaId = '';
     this.imageRevId = 0;
@@ -23,6 +24,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     this.machineVisionActive = !!getUrlParameters().mv;
     this.description = '';
     this.categories = '';
+    this.isMobile = $(window).width() < 600 || $(window).height() < 600;
 
     this.nextImage = function() {
         if (!this.confirmImageNavigation()) return;
