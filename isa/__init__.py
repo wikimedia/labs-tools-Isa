@@ -9,6 +9,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_babel import Babel, gettext
 from flask_login import LoginManager
 from flask_wtf.csrf import CSRFProtect
+from flask_migrate import Migrate
+
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -47,6 +49,9 @@ def get_locale():
 
 
 db = SQLAlchemy(app)
+migrate = Migrate()
+
+migrate.init_app(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'main.home'
