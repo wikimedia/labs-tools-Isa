@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-09-08 11:18:56+0000\n"
+"PO-Revision-Date: 2022-10-17 11:17:45+0000\n"
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -112,11 +112,11 @@ msgstr "Nazwa kampanii"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr ""
+msgstr "To jest nazwa charakterystyczna dla Twojej kampanii, a nie głównego projektu."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr ""
+msgstr "A więc nie „Wiki Loves Africa”, ale raczej „Muzyka i taniec w Nigerii”"
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
