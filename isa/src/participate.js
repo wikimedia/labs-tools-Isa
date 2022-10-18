@@ -1,4 +1,3 @@
-
 /*********** Participate page ***********/
 
 import {ParticipationManager} from './participation-manager';
@@ -180,13 +179,14 @@ $('#depict-tag-suggestions-container').on('click', '.accept-depict', function() 
 $('#depict-tag-suggestions-container').on('click', '.reject-depict', function() {
     var item = $(this).siblings('.depict-tag-qvalue').text();
     var rejectedSuggestion = editSession.getDepictSuggestionByItem(item);
-    var gvConfidence = !!rejectedSuggestion ? rejectedSuggestion.confidence.google : 0
     var rejectedSuggestionData = JSON.stringify({
         file: editSession.imageFileName,
         campaign_id: getCampaignId(),
         depict_item: item,
-        google_vision: !!rejectedSuggestion,
-        google_vision_confidence: gvConfidence
+        google_vision: rejectedSuggestion.google_vision || null,
+        google_vision_confidence: rejectedSuggestion.confidence.google || null,
+        metadata_to_concept: rejectedSuggestion.metadata_to_concept || null,
+        metadata_to_concept_confidence: rejectedSuggestion.confidence.metadata_to_concept || null,
     });
     var me = $(this);
     var conformRemoveMessageHead = i18nStrings['Are you sure you want to reject this suggestion?'],
@@ -198,12 +198,9 @@ $('#depict-tag-suggestions-container').on('click', '.reject-depict', function() 
             data: rejectedSuggestionData,
             contentType: 'application/json'
         }).done(function(response) {
-            // Contribution accepted by server, we can remove suggestion from list
-            var newSuggestions = editSession.depictSuggestions.filter(data => data.wikidata_id !== item);
-                editSession.depictSuggestions = newSuggestions;
-                // remove item from the parent on interface
-                me.parents('.depict-tag-suggestion').remove();
-                flashMessage('success', i18nStrings['Suggestion removed from list']);
+            editSession.getDepictSuggestionByItem(item).isRejectedByUser = true;
+            editSession.renderDepictSuggestions();
+            flashMessage('success', i18nStrings['Suggestion removed from list']);
         }).fail( function(error) {
             flashMessage('danger', i18nStrings['Oops! Suggestion might not have been removed'])
         });

@@ -397,13 +397,16 @@ def postContribution():
                                     date=datetime.date(datetime.utcnow()))
         contrib_list.append(contribution)
 
-        # We also create a new suggestion by testing for GoogleVision
-        if data.get('isGoogleVision'):
+        # Also create a new suggestion if depict item was suggested
+        suggestion_keys = ['google_vision', 'metadata_to_concept']
+        if any(key in data for key in suggestion_keys):
             suggestion = Suggestion(campaign_id=campaign_id,
                                     file_name=data['image'],
                                     depict_item=data['depict_item'],
-                                    google_vision=1,
-                                    google_vision_confidence=data['google_vision_confidence'],
+                                    google_vision=data.get('google_vision'),
+                                    google_vision_confidence=data.get('google_vision_confidence'),
+                                    metadata_to_concept=data.get('metadata_to_concept'),
+                                    metadata_to_concept_confidence=data.get('metadata_to_concept_confidence'),
                                     update_status=1,
                                     user_id=user.id)
             suggestion_list.append(suggestion)
@@ -568,7 +571,15 @@ def save_reject_statements():
         abort(401)
 
     request_keys = set(request.json.keys())
-    expected_keys = {'file', 'depict_item', 'google_vision_confidence', 'campaign_id', 'google_vision'}
+    expected_keys = {
+        'file',
+        'depict_item',
+        'campaign_id',
+        'google_vision',
+        'google_vision_confidence',
+        'metadata_to_concept',
+        'metadata_to_concept_confidence'
+    }
 
     if request.data and request_keys == expected_keys:
         rejection_data = request.json
@@ -582,8 +593,10 @@ def save_reject_statements():
         rejected_suggestion = Suggestion(campaign_id=campaign_id,
                                          file_name=rejection_data['file'],
                                          depict_item=rejection_data['depict_item'],
-                                         google_vision=1,
+                                         google_vision=rejection_data.get('google_vision'),
                                          google_vision_confidence=rejection_data['google_vision_confidence'],
+                                         metadata_to_concept=rejection_data.get('metadata_to_concept'),
+                                         metadata_to_concept_confidence=rejection_data['metadata_to_concept_confidence'],
                                          user_id=user.id)
 
         if len(file_rejected_suggestions) > 1:
