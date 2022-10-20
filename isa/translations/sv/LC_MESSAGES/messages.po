@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Jon Harald Søby
+# Author: Jopparn
 # Author: Sabelöga
 # --
 # Translation for the ISA project
@@ -10,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-09-08 11:18:56+0000\n"
+"PO-Revision-Date: 2022-10-20 11:25:51+0000\n"
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -202,19 +203,19 @@ msgstr "Ta bort dem eller bocka ur \"Wiki Loves Campaign\"-rutan ovan."
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr ""
+msgstr "Uppdatera bilder"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
-msgstr ""
+msgstr "Samla in bilder från kategorierna."
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."
-msgstr ""
+msgstr "Detta kommer att ersätta alla nuvarande bilder."
 
 #: templates/campaign/campaign-form.html:174
 msgid "Use if you changed the categories or if there was an error updating previously."
-msgstr ""
+msgstr "Använd om du ändrade kategorierna eller om det uppstod ett fel vid uppdateringen tidigare."
 
 #: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
@@ -433,7 +434,7 @@ msgstr "Visa tidigare bild"
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
-msgstr "TIDIG. BILD"
+msgstr "FÖREG. BILD"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
@@ -744,35 +745,35 @@ msgstr "Föregående"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr ""
+msgstr "Uppdaterar bilder"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr ""
+msgstr "Bilderna för denna kampanj håller på att uppdateras."
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr ""
+msgstr "Fler bilder kommer att läggas till."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr ""
+msgstr "Du kan fortfarande delta i kampanjen."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr ""
+msgstr "Det gick inte att uppdatera bilder"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
-msgstr ""
+msgstr "Det uppstod ett fel när bilderna för den här kampanjen skulle uppdateras."
 
 #: templates/campaign/macros.html:8
 msgid "Some images will be missing."
-msgstr ""
+msgstr "Vissa bilder kommer att saknas."
 
 #: templates/campaign/macros.html:8
 msgid "The campaign manager can retry by updating the campaign."
-msgstr ""
+msgstr "Kampanjhanteraren kan försöka igen genom att uppdatera kampanjen."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
@@ -859,7 +860,7 @@ msgstr "Mediefiler på Commons är oftast:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr "Personliga fotografier och media som laddats upp av individer, ibland under Wiki Loves-tävlingar som Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth osv;"
+msgstr "Personliga fotografier och media som laddats upp av individer, ibland under Wiki Loves-tävlingar som Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc.;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
@@ -867,7 +868,7 @@ msgstr "Fritt licensierade mediefiler från externa webbplatser som Flickr, YouT
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr "Donationer från institutioner och organisationer med bastanta mediesamlingar, stora som små, från UNSECO, NASA brittiska biblioteket till lokala kulturinstitutioner."
+msgstr "Donationer från institutioner och organisationer med bastanta mediesamlingar, stora som små, från UNSECO, NASA och British library till små lokala kulturinstitutioner."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
@@ -1192,7 +1193,7 @@ msgstr "Logga in"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr "ISA-verktyg"
+msgstr "ISA-verktyget"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
@@ -1282,7 +1283,7 @@ msgstr "Ångra ändringar"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "Samma som gränssnitt"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
