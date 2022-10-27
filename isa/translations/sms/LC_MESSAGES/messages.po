@@ -9,12 +9,12 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-09-26 11:18:56+0000\n"
+"PO-Revision-Date: 2022-10-27 11:25:03+0000\n"
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sms\n"
-"X-Generator: MediaWiki 1.40.0-alpha; Translate 2022-07-28\n"
+"X-Generator: MediaWiki 1.40.0-alpha; Translate 2022-10-21\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
