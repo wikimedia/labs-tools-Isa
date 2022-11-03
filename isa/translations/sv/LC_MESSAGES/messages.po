@@ -4,6 +4,7 @@
 # Author: Jon Harald Søby
 # Author: Jopparn
 # Author: Sabelöga
+# Author: Tore
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -11,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-10-27 11:25:03+0000\n"
+"PO-Revision-Date: 2022-11-03 12:20:19+0000\n"
 "X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -908,7 +909,7 @@ msgstr ""
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "Denna term kan också användas bredare för att beskriva alla aktiviteter som involverar att välja, organisera och presentera information."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
