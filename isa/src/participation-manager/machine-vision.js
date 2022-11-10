@@ -48,7 +48,7 @@ ParticipationManager.prototype.getM2CSuggestions = function() {
     return $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: 'http://92.205.161.71:8080/extract/',
+        url: 'https://m2c.wikimedia.se:8080/extract/',
         data: JSON.stringify(apiOptions)
     });
 }
