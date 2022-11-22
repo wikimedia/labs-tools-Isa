@@ -332,7 +332,8 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                             edit_action: "edit",
                             depict_item: depictItem,
                             depict_prominent: isProminent,
-                            statement_id: currentStatement.statementId
+                            statement_id: currentStatement.statementId,
+                            initial_claim: initialStatement.completeClaim
                         })
                     } // else, no changes to statement
 
@@ -456,28 +457,22 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             var depictItem = contribution.depict_item,
                 depictProminent = contribution.depict_prominent,
                 statementId = contribution.statement_id,
+                initialClaim = contribution.initial_claim,
                 claim;
 
-            if (editAction === 'add' || editAction === 'edit') {
-                //action = 'wbsetclaim'
-                claim = {
-                    "type": "statement",
-                    "mainsnak": {
-                        "snaktype": "value",
-                        "property": "P180",
-                        "datavalue": {
-                            "type": "wikibase-entityid",
-                            "value": {
-                                "id": depictItem
-                            }
-                        }
-                    },
-                    "id": statementId,
-                    "rank": (depictProminent) ? "preferred" : "normal"
-                }
-
-            } else if (editAction === 'remove') {
-                claim = statementId;
+            switch (editAction) {
+                case 'add':
+                    claim = getAddClaimOptions(statementId, depictItem, depictProminent);
+                    break;
+                case 'edit':
+                    claim = getEditClaimOptions(initialClaim, depictProminent);
+                    break;
+                case 'remove':
+                    claim = statementId;
+                    break;
+                default:
+                    console.error('Unrecognised edit type: ' + editAction);
+                    return;
             }
             return {
                 action: (editAction === 'remove') ? 'wbremoveclaims' : "wbsetclaim",
@@ -496,6 +491,30 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
         //else
         return console.log("edit type not recognised, edit API call not generated!");
+    }
+
+    function getAddClaimOptions(statementId, depictItem, isProminent) {   
+        return {
+            "type": "statement",
+            "mainsnak": {
+                "snaktype": "value",
+                "property": "P180",
+                "datavalue": {
+                    "type": "wikibase-entityid",
+                    "value": {
+                        "id": depictItem
+                    }
+                }
+            },
+            "id": statementId,
+            "rank": (isProminent) ? "preferred" : "normal"
+        }
+    }
+
+    function getEditClaimOptions(initialClaim, isProminent) {
+        var newClaim = $.extend(true, {}, initialClaim);
+        newClaim.rank = (isProminent) ? "preferred" : "normal";
+        return newClaim;
     }
 
     /////////// General utilities for Particiaption Manager /////////// 
