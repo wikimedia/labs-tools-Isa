@@ -101,7 +101,8 @@ ParticipationManager.prototype.populateStructuredData = function(filename, callb
                     depictItems.push({
                         item: depictStatement.mainsnak.datavalue.value.id,
                         isProminent: depictStatement.rank === "preferred",
-                            statementId: depictStatement.id
+                        statementId: depictStatement.id,
+                        completeClaim: depictStatement
                     });
                 }
             }
