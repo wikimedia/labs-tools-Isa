@@ -24,18 +24,21 @@ ParticipationManager.prototype.getMachineVisionSuggestions = function() {
 function getM2CAttr(key, value) {
     return {
         key: key,
-        value: value,
-        lang: 'en'
+        value: value
     }
+}
+
+function extractName(filename) {
+    return filename.slice(0, filename.lastIndexOf("."));
 }
 
 
 // Requires captions to have been retrieved already for best suggestions
 ParticipationManager.prototype.getM2CSuggestions = function() {
-    var name = this.imageFileName.split('.')[0].split(":")[1];
+    var filename = this.imageFileName.split(":")[1];
+    var name = extractName(filename);
     var apiOptions = {
-        name: name,
-        url: this.imagesUrl,
+        file: filename,
         attrs: [
             getM2CAttr("name", name),
             getM2CAttr("description", this.description),
@@ -48,7 +51,7 @@ ParticipationManager.prototype.getM2CSuggestions = function() {
     return $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: 'https://m2c.wikimedia.se:8080/extract/',
+        url: 'https://m2c.wikimedia.se/extract/',
         data: JSON.stringify(apiOptions)
     });
 }
