@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-10-27 11:25:03+0000\n"
-"X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
+"PO-Revision-Date: 2022-12-19 12:18:39+0000\n"
+"X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sms\n"
@@ -1269,7 +1269,7 @@ msgstr ""
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr ""
+msgstr "Jaukkâd ǩiõl"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
