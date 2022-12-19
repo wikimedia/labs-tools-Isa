@@ -156,3 +156,27 @@ class Suggestion(db.Model, UserMixin):
                self.metadata_to_concept,
                self.update_status,
                self.user_id)
+
+
+class DenyListCategory(db.Model):
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    category_name = db.Column(db.String(250), nullable=False)
+    reason = db.Column(db.String(240), nullable=False)
+
+    def __repr__(self):
+        # This is what is shown when object is printed
+        return "DenyListCategory({}, {})".format(
+               self.category_name,
+               self.reason)
+
+
+class DenyList(db.Model):
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    wikidata_item = db.Column(db.String(15), nullable=False)
+    category = db.Column(db.Integer, db.ForeignKey('deny_list_category.id'), nullable=False)
+
+    def __repr__(self):
+        # This is what is shown when object is printed
+        return "DenyList({}, {})".format(
+               self.wikidata_item,
+               self.category)
