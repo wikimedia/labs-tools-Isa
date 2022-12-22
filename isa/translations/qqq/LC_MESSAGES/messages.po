@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Ajeje Brazorf
+# Author: Bennylin
 # Author: Pols12
 # Author: Robby
 # Author: Verdy p
@@ -12,8 +13,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-10-27 11:25:02+0000\n"
-"X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
+"PO-Revision-Date: 2022-12-22 12:19:48+0000\n"
+"X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: qqq\n"
@@ -997,7 +998,7 @@ msgstr ""
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "\"and it is not possible to do search search per language.\" (double \"search\") [[User:Bennylin|Bennylin]] ([[User talk:Bennylin|talk]]) 05:23, 22 December 2022 (UTC)"
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
@@ -1097,7 +1098,7 @@ msgstr ""
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr ""
+msgstr "{{discuss term|it|language=id}}\n\n[[Wikimedia:Isa-ef38d1-It is running on tools.wmflabs/id]]\n\nWhat does it refer to? My language need to specify what \"it\" is."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."

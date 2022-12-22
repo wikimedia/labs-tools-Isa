@@ -1,6 +1,7 @@
 # Translation of ISA to Indonesian (Bahasa Indonesia)
 # Exported from translatewiki.net
 #
+# Author: Bennylin
 # Author: Mnam23
 # Author: NFarras
 # --
@@ -10,8 +11,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-10-27 11:25:01+0000\n"
-"X-POT-Import-Date: 2022-06-13 14:30:40+0000\n"
+"PO-Revision-Date: 2022-12-22 12:19:47+0000\n"
+"X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: id\n"
@@ -48,7 +49,7 @@ msgstr "Kampanye %(campaign_name)s dibuat!"
 
 #: campaigns/routes.py:228
 msgid "Create a campaign"
-msgstr "Buat kampanye"
+msgstr "Buat kampanye baru"
 
 #: campaigns/routes.py:248
 #, python-format
@@ -822,7 +823,7 @@ msgstr "Tambahkan informasi tentang gambar dengan mudah di Wikimedia Commons"
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> adalah alat yang menyenangkan, multibahasa, mobile-first, yang memudahkan orang untuk menambahkan \"kontribusi mikro\" dalam bentu <a %(link_attrs)s>data terstruktur</a> ke gambar di Wikimedia Commons yang telah ditambahkan oleh kompetisi Wiki Cinta."
+msgstr "<strong>ISA</strong> adalah alat yang menyenangkan, multibahasa, dan ramah HP, yang memudahkan orang untuk menambahkan \"kontribusi mikro\" dalam bentuk <a %(link_attrs)s title='Pelajari lebih lanjut tentang data terstruktur'>data terstruktur</a> (deskripsi, takarir, tagar, dll.) ke gambar-gambar di Wikimedia Commons yang telah ditambahkan oleh kompetisi-kompetisi \"Wiki Cinta ...\"."
 
 #: templates/main/help.html:19
 #, python-format
@@ -839,19 +840,19 @@ msgstr "Apa itu Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr "<strong>Wikimedia Commons</strong> (juga dikenal sebagai 'Commons') adalah proyek Wikimedia, proyek saudara wikipedia, dan koleksi lebih dari 40 juta berkas media gratis."
+msgstr "<strong>Wikimedia Commons</strong> adalah proyek Wikimedia, proyek saudari Wikipedia, yang memiliki koleksi lebih dari 40 juta berkas media gratis."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr "Semua foto berlisensi bebas, berkas audio dan video, PDF dan media lain di Wikipedia disimpan di Commons."
+msgstr "Semua foto, audio, video, PDF, dan media lain yang berlisensi bebas di Wikipedia dan proyek Wikimedia lainnya disimpan di Wikimedia Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr "Wikimedia Commons berkembang pesat, sekitar 5 juta berkas media baru per tahun."
+msgstr "Wikimedia Commons berkembang sangat pesat, dengan penambahan sekitar 5 juta berkas media baru per tahun."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr "Ribuan sukarelawan mengunggah file ke Commons, dan mengintegrasikannya ke dalam proyek-proyek Wikimedia, seperti Wikipedia, untuk mengilustrasikan konten di sana dan untuk berbagi media itu dengan publik."
+msgstr "Ribuan sukarelawan mengunggah berkas-berkas ke Commons, dan mengintegrasikannya ke dalam proyek-proyek Wikimedia, seperti Wikipedia, untuk mengilustrasikan konten di sana dan untuk berbagi media tersebut dengan publik."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
@@ -959,15 +960,15 @@ msgstr "Pelajari lebih lanjut tentang takarir berkas dan gambarkan"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr "Takarir berkas adalah bagian fitur dari data Terstruktur."
+msgstr "Takarir berkas adalah bagian fitur dari Data Terstruktur."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr "Mereka dimaksudkan untuk menyimpan deskripsi singkat dan multibahasa tentang berkas."
+msgstr "Takarir merupakan deskripsi singkat dan multibahasa tentang berkas."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr "Apa itu takarir yang bagus? dan apa perbedaan antara deskripsi berkas lama dan takarir kami yang bagus?"
+msgstr "Apa itu takarir yang bagus? Dan apa perbedaan antara deskripsi berkas dan takarir?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
@@ -975,7 +976,7 @@ msgstr "Pertama, takarir dimaksudkan sederhana dan singkat."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr "Meskipun deskripsi bisa sangat luas, takarir dibatasi hingga 255 karakter panjangnya, dan tidak dapat berisi markup (seperti tautan Wikitext atau HTML) dan tidak mendukung tautan eksternal."
+msgstr "Takarir dibatasi hingga 255 karakter, dan tidak dapat berisi markah teks (seperti markah wiki atau markah HTML) dan tidak mendukung tautan eksternal. Sementara deskripsi tidak memiliki batasan-batasan tersebut."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
@@ -983,19 +984,19 @@ msgstr "Dalam banyak kasus, takarir akan serupa atau identik dengan deskripsi."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr "Tetapi dalam kasus lain, ada deskripsi yang sangat luas (858 karakter, dan tautan) dan takarirnya jauh lebih pendek (kurang lebih takarir yang sama yang digunakan pada artikel Wikipedia menggunakan gambar itu)."
+msgstr "Tetapi dalam kasus lain, ada deskripsi yang sangat panjang dan takarirnya jauh lebih pendek (kurang lebih serupa dengan takarir yang digunakan pada artikel Wikipedia yang menggunakan gambar itu)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr "Hanya teks yang sangat pendek sehingga tidak dapat dilindungi hak cipta yang harus disalin ke dalam teks, karena keterangan diterbitkan di bawah pengabaian CC0 (\"domain publik\")."
+msgstr "Hanya teks yang sangat pendek (tidak dapat dilindungi hak cipta) yang boleh dituliskan ke dalam takarir, karena takarir diterbitkan di bawah lisensi CC0 (\"domain publik\")."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr "Salah satu manfaat inti dari keterangan adalah peningkatan kemampuan pencarian sadar bahasa."
+msgstr "Salah satu manfaat utama dari takarir adalah peningkatan kemampuan pencarian multibahasa."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr "Deskripsi file klasik ada di teks wiki, dan hanya dapat dicari melalui pencarian teks lengkap, yang tentu saja mencari melalui seluruh konten halaman, termasuk kategori dan templat lisensi; dan tidak mungkin untuk melakukan pencarian pencarian per bahasa."
+msgstr "Deskripsi berkas yang lama menggunakan markah wiki, dan hanya dapat dicari melalui pencarian teks lengkap, yang tentu saja mencari melalui seluruh konten halaman, termasuk kategori dan templat lisensi; dan tidak mungkin untuk melakukan pencarian per bahasa."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
@@ -1003,11 +1004,11 @@ msgstr "Takarir tersedia sebagai bagian dari data terstruktur kami, sementara de
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr "Dalam istilah teknis, deskripsi adalah teks wiki biasa yang dibungkus dalam template bahasa, dibungkus lagi dalam template Informasi; sementara takarir adalah label Wikibase."
+msgstr "Dalam istilah teknis, deskripsi adalah teks wiki biasa yang dibungkus dalam templat bahasa, dibungkus lagi dalam templat Informasi; sementara takarir adalah label Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr "Dengan demikian, keterangan akan dapat dicari melalui API, sehingga mudah untuk menemukan/memfilter/menarik takarir dari berkas sebagai metadata."
+msgstr "Dengan demikian, takarir akan dapat dicari melalui API, sehingga mudah untuk menemukan/memfilter/menarik takarir dari berkas sebagai metadata."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
@@ -1039,7 +1040,7 @@ msgstr "Penggambaran juga bagian fitur dari Data Terstruktur."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr "Ia diaktifkan di Wikimedia Commons pada April 2019."
+msgstr "Fitur \"penggambaran\" mulai diaktifkan di Wikimedia Commons sejak April 2019."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
@@ -1051,7 +1052,7 @@ msgstr "Kemudian untuk setiap item yang digambarkan dalam gambar, temukan item y
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr "Jika Anda kesulitan menemukan item Wikidata yang tepat, uji ejaan alternatif."
+msgstr "Jika Anda kesulitan menemukan item Wikidata yang tepat, cobalah mengetik ejaan alternatif, atau coba ketikkan dalam bahasa Inggris (terkadang belum ada deskripsinya dalam bahasa Indonesia)."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
@@ -1059,7 +1060,7 @@ msgstr "Jika tidak ada item Wikidata yang terkait dengan subjek yang digambarkan
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr "Jadilah sespesifik mungkin dengan tag utama."
+msgstr "Deskripsikan sespesifik mungkin dengan tag utama."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
@@ -1075,88 +1076,88 @@ msgstr "Ada juga opsi untuk menandai item tertentu sebagai 'menonjol'."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "Properti ini mengacu pada keunggulan item di media."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "Informasi lebih lanjut tentang penggambaran dapat ditemukan di sini:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "Menggunakan alat ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "Informasi lebih lanjut dapat ditemukan di sini:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "Masalah legal dan kredit"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr ""
+msgstr "Alat ini dijalankan di tools.wmflabs.org, dan tunduk pada Ketentuan Penggunaan Layanan Wikimedia Cloud."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA diterbitkan di bawah lisensi GPLv3. Konten yang ditambahkan melalui alat ke Wikimedia Commons dirilis di bawah CC0 (<a href=\"https://creativecommons.org/publicdomain/zero/1.0/deed.id\">Creative Commons Zero</a>)."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "Gambar yang digunakan pada alat:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "Menambahkan Informasi tentang Gambar di Wikimedia Commons dengan mudah"
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> adalah alat yang menyenangkan, multibahasa, dan ramah HP, yang memudahkan orang untuk menambahkan \"kontribusi mikro\" dalam bentuk <a %(link_attrs)s title='Pelajari lebih lanjut tentang data terstruktur'>data terstruktur</a> (deskripsi, takarir, tagar, dll.) ke gambar-gambar di Wikimedia Commons yang telah ditambahkan oleh kompetisi-kompetisi \"Wiki Cinta ...\"."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr ""
+msgstr "<strong>Klik Jelajahi Kampanye untuk memulai!</strong>"
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr ""
+msgstr "Buka direktori kampanye untuk memilih sebuah kampanye"
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "JELAJAHI KAMPANYE"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "Tentang Alat Ini"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr ""
+msgstr "Dalam jangka panjang, maksud di balik alat ini adalah untuk meningkatkan penggunaan pengetahuan yang tercermin dari setiap gambar yang diunggah ke Wikimedia Commons. "
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "Alat ini bertujuan untuk membantu kegunaan dan informasi gambar yang disumbangkan selama kompetisi-kompetisi \"Wiki Cinta ...\"."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "Alat ini awalnya dibangun untuk membantu dalam deskripsi gambar Wiki Loves Africa, tetapi secara khusus dimodelkan agar berguna untuk semua kompetisi \"Wiki Cinta ...\" dan kompetisi lainnya."
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr ""
+msgstr "Alat ini juga dirancang untuk menjadi alat bantu kompetisi kontribusi mikro yang diusulkan oleh para pemimpin proyek."
 
 #: templates/main/home.html:26
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ISA adalah kolaborasi antara proyek-proyek Wiki In Africa, Histropedia, dan Structured Data on Commons."
 
 #: templates/main/home.html:27
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA tidak hanya merupakan singkatan dari Information Structured Additions, tetapi juga merupakan kata bahasa Shona untuk 'meletakkan' atau 'menempatkan'."
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr ""
+msgstr "Beranda"
 
 #: templates/main/layout.html:44
 msgid "Create New"
@@ -1164,39 +1165,39 @@ msgstr "Buat Baru"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr ""
+msgstr "Bantuan"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "Ubah bahasa teks yang tersedia"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "Preferensi bahasa"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr ""
+msgstr "Lihat kampanye Anda"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "Kampanye Saya"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr ""
+msgstr "Keluar log"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr ""
+msgstr "Masuk log"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "Alat ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "dikembangkan sebagai kolaborasi antara proyek-proyek Wiki In Africa, Histropedia ,dan Data Terstruktur di Commons."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
@@ -1208,123 +1209,123 @@ msgstr ""
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr ""
+msgstr "ISA diterbitkan di bawah lisensi"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "Konten yang ditambahkan melalui alat ini ke Wikimedia Commons dirilis di bawah lisensi"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "Kampanye Anda"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr ""
+msgstr "Di bawah ini adalah daftar Kampanye Anda"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "Anda tidak memiliki kampanye apa pun"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "Preferensi bahasa"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr ""
+msgstr "Menggambarkan bahasa"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr ""
+msgstr "Bahasa yang dipilih akan digunakan untuk mencari elemen yang digambarkan dalam foto."
 
 #: templates/users/user_settings.html:15
 msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
-msgstr ""
+msgstr "Jika \"Sama seperti antarmuka\" dipilih, bahasa yang dipilih di menu atas akan digunakan."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "Pilih hingga 6 bahasa untuk takarir"
 
 #: templates/users/user_settings.html:19
 msgid "Caption Languages"
-msgstr ""
+msgstr "Bahasa Takarir"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "Takarir dapat ditambahkan dalam beberapa bahasa untuk setiap gambar."
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "Bahasa yang Anda pilih di halaman ini akan muncul di halaman saat Anda melihat gambar."
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "Pilih semua bahasa yang Anda kuasai untuk berkontribusi."
 
 #: templates/users/user_settings.html:23 templates/users/user_settings.html:29
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr ""
+msgstr "Hapus bahasa"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "Batalkan perubahan pada pengaturan bahasa"
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr ""
+msgstr "Batalkan perubahan"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "Sama seperti antarmuka"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "Panggilan balik OAuth gagal. Apakah kukinya dimatikan?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "Selamat datang %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "Sampai jumpa lain waktu!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Silakan masuk untuk mengubah preferensi bahasa Anda"
 
 #: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "Maaf Anda mencoba memasukkan %(rep_languages)s berkali-kali"
 
 #: users/routes.py:157
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "Bahasa takarir tidak dapat disetel"
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
-msgstr ""
+msgstr "Pengaturan Bahasa yang Diinginkan Berhasil"
 
 #: users/routes.py:172
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "Setelan bahasa tidak tersedia saat ini"
 
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s - Pengaturan"
 
 #: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Kampanye yang dibuat oleh %(username)s"
 
