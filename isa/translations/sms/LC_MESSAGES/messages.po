@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-01-02 12:20:42+0000\n"
+"PO-Revision-Date: 2023-01-09 12:37:39+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1127,7 +1127,7 @@ msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "Lââʹssteâđ ISA-neävv pirr"
+msgstr "Lââʹssteâđ ISA-neävvast"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
