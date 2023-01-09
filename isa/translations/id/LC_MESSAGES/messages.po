@@ -4,6 +4,7 @@
 # Author: Bennylin
 # Author: Mnam23
 # Author: NFarras
+# Author: Veracious
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -11,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-12-22 12:19:47+0000\n"
+"PO-Revision-Date: 2023-01-09 12:37:38+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1201,11 +1202,11 @@ msgstr "dikembangkan sebagai kolaborasi antara proyek-proyek Wiki In Africa, His
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr ""
+msgstr "Sedang berjalan menggunakan"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr ""
+msgstr "dan tunduk pada"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
