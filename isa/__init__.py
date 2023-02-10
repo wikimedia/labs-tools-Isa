@@ -85,3 +85,6 @@ def inject_language_choices():
             languages.append(language.name)
 
     return dict(languages=sorted(languages))
+
+
+app.app_context().push()
