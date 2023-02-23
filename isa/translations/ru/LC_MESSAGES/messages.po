@@ -3,6 +3,7 @@
 #
 # Author: Kaganer
 # Author: Kareyac
+# Author: Okras
 # Author: Pacha Tchernof
 # Author: Tanzun
 # --
@@ -12,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-01-26 12:25:21+0000\n"
+"PO-Revision-Date: 2023-02-23 12:20:05+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -524,7 +525,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr ""
+msgstr "Войдите, чтобы опубликовать изменения"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
