@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: HellojoeAoPS
+# Author: Kly
 # Author: Sidishandsome
 # Author: StarrySky
 # Author: Winston Sung
@@ -13,7 +14,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-01-26 12:25:22+0000\n"
+"PO-Revision-Date: 2023-02-23 12:20:06+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1086,7 +1087,7 @@ msgstr ""
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "使用 ISA 工具"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
@@ -1106,7 +1107,7 @@ msgstr ""
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "在工具上使用的圖片："
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
@@ -1131,7 +1132,7 @@ msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "關於此工具"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1163,7 +1164,7 @@ msgstr ""
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "建立新的"
 
 #: templates/main/layout.html:50
 msgid "Help"
@@ -1175,27 +1176,27 @@ msgstr ""
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "語言偏好設定"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr ""
+msgstr "查看您的活動"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "我的活動"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr ""
+msgstr "登出"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr ""
+msgstr "登入"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "ISA 工具"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
@@ -1219,7 +1220,7 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "您的活動"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
@@ -1231,7 +1232,7 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
@@ -1273,15 +1274,15 @@ msgstr ""
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr ""
+msgstr "移除語言"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "撤銷對語言設定的更改"
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr ""
+msgstr "撤銷更改"
 
 #: users/forms.py:26
 msgid "Same as interface"
@@ -1294,15 +1295,15 @@ msgstr ""
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "歡迎，%(username)s！"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "下次見！"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "請登入來更改您的語言偏好設定。"
 
 #: users/routes.py:144
 #, python-format
@@ -1324,7 +1325,7 @@ msgstr ""
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s的設定"
 
 #: users/routes.py:197
 #, python-format

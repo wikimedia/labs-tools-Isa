@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Robby
+# Author: Volvox
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -9,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-01-26 12:25:20+0000\n"
+"PO-Revision-Date: 2023-02-23 12:20:04+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -834,7 +835,7 @@ msgstr ""
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "Wat ass Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
@@ -1227,7 +1228,7 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
