@@ -12,12 +12,12 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-02-13 12:17:49+0000\n"
+"PO-Revision-Date: 2023-03-16 12:21:39+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ar\n"
-"X-Generator: MediaWiki 1.40.0-alpha; Translate 2023-01-24\n"
+"X-Generator: MediaWiki 1.41.0-alpha; Translate 2023-01-24\n"
 "Plural-Forms: nplurals=6; plural=(n == 0) ? 0 : ( (n == 1) ? 1 : ( (n == 2) ? 2 : ( (n%100 >= 3 && n%100 <= 10) ? 3 : ( (n%100 >= 11 && n%100 <= 99) ? 4 : 5 ) ) ) );\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
@@ -237,7 +237,7 @@ msgstr "لمعرفة المزيد حول البيانات الوصفية للت�
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr "التصورات"
+msgstr "العناصر المصورة"
 
 #: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
@@ -246,7 +246,7 @@ msgstr "حدد لتجميع تصورات البيانات الوصفية في ا
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
-msgstr "الشرح"
+msgstr "نصوص توضيحية"
 
 #: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
@@ -824,24 +824,24 @@ msgstr "أضف معلومات حول الصور بسهولة على ويكيمي
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> هي أداة مرحة، متعددة اللغات، للجوّال أولاً، تسهل على الأشخاص إضافة \"مساهمات صغيرة\" في شكل <a %(link_attrs)s>بيانات منظمة</a> إلى الصور على ويكيميديا كومنز التي أُضيفت بواسطة مسابقات ويكي تهوى."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "صمم إيسا في الأصل لتقديم أوصاف منظمة ومتعددة اللغات أفضل لصور <a %(link_attrs)s>ويكي تهوى إفريقيا</a> ."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "ولكن طور أيضًا ليكون مفيدًا لجميع <a link_attrs>مسابقات ويكي تهوى</a>، وفي النهاية، لجميع <strong>ملفات الوسائط</strong> على ويكيميديا كومنز."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "ما هي ويكيميديا كومنز؟"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>ويكيميديا كومنز</strong> (المعروف أيضًا باسم \"كومنز\") هو مشروع ويكيميديا ، وهو مشروع شقيق لويكيبيديا، ومجموعة تضم أكثر من 40 مليون ملف وسائط مجاني."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -857,7 +857,7 @@ msgstr ""
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr ""
+msgstr "عادةً ما تكون ملفات الوسائط في كومنز:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
@@ -873,15 +873,15 @@ msgstr ""
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "ما هي البيانات المهيكلة في كومنز؟"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>البيانات المهيكلة في كومنز</strong> عبارة عن مشروع يوفر البنية التحتية التقنية لاستكمال نصوص ويكي، والقوالب والفئات على ويكيميديا كومنز ببيانات مهيكلة."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "البيانات المهيكلة هي بيانات بدرجة عالية من التنظيم المهيكل."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
@@ -901,7 +901,7 @@ msgstr ""
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr ""
+msgstr "كيف سنقوم بفعل ذلك ؟ "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -917,7 +917,7 @@ msgstr ""
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr ""
+msgstr "إذن ... كيف تتلاءم أداة ISA هناك؟"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
@@ -953,15 +953,15 @@ msgstr ""
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr ""
+msgstr "الشرط الوحيد هو… أن يتم تسجيل الدخول."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "تعرف على المزيد حول التسميات التوضيحية والعناصر المصورة"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "التسميات التوضيحية على الملف هي جزء مميز من البيانات المهيكلة."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
@@ -973,7 +973,7 @@ msgstr ""
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "أولاً، من المفترض أن تكون التسميات التوضيحية بسيطة وقصيرة."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
@@ -1017,27 +1017,27 @@ msgstr ""
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "يمكن أن تكون الاستخدامات الأخرى الممكنة للتسميات التوضيحية:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "ملء صناديق المعلومات"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "الاستعلام عن التسميات التوضيحية المفقودة في لغة معينة"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "إنشاء قوائم لترجمة الملفات المهمة التي تحتاج إلى تسمية توضيحية مترجمة لمشروع أو حملة"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "اعثر على مزيد من المعلومات حول التسميات التوضيحية هنا"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr ""
+msgstr "تُعد التسميات التوضيحية أيضًا جزءًا مميزًا من البيانات المهيكلة."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
@@ -1085,11 +1085,11 @@ msgstr ""
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "استخدام أداة ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "يمكن العثور على مزيد من المعلومات هنا:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
@@ -1105,40 +1105,40 @@ msgstr ""
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "الصورة المستخدمة في الأداة:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "أضف معلومات حول الصور بسهولة على ويكيميديا كومنز"
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> هي أداة متعددة اللغات، تستخدم في الأجهزة المحمولة أولاً، تسهل على الأشخاص إضافة \"مساهمات صغيرة\" في شكل <a %(link_attrs)s title='تعرف على المزيد حول البيانات المهيكلة'></a> (أوصاف، وتسميات توضيحية، وعلامات، وما إلى ذلك) إلى الصور التي ساهمت مسابقات ويكي تهوى بها في ويكيميديا كومنز."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr ""
+msgstr "<strong>انقر فوق استكشاف الحملات للبدء!</strong>"
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr ""
+msgstr "انتقل إلى دليل الحملات لاختيار حملة"
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "استكشف الحملات"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "حول هذه الأداة"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr ""
+msgstr "على المدى الطويل، الهدف من الأداة هو زيادة استخدام المعرفة التي تنعكس في كل صورة مستضافة على ويكيميديا كومنز. "
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "تهدف الأداة إلى المساعدة في فائدة ومعلومات الصور التي تم التبرع بها خلال مسابقات ويكي تهوى."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
@@ -1158,43 +1158,43 @@ msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr ""
+msgstr "الرئيسية"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "إنشاء جديد"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr ""
+msgstr "مساعدة"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "غير لغات الترجمة المتوفرة لديك"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "تفضيلات اللغات"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr ""
+msgstr "شاهد حملاتك"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "حملاتي"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr ""
+msgstr "تسجيل الخروج"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr ""
+msgstr "تسجيل الدخول"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "أداة ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
@@ -1202,7 +1202,7 @@ msgstr ""
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr ""
+msgstr "إنه يعمل على"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
@@ -1218,31 +1218,31 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "حملاتك"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr ""
+msgstr "فيما يلي قائمة بحملاتك"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "ليس لديك أي حملات"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "تفضيلات اللغة"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr ""
+msgstr "لغة العناصر المصورة"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr ""
+msgstr "ستُستخدم اللغة المختارة للبحث عن العناصر المصورة في الصور."
 
 #: templates/users/user_settings.html:15
 msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
@@ -1250,83 +1250,83 @@ msgstr ""
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "حدد ما يصل إلى 6 لغات للنصوص التوضيحية"
 
 #: templates/users/user_settings.html:19
 msgid "Caption Languages"
-msgstr ""
+msgstr "لغات التسمية التوضيحية"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "يمكن إضافة التسميات التوضيحية بلغات متعددة لكل صورة."
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "ستظهر اللغات التي تحددها في هذه الصفحة على الصفحة عند عرض الصورة."
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "حدد جميع اللغات التي تفضل المساهمة بها."
 
 #: templates/users/user_settings.html:23 templates/users/user_settings.html:29
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr ""
+msgstr "إزالة اللغة"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "تراجع عن التغييرات في إعدادات اللغة"
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr ""
+msgstr "الرجوع عن التغييرات"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "نفس الواجهة"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "فشل استدعاء OAuth. هل الكوكيز معطلة؟"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "مرحبًا %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "أراكم المرة القادمة!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "يُرجَى تسجيل الدخول لتغيير تفضيلات اللغة الخاصة بك."
 
 #: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "آسف لأنك حاولت إدخال %(rep_languages)s عدة مرات"
 
 #: users/routes.py:157
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "تعذر تعيين لغات النصوص التوضيحية"
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
-msgstr ""
+msgstr "عُينت اللغات المفضلة بنجاح"
 
 #: users/routes.py:172
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "إعدادات اللغة غير متوفرة في الوقت الحالي"
 
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s - الإعدادات"
 
 #: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "الحملات التي أنشأها %(username)s"
 
