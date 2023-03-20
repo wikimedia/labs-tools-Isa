@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: MITO
+# Author: Pyscowicz
 # Author: Susannaanas
 # Author: Veikk0.ma
 # Author: Yupik
@@ -12,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-03-16 12:21:39+0000\n"
+"PO-Revision-Date: 2023-03-20 12:30:06+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1085,7 +1086,7 @@ msgstr ""
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "ISA-työkalun käyttäminen"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
@@ -1105,7 +1106,7 @@ msgstr ""
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "Työkalussa käytetty kuva:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
@@ -1182,7 +1183,7 @@ msgstr "Näytä kampanjasi"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr "Minun kampanjat"
+msgstr "Omat kampanjat"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
@@ -1234,7 +1235,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "Kieliasetukset"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
@@ -1284,7 +1285,7 @@ msgstr "Kumoa muutokset"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "Sama kuin käyttöliittymä"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
@@ -1323,10 +1324,10 @@ msgstr "Kieliasetuksia ei ole vielä saatavilla"
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "Käyttäjän %(username)s asetukset"
 
 #: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Käyttäjän %(username)s luomat kampanjat"
 
