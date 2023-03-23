@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-03-20 12:30:06+0000\n"
+"PO-Revision-Date: 2023-03-23 12:26:56+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -902,7 +902,7 @@ msgstr ""
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr ""
+msgstr "Kuinka aiomme tehdä sen ? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
