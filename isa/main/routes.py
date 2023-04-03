@@ -14,16 +14,17 @@ def home():
     username = session.get('username', None)
     directory = os.getcwd() + '/campaign_stats_files/'
     session_language = session.get('lang', None)
+
     if not os.path.exists(directory):
         os.makedirs(directory)
     if not session_language:
         session_language = 'en'
-    username_for_current_user = add_user_to_db(username)
+
     session['next_url'] = request.url
     return render_template('main/home.html',
                            title='Home',
                            session_language=session_language,
-                           username=username_for_current_user,
+                           username=username,
                            current_user=current_user)
 
 
