@@ -2,7 +2,7 @@ flask
 pyyaml
 mwoauth
 flask_sqlalchemy
-flask_babel
+Flask-Babel
 flask_login
 flask_wtf
 WTForms==2.*

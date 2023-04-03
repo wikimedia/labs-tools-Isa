@@ -29,7 +29,16 @@ app.config['SECRET_KEY']
 app.config['TEMPLATES_AUTO_RELOAD']
 
 # We hook babel to our app
+
+
+def get_locale():
+    if request.args.get('lang'):
+        session['lang'] = request.args.get('lang')
+    return session.get('lang', 'en')
+
+
 babel = Babel(app)
+babel.init_app(app, locale_selector=get_locale)
 
 
 @app.before_request
@@ -39,13 +48,6 @@ def before_request():
 
     if "ISA_DEV" in app.config and app.config["ISA_DEV"]:
         session['username'] = "Dev"
-
-
-@babel.localeselector
-def get_locale():
-    if request.args.get('lang'):
-        session['lang'] = request.args.get('lang')
-    return session.get('lang', 'en')
 
 
 db = SQLAlchemy(app)
