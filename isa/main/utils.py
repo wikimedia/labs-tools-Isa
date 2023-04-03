@@ -2,7 +2,6 @@ import sys
 import traceback
 
 from isa import db
-from isa.models import Contribution
 
 
 def commit_changes_to_db():
@@ -12,6 +11,7 @@ def commit_changes_to_db():
     """
     try:
         db.session.commit()
+        return True
     except Exception:
         # TODO: We could add a try catch here for the error
         print('Exception when committing to database.', file=sys.stderr)
@@ -20,5 +20,5 @@ def commit_changes_to_db():
         db.session.rollback()
         # for resetting non-commited .add()
         db.session.flush()
-        return True
+
     return False
