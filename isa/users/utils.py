@@ -1,9 +1,6 @@
-import json
-import sys
-
 from operator import itemgetter
 
-from isa import db, gettext
+from isa import db
 from isa.main.utils import commit_changes_to_db
 from isa.models import User, Contribution
 
@@ -16,11 +13,10 @@ def check_user_existence(username):
     username -- the currently logged in user
     """
 
-    user_exists = User.query.filter_by(username=username).first()
-    if not user_exists:
-        return True
-    else:
-        return False
+    user = User.query.filter_by(username=username).first()
+    if not user:
+        return None
+    return user
 
 
 def add_user_to_db(username):
@@ -31,16 +27,15 @@ def add_user_to_db(username):
     username -- the currently logged in user
     """
 
-    if check_user_existence(username):
+    user = check_user_existence(username)
+    if not user:
         user = User(username=username, caption_languages='en,fr,,,,')
         db.session.add(user)
         if commit_changes_to_db():
-            return False
-        else:
             return user.username
-    else:
-        user = User.query.filter_by(username=username).first()
-        return user.username
+
+    user = User.query.filter_by(username=username).first()
+    return user.username
 
 
 def get_user_language_preferences(username):
