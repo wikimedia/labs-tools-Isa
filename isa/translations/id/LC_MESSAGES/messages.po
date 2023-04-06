@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-03-16 12:21:39+0000\n"
+"PO-Revision-Date: 2023-04-06 11:25:25+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -82,7 +82,7 @@ msgstr "Huu! %(campaign_name)s tidak bisa diperbarui!"
 #: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr "%(campaign_name)s - Pembaruan"
+msgstr "%(campaign_name)s - Sunting Kampanye"
 
 #: campaigns/routes.py:366
 msgid "You need to login to participate"
@@ -786,7 +786,7 @@ msgstr "Silakan periksa kontak dukungan"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Bawa Aku Pulang"
+msgstr "Kembali ke Beranda"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
@@ -803,7 +803,7 @@ msgstr "Kami Tidak Dapat Menemukan Halaman yang Anda Cari"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Bawa Aku Pulang"
+msgstr "Kembali ke Beranda"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
