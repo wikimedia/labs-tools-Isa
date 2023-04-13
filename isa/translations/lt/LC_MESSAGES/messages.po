@@ -1,13 +1,7 @@
-# Translation of ISA to Swedish (svenska)
+# Translation of ISA to Lithuanian (lietuvių)
 # Exported from translatewiki.net
 #
-# Author: Alicia Fagerving (WMSE)
-# Author: André Costa (WMSE)
-# Author: Jenny Brandt (WMSE)
-# Author: Jon Harald Søby
-# Author: Jopparn
-# Author: Sabelöga
-# Author: Tore
+# Author: Nokeoo
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -15,325 +9,325 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-04-13 11:25:35+0000\n"
+"PO-Revision-Date: 2023-04-13 11:25:34+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv\n"
+"Language: lt\n"
 "X-Generator: MediaWiki 1.41.0-alpha; Translate 2023-01-24\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10 == 1 && n%100 != 11) ? 0 : ( (n%10 >= 2 && (n%100 < 10 || n%100 >= 20)) ? 1 : 2 );\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
-msgstr "Kampanjer"
+msgstr "Kampanijos"
 
 #: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "Kampanjen med ID %(id)s finns inte"
+msgstr "Kampanija, kurios ID %(id)s, neegzistuoja"
 
 #: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
-msgstr "Kampanj - "
+msgstr "Kampanija - "
 
 #: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
-msgstr "Du behöver logga in för att skapa en kampanj"
+msgstr "Norėdami sukurti kampaniją, turite prisijungti"
 
 #: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr "Tyvärr, %(campaign_name)s kunde inte skapas"
+msgstr "Atsiprašome, %(campaign_name)s nepavyko sukurti"
 
 #: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr "Kampanjen %(campaign_name)s skapades!"
+msgstr "%(campaign_name)s kampanija sukurta!"
 
 #: campaigns/routes.py:228
 msgid "Create a campaign"
-msgstr "Skapa en kampanj"
+msgstr "Kurti kampaniją"
 
 #: campaigns/routes.py:248
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr "%(campaign_name)s - Bidra"
+msgstr "%(campaign_name)s – prisidėkite"
 
 #: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
-msgstr "Du behöver logga in för att uppdatera en kampanj"
+msgstr "Norėdami atnaujinti kampaniją, turite prisijungti"
 
 #: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
-msgstr "Kunde inte uppdatera kampanj, försök igen senare!"
+msgstr "Nepavyko atnaujinti kampanijos, bandykite vėliau!"
 
 #: campaigns/routes.py:296
 msgid "Update Succesfull !"
-msgstr "Uppdaterades!"
+msgstr "Atnaujinimas sėkmingas !"
 
 #: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Du kan inte uppdatera denna kampanj, kontakta den ansvariga användaren: %(campaign_manager)s "
+msgstr "Negalite atnaujinti šios kampanijos, susisiekite su vadybininku User:%(campaign_manager)s "
 
 #: campaigns/routes.py:319
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr "Surt! %(campaign_name)s kunde inte uppdateras!"
+msgstr "Booo! %(campaign_name)s nepavyko atnaujinti!"
 
 #: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr "%(campaign_name)s - Uppdatera"
+msgstr "%(campaign_name)s – atnaujinimas"
 
 #: campaigns/routes.py:366
 msgid "You need to login to participate"
-msgstr "Du behöver logga in för att delta"
+msgstr "Norint dalyvauti, reikia prisijungti"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr "Uppdatera kampanjdetaljer"
+msgstr "Atnaujinti kampanijos informaciją"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr "Skapa ny kampanj"
+msgstr "Kurti naują kampaniją"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Du uppdaterar"
+msgstr "Jūs atnaujinate"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr "Fyll i formuläret nedan för att skapa din kampanj"
+msgstr "Norėdami sukurti kampaniją, užpildykite žemiau esančią formą"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr "Fält markerade med * är obligatoriska"
+msgstr "Laukai, pažymėti *, yra privalomi"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Kampanjnamn"
+msgstr "Kampanijos pavadinimas"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr "Detta är det specifika namnet på din kampanj, inte huvudprojektet."
+msgstr "Tai yra jūsų kampanijos pavadinimas, o ne pagrindinio projekto."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr "Så inte \"Wiki Loves Africa\" utan hellre \"Musik och dans i Nigeria\""
+msgstr "Taigi ne „Viki myli Afriką“, o „Muzika ir šokiai Nigerijoje“"
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr "Kort beskrivning av kampanjen (144 tecken)"
+msgstr "Trumpas kampanijos aprašymas (144 simboliai)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr "Vad användare kommer arbeta på"
+msgstr "Su kuo dirbs naudotojai"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
 msgid "Start Date"
-msgstr "Startdatum"
+msgstr "Pradžios data"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr "Ange kampanjens startdatum"
+msgstr "Nustatykite kampanijos pradžios datą"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
 msgid "End Date"
-msgstr "Slutdatum"
+msgstr "Pabaigos data"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr "Ange kampanjens slutdatum"
+msgstr "Nustatykite kampanijos pabaigos datą"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "Detta är en Wiki Loves Campaign"
+msgstr "Tai „Wiki Loves“ kampanija"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr "När detta alternativ är korrekt angett låter det användare välja vilket land de vill se bilder från och sparar bidrag efter land."
+msgstr "Teisingai nustatyta ši parinktis leidžia dalyviams pasirinkti, iš kurios valstybės jie nori matyti vaizdus, ir įrašinėja įnašus pagal valstybę."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr "Du kan välja flera kategorier av rätt typ."
+msgstr "Galite pasirinkti kelias tinkamo tipo kategorijas."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr "Djup måste anges som 0 för alla kategorier i en Wiki Loves campaign."
+msgstr "Visoms „Wiki Loves“ kampanijos kategorijoms gylis turi būti nustatytas į 0."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr "Kräver kategorier i formulärbilder från ett Wiki Loves-<strong><em>projekt</em></strong> ett visst <strong><em>år</em></strong>, t.ex. \"Bilder från Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>\" (ändra <strong><em>projekt</em></strong> och år som <strong><em>behövs</em></strong>)"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr "Vissa av kategorierna valda nedan har inte rätt syntax"
+msgstr "Kai kurios iš toliau pasirinktų kategorijų neturi tinkamos sintaksės"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr "Kategorier att använda i kampanjen"
+msgstr "Šioje kampanijoje naudotinos kategorijos"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr "Sök efter kategorier på Wikimedia Commons som innehåller bilder du önskar använda i din kampanj."
+msgstr "Ieškokite Vikitekos kategorijų, kuriose yra vaizdai, kuriuos norite naudoti savo kampanijoje."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr "Om du vill att en kategori och ALLA dess underkategorier ska  använda alternativet ''Djup'' för att välja hur många nivåer ner du vill gå (lämna djup på 0 för Wiki Loves-kampanjer)."
+msgstr "Jei norite kategorijos ir VISŲ jos subkategorijų, naudokite parinktį „Gylis“, kad pasirinktumėte, kiek lygių žemyn norite pasirinkti („Wiki loves“ kampanijoms, palikite gylį 0)."
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr "Välj kategorier att använda i kampanjen"
+msgstr "Pasirinkite kategorijas, kurias norite naudoti kampanijoje"
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Namn"
+msgstr "Pavadinimas"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Djup"
+msgstr "Gylis"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr "Kategorierna i rött har inte rätt syntax för funktionen \"Wiki Loves.kampanj\"."
+msgstr "Raudonai pažymėtos kategorijos neturi tinkamos funkcijos „Wiki Loves campaign“ sintaksės."
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr "Ta bort dem eller bocka ur \"Wiki Loves Campaign\"-rutan ovan."
+msgstr "Pašalinkite juos arba atžymėkite aukščiau esantį žymimąjį laukelį „Wiki Loves Campaign“."
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr "Uppdatera bilder"
+msgstr "Atnaujinkite vaizdus"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
-msgstr "Samla in bilder från kategorierna."
+msgstr "Surinkti vaizdus iš kategorijų."
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."
-msgstr "Detta kommer att ersätta alla nuvarande bilder."
+msgstr "Tai pakeis visus esamus vaizdus."
 
 #: templates/campaign/campaign-form.html:174
 msgid "Use if you changed the categories or if there was an error updating previously."
-msgstr "Använd om du ändrade kategorierna eller om det uppstod ett fel vid uppdateringen tidigare."
+msgstr "Naudokite, jei pakeitėte kategorijas arba jei anksčiau atnaujinant įvyko klaida."
 
 #: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
-msgstr "Metadata att samla in i kampanjen"
+msgstr "Kampanijoje rinktini metaduomenys"
 
 #: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr "Välj vilket typ av <strong>metadata</strong> du vill samla in i din kampanj."
+msgstr "Pasirinkite, kokio tipo <strong>metaduomenis</strong> norite rinkti savo kampanijoje."
 
 #: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
-msgstr "Du måste välja minst en av alternativen nedan."
+msgstr "Turite pasirinkti bent vieną iš toliau pateiktų parinkčių."
 
 #: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data see the help page."
-msgstr "För att ta reda på mer om \"motiv\"- och \"bildtext\"-metadata, läs hjälpsidan."
+msgstr "Kad sužinotumėte daugiau apie vaizdavimo ir antraščių metaduomenis, žiūrėkite pagalbos puslapį."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr "Motiv"
+msgstr "Vaizdavimas"
 
 #: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
-msgstr "Välj för att samla in motivmetadata i kampanjen"
+msgstr "Pasirinkite, jei norite rinkti vaizdavimo metaduomenis kampanijoje"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
-msgstr "Bildtexter"
+msgstr "Antraštės"
 
 #: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
-msgstr "Välj för att samla in bildtextmetadata i kampanjen"
+msgstr "Pasirinkite, jei norite rinkti antraščių metaduomenis kampanijoje"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
-msgstr "Kampanjbild"
+msgstr "Kampanijos vaizdas"
 
 #: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr "Kampanjbildens högsta tillåtna höjd är 150px. Bilder borde vara antingen en banderollbild eller en logotyp."
+msgstr "Maksimalus kampanijos vaizdo aukštis yra 150 pikselių. Vaizdas turėtų būti reklamjuostė arba logotipas."
 
 #: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
-msgstr "Porträtt eller fyrkantiga foton rekommenderas inte."
+msgstr "Portretinės arba kvadratinės nuotraukos nerekomenduojamos."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr "Ange FILNAMNET endast av en bild från Commons för att visa den på kampanjens hemsida."
+msgstr "Įveskite tik vaizdo FAILO PAVADINIMĄ iš Vikitekos, kad būtų rodomas kampanijos pagrindiniame puslapyje."
 
 #: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
-msgstr "Lång beskrivning av kampanjen (fullständig information)"
+msgstr "Ilgas kampanijos aprašymas (visa apibūdinanti informacija)"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
-msgstr "Varför är det viktigt att användare kan bidra till kampanjen?"
+msgstr "Kodėl svarbu, kad naudotojai prisidėtų prie kampanijos?"
 
 #: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
-msgstr "Publicera kampanj"
+msgstr "Paskelbti kampaniją"
 
 #: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
-msgstr "Du måste välja minst en kategori för din kampanj."
+msgstr "Turite pasirinkti bent vieną kampanijos kategoriją."
 
 #: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr "Vissa av kategorierna du valt har inte rätt syntax för en Wiki Loves-kampanj."
+msgstr "Kai kurios jūsų pasirinktos kategorijos neturi tinkamos Wiki Loves kampanijos sintaksės."
 
 #: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
-msgstr "Kontrollera dina val och försök igen."
+msgstr "Patikrinkite savo pasirinkimus ir bandykite dar kartą."
 
 #: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr "Välj minst en typ från avsnittet Metadata att samla in"
+msgstr ""
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
-msgstr "Visa bilder från"
+msgstr "Žiūrėti vaizdus iš"
 
 #: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
-msgstr "Välj att bara visa bilder från ett enda land"
+msgstr "Pasirinkite, kad žiūrėtumėte vaizdus iš vienos valstybės"
 
 #: templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
-msgstr "Börja bidra till denna kampanj"
+msgstr "Pradėkite prisidėjimą prie šios kampanijos"
 
 #: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
-msgstr "Kom igång"
+msgstr "Pradėti"
 
 #: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
-msgstr "Kampanjens framsteg hittills"
+msgstr "Kampanijos progresas iki šiol"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
-msgstr "Totalt antal bilder i denna kampanj"
+msgstr "Bendras vaizdų skaičius šioje kampanijoje"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
-msgstr "Bilder"
+msgstr "Vaizdai"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
-msgstr "Totalt antal bidrag till denna kampanj"
+msgstr "Bendras indėlių į šią kampaniją skaičius"
 
 #: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
 #: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
@@ -342,894 +336,894 @@ msgstr "Totalt antal bidrag till denna kampanj"
 #: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr "Bidrag"
+msgstr "Indėliai"
 
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
-msgstr "Toppbidragsgivare"
+msgstr ""
 
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr "Bidragsgivare"
+msgstr ""
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
-msgstr "Inga deltagare har bidragit till denna kampanj"
+msgstr "Nė vienas dalyvis neprisidėjo prie šios kampanijos"
 
 #: templates/campaign/campaign.html:74
 #: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
-msgstr "Mest förbättrade länderna"
+msgstr "Labiausiai patobulintos valstybės"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
 msgid "Country"
-msgstr "Land"
+msgstr "Valstybė"
 
 #: templates/campaign/campaign.html:97
 #: templates/campaign/campaign_stats.html:94
 msgid "There is no data available yet for this campaign"
-msgstr "Det finns ännu ingen data tillgänglig för denna kampanj"
+msgstr "Dar nėra šios kampanijos duomenų"
 
 #: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
-msgstr "Visa och ladda ner mer statistik för denna kampanj"
+msgstr "Peržiūrėkite ir atsisiųskite daugiau šios kampanijos statistikos"
 
 #: templates/campaign/campaign.html:105
 msgid "View full stats"
-msgstr "Visa fullständig statistik"
+msgstr "Žiūrėti visą statistiką"
 
 #: templates/campaign/campaign.html:116
 msgid "My Contributions"
-msgstr "Mina bidrag"
+msgstr "Mano indėlis"
 
 #: templates/campaign/campaign.html:123
 msgid "Rank"
-msgstr "Rank"
+msgstr "Vieta"
 
 #: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
-msgstr "Mer om kampanjen"
+msgstr "Daugiau apie šią kampaniją"
 
 #: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
-msgstr "Kampanjansvarig"
+msgstr "Kampanijos vadybininkas"
 
 #: templates/campaign/campaign.html:145
 msgid "START DATE"
-msgstr "STARTDATUM"
+msgstr "PRADŽIOS DATA"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
-msgstr "SLUTDAUM"
+msgstr "PABAIGOS DATA"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
-msgstr "Inte angivet"
+msgstr "Nenustatyta"
 
 #: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
-msgstr "Gör ändringar i denna kampanj"
+msgstr "Atlikite šios kampanijos pakeitimus"
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
-msgstr "Redigera kampanj"
+msgstr "Redaguoti kampaniją"
 
 #: templates/campaign/campaign.html:162
 msgid "Unknown country"
-msgstr "Okänt land"
+msgstr "Nežinoma valstybė"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr "Återvänd till kampanjens hemsida"
+msgstr "Grįžti į pagrindinį kampanijos puslapį"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
-msgstr "Hemsida"
+msgstr "Pagrindinis puslapis"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Visa tidigare bild"
+msgstr "Peržiūrėti ankstesnį vaizdą"
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
-msgstr "FÖREG. BILD"
+msgstr "ANKSTESNIS VAIZDAS"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Eget arbete"
+msgstr "Mano darbas"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Visa nästa bild"
+msgstr "Žiūrėti kitą vaizdą"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
-msgstr "NÄSTA BILD"
+msgstr "KITAS VAIZDAS"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Fil"
+msgstr "Failas"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Öppna bilden på Wikimedia Commons"
+msgstr "Atidarykite šį paveikslėlį Vikitekoje"
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Beskrivning"
+msgstr "Aprašymas"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Kategorier"
+msgstr "Kategorijos"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr "Kameraplats"
+msgstr "Kameros vieta"
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
-msgstr "visa all metadata från commons"
+msgstr "rodyti visus Vikitekos metaduomenis"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr "Lägg till Motiv-uttalanden"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "Gör det enkel: Använda enkla ord och förställningar för att beskriva vad det är du ser i varje bild (t.ex. katt, berg, Taj Mahal)"
+msgstr "Apibūdinkite paprastai: naudokite paprastus žodžius ir sąvokas, kad apibūdintumėte tai, ką matote kiekviename paveikslėlyje (pvz., katė, kalnas, Tadžmahalas)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
-msgstr "Avbryt dina ändringar"
+msgstr "Atšaukite savo pakeitimus"
 
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "Atšaukti"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr "Spara dina redigeringar på Wikimedia Commons"
+msgstr "Išsaugokite savo pakeitimus Vikitekoje"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:58
 msgid "Save"
-msgstr "Spara"
+msgstr "Išsaugoti"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr "Du kommer omdirigeras för att logga in och sedan tillbaka hit för att spara dina ändringar"
+msgstr "Būsite nukreipti į prisijungimą ir atgal čia, kad išsaugotumėte pakeitimus"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr "Nämn de olika elementen du ser i den här bilden"
+msgstr "Įvardinkite skirtingus elementus, kuriuos galite matyti šiame paveikslėlyje"
 
 #: templates/campaign/campaign_entry.html:73
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr "För att markera det framstående i bilden klickar du på flaggikonen"
+msgstr "Norėdami pažymėti svarbius vaizdo elementus, spustelėkite vėliavėlės piktogramą"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr "Skriva bildtexter"
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr "Ta med all kulturspecifika, vetenskapliga eller tekniska information som du ser (t.ex. etiopisk kaffeceremoni eller bunna maflat) för att berika informationen."
+msgstr ""
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr "Logga in för att publicera ändringarna"
+msgstr "Prisijunkite, kad paskelbtumėte pakeitimus"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr "Lägg till en bildtext för att bättre förklara bilden (max 255 tecken)"
+msgstr "Pridėkite antraštę, kad geriau paaiškintumėte vaizdą (maks. 255 simboliai)"
 
 #: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
-msgstr "Förklara kortfattat vad du ser i bilden."
+msgstr "Trumpai paaiškinkite, ką matote šiame paveikslėlyje."
 
 #: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr "Du kan lägga till bildtexter på flera språk genom att välja Språkinställningar i användarmenyn"
+msgstr "Galite pridėti antraščių papildomomis kalbomis naudotojo meniu pasirinkę kalbos nuostatas"
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr "Inga bilder hittades för kampanjen!"
+msgstr "Nerasta šios kampanijos vaizdų!"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
-msgstr "Något blev fel när kampanjbilderna skulle hämtas"
+msgstr "Gaunant kampanijos vaizdus įvyko klaida"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr "Sök efter saker du ser i bilden"
+msgstr "Ieškokite dalykų, kuriuos matote paveikslėlyje"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr "minimera metadata från commons"
+msgstr "minimizuoti metaduomenis iš Vikitekos"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr "Det lyckades! Motiv-objekt sparades på Wikimedia Commons"
+msgstr "Pavyko! Pavaizduoti elementai išsaugoti Vikitekoje"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr "Det lyckades! Biltexterna sparades på Wikimedia Commons"
+msgstr "Pavyko! Antraštės išsaugotos Vikitekoje"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr "Hoppsan! Nånting blev fel, dina redigeringar har inte sparats på Wikimedia Commons"
+msgstr "Oi! Kažkas ne taip, jūsų pakeitimai nebuvo išsaugoti Vikitekoje"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr "Är du säker på att du vill gå till en annan bild? Du har osparade ändringar som kommer gå förlorade."
+msgstr "Ar tikrai norite pereiti prie kito vaizdo? Turite neišsaugotų pakeitimų, kurie bus prarasti."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr "Klicka \"OK\" för att göra det ändå, eller \"Avbryt\" om du vill spara ändringarna först."
+msgstr "Spustelėkite „Gerai“, jei norite tęsti, arba „Atšaukti“, jei pirmiausia norite išsaugoti pakeitimus."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr "Ta bort detta motiv-objekt"
+msgstr "Pašalinti šį pavaizduotą elementą"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr "Markera detta motiv-objekt som framträdande"
+msgstr "Pažymėti šį pavaizduotą elementą kaip išraiškų"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr "Markera detta motiv-objekt som INTE framträdande"
+msgstr "Pažymėti šį pavaizduotą elementą kaip neišraiškingą"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr "BIDRAG TILL EN STRUKTURERAD DATA-KAMPANJ"
+msgstr "INDĖLIS Į STRUKTŪRUOTŲ DUOMENŲ KAMPANIJĄ"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr "Från"
+msgstr "Nuo"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr "Till"
+msgstr "Iki"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
-msgstr "Ladda ner all statistik (CSV)"
+msgstr "Atsisiųsti visą statistiką (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
-msgstr "Bidragsstatistik"
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
-msgstr "Landsstatistik"
+msgstr "Valstybės duomenys"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr "På den här sidan finns de utvalda kampanjer som för tillfället körs som en del av ISA-verktyget."
+msgstr "Šiame puslapyje yra kuruojamos kampanijos, kurios šiuo metu vyksta kaip ISA įrankio dalis."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr "Klicka på kampanjens namn för att komma igång och lägga till strukturerad data till en bild."
+msgstr "Spustelėkite kampanijos pavadinimą, kad pradėtumėte ir pridėtumėte struktūrinių duomenų prie vaizdo."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr "Du kan komma åt information på tidigare kampanjer från arkivavsnittet."
+msgstr "Informaciją apie ankstesnes kampanijas galite pasiekti Archyvo skiltyje."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr "Pågående kampanjer"
+msgstr "Vykdomos kampanijos"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr "Kampanjnamn"
+msgstr "Kampanijos pavadinimas"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr "Kampanj"
+msgstr "Kampanija"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr "Totalt antal bilder i kampanjen"
+msgstr "Bendras vaizdų skaičius kampanijoje"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr "Antalet redigerare som har bidragit till kampanjen "
+msgstr "Prisidėjusių prie kampanijos skaičius "
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr "Deltagare"
+msgstr "Dalyviai"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr "Totalt antal bidragsgivare i kampanjen"
+msgstr "Viso prisidėjusių prie kampanijos"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr "Kampanjens startdatum"
+msgstr "Kampanijos pradžios data"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr "Kampanjens slutdatum"
+msgstr "Kampanijos pabaigos data"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr "Datumet kampanjen skapades"
+msgstr "Kampanijos sukūrimo data"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr "Datum skapad"
+msgstr "Sukūrimo data"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr "Kampanjstatus"
+msgstr "Kampanijos būsena"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr "Status"
+msgstr "Būsena"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr "Stängd"
+msgstr "Uždaryta"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr "Inte öppnad"
+msgstr "Neatidaryta"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Öppen"
+msgstr "Atidaryta"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr "Gå till föregående kampanjs hemsida för att komma igång"
+msgstr "Norėdami pradėti, eikite į pagrindinį kampanijos puslapį"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr "Gå till kampanj"
+msgstr "Eiti į kampaniją"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr "Visa stängda kampanjer"
+msgstr "Rodyti uždarytas kampanijas"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr "Skapa din egen kampanj"
+msgstr "Sukurkite savo kampaniją"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr "Skapa en ny kampanj med detta verktyg"
+msgstr "Sukurkite naują kampaniją naudodami šį įrankį"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr "Du måste vara inloggad för att skapa en kampanj."
+msgstr "Norėdami sukurti kampaniją, turite būti prisijungę."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr "Visa inlägg med _START_ till _END_ av _TOTAL_"
+msgstr "Rodoma nuo _START_ iki _END_ iš _TOTAL_ įrašų"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr "Inga inlägg"
+msgstr "Nėra įrašų"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr "Sök:"
+msgstr "Paieška:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr "Inga matchande poster hittades"
+msgstr "Nerasta atitinkančių įrašų"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr "Först"
+msgstr "Pirmas"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr "Sist"
+msgstr "Paskutinis"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr "Nästa"
+msgstr "Kitas"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr "Föregående"
+msgstr "Ankstesnis"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr "Uppdaterar bilder"
+msgstr "Atnaujinami vaizdai"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr "Bilderna för denna kampanj håller på att uppdateras."
+msgstr "Šios kampanijos vaizdai atnaujinami."
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr "Fler bilder kommer att läggas till."
+msgstr "Bus pridėta daugiau vaizdų."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr "Du kan fortfarande delta i kampanjen."
+msgstr "Vis dar gali dalyvauti kampanijoje."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr "Det gick inte att uppdatera bilder"
+msgstr "Nepavyko atnaujinti vaizdų"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
-msgstr "Det uppstod ett fel när bilderna för den här kampanjen skulle uppdateras."
+msgstr "Įvyko klaida atnaujinant šios kampannijos vaizdus."
 
 #: templates/campaign/macros.html:8
 msgid "Some images will be missing."
-msgstr "Vissa bilder kommer att saknas."
+msgstr "Trūks kai kurių vaizdų."
 
 #: templates/campaign/macros.html:8
 msgid "The campaign manager can retry by updating the campaign."
-msgstr "Kampanjhanteraren kan försöka igen genom att uppdatera kampanjen."
+msgstr "Kampanijos vadybininkas gali bandyti iš naujo atnaujinant kampaniją."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr "Servern genomgår underhåll"
+msgstr "Serveris tvarkomas"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr "Kontrollera kontaktsupport"
+msgstr ""
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Ta mig till startsidan"
+msgstr " Grąžinti mane į pagrindinį"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Kontakta supporten"
+msgstr "Susisiekite su palaikymo komanda"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Sidan kunde inte hittas"
+msgstr "Puslapis nerastas"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr "Vi kunde inte hitta sidan du letar efter"
+msgstr "Mums nepavyko rasti jūsų ieškomo puslapio"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Ta mig till startsidan"
+msgstr "Grąžinti mane į pagrindinį"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Något blev fel"
+msgstr "Kažkas nutiko ne taip"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr "Isa kan genomgå underhåll"
+msgstr "ISA gali būti tvarkomas"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Hjälpsida"
+msgstr "Pagalbos puslapis"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr "Enkelt lägga till information om bilder på Wikimedia Commons"
+msgstr "Lengvai pridėkite informaciją apie Vikitekos vaizdus"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> är ett kul, flerspråkigt, mobil-främst-verktyg som underlättar för folk att lägga till \"mikrobidrag\" i form av <a %(link_attrs)s>strukturerad data</a> för bilder på Wikimedia Commons som har lagts till i Wiki Loves-tävlingar."
+msgstr "<strong>ISA</strong> yra paprastas, daugiakalbis, mobiliems įrenginiams prioritetą teikiantis įrankis, kuris palengvina asmenims galimybę atlikti „mikro indėlį“ pridedant <a %(link_attrs)s>struktūruotus duomenis</a> vaizdų, kurie buvo pridėti „Wiki Loves“ konkursų, Vikitekoje."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr "ISA byggdes ursprungligen för att erbjuda bättre flerspråkiga och strukturerade bidrag för bilder i <a %(link_attrs)s>Wiki Loves Africa</a>."
+msgstr "ISA originaliai sukurtas siekiant sukurti geresnius daugiakalbius ir struktūrizuotus „<a %(link_attrs)s>Wiki Loves Africa</a>“ vaizdų aprašymus."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr "Men det utvecklades också för att vara användbart för alla <a link_attrs>Wiki Loves-tävlingar</a> och, slutligen, för <strong>alla mediefiler</strong> på Wikimedia Commons."
+msgstr "Bet jis kuriamas, kad galėtų būti naudingas visiems <a link_attrs>„Wiki Loves“ konkursams</a> ir <strong>visiems medijos failams</strong> Vikitekoje."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr "Vad är Wikimedia Commons?"
+msgstr "Kas yra Vikiteka?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr "<strong>Wikimedia Commons</strong> (även känd som \"Commons\") är ett Wikimediaprojekt, ett systerprojekt till Wikipedia och en samling på fler än 40 miljoner fria mediefiler."
+msgstr "<strong>Vikiteka</strong> (angl. „Wikimedia Commons“) yra Vikimedijos projektas, seserinis Vikipedijos projektas, ir daugiau nei 40 milijonų nemokamų medijos failų kolekcija."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr "Alla de fritt licensierade fotografierna, ljud- och videofilerna, PDF:erna och annan media på Wikipedia lagras på Commons."
+msgstr "Visos nemokamos licencijos nuotraukos, garso ir vaizdo failai, PDF ir kita medija Vikipedijoje yra laikoma Vikitekoje."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr "Wikimedia Commons växer i snabb takt, med cirka 5 miljoner nya mediefiler om året."
+msgstr "Vikiteka sparčiai auga, apytiksliai po 5 milijonus naujų medijos failų kasmet."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr "Tusentals volontärer laddar upp filer på Commons och integrerar dem på Wikimedias projekt, som Wikipedia, för att illustrera innehållet där och för att dela median med offentligheten."
+msgstr "Tūkstančiai savanorių kelia failus į Vikiteką ir inegruoja juos į Vikimedijos projektus, pvz., Vikipediją, tam, kad iliustruotų turinį ir dalintųsi medija su visuomene."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr "Mediefiler på Commons är oftast:"
+msgstr "Medijos failai Vikitekoje įprastai:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr "Personliga fotografier och media som laddats upp av individer, ibland under Wiki Loves-tävlingar som Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc.;"
+msgstr "Asmeninės nuotraukos ir medija, įkelta individų, kartais vykstant „Wiki Loves“ konkursams, pvz., „Wiki Loves Africa“, „Wiki Loves Monuments“, „Wiki Loves Earth“ ir kt.;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr "Fritt licensierade mediefiler från externa webbplatser som Flickr, YouTube, öppna journaler och andra samlingar; och"
+msgstr "Nemokamos licencijos medijos failai iš išorinių svetainių kaip, pvz., Flickr, YouTube, atviros prieigos žurnalų, kitų saugyklų; ir"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr "Donationer från institutioner och organisationer med bastanta mediesamlingar, stora som små, från UNSECO, NASA och British library till små lokala kulturinstitutioner."
+msgstr "Aukos iš institucijų ir organizacijų su žymiomis mažomis ar didelėmis medijos kolekcijomis, pvz., UNESCO, NASA, Britų biblioteka ir įvairios mažos kultūros institucijos."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr "Vad är strukturerad data på Commons?"
+msgstr "Kas Vikitekoje yra struktūrizuoti duomenys ?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr "<strong>Strukturerad data på Commons</strong> är ett projekt som erbjuder en teknisk infrastruktur för att komplettera wikitext, mallar och kategorier på Wikimedia Commons med strukturerad data."
+msgstr "<strong>Struktūriniai duomenys Vikitekoje</strong> yra projektas, suteikiantis techninę infrastruktūrą, papildančią vikitekstą, šablonus ir kategorijas struktūriniais duomenimis Vikitekoje."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr "Strukturerad data är data med en hög grad av strukturerad organisering."
+msgstr ""
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr "Med mer struktur blir det lättare att återanvända data på andra Wikimediaprojekt och andra tredje parter; det möjliggör också för datorer att bearbeta och \"förstå\" det."
+msgstr "Turint daugiau struktūros, tampa lengviau pakartotinai naudoti duomenis kituose Vikitekos projektuose ir trečiosioms šalims; tai taip pat leidžia kompiuteriams tai apdoroti ir „suprasti“."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr "Strukturerad data är ett pågående projekt som lanserades 2019! ... medan Wikimedia Commons har funnits i åratal!"
+msgstr "Struktūriniai duomenys yra tęstinis projektas, kuris buvo pradėtas 2019 m.! ... o Vikiteka egzistuoja jau daugelį metų!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr "Det finns bokstavligen miljoner bilder på Wikimedia Commons... som behöver uppmärksamhet och kärlek."
+msgstr "Vikitekoje yra milijonai nuotraukų … kurioms reikia dėmesio ir meilės."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr "Miljoner bilder som inte är beskrivna med strukturerad data för tillfället."
+msgstr "Milijonai nuotraukų, kurios šiuo metu nėra apibūdintos struktūriniais duomenimis."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr "Hur ska vi göra detta? "
+msgstr "Kaip mes tai padarysime? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr "<strong>Kurering</strong>, i ordets strikta bemärkelse, betyder att välja ut och organisera konstverk och kulturarvsföremål inför en utställning."
+msgstr "<strong>Kuravimas</strong>, siaurąja prasme, reiškia meno kūrinių ir kultūros paveldo atranką ir sutvarkymą parodai."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr "Denna term kan också användas bredare för att beskriva alla aktiviteter som involverar att välja, organisera och presentera information."
+msgstr "Šis terminas gali būti vartojamas ir plačiau, apibūdinti bet kokią veiklą, susijusią su informacijos atranka, tvarkymu ir pateikimu."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr "När vi pratar om strukturerade data på Commons så innebär kurering allt som Commonsanvändare gör för att organisera och presentera mediafilerna på plattformen: administrativa åtgärder, att lägga till mer och bättre metadata till filerna, organisera dem i kategorier, skapa gallerier…"
+msgstr ""
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr "Så… vad är ISA:s roll här?"
+msgstr "Taigi... kuo čia svarbus ISA įrankis ?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr "Med verktyget ISA kan du lägga till två olika typer strukturerade data, bildtexter och motiv, till en uppsättning bilder (längre ner förklarar vi vad bildtexter och motiv är för något)."
+msgstr "ISA įrankis leidžia prie paveikslėlių rinkinio pridėti dviejų skirtingų tipų struktūrinių duomenų: antraštes ir vaizdavimą (daugiau paaiškinimų, kas yra antraštės ir vaizdavimas)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr "Det är ett flerspråkigt verktyg, byggt främst med mobila enheter i åtanke, som gör det lätt för alla att lägga till strukturerade data till bilder från Wiki Loves-tävlingarna på Wikimedia Commons."
+msgstr "Tai daugiakalbis, pirmiausia mobiliesiems skirtas „mikro indėlių“ įrankis, leidžiantis žmonėms lengvai pridėti struktūrinių duomenų prie vaizdų, įtrauktų į „Wiki Loves“ konkursus Vikitekoje."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr "Verktyget arbetar med kurerade kampanjer skapade av samordnare."
+msgstr "Įrankis veikia su kuruojamomis kampanijomis, kurias sukūrė koordinatoriai."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr "Vem som helst som har ett Wikimediakonto kan vara koordinator!"
+msgstr "Kiekvienas, turintis Vikimedijos paskyrą, gali būti koordinatorius!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr "Med ISA kan koordinatorn välja en fördefinierad uppsättning bilder på Commons, välja ett startdatum och ett slutdatum för kampanjen och ge allmän information om själva kampanjen."
+msgstr "Naudodamas ISA koordinatorius gali pasirinkti iš anksto nustatytą vaizdų rinkinį Vikitekoje, pasirinkti kampanijos pradžios ir pabaigos datas bei pateikti bendrą informaciją apie pačią kampaniją."
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr "Koordinatorn kan sedan be bidragsgivare att \"tagga\" dessa bilder med flerspråkig strukturerad metadata (avbildningar och/eller bildtexter)."
+msgstr "Tada koordinatorius gali paprašyti bendradarbių „pažymėti“ šiuos vaizdus daugiakalbiais struktūriniais metaduomenimis (vaizdavimu ir (ar) antraštėmis)."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr "Deltagarna får poäng för varje bidrag de gör. Det är därför möjligt att med hjälp av ISA organisera tävlingar eller utmaningar där man \"taggar\" filer."
+msgstr "Taškai skaičiuojami už kiekvieną dalyvio indėlį, todėl su ISA galima organizuoti „žymėjimo“ arba mikro indėlių konkursus ar iššūkius."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr "Vem som helst som har ett Wikimediakonto kan bidra och lägga till strukturerad metadata till en kampanj."
+msgstr "Kiekvienas, turintis Vikimedijos paskyrą, gali prisidėti prie kampanijos pridėdamas struktūrinių metaduomenų."
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr "Det enda kravet är… att vara inloggad."
+msgstr "Vienintelis reikalavimas... būti prisijungusiam."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr "Lär dig mer om bildtexter och motiv"
+msgstr "Sužinokite daugiau apie failų antraštes ir vaizdavimą"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr "Bildtexter är en viktig del av strukturerade data."
+msgstr "Failų antraštės yra struktūrinių duomenų dalis."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr "De innehåller korta, flerspråkiga beskrivningar av filer."
+msgstr "Jie skirti saugoti trumpus, daugiakalbius failų aprašymus."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr "Hurdan är en bra bildtext ? och vari består skillnaden mellan våra gamla hederliga filbeskrivningar och bildtexter ?"
+msgstr "Kas yra gera antraštė ? ir kuo skiriasi mūsų seni geri failų aprašymai ir antraštės?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr "Först och främst skall bildtexter vara enkla och korta."
+msgstr "Pirma, antraštės turėtų būti paprastos ir trumpos."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr "Beskrivningar kan vara mycket omfattande; bildtexter är begränsade till 255 tecken och kan inte innehålla märkspråk (som länkar i wikitext eller HTML). De stödjer inte heller externa länkar."
+msgstr "Nors aprašymai gali būti labai platūs, antraštės yra apribotos iki 255 simbolių ilgio, juose negali būti žymėjimo (pvz., vikiteksto nuorodų ar HTML) ir antraštės nepalaiko išorinių nuorodų."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr "Ofta är det så att bildexten och beskrivningen är likadana eller identiska."
+msgstr "Daugeliu atvejų antraštė bus panaši ar identiška aprašymui."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr "Men i andra fall är beskrivningen väldigt uttömmande (858 tecken med länkar) samtidigt som bildtexten är betydligt kortare (ungefär som bildtexterna i Wikipediaartiklar som använder bilden)."
+msgstr "Tačiau kitais atvejais, aprašymas yra labai platus (858 simboliai ir nuorodos), o antraštė yra daug trumpesnė (praktiškai ta pati antraštė, kuri naudojama Vikipedijos straipsniuose, naudojančiuose atitinkamą vaizdą)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr "Bildtexter publiceras under licensen CC0 (\"public domain-dedikation\"). Det innebär att du endast bör kopiera och klistra texter som är så korta att de inte kan upphovsrättsskyddas."
+msgstr "Į antraštes turėtų būti kopijuojamas tik toks trumpas tekstas, kuriam autorių teisės netaikomos, nes antraštės skelbiamos pagal CC0 („viešojo domeno“) atsisakymą."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr "En av de största fördelarna med bildtexter är att sökbarheten blir bättre och mer språkmedveten."
+msgstr "Vienas iš pagrindinių antraščių pranašumų yra patobulintas ieškojimas pagal kalbą."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr "Klassiska bildbeskrivningar består av wikitext och kan bara sökas i genom fulltextsökning – vilken nödvändigtvis går igenom hela sidans innehåll, inklusive kategorier och licensmallar. Det är dessutom omöjligt att begränsa sökningen till ett specifikt språk."
+msgstr "Klasikiniai failų aprašymai yra vikiteksto formatu ir juose galima ieškoti tik naudojant viso teksto paiešką, kuri būtinai ieško visame puslapio turinyje, įskaitant kategorijas ir licencijų šablonus; ir neįmanoma atlikti paieškos pagal kalbą."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr "Bildtexter är en del av våra strukturerade data; beskrivningar är inte det."
+msgstr "Antraštės yra mūsų struktūrinių duomenų dalis, o aprašymai – ne."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr "Rent tekniskt så består en beskrivning av ren wikitext som är omsluten av en språkmall, som i sin tur är omsluten av en Informationsmall. Bildtexter däremot är etiketter i Wikibase."
+msgstr "Techniniu požiūriu aprašymas yra paprastas vikitekstas, įvyniotas į kalbos šabloną, vėl įvyniotas į informacijos šabloną; o antraštės yra Wikibase žymos."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr "Det innebär att bildtexter är sökbara via API:et, vilket gör det enkelt att hitta/filtrera/importera bildtexter från filer som metadata."
+msgstr "Antraščių bus galima ieškoti naudojant API, todėl bus lengva rasti / filtruoti / gauti antraštes iš failų kaip metaduomenis."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr "Eftersom de är sökbara via API:et så blir det även lättare för tredjepartsanvändare att hitta och återanvända mediafiler och själva bildtexterna."
+msgstr "Kadangi jų galima ieškoti naudojant API, trečiųjų šalių pakartotiniams naudotojams taip pat lengviau rasti ir pakartotinai naudoti mediją ir pačias antraštes."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr "Bildtexter kan också användas för att:"
+msgstr "Kiti galimi antraščių naudojimo būdai gali būti:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr "fylla i infoboxar"
+msgstr "informacinių lentelių pildymas"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr "sök efter filer som saknar bildtexter på ett visst språk"
+msgstr "failų užklausos dėl trūkstamų antraščių tam tikra kalba"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr "ta fram listor över viktiga filer som behöver ha sina bildtexter översatta för ett projekt eller en kampanj"
+msgstr ""
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr "Här kan du finna mer information om Bildtexter"
+msgstr "Daugiau informacijos apie antraštes rasite čia"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr "Motiv är också en viktig del av strukturerade data."
+msgstr "Vaizdavimas taip pat yra struktūrinių duomenų dalis."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr "Det aktiverades på Wikimedia Commons i april 2019."
+msgstr "Tai buvo įjungta Vikitekoje 2019 m. balandžio mėn."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
-msgstr "För att lägga till en motivuttalande, börja med att att skriva i sökrutan."
+msgstr "Norėdami pridėti vaizdavimo teiginį, tiesiog pradėkite vesti tekstą paieškos laukelyje."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr "För varje motiv som avbildas på bilden, hitta och välj ett lämpligt Wikidataobjekt."
+msgstr "Tada kiekvienam vaizde pavaizduotam elementui raskite atitinkamą elementą Vikiduomenys ir pasirinkite jį."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr "Har du svårt att hitta ett relevant Wikidataobjekt? Testa alternativa stavningar."
+msgstr "Jei kyla problemų ieškant tinkamo Vikiduomenų elemento, išbandykite alternatyvią rašybą."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr "Om det inte finns något relevant Wikidataobjekt för det avbildade motivet så väljer du ett mer generiskt begrepp som innefattar ditt motiv som exempel."
+msgstr "Jei nėra su pavaizduota tema susieto Vikiduomenų elemento, pasirinkite bendresnį elementą, kuris savyje turi ir jūsų apibūdinamą elementą kaip pavyzdį."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr "Huvudtaggen bör vara så specifik som möjligt."
+msgstr "Naudodami pagrindinę žymą būkite kuo konkretesni."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr "Om du kan se flera motiv som mediafilen avbildar på ett tydligt och avsiktligt sätt, skall du lägga till dem som separata motivuttalanden – inom rimliga gränser."
+msgstr "Jei medijos faile aiškiai ir apgalvotai pavaizduoti keli elementai, visi turi būti pridėti kaip atskiri vaizdavimo teiginiai, laikantis protingumo principo."
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr "En del filer avbildar många motiv, kanske till och med ett hundratals om det rör sig om filmer. I så fall skall du endast ange de mest framträdande motiven."
+msgstr "Jei failai vaizduoja dešimtis ar šimtus elementų (pvz., filmų), nurodykite tik tuos elementus, kurie yra ryškiausi."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr "Man kan också markera ett visst objekt som 'framträdande'."
+msgstr "Taip pat yra galimybė pažymėti tam tikrą elementą kaip „ryškų“."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr "Med denna egenskap anger man att objektet har en framträdande plats i mediefilen."
+msgstr "Ši savybė nurodo elemento išraiškingumą konkrečioje medijoje."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr "Här kan du hitta mer information om motiv :"
+msgstr "Daugiau informacijos apie vaizdavimą rasite čia:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr "Så här använder man ISA"
+msgstr "ISA įrankio naudojimas"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr "Här kan du hitta mer information:"
+msgstr "Daugiau informacijos galite rasti čia:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr "Juridisk information och erkännande"
+msgstr "Teisinė informacija ir kreditai"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr "Verktyget körs på tools.wmflabs.org och omfattas av användarvillkoren för Wikimedia Cloud Services."
+msgstr "Jis veikia tools.wmflabs.org ir todėl jam taikomas Vikimedijos debesijos paslaugų naudojimo sąlygos."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr "ISA omfattas av GPLv3. Det innehåll som med hjälp av verktyget publiceras på Wikimedia Commons släpps under CC0."
+msgstr "ISA publikuojamas pagal GPLv3. Turinys, pridedamas per įrankį į Vikiteką išleidžiamas pagal CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr "Verktygets bild :"
+msgstr "Įrankyje naudojamas vaizdas :"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr "Lägg till information om bilder på Wikimedia Commons – snabbt och enkelt"
+msgstr "Lengvai pridėkite informaciją apie vaizdus Vikitekoje"
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> är ett flerspråkigt verktyg, designat främst med mobila enheter i åtanke, som gör det lättare för alla att göra 'mikrobidrag' till bilder från Wiki Loves-tävlingar på Wikimedia Commons. Dessa bidrag består av <a %(link_attrs)s title='Mer information om strukturerade data'>strukturerade data</a> (beskrivningar, bildtexter, taggar, och så vidare)."
+msgstr "<strong>ISA</strong> yra daugiakalbis, pirmiausia mobiliesiems įrenginiams skirtas įrankis, leidžiantis žmonėms lengvai pridėti „mikro indėlius“ <a %(link_attrs)s title='Learn more about structured data'>struktūrinių duomenų</a> pavidalu (aprašymai, antraštės, žymos ir kt.) prie vaizdų, kuriuos į Vikiteką įtraukė „Wiki Loves“ konkursai."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr "<strong>Klicka på Utforska kampanjer för att börja!</strong>"
+msgstr "<strong>Norėdami pradėti, spustelėkite Naršyti kampanijas!</strong>"
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr "Gå till kampanjkatalogen för att välja kampanj"
+msgstr "Norėdami pasirinkti kampaniją, eikite į kampanijos katalogą"
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr "UTFORSKA KAMPANJER"
+msgstr "NNARŠYTI KAMPANIJAS"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "Om verktyget"
+msgstr "Apie šį įrankį"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr "Den långsiktiga ambitionen bakom verktyget är att öka användningen av den kunskap som finns i varje bild på Wikimedia Commons. "
+msgstr "Ilgainiui įrankio tikslas yra padidinti informacijos, kurios atsispindi kiekviename Vikitekoje esančiame paveikslėlyje, naudojimą. "
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "Syftet med verktyget är att göra bilder uppladdade inom Wiki Loves-tävlingarna mer användbara och informationsrika."
+msgstr "Įrankis skirtas didinti vaizdų, kurie paaukoti per „Wiki Loves“ konkursus, naudingumą ir informaciją."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr "Från början byggdes det för att göra det lättare att beskriva bilder från Wiki Loves Africa, men är uttryckligen utformat för att kunna användas inom alla Wiki Loves-tävlingar – och mycket mer."
+msgstr "Iš pradžių jis kuriamas, kad padėtų aprašyti „Wiki Loves Africa“ vaizdus, tačiau yra specialiai sukurtas taip, kad būtų naudingas visuose „Wiki Loves“ konkursuose ir ne tik."
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr "Verktyget är också utformat med syfte att skapa en plattform för mikrobidragstävlingar framtagna av projektledare."
+msgstr "Įrankis taip pat sukurtas taip, kad būtų galima dalyvauti projektų vadovų pasiūlytuose mikro indelių konkursuose."
 
 #: templates/main/home.html:26
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "ISA är ett samarbete mellan Wiki In Africa, Histropedia och projektet Strukturerad Data på Commons."
+msgstr "ISA yra „Wiki In Africa“, „Histropedia“ ir „Structured Data on Commons“ projekto bendradarbiavimo rezultatas."
 
 #: templates/main/home.html:27
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr "ISA är inte bara en akronym för Information Structured Acceleration, utan även betyder \"sätta\" eller \"placera\" på språket Shona."
+msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr "Hem"
+msgstr "Pradžia"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr "Skapa ny"
+msgstr "Sukurti naują"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Hjälp"
+msgstr "Pagalba"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr "Ändra dina tillgängliga språk för bildtexter"
+msgstr "Pakeiskite savo galimas antraščių kalbas"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr "Språkinställningar"
+msgstr "Kalbų nuostatos"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr "Visa dina kampanjer"
+msgstr "Peržiūrėkite savo kampanijas"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr "Mina kampanjer"
+msgstr "Mano kampanijos"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr "Logga ut"
+msgstr "Atsijungti"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr "Logga in"
+msgstr "Prisijungti"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr "ISA-verktyget"
+msgstr "ISA įrankis"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "utvecklades som ett samarbete mellan Wiki In Africa, Histropedia och projektet Strukturerad data på Commons."
+msgstr "ISA sukurtas bendradarbiaujant „Wiki In Africa“, „Histropedia“ ir „Structured Data on Commons“ projektui."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr "Det drivs av"
+msgstr "Jis veikia"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr "och är föremål för"
+msgstr "ir jam taikoma"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr "ISA publiceras under"
+msgstr "ISA paskelbtas pagal"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr "Innehåll som läggs till med verktyget på Wikimedia Commons publiceras under"
+msgstr "Turinys, pridėtas naudojant įrankį į Vikiteką, išleidžiamas pagal"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr "Dina kampanjer"
+msgstr "Jūsų kampanijos"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr "Nedan följer en lisa över dina kampanjer"
+msgstr "Žemiau yra jūsų kampanijų sąrašas"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr "Du har inga kampanjer"
+msgstr "Neturite jokių kampanijų"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
@@ -1237,99 +1231,99 @@ msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr "Språkinställningar"
+msgstr "Kalbos nuostatos"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr "Språk för motiv"
+msgstr "Vaizdavimo kalba"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr "Det valda språket kommer att användas när du söker efter objekt som är motiv i bilder."
+msgstr "Pasirinkta kalba bus naudojama ieškant vaizduose pavaizduotų elementų."
 
 #: templates/users/user_settings.html:15
 msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
-msgstr "Om du väljer &quot;Samma som gränssnitt&quot; kommer språket valt i toppmenyn att användas."
+msgstr "Pasirinkus „Tas pats kaip sąsaja“, bus naudojama viršutiniame meniu pasirinkta kalba."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
-msgstr "Välj upp till 6 språk för bildtexter"
+msgstr "Pasirinkite iki 6 kalbų antraštėms"
 
 #: templates/users/user_settings.html:19
 msgid "Caption Languages"
-msgstr "Språk för bildtexter"
+msgstr "Antraščių kalbos"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
-msgstr "Bildtexter kan läggas till på flera språk för varje bild."
+msgstr "Kiekvienam vaizdui galima pridėti antraštes keliomis kalbomis."
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr "Språken du valt på den här sidan kommer visas på sidan när du visas bilden."
+msgstr "Šiame puslapyje pasirinktos kalbos bus rodomos puslapyje, kai žiūrite vaizdą."
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
-msgstr "Välj alla språk du känner dig bekväm med att bidra på."
+msgstr "Pasirinkite visas kalbas, kuriomis norite prisidėti."
 
 #: templates/users/user_settings.html:23 templates/users/user_settings.html:29
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr "Ta bort språk"
+msgstr "Pašalinti kalbą"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr "Ångra ändringar av språkinställningarna"
+msgstr "Anuliuoti kalbos nustatymų pakeitimus"
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr "Ångra ändringar"
+msgstr "Anuliuoti pakeitimus"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr "Samma som gränssnitt"
+msgstr "Tas pats kaip sąsaja"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr "OAuth-anrop misslyckades. Har kakor aktiverats?"
+msgstr ""
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr "Välkommen %(username)s!"
+msgstr "Sveiki atvykę, %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "Ses nästa gång!"
+msgstr "Pasimatysime kitąkart!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr "Logga in för att ändra dina språkinställningar"
+msgstr "Jei norite pakeisti kalbos nuostatas, prisijunkite"
 
 #: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr "Du har tyvärr försökt ange %(rep_languages)s flera gånger"
+msgstr "Atsiprašome, kad kelis kartus bandėte įvesti %(rep_languages)s"
 
 #: users/routes.py:157
 msgid "Captions languages could not be set"
-msgstr "Språket för bildtexter kunde inte anges"
+msgstr "Nepavyko nustatyti antraščių kalbų"
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
-msgstr "Föredragna språk har angetts"
+msgstr "Pageidaujamos kalbos sėkmingai nustatytos"
 
 #: users/routes.py:172
 msgid "Language settings not available at the moment"
-msgstr "Språkinställningarna är för tillfället inte tillgängliga"
+msgstr "Kalbos nustatymai šiuo metu nepasiekiami"
 
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr "%(username)s - inställningar"
+msgstr "%(username)s - nustatymai"
 
 #: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr "Kampanjer skapade av %(username)s"
+msgstr "Kampanijos, kurias sukūrė %(username)s"
 
