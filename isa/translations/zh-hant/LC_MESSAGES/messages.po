@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-04-06 11:25:27+0000\n"
+"PO-Revision-Date: 2023-04-17 11:19:42+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -479,7 +479,7 @@ msgstr "顯示來自維基共享資源的所有詮釋資料"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr "添加描述語句"
+msgstr "新增描述語句"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
@@ -1172,7 +1172,7 @@ msgstr "說明"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr "更改您的可用說明語言"
+msgstr "變更您的可用說明語言"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
