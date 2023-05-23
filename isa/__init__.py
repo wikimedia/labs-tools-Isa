@@ -27,7 +27,11 @@ app.config.update(
 app.config['SQLALCHEMY_DATABASE_URI']
 app.config['SECRET_KEY']
 app.config['TEMPLATES_AUTO_RELOAD']
-
+app.config['SQLALCHEMY_PRE_PING'] = True
+app.config['SQLALCHEMY_TRACK_OPTIONS'] = False
+app.config['SQLALCHEMY_POOL_RECYCLE'] = 3600
+app.config['SQLALCHEMY_POOL_SIZE'] = 1
+app.config['SQLALCHEMY_MAX_OVERFLOW'] = 20
 # We hook babel to our app
 
 

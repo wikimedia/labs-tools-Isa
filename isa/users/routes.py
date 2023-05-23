@@ -41,8 +41,8 @@ def login():
         else:
             session['request_token'] = dict(zip(
                 request_token._fields, request_token))
-            user = User.query.filter_by(username=session.get('username', None)).first()
-            if user and user.username is not None:
+            if session.get('username'):
+                user = User.query.filter_by(username=session.get('username')).first()
                 login_user(user)
             return redirect(redirect_string)
 
