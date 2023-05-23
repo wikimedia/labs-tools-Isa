@@ -16,7 +16,7 @@ from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, comp
                                  make_edit_api_call, generate_csrf_token,
                                  get_stats_data_points)
 from isa.campaigns import image_updater
-from isa.main.utils import commit_changes_to_db
+from isa.main.utils import commit_changes_to_db, manage_session
 from isa.models import Campaign, Contribution, Country, Image, User, Suggestion
 from isa.users.utils import (get_user_language_preferences, get_current_user_images_improved)
 
@@ -24,6 +24,7 @@ from isa.users.utils import (get_user_language_preferences, get_current_user_ima
 campaigns = Blueprint('campaigns', __name__)
 
 
+@manage_session
 @campaigns.route('/campaigns')
 def getCampaigns():
     campaigns = Campaign.query.all()
