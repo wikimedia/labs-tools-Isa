@@ -47,6 +47,11 @@ babel.init_app(app, locale_selector=get_locale)
 
 @app.before_request
 def before_request():
+    try:
+        db.session.execute("SELECT 1;")
+        db.session.commit()
+    except Exception:
+        db.session.rollback()
     # Update session language
     get_locale()
 
