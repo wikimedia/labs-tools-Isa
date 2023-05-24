@@ -46,6 +46,4 @@ def commit_changes_to_db():
         db.session.rollback()
         # for resetting non-commited .add()
         db.session.flush()
-    finally:
-        db.session.close()
     return False
