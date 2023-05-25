@@ -214,7 +214,7 @@ def CreateCampaign():
                 campaign_type=form.campaign_type.data)
             db.session.add(campaign)
             # commit failed
-            if commit_changes_to_db():
+            if not commit_changes_to_db():
                 flash(gettext('Sorry %(campaign_name)s Could not be created',
                               campaign_name=form.campaign_name.data), 'info')
             else:
