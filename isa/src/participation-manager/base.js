@@ -11,7 +11,8 @@ import {flashMessage, getUrlParameters, getHtmlStripped} from '../utils';
 export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
     var imageIndex = 0,
         initialData = {depicts: [], captions: []},
-        unsavedChanges = {depicts: [], captions: []};
+        unsavedChanges = {depicts: [], captions: []},
+        csrf_token = "{{ csrf_token() }}";
 
 
     this.imageFileName = '';  
@@ -226,7 +227,10 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         $.post({
             url: '../../api/post-contribution',
             data: contributionsData,
-            contentType: 'application/json'
+            contentType: 'application/json',
+            headers: {
+                "X-CSRFToken": csrf_token,
+            },
         }).done(function(response) {
             // Contribution accepted by server, now we can update initial data
             // Button states will return to disabled
