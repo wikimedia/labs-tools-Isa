@@ -10,6 +10,7 @@ var campaignId = getCampaignId(),
     wikiLovesCountry = getWikiLovesCountry(),
     isWikiLovesCampaign = !!wikiLovesCountry, // todo: this should be read from get-campaign-categories api call
     isUserLoggedIn = false,
+    csrf_token = "{{ csrf_token() }}",
     editSession;
 
 ///////// Campaign images /////////
@@ -145,7 +146,10 @@ function rejectStatement(item, element){
         $.post({
             url: '/api/reject-suggestion',
             data: rejectedSuggestionData,
-            contentType: 'application/json'
+            contentType: 'application/json',
+            headers: {
+                "X-CSRFToken": csrf_token,
+            },
         }).done(function(response) {
             // Contribution accepted by server, we can remove suggestion from list
             rejectedSuggestion.isRejectedByUser = true;
