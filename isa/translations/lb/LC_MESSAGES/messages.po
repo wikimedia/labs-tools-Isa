@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-04-27 11:22:57+0000\n"
+"PO-Revision-Date: 2023-06-22 11:33:00+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,7 +26,7 @@ msgstr "Campagnen"
 #: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr ""
+msgstr "Eng Campagne mat der ID %(id)s gëtt et net"
 
 #: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
@@ -34,7 +34,7 @@ msgstr "Campagne - "
 
 #: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
-msgstr ""
+msgstr "Dir musst Iech alogge fir eng Campagne ze kreéieren"
 
 #: campaigns/routes.py:217
 #, python-format
@@ -48,7 +48,7 @@ msgstr ""
 
 #: campaigns/routes.py:228
 msgid "Create a campaign"
-msgstr ""
+msgstr "Eng Campagne kreéieren"
 
 #: campaigns/routes.py:248
 #, python-format
@@ -92,7 +92,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr ""
+msgstr "Eng nei Campagne kreéieren"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
@@ -116,7 +116,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr ""
+msgstr "Also net „Wiki Loves Africa“, mee éischter „Musek an Danz an Nigeria“"
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
@@ -391,7 +391,7 @@ msgstr "Méi iwwer dës Campagne"
 
 #: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
-msgstr ""
+msgstr "Campagne-Manager"
 
 #: templates/campaign/campaign.html:145
 msgid "START DATE"
@@ -756,7 +756,7 @@ msgstr ""
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr ""
+msgstr "Dir kënnt ëmmer nach un der Campagne deelhuelen."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
@@ -839,19 +839,19 @@ msgstr "Wat ass Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>Wikimedia Commons</strong> (och bekannt als 'Commons') ass e Wikimedia-Projet, e Schwësterprojet vu Wikipedia, an eng Sammlung vu méi wéi 40 Millioune fräie Mediefichieren."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "All déi fräi lizenzéiert Fotoen, Audio- a Videofichieren, PDFen an aner Medien op Wikipedia ginn op Commons gespäichert."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "Wikimedia Commons wiisst séier, ëm ongeféier 5 Milliounen nei Mediefichiere pro Joer."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Dausende vu Fräiwëllege lueden Fichieren op Commons erop an bauen dës a Wikimedia-Projeten wéi d'Wikipedia an, fir den Inhalt do ze illustréieren an déi jeeweileg Medie mam Public ze deelen."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
@@ -1278,7 +1278,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr ""
+msgstr "Ännerungen zrécksetzen"
 
 #: users/forms.py:26
 msgid "Same as interface"
