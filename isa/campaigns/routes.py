@@ -290,7 +290,7 @@ def updateCampaign(id):
         campaign.campaign_image = form.campaign_image.data
         campaign.campaign_type = form.campaign_type.data
         campaign.end_date = campaign_end_date
-        if commit_changes_to_db():
+        if not commit_changes_to_db():
             flash(gettext('Campaign update failed please try later!'), 'danger')
         else:
             if form.update_images.data:
@@ -437,8 +437,6 @@ def postContribution():
 
     # We attempt to save the changes to db
     if commit_changes_to_db():
-        return ("Failure")
-    else:
         return (str(latest_base_rev_id))
 
     return ("Failure")

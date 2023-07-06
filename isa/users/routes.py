@@ -154,7 +154,7 @@ def userSettings():
             user.depicts_language = request.form.get("depicts_language_select")
 
             # commit failed
-            if commit_changes_to_db():
+            if not commit_changes_to_db():
                 flash(gettext('Captions languages could not be set'), 'danger')
             else:
                 flash(gettext('Preferred Languages set Successfully'), 'success')
