@@ -2,7 +2,6 @@ from flask_wtf import FlaskForm
 
 from isa.utils.languages import getLanguages
 from wtforms import BooleanField, SelectField, StringField, SubmitField, widgets, Label, DecimalField, HiddenField
-from wtforms.fields.html5 import DateField
 from wtforms.validators import DataRequired, InputRequired, Length, NumberRange
 
 
