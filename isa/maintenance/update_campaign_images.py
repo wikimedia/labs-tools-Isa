@@ -11,7 +11,6 @@ import argparse
 from isa.models import Campaign
 from isa.campaigns import image_updater
 from isa.campaigns.image_updater import ImageUpdater
-from isa.main.utils import commit_changes_to_db
 
 
 if __name__ == "__main__":

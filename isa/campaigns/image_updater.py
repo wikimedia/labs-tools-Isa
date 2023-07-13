@@ -87,7 +87,7 @@ class ImageUpdater:
         logging.info("Updating images for campaign {}.".format(self._campaign.id))
         start_time = time.time()
         self._campaign.update_status = PROCESSING
-        if commit_changes_to_db():
+        if not commit_changes_to_db():
             raise UpdateImageException("Committing to database failed.")
 
         # Clear images for the campaign to ensure that images that have
@@ -95,7 +95,7 @@ class ImageUpdater:
         Image.query.filter_by(campaign_id=self._campaign.id).delete()
         self._campaign.images.clear()
         self._campaign.campaign_images = 0
-        if commit_changes_to_db():
+        if not commit_changes_to_db():
             raise UpdateImageException("Committing to database failed.")
 
         categories = json.loads(self._campaign.categories)
@@ -118,7 +118,7 @@ class ImageUpdater:
             )
         )
         self._campaign.update_status = DONE
-        if commit_changes_to_db():
+        if not commit_changes_to_db():
             raise UpdateImageException("Committing to database failed.")
 
     def _fetch_images(self, category, depth, continue_string=None):
@@ -196,7 +196,7 @@ class ImageUpdater:
         Commit images to database
         """
         self._campaign.campaign_images = len(self._campaign.images)
-        if commit_changes_to_db():
+        if not commit_changes_to_db():
             raise UpdateImageException("Committing to database failed.")
 
         self._image_commits += 1
