@@ -12,3 +12,4 @@ requests==2.31.0
 SQLAlchemy==1.4.49
 nose2==0.13.0
 coverage==7.2.7
+celery[redis]==5.3.1

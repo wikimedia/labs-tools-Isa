@@ -8,6 +8,7 @@ Isa is not only an acronym for information structured additions, but is also a [
 
 * [Python 3.x+](https://www.python.org/downloads/)
 * [PIP (Python Dependency Manager)](https://pip.pypa.io/en/stable/installing/)
+* [Redis](https://redis.io/)
 
 ## Installing dependencies
 
@@ -34,6 +35,8 @@ db.create_all()
 Then set the config variable in config.yaml, e.g.:
 ```
 SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://localhost/isa'
+CELERY:
+    broker_url: redis://localhost
 ```
 
 Then start Flask:

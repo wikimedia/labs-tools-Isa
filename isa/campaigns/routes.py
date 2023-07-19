@@ -218,7 +218,7 @@ def CreateCampaign():
                 flash(gettext('Sorry %(campaign_name)s Could not be created',
                               campaign_name=form.campaign_name.data), 'info')
             else:
-                image_updater.update_in_thread(campaign.id)
+                image_updater.update_in_task(campaign.id)
                 campaign_stats_path = str(campaign.id)
                 stats_path = os.getcwd() + '/campaign_stats_files/' + campaign_stats_path
                 if not os.path.exists(stats_path):
@@ -294,7 +294,7 @@ def updateCampaign(id):
             flash(gettext('Campaign update failed please try later!'), 'danger')
         else:
             if form.update_images.data:
-                image_updater.update_in_thread(id)
+                image_updater.update_in_task(id)
             flash(gettext('Update Succesfull !'), 'success')
             return redirect(url_for('campaigns.getCampaignById', id=id))
 

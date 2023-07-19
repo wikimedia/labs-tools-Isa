@@ -4,6 +4,7 @@ import logging
 from threading import Thread
 import re
 
+from celery import shared_task
 import requests
 from requests.exceptions import Timeout
 
@@ -44,6 +45,27 @@ def update_in_thread(campaign_id):
     """
     thread = Thread(target=update, args=(campaign_id,))
     thread.start()
+
+
+def update_in_task(campaign_id):
+    """
+    Update campaign images in a task
+
+    Keyword arguments:
+    campaign_id -- Id of the campaign to update.
+    """
+    update_task.delay(campaign_id)
+
+
+@shared_task
+def update_task(campaign_id):
+    """
+    Celery task for updating campaign images
+
+    Keyword arguments:
+    campaign_id -- Id of the campaign to update.
+    """
+    update(campaign_id)
 
 
 def update(campaign_id):
@@ -185,6 +207,7 @@ class ImageUpdater:
                 if self._uncommited_images % IMAGES_PER_COMMIT == 0:
                     self._commit_images()
                     self._uncommited_images = 0
+                    logging.debug("A total of {} images have been committed so far.".format(self._campaign.campaign_images))
             elif depth and member["type"] == "subcat":
                 self._fetch_images(member["title"], depth - 1)
         if "continue" in response:
@@ -249,6 +272,7 @@ class ImageUpdater:
         }
         parameters.update(base_parameters)
         try:
+            logging.debug("Sending request, retry number {}.".format(retries))
             response = requests.get(
                 API_URL,
                 params=parameters,
