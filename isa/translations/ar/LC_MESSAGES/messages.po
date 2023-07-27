@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-07-06 11:30:40+0000\n"
+"PO-Revision-Date: 2023-07-27 11:28:24+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -845,15 +845,15 @@ msgstr "<strong>ويكيميديا كومنز</strong> (المعروف أيضً�
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "تُخزَّن جميع الصور وملفات الصوت والفيديو وملفات PDF والوسائط الأخرى المرخصة مجانًا على ويكيبيديا في كومنز."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "تنمو ويكيميديا كومنز بسرعة، بما يُقارب 5 ملايين ملف وسائط جديد سنويًا."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "يقوم الآلاف من المتطوعين بتحميل الملفات إلى كومنز، ودمجها في مشاريع ويكيميديا، مثل ويكيبيديا، لتوضيح المحتوى هناك ولمشاركة تلك الوسائط مع الجمهور."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
@@ -861,15 +861,15 @@ msgstr "عادةً ما تكون ملفات الوسائط في كومنز:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "الصور الفوتوغرافية والوسائط الشخصية التي يُحمِّلُها الأفراد، أحيانًا خلال مسابقات Wiki Loves مثل Wiki Loves Africa و Wiki Loves Monuments و Wiki Loves Earth إلخ ؛"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "ملفات الوسائط المرخصة مجانًا من مواقع الويب الخارجية مثل Flickr و YouTube ومجلات الوصول المفتوح والمستودعات الأخرى؛ و"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "تبرعات من المؤسسات والمنظمات ذات المجموعات الإعلامية الكبيرة، الكبيرة والصغيرة، بدءًا من اليونسكو ووكالة ناسا والمكتبة البريطانية إلى المؤسسات الثقافية المحلية الصغيرة."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
@@ -885,19 +885,19 @@ msgstr "البيانات المهيكلة هي بيانات بدرجة عالي�
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "مع مزيد من التركيب، يصبح من الأسهل إعادة استخدام البيانات في مشاريع ويكيميديا الأخرى ومن قِبل أطراف ثالثة؛ كما يسمح لأجهزة الكمبيوتر بمعالجتها و \"فهمها\"."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "البيانات المهيكلة هي مشروع مستمر جرى إطلاقه في عام 2019! ... بينما كانت ويكيميديا كومنز موجودة منذ سنوات!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "هناك ملايين الصور التي جرى استضافتها على ويكيميديا كومنز ... تحتاج إلى الاهتمام والحب."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "ملايين الصور التي لم يُكتب وصفها بالبيانات المهيكلة في الوقت الحالي."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
@@ -909,11 +909,11 @@ msgstr ""
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "يمكن أيضًا استخدام هذا المصطلح على نطاق أوسع، لوصف أي نشاط يتضمن اختيار المعلومات وتنظيمها وتقديمها."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "في سياق البيانات المهيكلة على كومنز، يعني التنظيم curating جميع الأنشطة التي يقوم بها المساهمون في كومنز لتنظيم وتقديم ملفات الوسائط على ويكيميديا كومنز: الإجراءات الإدارية، وإضافة المزيد من البيانات الوصفية الأفضل إلى الملفات، وتجميعها في تصنيفات، وإنشاء معارض .. ."
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
@@ -921,7 +921,7 @@ msgstr "إذن ... كيف تتلاءم أداة ISA هناك؟"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "تسمح أداة ISA بإضافة نوعين مختلفين من البيانات المهيكلة إلى مجموعة الصور: التعليقات والصور (مزيد من التوضيحات أدناه حول ما هي التسميات التوضيحية والصور)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
