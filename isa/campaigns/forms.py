@@ -7,7 +7,7 @@ from wtforms.validators import DataRequired, InputRequired, Length, NumberRange
 
 class CampaignForm(FlaskForm):
     campaign_name = StringField(validators=[DataRequired(),
-                                Length(min=2, max=20)])
+                                Length(min=2, max=200)])
     short_description = StringField(validators=[DataRequired()], widget=widgets.TextArea())
     start_date = StringField(id='start_date_datepicker', validators=[InputRequired()])
     end_date = StringField(id='end_date_datepicker')
