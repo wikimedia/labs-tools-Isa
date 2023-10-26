@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-10-12 11:30:24+0000\n"
+"PO-Revision-Date: 2023-10-26 11:29:17+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -844,7 +844,7 @@ msgstr "什麼是維基共享資源？"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr "<strong>維基共享資源</strong>（也稱為「Commons」）是維基媒體計劃，也是維基百科的姊妹計劃，收集了超過 4000 萬個免費媒體檔案。"
+msgstr "<strong>維基共享資源</strong>（也稱為「Commons」）是維基媒體專案，也是維基百科的姊妹專案，收集了超過 4000 萬個免費媒體檔案。"
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
