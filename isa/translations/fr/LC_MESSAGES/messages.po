@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2023-11-02 12:27:09+0000\n"
+"PO-Revision-Date: 2023-12-07 12:46:36+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
-"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-10-26\n"
+"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-12-01\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
