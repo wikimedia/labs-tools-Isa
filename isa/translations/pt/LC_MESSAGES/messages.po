@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Darwin
+# Author: McDutchie
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -9,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-12-07 12:46:37+0000\n"
+"PO-Revision-Date: 2023-12-25 12:29:59+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,7 +57,7 @@ msgstr "%(campaign_name)s - Contribuir"
 
 #: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
-msgstr "É necessário iniciar sessão para criar uma campanha"
+msgstr "É necessário iniciar sessão para atualizar uma campanha"
 
 #: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"

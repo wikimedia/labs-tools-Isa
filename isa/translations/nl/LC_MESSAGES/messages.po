@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Husky
+# Author: McDutchie
 # Author: Robin van der Vliet
 # Author: Spinster
 # --
@@ -11,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-12-07 12:46:37+0000\n"
+"PO-Revision-Date: 2023-12-25 12:29:58+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +36,7 @@ msgstr "Campagne - "
 
 #: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
-msgstr "Je moet inloggen om een campagne aan te kunnen maken."
+msgstr "U moet zich aanmelden om een campagne aan te maken"
 
 #: campaigns/routes.py:217
 #, python-format
@@ -58,7 +59,7 @@ msgstr "%(campaign_name)s - Doe mee!"
 
 #: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
-msgstr "Je moet inloggen om een campagne aan te passen."
+msgstr "U moet zich aanmelden om een campagne bij te werken"
 
 #: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
@@ -85,7 +86,7 @@ msgstr "%(campaign_name)s - Aanpassing"
 
 #: campaigns/routes.py:366
 msgid "You need to login to participate"
-msgstr "Je moet inloggen om deel te kunnen nemen."
+msgstr "U moet zich aanmelden om deel te kunnen nemen."
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
@@ -523,7 +524,7 @@ msgstr "Beschrijf alle specifieke (ook culturele, wetenschappelijke en technisch
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr "Log in om je wijzigingen op te slaan"
+msgstr "Meld u aan om uw wijzigingen op te slaan"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
@@ -709,7 +710,7 @@ msgstr "Maak een nieuwe campagne met deze tool"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr "Je moet ingelogd zijn om een campagne aan te maken."
+msgstr "U moet zich hebben aangemeld om een campagne aan te maken."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
