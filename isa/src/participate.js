@@ -168,11 +168,11 @@ $('#expand-meta-data').click(function() {
 
     if ($('.image-desc').hasClass('expand')) {
         // expanded
-        var minimiseText = i18nStrings['minimise metadata from commons'];
+        var minimiseText = i18nStrings['minimise metadata from Commons'];
         $('#expand-meta-data').html('<i class="fas fa-caret-up"></i>&nbsp; ' + minimiseText);
     } else {
         // collpased
-        var maximiseText = i18nStrings['show all metadata from commons'];
+        var maximiseText = i18nStrings['show all metadata from Commons'];
         $('#expand-meta-data').html('<i class="fas fa-caret-down"></i>&nbsp; ' + maximiseText);
     }
 })

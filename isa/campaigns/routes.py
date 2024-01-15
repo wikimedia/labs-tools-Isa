@@ -216,7 +216,7 @@ def CreateCampaign():
             db.session.add(campaign)
             # commit failed
             if not commit_changes_to_db():
-                flash(gettext('Sorry %(campaign_name)s Could not be created',
+                flash(gettext('Sorry %(campaign_name)s could not be created',
                               campaign_name=form.campaign_name.data), 'info')
             else:
                 image_updater.update_in_thread(campaign.id)
@@ -224,7 +224,7 @@ def CreateCampaign():
                 stats_path = os.getcwd() + '/campaign_stats_files/' + campaign_stats_path
                 if not os.path.exists(stats_path):
                     os.makedirs(stats_path)
-                flash(gettext('%(campaign_name)s Campaign created!',
+                flash(gettext('%(campaign_name)s campaign created!',
                               campaign_name=form.campaign_name.data), 'success')
                 return redirect(url_for('campaigns.getCampaignById', id=campaign.id))
         return render_template('campaign/campaign-form.html', title=gettext('Create a campaign'),
@@ -266,7 +266,7 @@ def updateCampaign(id):
         session_language = 'en'
     form = CampaignForm()
     if not username:
-        flash(gettext('You need to Login to update a campaign'), 'info')
+        flash(gettext('You need to log in to update a campaign'), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
 
     user = User.query.filter_by(username=username).first()
@@ -305,7 +305,7 @@ def updateCampaign(id):
         campaign = Campaign.query.filter_by(id=id).first()
 
         if campaign.manager != user:
-            flash(gettext('You cannot update this campaign, Contact Manager User:%(username)s ',
+            flash(gettext('You cannot update this campaign. Contact the manager, User:%(username)s ',
                           username=campaign.manager.username), 'info')
             return redirect(url_for('campaigns.getCampaignById', id=id))
 
@@ -321,7 +321,7 @@ def updateCampaign(id):
         form.campaign_type.data = campaign.campaign_type
         form.end_date.data = campaign.end_date
     else:
-        flash(gettext('Booo! %(campaign_name)s Could not be updated!',
+        flash(gettext('Booo! %(campaign_name)s could not be updated!',
                       campaign_name=form.campaign_name.data), 'danger')
     session['next_url'] = request.url
     return render_template('campaign/campaign-form.html',

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-16 07:52+0100\n"
+"POT-Creation-Date: 2024-01-15 23:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,12 +37,12 @@ msgstr ""
 
 #: campaigns/routes.py:219
 #, python-format
-msgid "Sorry %(campaign_name)s Could not be created"
+msgid "Sorry %(campaign_name)s could not be created"
 msgstr ""
 
 #: campaigns/routes.py:227
 #, python-format
-msgid "%(campaign_name)s Campaign created!"
+msgid "%(campaign_name)s campaign created!"
 msgstr ""
 
 #: campaigns/routes.py:230
@@ -55,25 +55,25 @@ msgid "%(campaign_name)s - Contribute"
 msgstr ""
 
 #: campaigns/routes.py:269
-msgid "You need to Login to update a campaign"
+msgid "You need to log in to update a campaign"
 msgstr ""
 
 #: campaigns/routes.py:295
-msgid "Campaign update failed. please try later!"
+msgid "Campaign update failed please try later!"
 msgstr ""
 
 #: campaigns/routes.py:299
-msgid "Update succesfull!"
+msgid "Update Succesfull !"
 msgstr ""
 
 #: campaigns/routes.py:308
 #, python-format
-msgid "You cannot update this campaign, Contact Manager User:%(username)s "
+msgid "You cannot update this campaign. Contact the nanager, User:%(username)s "
 msgstr ""
 
 #: campaigns/routes.py:324
 #, python-format
-msgid "Booo! %(campaign_name)s Could not be updated!"
+msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr ""
 
 #: campaigns/routes.py:329
@@ -380,8 +380,7 @@ msgid "No partcipants has contributed to this campaign"
 msgstr ""
 
 #: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:71
-msgid "Most improved Countries"
+msgid "Most improved countries"
 msgstr ""
 
 #: templates/campaign/campaign.html:78
@@ -504,7 +503,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:46
 msgid ""
-"Make it Simple: Use simple words and concepts to describe what you see in"
+"Make it simple: Use simple words and concepts to describe what you see in"
 " each image (e.g. cat, mountain, Taj Mahal)"
 msgstr ""
 
@@ -674,6 +673,10 @@ msgstr ""
 msgid "Till"
 msgstr ""
 
+#: templates/campaign/campaign_stats.html:71
+msgid "Most improved Countries"
+msgstr ""
+
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
 msgstr ""
@@ -700,7 +703,7 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:8
 msgid ""
-"You can access information on the previous Campaigns in the Archive "
+"You can access information on the previous campaigns in the Archive "
 "section."
 msgstr ""
 
@@ -859,7 +862,7 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr ""
 
 #: templates/errors/403.html:8
-msgid "Server Under maintenance"
+msgid "Server under maintenance"
 msgstr ""
 
 #: templates/errors/403.html:10
@@ -880,7 +883,7 @@ msgid "Page Not Found"
 msgstr ""
 
 #: templates/errors/404.html:10
-msgid "We Are Unable to find the page you are looking for"
+msgid "We are Unable to find the page you are looking for"
 msgstr ""
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
@@ -1437,7 +1440,7 @@ msgid "Your Campaigns"
 msgstr ""
 
 #: templates/users/own_campaigns.html:16
-msgid "Below is a list of your Campaigns"
+msgid "Below is a list of your campaigns"
 msgstr ""
 
 #: templates/users/own_campaigns.html:18
@@ -1465,7 +1468,7 @@ msgid "Select upto 6 languages for captions"
 msgstr ""
 
 #: templates/users/user_settings.html:19
-msgid "Caption Languages"
+msgid "Caption languages"
 msgstr ""
 
 #: templates/users/user_settings.html:19
@@ -1493,7 +1496,7 @@ msgid "Undo changes to language settings"
 msgstr ""
 
 #: templates/users/user_settings.html:57
-msgid "Undo Changes"
+msgid "Undo changes"
 msgstr ""
 
 #: users/forms.py:26

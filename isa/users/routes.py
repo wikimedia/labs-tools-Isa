@@ -157,7 +157,7 @@ def userSettings():
             if commit_changes_to_db():
                 flash(gettext('Captions languages could not be set'), 'danger')
             else:
-                flash(gettext('Preferred Languages set Successfully'), 'success')
+                flash(gettext('Preferred languages set'), 'success')
                 # We make sure that the form data does not remain in browser
                 return redirect(url_for('users.userSettings'))
     elif request.method == 'GET':
