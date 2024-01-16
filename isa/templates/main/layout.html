@@ -42,7 +42,7 @@
 			<li class="nav-item">
 				{% if username != 'Guest' and username != None %}
 				<a class="nav-link" href="{{url_for( 'campaigns.CreateCampaign' )}}">
-					<i class="fa fa-plus"></i> {{ _('Create New') }}
+					<i class="fa fa-plus"></i> {{ _('Create new campaign') }}
 				</a>
 				{% endif %}
 			</li>
@@ -64,8 +64,8 @@
 				{% if username %}
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> {{username}}</a>
 				<div class="dropdown-menu">
-					<a href="{{url_for( 'users.userSettings' )}}" class="nav-link " id="user_name" title="{{ _('Change your available caption languages') }}">{{ _('Languages preferences') }}</a>
-					<a href="{{url_for( 'users.getMyCampaigns', username=username )}}" class="nav-link " id="user_name" title="{{ _('See your campaigns') }}">{{ _('My Campaigns') }}</a>
+					<a href="{{url_for( 'users.userSettings' )}}" class="nav-link " id="user_name" title="{{ _('Change your available caption languages') }}">{{ _('Language preferences') }}</a>
+					<a href="{{url_for( 'users.getMyCampaigns', username=username )}}" class="nav-link " id="user_name" title="{{ _('See your campaigns') }}">{{ _('My campaigns') }}</a>
 				</div>
 				{% endif %}
 			</li>

@@ -12,7 +12,7 @@
     <hr>
     <form class="" method="POST">
       {{ lang_form.csrf_token }}
-         <h4>{{ _('Depicts language') }}<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="{{ _('The selected language will be used for searching for elements depicted in images.')}} {{_('If &quot;Same as interface&quot; is selected the language selected in the top menu will be used.')}}"><i class="fas fa-question-circle"></i></button></h4>
+         <h4>{{ _('Depicts language') }}<button type="button" class="btn btn-link py-0" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="{{ _('The selected language will be used for searching for elements depicted in images.')}} {{_('If \'Same as interface\' is selected, the language selected in the top menu will be used.')}}"><i class="fas fa-question-circle"></i></button></h4>
          <div id="depicts_language_select" class="input-group mb-3">
             {{ lang_form.depicts_language_select( id="depicts_lang_select", class="form-control") }}
          </div>

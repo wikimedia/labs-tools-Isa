@@ -292,11 +292,11 @@ def updateCampaign(id):
         campaign.campaign_type = form.campaign_type.data
         campaign.end_date = campaign_end_date
         if commit_changes_to_db():
-            flash(gettext('Campaign update failed please try later!'), 'danger')
+            flash(gettext('Campaign update failed. Please try later!'), 'danger')
         else:
             if form.update_images.data:
                 image_updater.update_in_thread(id)
-            flash(gettext('Update Succesfull !'), 'success')
+            flash(gettext('Update succesfull!'), 'success')
             return redirect(url_for('campaigns.getCampaignById', id=id))
 
     # User requests to edit so we update the form with Campaign details
