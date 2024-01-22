@@ -1,7 +1,7 @@
-# Translation of ISA to Slovenian (slovenščina)
+# Translation of ISA to Tswana (Setswana)
 # Exported from translatewiki.net
 #
-# Author: Eleassar
+# Author: Sekhomba
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -13,321 +13,321 @@ msgstr ""
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sl\n"
+"Language: tn\n"
 "X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-12-01\n"
-"Plural-Forms: nplurals=4; plural=(n%100 == 1) ? 0 : ( (n%100 == 2) ? 1 : ( (n%100 == 3 || n%100 == 4) ? 2 : 3 ) );\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
 msgid "Campaigns"
-msgstr "Kampanje"
+msgstr "Matsholo"
 
 #: campaigns/routes.py:54 campaigns/routes.py:140
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "Kampanja z ID-jem %(id)s ne obstaja"
+msgstr "Letsholo le le nang le id %(id)s ga le yo"
 
 #: campaigns/routes.py:111 campaigns/routes.py:165
 msgid "Campaign - "
-msgstr "Kampanja – "
+msgstr "Letsholo"
 
 #: campaigns/routes.py:188
 msgid "You need to Login to create a campaign"
-msgstr "Za ustvaritev kampanje se morate prijaviti"
+msgstr "O tlokana le go tsena gore o dire letsholo"
 
 #: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr "Kampanje %(campaign_name)s žal ni bilo mogoče ustvariti"
+msgstr "Tshwarelo %(campaign_name)s ga le a kgona go tlhamega"
 
 #: campaigns/routes.py:225
 #, python-format
 msgid "%(campaign_name)s Campaign created!"
-msgstr "Kampanja %(campaign_name)s ustvarjena!"
+msgstr "%(campaign_name)s Letsholo le Tlhamilwe!"
 
 #: campaigns/routes.py:228
 msgid "Create a campaign"
-msgstr "Ustvari kampanjo"
+msgstr "bolotsa letsholo"
 
 #: campaigns/routes.py:248
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr "%(campaign_name)s – prispevajte"
+msgstr "%(campaign_name)s - tsenya seabe"
 
 #: campaigns/routes.py:267
 msgid "You need to Login to update a campaign"
-msgstr "Za ustvaritev kampanje se morate prijaviti"
+msgstr "O tlhokana le go tsena gore o tlhabolole letsolo."
 
 #: campaigns/routes.py:292
 msgid "Campaign update failed please try later!"
-msgstr "Posodobitev kampanje ni uspela, poskusite znova pozneje!"
+msgstr "Tlhabololo ya letsholo e retetse tsweetswee leka kgantele!"
 
 #: campaigns/routes.py:296
 msgid "Update Succesfull !"
-msgstr "Posodobitev uspešna!"
+msgstr "Tlhabololo e atlegile!"
 
 #: campaigns/routes.py:304
 #, python-format
 msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Te kampanje ne morete posodobiti, obrnite se na upravitelja User:%(campaign_manager)s "
+msgstr "O ka se kgone go tlhabolola letsholo leno, Contact Manager User:%(campaign_manager)s "
 
 #: campaigns/routes.py:319
 #, python-format
 msgid "Booo! %(campaign_name)s Could not be updated!"
-msgstr "Buuu! Kampanje %(campaign_name)s ni bilo mogoče posodobiti!"
+msgstr "Booo! %(campaign_name)s e ne e ka se ka ya tlhabololwa!"
 
 #: campaigns/routes.py:324
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr "%(campaign_name)s – posodobitev"
+msgstr "%(campaign_name)s - tlhabolola"
 
 #: campaigns/routes.py:366
 msgid "You need to login to participate"
-msgstr "Za sodelovanje se morate prijaviti"
+msgstr "O tlhoka go tsena go tsaya karolo"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr "Posodobitev podrobnosti kampanje"
+msgstr "Tlhabolola dintlha tsa letsholo"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr "Ustvari novo kampanjo"
+msgstr "Dira Letsholo le Lesha"
 
 #: templates/campaign/campaign-form.html:14
 msgid "You are updating"
-msgstr "Posodabljate"
+msgstr "O a tlhabolola"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create you campaign"
-msgstr "Izpolnite spodnji obrazec, da ustvarite kampanjo"
+msgstr "Tlatsa pampitshana e e latelang go dira letsholo"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr "Polja, označena z *, so obvezna"
+msgstr "ditselana tse di tshwailweng ka * di a patelesega"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Ime kampanje"
+msgstr "Leina la Letsholo"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr "To je ime, specifično za vašo kampanjo, ne za glavni projekt."
+msgstr "Leno ke leina le le kgethegileng la letsholo la gago, eseng tiro ya gago"
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr "Torej, ne »Viki obožuje Afriko«, temveč »Glasba in ples v Nigeriji«"
+msgstr "Ga se \"Wiki Loves Africa\" mme ke \"Music and dance in Nigeria\""
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr "Kratek opis kampanje (144 znakov)"
+msgstr "Tlhaloso e khutshwane ya letsholo ( ditlhaka tse Lekgolo le masome a mane le bone)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr "S čim se bodo uporabniki ukvarjali"
+msgstr "Badirisi ba ya go bereka eng"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
 msgid "Start Date"
-msgstr "Začetni datum"
+msgstr "Letsatsi la tshimologo"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr "Določite začetni datum kampanje"
+msgstr "baya letsati la tshimilogo ya letsholo"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
 msgid "End Date"
-msgstr "Končni datum"
+msgstr "letsatsi la bokhutlo"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr "Določite končni datum kampanje"
+msgstr "baya letsatse la bokhutlo jwa letsholo"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "To je kampanja »Wiki Loves«"
+msgstr "se ke letsholo la Wiki"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr "Ko je ta možnost pravilno nastavljena, omogoča udeležencem, da izberejo, iz katere države želijo videti slike, in zabeleži prispevke po državah."
+msgstr "Fa e tlhomilwe sentle, ikgethelo ye e letla batsayakarolo go itlhophela gore ba batla go bona ditshwantsho tsa lefatshe lefe le go kwala dikabelo tsa bone go ya ka leftshe."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr "Izberete lahko več kategorij prave vrste."
+msgstr "O ka tlhopha ditlhopha tse dintsi tsa mofuta o o siameng."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr "Globina mora biti v kampanji »Wiki Loves« za vse kategorije nastavljena na 0."
+msgstr "Boteng jwa ditlhopha tsotlhe mo letsholong la Wiki bo tshwanetse go bewa mo go lefela"
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr "Zahteva kategorije slik obrazca iz <strong><em>projekta</em></strong> Wiki Loves v določenem <strong><em>letu</em></strong>, npr. »Slike iz Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>« (po <strong><em>potrebi</em></strong> spremenite <strong><em>projekt</em></strong> in leto)"
+msgstr "E tlhoka ditlhopha tsa ditshwantsho tsa mofuta wa Wiki Loves project mo ngwageng o o rileng, e.g. \"Images from Wiki Loves <strong><em>Afrika</em></strong> <strong><em>2019</em></strong>\" (go fetola <strong><em><strong><em>porojeke</em></strong></em></strong> le <strong><em>ngwaga</em></strong> jaaka go tlhokega)"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr "Nekatere kategorije, izbrane spodaj, nimajo pravilne skladnje"
+msgstr "Dingwe tsa ditlhopha tse di tlhophilweng fa tlase ga di na thulaganyo e e siameng ya mafoko"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr "Kategorije za uporabo v tej kampanji"
+msgstr "Dikarolo tse di ka dirisiwang mo letsholong le"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr "Poiščite kategorije Wikimedijine zbirke s slikami, ki jih želite uporabiti v svoji kampanji."
+msgstr "Batla ditlhopha tsa Wikimedia Commons tse di nang le ditshwantsho tse o batlang go di dirisa mo letsholong la gago."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr "Če želite kategorijo in VSE njene podkategorije, uporabite možnost »Globina«, da izberete, koliko stopenj nižje želite iti (za kampanje »Wiki Loves« pustite globino 0)."
+msgstr "Fa o batla setlhopha mme ditlhopha tsotlhe tsa sone di dirisa kgetho ya 'boteng' go tlhopha gore o batla go ya kwa tlase go le kae (tlogela boteng mo go lefela mo matsholomg a Wiki)."
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr "Izberite kategorije, ki jih želite uporabiti v kampanji"
+msgstr "Tlhopha dikarolo tse o ka di dirisang mo letsholong"
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Ime"
+msgstr "Leina"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Globina"
+msgstr "Boteng"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr "Rdeče označene kategorije nimajo pravilne skladnje za možnost »kampanja Wiki Loves«."
+msgstr "Dikarolo tse di bontshitsweng ka mmala o mohibidu ga di na thulaganyo e e siameng ya \"Wiki loves campaign\"."
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr "Odstranite jih ali počistite zgornje potrditveno polje »kampanja Wiki Loves«."
+msgstr "Tsweetswee di ntshe kgotsa o ntshe lebokose la \"Wiki Loves Campaign\" le le fa godimo"
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr "Posodobi slike"
+msgstr "Tlhabolola ditshwantsho"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
-msgstr "Zberite slike iz kategorij."
+msgstr "Phutha ditshwantsho go tswa mo dikarolong."
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."
-msgstr "To bo zamenjalo vse trenutne slike."
+msgstr "Se se tlaa nna mo boemong jwa ditshwantsho tse di le teng."
 
 #: templates/campaign/campaign-form.html:174
 msgid "Use if you changed the categories or if there was an error updating previously."
-msgstr "Uporabite, če ste spremenili kategorije ali če je pri predhodnem posodabljanju prišlo do napake."
+msgstr "Dirisa fa o fetotse ditlhopha kgotsa fa go na le phoso ya go tlhabolola pele."
 
 #: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
-msgstr "Metapodatki za zbiranje v kampanji"
+msgstr "Metadta e tla kgobokanya mo letsholong"
 
 #: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr "Izberite vrsto <strong>metapodatkov</strong>, ki jih želite zbirati v svoji kampanji."
+msgstr "Tlhopha mofuta wa <strong>metadata</strong> yo o batlang go o kokoanya mo letsholong la gago."
 
 #: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
-msgstr "Izbrati morate vsaj eno od spodnjih možnosti."
+msgstr "O tshwanetse go tlhopha bobotlana nngwe ya ditlhopho tse di fa tlase."
 
 #: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data see the help page."
-msgstr "Če želite izvedeti več o metapodatkih »Prikazi« (Depicts) in »Napisi« (Captions), glejte stran pomoči."
+msgstr "Go ithuta go le gontsi ka ga dikwalo le meta-data, bona tsebe ya thuso."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr "Prikazi"
+msgstr "Ditshwantsho"
 
 #: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campiagn"
-msgstr "Izberite za zbiranje metapodatkov »Prikazi« (Depicts) v kampanji"
+msgstr "Tlhopha go khobokanya dipalopalo ta metadata mo letsholong"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:80
 msgid "Captions"
-msgstr "Napisi"
+msgstr "Ditsibogelo"
 
 #: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campiagn"
-msgstr "Izberite za zbiranje metapodatkov »Napisi« (Captions) v kampanji"
+msgstr "Tlhopha go kgobokanya tsibogelo ya metadata mo letsholong"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
-msgstr "Slika kampanje"
+msgstr "Setshwantsho sa Letsholo"
 
 #: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr "Največja višina slike kampanje je 150 slikovnih pik. Slike naj bodo v obliki pasice ali logotipa."
+msgstr "Boleele jo setshwantso sa letsholo bo ka se keng bo se fetse ke 150px. Ditshwantsho e tshwanetse go nna tsa kitsiso kgotsa tsa itshupo."
 
 #: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
-msgstr "Pokončne ali kvadratne fotografije niso priporočljive."
+msgstr "Setshwantsho kgotsa ditshwantsho tsa sekwere ga di kgothalediwe."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr "Vnesite samo IME DATOTEKE za sliko iz Zbirke za prikaz na domači strani kampanje."
+msgstr "Tsenya leina la FILE fela la setshwantsho se se tswang mo commons go se bontsha mo tsebeng ya ntlha ya letsholo."
 
 #: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
-msgstr "Dolgi opis kampanje (vse o informacijah)"
+msgstr "Tlhaloso e telele ya Letsholo (e e tletseng ka tshedimosetso)"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
-msgstr "Zakaj je pomembno, da uporabniki prispevajo h kampanji?"
+msgstr "Ke ka goreng fa go le botlhokwa fo badirisi ba tshwanetse go tsaya karolo mo letsholong?"
 
 #: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
-msgstr "Objavi kampanjo"
+msgstr "Gatisa letsholo"
 
 #: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
-msgstr "Za svojo kampanjo morate izbrati vsaj eno kategorijo."
+msgstr "O tshwanetse wa tlhophela letsholo la gago karolo ele nngwe."
 
 #: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr "Nekatere kategorije, ki ste jih izbrali, nimajo pravilne skladnje za kampanjo Wiki Loves."
+msgstr "Dingwe tsa ditlhopha tse o di tlhophileng ga di na thulaganyo e e siameng ya letsholo la Wiki Loves."
 
 #: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
-msgstr "Preverite svoj izbire in poskusite znova."
+msgstr "Tsweetswee tlhatlhoba dilo tse o di tlhophileng mme o leke gape."
 
 #: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr "Prosimo, izberite vsaj eno vrsto metapodatkov za zbiranje razdelka"
+msgstr "Tsweetswee tlhopha bobotlana mofuta o le mongwe go tswa mo Metadata go o phutha"
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
-msgstr "Prikaži slike iz"
+msgstr "Bona ditshwantsho go tswa ko"
 
 #: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
-msgstr "Izberite za ogled slik iz samo ene države"
+msgstr "Tlhopha go lebelela ditshwantsho fela go tswa kwa lefatsheng le lengwe."
 
 #: templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
-msgstr "Začnite prispevati k tej kampanji"
+msgstr "Similola go tsaya karolo mo letsholong le"
 
 #: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
-msgstr "Začetek"
+msgstr "Simolola"
 
 #: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
-msgstr "Dosedanji napredek kampanje"
+msgstr "Kgatelopele ya letsholo go fitlha jaanong"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
-msgstr "Skupno število slik v tej kampanji"
+msgstr "Palogotlhe ya ditshwantsho mo letsholong le"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
-msgstr "Slike"
+msgstr "Ditshwantsho"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
-msgstr "Skupno število prispevkov za to kampanjo"
+msgstr "Palogoltlhe ya dikarolo tse di tserweng mo letsholong le"
 
 #: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
 #: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
@@ -336,894 +336,894 @@ msgstr "Skupno število prispevkov za to kampanjo"
 #: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr "Prispevki"
+msgstr "Diabe"
 
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
-msgstr "Najbolj dejavni sodelavci"
+msgstr "Ba ba nang le seabe se segolo"
 
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr "Sodelavec"
+msgstr "Motho yo o nang le seabe"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
-msgstr "K tej kampanji ni prispeval noben udeleženec"
+msgstr "Ga go na batsayakarolo ba ba nnileng le seabe mo letsholong le"
 
 #: templates/campaign/campaign.html:74
 #: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
-msgstr "Najbolj izboljšane države"
+msgstr "Mafatshe a a tlhabologileng"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
 msgid "Country"
-msgstr "Država"
+msgstr "Lefatshe"
 
 #: templates/campaign/campaign.html:97
 #: templates/campaign/campaign_stats.html:94
 msgid "There is no data available yet for this campaign"
-msgstr "Za to kampanjo podatki še niso na voljo"
+msgstr "Ga go na tshedimosetso e e leng teng ya letsholo le"
 
 #: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
-msgstr "Oglejte si in prenesite več statističnih podatkov o tej kampanji"
+msgstr "Tsaya gape bona go le gontsi ka dipalopalo tsa letsholo le."
 
 #: templates/campaign/campaign.html:105
 msgid "View full stats"
-msgstr "Oglejte si celotno statistiko"
+msgstr "Bona dipalopalo tse di tletseng"
 
 #: templates/campaign/campaign.html:116
 msgid "My Contributions"
-msgstr "Moji prispevki"
+msgstr "Seabe same"
 
 #: templates/campaign/campaign.html:123
 msgid "Rank"
-msgstr "Uvrstitev"
+msgstr "Maemo"
 
 #: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
-msgstr "Več o tej kampanji"
+msgstr "Go le gontsi ka letsholo le"
 
 #: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
-msgstr "Upravitelj kampanj"
+msgstr "Mookamedi wa letsholo"
 
 #: templates/campaign/campaign.html:145
 msgid "START DATE"
-msgstr "ZAČETNI DATUM"
+msgstr "Letsatsi la tshimologo"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
-msgstr "KONČNI DATUM"
+msgstr "Letsatsi la bokhutlo"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
-msgstr "Ni določeno"
+msgstr "Ga go a tlhomama"
 
 #: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
-msgstr "Spremenite to kampanjo"
+msgstr "Dira diphetogo mo letsholong le"
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
-msgstr "Uredite kampanjo"
+msgstr "Fetola letsholo"
 
 #: templates/campaign/campaign.html:162
 msgid "Unknown country"
-msgstr "Neznana država"
+msgstr "Lefatshe le le sa itseweng"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr "Vrnitev na domačo stran kampanje"
+msgstr "boela kwa tsebeng ya gae ya letsholo"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
-msgstr "Domača stran"
+msgstr "Tsebe ya gae"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Ogled prejšnje slike"
+msgstr "Bona setshwantsho se se fa morago"
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:102
 msgid "PREV IMAGE"
-msgstr "PREJ. SLIKA"
+msgstr "SETSHWANTSHO SA PONOPELE"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Lastno delo"
+msgstr "Tiro ya mong wa yone"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Ogled naslednje slike"
+msgstr "Bona setshwantsho se se latelang"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:103
 msgid "NEXT IMAGE"
-msgstr "NASL. SLIKA"
+msgstr "setshwantsho se se latelang"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Datoteka"
+msgstr "faele"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Odpri to sliko v Wikimedijini zbirki"
+msgstr "Bula setshwantsho se mo Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Opis"
+msgstr "Tlhaloso"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Kategorije"
+msgstr "Dikarolo"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr "Lokacija fotoaparata"
+msgstr "lefelo la sekapa ditshwantsho"
 
 #: templates/campaign/campaign_entry.html:38
 #: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
-msgstr "prikaži vse metapodatke iz Zbirke"
+msgstr "Supa go tswa kwa metadata commons"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr "Dodajanje izjav o prikazanem (»Depicts«)"
+msgstr "Go Tsenya Dipolelo Tsa ga Setshwantsho"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "Poenostavite: Uporabite preproste besede in pojme, da opišete, kaj na vsaki sliki vidite (npr. mačka, gora, Tadž Mahal)"
+msgstr "E dire motlhofo: Dirisa mafoko a a motlhofo le dikgopolo go tlhalosa se o se bonang mo setshwantshong sengwe le sengwe (s.g. katse, thaba, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
-msgstr "Prekličite spremembe"
+msgstr "Phimola diphetogo tsa gago"
 
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:82
 msgid "Cancel"
-msgstr "Prekliči"
+msgstr "Phimola"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr "Shranite svoje spremembe v Wikimedijino zbirko"
+msgstr "Boloka dikgatiso tsa gago mo Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:58
 msgid "Save"
-msgstr "Shrani"
+msgstr "Boloka"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr "Preusmerjeni boste na prijavo in nazaj sem, da shranite spremembe"
+msgstr "O tlaa fiwa dikaelo tsa go tsena le tsa go bowa o tla go boloka diphetogo tsa gago."
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr "Poimenujte različne elemente, ki jih lahko vidite na tej sliki"
+msgstr "bua dikarolwana tse di farologaneng tse o di bonang mo setshwantshong se"
 
 #: templates/campaign/campaign_entry.html:73
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr "Če želite označiti vidne elemente na sliki, kliknite ikono zastavice"
+msgstr "Go tshwaya dilo tse di tlhomologileng mo setshwantshong, tobetsa setshwantsho sa folaga"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr "Pisanje napisov"
+msgstr "Go Kwala Ditlhaloso"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr "Vključite vse kulturno specifične, znanstvene ali tehnične informacije, ki jih lahko prepoznate (npr. etiopska kavna slovesnost ali bunna maflat), da bodo informacije bogatejše."
+msgstr "Tsaya tshedimosetso nngwe le nngwe e e kgethegileng ya setso, ya saense kgotsa ya botegeniki e o ka e lemogang (sekao, Moletlo wa Kofi wa Ethiopia kgotsa bunna maflat) go dira gore tshedimosetso e nne e e humileng."
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr "Za objavo sprememb se prijavite"
+msgstr "Tsena gore o gatise diphetolo tsa gago."
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr "Dodajte napis za boljšo razlago slike (največ 255 znakov)"
+msgstr "Tsenya mafoko go tlhalosa setshwantsho botoka (go fitlha go ditlhaka di le 255)"
 
 #: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
-msgstr "Na kratko razložite, kaj vidite na tej sliki."
+msgstr "Tlhalosa ka bokhutshwane se o se bonang mo setshwantshong se."
 
 #: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr "Dodate lahko napise v dodatnih jezikih tako, da v uporabniškem meniju izberete Jezikovne nastavitve"
+msgstr "O ka tsenya ditlhaloso mo ditemeng tsa tlaleletso ka go tlhopha teme ya boikgethelo mo lenaaneng la modirisi"
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr "Za to kampanjo ni najdenih slik!"
+msgstr "Ga go na ditshwantsho tse di fitlhetsweng tsa letsholo leno!"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
-msgstr "Pri pridobivanju slik kampanje je šlo nekaj narobe"
+msgstr "Go na le sengwe se se sa tsamayang sentle mo letsholong la ditshwantsho"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr "Poiščite stvari, ki jih vidite na sliki"
+msgstr "Batla dilo tse o di bonang mo setshwantshong"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr "minimiziraj metapodatke iz Zbirke"
+msgstr "fokotsa metadata go tswa ko commons"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr "Uspeh! Prikazani predmeti so shranjeni v Wikimedijini zbirki"
+msgstr "Katlego! Dilo tse di bontshitsweng di bolokilwe mo Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr "Uspeh! Napisi so shranjeni v Wikimedijini zbirki"
+msgstr "Katlego! Ditlhaloso tse di bolokilwe mo Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr "Ups! Nekaj je šlo narobe, vaša urejanja se niso shranila v Wikimedijino zbirko"
+msgstr "Oops! Go na le sengwe se se sa tsamayang sentle, diphetogo tsa gago ga di a bolokiwa mo Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr "Ste prepričani, da se želite pomakniti na drugo sliko? Imate neshranjene spremembe, ki bodo izgubljene."
+msgstr "A o tlhomamisitse gore o batla go leba kwa setshwantshong se sengwe? O na le diphetogo tse di sa bolokiwang tse di tla go latlhegelang."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr "Kliknite »V redu«, če želite vseeno nadaljevati, ali »Prekliči«, če želite najprej shraniti spremembe."
+msgstr "Tobetsa 'GO SIAME' gore o tswelele, kgotsa 'Phimola' fa o batla go boloka diphetogo pele."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr "Odstrani ta prikazani predmet"
+msgstr "Ntsha selo se se supilweng fa se"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr "Označite ta prikazani predmet kot opazen"
+msgstr "Tshwaya dilo tse jaaka tse di tlhomameng"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr "Označi ta prikazani predmet kot NE opazen"
+msgstr "tshwaya dilo tse jaaka tse di sa tlhomamang"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr "PRISPEVKI H KAMPANJI S STRUKTURIRANIMI PODATKI"
+msgstr "Diabe tsa kitso ye e rulagantsweng ya letsholo"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr "Od"
+msgstr "Go tsa kwa"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr "Do"
+msgstr "Go fitlha"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
-msgstr "Prenesi vso statistiko (CSV)"
+msgstr "Tseela go boloka dipalopalo tsa (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
-msgstr "Statistika prispevanja"
+msgstr "Dipalopalo tsa mona-le-seabe"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
-msgstr "Statistika držav"
+msgstr "Dipalopalo tsa lefatshe"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr "Na tej strani so upravljane kampanje, ki se trenutno izvajajo kot del orodja ISA."
+msgstr "Mo tsebeng ye go na le thulaganyo ya matsholo a a tsweletseng a eleng bontlha bogwe jwa ISA tool."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr "Kliknite ime kampanje, da začnete, in dodajte sliki strukturirane podatke."
+msgstr "Tobetsa mo leineng la letsholo go tsenya kitso ye e rulaganeng mo setshwantshong."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr "Do podazkov o prejšnjih kampanjah lahko dostopate v razdelku Arhiv."
+msgstr "O ka kgona go fitlhelela tshedimosetso ka ga Ditsamaiso tse di fetileng mo karolong ya Mabolokelo."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr "Potekajoče kampanje"
+msgstr "Matsholo a a tsweletseng"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr "Ime kampanje"
+msgstr "Leina la letsholo"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr "Kampanja"
+msgstr "Letsholo"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr "Skupno število slik v kampanji"
+msgstr "Palogotlhe ya ditshwantsho mo letsholong"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr "Število urejevalcev, ki so prispevali h kampanji "
+msgstr "Palo ya bakwadi ba ba nnileng le seabe mo letsholong"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr "Udeleženci"
+msgstr "Batsaakarolo"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr "Skupno število prispevkov za to kampanjo"
+msgstr "Palogotlhe ya bana-le-seabe mo letsholong"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr "Datum začetka kampanje"
+msgstr "Letsatsi la tshomologo ya letsholo"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr "Datum konca kampanje"
+msgstr "Letsatsi la bokhutlo jwa letsholo"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr "Datum, ko je bila kampanja ustvarjena"
+msgstr "Letsatsi le letsholo le tlhamilweng ka lone"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr "Datum ustvaritve"
+msgstr "Letsatsi la tlhamo"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr "Stanje kampanje"
+msgstr "Boemo jwa letsholo"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr "Stanje"
+msgstr "Boemo"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr "Zaprta"
+msgstr "E tswetswe"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr "Ni odprta"
+msgstr "Ga e a bulwa"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Odpri"
+msgstr "Bula"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr "Za začetek pojdite na domačo stran kampanje"
+msgstr "Tsamaela ko tsebeng ya gae ya letsholo gore o simolole"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr "Pojdite na kampanjo"
+msgstr "Tsamaela ko letsholong"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr "Prikaži zaprte kampanje"
+msgstr "Supa matsholo a a tswetsweng"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr "Ustvarite lastno kampanjo"
+msgstr "Tlhama letsholo la gago"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr "S tem orodjem ustvarite novo kampanjo"
+msgstr "Tlhama letsholo le lesha o dirisa thulusu ye"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr "Da ustvarite kampanjo, morate biti prijavljeni."
+msgstr "O tshwanetse go bo o tsene gore o tlhame letsholo"
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr "Prikaz vnosov od _START_ do _END_ od _TOTAL_"
+msgstr "Tshupetso ya _TSHIMOLOGO_ go ya go _BOKHUTLO_ jwa -PALOGOTLHE_ ya matseno"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr "Ni vnosov"
+msgstr "Ga gona matseno"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr "Poišči:"
+msgstr "Batla:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr "Ni ustrezajočih zapisov"
+msgstr "Ga go na direkoto tse di tshwanang tse di bonweng"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr "Prvi"
+msgstr "Sa ntlha"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr "Zadnji"
+msgstr "Sa Bofelo"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr "Naslednja"
+msgstr "Se se latelang"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr "Prejšnja"
+msgstr "Se se fetileng"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr "Posodabljanje slik"
+msgstr "Go tlhabolola ditshwantsho"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr "Slike za to kampanjo se posodabljajo."
+msgstr "Ditshwantsho tsa letsholo leno di a tlhabololwa."
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr "Dodanih bo več slik."
+msgstr "Ditshwantsho tse dintsi di tlaa tsenngwa."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr "Še vedno lahko sodelujete v kampanji."
+msgstr "O santse o ka nna le seabe mo letsholong."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr "Posodobitev slik ni uspela"
+msgstr "Go tlhabolola ditshwantsho go retetse"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
-msgstr "Pri posodabljanju slik za to kampanjo je prišlo do napake."
+msgstr "Go ne ga nna le phoso fa go ne go tlhabololwa ditshwantsho tsa letsholo leno."
 
 #: templates/campaign/macros.html:8
 msgid "Some images will be missing."
-msgstr "Nekatere slike bodo manjkale."
+msgstr "Ditshwantsho dingwe di tla bo di sa tlhole di le teng."
 
 #: templates/campaign/macros.html:8
 msgid "The campaign manager can retry by updating the campaign."
-msgstr "Upravitelj kampanje lahko poskusi znova s posodobitvijo kampanje."
+msgstr "Mookamedi wa letsholo a ka leka gape ka go tlhabolola letsholo."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr "Strežnik v vzdrževanju"
+msgstr "Tiri ya Khomputara s santse e tlamelwa"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr "Obrnite se na podporo"
+msgstr "Tsweetswee Ikgolaganye le dithuso tsa kgolaganyo"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Pelji me domov"
+msgstr "Nkisa tsebeng ya Gae"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Stik s podporo"
+msgstr "Ikgolaganye le ba dithuso"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Stran ni najdena"
+msgstr "Tsebe ga e bonwe"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr "Strani, ki jo iščete, ni mogoče najti"
+msgstr "Ga re bone tsebe ye o e batlang"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Pelji me domov"
+msgstr "Nkisa tsebeng ya Gae"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Nekaj je šlo narobe"
+msgstr "Sengwe ga se a tsamaya sentle"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr "ISA je morda v vzdrževanju"
+msgstr "Isa e katswa e santse e tlamelwa"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Stran pomoči"
+msgstr "Tebe ya dithuso"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr "Preprosto dodajanje podatkov o slikah v Wikimedijini zbirki"
+msgstr "Tsenya ditlhaloso tsa ditshwantso motlhofo mo Wikimedia Commons"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> je zabavno, večjezično orodje za mobilne naprave, ki ljudem olajša dodajanje »mikroprispevkov« v obliki <a %(link_attrs)s>strukturiranih podatkov</a> slikam v Wikimedijini zbirki, dodanim na natečajih Wiki Loves."
+msgstr "<strong>ISA</strong> ke sedirisiwa se se mkgatlhisang, sa dipuo di le dintsi, se se dirang gore go nne motlhofo gore batho ba tsenye \"diabe tse dipotlana\" ka sebopego sa <a %(link_attrs)s=\"\">tshedimosetso e e rulagantsweng</a> mo ditshwantshong tsa Wikimedia Commons tse di tsentsweng ke dikgaisano tsa Wiki Loves."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr "ISA je bila prvotno zasnovana za zagotavljanje boljših večjezičnih in strukturiranih opisov slik <a %(link_attrs)s>Wiki Loves Africa</a>."
+msgstr "ISA e agilwe go fa ditlhaloso tse di botoka tsa dipuo di le dintsi le tse di rulagantsweng tsa <a %(link_attrs)s>Wiki Loves Africa</a> ditshwantsho."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr "Razvita pa je tudi tako, da je uporabna za vse <a link_attrs>natečaje Wiki Loves</a> in navsezadnje za <strong>vse predstavnostne datoteke</strong> v Wikimedijini zbirki."
+msgstr "Mme gape e diretswe go nna mosola mo dikgaisanong tsotlhe tsa Wiki Loves mme, kwa bofelong, mo <strong>difaele tsotlhe tsa metswedi ya tshedimosetso</strong> mo Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr "Kaj je Wikimedijina zbirka?"
+msgstr "Wikimedia Commons ke eng?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr "<strong>Wikimedijina zbirka</strong> (uradno Wikimedia Commons) je projekt Wikimedie, sorodni projekt Wikipedije in zbirka več kot 40 milijonov prostih predstavnostnih datotek."
+msgstr "<strong>Wikimedia Commons</strong> (e gape e itsegeng jaaka 'Commons') ke porojeke ya Wikimedia, porojeke e e tshwanang le ya Wikipedia, le kgoboketso ya difaele tse di fetang dimilione di le 40 tsa metswedi ya tshedimosetso ya mahala."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr "Vse prosto licencirane fotografije, avdio- in videodatoteke, PDF-ji in drugo predstavnostno gradivo v Wikipediji so shranjeni v Zbirki."
+msgstr "Ditshwantsho tsotlhe tse di letleletsweng ka kgololesego, difaele tsa modumo le ditshwantsho tsa motshikhinyego, di-PDF le metswedi e mengwe ya tshedimosetso mo Wikipedia di bolokilwe mo Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr "Wikimedijina zbirka hitro raste, za približno 5 milijonov novih predstavnostnih datotek na leto."
+msgstr "Wikimedia Commons e gola ka bonako, ka difaele tse disha tsa metswedi ya tshedimosetso di ka nna di dikadike di le tlhano ka ngwaga."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr "Na tisoče prostovoljcev nalaga datoteke v Zbirko in jih vključuje v projekte Wikimedie, kot je Wikipedijs, da ilustrira tamkajšnjo vsebino in da te predstavnostne vsebine deli z javnostjo."
+msgstr "Diketekete tsa baithaopi ba tsenya difaele mo Commons, mme ba di tsenye mo diporojekeng tsa Wikimedia, jaaka Wikipedia, go bontsha diteng tsa teng le go abelana metswedi eo le setšhaba."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr "Predstavnostne datoteke v Zbirki so običajno:"
+msgstr "Difaele tsa metswedi ya tshedimosetso mo Commons ke:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr "Osebne fotografije in predstavnostne datoteke, ki jih naložijo posamezniki, včasih med natečaji Wiki Loves, kot so Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth idr.;"
+msgstr "Ditshwantsho tsa motho ka namana le metswedi ya tshedimosetso e e tsentsweng ke batho, ka dinako tse dingwe ka nako ya dikgaisano tsa Wiki Loves jaaka Wiki Loves Africa, Wiki Loves Monuments, Wiki Lovas Earth jalo le jalo;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr "Prostolicenčne predstavnostne datoteke z zunanjih spletnih mest, kot so Flickr, YouTube, revije z odprtim dostopom in druge shrambe; ter"
+msgstr "Difaele tsa tshedimosetso tse di nang le laesense e e gololesegileng go tswa mo diwebosaeteng tse di kwa ntle jaaka Flickr, YouTube, dimakasine tse di bulegileng, le mabolokelo a mangwe; le"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr "donacije ustanov in organizacij z obsežnimi zbirkami predstavnosti, velikih in majhnih, od Unesca, Nase in British Library do majhnih lokalnih kulturnih ustanov."
+msgstr "Meneelo e e tswang kwa ditheong le mekgatlhong e e nang le mekgatlho e mentsi ya tshedimosetso, e megolo le e mennye, go tloga ka UNESCO, NASA le British Library go ya go ditheo tse dinnye tsa setso tsa selegae."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr "Kaj so v Zbirki strukturirani podatki?"
+msgstr "Tshedimosetso e e rulagantsweng ke eng mo Commons?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr "<strong>Strukturirani podatki v Zbirki</strong> so projekt, ki zagotavlja tehnično infrastrukturo za dopolnjevanje vikibesedila, predlog in kategorij v Wikimedijini zbirki s strukturiranimi podatki."
+msgstr "<strong>Structured Data on Commons </strong> ke porojeke e e tlamelang ka mafaratlhatlha a botegeniki go tlatsa wikitext, ditemplate le ditlhopha mo Wikimedia Commons ka tshedimosetso e e rulagantsweng."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr "Strukturirani podatki so podatki z visoko stopnjo strukturirane organizacije."
+msgstr "Tshedimosetso e e rulagantsweng ke tshedimosetso e e nang le maemo a a kwa godimo a thulaganyo e e rulagantweng."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr "Z več strukture postane lažja nadaljnja uporaba podatkov za druge projekte Wikimedie in tretje osebe; prav tako omogoča obdelavo in »razumevanje« računalnikom."
+msgstr "Ka sebopego se se golwane, go nna bonolo go dirisa tshedimosetso gape mo diporojekeng tse dingwe tsa Wikimedia le ke batho ba bangwe; gape go letlelela dikhomputara go e rulaganya le go e 'tlhaloganya'."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr "Strukturirani podatki so potekajoč projekt, ki se je začel leta 2019! ... medtem ko Wikimedijina zbirka obstaja že leta!"
+msgstr "Structured Data ke porojeke e e tswelelang pele e e simolotsweng ka 2019 ! ... fa Wikimedia Commons e ntse e le teng ka dingwaga di le dintsi !"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr "V Wikimedijini zbirki je dobesedno na milijone slik ... ki potrebujejo pozornost in ljubezen."
+msgstr "Go na le ditshwantsho di le di dikadike tse di beilweng mo Wikimedia Commons... tse di tlhokang tlhokomelo le lorato."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr "Milijone slik, ki trenutno niso opisane s strukturiranimi podatki."
+msgstr "Didikadike tsa ditshwantsho tse di sa tlhalosiwang ka tshedimosetso e e rulagantsweng ka nako eno."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr "Kako se bomo lotili tega? "
+msgstr "Re tla dira seo jang? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr "<strong>Kuratorstvo</strong> v ožjem smislu pomeni: izbiranje in organiziranje umetniških del in kulturne dediščine za razstavo."
+msgstr "<thata>Tsamaiso</thata>, kgotsa curation, ka tlhaloganyo e e khutshwane, e raya: go tlhopha le go rulaganya dikarolo tsa tiro ya botaki le boswa jwa setso jwa pontsho."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr "Ta izraz se lahko uporablja tudi širše, za opis katere koli dejavnosti, ki vključuje izbiranje, organiziranje in predstavljanje informacij."
+msgstr "Lereo le le ka dirisiwa gape ka kakaretso, go tlhalosa tiro nngwe le nngwe e e akaretsang go tlhopha, go rulaganya le go tlhagisa tshedimosetso."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr "V kontekstu Strukturiranih podatkov v Zbirki pomeni vse dejavnosti, ki jih izvajajo sodelavci Zbirke, da bi organizirali in predstavili predstavnostne datoteke v Wikimedijini zbirki: administratorska dejanja, dodajanje več in boljših metapodatkov datotekam, njihovo združevanje v kategorije, ustvarjanje galerij ..."
+msgstr "Mo kgannyeng ya Structured Data on Commons, curating e raya ditiro tsotlhe tse di dirwang ke batlamedi ba Commons go rulaganya le go tlhagisa difaele tsa metswedi ya tshedimosetso mo Wikimedia Commons: ditiro tsa botsamaisi, go oketsa metadata e e oketsegileng le e e botoka mo difaeleng, go di kgaoganya ka ditlhopha, go tlhama di-gallery..."
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr "Torej ... kakšno vlogo ima v tem okviru orodje ISA?"
+msgstr "Ka jalo... sedirisiwa sa ISA se tsena jang koo?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr "Orodje ISA omogoča dodajanje dveh različnih vrst strukturiranih podatkov naboru slik: napisov in prikazanega (več razlag o tem, kaj so napisi in prikazano, v nadaljevanju)."
+msgstr "Sedirisiwa sa ISA se letlelela go tsenya mefuta e mebedi e e farologaneng ya tshedimosetso e e rulagantsweng go rulaganya ditshwantsho: mafoko a a kwa tlase le ditshwantsho (ditlhaloso tse di oketsegileng tse di fa tlase tsa gore mafoko a a mo tlase le ditshwantsho ke dife)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr "Je večjezično orodje za »mikroprispevke«, ki je prvotno namenjeno mobilnim napravam in ljudem olajša dodajanje strukturiranih podatkov slikam, prispevanim v natečajih Wiki Loves v Wikimedijini zbirki."
+msgstr "Ke sedirisiwa sa dipuo di le dintsi, sa 'diabe tse dinnye' sa ntlha, se se dirang gore go nne motlhofo mo bathong go tsenya tshedimosetso e e rulagantsweng mo ditshwantshong tse di nang le seabe mo dikgaisanong tsa Wiki Loves mo Wikimedia Commons."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr "Orodje deluje s kuriranimi kampanjami, ki jih ustvarijo koordinatorji."
+msgstr "Sedirisiwa se dira ka matsholo a a rulagantsweng a a dirilweng ke baokamedi."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr "Koordinator je lahko vsak, ki ima Wikimedia račun!"
+msgstr "Mongwe le mongwe yo o nang le akhaonto ya Wikimedia a ka nna motsamaisi!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr "Z ISO lahko koordinator izbere vnaprej določen nabor slik v Zbirki, izbere začetni in končni datum kampanje ter zagotovi splošne informacije o sami kampanji."
+msgstr "Ka ISA, motsamaisi a ka tlhopha ditshwantsho tse di setseng di tlhalositswe mo Commons, a tlhopha letlha la go simolola le letlha la bofelo la letsholo, le go neela tshedimosetso ya kakaretso ka letsholo ka bolone."
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr "Koordinator lahko nato prosi sodelujoče, da »označijo« te slike z večjezičnimi strukturiranimi metapodatki (prikazano in/ali napisi)."
+msgstr "Motsamaisi a ka kopa batlamedi go \"thala\" ditshwantsho tseno ka metadata e e rulagantsweng ka dipuo di le dintsi (ditshwantsho le/kgotsa mafoko a a kwa tlase)."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr "Točke se štejejo za vsak prispevek udeleženca, zato je mogoče z ISA organizirati tekmovanja ali izzive »označevanja« ali mikroprispevkov."
+msgstr "Dintlha di balwa ka ntlha ya seabe sengwe le sengwe se se dirwang ke motsaya-karolo, ka jalo go a kgonega go rulaganya dikgaisano tsa \"go kwala\" kgotsa tsa go tsenya letsogo go le gonnye ka ISA."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr "K dodajanju strukturiranih podatkov v kampanji lahko prispeva vsakdo z Wikimedia računom!"
+msgstr "Mongwe le mongwe yo o nang le akhaonto ya Wikimedia a ka nna le seabe go oketsa metadata e e rulagantsweng mo letsholong."
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr "Edini pogoj je ... biti prijavljen."
+msgstr "Se se tlhokegang fela ke... go tsenngwa mo lenaaneng."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr "Seznanite se z napisi in prikazanim podrobneje"
+msgstr "Ithute go le gontsi ka mafoko a a kwa tlase le ditshwantsho"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr "Napisi datotek so sestavni del strukturiranih podatkov."
+msgstr "Ditlhaka tsa difaele ke karolo ya tshedimosetso e e rulagantsweng."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr "Namenjeni so shranjevanju kratkih, večjezičnih opisov datotek."
+msgstr "Di diretswe go boloka tlhaloso e khutshwane, ya dipuo di le dintsi ka ga difaele."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr "Kaj je dober napis? in kakšna je razlika med našimi dobrimi starimi opisi datotek in napisi?"
+msgstr "ditlhaka tse fa tlase tse di lolameng ke dife? mme pharologanyo gareng ga ditlhaloso tsa difaele le mafoko a a fa tlase ke eng?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr "Prvič, napisi naj bi bili preprosti in kratki."
+msgstr "Sa ntlha, mafoko a a kwa tlase a diretswe go nna a a motlhofo le gape a le makhutshwane."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr "Čeprav so lahko opisi zelo obsežni, so napisi omejeni na 255 znakov, ne morejo vsebovati označevanja (kot so vikibesedilne povezave ali HTML) in ne podpirajo zunanjih povezav."
+msgstr "Le fa ditlhaloso di ka nna tsa atolosa thata, mafoko a a kwa tlase a lekanyeditswe go nna boleele jwa ditlhaka di le 255, mme ga a kgone go nna le matshwao (jaaka dikgolagano tsa Wikitext kgotsa HTML) mme ga a tshegetse dikgolagano tse di kwa ntle."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr "V številnih primerih bo napis podoben ali enak opisu."
+msgstr "Mo mabakeng a le mantsi, mafoko a a fa tlase a tlaa tshwana le tlhaloso."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr "V drugih primerih pa obstaja zelo obsežen opis (858 znakov in povezave), napis pa je veliko krajši (bolj ali manj enak napis, kot je uporabljen v člankih Wikipedije, ki uporabljajo to sliko)."
+msgstr "Mme mo mabakeng a mangwe, go na le tlhaloso e e tseneletseng thata (ditlhaka di le 858, le di-link) mme mafoko a a fa tlase a makhutshwane thata (a tshwana le mafoko a a dirisitsweng mo ditlhogong tsa Wikipedia a a dirisang setshwantsho seo)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr "V napise naj se kopira samo besedilo, ki je tako kratko, da ne more biti varovano z avtorskimi pravicami, saj so napisi objavljeni z opustitvijo pravic CC0 (kot »javna domena«)."
+msgstr "Ke fela mokwalo o mekhutshwane thata mo e leng gore ga o a tshwanela go kwalololwa go nna mafoko a a kwa tlase, jaaka mafoko a a mo tlase ga CC0 (\"public domain\") waiver."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr "Ena od glavnih prednosti napisov je izboljšana možnost iskanja glede na jezik."
+msgstr "Nngwe ya bomolemo e megolo ya mafoko a a kwa tlase ke go tokafatsa go batliwa ga puo."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr "Klasični opisi datotek so v vikibesedilu in jih je mogoče iskati le z iskanjem po celotnem besedilu, ki nujno preišče celotno vsebino strani, vključno s kategorijami in predlogami licenc; in ni mogoče izvesti iskanja, omejenega na določen jezik."
+msgstr "Ditlhaloso tsa difaele tse di tlwaelegileng di mo wikitext, mme di kgona go batliwa fela ka go batlisisa ka mokwalo o o tletseng, o o batlisisang ka diteng tsotlhe tsa tsebe, go akaretsa ditlhopha le ditemplate tsa laesense; mme ga go kgonege go batlisise ka puo nngwe le nngwe."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr "Napisi so na voljo kot del naših strukturiranih podatkov, medtem ko opisi niso."
+msgstr "Ditlhaka di teng jaaka karolo ya tshedimosetso ya rona e e rulagantsweng, fa ditlhaloso di seyo."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr "V tehničnem smislu je opis navadno vikibesedilo, ovito v jezikovno predlogo, ki je sama ovita v informacijsko predlogo; napisi pa so oznake Wikibase."
+msgstr "Ka mafoko a botegeniki, tlhaloso ke wikitext e e sa raraanang e phuthetswe mo thulaganyong ya puo, e phuthetšwe gape mo thulageng ya Tshedimosetso; fa mafoko a a kwa tlase e le matshwao a Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr "Napise bo tako mogoče iskati z API-jem, kar bo olajšalo iskanje/filtriranje/pridobivanje napisov iz datotek kot metapodatkov."
+msgstr "Ka jalo, ditlhaka di tla kgona go batliwa ka API, go dira gore go nne motlhofo go bona/go tlhotlha/go ntsha ditlhaka go tswa mo difaeleng jaaka metadata."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr "Ker jih je mogoče iskati z API-jem, je tudi nadaljnjim tretjim osebam, ki jih uporabljajo, predstavnostno gradivo in napise lažje najti."
+msgstr "E re ka di kgona go batliwa ka API, gape go motlhofo gore badirisi ba 3rd party ba bone le go dirisa gape metswedi ya tshedimosetso le mafoko ka boone."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr "Drugi možni načini uporabe napisov so lahko:"
+msgstr "Ditsela tse dingwe tse di ka dirisiwang ka mafoko a a kwa tlase e ka nna:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr "izpolnjevanje infopolj"
+msgstr "go tlatsa di-infobox"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr "poizvedovanje datotek za manjkajoče napise v določenem jeziku"
+msgstr "difaele tsa potsolotso ka ntlha ya mafoko a a tlhaelang mo puong e e rileng"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr "sestavljanje seznamov za prevajanje pomembnih datotek, ki potrebujejo napis, lokaliziran za projekt ali kampanjo"
+msgstr "lenaane la go aga la go ranola difaele tse di botlhokwa tse di tlhokang mafoko a a beilweng mo porojekeng kgotsa letsholo"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr "Več informacij o napisih najdete tukaj"
+msgstr "Batla tshedimosetso e e oketsegileng ka ga Ditlhaka fa"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr "Značilni del strukturiranih podatkov so tudi prikazi."
+msgstr "Ditshwantsho gape ke karolo ya tshedimosetso e e rulagantsweng."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr "Ti so bili v Wikimedijini zbirki omogočeni aprila 2019."
+msgstr "E ne ya bulwa mo Wikimedia Commons ka Moranang 2019."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
-msgstr "Da dodate izjavo o prikazih, preprosto začnite vnašati v iskalno polje."
+msgstr "Go tsenya mokwalo wa setshwantsho, simolola fela go kwala mo lebokoseng la go batla gore o simolole."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr "Nato za vsak prikazani element na sliki poiščite ustrezen predmet v Wikipodatkih in ga izberite."
+msgstr "Go tswa foo, selo sengwe le sengwe se se bontshitsweng mo setshwantshong, batla selo se se tshwanetseng go tswa go Wikidata mme o se tlhophe."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr "Če imate težave z iskanjem pravega predmeta b Wikipodatkih, preizkusite alternativno črkovanje."
+msgstr "Fa o na le bothata jwa go bona Wikidata e e siameng, leka ditlhaka tse dingwe."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr "Če z upodobljenim motivom ni povezan noben predmet Wikipodatkov, izberite bolj splošen predmet, ki vključuje vaš motiv kot zgled."
+msgstr "Fa e le gore ga go na selo sa Wikidata se se amanang le setlhogo se se bontshitsweng, tlhopha selo se se tlwaelegileng se se akaretsang setlhogo sa gago jaaka sekai."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr "Z glavno oznako bodite čim bolj natančni."
+msgstr "Nna ka tlhamalalo jaaka o ka kgona ka letshwao la konokono."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr "Če je v predstavnostni datoteki več predmetov, ki so jasno in namerno prikazani, je treba v okviru razumnega vse dodati kot ločene izjave o prikazih."
+msgstr "Fa go na le dilo di le dintsi tse di tlhalosiwang ka tlhamalalo le ka kelelo ke faele ya metswedi ya tshedimosetso, tsotlhe di tshwanetse go tsenngwa jaaka dipolelo tse di farologaneng tse di tlhalosang, mo teng ga mabaka."
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr "Pri datotekah, ki prikazujejo na desetine ali stotine elementov (npr. filmi), navedite samo tiste predmete, ki so najbolj vidni."
+msgstr "Difaele tse di bontshang dilo di le dintsi kgotsa di le makgolokgolo (jaaka ditshwantsho tsa motshikhinyego) di na le lenaane fela la dilo tse di itsegeng thata."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr "Na voljo je tudi možnost, da določen element označite kot »opazen«."
+msgstr "Gape go na le kgetho ya go tshwaya selo se se rileng jaaka 'se se maleba'."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr "Ta lastnost se nanaša na opaznost predmeta v predstavnosti."
+msgstr "Mokgwa ono o kaya bo maleba jwa selo mo metsweding ya tshedimosetso."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr "Več informacij o prikazih najdete tukaj:"
+msgstr "Tshedimosetso e e oketsegileng ka ditshwantsho e ka bonwa fa:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr "Uporaba orodja ISA"
+msgstr "Go dirisa sedirisiwa sa ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr "Več informacij lahko najdete tukaj:"
+msgstr "Tshedimosetso e e oketsegileng e ka bonwa fa:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr "Pravne informacije in avtorji"
+msgstr "Tsa semolao le di kerediti"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr "ISA se izvaja na tools.wmflabs.org in zanjo veljajo pogoji uporabe storitev v oblaku Wikimedia."
+msgstr "E tsamaisiwa mo didirisiweng.wmflabs.org, mme e laolwa ke Wikimedia Cloud Services Terms of use."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr "ISA je objavljena pod GPLv3. Vsebina, dodana s tem orodjem v Wikimedijini zbirki, je objavljena pod licenco CC0."
+msgstr "ISA e gatisitswe ka fa tlase ga GPLv3. Tshedimosetso e e tsentsweng ka sedirisiwa seno mo Wikimedia Commons e gololwa ka fa tlase ga CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr "Slika, uporabljena na orodju:"
+msgstr "Setshwantsho se se dirisitsweng mo sedirisiweng:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr "Preprosto dodajanje podatkov o slikah v Wikimedijini zbirki"
+msgstr "Tsenya ditlhaloso tsa ditshwantso motlhofo mo Wikimedia Commons"
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> je večjezično orodje za mobilne naprave, ki ljudem olajša dodajanje »mikroprispevkov« v obliki <a %(link_attrs)s title=\"Več o strukturiranih podatkih\">strukturiranih podatkov</a> (opisov, napisov, oznak idr.) slikam, ki so jih v Wikimedijino zbirko  prispevali natečaji Wiki Loves."
+msgstr "<strong>ISA</strong> ke sedirisiwa sa dipuo di le dintsi, se se dirisiwang mo founong ya selula, se se dirang gore go nne motlhofo gore batho ba tsenye 'dithuso tse dinnye' ka mokgwa wa <a %(link_attrs)s=\"\" title=\"Learn more about structured data\">tshedimosetso e e rulagantsweng</a> (ditlhaloso, mafoko a a kwa tlase, matshwao, jalo le jalo) mo ditshwantshong tse di tsentsweng mo Wikimedia Commons ke dikgaisano tsa Wiki Loves."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr "<strong>Za začetek kliknite Razišči kampanje!</strong>"
+msgstr "<strong>tobetsa mo go Explore Campaigns go simolola!</strong>"
 
 #: templates/main/home.html:18
 msgid "Go to the campaign directory to choose a campaign"
-msgstr "Pojdite v imenik kampanj, da izberete kampanjo"
+msgstr "Tsaela ko leaaneng la letsholo gore o tlhophe letsholo"
 
 #: templates/main/home.html:18
 msgid "EXPLORE CAMPAIGNS"
-msgstr "RAZIŠČI KAMPANJE"
+msgstr "Kanoka matsholo"
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr "O tem orodju"
+msgstr "Ka ga Sedirisiwa se"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr "Dolgoročni namen orodja je povečati uporabo znanja, ki ga zagotavlja vsaka slika, shranjena v Wikimedijini zbirki. "
+msgstr "Fa nako e ntse e ya, maikaelelo a sedirisiwa seno ke go oketsa tiriso ya kitso e e bonalang ke setshwantsho sengwe le sengwe se se mo Wikimedia Commons. "
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "Orodje je namenjeno povečanju uporabnosti in dostopa do informacij o slikah, doniranih v natečajih Wiki Loves."
+msgstr "Sedirisiwa seno se diretswe go thusa mo go diriseng le mo tshedimosetsong ya ditshwantsho tse di abetsweng ka nako ya dikgaisano tsa Wiki Loves."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr "Sprva je bilo ustvarjeno za pomoč pri opisih slik Wiki Loves Africa, vendar je bilo posebej zasnovano tako, da bo uporabno za vse natečaje Wiki Loves in zunaj njih."
+msgstr "Kwa tshimologong se ne se agelwa go thusa mo ditlhalosong tsa ditshwantsho tsa Wiki Loves Africa, mme e dirilwe ka tsela e e kgethegileng go nna mosola mo dikgaisanong tsotlhe tsa Wiki Lovos le kwa ntle."
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr "Orodje je zasnovano tudi kot gostitelj natečajev z mikroprispevki, ki jih predlagajo vodje projektov."
+msgstr "Sedirisiwa seno gape se diretswe go nna setlhopha sa dikgaisano tsa go tsenya letsogo tse dinnye tse di akantshiwang ke baeteledipele ba porojeke."
 
 #: templates/main/home.html:26
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "ISA je plod sodelovanja med »Wiki in Africa«, projektom »Histropedia« in projektom »Structured Data on Commons«."
+msgstr "ISA ke tirisanommogo magareng ga Wiki In Africa, Histropedia le porojeke ya Structured Data on Commons."
 
 #: templates/main/home.html:27
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr "ISA ni le kratica za ''Information Structured Acceleration'', ampak je tudi beseda v jeziku čišona za »postaviti« ali »mesto«."
+msgstr "ISA ga se fela khutshwafatso ya Information Structured Acceleration, mme gape ke lefoko la puo ya se-ChiShona la 'go tsenya' kgotsa 'lefelo'."
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr "Domov"
+msgstr "Tsebe ya gae"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr "Ustvari novo"
+msgstr "Tlhama tse disha"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr "Pomoč"
+msgstr "Thuso"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr "Spremenite razpoložljive jezike napisov"
+msgstr "Fetola diteme gago tse mafoko a a fa tlase"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr "Jezikovne nastavitve"
+msgstr "Diteme tsa ikgethelo"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr "Oglejte si svoje kampanje"
+msgstr "Bona matsholo a gago"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr "Moje kampanje"
+msgstr "Matsholo ame"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr "Odjava"
+msgstr "Tswaya"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr "Prijava"
+msgstr "Tsena"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr "Orodje ISA"
+msgstr "Sedirisiwa sa ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "je bila razvita kot sodelovanje med »Wiki in Africa«, projektom »Histropedia« in projektom »Structured Data on Commons«."
+msgstr "E tlhamilwe ele tirisanommogo magareng ga Wiki In Africa, Histropedia le porojeke ya Structured Data on Commons."
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr "Teče na"
+msgstr "E bereka mo"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr "in je predmet"
+msgstr "mme o laolwa ke"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr "ISA je objavljena pod licenco"
+msgstr "ISA e gatisitswe ka fa tlase ga"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr "Vsebina, dodana s tem orodjem v Wikimedijini zbirki, je objavljena pod licenco"
+msgstr "Tshedimosetso e e tsentsweng ka sedirisiwa mo Wikimedia Commons e golotswe ka fa tlase ga"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr "Vaše kampanje"
+msgstr "Matsholo a gago"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr "Tu je seznam vaših kampanj"
+msgstr "Fa tlase go na le lenaane la matsholo a gago"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr "Nimate nobene kampanje"
+msgstr "Ga o na matsholo ape"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
@@ -1231,99 +1231,99 @@ msgstr ""
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr "Jezikovne nastavitve"
+msgstr "Diteme tsa ikgethelo"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr "Jezik prikazov"
+msgstr "Ditshwantsho tsa puo"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr "Izbrani jezik bo uporabljen za iskanje elementov, prikazanih na slikah."
+msgstr "Puo e e tlhophilweng e tla dirisiwa go batlisisa dilo tse di bontshitsweng mo ditshwantshong."
 
 #: templates/users/user_settings.html:15
 msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
-msgstr "Če boste izbrali »Enako kot vmesnik«, bo uporabljen jezik, izbran v zgornjem meniju."
+msgstr "Fa &quot;Go tshwana le interface&quot; go tlhophiwa puo e e tlhophilweng mo menong e e kwa godimo e tla dirisiwa."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
-msgstr "Izberite do 6 jezikov za napise"
+msgstr "Tlhopha diteme dile thatataro tsa mafoko a a kwa tlase"
 
 #: templates/users/user_settings.html:19
 msgid "Caption Languages"
-msgstr "Jeziki napisov"
+msgstr "Diteme tsa mafoko a a kwa tlase"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
-msgstr "Za vsako sliko lahko dodate napise v več jezikih."
+msgstr "Mafoko a a kwa tlase a ka tsenngwa ka diteme di le dintsi mo setshwantshong sengwe le sengwe."
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr "Jeziki, ki jih boste izbrali na tej strani, bodo prikazani na strani, ko si boste ogledovali sliko."
+msgstr "Diteme tse o di tlhophileng mo tsebeng ye di tlaa tlhagelela mo tsebeng fa o lebile setshwantsho."
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
-msgstr "Izberite vse jezike, v katerih želite prispevati."
+msgstr "Tlhopha dipuo tsotlhe tse o ikutlwang o gololesegile go nna le seabe mo go tsone."
 
 #: templates/users/user_settings.html:23 templates/users/user_settings.html:29
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr "Odstrani jezik"
+msgstr "Ntsha teme"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr "Razveljavi spremembe jezikovnih nastavitev"
+msgstr "Dirolola diphetogo mo dipaakanyo tsa teme"
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr "Razveljavi spremembe"
+msgstr "Dirolola diphetogo"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr "Enako kot vmesnik"
+msgstr "Fela jaaka interface"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr "Povratni klic OAuth ni uspel. Imate onemogočene piškotke?"
+msgstr "OAuth callback e retetse. A di cookies di thibetswe?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr "Pozdravljeni, %(username)s!"
+msgstr "Amogelesega %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "Se vidimo naslednjič!"
+msgstr "Are kopane mo nakong ye e tlang!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr "Za spremembo svojih jezikovnih nastavitev se prijavite."
+msgstr "Tsweetswee tsena mo Internet go fetola puo e o e ratang"
 
 #: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr "Oprostite, %(rep_languages)s ste poskusili vnesti večkrat"
+msgstr "Ke maswabi o lekile go tsenya %(rep_languages)s ka makgetlo a le mantsi"
 
 #: users/routes.py:157
 msgid "Captions languages could not be set"
-msgstr "Jezikov napisov ni bilo mogoče določiti"
+msgstr "Diteme tsa mafoko a a fa tlase ga di a ka tsa tsena"
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
-msgstr "Želeni jeziki so uspešno nastavljeni"
+msgstr "Dipuo Tse di Rategang Di rulagantswe ka Katlego"
 
 #: users/routes.py:172
 msgid "Language settings not available at the moment"
-msgstr "Jezikovne nastavitve trenutno niso na voljo"
+msgstr "Dipaakanyo tsa diteme ga diyo ka sebaka se"
 
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr "%(username)s — Nastavitve"
+msgstr "%(username)s's - Dipaakanyo"
 
 #: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr "Kampanje, ki jih je ustvaril_a %(username)s"
+msgstr "Matsholo a tlhamilwe ke %(username)s"
 

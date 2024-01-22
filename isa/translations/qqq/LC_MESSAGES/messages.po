@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Ajeje Brazorf
+# Author: Amire80
 # Author: Bennylin
 # Author: Pols12
 # Author: Robby
@@ -13,7 +14,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-12-07 12:46:38+0000\n"
+"PO-Revision-Date: 2024-01-22 12:28:31+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -581,11 +582,11 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "\"Prominent\" should be consistent with these messages:\n* {{msg-mw|Wikibasemediainfo-statements-item-is-prominent}}\n* {{msg-mw|Wikibasemediainfo-statements-item-mark-as-prominent}}"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "\"Prominent\" should be consistent with these messages:\n* {{msg-mw|Wikibasemediainfo-statements-item-is-prominent}}\n* {{msg-mw|Wikibasemediainfo-statements-item-mark-as-prominent}}"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -1098,7 +1099,7 @@ msgstr ""
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr "{{discuss term|it|language=id}}\n\n[[Wikimedia:Isa-ef38d1-It is running on tools.wmflabs/id]]\n\nWhat does it refer to? My language need to specify what \"it\" is."
+msgstr "\"It\" refers to the ISA tool itself."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
@@ -1231,7 +1232,7 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "{{notranslate}}"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"

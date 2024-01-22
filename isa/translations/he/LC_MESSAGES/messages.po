@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-15 12:26:22+0000\n"
+"PO-Revision-Date: 2024-01-22 12:28:29+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -162,7 +162,7 @@ msgstr "יש להגדיר את העומק ל־0 עבור כל הקטגוריות
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr ""
+msgstr "דורש קטגוריות בצורת <span dir=\"ltr\">images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong></span>, למשל <span dir=\"ltr\">Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong></span> (חובה לשנות את <strong><em>project</em></strong> ואת השנה)"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
@@ -226,7 +226,7 @@ msgstr "נא לבחור איזה סוג של <strong>מטא־נתונים</stron
 
 #: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
-msgstr ""
+msgstr "יש לבחור לפחות אחת מהאפשרויות שלהלן."
 
 #: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data see the help page."
@@ -514,27 +514,27 @@ msgstr "כדי לסמן את הרכיבים הבולטים בתמונה, יש ל
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr ""
+msgstr "כתיבת כיתובים"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr ""
+msgstr "יש לכלול כל מידע התרבותי, המדעי או הטכני שהצלחת לזהות (למשל \"טקס הקפה האתיופי או בונה מפלט\") כדי להעשיר את המידע."
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr ""
+msgstr "יש להיכנס כדי לפרסם שינויים"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr ""
+msgstr "נא להוסיף כיתוב כדי להסביר טוב יותר את התמונה (מקסימום 255 תווים)"
 
 #: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
-msgstr ""
+msgstr "נא להסביר בקצרה מה רואים בתמונה הזאת."
 
 #: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr ""
+msgstr "ניתן להוסיף כיתובים בשפות נוספות על־ידי בחירת העדפות שפה מתפריט המשתמש"
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
@@ -546,43 +546,43 @@ msgstr "משהו השתבש בעת שליפת תמונות המיזם"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "נא לחפש דברים שרואים בתמונה"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr ""
+msgstr "מזעור מטא־נתונים מוויקישיתוף"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "זה עבד! הפריטים המתוארים נשמרו בוויקישיתוף"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
+msgstr "זה עבד! הכיתובים נשמרו בוויקישיתוף"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "אופס! משהו השתבש, העריכות שלך לא נשמרו בוויקישיתוף"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "האם ברצונך באמת לנווט לתמונה אחרת? יש לך שינויים שלא נשמרו שיאבדו."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "יש ללחוץ על \"אישור\" כדי להמשיך בכל זאת, או על \"ביטול\" אם ברצונך לשמור את השינויים תחילה."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "להסיר את הפריט המתואר הזה"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "לסמן את הפריט המתואר בתור בולט"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "לסמן את הפריט המתואר בתור לא בולט"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -712,7 +712,7 @@ msgstr "חובה להיכנס לחשבון כדי ליצור מיזם."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "מוצגות רשומות מ־_START_ עד _END_ מתוך _TOTAL_"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
@@ -827,95 +827,95 @@ msgstr "<strong>ISA</strong> זהו כלי מהנה, רב־לשוני, מיוע�
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "ISA נבנה במקור כדי לספק תיאורים רב־לשוניים ומבניים טובים יותר של תמונות <a %(link_attrs)s>ויקי אוהבת את אפריקה</a>."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "אבל הוא פותח גם כדי להיות שימושי לכל <a link_attrs>התחרויות מסוג \"ויקי אוהבת\"</a> ובסופו של דבר <strong>לכל קובצי המדיה</strong> בוויקישיתוף."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "מהו ויקישיתוף?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>ויקישיתוף</strong> (ידוע גם בשם \"Commons\") הוא מיזם ויקימדיה, מיזם אחות של ויקיפדיה, ואוסף של יותר מ־40 מיליון קובצי מדיה חופשיים."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "כל התמונות, קובצי השמע והווידאו, קובצי PDF ומדיה אחרת ברישיון חופשי בוויקיפדיה מאוחסנת בוויקישיתוף."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "ויקישיתוף צומח במהירות, בכ־5 מיליון קובצי מדיה חדשים בשנה."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "אלפי מתנדבים מעלים קבצים לויקישיתוף, ומשלבים אותם במיזמים של ויקימדיה, כגון ויקיפדיה, כדי להמחיש את התוכן שם ולשתף את המדיה הזאת עם הציבור."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr ""
+msgstr "קובצי מדיה בוויקישיתוף הם בדרך־כלל:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "צילום אישי ומדיה שהועלו על־ידי יחידים, לפעמים במהלך תחרויות \"ויקי אוהבת\" כגון \"ויקי אוהבת את אפריקה\", \"ויקי אוהבת אתרי מורשת\", \"ויקי אוהבת את כדור הארץ\" וכו'"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "קובצי מדיה ברישיון חופשי מאתרים חיצוניים כמו פליקר, יוטיוב, כתבי־עת בגישה חופשית ומאגרים אחרים; וגם"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "תרומות ממוסדות וארגונים בעלי אוספי תקשורת משמעותיים, גדולים כקטנים, החל מאונסקו, נאס\"א והספרייה הבריטית ועד למוסדות תרבות מקומיים קטנים."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "מהם נתונים מבניים בוויקישיתוף?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>נתונים מבניים בוויקישיתוף</strong> הוא פרויקט המספק את התשתית הטכנית שמשלים את קוד הוויקי, התבניות והקטגוריות בוויקישיתוף עם נתונים מבניים."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "נתונים מבניים הם נתונים עם רמה גבוהה של ארגון מובנה."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "עם יותר מבנה, קל יותר לעשות שימוש חוזר בנתונים במיזמים אחרים של ויקימדיה ועל־ידי צדדים שלישיים; זה גם מאפשר למחשבים לעבד ו\"להבין\" אותו."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "נתונים מבניים הוא פרויקט מתמשך שהושק ב־2019! … בעוד ויקישיתוף קיים כבר שנים!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "יש ממש מיליוני תמונות שמתארחות בוויקישיתוף... שזקוקות לתשומת לב ואהבה."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "מיליוני תמונות שאינן מתוארות בנתונים מבניים כרגע."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr ""
+msgstr "איך אנחנו הולכים לעשות את זה?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "<strong>אוצרות</strong> (באנגלית: curation או curating), במובן הצר, פירושה: בחירה וארגון של יצירות אמנות ומורשת תרבותית לתערוכה."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "ניתן להשתמש במונח הזה גם בצורה רחבה יותר, כדי לתאר כל פעילות הכרוכה בבחירה, ארגון והצגה של מידע."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "בהקשר של נתונים מבניים בוויקישיתוף, אוצרות היא מכלול הפעילויות שעושים התורמים לוויקישיתוף כדי לארגן ולהציג את קובצי המדיה בוויקישיתוף: פעולות ניהול, הוספת מטא־נתונים נוספים וטובים יותר לקבצים, מיון שלהם בקטגוריות, יצירת גלריות..."
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr ""
+msgstr "אז... איך כלי ISA משתלב בכל זה?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
@@ -943,7 +943,7 @@ msgstr "לאחר מכן, המתאם יכול לבקש מהתורמים \"לתי�
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr ""
+msgstr "נקודות נספרות עבור כל תרומה של משתתף, ולכן ניתן לארגן תחרויות או אתגרים של \"תיוג\" או תרומות זעירות (microcontributions) או אתגרים עם ISA."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
@@ -951,79 +951,79 @@ msgstr "כל מי שיש לו חשבון ויקימדיה יכול לתרום ל
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr ""
+msgstr "הדרישה היחידה היא... להיכנס לחשבון."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "מידע נוסף על נתוני \"כיתוב\" ו\"מוצג\" של קבצים"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "\"כיתובים\" של קובץ הוא מאפיין של נתונים מובנים."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "הם נועדו לאחסון תיאור קצר ורב־לשוני של קבצים."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "מהו כיתוב טוב? ומה ההבדל בין תיאורי הקבצים הישנים והטובים שלנו? לבין הכיתובים"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "ראשית, הכיתובים אמורים להיות פשוטים וקצרים."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "בעוד שהתיאורים יכולים להיות מאוד רחבים, הכיתובים מוגבלים באורך ל־255 תווים, ואינם יכולים להכיל סימון (markup, כגון קישורים בוקד ויקי או HTML) ואינם תומכים בקישורים חיצוניים."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "במקרים רבים, הכיתוב יהיה דומה או זהה לתיאור."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "אבל במקרים אחרים, יש תיאור נרחב מאוד (858 תווים, וקישורים) והכיתוב קצר בהרבה (פחות או יותר אותו כיתוב המשמש בערכי ויקיפדיה באמצעות התמונה הזאת)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "יש להעתיק לכיתובים רק טקסט כה קצר עד שאינו יכול להיות מוגבל בזכויות יוצרים, שכן הכיתובים מתפרסמים לפי תנאי רישיון ויתור CC0 (\"נחלת הכלל\")."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "אחד היתרונות המרכזיים של כיתובים הוא שיפור יכולת החיפוש המודעת לשפה."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "תיאורי קבצים קלאסיים מאוחסנים כקוד ויקי, ואפשר לחפש בהם רק באמצעות חיפוש בטקסט מלא, המחפש בהכרח את כל תוכן הדף, כולל קטגוריות ותבניות רישיון; ולא ניתן לבצע שם חיפוש לפי שפה."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "הכיתובים זמינים כחלק מהנתונים המבניים שלנו, בעוד שהתיאורים לא."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "במונחים טכניים, תיאור הוא קוד ויקי רגיל שעטוף בתבנית שפה, ועטוף שוב בתבנית מידע; בעוד כיתובים הם תוויות Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "בהיותם כאלה, יהיה אפשר לחיפושים בכיתובים דרך ה־API, מה שמקל על איתור, סינון ושליפה של כיתובים מקבצים כמטא־נתונים."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "מכיוון שאפשר לחפש בהם באמצעות ה־API, קל יותר גם למי שעושה שימוש חוזר למצוא ולהשתמש במדיה ובכיתובים עצמם."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "שימושים אפשריים נוספים בכיתובים יכולים להיות:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "מילוי תיבות מידע"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "קובצי שאילתות עבור כיתובים חסרים בשפה נתונה"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
@@ -1031,15 +1031,15 @@ msgstr "בניית רשימות לתרגום של קבצים חשובים הזק
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "יש מידע נוסף על כיתובים כאן"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr ""
+msgstr "\"מוצג\" הוא גם מאפיין של נתונים מובנים."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "זה הופעל בוויקישיתוף באפריל 2019."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box to get started."
@@ -1047,19 +1047,19 @@ msgstr "כדי להוסיף קביעת \"מוצג\", צריך פשוט להתח�
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr ""
+msgstr "לאחר מכן, עבור כל פריט שמוצג בתמונה, יש למצוא את הפריט המתאים מוויקינתונים ולבחור בו."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr ""
+msgstr "אם קשה לך למצוא את פריט הוויקינתונים הנכון, נא לנסות איות חלופי."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr ""
+msgstr "אם אין פריט ויקינתונים שקשור לנושא המתואר, יש לבחור פריט כללי יותר הכולל את הנושא שלך כדוגמה."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr ""
+msgstr "נא להיות כמה שיותר ספציפי עם התג הראשי."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
@@ -1067,47 +1067,47 @@ msgstr "אם ישנם fnv פריטים המתוארים בצורה ברורה ו
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr ""
+msgstr "עבור קבצים שמציגים עשרות או מאות פריטים (למשל סרטים), יש רשום רק את הפריטים הבולטים ביותר."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr ""
+msgstr "ישנה גם אפשרות לסמן פריט מסוים כ\"בולט\"."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "המאפיין הזה מתייחס לבולטות של הפריט בתוך המדיה."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "ניתן למצוא מידע נוסף על \"מוצג\" כאן:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "שימוש בכלי ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "ניתן למצוא מידע נוסף כאן:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "מידע משפטי וקרדיטים"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr ""
+msgstr "הוא פועל באתר tools.wmflabs.org, וכפוף לתנאי השימוש של שירותי ענן של ויקימדיה."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA מתפרסם לפי התנאים של GPLv3. תוכן שנוסף דרך הכלי לוויקישיתוף משוחרר לפי תנאי CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "תמונה בשימוש בכלי:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "הוספת קלה של מידע על תמונות בוויקישיתוף"
 
 #: templates/main/home.html:15
 #, python-format
@@ -1136,23 +1136,23 @@ msgstr "בטווח הארוך, הכוונה מאחורי הכלי היא להג�
 
 #: templates/main/home.html:23
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "הכלי נועד לסייע בשימושיות ובמידע של תמונות שנתרמו במהלך תחרויות \"ויקי אוהבת\"."
 
 #: templates/main/home.html:24
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "הוא נבנה בתחילה כדי לסייע בתיאורים של תמונות \"ויקי אוהבת את אפריקה\", אך מתוכנן עם כוונה להיות שימושי לכל תחרויות \"ויקי אוהבת\" ואף מעבר לכך."
 
 #: templates/main/home.html:25
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr ""
+msgstr "הכלי נועד גם להיות שורה של תחרויות תרומות זעירות המוצעות על־די מובילי מיזמים."
 
 #: templates/main/home.html:26
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ISA הוא שיתוף פעולה בין פרויקט Wiki In Africa, פרויקט Histropedia ופרויקט נתונים מבניים בוויקישיתוף."
 
 #: templates/main/home.html:27
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA הוא לא רק ראשי תיבות של Information Structured Acceleration, אלא היא גם מילה בשפת שוֹנה, שפירושה \"לשים\" או \"למקם\"."
 
 #: templates/main/layout.html:33
 msgid "Home"
@@ -1274,19 +1274,19 @@ msgstr "הסרת שפה"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "לבטל שינויים בהגדרות השפה"
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr ""
+msgstr "לבטל שינויים"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "זהה לממשק"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "המענה (callback) של OAuth נכשל. האם העוגיות כבויות?"
 
 #: users/routes.py:74
 #, python-format
@@ -1295,28 +1295,28 @@ msgstr "ברוך בואך %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "נתראה בפעם הבאה!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "יש להיכנס לחשבון כדי לשנות את העדפות השפה שלך."
 
 #: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "מצטערים, ניסית להזין %(rep_languages)s כמה פעמים"
 
 #: users/routes.py:157
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "לא ניתן להגדיר את שפות הכיתובים"
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
-msgstr ""
+msgstr "השפות המועדפות הוגדרו בהצלחה"
 
 #: users/routes.py:172
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "הגדרות השפה אינן זמינות כרגע"
 
 #: users/routes.py:174
 #, python-format

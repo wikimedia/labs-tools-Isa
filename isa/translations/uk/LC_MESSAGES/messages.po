@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-12-07 12:46:39+0000\n"
+"PO-Revision-Date: 2024-01-22 12:28:32+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1229,7 +1229,7 @@ msgstr "У вас немає кампаній"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr "№"
+msgstr ""
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"

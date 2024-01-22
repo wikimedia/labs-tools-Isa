@@ -3,6 +3,8 @@
 #
 # Author: Ajeje Brazorf
 # Author: Anthere
+# Author: Anthere2
+# Author: Daddy Tim Tim
 # Author: Gomoko
 # Author: Paraboule
 # Author: Pols12
@@ -19,7 +21,7 @@ msgstr ""
 "Project-Id-Version: ISA 0.1.0\n"
 "Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2023-12-07 12:46:36+0000\n"
+"PO-Revision-Date: 2024-01-22 12:28:29+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -52,7 +54,7 @@ msgstr "Vous devez vous connecter pour créer une campagne"
 #: campaigns/routes.py:217
 #, python-format
 msgid "Sorry %(campaign_name)s Could not be created"
-msgstr "Désolé, %(campaign_name)s n’a pas pu être créée"
+msgstr "Désolé, la campagne %(campaign_name)s n’a pas pu être créée"
 
 #: campaigns/routes.py:225
 #, python-format
@@ -1241,7 +1243,7 @@ msgstr "Vous n’avez aucune campagne"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr "#"
+msgstr "Je suis là."
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
