@@ -9,13 +9,16 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-22 12:28:32+0000\n"
+"PO-Revision-Date: 2024-01-25 12:26:49+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tn\n"
-"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-12-01\n"
+"X-Generator: MediaWiki 1.42.0-alpha; Translate 2024-01-22\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: ISA\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
@@ -821,7 +824,7 @@ msgstr "Tsenya ditlhaloso tsa ditshwantso motlhofo mo Wikimedia Commons"
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> ke sedirisiwa se se mkgatlhisang, sa dipuo di le dintsi, se se dirang gore go nne motlhofo gore batho ba tsenye \"diabe tse dipotlana\" ka sebopego sa <a %(link_attrs)s=\"\">tshedimosetso e e rulagantsweng</a> mo ditshwantshong tsa Wikimedia Commons tse di tsentsweng ke dikgaisano tsa Wiki Loves."
+msgstr "<strong>ISA</strong> ke sedirisiwa se se kgatlhisang, sa dipuo di le dintsi, se se dirang gore go nne motlhofo gore batho ba tsenye \"diabe tse dipotlana\" ka sebopego sa <a %(link_attrs)s>tshedimosetso e e rulagantsweng</a> mo ditshwantshong tsa Wikimedia Commons tse di tsentsweng ke dikgaisano tsa Wiki Loves."
 
 #: templates/main/help.html:19
 #, python-format

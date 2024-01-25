@@ -10,13 +10,16 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-22 12:28:29+0000\n"
+"PO-Revision-Date: 2024-01-25 12:26:46+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: dag\n"
-"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-12-01\n"
+"X-Generator: MediaWiki 1.42.0-alpha; Translate 2024-01-22\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: ISA\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
@@ -166,7 +169,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr ""
+msgstr "Yaɣ'shɛŋa din pii gbunni ŋɔ maa sintasi pa viɛnyɛla"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
@@ -174,7 +177,7 @@ msgstr "Yaɣ'shɛŋa din yɛn zaŋ tum tuma campaign ŋɔ ni"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr ""
+msgstr "Vihimi wikimedia commons yaɣ'shɛŋa din mali anfooni shɛŋa ani yu ni niŋ a campaign"
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
@@ -347,22 +350,22 @@ msgstr ""
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr ""
+msgstr "Ŋun tohi"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
-msgstr ""
+msgstr "Ban yina maa so bi tohi ti campaign ŋɔ maa"
 
 #: templates/campaign/campaign.html:74
 #: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
-msgstr ""
+msgstr "Tindu'shɛŋa din ti tooni"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
 msgid "Country"
-msgstr ""
+msgstr "Tingbani"
 
 #: templates/campaign/campaign.html:97
 #: templates/campaign/campaign_stats.html:94
@@ -379,11 +382,11 @@ msgstr ""
 
 #: templates/campaign/campaign.html:116
 msgid "My Contributions"
-msgstr ""
+msgstr "N tohibu"
 
 #: templates/campaign/campaign.html:123
 msgid "Rank"
-msgstr ""
+msgstr "Dariza"
 
 #: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
@@ -407,11 +410,11 @@ msgstr "Di bi zali"
 
 #: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
-msgstr ""
+msgstr "Niŋmi taɣibu pahi campaign maa ni"
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
-msgstr ""
+msgstr "Mali mi campaign maa niŋ"
 
 #: templates/campaign/campaign.html:162
 msgid "Unknown country"
@@ -441,7 +444,7 @@ msgstr "Maŋmaŋ tuma"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr ""
+msgstr "Lihi mi anfooni din paya"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:103
@@ -492,17 +495,17 @@ msgstr "Nyahima"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr ""
+msgstr "Zaŋ mi a mali niŋ maa pahi wikimedia commons"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:58
 msgid "Save"
-msgstr ""
+msgstr "Zaŋ niŋ"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr ""
+msgstr "Di ni labisi a ka a labi kpe ka labina kpe ti zaŋ a taɣibu nim pahi"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
@@ -514,7 +517,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr ""
+msgstr "Sabbu sabiri kpana"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
@@ -522,15 +525,15 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr ""
+msgstr "Kpema ti zaŋ a taɣibu nim wuhi"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr ""
+msgstr "Pahimi yɛltɔɣa kpani n kahigi anfooni (max 255 characters) maa viɛnyɛla"
 
 #: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
-msgstr ""
+msgstr "Kahigimi jo nti a ni nya shɛli anfooni ŋɔ ni"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
@@ -538,19 +541,19 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr ""
+msgstr "Di bi nya anfooni shɛli ti campaign ŋɔ maa"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "Binyɛri shɛli bi chaŋ ni di nya campaign maa anfooni nima"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "Vihi mi binshɛŋa a ni nya anfooni maa ni"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr ""
+msgstr "filim mi metadata n yi commons"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"

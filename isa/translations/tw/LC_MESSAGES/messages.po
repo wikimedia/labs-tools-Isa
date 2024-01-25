@@ -10,13 +10,16 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-22 12:28:32+0000\n"
+"PO-Revision-Date: 2024-01-25 12:26:50+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tw\n"
-"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-12-01\n"
+"X-Generator: MediaWiki 1.42.0-alpha; Translate 2024-01-22\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: ISA\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
@@ -538,392 +541,392 @@ msgstr "Wobεtumi de nsεmti adi dwuma wɔ kasa afoforo mu denam Kasa Ntotoho a 
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr ""
+msgstr "Mfonin biara a ɛfa ɔsatu yi nni hɔ!"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "Biribi kɔɔ bɔne wɔ ɔsatu ho mfonin a woyii no"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "Hwehwɛ nneɛma a wuhu wɔ mfonin no mu"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr ""
+msgstr "te nsεm a efi commons mu no so"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "Anigyesɛm! Nneɛma a wɔayɛ ho mfonini a wɔakora so wɔ Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
+msgstr "Anigyesɛm! Nsɛmti a wɔakora so wɔ Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "Oops! Biribi ankɔ yie, wɔankora wo nsakraeɛ no so wɔ Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "Nti wogye di sɛ wopɛ sɛ wokɔ mfonin foforo so? Wowɔ nsakraeɛ a wɔankora so a ɛbɛyera."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "Klik 'OK' na toa so ɔkwan biara so, anaa 'Twam ' sɛ wopɛ sɛ wodi kan sie nsakraeɛ a."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "Yi ade a wɔayi no yi firi hɔ"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "Hyɛ ade a wɔayɛ ho mfonin yi agyirae sɛ ɛda nsow"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "Hyɛ ade a wɔayɛ ho mfonin  yi agyirae sɛ ƐNYƐ nea ɛda nsow"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr ""
+msgstr "NTOBOA A WƆDE MA ƆSATUO YƐBEA HO NSƐM"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr ""
+msgstr "Efi"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr ""
+msgstr "Kɔsi"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
-msgstr ""
+msgstr "Twe akontaabu nyinaa (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
-msgstr ""
+msgstr "Wɔn a Wɔboa Ho Nsɛm"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
-msgstr ""
+msgstr "Ɔman no Akontaabu"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr ""
+msgstr "Saa kratafa yi mu no, yɛahyehyɛ ɔsatu ahodoɔ a yɛreyɛ no seesei sɛ ISA mfidie no fã."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr ""
+msgstr "Klik ɔsatu no din so na fa fi ase na fa nsεm yεbea ka mfoni ho."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr ""
+msgstr "Wobεtumi anya nsɛm a ɛfa Ɔsatu ahorow a atwam no ho wɔ Archive ɔfã no mu."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr ""
+msgstr "Ɔsatu Ahodoɔ a Ɛkɔ So"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr ""
+msgstr "Ɔsatu no din"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr ""
+msgstr "Ɔsatuo"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Mfonin dodow a ɛwɔ ɔsatu no mu"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Samufoɔ dodow a wɔaboa wɔ ɔsatu no mu "
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr ""
+msgstr "Wɔn a wɔde wɔn ho hyɛɛ mu"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr ""
+msgstr "Ntoboa dodow a wɔde mae wɔ ɔsatu yi mu"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr ""
+msgstr "Da a wofi ɔsatu no ase"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr ""
+msgstr "Da a wɔde ɔsatu no ɛba awiei"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr ""
+msgstr "Da a wɔyɛɛ ɔsatu no"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr ""
+msgstr "Da a Wɔyɛɛ No"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr ""
+msgstr "Ɔsatu dibea"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr ""
+msgstr "Dibea"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr ""
+msgstr "Apɔn"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr ""
+msgstr "Mmueε"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr ""
+msgstr "Bue"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr ""
+msgstr "Kɔ ɔsatu no dwumadibea no so na fi ase"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr ""
+msgstr "Kɔ Ɔsatu no so"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr ""
+msgstr "Kyerɛ ɔsatu ahodoɔ a wapɔn"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr ""
+msgstr "Yɛ w’ankasa ɔsatuo"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr ""
+msgstr "Fa saa akadeε yi yɛ ɔsatu foforo"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr ""
+msgstr "Ɛsɛ sɛ wokɔ mu na woatumi ayɛ ɔsatu."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Wode _START_ kɔ _END_ kyerɛ _Total_ nsɛm"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr ""
+msgstr "Wɔnkyerɛwee nsɛm biara"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr ""
+msgstr "Hwehwɛ"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr ""
+msgstr "Wannya kyerɛwtohɔ biara a ɛne no hyia"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr ""
+msgstr "Deɛ ɛdi kan"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr ""
+msgstr "Dea ɛtwa toɔ"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr ""
+msgstr "Deɛ ɛdi hɔ"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr ""
+msgstr "Kane"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr ""
+msgstr "Mfonin a wɔsakra no"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr ""
+msgstr "Wɔsakra mfonin ahodoɔ a ɛwɔ ɔsatu yi mu no"
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr ""
+msgstr "Wɔde mfonin foforo bɛka ho."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr ""
+msgstr "Wo da so ara bεtumi de wo ho ahyɛ ɔsatu no mu."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr ""
+msgstr "Woantumi ansakra mfonin ahorow no"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
-msgstr ""
+msgstr "Mfomso bae bere a yɛsakra mfoni ahodoɔ a ɛwɔ ɔsatu yi mu no."
 
 #: templates/campaign/macros.html:8
 msgid "Some images will be missing."
-msgstr ""
+msgstr "Mfoni ahodoɔ bi bɛyera."
 
 #: templates/campaign/macros.html:8
 msgid "The campaign manager can retry by updating the campaign."
-msgstr ""
+msgstr "Ɔsatu hwɛsofo no bεtumi asan asɔ ahwɛ bio a sakra  ɔsatu no."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr ""
+msgstr "Server no Wɔ nsiesie ase"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr ""
+msgstr "Yɛsrɛ wo hwɛ contact mmoa."
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr ""
+msgstr "Fa mekɔ fie"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr ""
+msgstr "Wo ne Mmoa no nni nkitaho"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr ""
+msgstr "Ɔfa yi nni hɔ"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "Yɛntumi anhunu fa a worehwehwɛ no"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr ""
+msgstr "Fa mekɔ fie"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr ""
+msgstr "Bibi ankɔ yie"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "ISA wɔ nsiesie ase"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr ""
+msgstr "Mmoa Kratafa"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr ""
+msgstr "ɛnyɛ den sɛ wode mfonini ahorow ho nsɛm bɛka ho wɔ Wikimedia Commons"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> yɛ anigyeɛ, kasa ahodoɔ, mobile-kane akadeɛ, a ɛma ɛyɛ mmerɛ ma nkurɔfoɔ sɛ wɔde \"micro contributions\" bɛka ho wɔ <a %(link_attrs)s>nsεm yɛbea</a> wɔ mfonin a ɛwɔ Wikimedia Commons a Wiki Loves akansiɛ de aka ho."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "Mfitiaseɛ no wɔkyekyeree iSA sɛ ɛbɛma <a %(link_attrs)s>Wiki Loves Africa</a> mfonini ahodoɔ ho nkyerɛkyerɛmu a ɛyɛ papa wɔ kasa ahodoɔ ne nhyehyɛeɛ"
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Nanso, wɔsan ayɛ no sɛ ɛbɛboa <a link_attrs>Wiki Loves akansi</a> no nyinaa, ne akyiri no, ama <strong>dawurobɔ dwuma nsεm </strong> nyinaa wɔ Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "Ɛdeɛn ne Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>Wikimedia Commons</strong> (a wɔsan frɛ no 'Commons') yɛ Wikimedia dwumadie, Wikipedia nua dwumadie, ne nneɛma a ɛboro ɔpepepem aduanan a wɔagye ato hɔ wɔ dawurobɔ dwuma nsεm so."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "Mfonini, ɔdio ne video fael, PDF ne nsɛm ho amanneɛbɔ afoforɔ a wɔama ho tumi krataa nyinaa wɔ Wikipedia so, a wɔde asie Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "Wikimedia Commons nyin ntɛmntɛm, bɛyɛ ɔpepem anum afe biara."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Mpempem pii atuhoakyɛfoɔ de fael ahodoɔ kɔ Commons, na wɔde weinom ka Wikimedia nnwuma ho, te sɛ Wikipedia, de kyerɛ nneɛma a ɛwɔ hɔ no na wɔde saa nsɛm no ho amanneɛbɔ no ma ɔmanfoɔ."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr ""
+msgstr "Nsɛm ho amanneɛbɔfo\n fael ahodoɔ a ɛwɔ Commons so no taa yɛ:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "Ankorankoro mfonin ne nsɛm ho amanneɛbɔ a ankorankoro de to so ɛtɔ bere bi a wɔ Wiki Dɔ akansi ahodoɔ te sɛ Wiki Dɔ Afrika, Wiki Dɔ Nkaedum, Wiki Dɔ Asase ne nea ɛkeka ho;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "Dawurobɔ dwuma nsεm ahodoɔ a wɔama ho tumi krataa a wontua hwee a efi amansan ntontan kεseε ahodoɔ te sɛ Flickr, YouTube,daadaa amannebɔ ahodoɔ a ne pε nyε den,ne korabea ahodoɔ foforɔ; ne"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "Nyima a efi nnwumakuo ne amanneɛbɔ nsɛm a εyε adenya a ɛsom bo, akɛse ne nketewa, fiti UNESCO, NASA ne British Library de kosi mansini nketewa a wɔyɛ amammerɛ nnwumakuo."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "Dεn ne nsεm yεbea wɔ Commons?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "strong>Nsεm Yεbea wɔ Commons</strong> yɛ dwumadie a ɛde nimdeε soronko nnyinasoɔ de ka ho ɛmma wɔtumi de nsεm yεbea boa wikitext,nhyehyεeε ne nkyekyemu ahodoɔ a ɛwɔ Wikimedia Commons."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "Nsεm yεbea yε nsεm a εwɔ dibea kεseε wɔ adwumakuo a wɔn wɔ mu nimdeε."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "Sɛ dwumadie no yε bebree a, ɛyɛ mmerɛw sɛ wɔde nsεm bɛdi dwuma bio wɔ Wikimedia dwumadie foforɔ ne nea εwɔ hɔ nso adi dwuma; ɛma kɔmputa tumi de yɛ adwuma na ɛte aseε nso."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "Nsεm yεbea yɛ dwumadie a ɛkɔ so a wɔhyɛɛ ase wɔ afe 2019 mu! ... berε a Wikimedia Commons awɔ hɔ mfe pii ni!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "Mfonin ɔpepem pii na ɛwɔ Wikimedia Commons... a ehia   adwennwene ne ɔdɔ."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "Mfonin ɔpepem pii a wɔmfaa nsεm yεbea nkyerɛkyerɛ mu mprempren."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that ? "
-msgstr ""
+msgstr "Yɛbɛyɛ deɛn na yɛayɛ?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "<strong>Curating</strong> , anaa nsaanodwuma yikyerε, wɔ ntease tiawa mu no, kyerɛ: adwinni ne amammerɛ agyapade asinasin a wɔbɛpaw na wɔahyehyɛ de ayɛ ɔyɛkyerɛ."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "wei nso betumi de asɛmfua no nso adi dwuma kɛse, de akyerɛkyerɛ dwumadi biara a ɛfa nsɛm a wɔpaw, hyehyɛ na wɔde ma ho."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "Wɔ nsɛm a ɛfa Structured Data wɔ Commons ho no, curating kyerɛ dwumadi ahodoɔ a Commons mmoa a wɔde ma no yɛ nyinaa de hyehyɛ na wɔde nsɛm ho amanneɛbɔ fael ahodoɔ no kyerɛ wɔ Wikimedia Commons: adwumayɛ ho nneyɛe, metadata pii a ɛye sen biara a wɔde bɛka fael ahodoɔ no ho, akuw akuwakuw wɔ akuw mu, ayɛ galleries"
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr ""
+msgstr "Enti...ɛbɛyɛ dɛn na ISA adwinnade no ayɛ adwuma wɔ hɔ ?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "ISA adwinnade no ma kwan ma wɔde data ahorow abien a wɔahyehyɛ ka mfonini ahorow ho: nsɛm a wɔakyerɛw ne nea ɛkyerɛ (nkyerɛkyerɛmu pii wɔ ase hɔ wɔ nea nsɛm a wɔakyerɛw ne nea ɛkyerɛ yɛ ho)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "Ɛyɛ kasa pii, mobile-na edikan 'ntoboa ketewa' akadeε, a ɛma ɛyɛ mmerɛw ma nnipa sɛ wɔde nsεm yεbea bɛka mfoni a wɔde ma Wiki Loves akansi wɔ Wikimedia Commons."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
@@ -931,7 +934,7 @@ msgstr ""
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "Obiara a ɔwɔ Wikimedia akontaabu biara ayɛ ɔkwankyerɛfo!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
@@ -951,11 +954,11 @@ msgstr ""
 
 #: templates/main/help.html:79
 msgid "The only requirement is… to be logged-in."
-msgstr ""
+msgstr "Adeɛ a ahyia ne sɛ...wobɛkɔ mu."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "Sua bebree fa fael captions ne depicts ho."
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
@@ -1083,31 +1086,31 @@ msgstr ""
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "Fa ISA akadeε no di dwuma"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "Wubεtumi ahu nsɛm pii wɔ ha:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "Mmarasεm ne din pa"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
-msgstr ""
+msgstr "Ɛreyɛ adwuma wɔ tools.wmflabs.org, na ɛhyɛ Wikimedia Cloud Services Mmara a ɛfa dwumadie ho no ase."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA wɔ GPLv3 ase. Nsɛm a wɔde aka Wikimedia Commons ho no wɔ CC0 ase."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "Mfonin a wɔde dii dwuma wɔ akadeε no so :"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "ɛnyɛ den sɛ wode mfonin ahodoɔ ho nsɛm bɛka ho wɔ Wikimedia Commons"
 
 #: templates/main/home.html:15
 #, python-format
@@ -1128,7 +1131,7 @@ msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "Efa akadeε yi ho"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1156,43 +1159,43 @@ msgstr ""
 
 #: templates/main/layout.html:33
 msgid "Home"
-msgstr ""
+msgstr "Afie"
 
 #: templates/main/layout.html:44
 msgid "Create New"
-msgstr ""
+msgstr "Yε Foforo"
 
 #: templates/main/layout.html:50
 msgid "Help"
-msgstr ""
+msgstr "Mmoa"
 
 #: templates/main/layout.html:66
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "Sesa kasa ahodoɔ a wowɔ a wode bɛkyerɛw wo nsɛmti no"
 
 #: templates/main/layout.html:66
 msgid "Languages preferences"
-msgstr ""
+msgstr "Kasa ahodoɔ a wɔpɛ"
 
 #: templates/main/layout.html:67
 msgid "See your campaigns"
-msgstr ""
+msgstr "Hwɛ wo ɔsatu ahodoɔ no"
 
 #: templates/main/layout.html:67
 msgid "My Campaigns"
-msgstr ""
+msgstr "Me Ɔsatu Ahodoɔ"
 
 #: templates/main/layout.html:74 templates/main/layout.html:78
 msgid "Logout"
-msgstr ""
+msgstr "Fi wo ho fi mu"
 
 #: templates/main/layout.html:82
 msgid "Login"
-msgstr ""
+msgstr "Kɔ mu"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "ISA akadeε"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
@@ -1200,15 +1203,15 @@ msgstr ""
 
 #: templates/main/layout.html:107
 msgid "It is running on"
-msgstr ""
+msgstr "Ɛrekɔ so"
 
 #: templates/main/layout.html:109
 msgid "and is subject to the"
-msgstr ""
+msgstr "na ɛwɔ hɔ ma"
 
 #: templates/main/layout.html:111
 msgid "ISA is published under"
-msgstr ""
+msgstr "Wɔda ISA adi wɔ"
 
 #: templates/main/layout.html:113
 msgid "Content added through the tool to Wikimedia Commons is released under"
@@ -1216,15 +1219,15 @@ msgstr ""
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "Wo ɔsatuo ahodoɔ"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your Campaigns"
-msgstr ""
+msgstr "W'abɔ wo ɔsatu ahodoɔ ho dawuru wɔ ase ha"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "Wonni ɔsatu biara"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
@@ -1232,11 +1235,11 @@ msgstr ""
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "Kasa ahodoɔ a wɔpɛ"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr ""
+msgstr "Ɛkyerɛ kasa"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
@@ -1270,7 +1273,7 @@ msgstr ""
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr ""
+msgstr "Yi kasa yi fi mu"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
@@ -1278,28 +1281,28 @@ msgstr ""
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr ""
+msgstr "Yi Nsakrae no To"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "Ɛte sɛ akyerεde no"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "OAuth no anyε yie.Wɔn maa ho kwan anaa?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "Akwaaba %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "Yɛbɛhyia bere foforo!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Yɛsrɛ wo, kɔ mu na sesa kasa ahodoɔ a wopɛ"
 
 #: users/routes.py:144
 #, python-format

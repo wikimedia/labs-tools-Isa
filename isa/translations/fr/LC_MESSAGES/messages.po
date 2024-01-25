@@ -9,6 +9,7 @@
 # Author: Paraboule
 # Author: Pols12
 # Author: Scriptance
+# Author: SleaY
 # Author: Verdy p
 # Author: Wladek92
 # --
@@ -18,10 +19,10 @@
 msgid ""
 msgstr ""
 ""
-"Project-Id-Version: ISA 0.1.0\n"
-"Report-Msgid-Bugs-To: anthere(*at*)anthere.org\n"
+"Project-Id-Version: ISA\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2024-01-22 12:28:29+0000\n"
+"PO-Revision-Date: 2024-01-25 12:26:46+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -31,7 +32,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
-"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-12-01\n"
+"X-Generator: MediaWiki 1.42.0-alpha; Translate 2024-01-22\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
@@ -1243,7 +1245,7 @@ msgstr "Vous n’avez aucune campagne"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr "Je suis là."
+msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"

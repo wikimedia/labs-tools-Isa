@@ -8,6 +8,7 @@
 # Author: Muhammadhum
 # Author: Salydy
 # Author: Smshika
+# Author: Yusuf Sa'adu
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -15,13 +16,16 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-22 12:28:29+0000\n"
+"PO-Revision-Date: 2024-01-25 12:26:47+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ha\n"
-"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-12-01\n"
+"X-Generator: MediaWiki 1.42.0-alpha; Translate 2024-01-22\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: ISA\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
 #: campaigns/routes.py:36 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:38
@@ -484,7 +488,7 @@ msgstr "Ƙara Bayanan Bayani"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr ""
+msgstr "Yi shi Mai sauƙi: Yi amfani da kalmomi masu sauƙi da ra'ayoyi don bayyana abin da kake gani a kowane hoto (misali cat, dutse, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
@@ -503,107 +507,107 @@ msgstr "Ajiye gyare-gyaren ku zuwa Wikimedia Commons"
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:58
 msgid "Save"
-msgstr ""
+msgstr "Ajiye"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr ""
+msgstr "Za a sake tura ku shiga kuma ku koma nan don adana canje-canjenku"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr ""
+msgstr "Sunayen abubuwa daban-daban da za ku iya gani a cikin wannan hoton"
 
 #: templates/campaign/campaign_entry.html:73
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr ""
+msgstr "Don nuna alamun manyan abubuwa a cikin hoton, danna alamar tutar"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr ""
+msgstr "Rubutun Magana"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr ""
+msgstr "Cika duk wani bayani na al'adu, kimiyya ko fasaha wanda zaku iya ganowa (misali bikin kofi na Habasha ko bunna maflat) don samar da bayanai masu wadata."
 
 #: templates/campaign/campaign_entry.html:86
 msgid "Log in to publish changes"
-msgstr ""
+msgstr "Shigar da shi don wallafa canje-canje"
 
 #: templates/campaign/campaign_entry.html:88
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr ""
+msgstr "Ƙara rubutun don bayyana hoton da kyau (mafi yawan haruffa 255)"
 
 #: templates/campaign/campaign_entry.html:93
 msgid "Briefly explain what you see in this image."
-msgstr ""
+msgstr "A takaice dai bayyana abin da ka gani a cikin wannan hoton."
 
 #: templates/campaign/campaign_entry.html:97
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr ""
+msgstr "Kuna iya ƙara rubutun a cikin ƙarin harsuna ta hanyar zaɓar Zaɓin Harshe daga menu mai amfani"
 
 #: templates/campaign/campaign_entry.html:109
 msgid "No images found for this campaign!"
-msgstr ""
+msgstr "Babu hotunan da aka samu don wannan kamfen ɗin!"
 
 #: templates/campaign/campaign_entry.html:110
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "Wani abu ya yi kuskure samun hotunan kamfen"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "Bincika abubuwan da kake gani a cikin hoton"
 
 #: templates/campaign/campaign_entry.html:112
 msgid "minimise metadata from commons"
-msgstr ""
+msgstr "rage metadata daga commons"
 
 #: templates/campaign/campaign_entry.html:114
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "Nasara! Abubuwan da aka nuna an adana su zuwa Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:115
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
+msgstr "Nasara! Kalmomin da aka adana zuwa Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:116
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "Oops! Wani abu ya yi kuskure, ba a adana gyaran ku zuwa Wikimedia Commons ba"
 
 #: templates/campaign/campaign_entry.html:117
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "Shin kun tabbata kuna so ku yi tafiya zuwa wani hoto? Kuna da canje-canje da ba a kiyaye su ba waɗanda za su ɓace."
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "Danna 'OK' don ci gaba ko ta yaya, ko 'Ka soke' idan kana so ka adana canje-canje da farko."
 
 #: templates/campaign/campaign_entry.html:119
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "Cire wannan abu da aka nuna"
 
 #: templates/campaign/campaign_entry.html:120
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "Alama wannan abin da aka zana a matsayin fitaccen abu"
 
 #: templates/campaign/campaign_entry.html:121
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "Alama abin da aka kwatanta a matsayin, ba fita ba"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr ""
+msgstr "GUDUNMAWA zuwa Gina kwarewa"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr ""
+msgstr "Daga"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr ""
+msgstr "Har zuwa"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
-msgstr ""
+msgstr "Sauke dukkan stats (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
@@ -611,11 +615,11 @@ msgstr ""
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
-msgstr ""
+msgstr "Ƙididdigar Ƙasa"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr ""
+msgstr "A kan wannan shafin akwai kamfen ɗin da aka tsara waɗanda a halin yanzu ke gudana a matsayin wani ɓangare na kayan aikin ISA."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
