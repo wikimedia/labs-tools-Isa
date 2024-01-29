@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Bello Na'im
+# Author: EdnaLisa
 # Author: Jerryjaymi
 # Author: Juguson
 # Author: Muhammad Idriss Criteria
@@ -16,7 +17,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-25 12:26:47+0000\n"
+"PO-Revision-Date: 2024-01-29 12:27:10+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -611,7 +612,7 @@ msgstr "Sauke dukkan stats (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
-msgstr ""
+msgstr "Kididiga mai gudumawa"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
@@ -623,31 +624,31 @@ msgstr "A kan wannan shafin akwai kamfen ɗin da aka tsara waɗanda a halin yanz
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr ""
+msgstr "Danna sunan yaƙin neman zaɓe don farawa kuma ƙara ingantaccen bayanai zuwa hoto."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous Campaigns in the Archive section."
-msgstr ""
+msgstr "Kuna iya samun damar bayanai kan Gangamin da suka gabata a cikin sashin Taskoki."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr ""
+msgstr "Kamfen da ana kai"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr ""
+msgstr "Sunan Kamfen"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr ""
+msgstr "Kamfen"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr ""
+msgstr "Jimlar hotuna a cikin wanna kamfen"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign "
-msgstr ""
+msgstr "Lisafin ma rubuce da sun \nyi gudumawa ga kafen "
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -655,7 +656,7 @@ msgstr "Mabiya"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr "Dukkan wayanda duka Bada gudumawa a kamfen din"
+msgstr "Jimlar gudunmawar da aka bayar ga wannan kamfen"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
@@ -671,7 +672,7 @@ msgstr "Randa aka kirkiro kamfen din"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr "Randa aka halitta"
+msgstr "Ranar Halitta"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
@@ -679,7 +680,7 @@ msgstr "Yanda matsayin kamfen din yake"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr ""
+msgstr "matsayi"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
@@ -691,11 +692,11 @@ msgstr "Ba a buɗe ba"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Bude"
+msgstr "Buɗe"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr ""
+msgstr " Je sashin makormar don a fara"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
@@ -703,25 +704,25 @@ msgstr "Ku tafi Kamfen"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr ""
+msgstr "Nuna kafen da an rufe"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create your own campaign"
-msgstr ""
+msgstr "Ƙirƙiri kamfen ɗin ku"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:30
 msgid "Create a new campaign using this tool"
-msgstr ""
+msgstr "Yi amfani da wanna kayan aiki don Kirkiri Sabon kamfen"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr ""
+msgstr "Sai kun Shiga Kafin zaku iya Kirkiri yakin Neman zabe"
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Nunawa_farin_zuwa_karshe_na_duka_shigowa"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
@@ -729,11 +730,11 @@ msgstr "Babu shigarwa"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr ""
+msgstr "Binchike"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr ""
+msgstr "Ba a sami bayanan da suka dace ba"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
@@ -753,15 +754,15 @@ msgstr "Da suka gabata"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr ""
+msgstr "Sabuntawan hotuna"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr ""
+msgstr "Na Kan sabontawan hotunan kamfen."
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr ""
+msgstr "Za a Karo hotuna"
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
@@ -785,11 +786,11 @@ msgstr "Manajan kamfen ɗin na iya sake gwadawa ta hanyar sabunta kamfen ɗin."
 
 #: templates/errors/403.html:8
 msgid "Server Under maintenance"
-msgstr ""
+msgstr "Ana Kan kulawar uwar garken"
 
 #: templates/errors/403.html:10
 msgid "Please check contact support"
-msgstr ""
+msgstr "Yi hakuri a tuntube goyon baya"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -798,7 +799,7 @@ msgstr "kai ni gida"
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr ""
+msgstr "Tuntube goyon baya"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
@@ -806,7 +807,7 @@ msgstr "Shafin ba'a samu ba"
 
 #: templates/errors/404.html:10
 msgid "We Are Unable to find the page you are looking for"
-msgstr ""
+msgstr "Ba Mu Iya samun shafin da kuke nema ba"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
@@ -818,11 +819,11 @@ msgstr "Akwai wata matsala"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "Kila ana kulawa ISA"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Shafin taimako"
+msgstr "Shafin Taimako"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
@@ -831,16 +832,16 @@ msgstr "Sauƙin ƙara bayani game da hotuna akan Wikimedia Commons"
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> kayan aiki ne mai daɗi, yaruka da yawa, wayar hannu ta farko, wanda ke sauƙaƙa wa mutane don ƙara \"masu gudumawa\" ta hanyar <a %(link_attrs)s>tsararrun bayanai</a> zuwa hotuna akan Wikimedia Commons waɗanda aka ƙara ta gasar Wiki Loves."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "An gina ISA asali ne don samar da ingantattun bayanai na harsuna da yawa da tsararrun hotuna na <a %(link_attrs)s>Wiki Yana son Afirka</a> ."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Amma kuma an haɓaka shi don zama mai amfani ga duk <a link_attrs>gasar Wiki Loves</a> kuma, a ƙarshe, ga <strong>duk fayilolin mai jarida</strong> akan Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
@@ -848,7 +849,7 @@ msgstr "Menene Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr ""
+msgstr "<strong>Wikimedia Commons</strong> (wanda aka fi sani da 'Commons') aikin Wikimedia ne, 'yar'uwar Wikipedia, da tarin fayilolin mai jarida kyauta sama da miliyan 40."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -860,7 +861,7 @@ msgstr ""
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Dubban masu sa kai sun ɗora fayiloli zuwa Commons, kuma sun haɗa waɗannan cikin ayyukan Wikimedia, kamar Wikipedia, don kwatanta abun ciki a can da kuma raba wannan kafofin watsa labarai tare da jama'a."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
@@ -880,7 +881,7 @@ msgstr ""
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr "Menene bayanan da aka tsara akan Commons?"
+msgstr "Menene bayanan da aka   tsara akan Commons?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
@@ -896,11 +897,11 @@ msgstr ""
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr ""
+msgstr "Bayanin Tsare-tsaren aiki ne mai gudana wanda aka ƙaddamar a cikin 2019! … yayin da Wikimedia Commons ta kasance tsawon shekaru!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
-msgstr ""
+msgstr "Akwai miliyoyin hotuna da aka shirya a kan Wikimedia Commons... waɗanda ke buƙatar kulawa da ƙauna."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
@@ -912,11 +913,11 @@ msgstr "Ta yaya za mu yi haka? "
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "<strong>Curating</strong> , ko curation, a cikin kunkuntar ma'ana, yana nufin: zaɓe da tsara sassa na zane-zane da al'adun gargajiya don nuni."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "Hakanan za'a iya amfani da wannan kalmar gabaɗaya, don bayyana duk wani aiki da ya ƙunshi zaɓi, tsarawa da gabatar da bayanai."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
@@ -924,23 +925,23 @@ msgstr ""
 
 #: templates/main/help.html:62
 msgid "So...how does the ISA tool fit in there ?"
-msgstr ""
+msgstr "Toh...ya kayan aikin ISA ke amfani a can?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "Kayan aikin ISA yana ba da damar ƙara nau'ikan bayanai daban-daban guda biyu don saita hotuna: rubutun kalmomi da zane-zane (ƙarin bayani a ƙasa akan abin da rubutun kalmomi da hotuna suke)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "Kayan aiki ne na yaruka da yawa, wayar hannu ta farko ta 'micro-contributions', wanda ke sauƙaƙa wa mutane don ƙara ingantaccen bayanai zuwa hotunan da aka ba da gudummawar ga gasar Wiki Loves akan Wikimedia Commons."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr ""
+msgstr "Kayan aikin yana aiki tare da keɓaɓɓen kamfen da masu gudanarwa suka ƙirƙira."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "Duk wanda ke da asusun Wikimedia yana iya zama mai gudanarwa!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
@@ -976,11 +977,11 @@ msgstr ""
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "Mene take da ya dace? Kuma Mene bambanci bayanin kyawanan sohon fayil da kuma take?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "Da fare, ya kamata a kimanta taken kuma su kasance da sauki"
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
@@ -1028,7 +1029,7 @@ msgstr ""
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "Cika akwatunan bayani"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
@@ -1040,7 +1041,7 @@ msgstr ""
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "Samu Karin bayani Akan take a nan"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
@@ -1137,7 +1138,7 @@ msgstr ""
 
 #: templates/main/home.html:21
 msgid "About This Tool"
-msgstr ""
+msgstr "Akan wanna kayan aikin"
 
 #: templates/main/home.html:22
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
@@ -1201,7 +1202,7 @@ msgstr "Shiga"
 
 #: templates/main/layout.html:106
 msgid "ISA tool"
-msgstr ""
+msgstr "Kayan aikin ISA"
 
 #: templates/main/layout.html:107
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
@@ -1237,7 +1238,7 @@ msgstr "Ba ku da kamfen"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"
@@ -1249,7 +1250,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr ""
+msgstr "Za a yi amfani da harshen da aka zaɓa don nemo abubuwan da aka kwatanta a hotuna."
 
 #: templates/users/user_settings.html:15
 msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
@@ -1269,7 +1270,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "Harsunan da kuka zaɓa akan wannan shafin zasu bayyana akan shafin lokacin da kuke kallon hoto."
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
@@ -1287,7 +1288,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:57
 msgid "Undo Changes"
-msgstr ""
+msgstr "Warware canje-canje"
 
 #: users/forms.py:26
 msgid "Same as interface"
@@ -1300,7 +1301,7 @@ msgstr ""
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "Barka da zuwa %(username)s"
 
 #: users/routes.py:88
 msgid "See you next time!"
@@ -1313,11 +1314,11 @@ msgstr "Don Allah shiga don canza zuwa harshe ko yare da ka fi so"
 #: users/routes.py:144
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "Sannu kun yi kokari ku shigo da %(rep_languages)s son dayawa"
 
 #: users/routes.py:157
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "Ba a iya saita harshen taken ba"
 
 #: users/routes.py:159
 msgid "Preferred Languages set Successfully"
@@ -1330,10 +1331,10 @@ msgstr "Saitin yare ba a samu ba a yanzu"
 #: users/routes.py:174
 #, python-format
 msgid "%(username)s's - Settings"
-msgstr ""
+msgstr "%(username)s's-saita"
 
 #: users/routes.py:197
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "An halitta kamfen ta %(username)s"
 

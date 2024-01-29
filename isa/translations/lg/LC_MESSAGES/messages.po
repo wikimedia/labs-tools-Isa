@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-25 12:26:47+0000\n"
+"PO-Revision-Date: 2024-01-29 12:27:11+0000\n"
 "X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -330,7 +330,7 @@ msgstr "Ebifaananyi"
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
-msgstr ""
+msgstr "Omuwendo gwonna ogw’ebintambuze by'okozze eri kampeyini eno"
 
 #: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
 #: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
@@ -339,7 +339,7 @@ msgstr ""
 #: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr ""
+msgstr "Ebitambuze"
 
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:39
@@ -349,7 +349,7 @@ msgstr ""
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr ""
+msgstr "Omuyambi"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
@@ -500,7 +500,7 @@ msgstr "Teeka ebikyusiddwa byo mu Wikimedia Commons"
 #: templates/campaign/campaign_entry.html:83
 #: templates/users/user_settings.html:58
 msgid "Save"
-msgstr ""
+msgstr "Okukuuma"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
@@ -516,7 +516,7 @@ msgstr "Okussaako akabonero ku bintu ebimanyiddwa mu kifaananyi, nyiiga ku kabon
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Writing Captions"
-msgstr ""
+msgstr "Okuwandiika Ebiwandiiko Ebikwata"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
