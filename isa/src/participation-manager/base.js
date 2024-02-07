@@ -1,4 +1,3 @@
-
 /*********** Manage the current participation session ***********/
 
 // The initialData property contains an object with inital depicts and captions data retrieved from Commons
@@ -7,12 +6,14 @@
 //  - Also used for sending edits to Commons and ISA database when either submit is click
 // Data is sent via ajax post request instead of default form submit to prevent page reload
 
-import {flashMessage, getUrlParameters} from '../utils';
+import {flashMessage, getUrlParameters, getHtmlStripped} from '../utils';
 
 export function ParticipationManager(images, campaignId, wikiLovesCountry, isUserLoggedIn) {
     var imageIndex = 0,
         initialData = {depicts: [], captions: []},
-        unsavedChanges = {depicts: [], captions: []};
+        unsavedChanges = {depicts: [], captions: []},
+        csrf_token = "{{ csrf_token() }}";
+
 
     this.imageFileName = '';  
     this.imageMediaId = '';
@@ -20,8 +21,12 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     this.uiLanguage = $('html').attr('lang');
     this.i18nStrings = JSON.parse($('.hidden-i18n-text').text());
     this.depictSuggestions = []; // Machine Vision suggestions;
+    this.userRejectedSuggestions = [];
     this.machineVisionActive = !!getUrlParameters().mv;
-    
+    this.description = '';
+    this.categories = '';
+    this.isMobile = $(window).width() < 600 || $(window).height() < 600;
+
     this.nextImage = function() {
         if (!this.confirmImageNavigation()) return;
         imageIndex = (imageIndex + 1) % (images.length);
@@ -56,12 +61,23 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     this.imageChanged = function() {
         var me = this;
         document.documentElement.scrollTop = 0;
-        getImageFilename().done(function(image) {
-            me.imageFileName = image;
+        this.clearSuggestions();
+        getImageFileInfo().done(function(imageData) {
+            me.imageFileName = imageData.title;
+            var imageInfo = imageData.imageinfo[0];
+            var metadata = imageInfo.extmetadata;
+            me.description = (metadata.ImageDescription) ? getHtmlStripped(metadata.ImageDescription.value) : '';
+            me.categories = (metadata.Categories) ? metadata.Categories.value : '';
+            me.imagesUrl = imageInfo.url
             updateImage(me.imageFileName);
             me.populateMetadata(me.imageFileName);
             me.populateStructuredData(me.imageFileName, /*callbacks*/ {
-                onInitialDataReady: saveInitialStructuredData,
+                onInitialDataReady: function(depictItems, captions) {
+                    saveInitialStructuredData(depictItems, captions);
+                    if (me.machineVisionActive) {
+                        me.populateSuggestions();
+                    }
+                },
                 onUiRendered: function() {
                     // run data change events to update button states and other settings
                     // must be done once HTML is rendered as this is used to find differences to start data
@@ -69,8 +85,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                     me.captionDataChanged();
                 }
             });
-
-            if (me.machineVisionActive) me.populateMachineVisionSuggestions();
         });
     }
 
@@ -88,7 +102,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
     // All actions to complete when depict statement is added/removed/edited
     this.depictDataChanged = function() {
-        updateUnsavedDepictChanges();
+        this.updateUnsavedDepictChanges();
         updateButtonStates("depicts");
 
         // Show depict helper text when any statements are present
@@ -141,6 +155,13 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
     this.resetCaptions = function() {
         this.setCaptions(initialData.captions);
+    }
+
+    this.getCaption = function(lang) {
+        var captions = initialData.captions;
+        for (var i=0; i<captions.length; i++) {
+            if (captions[i].language === lang) return captions[i].value;
+        }
     }
 
     this.redirectLogin = function() {
@@ -203,11 +224,13 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         var contributionsData = JSON.stringify(contributions);
 
         var me = this;
-
         $.post({
             url: '../../api/post-contribution',
             data: contributionsData,
-            contentType: 'application/json'
+            contentType: 'application/json',
+            headers: {
+                "X-CSRFToken": csrf_token,
+            },
         }).done(function(response) {
             // Contribution accepted by server, now we can update initial data
             // Button states will return to disabled
@@ -232,20 +255,22 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
     /////////// Image utilities ///////////
 
-    function getImageFilename () {
+    function getImageFileInfo () {
         var pageId = images[imageIndex];
         var deferred = $.Deferred();
         $.get({
             url: WIKI_URL + 'w/api.php',
             data: {
                 action: 'query',
+                prop: 'imageinfo',
+                iiprop: 'extmetadata|url',
                 pageids: pageId,
                 format: 'json',
                 formatversion: 2,
                 origin: '*'
             }
         }).done((data) => {
-            deferred.resolve(data.query.pages[0].title);
+            deferred.resolve(data.query.pages[0]);
         });
 
         return deferred;
@@ -305,9 +330,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
     }
 
     //todo: create generalised updateUnsavedChanges which work for depicts and captions
-    function updateUnsavedDepictChanges () {
-        // Compare current selection to initialData to see if there are any unsaved changes
-
+    this.updateUnsavedDepictChanges = function() {
         var depictStatements = getCurrentDepictStatements();
         var intialDepictStatements = initialData.depicts;
         var depictChanges = [];
@@ -344,11 +367,27 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
             if (!found) {
                 // The current depicts item has not been found, it must be an unsaved change
+                const suggestion = this.getDepictSuggestionByItem(depictItem);
+                let isGoogleVision,
+                    isMetadataToConcept,
+                    googleVisionConfidence,
+                    metadataToConceptConfidence;
+                if (suggestion) {
+                    isGoogleVision = suggestion.google_vision;
+                    isMetadataToConcept = suggestion.metadata_to_concept;
+                    googleVisionConfidence = suggestion.confidence.google;
+                    metadataToConceptConfidence = suggestion.confidence.metadata_to_concept;
+                }
+
                 depictChanges.push({
                     edit_action: "add",
                     depict_item: depictItem,
                     depict_prominent: isProminent,
-                    statement_id: currentStatement.statementId
+                    statement_id: currentStatement.statementId,
+                    google_vision: isGoogleVision,
+                    google_vision_confidence: googleVisionConfidence,
+                    metadata_to_concept: isMetadataToConcept,
+                    metadata_to_concept_confidence: metadataToConceptConfidence
                 })
             }
         } // check next statement...
@@ -375,7 +414,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                 })
             }
         } // check next initial statement...
-
         unsavedChanges.depicts = depictChanges;
     }
 

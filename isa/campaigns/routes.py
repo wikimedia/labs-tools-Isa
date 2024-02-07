@@ -4,7 +4,8 @@ import json
 import os
 
 import requests
-from flask import render_template, redirect, url_for, flash, request, session, Blueprint, send_file, jsonify, abort
+from flask import (make_response, render_template, redirect, url_for, flash, request,
+                   session, Blueprint, send_file, jsonify, abort)
 from flask_login import current_user
 from sqlalchemy import func
 
@@ -16,14 +17,15 @@ from isa.campaigns.utils import (convert_latin_to_english, get_table_stats, comp
                                  make_edit_api_call, generate_csrf_token,
                                  get_stats_data_points)
 from isa.campaigns import image_updater
-from isa.main.utils import commit_changes_to_db
-from isa.models import Campaign, Contribution, Country, Image, User
+from isa.main.utils import commit_changes_to_db, manage_session
+from isa.models import Campaign, Contribution, Country, Image, User, Suggestion
 from isa.users.utils import (get_user_language_preferences, get_current_user_images_improved)
 
 
 campaigns = Blueprint('campaigns', __name__)
 
 
+@manage_session
 @campaigns.route('/campaigns')
 def getCampaigns():
     campaigns = Campaign.query.all()
@@ -215,7 +217,7 @@ def CreateCampaign():
             db.session.add(campaign)
             # commit failed
             if not commit_changes_to_db():
-                flash(gettext('Sorry %(campaign_name)s Could not be created',
+                flash(gettext('Sorry %(campaign_name)s could not be created',
                               campaign_name=form.campaign_name.data), 'info')
             else:
                 image_updater.update_in_task(campaign.id)
@@ -223,7 +225,7 @@ def CreateCampaign():
                 stats_path = os.getcwd() + '/campaign_stats_files/' + campaign_stats_path
                 if not os.path.exists(stats_path):
                     os.makedirs(stats_path)
-                flash(gettext('%(campaign_name)s Campaign created!',
+                flash(gettext('%(campaign_name)s campaign created!',
                               campaign_name=form.campaign_name.data), 'success')
                 return redirect(url_for('campaigns.getCampaignById', id=campaign.id))
         return render_template('campaign/campaign-form.html', title=gettext('Create a campaign'),
@@ -265,7 +267,7 @@ def updateCampaign(id):
         session_language = 'en'
     form = CampaignForm()
     if not username:
-        flash(gettext('You need to Login to update a campaign'), 'info')
+        flash(gettext('You need to log in to update a campaign'), 'info')
         return redirect(url_for('campaigns.getCampaigns'))
 
     user = User.query.filter_by(username=username).first()
@@ -291,11 +293,11 @@ def updateCampaign(id):
         campaign.campaign_type = form.campaign_type.data
         campaign.end_date = campaign_end_date
         if not commit_changes_to_db():
-            flash(gettext('Campaign update failed please try later!'), 'danger')
+            flash(gettext('Campaign update failed. Please try later!'), 'danger')
         else:
             if form.update_images.data:
-                image_updater.update_in_task(id)
-            flash(gettext('Update Succesfull !'), 'success')
+                image_updater.update_in_thread(id)
+            flash(gettext('Update succesfull!'), 'success')
             return redirect(url_for('campaigns.getCampaignById', id=id))
 
     # User requests to edit so we update the form with Campaign details
@@ -304,7 +306,7 @@ def updateCampaign(id):
         campaign = Campaign.query.filter_by(id=id).first()
 
         if campaign.manager != user:
-            flash(gettext('You cannot update this campaign, Contact Manager User:%(username)s ',
+            flash(gettext('You cannot update this campaign. Contact the manager, User:%(username)s ',
                           username=campaign.manager.username), 'info')
             return redirect(url_for('campaigns.getCampaignById', id=id))
 
@@ -320,7 +322,7 @@ def updateCampaign(id):
         form.campaign_type.data = campaign.campaign_type
         form.end_date.data = campaign.end_date
     else:
-        flash(gettext('Booo! %(campaign_name)s Could not be updated!',
+        flash(gettext('Booo! %(campaign_name)s could not be updated!',
                       campaign_name=form.campaign_name.data), 'danger')
     session['next_url'] = request.url
     return render_template('campaign/campaign-form.html',
@@ -374,6 +376,7 @@ def postContribution():
 
     user = User.query.filter_by(username=username).first()
     contrib_list = []
+    suggestion_list = []
     for data in contrib_data_list:
         valid_actions = [
             "wbsetclaim",
@@ -395,6 +398,20 @@ def postContribution():
                                     caption_text=data.get('caption_text'),
                                     date=datetime.date(datetime.utcnow()))
         contrib_list.append(contribution)
+
+        # Also create a new suggestion if depict item was suggested
+        suggestion_keys = ['google_vision', 'metadata_to_concept']
+        if any(key in data for key in suggestion_keys):
+            suggestion = Suggestion(campaign_id=campaign_id,
+                                    file_name=data['image'],
+                                    depict_item=data['depict_item'],
+                                    google_vision=data.get('google_vision'),
+                                    google_vision_confidence=data.get('google_vision_confidence'),
+                                    metadata_to_concept=data.get('metadata_to_concept'),
+                                    metadata_to_concept_confidence=data.get('metadata_to_concept_confidence'),
+                                    update_status=1,
+                                    user_id=user.id)
+            suggestion_list.append(suggestion)
 
     # We write the api_options for the contributions into a list
     for contrib_data in contrib_data_list:
@@ -434,6 +451,10 @@ def postContribution():
             return ("Failure")
         # We store the latest revision id to be sent to client
         latest_base_rev_id = lastrevid
+
+    #  Before we commit changes we add the suggestions:
+    for suggestion in suggestion_list:
+        db.session.add(suggestion)
 
     # We attempt to save the changes to db
     if commit_changes_to_db():
@@ -503,7 +524,6 @@ def searchDepicts(id):
                 'origin': '*'
             }
         ).json()
-
         for search_result_item in search_result['search']:
             search_return.append({
                 'id': search_result_item['title'],
@@ -542,3 +562,68 @@ def get_images(campaign_id, country_name):
         if not country or image.country_id == country.id:
             images.append(image.page_id)
     return jsonify(images)
+
+
+@campaigns.route('/api/reject-suggestion', methods=['POST'])
+def save_reject_statements():
+    username = session.get('username')
+    if not username:
+        abort(401)
+
+    request_keys = set(request.json.keys())
+    expected_keys = {
+        'file',
+        'depict_item',
+        'campaign_id',
+        'google_vision',
+        'google_vision_confidence',
+        'metadata_to_concept',
+        'metadata_to_concept_confidence'
+    }
+
+    if request.data and request_keys == expected_keys:
+        rejection_data = request.json
+        file_rejected_suggestions = (Suggestion.query
+                                     .filter_by(depict_item=rejection_data['depict_item'],
+                                                file_name=rejection_data['file'], update_status=0)
+                                     .all())
+
+        campaign_id = rejection_data['campaign_id']
+        user = User.query.filter_by(username=username).first()
+        rejected_suggestion = Suggestion(campaign_id=campaign_id,
+                                         file_name=rejection_data['file'],
+                                         depict_item=rejection_data['depict_item'],
+                                         google_vision=rejection_data.get('google_vision'),
+                                         google_vision_confidence=rejection_data['google_vision_confidence'],
+                                         metadata_to_concept=rejection_data.get('metadata_to_concept'),
+                                         metadata_to_concept_confidence=rejection_data['metadata_to_concept_confidence'],
+                                         user_id=user.id)
+
+        if len(file_rejected_suggestions) > 1:
+            rejected_suggestion.google_vision_submitted = rejection_data.get('google_vision')
+            rejected_suggestion.metadata_to_concept_submitted = rejection_data.get('metadata_to_concept')
+
+        db.session.add(rejected_suggestion)
+
+        if not commit_changes_to_db():
+            return "error", 400
+        else:
+            return "success", 200
+    abort(400)
+
+
+@campaigns.route('/api/get-rejected-statements', methods=['GET'])
+def getRejectedStatements():
+    username = session.get('username', None)
+    if not username:
+        abort(401)
+    else:
+        file_name = request.args.get('file')
+        user = User.query.filter_by(username=username).first()
+        if user and file_name:
+            reject_suggestions = (Suggestion.query
+                                  .filter_by(user_id=user.id, file_name=file_name, update_status=0)
+                                  .all())
+            return jsonify([data.depict_item for data in reject_suggestions])
+        else:
+            abort(400)

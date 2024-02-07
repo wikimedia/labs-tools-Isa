@@ -2,7 +2,10 @@
 # Exported from translatewiki.net
 #
 # Author: Ajeje Brazorf
+<<<<<<< HEAD
 # Author: Amire80
+=======
+>>>>>>> m2c
 # Author: Bennylin
 # Author: Pols12
 # Author: Robby
@@ -1102,7 +1105,11 @@ msgstr ""
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
+<<<<<<< HEAD
 msgstr "\"It\" refers to the ISA tool itself."
+=======
+msgstr "{{discuss term|it|language=id}}\n\n[[Wikimedia:Isa-ef38d1-It is running on tools.wmflabs/id]]\n\nWhat does it refer to? My language need to specify what \"it\" is."
+>>>>>>> m2c
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."

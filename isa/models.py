@@ -19,6 +19,7 @@ class User(db.Model, UserMixin):
     depicts_language = db.Column(db.String(13), nullable=False, default='')
     contrib = db.Column(db.Integer, default=0)
     managed_campaigns = db.relationship('Campaign', backref='user', lazy=True)
+    suggestion = db.relationship('Suggestion', backref='user', lazy=True)
 
     def __repr__(self):
         # This is what is shown when object is printed
@@ -127,3 +128,55 @@ class Country(db.Model):
             self.id,
             self.name,
         )
+
+
+class Suggestion(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    campaign_id = db.Column(db.Integer, db.ForeignKey('campaign.id'), nullable=False)
+    file_name = db.Column(db.String(240), nullable=False)
+    depict_item = db.Column(db.String(15), nullable=True)
+    update_status = db.Column(db.Integer, default=0)
+    google_vision = db.Column(db.Integer, default=0)
+    metadata_to_concept = db.Column(db.Integer, default=0)
+    metadata_to_concept_confidence = db.Column(db.Float)
+    google_vision_confidence = db.Column(db.Float)
+    google_vision_submitted = db.Column(db.Integer, default=0)
+    metadata_to_concept_submitted = db.Column(db.Integer, default=0)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    date = db.Column(db.Date, nullable=False,
+                     default=datetime.now())
+
+    def __repr__(self):
+        # This is what is shown when object is printed
+        return "Suggestion({}, {}, {}, {}, {}, {}, {})".format(
+               self.campaign_id,
+               self.file,
+               self.depict_item,
+               self.google_vision,
+               self.metadata_to_concept,
+               self.update_status,
+               self.user_id)
+
+
+class DenyListCategory(db.Model):
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    category_name = db.Column(db.String(250), nullable=False)
+    reason = db.Column(db.String(240), nullable=False)
+
+    def __repr__(self):
+        # This is what is shown when object is printed
+        return "DenyListCategory({}, {})".format(
+               self.category_name,
+               self.reason)
+
+
+class DenyList(db.Model):
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    wikidata_item = db.Column(db.String(15), nullable=False)
+    category = db.Column(db.Integer, db.ForeignKey('deny_list_category.id'), nullable=False)
+
+    def __repr__(self):
+        # This is what is shown when object is printed
+        return "DenyList({}, {})".format(
+               self.wikidata_item,
+               self.category)

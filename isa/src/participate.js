@@ -1,8 +1,7 @@
-
 /*********** Participate page ***********/
 
 import {ParticipationManager} from './participation-manager';
-import {getUrlParameters, shuffle} from './utils';
+import {getUrlParameters, shuffle, flashMessage} from './utils';
 import {generateGuid} from './guid-generator.js';
 
 var i18nStrings = JSON.parse($('.hidden-i18n-text').text());
@@ -11,6 +10,7 @@ var campaignId = getCampaignId(),
     wikiLovesCountry = getWikiLovesCountry(),
     isWikiLovesCampaign = !!wikiLovesCountry, // todo: this should be read from get-campaign-categories api call
     isUserLoggedIn = false,
+    csrf_token = "{{ csrf_token() }}",
     editSession;
 
 ///////// Campaign images /////////
@@ -125,6 +125,42 @@ function searchResultsFormat(state) {
     })
   })();
 
+///////// Rejecting statements /////////
+
+function rejectStatement(item, element){
+    var rejectedSuggestion = editSession.getDepictSuggestionByItem(item);
+    var rejectedSuggestionData = JSON.stringify({
+        file: editSession.imageFileName,
+        campaign_id: getCampaignId(),
+        depict_item: item,
+        google_vision: rejectedSuggestion.google_vision || null,
+        google_vision_confidence: rejectedSuggestion.confidence.google || null,
+        metadata_to_concept: rejectedSuggestion.metadata_to_concept || null,
+        metadata_to_concept_confidence: rejectedSuggestion.confidence.metadata_to_concept || null,
+    });
+
+    var conformRemoveMessageHead = i18nStrings['Are you sure you want to reject this suggestion?'],
+        conformRemoveMessageExplain = i18nStrings['Are you sure explanation for reject suggestion'];
+
+    if (confirm(conformRemoveMessageHead + "\n\n" + conformRemoveMessageExplain)) {
+        $.post({
+            url: '/api/reject-suggestion',
+            data: rejectedSuggestionData,
+            contentType: 'application/json',
+            headers: {
+                "X-CSRFToken": csrf_token,
+            },
+        }).done(function(response) {
+            // Contribution accepted by server, we can remove suggestion from list
+            rejectedSuggestion.isRejectedByUser = true;
+            editSession.renderDepictSuggestions();
+            flashMessage('success', i18nStrings['Suggestion removed from list']);
+        }).fail( function(error) {
+            flashMessage('danger', i18nStrings['Oops! Suggestion might not have been removed'])
+        });
+    }
+}
+
 ///////// Event handlers /////////
 
 $('#expand-meta-data').click(function() {
@@ -132,11 +168,11 @@ $('#expand-meta-data').click(function() {
 
     if ($('.image-desc').hasClass('expand')) {
         // expanded
-        var minimiseText = i18nStrings['minimise metadata from commons'];
+        var minimiseText = i18nStrings['minimise metadata from Commons'];
         $('#expand-meta-data').html('<i class="fas fa-caret-up"></i>&nbsp; ' + minimiseText);
     } else {
         // collpased
-        var maximiseText = i18nStrings['show all metadata from commons'];
+        var maximiseText = i18nStrings['show all metadata from Commons'];
         $('#expand-meta-data').html('<i class="fas fa-caret-down"></i>&nbsp; ' + maximiseText);
     }
 })
@@ -171,11 +207,59 @@ $('.depict-tag-group').on('click','.prominent-btn', function(ev) {
     editSession.depictDataChanged();
 })
 
-// Click to add Machine Vision depict suggestions
-$('.depict-tag-suggestions').on('click','.depict-tag-suggestion', function(ev) {
-    var item = $(this).find('.depict-tag-qvalue').text(); // todo: fix messy way to retreive item
+$('#depict-tag-suggestions-container').on('click', '.accept-depict', function() {
+    var item = $(this).siblings('.depict-tag-qvalue').text();
     editSession.addDepictBySuggestionItem(item);
-})
+});
+
+function displayModal(item, label, confidence){
+    $('.modal-label-link').text(label);
+    $('.modal-label-link').attr('href', 'https://www.wikidata.org/wiki/' + item);
+    $('.modal-item').text(item);
+    $('.modal-confidence').text(confidence);
+    $('.modal').show();
+    $('#depict-tag-suggestions-container').addClass('blur')
+}
+
+function clearModal(){
+    $('.modal').hide();
+    $('#depict-tag-suggestions-container').removeClass('blur');
+}
+
+$('.depict-tag-suggestions').on('click', '.depict-tag-suggestion', function(e){
+    if (!editSession.isMobile) return;
+    var suggestion = $(this);
+    var item = suggestion.find('.depict-tag-qvalue').text();
+    var label = suggestion.find('.depict-tag-label-text').text();
+    var confidence = suggestion.find('.depict-tag-confidence').text();
+    displayModal(item, label, confidence);
+});
+
+$('.modal').on('click', '.close-modal', function(){
+   clearModal();
+});
+
+function getItemFromModal(){
+    return $('.modal-item').text();
+}
+
+$('.modal').on('click', '.accept-depict-mobile', function(){
+    var item = getItemFromModal();
+    editSession.addDepictBySuggestionItem(item);
+    clearModal();
+});
+
+$('.modal').on('click', '.reject-depict-mobile', function(){
+    var item = getItemFromModal();
+    rejectStatement(item, $(this));
+    clearModal()
+});
+
+$('#depict-tag-suggestions-container').on('click', '.reject-depict', function() {
+    var item = $(this).siblings('.depict-tag-qvalue').text();
+    rejectStatement(item, $(this)); 
+});
+
 
 $('.edit-publish-btn-group').on('click', 'button', function() {
     var editType = $(this).parent().attr('edit-type');
@@ -205,6 +289,7 @@ function getWikiLovesCountry () {
     return (country) ? decodeURIComponent(country) : '';
 }
 
+
 function populateCaption(language, text) {
     $('.caption-input[lang=' + language + ']').val(text);
 }
@@ -224,3 +309,23 @@ function generateStatementId(mediaId) {
 function hideLoadingOverlay() {
     $('.loading').fadeOut('slow');
 }
+
+// Toggle display of suggested items
+$("#suggest-toggle").click(function () {
+    var toggleIndicator = $('#toggle-indicator'),
+        toggleLabel = $('#toggle-label'),
+        suggestionCntainer = $('.depict-tag-suggestions'),
+        hideText = i18nStrings['Hide Suggestions'],
+        showText = i18nStrings['Show Suggestions'];
+
+    suggestionCntainer.toggleClass('collapsed');
+    if(suggestionCntainer.hasClass('collapsed')){
+        toggleIndicator.removeClass('fa-caret-up');
+        toggleIndicator.addClass('fa-caret-down');
+        toggleLabel.text(showText)
+    }else{
+        toggleIndicator.removeClass('fa-caret-down');
+        toggleIndicator.addClass('fa-caret-up');
+        toggleLabel.text(hideText)
+    }
+});

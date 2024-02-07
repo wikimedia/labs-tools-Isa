@@ -11,6 +11,8 @@ from flask_login import LoginManager
 from flask_wtf.csrf import CSRFProtect
 from celery import Celery
 from celery import Task
+from flask_migrate import Migrate
+
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -27,7 +29,11 @@ app.config.update(
 app.config['SQLALCHEMY_DATABASE_URI']
 app.config['SECRET_KEY']
 app.config['TEMPLATES_AUTO_RELOAD']
-
+app.config['SQLALCHEMY_PRE_PING'] = True
+app.config['SQLALCHEMY_TRACK_OPTIONS'] = False
+app.config['SQLALCHEMY_POOL_RECYCLE'] = 3600
+app.config['SQLALCHEMY_POOL_SIZE'] = 1
+app.config['SQLALCHEMY_MAX_OVERFLOW'] = 20
 # We hook babel to our app
 
 
@@ -43,6 +49,11 @@ babel.init_app(app, locale_selector=get_locale)
 
 @app.before_request
 def before_request():
+    try:
+        db.session.execute("SELECT 1;")
+        db.session.commit()
+    except Exception:
+        db.session.rollback()
     # Update session language
     get_locale()
 
@@ -51,6 +62,9 @@ def before_request():
 
 
 db = SQLAlchemy(app)
+migrate = Migrate()
+
+migrate.init_app(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'main.home'

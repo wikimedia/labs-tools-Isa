@@ -119,6 +119,12 @@ translations in the app.
 # Maintenance scripts
 Maintenance scripts are found in isa/maintenance. Run them as modules in the root directory, e.g. `python -m isa.maintenance.update_campaign_images`.
 
+# Database migrations
+Migrations are found in isa/migrations. After a new install, or upon upgrade run the following commands:
+- Add alembic metadata to current database with the latest revision using `flask db stamp head`
+- Upon a new modification in the model, generate a new migration using `flask db migrate`
+- Add the incoming migrations to the current database using `flask db upgrade`
+
 # Sponsors
 ISA development has been supported by:
 - Wikimedia Foundation (https://wikimediafoundation.org)

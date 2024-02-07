@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/font-awesome/5.8.2/css/all.css" integrity="sha256-39jKbsb/ty7s7+4WzbtELS4vq9udJ+MDjGTD5mtxHZ0=" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.css"/>
 		<link href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/select2/4.0.7/css/select2.css" rel="stylesheet" />
+		<link href='https://tools-static.wmflabs.org/fontcdn/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 		<!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/linux-biolinum" type="text/css"/> -->
 		<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
 	</head>
@@ -41,7 +42,7 @@
 			<li class="nav-item">
 				{% if username != 'Guest' and username != None %}
 				<a class="nav-link" href="{{url_for( 'campaigns.CreateCampaign' )}}">
-					<i class="fa fa-plus"></i> {{ _('Create New') }}
+					<i class="fa fa-plus"></i> {{ _('Create new campaign') }}
 				</a>
 				{% endif %}
 			</li>
@@ -63,8 +64,8 @@
 				{% if username %}
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> {{username}}</a>
 				<div class="dropdown-menu">
-					<a href="{{url_for( 'users.userSettings' )}}" class="nav-link " id="user_name" title="{{ _('Change your available caption languages') }}">{{ _('Languages preferences') }}</a>
-					<a href="{{url_for( 'users.getMyCampaigns', username=username )}}" class="nav-link " id="user_name" title="{{ _('See your campaigns') }}">{{ _('My Campaigns') }}</a>
+					<a href="{{url_for( 'users.userSettings' )}}" class="nav-link " id="user_name" title="{{ _('Change your available caption languages') }}">{{ _('Language preferences') }}</a>
+					<a href="{{url_for( 'users.getMyCampaigns', username=username )}}" class="nav-link " id="user_name" title="{{ _('See your campaigns') }}">{{ _('My campaigns') }}</a>
 				</div>
 				{% endif %}
 			</li>

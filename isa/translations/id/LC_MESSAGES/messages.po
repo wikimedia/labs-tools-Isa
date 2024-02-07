@@ -1233,7 +1233,7 @@ msgstr "Anda tidak memiliki kampanye apa pun"
 
 #: templates/users/own_campaigns.html:27
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: templates/users/user_settings.html:6
 msgid "Language preferences"

@@ -41,8 +41,8 @@ def login():
         else:
             session['request_token'] = dict(zip(
                 request_token._fields, request_token))
-            user = User.query.filter_by(username=session.get('username', None)).first()
-            if user and user.username is not None:
+            if session.get('username'):
+                user = User.query.filter_by(username=session.get('username')).first()
                 login_user(user)
             return redirect(redirect_string)
 
@@ -157,7 +157,7 @@ def userSettings():
             if not commit_changes_to_db():
                 flash(gettext('Captions languages could not be set'), 'danger')
             else:
-                flash(gettext('Preferred Languages set Successfully'), 'success')
+                flash(gettext('Preferred languages set'), 'success')
                 # We make sure that the form data does not remain in browser
                 return redirect(url_for('users.userSettings'))
     elif request.method == 'GET':

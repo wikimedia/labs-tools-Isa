@@ -43,7 +43,7 @@ body {padding-bottom: 50px}
 <div class="container edit-box">
     <div class="edit-box-header">
         <h4>{{ _('Depicts') }}
-        <button type="button" class="btn btn-link py-0" data-container="body" title="{{_('Adding Depict Statements') }}" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="{{_('Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)')}}
+        <button type="button" class="btn btn-link py-0" data-container="body" title="{{_('Adding Depict Statements') }}" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="{{_('Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)')}}
 "><i class="fas fa-question-circle"></i></button>
         </h4>
         <div edit-type="depicts" class="edit-publish-btn-group text-right">
@@ -62,8 +62,32 @@ body {padding-bottom: 50px}
             </select>
         </div>
     </div>
+
+   <!-- Used to perform action on suggestion while using small screens -->
+    <div class="modal" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>
+                        <a class="modal-label-link" target="_blank"></a>
+                        <span class="modal-item"></span>
+                        <span class="modal-confidence"></span>
+                    </h5>
+                    <i class="fa fa-times close-modal" aria-hidden="true"></i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary accept-depict-mobile">{{ _('Accept') }}</button>
+                    <button type="button" class="btn btn-danger reject-depict-mobile" data-dismiss="modal">{{ _('Reject') }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="depict-tag-suggestions-container">
-        <h5>Suggestions</h5>
+        <div id="suggest-toggle">
+            <i id="toggle-indicator" class="fas fa-caret-up"></i>
+            <span id="toggle-label">{{ _('Hide Suggestions') }}</span>
+        </div>
         <div class="depict-tag-suggestions">
         </div>
     </div>
@@ -76,6 +100,7 @@ body {padding-bottom: 50px}
 
 {% if campaign.captions_metadata %}
 <div class="container edit-box">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
     <div class="edit-box-header">
         <h4>{{ _('Captions') }} <button type="button" class="btn btn-link py-0" data-container="body" title="{{_('Writing Captions')}}" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="{{_('Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer.')}}"><i class="fas fa-question-circle"></i></button></h4>
         <div edit-type="captions" class="edit-publish-btn-group text-right">
@@ -109,8 +134,8 @@ body {padding-bottom: 50px}
         "No images found for this campaign!": {{ _('No images found for this campaign!')|tojson }},
         "Something went wrong getting campaign images": {{ _('Something went wrong getting campaign images')|tojson }},
         "Search for things you see in the image": {{ _('Search for things you see in the image')|tojson }},
-        "minimise metadata from commons": {{ _('minimise metadata from commons')|tojson }},
-        "show all metadata from commons": {{ _('show all metadata from commons')|tojson }},
+        "minimise metadata from commons": {{ _('minimise metadata from Commons')|tojson }},
+        "show all metadata from commons": {{ _('show all metadata from Commons')|tojson }},
         "Success! Depicted items saved to Wikimedia Commons": {{ _('Success! Depicted items saved to Wikimedia Commons')|tojson }},
         "Success! Captions saved to Wikimedia Commons": {{ _('Success! Captions saved to Wikimedia Commons')|tojson }},
         "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons": {{ _('Oops! Something went wrong, your edits have not been saved to Wikimedia Commons')|tojson }},
@@ -118,7 +143,14 @@ body {padding-bottom: 50px}
         "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first.": {{ _("Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first.")|tojson }},
         "Remove this depicted item": {{ _('Remove this depicted item')|tojson }},
         "Mark this depicted item as prominent": {{ _('Mark this depicted item as prominent')|tojson }},
-        "Mark this depicted item as NOT prominent": {{ _('Mark this depicted item as NOT prominent')|tojson }}
+        "Mark this depicted item as NOT prominent": {{ _('Mark this depicted item as NOT prominent')|tojson }},
+        "Suggestion removed from list": {{ _('Suggestion removed from list')|tojson }},
+        "Please check that you are logged in": {{ _('Please check that you are logged in')|tojson }},
+        "Oops! Suggestion might not have been removed": {{ _('Oops! Suggestion might not have been removed')|tojson }},
+        "Hide Suggestions": {{ _('Hide Suggestions')|tojson }},
+        "Show Suggestions": {{ _('Show Suggestions')|tojson }},
+        "Are you sure you want to reject this suggestion?": {{ _('Are you sure you want to reject this suggestion?')|tojson }},
+        "Are you sure explanation for reject suggestion": {{ _('Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown.')|tojson }}
     }
 </div>
 {% endblock content%}

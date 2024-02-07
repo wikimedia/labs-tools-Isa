@@ -8,7 +8,7 @@ from celery import shared_task
 import requests
 from requests.exceptions import Timeout
 
-from isa import db
+from isa import db, app
 from isa.main.utils import commit_changes_to_db
 from isa.models import Campaign
 from isa.models import Image
@@ -75,6 +75,7 @@ def update(campaign_id):
     Keyword arguments:
     campaign_id -- Id of the campaign to update.
     """
+    app.app_context().push()
     try:
         updater = ImageUpdater(campaign_id)
         updater.update_images()

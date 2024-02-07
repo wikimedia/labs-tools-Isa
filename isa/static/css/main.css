@@ -441,6 +441,44 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     padding: 5px;
 }
 
+.suggestion{
+    float: left;
+    display: flex;
+    flex-direction:column;
+    height: 2px;
+}
+
+.suggestion span{
+    font-weight: 150;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: small;
+}
+
+.collapsed {
+    display: none;
+}
+
+#suggest-toggle {
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+#toggle-label{
+    cursor: pointer;
+}
+
+.service-type-md{
+    margin-top: -5px;
+}
+
+.service-type-gv::before{
+    content: 'G';
+}
+
+.service-type-md::before{
+    content: 'M';
+}
+
 #depict-tag-suggestions-container {
     display: none;
     background-color: #eeeeee;
@@ -450,7 +488,6 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 }
 
 .depict-tag-suggestion {
-    cursor: pointer;
     margin-bottom: 7px;
     margin-right: 7px;
     display: inline-block;
@@ -461,6 +498,15 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 
 .depict-tag-suggestion:hover {
     background-color: #3d3d3d!important;
+}
+
+.depict-tag-suggestion .accept-depict,
+.depict-tag-suggestion .reject-depict{
+    border: none;
+    color: white;
+    padding: 3px;
+    background: none;
+    font-size: 20px;
 }
 
 .depict-tag-suggestion .depict-tag-confidence {
@@ -474,7 +520,8 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     padding: 4px 1px
 }
 .depict-tag-label-text{
-    font-size: 1rem
+    font-size: 1rem;
+    margin-left: 5px;
 }
 .depict-tag-label-text a {
     color: #FFF;
@@ -488,6 +535,7 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
     font-weight: 400;
     padding: .2em;
 }
+
 .prominent-btn {
     background-color: transparent;
     color: #fff;
@@ -673,4 +721,33 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 /********** hidden i18n text **********/
 .hidden-i18n-text {
     display: none;
+}
+
+
+@media (max-width: 600px) OR (max-height: 600px) {
+    .accept-depict,
+    .reject-depict{
+        display: none;
+    }
+    .modal-title{
+        padding-top: 10px;
+    }
+    .modal-footer{
+        display: block;
+        text-align: center;
+    }
+    .modal-dialog {
+        width: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .blur {
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+    }
 }
