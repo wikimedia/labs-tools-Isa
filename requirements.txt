@@ -1,9 +1,9 @@
 Flask==2.3.2
-flask-babel==3.1.0
-Flask-Login==0.6.2
+flask-babel==4.0.0
+Flask-Login==0.6.3
 Flask-Migrate==4.0.4
 Flask-SQLAlchemy==2.5.1
-Flask-WTF==1.1.1
+Flask-WTF==1.2.1
 mwoauth==0.3.8
 pycountry==22.3.5
 PyMySQL==1.1.0
