@@ -110,7 +110,9 @@ def getCampaignById(id):
                       else None)
     countries = Country.query.join(Image).filter(Image.campaign_id == campaign.id).all()
     country_names = sorted([c.name for c in countries])
-    return (render_template('campaign/campaign.html', title=gettext('Campaign - ') + campaign.campaign_name,
+    return (render_template('campaign/campaign.html', title=gettext('Campaign - %(campaign_name)s',
+                                                                    campaign_name=campaign.campaign_name),
+                            campaign_name=campaign.campaign_name,
                             campaign=campaign,
                             manager=campaign.manager,
                             username=username,
@@ -164,7 +166,8 @@ def getCampaignStatsById(id):
     all_campaign_stats_data['all_campaign_country_statistics_data'] = campaign_table_stats['all_campaign_country_statistics_data']
     all_campaign_stats_data['campaign_all_stats_csv_file'] = campaign_all_stats_csv_file
     session['next_url'] = request.url
-    return render_template('campaign/campaign_stats.html', title=gettext('Campaign - ') + campaign.campaign_name,
+    return render_template('campaign/campaign_stats.html', title=gettext('Campaign - %(campaign_name)s',
+                                                                         campaign_name=campaign.campaign_name),
                            campaign=campaign,
                            session_language=session_language,
                            campaign_editors=all_campaign_stats_data['campaign_editors'],

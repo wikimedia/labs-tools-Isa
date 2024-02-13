@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-15 23:59+0100\n"
+"POT-Creation-Date: 2024-02-13 04:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,71 +17,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: campaigns/routes.py:37 templates/campaign/campaigns.html:6
+#: campaigns/routes.py:38 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:39
 msgid "Campaigns"
 msgstr ""
 
-#: campaigns/routes.py:55 campaigns/routes.py:141
+#: campaigns/routes.py:56 campaigns/routes.py:144
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr ""
 
-#: campaigns/routes.py:112 campaigns/routes.py:166
-msgid "Campaign - "
+#: campaigns/routes.py:113 campaigns/routes.py:169
+#, python-format
+msgid "Campaign - %(campaign_name)s"
 msgstr ""
 
-#: campaigns/routes.py:189
+#: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:219
+#: campaigns/routes.py:223
 #, python-format
 msgid "Sorry %(campaign_name)s could not be created"
 msgstr ""
 
-#: campaigns/routes.py:227
+#: campaigns/routes.py:231
 #, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr ""
 
-#: campaigns/routes.py:230
+#: campaigns/routes.py:234
 msgid "Create a campaign"
 msgstr ""
 
-#: campaigns/routes.py:250
+#: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr ""
 
-#: campaigns/routes.py:269
+#: campaigns/routes.py:273
 msgid "You need to log in to update a campaign"
 msgstr ""
 
-#: campaigns/routes.py:295
-msgid "Campaign update failed please try later!"
-msgstr ""
-
 #: campaigns/routes.py:299
-msgid "Update Succesfull !"
+msgid "Campaign update failed. Please try later!"
 msgstr ""
 
-#: campaigns/routes.py:308
+#: campaigns/routes.py:303
+msgid "Update succesfull!"
+msgstr ""
+
+#: campaigns/routes.py:312
 #, python-format
-msgid "You cannot update this campaign. Contact the nanager, User:%(username)s "
+msgid "You cannot update this campaign. Contact the manager, User:%(username)s "
 msgstr ""
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:328
 #, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr ""
 
-#: campaigns/routes.py:329
+#: campaigns/routes.py:333
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr ""
 
-#: campaigns/routes.py:371
+#: campaigns/routes.py:375
 msgid "You need to login to participate"
 msgstr ""
 
@@ -493,7 +494,6 @@ msgid "Camera Location"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from commons"
 msgstr ""
 
@@ -593,7 +593,11 @@ msgid "Search for things you see in the image"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:137
-msgid "minimise metadata from commons"
+msgid "minimise metadata from Commons"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:138
+msgid "show all metadata from Commons"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:139
@@ -703,7 +707,7 @@ msgstr ""
 
 #: templates/campaign/campaigns.html:8
 msgid ""
-"You can access information on the previous campaigns in the Archive "
+"You can access information on the previous campaigns in the archive "
 "section."
 msgstr ""
 
@@ -724,7 +728,7 @@ msgid "Total number of images in the campaign"
 msgstr ""
 
 #: templates/campaign/campaigns.html:23
-msgid "Number of editors that have contributed to the campaign "
+msgid "Number of editors that have contributed to the campaign"
 msgstr ""
 
 #: templates/campaign/campaigns.html:23
@@ -784,12 +788,12 @@ msgid "Show closed campaigns"
 msgstr ""
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:42
 msgid "Create your own campaign"
 msgstr ""
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:42
 msgid "Create a new campaign using this tool"
 msgstr ""
 
@@ -883,7 +887,7 @@ msgid "Page Not Found"
 msgstr ""
 
 #: templates/errors/404.html:10
-msgid "We are Unable to find the page you are looking for"
+msgid "We are unable to find the page you are looking for"
 msgstr ""
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
@@ -1024,7 +1028,7 @@ msgid ""
 msgstr ""
 
 #: templates/main/help.html:54
-msgid "How are we going to do that ? "
+msgid "How are we going to do that ?"
 msgstr ""
 
 #: templates/main/help.html:57
@@ -1310,63 +1314,71 @@ msgstr ""
 #, python-format
 msgid ""
 "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it "
-"easy for people to add 'micro-contributions' in the form of <a "
-"%(link_attrs)s title='Learn more about structured data'>structured "
-"data</a> (descriptions, captions, tags, etc.) to images that have been "
-"contributed to Wikimedia Commons by Wiki Loves competitions."
+"easy for people to add\n"
+"        'micro-contributions' in the form of <a %(link_attrs)s "
+"title='Learn more about structured data'>structured\n"
+"            data</a> (descriptions, captions, tags, etc.) to images that "
+"have been contributed to Wikimedia Commons by\n"
+"        Wiki Loves competitions."
 msgstr ""
 
-#: templates/main/home.html:16
+#: templates/main/home.html:20
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
 msgstr ""
 
-#: templates/main/home.html:18
+#: templates/main/home.html:23
 msgid "Go to the campaign directory to choose a campaign"
 msgstr ""
 
-#: templates/main/home.html:18
+#: templates/main/home.html:23
 msgid "EXPLORE CAMPAIGNS"
 msgstr ""
 
-#: templates/main/home.html:21
-msgid "About This Tool"
-msgstr ""
-
-#: templates/main/home.html:22
-msgid ""
-"In the long run, the intent behind the tool is to increase the use of the"
-" knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr ""
-
-#: templates/main/home.html:23
-msgid ""
-"The tool is aimed to assist in the usefulness and information of images "
-"donated during the Wiki Loves competitions."
-msgstr ""
-
-#: templates/main/home.html:24
-msgid ""
-"It is initially being built to assist in the descriptions of Wiki Loves "
-"Africa images, but is being specifically modelled to be useful to all of "
-"the Wiki Loves competitions and beyond."
-msgstr ""
-
-#: templates/main/home.html:25
-msgid ""
-"The tool is also designed to be a host of micro contribution competitions"
-" proposed by project leaders."
-msgstr ""
-
 #: templates/main/home.html:26
-msgid ""
-"ISA is a collaboration between Wiki In Africa, Histropedia and the "
-"Structured Data on Commons project."
+msgid "About This Tool"
 msgstr ""
 
 #: templates/main/home.html:27
 msgid ""
+"In the long run, the intent behind the tool is to increase the use of the"
+" knowledge that is reflected\n"
+"            by each image hosted on Wikimedia Commons."
+msgstr ""
+
+#: templates/main/home.html:29
+msgid ""
+"The tool is aimed to assist in the usefulness and information of images "
+"donated during the Wiki Loves\n"
+"            competitions."
+msgstr ""
+
+#: templates/main/home.html:31
+msgid ""
+"It is initially being built to assist in the descriptions of Wiki Loves "
+"Africa images, but is being\n"
+"            specifically modelled to be useful to all of the Wiki Loves "
+"competitions and beyond."
+msgstr ""
+
+#: templates/main/home.html:33
+msgid ""
+"The tool is also designed to be a host of micro contribution competitions"
+" proposed by project\n"
+"            leaders."
+msgstr ""
+
+#: templates/main/home.html:35
+msgid ""
+"ISA is a collaboration between Wiki In Africa, Histropedia and the "
+"Structured Data on Commons\n"
+"            project."
+msgstr ""
+
+#: templates/main/home.html:37
+msgid ""
 "ISA is not only an acronym for Information Structured Acceleration, but "
-"is also a chiShona language word for 'put' or 'place'."
+"is also a chiShona language\n"
+"            word for 'put' or 'place'."
 msgstr ""
 
 #: templates/main/layout.html:34
@@ -1459,8 +1471,8 @@ msgstr ""
 
 #: templates/users/user_settings.html:15
 msgid ""
-"If \"Same as interface\" is selected, the language selected in the top "
-"menu will be used."
+"If 'Same as interface' is selected, the language selected in the top menu"
+" will be used."
 msgstr ""
 
 #: templates/users/user_settings.html:19
@@ -1530,7 +1542,7 @@ msgid "Captions languages could not be set"
 msgstr ""
 
 #: users/routes.py:160
-msgid "Preferred Languages set Successfully"
+msgid "Preferred languages set"
 msgstr ""
 
 #: users/routes.py:173
