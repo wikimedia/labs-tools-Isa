@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-13 04:36+0100\n"
+"POT-Creation-Date: 2024-02-13 10:40-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.14.0\n"
 
 #: campaigns/routes.py:38 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:39
@@ -38,7 +38,7 @@ msgstr ""
 
 #: campaigns/routes.py:223
 #, python-format
-msgid "Sorry %(campaign_name)s could not be created"
+msgid "Sorry, %(campaign_name)s could not be created"
 msgstr ""
 
 #: campaigns/routes.py:231
@@ -788,12 +788,12 @@ msgid "Show closed campaigns"
 msgstr ""
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:42
+#: templates/main/home.html:32
 msgid "Create your own campaign"
 msgstr ""
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:42
+#: templates/main/home.html:32
 msgid "Create a new campaign using this tool"
 msgstr ""
 
@@ -1011,13 +1011,13 @@ msgstr ""
 
 #: templates/main/help.html:49
 msgid ""
-"Structured Data is an ongoing project that was launched in 2019 ! … "
-"whilst Wikimedia Commons has been around for years !"
+"Structured Data is an ongoing project that was launched in 2019!.. whilst"
+" Wikimedia Commons has been around for years!"
 msgstr ""
 
 #: templates/main/help.html:50
 msgid ""
-"There are literally millions of pictures hosted on Wikimedia Commons… "
+"There are literally millions of pictures hosted on Wikimedia Commons... "
 "that need attention and love."
 msgstr ""
 
@@ -1028,7 +1028,7 @@ msgid ""
 msgstr ""
 
 #: templates/main/help.html:54
-msgid "How are we going to do that ?"
+msgid "How are we going to do that?"
 msgstr ""
 
 #: templates/main/help.html:57
@@ -1054,7 +1054,7 @@ msgid ""
 msgstr ""
 
 #: templates/main/help.html:62
-msgid "So...how does the ISA tool fit in there ?"
+msgid "So... how does the ISA tool fit in there?"
 msgstr ""
 
 #: templates/main/help.html:65
@@ -1106,7 +1106,7 @@ msgid ""
 msgstr ""
 
 #: templates/main/help.html:79
-msgid "The only requirement is… to be logged-in."
+msgid "The only requirement is... to be logged-in."
 msgstr ""
 
 #: templates/main/help.html:82
@@ -1314,71 +1314,63 @@ msgstr ""
 #, python-format
 msgid ""
 "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it "
-"easy for people to add\n"
-"        'micro-contributions' in the form of <a %(link_attrs)s "
-"title='Learn more about structured data'>structured\n"
-"            data</a> (descriptions, captions, tags, etc.) to images that "
-"have been contributed to Wikimedia Commons by\n"
-"        Wiki Loves competitions."
+"easy for people to add 'micro-contributions' in the form of <a "
+"%(link_attrs)s title='Learn more about structured data'>structured "
+"data</a> (descriptions, captions, tags, etc.) to images that have been "
+"contributed to Wikimedia Commons by Wiki Loves competitions."
 msgstr ""
 
-#: templates/main/home.html:20
+#: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
 msgstr ""
 
-#: templates/main/home.html:23
+#: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
 msgstr ""
 
-#: templates/main/home.html:23
+#: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
 msgstr ""
 
-#: templates/main/home.html:26
+#: templates/main/home.html:22
 msgid "About This Tool"
+msgstr ""
+
+#: templates/main/home.html:23
+msgid ""
+"In the long run, the intent behind the tool is to increase the use of the"
+" knowledge that is reflected by each image hosted on Wikimedia Commons."
+msgstr ""
+
+#: templates/main/home.html:24
+msgid ""
+"The tool is aimed to assist in the usefulness and information of images "
+"donated during the Wiki Loves competitions."
+msgstr ""
+
+#: templates/main/home.html:25
+msgid ""
+"It is initially being built to assist in the descriptions of Wiki Loves "
+"Africa images, but is being specifically modelled to be useful to all of "
+"the Wiki Loves competitions and beyond."
+msgstr ""
+
+#: templates/main/home.html:26
+msgid ""
+"The tool is also designed to be a host of micro contribution competitions"
+" proposed by project leaders."
 msgstr ""
 
 #: templates/main/home.html:27
 msgid ""
-"In the long run, the intent behind the tool is to increase the use of the"
-" knowledge that is reflected\n"
-"            by each image hosted on Wikimedia Commons."
-msgstr ""
-
-#: templates/main/home.html:29
-msgid ""
-"The tool is aimed to assist in the usefulness and information of images "
-"donated during the Wiki Loves\n"
-"            competitions."
-msgstr ""
-
-#: templates/main/home.html:31
-msgid ""
-"It is initially being built to assist in the descriptions of Wiki Loves "
-"Africa images, but is being\n"
-"            specifically modelled to be useful to all of the Wiki Loves "
-"competitions and beyond."
-msgstr ""
-
-#: templates/main/home.html:33
-msgid ""
-"The tool is also designed to be a host of micro contribution competitions"
-" proposed by project\n"
-"            leaders."
-msgstr ""
-
-#: templates/main/home.html:35
-msgid ""
 "ISA is a collaboration between Wiki In Africa, Histropedia and the "
-"Structured Data on Commons\n"
-"            project."
+"Structured Data on Commons project."
 msgstr ""
 
-#: templates/main/home.html:37
+#: templates/main/home.html:28
 msgid ""
 "ISA is not only an acronym for Information Structured Acceleration, but "
-"is also a chiShona language\n"
-"            word for 'put' or 'place'."
+"is also a chiShona language word for 'put' or 'place'."
 msgstr ""
 
 #: templates/main/layout.html:34
