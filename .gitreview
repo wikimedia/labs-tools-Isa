@@ -4,3 +4,4 @@ port=29418
 project=labs/tools/Isa.git
 track=1
 defaultrebase=0
+defaultbranch=main
