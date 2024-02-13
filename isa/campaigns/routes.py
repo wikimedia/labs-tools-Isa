@@ -220,7 +220,7 @@ def CreateCampaign():
             db.session.add(campaign)
             # commit failed
             if not commit_changes_to_db():
-                flash(gettext('Sorry %(campaign_name)s could not be created',
+                flash(gettext('Sorry, %(campaign_name)s could not be created',
                               campaign_name=form.campaign_name.data), 'info')
             else:
                 image_updater.update_in_task(campaign.id)
