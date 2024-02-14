@@ -309,7 +309,7 @@ def updateCampaign(id):
         campaign = Campaign.query.filter_by(id=id).first()
 
         if campaign.manager != user:
-            flash(gettext('You cannot update this campaign. Contact the manager, User:%(username)s ',
+            flash(gettext('You cannot update this campaign. Contact the manager, User:%(username)s.',
                           username=campaign.manager.username), 'info')
             return redirect(url_for('campaigns.getCampaignById', id=id))
 
