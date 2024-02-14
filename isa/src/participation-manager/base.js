@@ -236,7 +236,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
             // Button states will return to disabled
             // Cancel buttons will now reset to the current image data
 
-            me.imageRevId = response // server sends revision id from final edit as response
+            me.imageRevId = parseInt(response) // server sends revision id from final edit as response
             if (editType === "depicts") {
                 saveInitialStructuredData(getCurrentDepictStatements(), false);
                 me.depictDataChanged();
