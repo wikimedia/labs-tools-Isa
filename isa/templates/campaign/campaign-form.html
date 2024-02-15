@@ -11,7 +11,7 @@
     <hr class="pt-0" width="35%">
     <p>
         {% if is_update %}
-            {{ _('You are updating') }} {{ campaign.campaign_name }}
+            {{ _('You are updating %(campaign)s', campaign=campaign.campaign_name) }}
         {% else %}
             {{ _('Fill in the form below to create your campaign') }}
         {% endif %}
