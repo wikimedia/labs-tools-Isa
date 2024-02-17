@@ -106,6 +106,8 @@ ParticipationManager.prototype.populateStructuredData = function(filename, callb
                     });
                 }
             }
+            // store initial depicts in session to enable prominence changes without refresh
+            sessionStorage.setItem('intial_depicts', JSON.stringify(depictItems))
         } else {
             //todo: add message to statements container
             //console.log("this item has no depicts statements yet")

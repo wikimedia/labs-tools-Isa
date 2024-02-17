@@ -426,16 +426,20 @@ def postContribution():
             # Just pretend that everything went fine without touching
             # commons.
             lastrevid = 1
-        else:
-            csrf_token, api_auth_token = generate_csrf_token(
-                app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
-                session.get('access_token')['key'],
-                session.get('access_token')['secret']
-            )
-            lastrevid = make_edit_api_call(csrf_token,
-                                           api_auth_token,
-                                           contrib_data_list[i])
+            return make_response(str(lastrevid), 200)
 
+        csrf_token, api_auth_token = generate_csrf_token(
+            app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'],
+            session.get('access_token')['key'],
+            session.get('access_token')['secret']
+        )
+
+        # The initial claim is not found in second requests
+        if 'initial_claim' not in contrib_data_list[i].keys():
+            contrib_data_list[i]['initial_claim'] = session.get('initial_claim')
+        lastrevid = make_edit_api_call(csrf_token,
+                                       api_auth_token,
+                                       contrib_data_list[i])
         if lastrevid is not None:
             # We check if the previous edit was successfull
             # We then add the contribution to the db session
@@ -451,7 +455,7 @@ def postContribution():
                 next_api_options = contrib_options_list[0]
                 next_api_options['baserevid'] = lastrevid
         else:
-            return ("Failure")
+            return make_response("Failure", 400)
         # We store the latest revision id to be sent to client
         latest_base_rev_id = lastrevid
 
@@ -463,7 +467,7 @@ def postContribution():
     if commit_changes_to_db():
         return (str(latest_base_rev_id))
 
-    return ("Failure")
+    return make_response("Failure", 400)
 
 
 @campaigns.route('/api/search-depicts/<int:id>')

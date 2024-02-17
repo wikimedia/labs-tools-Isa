@@ -220,7 +220,7 @@ def make_edit_api_call(csrf_token, api_auth_token, contribution_data):
     # but NOT for 'remove' action, as claim is a string in this case
     if edit_type == 'depicts' and edit_action != "remove":
         params['claim'] = json.dumps(params['claim'])
-    
+
     params['format'] = 'json'
     params['token'] = csrf_token
     params['formatversion'] = 1
