@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-25 12:26:47+0000\n"
-"X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
+"PO-Revision-Date: 2024-02-19 12:24:48+0000\n"
+"X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
@@ -21,71 +21,72 @@ msgstr ""
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
-#: campaigns/routes.py:36 templates/campaign/campaigns.html:6
-#: templates/main/layout.html:38
+#: campaigns/routes.py:38 templates/campaign/campaigns.html:6
+#: templates/main/layout.html:39
 msgid "Campaigns"
 msgstr "מיזמים"
 
-#: campaigns/routes.py:54 campaigns/routes.py:140
+#: campaigns/routes.py:56 campaigns/routes.py:144
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "מיזם עם המזהה %(id)s אינו קיים"
 
-#: campaigns/routes.py:111 campaigns/routes.py:165
-msgid "Campaign - "
-msgstr "מיזם - "
+#: campaigns/routes.py:113 campaigns/routes.py:169
+#, python-format
+msgid "Campaign - %(campaign_name)s"
+msgstr "מיזם - %(campaign_name)s"
 
-#: campaigns/routes.py:188
+#: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "יש להיכנס כדי ליצור מיזם"
 
-#: campaigns/routes.py:217
+#: campaigns/routes.py:223
 #, python-format
-msgid "Sorry %(campaign_name)s Could not be created"
+msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "מחילה, לא ניתן ליצור את %(campaign_name)s"
 
-#: campaigns/routes.py:225
+#: campaigns/routes.py:231
 #, python-format
-msgid "%(campaign_name)s Campaign created!"
+msgid "%(campaign_name)s campaign created!"
 msgstr "המיזם %(campaign_name)s נוצר!"
 
-#: campaigns/routes.py:228
+#: campaigns/routes.py:234
 msgid "Create a campaign"
 msgstr "יצירת מיזם"
 
-#: campaigns/routes.py:248
+#: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - תרומה"
 
-#: campaigns/routes.py:267
-msgid "You need to Login to update a campaign"
+#: campaigns/routes.py:273
+msgid "You need to log in to update a campaign"
 msgstr "יש להיכנס כדי לעדכן מיזם"
 
-#: campaigns/routes.py:292
-msgid "Campaign update failed please try later!"
-msgstr "עדכון המיזם נכשל, נא לנסות שוב!"
+#: campaigns/routes.py:299
+msgid "Campaign update failed. Please try later!"
+msgstr "עדכון המיזם נכשל. נא לנסות שוב!"
 
-#: campaigns/routes.py:296
-msgid "Update Succesfull !"
+#: campaigns/routes.py:303
+msgid "Update succesfull!"
 msgstr "העדכון הצליח!"
 
-#: campaigns/routes.py:304
+#: campaigns/routes.py:312
 #, python-format
-msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "אי־אפשר לעדכן את המיזם הזה, נא ליצור קשר עם המנהל User:%(campaign_manager)s "
+msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
+msgstr "אין לך אפשרות לעדכן את המיזם הזה. נא ליצור קשר עם המנהל, משתמש:%(username)s."
 
-#: campaigns/routes.py:319
+#: campaigns/routes.py:328
 #, python-format
-msgid "Booo! %(campaign_name)s Could not be updated!"
+msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "אווווף! לא ניתן לעדכן את %(campaign_name)s!"
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:333
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - עדכון"
 
-#: campaigns/routes.py:366
+#: campaigns/routes.py:375
 msgid "You need to login to participate"
 msgstr "יש להיכנס כדי להשתתף"
 
@@ -102,7 +103,7 @@ msgid "You are updating"
 msgstr "נעשה עדכון"
 
 #: templates/campaign/campaign-form.html:16
-msgid "Fill in the form below to create you campaign"
+msgid "Fill in the form below to create your campaign"
 msgstr "נא למלא את הטופס למטה כדי ליצור את המיזם שלך"
 
 #: templates/campaign/campaign-form.html:19
@@ -232,7 +233,7 @@ msgid "You must select at least one of the options below."
 msgstr "יש לבחור לפחות אחת מהאפשרויות שלהלן."
 
 #: templates/campaign/campaign-form.html:179
-msgid "To learn more about Depicts and Caption meta-data see the help page."
+msgid "To learn more about Depicts and Caption meta-data, see the help page."
 msgstr "למידע נוסף על מטא־נתונים של \"מוצג\" ו\"כיתוב\", ר' את דף העזרה."
 
 #: templates/campaign/campaign-form.html:182
@@ -241,16 +242,16 @@ msgid "Depicts"
 msgstr "מוצג"
 
 #: templates/campaign/campaign-form.html:194
-msgid "Select to collect Depicts metadata in the campiagn"
+msgid "Select to collect Depicts metadata in the campaign"
 msgstr "יש לבחור את זה כדי לאסוף מטא־נתונים של \"מוצג\" במיזם"
 
 #: templates/campaign/campaign-form.html:197
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Captions"
 msgstr "כיתובים"
 
 #: templates/campaign/campaign-form.html:209
-msgid "Select to collect Caption metadata in the campiagn"
+msgid "Select to collect Caption metadata in the campaign"
 msgstr "יש לבחור את זה כדי לאסוף מטא־נתונים של \"כיתוב\" במיזם"
 
 #: templates/campaign/campaign-form.html:216
@@ -358,9 +359,8 @@ msgid "No partcipants has contributed to this campaign"
 msgstr "שום משתתף לא תרם למיזם הזה"
 
 #: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:71
-msgid "Most improved Countries"
-msgstr "המדינות המשופרות ביותר"
+msgid "Most improved countries"
+msgstr "המדינות שקיבלו הכי הרבה שיפורים"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -434,7 +434,7 @@ msgid "View the previous image"
 msgstr "הצגת התמונה הקודמת"
 
 #: templates/campaign/campaign_entry.html:23
-#: templates/campaign/campaign_entry.html:102
+#: templates/campaign/campaign_entry.html:127
 msgid "PREV IMAGE"
 msgstr "תמונה קודמת"
 
@@ -447,7 +447,7 @@ msgid "View the next image"
 msgstr "הצגת התמונה הבאה"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:103
+#: templates/campaign/campaign_entry.html:128
 msgid "NEXT IMAGE"
 msgstr "תמונה באה"
 
@@ -472,7 +472,6 @@ msgid "Camera Location"
 msgstr "מיקום המצלמה"
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
 msgstr "הצג את כל המטא נתונים מוויקישיתוף"
 
@@ -481,7 +480,7 @@ msgid "Adding Depict Statements"
 msgstr "הוספת קביעות \"מוצג\""
 
 #: templates/campaign/campaign_entry.html:46
-msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
+msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
 msgstr "זה צריך להיות פשוט: יש השתמש במילים ובמושגים פשוטים כדי לתאר את מה שמוצג לך בכל תמונה (למשל חתול, הר, טאג' מאהל)"
 
 #: templates/campaign/campaign_entry.html:50
@@ -489,7 +488,7 @@ msgid "Cancel your changes"
 msgstr "ביטול השינויים שלך"
 
 #: templates/campaign/campaign_entry.html:50
-#: templates/campaign/campaign_entry.html:82
+#: templates/campaign/campaign_entry.html:107
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -498,7 +497,7 @@ msgid "Save your edits to Wikimedia Commons"
 msgstr "שמירת העריכות שלך לוויקישיתוף"
 
 #: templates/campaign/campaign_entry.html:51
-#: templates/campaign/campaign_entry.html:83
+#: templates/campaign/campaign_entry.html:108
 #: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "שמירה"
@@ -511,81 +510,122 @@ msgstr "תיעשה העברה לכניסה לחשבון ואז חזרה לכאן
 msgid "Name the different elements that you can see in this image"
 msgstr "נא לתת שם לרכיבים השונים שאפשר לראות בתמונה הזאת"
 
-#: templates/campaign/campaign_entry.html:73
+#: templates/campaign/campaign_entry.html:79
+msgid "Accept"
+msgstr "לקבל"
+
+#: templates/campaign/campaign_entry.html:80
+msgid "Reject"
+msgstr "לדחות"
+
+#: templates/campaign/campaign_entry.html:89
+#: templates/campaign/campaign_entry.html:150
+msgid "Hide Suggestions"
+msgstr "להסתיר הצעות"
+
+#: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
 msgstr "כדי לסמן את הרכיבים הבולטים בתמונה, יש ללחוץ על סמל הדגל"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Writing Captions"
 msgstr "כתיבת כיתובים"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
 msgstr "יש לכלול כל מידע התרבותי, המדעי או הטכני שהצלחת לזהות (למשל \"טקס הקפה האתיופי או בונה מפלט\") כדי להעשיר את המידע."
 
-#: templates/campaign/campaign_entry.html:86
+#: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
 msgstr "יש להיכנס כדי לפרסם שינויים"
 
-#: templates/campaign/campaign_entry.html:88
+#: templates/campaign/campaign_entry.html:113
 msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr "נא להוסיף כיתוב כדי להסביר טוב יותר את התמונה (מקסימום 255 תווים)"
 
-#: templates/campaign/campaign_entry.html:93
+#: templates/campaign/campaign_entry.html:118
 msgid "Briefly explain what you see in this image."
 msgstr "נא להסביר בקצרה מה רואים בתמונה הזאת."
 
-#: templates/campaign/campaign_entry.html:97
+#: templates/campaign/campaign_entry.html:122
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
 msgstr "ניתן להוסיף כיתובים בשפות נוספות על־ידי בחירת העדפות שפה מתפריט המשתמש"
 
-#: templates/campaign/campaign_entry.html:109
+#: templates/campaign/campaign_entry.html:134
 msgid "No images found for this campaign!"
 msgstr "לא נמצאו תמונות עבור המיזם הזה!"
 
-#: templates/campaign/campaign_entry.html:110
+#: templates/campaign/campaign_entry.html:135
 msgid "Something went wrong getting campaign images"
 msgstr "משהו השתבש בעת שליפת תמונות המיזם"
 
-#: templates/campaign/campaign_entry.html:111
+#: templates/campaign/campaign_entry.html:136
 msgid "Search for things you see in the image"
 msgstr "נא לחפש דברים שרואים בתמונה"
 
-#: templates/campaign/campaign_entry.html:112
-msgid "minimise metadata from commons"
+#: templates/campaign/campaign_entry.html:137
+msgid "minimise metadata from Commons"
 msgstr "מזעור מטא־נתונים מוויקישיתוף"
 
-#: templates/campaign/campaign_entry.html:114
+#: templates/campaign/campaign_entry.html:138
+msgid "show all metadata from Commons"
+msgstr "הצגת כל המטא־נתונים מוויקישיתוף"
+
+#: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
 msgstr "זה עבד! הפריטים המתוארים נשמרו בוויקישיתוף"
 
-#: templates/campaign/campaign_entry.html:115
+#: templates/campaign/campaign_entry.html:140
 msgid "Success! Captions saved to Wikimedia Commons"
 msgstr "זה עבד! הכיתובים נשמרו בוויקישיתוף"
 
-#: templates/campaign/campaign_entry.html:116
+#: templates/campaign/campaign_entry.html:141
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
 msgstr "אופס! משהו השתבש, העריכות שלך לא נשמרו בוויקישיתוף"
 
-#: templates/campaign/campaign_entry.html:117
+#: templates/campaign/campaign_entry.html:142
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
 msgstr "האם ברצונך באמת לנווט לתמונה אחרת? יש לך שינויים שלא נשמרו שיאבדו."
 
-#: templates/campaign/campaign_entry.html:118
+#: templates/campaign/campaign_entry.html:143
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
 msgstr "יש ללחוץ על \"אישור\" כדי להמשיך בכל זאת, או על \"ביטול\" אם ברצונך לשמור את השינויים תחילה."
 
-#: templates/campaign/campaign_entry.html:119
+#: templates/campaign/campaign_entry.html:144
 msgid "Remove this depicted item"
 msgstr "להסיר את הפריט המתואר הזה"
 
-#: templates/campaign/campaign_entry.html:120
+#: templates/campaign/campaign_entry.html:145
 msgid "Mark this depicted item as prominent"
 msgstr "לסמן את הפריט המתואר בתור בולט"
 
-#: templates/campaign/campaign_entry.html:121
+#: templates/campaign/campaign_entry.html:146
 msgid "Mark this depicted item as NOT prominent"
 msgstr "לסמן את הפריט המתואר בתור לא בולט"
+
+#: templates/campaign/campaign_entry.html:147
+msgid "Suggestion removed from list"
+msgstr "ההצעה הוסרה מהרשימה"
+
+#: templates/campaign/campaign_entry.html:148
+msgid "Please check that you are logged in"
+msgstr "נא לבדוק שנכנסת לחשבון"
+
+#: templates/campaign/campaign_entry.html:149
+msgid "Oops! Suggestion might not have been removed"
+msgstr "אוי! ייתכן שההצעה לא הוסרה"
+
+#: templates/campaign/campaign_entry.html:151
+msgid "Show Suggestions"
+msgstr "הצגת הצעות"
+
+#: templates/campaign/campaign_entry.html:152
+msgid "Are you sure you want to reject this suggestion?"
+msgstr "האם ברצונך להסיר את ההצעה הזאת?"
+
+#: templates/campaign/campaign_entry.html:153
+msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
+msgstr "יש לעשות את זה רק אם אין לך ספק בכך שהתג המוצע אינו מופיע בתמונה, או יהיה שגוי בהתאם להנחיות של ויקישיתוף. אם כמה משתמשים דוחים את אותה הצעה, היא לא תוצג עוד."
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -598,6 +638,10 @@ msgstr "מ־"
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
 msgstr "עד"
+
+#: templates/campaign/campaign_stats.html:71
+msgid "Most improved Countries"
+msgstr "המדינות המשופרות ביותר"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
@@ -620,7 +664,7 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "נא ללחוץ על שם המיזם כדי להתחיל ולהוסיף נתונים מבניים לתמונה."
 
 #: templates/campaign/campaigns.html:8
-msgid "You can access information on the previous Campaigns in the Archive section."
+msgid "You can access information on the previous campaigns in the archive section."
 msgstr "אפשר לגשת למידע על המיזמים הקודמים בארכיון."
 
 #: templates/campaign/campaigns.html:15
@@ -640,7 +684,7 @@ msgid "Total number of images in the campaign"
 msgstr "המספר הכולל של תמונות במיזם הזה"
 
 #: templates/campaign/campaigns.html:23
-msgid "Number of editors that have contributed to the campaign "
+msgid "Number of editors that have contributed to the campaign"
 msgstr "מספר העורכים שתרמו למיזם"
 
 #: templates/campaign/campaigns.html:23
@@ -700,12 +744,12 @@ msgid "Show closed campaigns"
 msgstr "הצגת מיזמים סגורים"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create your own campaign"
 msgstr "יצירת מיזם משלך"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create a new campaign using this tool"
 msgstr "יצירת מיזם חדש באמצעות הכלי הזה"
 
@@ -778,12 +822,12 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "מנהל המיזם יכול לנסות שוב על־ידי עדכון המיזם."
 
 #: templates/errors/403.html:8
-msgid "Server Under maintenance"
+msgid "Server under maintenance"
 msgstr "בשרת מתבצעות עבודות תחזוקה"
 
 #: templates/errors/403.html:10
-msgid "Please check contact support"
-msgstr "נא לבדוק את דף יצירת הקשר עם התמיכה"
+msgid "Please contact support"
+msgstr "נא ליצור קשר עם התמיכה"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -799,7 +843,7 @@ msgid "Page Not Found"
 msgstr "הדף לא נמצא"
 
 #: templates/errors/404.html:10
-msgid "We Are Unable to find the page you are looking for"
+msgid "We are unable to find the page you are looking for"
 msgstr "לא הצלחנו למצוא את הדף שחיפשת"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
@@ -841,8 +885,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "מהו ויקישיתוף?"
 
 #: templates/main/help.html:26
-msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr "<strong>ויקישיתוף</strong> (ידוע גם בשם \"Commons\") הוא מיזם ויקימדיה, מיזם אחות של ויקיפדיה, ואוסף של יותר מ־40 מיליון קובצי מדיה חופשיים."
+msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
+msgstr "<strong>ויקישיתוף</strong> (ידוע גם בשם \"Commons\") הוא מיזם ויקימדיה, מיזם אחות של ויקיפדיה. הוא מארח אוסף של מיליוני קובצי מדיה שכל אחד יכול לתרום אליו."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -889,11 +933,11 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "עם יותר מבנה, קל יותר לעשות שימוש חוזר בנתונים במיזמים אחרים של ויקימדיה ועל־ידי צדדים שלישיים; זה גם מאפשר למחשבים לעבד ו\"להבין\" אותו."
 
 #: templates/main/help.html:49
-msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
-msgstr "נתונים מבניים הוא פרויקט מתמשך שהושק ב־2019! … בעוד ויקישיתוף קיים כבר שנים!"
+msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
+msgstr "נתונים מבניים הוא פרויקט מתמשך שהושק ב־2019!.. בעוד ויקישיתוף קיים כבר שנים!"
 
 #: templates/main/help.html:50
-msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
+msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
 msgstr "יש ממש מיליוני תמונות שמתארחות בוויקישיתוף... שזקוקות לתשומת לב ואהבה."
 
 #: templates/main/help.html:51
@@ -901,7 +945,7 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr "מיליוני תמונות שאינן מתוארות בנתונים מבניים כרגע."
 
 #: templates/main/help.html:54
-msgid "How are we going to do that ? "
+msgid "How are we going to do that?"
 msgstr "איך אנחנו הולכים לעשות את זה?"
 
 #: templates/main/help.html:57
@@ -917,7 +961,7 @@ msgid "In the context of Structured Data on Commons, curating means all the acti
 msgstr "בהקשר של נתונים מבניים בוויקישיתוף, אוצרות היא מכלול הפעילויות שעושים התורמים לוויקישיתוף כדי לארגן ולהציג את קובצי המדיה בוויקישיתוף: פעולות ניהול, הוספת מטא־נתונים נוספים וטובים יותר לקבצים, מיון שלהם בקטגוריות, יצירת גלריות..."
 
 #: templates/main/help.html:62
-msgid "So...how does the ISA tool fit in there ?"
+msgid "So... how does the ISA tool fit in there?"
 msgstr "אז... איך כלי ISA משתלב בכל זה?"
 
 #: templates/main/help.html:65
@@ -953,7 +997,7 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "כל מי שיש לו חשבון ויקימדיה יכול לתרום להוספת מטא־נתונים מבניים למיזם."
 
 #: templates/main/help.html:79
-msgid "The only requirement is… to be logged-in."
+msgid "The only requirement is... to be logged-in."
 msgstr "הדרישה היחידה היא... להיכנס לחשבון."
 
 #: templates/main/help.html:82
@@ -1045,8 +1089,8 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "זה הופעל בוויקישיתוף באפריל 2019."
 
 #: templates/main/help.html:131
-msgid "To add a depicts statement, simply start typing in the search box to get started."
-msgstr "כדי להוסיף קביעת \"מוצג\", צריך פשוט להתחיל להקליד בתיבת החיפוש כדי להתחיל."
+msgid "To add a depicts statement, simply start typing in the search box."
+msgstr "כדי להוסיף קביעת \"מוצג\", צריך פשוט להתחיל להקליד בתיבת החיפוש."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
@@ -1097,7 +1141,7 @@ msgid "Legal and credits"
 msgstr "מידע משפטי וקרדיטים"
 
 #: templates/main/help.html:165
-msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
+msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "הוא פועל באתר tools.wmflabs.org, וכפוף לתנאי השימוש של שירותי ענן של ויקימדיה."
 
 #: templates/main/help.html:166
@@ -1115,105 +1159,109 @@ msgstr "הוספת קלה של מידע על תמונות בוויקישיתוף
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> זהו כלי מהנה, רב־לשוני, מיועד למכשירים ניידים תחילה, והוא מקל על עשיית \"תרומות זעירות\" בצורת הוספת <a %(link_attrs)s>נתונים מבניים</a> (תיאורים, כיתובים, תגים וכו') לתמונות שנתרמו לתחרויות \"ויקי אוהבת\" בוויקישיתוף."
+msgstr "<strong>ISA</strong> הוא כלי מהנה, רב־לשוני, מיועד למכשירים ניידים תחילה, והוא מקל על עשיית \"תרומות זעירות\" בצורת הוספת <a %(link_attrs)s>נתונים מבניים</a> (תיאורים, כיתובים, תגים וכו') לתמונות שנתרמו לתחרויות \"ויקי אוהבת\" בוויקישיתוף."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
 msgstr "<strong>יש ללחוץ כאן על עיון במיזמים כדי להתחיל!</strong>"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
 msgstr "יש לעבור אל ספריית המיזמים כדי לבחור מיזם"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
 msgstr "עיון במיזמים"
 
-#: templates/main/home.html:21
+#: templates/main/home.html:22
 msgid "About This Tool"
 msgstr "על הכלי הזה"
 
-#: templates/main/home.html:22
-msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
+#: templates/main/home.html:23
+msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
 msgstr "בטווח הארוך, הכוונה מאחורי הכלי היא להגביר את השימוש בידע שבא לידי ביטוי בכל תמונה שמתארחת בוויקישיתוף."
 
-#: templates/main/home.html:23
+#: templates/main/home.html:24
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
 msgstr "הכלי נועד לסייע בשימושיות ובמידע של תמונות שנתרמו במהלך תחרויות \"ויקי אוהבת\"."
 
-#: templates/main/home.html:24
+#: templates/main/home.html:25
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
 msgstr "הוא נבנה בתחילה כדי לסייע בתיאורים של תמונות \"ויקי אוהבת את אפריקה\", אך מתוכנן עם כוונה להיות שימושי לכל תחרויות \"ויקי אוהבת\" ואף מעבר לכך."
 
-#: templates/main/home.html:25
+#: templates/main/home.html:26
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "הכלי נועד גם להיות שורה של תחרויות תרומות זעירות המוצעות על־די מובילי מיזמים."
 
-#: templates/main/home.html:26
+#: templates/main/home.html:27
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA הוא שיתוף פעולה בין פרויקט Wiki In Africa, פרויקט Histropedia ופרויקט נתונים מבניים בוויקישיתוף."
 
-#: templates/main/home.html:27
+#: templates/main/home.html:28
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
 msgstr "ISA הוא לא רק ראשי תיבות של Information Structured Acceleration, אלא היא גם מילה בשפת שוֹנה, שפירושה \"לשים\" או \"למקם\"."
 
-#: templates/main/layout.html:33
+#: templates/main/layout.html:34
 msgid "Home"
 msgstr "דף הבית"
 
-#: templates/main/layout.html:44
-msgid "Create New"
-msgstr "ליצור חדש"
+#: templates/main/layout.html:45
+msgid "Create new campaign"
+msgstr "יצירת מיזם חדש"
 
-#: templates/main/layout.html:50
+#: templates/main/layout.html:51
 msgid "Help"
 msgstr "עזרה"
 
-#: templates/main/layout.html:66
+#: templates/main/layout.html:67
 msgid "Change your available caption languages"
 msgstr "שינוי שפות הכתוביות הזמינות שלך"
 
-#: templates/main/layout.html:66
-msgid "Languages preferences"
+#: templates/main/layout.html:67 templates/users/user_settings.html:6
+msgid "Language preferences"
 msgstr "העדפות שפה"
 
-#: templates/main/layout.html:67
+#: templates/main/layout.html:68
 msgid "See your campaigns"
 msgstr "ר' את המיזמים שלך"
 
-#: templates/main/layout.html:67
-msgid "My Campaigns"
+#: templates/main/layout.html:68
+msgid "My campaigns"
 msgstr "המיזמים שלי"
 
-#: templates/main/layout.html:74 templates/main/layout.html:78
+#: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
 msgstr "יציאה"
 
-#: templates/main/layout.html:82
+#: templates/main/layout.html:83
 msgid "Login"
 msgstr "כניסה"
 
-#: templates/main/layout.html:106
+#: templates/main/layout.html:107
 msgid "ISA tool"
 msgstr "כלי ISA"
 
-#: templates/main/layout.html:107
-msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "פותח כשיתוף פעולה בין פרויקט Wiki In Africa, פרויקט Histropedia ופרויקט נתונים מבניים בוויקישיתוף."
+#: templates/main/layout.html:108
+msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
+msgstr "פותח כשיתוף פעולה בין פרויקט Wiki In Africa, פרויקט Histropedia ופרויקט נתונים מבניים בוויקישיתוף"
 
-#: templates/main/layout.html:107
+#: templates/main/layout.html:109
+msgid "Further devopment supported by "
+msgstr "פיתוח נוסף נתמך על־ידי"
+
+#: templates/main/layout.html:113
 msgid "It is running on"
 msgstr "הוא רץ על תשתית"
 
-#: templates/main/layout.html:109
+#: templates/main/layout.html:115
 msgid "and is subject to the"
 msgstr "וכפוף ל"
 
-#: templates/main/layout.html:111
+#: templates/main/layout.html:117
 msgid "ISA is published under"
 msgstr "ISA מתפרסם לפי תנאי"
 
-#: templates/main/layout.html:113
+#: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
 msgstr "התוכן שנוסף לכלי דרך ויקישיתוף משוחרר לפי תנאי"
 
@@ -1222,20 +1270,12 @@ msgid "Your Campaigns"
 msgstr "המיזמים שלך"
 
 #: templates/users/own_campaigns.html:16
-msgid "Below is a list of your Campaigns"
+msgid "Below is a list of your campaigns"
 msgstr "להלן רשימת המיזמים שלך"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
 msgstr "אין לך מיזמים כלשהם"
-
-#: templates/users/own_campaigns.html:27
-msgid "#"
-msgstr ""
-
-#: templates/users/user_settings.html:6
-msgid "Language preferences"
-msgstr "העדפות שפה"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
@@ -1246,15 +1286,15 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "השפה שנבחרה תשמש לחיפוש רכיבים שמוצגים בתמונות."
 
 #: templates/users/user_settings.html:15
-msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
-msgstr "אם האפשרות \"זהה לממשק\" נבחרה, תשמש השפה שנבחרה בתפריט העליון."
+msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
+msgstr "אם נבחרה האפשרות \"זהה לממשק\", תשמש השפה שנבחרה בתפריט העליון."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
 msgstr "יש לבחור עד 6 שפות לכיתובים"
 
 #: templates/users/user_settings.html:19
-msgid "Caption Languages"
+msgid "Caption languages"
 msgstr "שפות הכיתוב"
 
 #: templates/users/user_settings.html:19
@@ -1280,7 +1320,7 @@ msgid "Undo changes to language settings"
 msgstr "לבטל שינויים בהגדרות השפה"
 
 #: templates/users/user_settings.html:57
-msgid "Undo Changes"
+msgid "Undo changes"
 msgstr "לבטל שינויים"
 
 #: users/forms.py:26
@@ -1304,29 +1344,29 @@ msgstr "נתראה בפעם הבאה!"
 msgid "Please login to change your language preferences"
 msgstr "יש להיכנס לחשבון כדי לשנות את העדפות השפה שלך."
 
-#: users/routes.py:144
+#: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "מצטערים, ניסית להזין %(rep_languages)s כמה פעמים"
 
-#: users/routes.py:157
+#: users/routes.py:158
 msgid "Captions languages could not be set"
 msgstr "לא ניתן להגדיר את שפות הכיתובים"
 
-#: users/routes.py:159
-msgid "Preferred Languages set Successfully"
-msgstr "השפות המועדפות הוגדרו בהצלחה"
+#: users/routes.py:160
+msgid "Preferred languages set"
+msgstr "השפות המועדפות הוגדרו"
 
-#: users/routes.py:172
+#: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "הגדרות השפה אינן זמינות כרגע"
 
-#: users/routes.py:174
+#: users/routes.py:175
 #, python-format
-msgid "%(username)s's - Settings"
+msgid "%(username)s's Settings"
 msgstr "ההעדפות של %(username)s"
 
-#: users/routes.py:197
+#: users/routes.py:199
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "מיזמים שנוצרו על־ידי %(username)s"

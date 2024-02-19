@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-25 12:26:49+0000\n"
-"X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
+"PO-Revision-Date: 2024-02-19 12:24:51+0000\n"
+"X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tn\n"
@@ -20,71 +20,75 @@ msgstr ""
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
-#: campaigns/routes.py:36 templates/campaign/campaigns.html:6
-#: templates/main/layout.html:38
+#: campaigns/routes.py:38 templates/campaign/campaigns.html:6
+#: templates/main/layout.html:39
 msgid "Campaigns"
 msgstr "Matsholo"
 
-#: campaigns/routes.py:54 campaigns/routes.py:140
+#: campaigns/routes.py:56 campaigns/routes.py:144
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "Letsholo le le nang le id %(id)s ga le yo"
 
-#: campaigns/routes.py:111 campaigns/routes.py:165
-msgid "Campaign - "
-msgstr "Letsholo"
+#: campaigns/routes.py:113 campaigns/routes.py:169
+#, python-format
+msgid "Campaign - %(campaign_name)s"
+msgstr ""
 
-#: campaigns/routes.py:188
+#: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "O tlokana le go tsena gore o dire letsholo"
 
-#: campaigns/routes.py:217
-#, python-format
-msgid "Sorry %(campaign_name)s Could not be created"
+#: campaigns/routes.py:223
+#, fuzzy, python-format
+msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Tshwarelo %(campaign_name)s ga le a kgona go tlhamega"
 
-#: campaigns/routes.py:225
-#, python-format
-msgid "%(campaign_name)s Campaign created!"
+#: campaigns/routes.py:231
+#, fuzzy, python-format
+msgid "%(campaign_name)s campaign created!"
 msgstr "%(campaign_name)s Letsholo le Tlhamilwe!"
 
-#: campaigns/routes.py:228
+#: campaigns/routes.py:234
 msgid "Create a campaign"
 msgstr "bolotsa letsholo"
 
-#: campaigns/routes.py:248
+#: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - tsenya seabe"
 
-#: campaigns/routes.py:267
-msgid "You need to Login to update a campaign"
+#: campaigns/routes.py:273
+#, fuzzy
+msgid "You need to log in to update a campaign"
 msgstr "O tlhokana le go tsena gore o tlhabolole letsolo."
 
-#: campaigns/routes.py:292
-msgid "Campaign update failed please try later!"
+#: campaigns/routes.py:299
+#, fuzzy
+msgid "Campaign update failed. Please try later!"
 msgstr "Tlhabololo ya letsholo e retetse tsweetswee leka kgantele!"
 
-#: campaigns/routes.py:296
-msgid "Update Succesfull !"
+#: campaigns/routes.py:303
+#, fuzzy
+msgid "Update succesfull!"
 msgstr "Tlhabololo e atlegile!"
 
-#: campaigns/routes.py:304
+#: campaigns/routes.py:312
 #, python-format
-msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "O ka se kgone go tlhabolola letsholo leno, Contact Manager User:%(campaign_manager)s "
+msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
+msgstr ""
 
-#: campaigns/routes.py:319
-#, python-format
-msgid "Booo! %(campaign_name)s Could not be updated!"
+#: campaigns/routes.py:328
+#, fuzzy, python-format
+msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Booo! %(campaign_name)s e ne e ka se ka ya tlhabololwa!"
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:333
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - tlhabolola"
 
-#: campaigns/routes.py:366
+#: campaigns/routes.py:375
 msgid "You need to login to participate"
 msgstr "O tlhoka go tsena go tsaya karolo"
 
@@ -101,7 +105,8 @@ msgid "You are updating"
 msgstr "O a tlhabolola"
 
 #: templates/campaign/campaign-form.html:16
-msgid "Fill in the form below to create you campaign"
+#, fuzzy
+msgid "Fill in the form below to create your campaign"
 msgstr "Tlatsa pampitshana e e latelang go dira letsholo"
 
 #: templates/campaign/campaign-form.html:19
@@ -231,7 +236,8 @@ msgid "You must select at least one of the options below."
 msgstr "O tshwanetse go tlhopha bobotlana nngwe ya ditlhopho tse di fa tlase."
 
 #: templates/campaign/campaign-form.html:179
-msgid "To learn more about Depicts and Caption meta-data see the help page."
+#, fuzzy
+msgid "To learn more about Depicts and Caption meta-data, see the help page."
 msgstr "Go ithuta go le gontsi ka ga dikwalo le meta-data, bona tsebe ya thuso."
 
 #: templates/campaign/campaign-form.html:182
@@ -240,16 +246,18 @@ msgid "Depicts"
 msgstr "Ditshwantsho"
 
 #: templates/campaign/campaign-form.html:194
-msgid "Select to collect Depicts metadata in the campiagn"
+#, fuzzy
+msgid "Select to collect Depicts metadata in the campaign"
 msgstr "Tlhopha go khobokanya dipalopalo ta metadata mo letsholong"
 
 #: templates/campaign/campaign-form.html:197
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Captions"
 msgstr "Ditsibogelo"
 
 #: templates/campaign/campaign-form.html:209
-msgid "Select to collect Caption metadata in the campiagn"
+#, fuzzy
+msgid "Select to collect Caption metadata in the campaign"
 msgstr "Tlhopha go kgobokanya tsibogelo ya metadata mo letsholong"
 
 #: templates/campaign/campaign-form.html:216
@@ -357,9 +365,8 @@ msgid "No partcipants has contributed to this campaign"
 msgstr "Ga go na batsayakarolo ba ba nnileng le seabe mo letsholong le"
 
 #: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:71
-msgid "Most improved Countries"
-msgstr "Mafatshe a a tlhabologileng"
+msgid "Most improved countries"
+msgstr ""
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -433,7 +440,7 @@ msgid "View the previous image"
 msgstr "Bona setshwantsho se se fa morago"
 
 #: templates/campaign/campaign_entry.html:23
-#: templates/campaign/campaign_entry.html:102
+#: templates/campaign/campaign_entry.html:127
 msgid "PREV IMAGE"
 msgstr "SETSHWANTSHO SA PONOPELE"
 
@@ -446,7 +453,7 @@ msgid "View the next image"
 msgstr "Bona setshwantsho se se latelang"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:103
+#: templates/campaign/campaign_entry.html:128
 msgid "NEXT IMAGE"
 msgstr "setshwantsho se se latelang"
 
@@ -471,7 +478,6 @@ msgid "Camera Location"
 msgstr "lefelo la sekapa ditshwantsho"
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
 msgstr "Supa go tswa kwa metadata commons"
 
@@ -480,7 +486,8 @@ msgid "Adding Depict Statements"
 msgstr "Go Tsenya Dipolelo Tsa ga Setshwantsho"
 
 #: templates/campaign/campaign_entry.html:46
-msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
+#, fuzzy
+msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
 msgstr "E dire motlhofo: Dirisa mafoko a a motlhofo le dikgopolo go tlhalosa se o se bonang mo setshwantshong sengwe le sengwe (s.g. katse, thaba, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
@@ -488,7 +495,7 @@ msgid "Cancel your changes"
 msgstr "Phimola diphetogo tsa gago"
 
 #: templates/campaign/campaign_entry.html:50
-#: templates/campaign/campaign_entry.html:82
+#: templates/campaign/campaign_entry.html:107
 msgid "Cancel"
 msgstr "Phimola"
 
@@ -497,7 +504,7 @@ msgid "Save your edits to Wikimedia Commons"
 msgstr "Boloka dikgatiso tsa gago mo Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
-#: templates/campaign/campaign_entry.html:83
+#: templates/campaign/campaign_entry.html:108
 #: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "Boloka"
@@ -510,81 +517,123 @@ msgstr "O tlaa fiwa dikaelo tsa go tsena le tsa go bowa o tla go boloka diphetog
 msgid "Name the different elements that you can see in this image"
 msgstr "bua dikarolwana tse di farologaneng tse o di bonang mo setshwantshong se"
 
-#: templates/campaign/campaign_entry.html:73
+#: templates/campaign/campaign_entry.html:79
+msgid "Accept"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:80
+msgid "Reject"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:89
+#: templates/campaign/campaign_entry.html:150
+msgid "Hide Suggestions"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
 msgstr "Go tshwaya dilo tse di tlhomologileng mo setshwantshong, tobetsa setshwantsho sa folaga"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Writing Captions"
 msgstr "Go Kwala Ditlhaloso"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
 msgstr "Tsaya tshedimosetso nngwe le nngwe e e kgethegileng ya setso, ya saense kgotsa ya botegeniki e o ka e lemogang (sekao, Moletlo wa Kofi wa Ethiopia kgotsa bunna maflat) go dira gore tshedimosetso e nne e e humileng."
 
-#: templates/campaign/campaign_entry.html:86
+#: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
 msgstr "Tsena gore o gatise diphetolo tsa gago."
 
-#: templates/campaign/campaign_entry.html:88
+#: templates/campaign/campaign_entry.html:113
 msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr "Tsenya mafoko go tlhalosa setshwantsho botoka (go fitlha go ditlhaka di le 255)"
 
-#: templates/campaign/campaign_entry.html:93
+#: templates/campaign/campaign_entry.html:118
 msgid "Briefly explain what you see in this image."
 msgstr "Tlhalosa ka bokhutshwane se o se bonang mo setshwantshong se."
 
-#: templates/campaign/campaign_entry.html:97
+#: templates/campaign/campaign_entry.html:122
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
 msgstr "O ka tsenya ditlhaloso mo ditemeng tsa tlaleletso ka go tlhopha teme ya boikgethelo mo lenaaneng la modirisi"
 
-#: templates/campaign/campaign_entry.html:109
+#: templates/campaign/campaign_entry.html:134
 msgid "No images found for this campaign!"
 msgstr "Ga go na ditshwantsho tse di fitlhetsweng tsa letsholo leno!"
 
-#: templates/campaign/campaign_entry.html:110
+#: templates/campaign/campaign_entry.html:135
 msgid "Something went wrong getting campaign images"
 msgstr "Go na le sengwe se se sa tsamayang sentle mo letsholong la ditshwantsho"
 
-#: templates/campaign/campaign_entry.html:111
+#: templates/campaign/campaign_entry.html:136
 msgid "Search for things you see in the image"
 msgstr "Batla dilo tse o di bonang mo setshwantshong"
 
-#: templates/campaign/campaign_entry.html:112
-msgid "minimise metadata from commons"
+#: templates/campaign/campaign_entry.html:137
+#, fuzzy
+msgid "minimise metadata from Commons"
 msgstr "fokotsa metadata go tswa ko commons"
 
-#: templates/campaign/campaign_entry.html:114
+#: templates/campaign/campaign_entry.html:138
+msgid "show all metadata from Commons"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
 msgstr "Katlego! Dilo tse di bontshitsweng di bolokilwe mo Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:115
+#: templates/campaign/campaign_entry.html:140
 msgid "Success! Captions saved to Wikimedia Commons"
 msgstr "Katlego! Ditlhaloso tse di bolokilwe mo Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:116
+#: templates/campaign/campaign_entry.html:141
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
 msgstr "Oops! Go na le sengwe se se sa tsamayang sentle, diphetogo tsa gago ga di a bolokiwa mo Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:117
+#: templates/campaign/campaign_entry.html:142
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
 msgstr "A o tlhomamisitse gore o batla go leba kwa setshwantshong se sengwe? O na le diphetogo tse di sa bolokiwang tse di tla go latlhegelang."
 
-#: templates/campaign/campaign_entry.html:118
+#: templates/campaign/campaign_entry.html:143
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
 msgstr "Tobetsa 'GO SIAME' gore o tswelele, kgotsa 'Phimola' fa o batla go boloka diphetogo pele."
 
-#: templates/campaign/campaign_entry.html:119
+#: templates/campaign/campaign_entry.html:144
 msgid "Remove this depicted item"
 msgstr "Ntsha selo se se supilweng fa se"
 
-#: templates/campaign/campaign_entry.html:120
+#: templates/campaign/campaign_entry.html:145
 msgid "Mark this depicted item as prominent"
 msgstr "Tshwaya dilo tse jaaka tse di tlhomameng"
 
-#: templates/campaign/campaign_entry.html:121
+#: templates/campaign/campaign_entry.html:146
 msgid "Mark this depicted item as NOT prominent"
 msgstr "tshwaya dilo tse jaaka tse di sa tlhomamang"
+
+#: templates/campaign/campaign_entry.html:147
+msgid "Suggestion removed from list"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:148
+msgid "Please check that you are logged in"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:149
+msgid "Oops! Suggestion might not have been removed"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:151
+msgid "Show Suggestions"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:152
+msgid "Are you sure you want to reject this suggestion?"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:153
+msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -597,6 +646,10 @@ msgstr "Go tsa kwa"
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
 msgstr "Go fitlha"
+
+#: templates/campaign/campaign_stats.html:71
+msgid "Most improved Countries"
+msgstr "Mafatshe a a tlhabologileng"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
@@ -619,7 +672,8 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Tobetsa mo leineng la letsholo go tsenya kitso ye e rulaganeng mo setshwantshong."
 
 #: templates/campaign/campaigns.html:8
-msgid "You can access information on the previous Campaigns in the Archive section."
+#, fuzzy
+msgid "You can access information on the previous campaigns in the archive section."
 msgstr "O ka kgona go fitlhelela tshedimosetso ka ga Ditsamaiso tse di fetileng mo karolong ya Mabolokelo."
 
 #: templates/campaign/campaigns.html:15
@@ -639,7 +693,8 @@ msgid "Total number of images in the campaign"
 msgstr "Palogotlhe ya ditshwantsho mo letsholong"
 
 #: templates/campaign/campaigns.html:23
-msgid "Number of editors that have contributed to the campaign "
+#, fuzzy
+msgid "Number of editors that have contributed to the campaign"
 msgstr "Palo ya bakwadi ba ba nnileng le seabe mo letsholong"
 
 #: templates/campaign/campaigns.html:23
@@ -699,12 +754,12 @@ msgid "Show closed campaigns"
 msgstr "Supa matsholo a a tswetsweng"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create your own campaign"
 msgstr "Tlhama letsholo la gago"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create a new campaign using this tool"
 msgstr "Tlhama letsholo le lesha o dirisa thulusu ye"
 
@@ -777,11 +832,13 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "Mookamedi wa letsholo a ka leka gape ka go tlhabolola letsholo."
 
 #: templates/errors/403.html:8
-msgid "Server Under maintenance"
+#, fuzzy
+msgid "Server under maintenance"
 msgstr "Tiri ya Khomputara s santse e tlamelwa"
 
 #: templates/errors/403.html:10
-msgid "Please check contact support"
+#, fuzzy
+msgid "Please contact support"
 msgstr "Tsweetswee Ikgolaganye le dithuso tsa kgolaganyo"
 
 #: templates/errors/403.html:15
@@ -798,7 +855,8 @@ msgid "Page Not Found"
 msgstr "Tsebe ga e bonwe"
 
 #: templates/errors/404.html:10
-msgid "We Are Unable to find the page you are looking for"
+#, fuzzy
+msgid "We are unable to find the page you are looking for"
 msgstr "Ga re bone tsebe ye o e batlang"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
@@ -840,7 +898,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "Wikimedia Commons ke eng?"
 
 #: templates/main/help.html:26
-msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
+#, fuzzy
+msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
 msgstr "<strong>Wikimedia Commons</strong> (e gape e itsegeng jaaka 'Commons') ke porojeke ya Wikimedia, porojeke e e tshwanang le ya Wikipedia, le kgoboketso ya difaele tse di fetang dimilione di le 40 tsa metswedi ya tshedimosetso ya mahala."
 
 #: templates/main/help.html:27
@@ -888,11 +947,13 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "Ka sebopego se se golwane, go nna bonolo go dirisa tshedimosetso gape mo diporojekeng tse dingwe tsa Wikimedia le ke batho ba bangwe; gape go letlelela dikhomputara go e rulaganya le go e 'tlhaloganya'."
 
 #: templates/main/help.html:49
-msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
+#, fuzzy
+msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
 msgstr "Structured Data ke porojeke e e tswelelang pele e e simolotsweng ka 2019 ! ... fa Wikimedia Commons e ntse e le teng ka dingwaga di le dintsi !"
 
 #: templates/main/help.html:50
-msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
+#, fuzzy
+msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
 msgstr "Go na le ditshwantsho di le di dikadike tse di beilweng mo Wikimedia Commons... tse di tlhokang tlhokomelo le lorato."
 
 #: templates/main/help.html:51
@@ -900,7 +961,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr "Didikadike tsa ditshwantsho tse di sa tlhalosiwang ka tshedimosetso e e rulagantsweng ka nako eno."
 
 #: templates/main/help.html:54
-msgid "How are we going to do that ? "
+#, fuzzy
+msgid "How are we going to do that?"
 msgstr "Re tla dira seo jang? "
 
 #: templates/main/help.html:57
@@ -916,7 +978,7 @@ msgid "In the context of Structured Data on Commons, curating means all the acti
 msgstr "Mo kgannyeng ya Structured Data on Commons, curating e raya ditiro tsotlhe tse di dirwang ke batlamedi ba Commons go rulaganya le go tlhagisa difaele tsa metswedi ya tshedimosetso mo Wikimedia Commons: ditiro tsa botsamaisi, go oketsa metadata e e oketsegileng le e e botoka mo difaeleng, go di kgaoganya ka ditlhopha, go tlhama di-gallery..."
 
 #: templates/main/help.html:62
-msgid "So...how does the ISA tool fit in there ?"
+msgid "So... how does the ISA tool fit in there?"
 msgstr "Ka jalo... sedirisiwa sa ISA se tsena jang koo?"
 
 #: templates/main/help.html:65
@@ -952,7 +1014,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "Mongwe le mongwe yo o nang le akhaonto ya Wikimedia a ka nna le seabe go oketsa metadata e e rulagantsweng mo letsholong."
 
 #: templates/main/help.html:79
-msgid "The only requirement is… to be logged-in."
+#, fuzzy
+msgid "The only requirement is... to be logged-in."
 msgstr "Se se tlhokegang fela ke... go tsenngwa mo lenaaneng."
 
 #: templates/main/help.html:82
@@ -1044,7 +1107,8 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "E ne ya bulwa mo Wikimedia Commons ka Moranang 2019."
 
 #: templates/main/help.html:131
-msgid "To add a depicts statement, simply start typing in the search box to get started."
+#, fuzzy
+msgid "To add a depicts statement, simply start typing in the search box."
 msgstr "Go tsenya mokwalo wa setshwantsho, simolola fela go kwala mo lebokoseng la go batla gore o simolole."
 
 #: templates/main/help.html:132
@@ -1096,7 +1160,8 @@ msgid "Legal and credits"
 msgstr "Tsa semolao le di kerediti"
 
 #: templates/main/help.html:165
-msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
+#, fuzzy
+msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "E tsamaisiwa mo didirisiweng.wmflabs.org, mme e laolwa ke Wikimedia Cloud Services Terms of use."
 
 #: templates/main/help.html:166
@@ -1112,7 +1177,7 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Tsenya ditlhaloso tsa ditshwantso motlhofo mo Wikimedia Commons"
 
 #: templates/main/home.html:15
-#, python-format
+#, fuzzy, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
 msgstr "<strong>ISA</strong> ke sedirisiwa sa dipuo di le dintsi, se se dirisiwang mo founong ya selula, se se dirang gore go nne motlhofo gore batho ba tsenye 'dithuso tse dinnye' ka mokgwa wa <a %(link_attrs)s=\"\" title=\"Learn more about structured data\">tshedimosetso e e rulagantsweng</a> (ditlhaloso, mafoko a a kwa tlase, matshwao, jalo le jalo) mo ditshwantshong tse di tsentsweng mo Wikimedia Commons ke dikgaisano tsa Wiki Loves."
 
@@ -1120,99 +1185,111 @@ msgstr "<strong>ISA</strong> ke sedirisiwa sa dipuo di le dintsi, se se dirisiwa
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
 msgstr "<strong>tobetsa mo go Explore Campaigns go simolola!</strong>"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
 msgstr "Tsaela ko leaaneng la letsholo gore o tlhophe letsholo"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
 msgstr "Kanoka matsholo"
 
-#: templates/main/home.html:21
+#: templates/main/home.html:22
 msgid "About This Tool"
 msgstr "Ka ga Sedirisiwa se"
 
-#: templates/main/home.html:22
-msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
+#: templates/main/home.html:23
+#, fuzzy
+msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
 msgstr "Fa nako e ntse e ya, maikaelelo a sedirisiwa seno ke go oketsa tiriso ya kitso e e bonalang ke setshwantsho sengwe le sengwe se se mo Wikimedia Commons. "
 
-#: templates/main/home.html:23
+#: templates/main/home.html:24
+#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
 msgstr "Sedirisiwa seno se diretswe go thusa mo go diriseng le mo tshedimosetsong ya ditshwantsho tse di abetsweng ka nako ya dikgaisano tsa Wiki Loves."
 
-#: templates/main/home.html:24
+#: templates/main/home.html:25
+#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
 msgstr "Kwa tshimologong se ne se agelwa go thusa mo ditlhalosong tsa ditshwantsho tsa Wiki Loves Africa, mme e dirilwe ka tsela e e kgethegileng go nna mosola mo dikgaisanong tsotlhe tsa Wiki Lovos le kwa ntle."
 
-#: templates/main/home.html:25
+#: templates/main/home.html:26
+#, fuzzy
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "Sedirisiwa seno gape se diretswe go nna setlhopha sa dikgaisano tsa go tsenya letsogo tse dinnye tse di akantshiwang ke baeteledipele ba porojeke."
 
-#: templates/main/home.html:26
+#: templates/main/home.html:27
+#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA ke tirisanommogo magareng ga Wiki In Africa, Histropedia le porojeke ya Structured Data on Commons."
 
-#: templates/main/home.html:27
+#: templates/main/home.html:28
+#, fuzzy
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
 msgstr "ISA ga se fela khutshwafatso ya Information Structured Acceleration, mme gape ke lefoko la puo ya se-ChiShona la 'go tsenya' kgotsa 'lefelo'."
 
-#: templates/main/layout.html:33
+#: templates/main/layout.html:34
 msgid "Home"
 msgstr "Tsebe ya gae"
 
-#: templates/main/layout.html:44
-msgid "Create New"
-msgstr "Tlhama tse disha"
+#: templates/main/layout.html:45
+msgid "Create new campaign"
+msgstr ""
 
-#: templates/main/layout.html:50
+#: templates/main/layout.html:51
 msgid "Help"
 msgstr "Thuso"
 
-#: templates/main/layout.html:66
+#: templates/main/layout.html:67
 msgid "Change your available caption languages"
 msgstr "Fetola diteme gago tse mafoko a a fa tlase"
 
-#: templates/main/layout.html:66
-msgid "Languages preferences"
+#: templates/main/layout.html:67 templates/users/user_settings.html:6
+msgid "Language preferences"
 msgstr "Diteme tsa ikgethelo"
 
-#: templates/main/layout.html:67
+#: templates/main/layout.html:68
 msgid "See your campaigns"
 msgstr "Bona matsholo a gago"
 
-#: templates/main/layout.html:67
-msgid "My Campaigns"
+#: templates/main/layout.html:68
+#, fuzzy
+msgid "My campaigns"
 msgstr "Matsholo ame"
 
-#: templates/main/layout.html:74 templates/main/layout.html:78
+#: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
 msgstr "Tswaya"
 
-#: templates/main/layout.html:82
+#: templates/main/layout.html:83
 msgid "Login"
 msgstr "Tsena"
 
-#: templates/main/layout.html:106
+#: templates/main/layout.html:107
 msgid "ISA tool"
 msgstr "Sedirisiwa sa ISA"
 
-#: templates/main/layout.html:107
-msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
+#: templates/main/layout.html:108
+#, fuzzy
+msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
 msgstr "E tlhamilwe ele tirisanommogo magareng ga Wiki In Africa, Histropedia le porojeke ya Structured Data on Commons."
 
-#: templates/main/layout.html:107
+#: templates/main/layout.html:109
+msgid "Further devopment supported by "
+msgstr ""
+
+#: templates/main/layout.html:113
 msgid "It is running on"
 msgstr "E bereka mo"
 
-#: templates/main/layout.html:109
+#: templates/main/layout.html:115
 msgid "and is subject to the"
 msgstr "mme o laolwa ke"
 
-#: templates/main/layout.html:111
+#: templates/main/layout.html:117
 msgid "ISA is published under"
 msgstr "ISA e gatisitswe ka fa tlase ga"
 
-#: templates/main/layout.html:113
+#: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
 msgstr "Tshedimosetso e e tsentsweng ka sedirisiwa mo Wikimedia Commons e golotswe ka fa tlase ga"
 
@@ -1221,20 +1298,13 @@ msgid "Your Campaigns"
 msgstr "Matsholo a gago"
 
 #: templates/users/own_campaigns.html:16
-msgid "Below is a list of your Campaigns"
+#, fuzzy
+msgid "Below is a list of your campaigns"
 msgstr "Fa tlase go na le lenaane la matsholo a gago"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
 msgstr "Ga o na matsholo ape"
-
-#: templates/users/own_campaigns.html:27
-msgid "#"
-msgstr ""
-
-#: templates/users/user_settings.html:6
-msgid "Language preferences"
-msgstr "Diteme tsa ikgethelo"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
@@ -1245,7 +1315,8 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "Puo e e tlhophilweng e tla dirisiwa go batlisisa dilo tse di bontshitsweng mo ditshwantshong."
 
 #: templates/users/user_settings.html:15
-msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
+#, fuzzy
+msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
 msgstr "Fa &quot;Go tshwana le interface&quot; go tlhophiwa puo e e tlhophilweng mo menong e e kwa godimo e tla dirisiwa."
 
 #: templates/users/user_settings.html:19
@@ -1253,7 +1324,8 @@ msgid "Select upto 6 languages for captions"
 msgstr "Tlhopha diteme dile thatataro tsa mafoko a a kwa tlase"
 
 #: templates/users/user_settings.html:19
-msgid "Caption Languages"
+#, fuzzy
+msgid "Caption languages"
 msgstr "Diteme tsa mafoko a a kwa tlase"
 
 #: templates/users/user_settings.html:19
@@ -1279,7 +1351,8 @@ msgid "Undo changes to language settings"
 msgstr "Dirolola diphetogo mo dipaakanyo tsa teme"
 
 #: templates/users/user_settings.html:57
-msgid "Undo Changes"
+#, fuzzy
+msgid "Undo changes"
 msgstr "Dirolola diphetogo"
 
 #: users/forms.py:26
@@ -1303,29 +1376,30 @@ msgstr "Are kopane mo nakong ye e tlang!"
 msgid "Please login to change your language preferences"
 msgstr "Tsweetswee tsena mo Internet go fetola puo e o e ratang"
 
-#: users/routes.py:144
+#: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "Ke maswabi o lekile go tsenya %(rep_languages)s ka makgetlo a le mantsi"
 
-#: users/routes.py:157
+#: users/routes.py:158
 msgid "Captions languages could not be set"
 msgstr "Diteme tsa mafoko a a fa tlase ga di a ka tsa tsena"
 
-#: users/routes.py:159
-msgid "Preferred Languages set Successfully"
+#: users/routes.py:160
+#, fuzzy
+msgid "Preferred languages set"
 msgstr "Dipuo Tse di Rategang Di rulagantswe ka Katlego"
 
-#: users/routes.py:172
+#: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "Dipaakanyo tsa diteme ga diyo ka sebaka se"
 
-#: users/routes.py:174
-#, python-format
-msgid "%(username)s's - Settings"
+#: users/routes.py:175
+#, fuzzy, python-format
+msgid "%(username)s's Settings"
 msgstr "%(username)s's - Dipaakanyo"
 
-#: users/routes.py:197
+#: users/routes.py:199
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Matsholo a tlhamilwe ke %(username)s"

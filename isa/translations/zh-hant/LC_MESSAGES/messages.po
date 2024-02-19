@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-25 12:26:50+0000\n"
-"X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
+"PO-Revision-Date: 2024-02-19 12:24:51+0000\n"
+"X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh-Hant\n"
@@ -26,71 +26,72 @@ msgstr ""
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
-#: campaigns/routes.py:36 templates/campaign/campaigns.html:6
-#: templates/main/layout.html:38
+#: campaigns/routes.py:38 templates/campaign/campaigns.html:6
+#: templates/main/layout.html:39
 msgid "Campaigns"
 msgstr "活動"
 
-#: campaigns/routes.py:54 campaigns/routes.py:140
+#: campaigns/routes.py:56 campaigns/routes.py:144
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "ID 為「%(id)s」的活動不存在"
 
-#: campaigns/routes.py:111 campaigns/routes.py:165
-msgid "Campaign - "
-msgstr "活動 - "
+#: campaigns/routes.py:113 campaigns/routes.py:169
+#, python-format
+msgid "Campaign - %(campaign_name)s"
+msgstr "活動 - %(campaign_name)s"
 
-#: campaigns/routes.py:188
+#: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "您需要登入才能建立活動"
 
-#: campaigns/routes.py:217
+#: campaigns/routes.py:223
 #, python-format
-msgid "Sorry %(campaign_name)s Could not be created"
+msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "很抱歉，無法建立%(campaign_name)s"
 
-#: campaigns/routes.py:225
+#: campaigns/routes.py:231
 #, python-format
-msgid "%(campaign_name)s Campaign created!"
+msgid "%(campaign_name)s campaign created!"
 msgstr "已建立%(campaign_name)s活動！"
 
-#: campaigns/routes.py:228
+#: campaigns/routes.py:234
 msgid "Create a campaign"
 msgstr "建立活動"
 
-#: campaigns/routes.py:248
+#: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - 貢獻"
 
-#: campaigns/routes.py:267
-msgid "You need to Login to update a campaign"
+#: campaigns/routes.py:273
+msgid "You need to log in to update a campaign"
 msgstr "您需要登入才能更新活動"
 
-#: campaigns/routes.py:292
-msgid "Campaign update failed please try later!"
-msgstr "活動更新失敗請稍後再試！"
+#: campaigns/routes.py:299
+msgid "Campaign update failed. Please try later!"
+msgstr "活動更新失敗。請稍後再試！"
 
-#: campaigns/routes.py:296
-msgid "Update Succesfull !"
+#: campaigns/routes.py:303
+msgid "Update succesfull!"
 msgstr "已成功更新!"
 
-#: campaigns/routes.py:304
+#: campaigns/routes.py:312
 #, python-format
-msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "您無法更新此活動，請聯絡管理使用者：%(campaign_manager)s "
+msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
+msgstr "您無法更新此活動。請聯絡管理員，User:%(username)s。"
 
-#: campaigns/routes.py:319
+#: campaigns/routes.py:328
 #, python-format
-msgid "Booo! %(campaign_name)s Could not be updated!"
+msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "哎呀！無法更新%(campaign_name)s！"
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:333
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - 更新"
 
-#: campaigns/routes.py:366
+#: campaigns/routes.py:375
 msgid "You need to login to participate"
 msgstr "您需要登入才能參與"
 
@@ -107,7 +108,7 @@ msgid "You are updating"
 msgstr "您正在更新"
 
 #: templates/campaign/campaign-form.html:16
-msgid "Fill in the form below to create you campaign"
+msgid "Fill in the form below to create your campaign"
 msgstr "填寫以下表單來建立您的活動"
 
 #: templates/campaign/campaign-form.html:19
@@ -237,7 +238,7 @@ msgid "You must select at least one of the options below."
 msgstr "您必須至少選擇以下選項之一。"
 
 #: templates/campaign/campaign-form.html:179
-msgid "To learn more about Depicts and Caption meta-data see the help page."
+msgid "To learn more about Depicts and Caption meta-data, see the help page."
 msgstr "要了解有關描述內容和說明內容詮釋資料的更多資訊，請參閱幫助頁面。"
 
 #: templates/campaign/campaign-form.html:182
@@ -246,16 +247,16 @@ msgid "Depicts"
 msgstr "描述"
 
 #: templates/campaign/campaign-form.html:194
-msgid "Select to collect Depicts metadata in the campiagn"
+msgid "Select to collect Depicts metadata in the campaign"
 msgstr "選擇在活動中收集的描述詮釋資料"
 
 #: templates/campaign/campaign-form.html:197
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Captions"
 msgstr "說明"
 
 #: templates/campaign/campaign-form.html:209
-msgid "Select to collect Caption metadata in the campiagn"
+msgid "Select to collect Caption metadata in the campaign"
 msgstr "選擇在活動中收集的說明詮釋資料"
 
 #: templates/campaign/campaign-form.html:216
@@ -363,9 +364,8 @@ msgid "No partcipants has contributed to this campaign"
 msgstr "沒有參與者為此活動做出貢獻"
 
 #: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:71
-msgid "Most improved Countries"
-msgstr "做出最大改善的國家"
+msgid "Most improved countries"
+msgstr "做出最多改善的國家"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -439,7 +439,7 @@ msgid "View the previous image"
 msgstr "查看上一张图片"
 
 #: templates/campaign/campaign_entry.html:23
-#: templates/campaign/campaign_entry.html:102
+#: templates/campaign/campaign_entry.html:127
 msgid "PREV IMAGE"
 msgstr "上一張圖片"
 
@@ -452,7 +452,7 @@ msgid "View the next image"
 msgstr "查看下一張圖片"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:103
+#: templates/campaign/campaign_entry.html:128
 msgid "NEXT IMAGE"
 msgstr "下一張圖片"
 
@@ -477,7 +477,6 @@ msgid "Camera Location"
 msgstr "攝像頭位置"
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
 msgstr "顯示來自維基共享資源的所有詮釋資料"
 
@@ -486,7 +485,7 @@ msgid "Adding Depict Statements"
 msgstr "新增描述語句"
 
 #: templates/campaign/campaign_entry.html:46
-msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
+msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
 msgstr "簡單化：使用簡單的詞語和概念來描述您在每張圖片中看到的內容（例如貓、山、泰姬陵）"
 
 #: templates/campaign/campaign_entry.html:50
@@ -494,7 +493,7 @@ msgid "Cancel your changes"
 msgstr "取消您的更改"
 
 #: templates/campaign/campaign_entry.html:50
-#: templates/campaign/campaign_entry.html:82
+#: templates/campaign/campaign_entry.html:107
 msgid "Cancel"
 msgstr "取消"
 
@@ -503,7 +502,7 @@ msgid "Save your edits to Wikimedia Commons"
 msgstr "將您的編輯保存到維基媒體共享資源"
 
 #: templates/campaign/campaign_entry.html:51
-#: templates/campaign/campaign_entry.html:83
+#: templates/campaign/campaign_entry.html:108
 #: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "儲存"
@@ -516,81 +515,122 @@ msgstr "您將被重新導向到登入頁面，待到登入後回到此處保存
 msgid "Name the different elements that you can see in this image"
 msgstr "請您給此圖中看到的不同元素命名"
 
-#: templates/campaign/campaign_entry.html:73
+#: templates/campaign/campaign_entry.html:79
+msgid "Accept"
+msgstr "接受"
+
+#: templates/campaign/campaign_entry.html:80
+msgid "Reject"
+msgstr "拒絕"
+
+#: templates/campaign/campaign_entry.html:89
+#: templates/campaign/campaign_entry.html:150
+msgid "Hide Suggestions"
+msgstr "隱藏建議"
+
+#: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
 msgstr "要標記圖片中的顯著元素，請單擊旗幟圖標"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Writing Captions"
 msgstr "編寫說明"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
 msgstr "包括您可以識別的任何特定文化、科學或技術資訊（例如衣索比亞的咖啡儀式或是 bunna maflat 咖啡儀式）來使資訊更加豐富。"
 
-#: templates/campaign/campaign_entry.html:86
+#: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
 msgstr "登入以發布更改"
 
-#: templates/campaign/campaign_entry.html:88
+#: templates/campaign/campaign_entry.html:113
 msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr "添加說明來更清楚地解釋圖片（最多 255 個字元）"
 
-#: templates/campaign/campaign_entry.html:93
+#: templates/campaign/campaign_entry.html:118
 msgid "Briefly explain what you see in this image."
 msgstr "簡要說明您在這張圖片中看到的內容。"
 
-#: templates/campaign/campaign_entry.html:97
+#: templates/campaign/campaign_entry.html:122
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
 msgstr "您可以透過從使用者選單中的選擇語言偏好設定，來添加其他語言的說明"
 
-#: templates/campaign/campaign_entry.html:109
+#: templates/campaign/campaign_entry.html:134
 msgid "No images found for this campaign!"
 msgstr "找不到此活動的圖片！"
 
-#: templates/campaign/campaign_entry.html:110
+#: templates/campaign/campaign_entry.html:135
 msgid "Something went wrong getting campaign images"
 msgstr "獲取活動圖片時出錯"
 
-#: templates/campaign/campaign_entry.html:111
+#: templates/campaign/campaign_entry.html:136
 msgid "Search for things you see in the image"
 msgstr "搜索您在圖片中看到的內容"
 
-#: templates/campaign/campaign_entry.html:112
-msgid "minimise metadata from commons"
+#: templates/campaign/campaign_entry.html:137
+msgid "minimise metadata from Commons"
 msgstr "最小化來自共享資源的詮釋資料"
 
-#: templates/campaign/campaign_entry.html:114
+#: templates/campaign/campaign_entry.html:138
+msgid "show all metadata from Commons"
+msgstr "顯示來自維基共享資源的所有詮釋資料"
+
+#: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
 msgstr "成功！描述的項目保存到維基媒體共享資源"
 
-#: templates/campaign/campaign_entry.html:115
+#: templates/campaign/campaign_entry.html:140
 msgid "Success! Captions saved to Wikimedia Commons"
 msgstr "成功！說明保存到維基媒體共享資源"
 
-#: templates/campaign/campaign_entry.html:116
+#: templates/campaign/campaign_entry.html:141
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
 msgstr "哎呀！出了點問題，您的編輯尚未保存到維基媒體共享資源"
 
-#: templates/campaign/campaign_entry.html:117
+#: templates/campaign/campaign_entry.html:142
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
 msgstr "您確定要導航到另一張圖片嗎？您有未保存的更改，這些更改將會丟失。"
 
-#: templates/campaign/campaign_entry.html:118
+#: templates/campaign/campaign_entry.html:143
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
 msgstr "點擊「確定」繼續，如果您想先保存更改，則點擊「取消」。"
 
-#: templates/campaign/campaign_entry.html:119
+#: templates/campaign/campaign_entry.html:144
 msgid "Remove this depicted item"
 msgstr "刪除此描述的項目"
 
-#: templates/campaign/campaign_entry.html:120
+#: templates/campaign/campaign_entry.html:145
 msgid "Mark this depicted item as prominent"
 msgstr "將此描述的項目標記為顯著"
 
-#: templates/campaign/campaign_entry.html:121
+#: templates/campaign/campaign_entry.html:146
 msgid "Mark this depicted item as NOT prominent"
 msgstr "將此描述的項目標記為不顯著"
+
+#: templates/campaign/campaign_entry.html:147
+msgid "Suggestion removed from list"
+msgstr "建議已從清單中移除"
+
+#: templates/campaign/campaign_entry.html:148
+msgid "Please check that you are logged in"
+msgstr "請檢查您是否已登入"
+
+#: templates/campaign/campaign_entry.html:149
+msgid "Oops! Suggestion might not have been removed"
+msgstr "哎呀！建議可能尚未移除"
+
+#: templates/campaign/campaign_entry.html:151
+msgid "Show Suggestions"
+msgstr "顯示建議"
+
+#: templates/campaign/campaign_entry.html:152
+msgid "Are you sure you want to reject this suggestion?"
+msgstr "您確定要拒絕此建議嗎？"
+
+#: templates/campaign/campaign_entry.html:153
+msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
+msgstr "僅當您確定建議的標籤未出現在圖片，或是根據維基共享資源指南不正確時才執行此操作。若有多名使用者拒絕相同建議，該建議會不再顯示。"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -603,6 +643,10 @@ msgstr "從"
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
 msgstr "填充"
+
+#: templates/campaign/campaign_stats.html:71
+msgid "Most improved Countries"
+msgstr "做出最多改善的國家"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
@@ -625,7 +669,7 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "點擊活動名稱以開始並將結構化資料添加到圖片。"
 
 #: templates/campaign/campaigns.html:8
-msgid "You can access information on the previous Campaigns in the Archive section."
+msgid "You can access information on the previous campaigns in the archive section."
 msgstr "您可以在存檔部分存取有關之前活動的資訊。"
 
 #: templates/campaign/campaigns.html:15
@@ -645,8 +689,8 @@ msgid "Total number of images in the campaign"
 msgstr "此活動中的圖像總數"
 
 #: templates/campaign/campaigns.html:23
-msgid "Number of editors that have contributed to the campaign "
-msgstr "為活動做出貢獻的編輯人數 "
+msgid "Number of editors that have contributed to the campaign"
+msgstr "為活動做出貢獻的編輯人數"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -705,12 +749,12 @@ msgid "Show closed campaigns"
 msgstr "顯示已結束的活動"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create your own campaign"
 msgstr "創建您自己的活動"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create a new campaign using this tool"
 msgstr "使用此工具製作新活動"
 
@@ -783,12 +827,12 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "活動管理者可以透過更新活動來重試。"
 
 #: templates/errors/403.html:8
-msgid "Server Under maintenance"
+msgid "Server under maintenance"
 msgstr "伺服器維護中"
 
 #: templates/errors/403.html:10
-msgid "Please check contact support"
-msgstr "請檢查聯絡支援"
+msgid "Please contact support"
+msgstr "請聯絡支援"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -804,7 +848,7 @@ msgid "Page Not Found"
 msgstr "找不到頁面"
 
 #: templates/errors/404.html:10
-msgid "We Are Unable to find the page you are looking for"
+msgid "We are unable to find the page you are looking for"
 msgstr "我們無法找到您要查找的頁面"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
@@ -846,8 +890,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "什麼是維基共享資源？"
 
 #: templates/main/help.html:26
-msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
-msgstr "<strong>維基共享資源</strong>（也稱為「Commons」）是維基媒體專案，也是維基百科的姊妹專案，收集了超過 4000 萬個免費媒體檔案。"
+msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
+msgstr "<strong>維基共享資源</strong>（也稱為「Commons」）是維基媒體專案，也是維基百科的姊妹專案。代管了數百萬個可免費使用的媒體檔案收藏，任何人皆可為其貢獻內容。"
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -894,11 +938,11 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "有了更多的結構，在其他維基媒體計劃和第三方重複使用資料會變得更容易，這還允許電腦處理和「理解」內容。"
 
 #: templates/main/help.html:49
-msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
+msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
 msgstr "結構化數資料一個正在進行的計劃，於 2019 年啟動！…而維基媒體共享資源已存在多年了！"
 
 #: templates/main/help.html:50
-msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
+msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
 msgstr "維基媒體共享資源上有數百萬張圖片…需要關注和喜愛。"
 
 #: templates/main/help.html:51
@@ -906,8 +950,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr "目前沒有用結構化資料描述的數百萬張圖片。"
 
 #: templates/main/help.html:54
-msgid "How are we going to do that ? "
-msgstr "我們要怎麼做？ "
+msgid "How are we going to do that?"
+msgstr "我們要怎麼做？"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -922,7 +966,7 @@ msgid "In the context of Structured Data on Commons, curating means all the acti
 msgstr "在共享資源結構化數據的上下文中，管理是指共享資源貢獻者為組織和呈現維基共享資源上的媒體文件而執行的所有活動：管理操作、向文件添加更多更好的元數據、將它們分組、創建庫…… ."
 
 #: templates/main/help.html:62
-msgid "So...how does the ISA tool fit in there ?"
+msgid "So... how does the ISA tool fit in there?"
 msgstr "那麼…ISA 工具如何用在那裡？"
 
 #: templates/main/help.html:65
@@ -958,7 +1002,7 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "任何擁有維基媒體帳號的人，都可以貢獻將結構化詮釋資料添加到活動中。"
 
 #: templates/main/help.html:79
-msgid "The only requirement is… to be logged-in."
+msgid "The only requirement is... to be logged-in."
 msgstr "唯一的要求是…登入。"
 
 #: templates/main/help.html:82
@@ -1050,8 +1094,8 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "這在 2019 年 4 月在維基共享資源上啓用。"
 
 #: templates/main/help.html:131
-msgid "To add a depicts statement, simply start typing in the search box to get started."
-msgstr "要添加描述內容，只需在搜尋框裡輸入即可開始。"
+msgid "To add a depicts statement, simply start typing in the search box."
+msgstr "要添加描述內容，只需在搜尋框裡輸入即可。"
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
@@ -1102,7 +1146,7 @@ msgid "Legal and credits"
 msgstr "法律與致謝"
 
 #: templates/main/help.html:165
-msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
+msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "在 tools.wmflabs.org 上運作，並採用維基媒體雲端服務的使用條款。"
 
 #: templates/main/help.html:166
@@ -1120,105 +1164,109 @@ msgstr "在維基媒體共享資源上輕鬆添加關於圖片的資訊"
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> 一種多語言、行動設備優先的工具，能使人們輕鬆地對透過 Wiki Loves 競賽貢獻到維基共享資源上的圖片添加<a %(link_attrs)s title='Learn more about structured data'>結構化資料</a>（描述、說明、標籤、等等）形式的「小型貢獻」。"
+msgstr "<strong>ISA</strong> 是一種多語言、行動設備優先的工具，能讓人們輕鬆地對透過 Wiki Loves 競賽貢獻到維基共享資源上的圖片添加<a %(link_attrs)s title='Learn more about structured data'>結構化資料</a>（描述、說明、標籤、等等）形式的「小型貢獻」。"
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
 msgstr "<strong>點擊瀏覽活動來開始！</strong>"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
 msgstr "前往活動目錄來選擇活動"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
 msgstr "瀏覽活動"
 
-#: templates/main/home.html:21
+#: templates/main/home.html:22
 msgid "About This Tool"
 msgstr "關於此工具"
 
-#: templates/main/home.html:22
-msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
-msgstr "從長遠方向來看，此工具背後目的是增加對保管在維基共享資源上各張圖片所代表的知識運用。 "
-
 #: templates/main/home.html:23
+msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
+msgstr "從長遠方向來看，此工具背後目的是增加對保管在維基共享資源上各張圖片所代表的知識運用。"
+
+#: templates/main/home.html:24
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
 msgstr "此工具用於協助了解在 Wiki Loves 競賽期間所貢獻圖片的用途和資訊。"
 
-#: templates/main/home.html:24
+#: templates/main/home.html:25
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
 msgstr "這最初是為了幫助描述 Wiki Loves Africa 的圖片而打造的，有被特定設計用於所有 Wiki Loves 及其他競賽上。"
 
-#: templates/main/home.html:25
+#: templates/main/home.html:26
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "此工具另設計用來作為由計劃負責人提出的小型貢獻活動系列。"
 
-#: templates/main/home.html:26
+#: templates/main/home.html:27
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA 是 Wiki In Africa、Histropedia 和維基共享資源上結構資料計劃之間的合作。"
 
-#: templates/main/home.html:27
+#: templates/main/home.html:28
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr "ISA 不僅是 Information Structured Acceleration（加速資訊結構化）的頭字語，而且還是紹納語中「放置」或「擺放」的意思。"
+msgstr "ISA 不僅是 Information Structured Acceleration（加速資訊結構化）的頭字語，另外還是紹納語中「放置」或「擺放」的意思。"
 
-#: templates/main/layout.html:33
+#: templates/main/layout.html:34
 msgid "Home"
 msgstr "首頁"
 
-#: templates/main/layout.html:44
-msgid "Create New"
-msgstr "建立新的"
+#: templates/main/layout.html:45
+msgid "Create new campaign"
+msgstr "建立新活動"
 
-#: templates/main/layout.html:50
+#: templates/main/layout.html:51
 msgid "Help"
 msgstr "說明"
 
-#: templates/main/layout.html:66
+#: templates/main/layout.html:67
 msgid "Change your available caption languages"
 msgstr "變更您的可用說明語言"
 
-#: templates/main/layout.html:66
-msgid "Languages preferences"
+#: templates/main/layout.html:67 templates/users/user_settings.html:6
+msgid "Language preferences"
 msgstr "語言偏好設定"
 
-#: templates/main/layout.html:67
+#: templates/main/layout.html:68
 msgid "See your campaigns"
 msgstr "查看您的活動"
 
-#: templates/main/layout.html:67
-msgid "My Campaigns"
+#: templates/main/layout.html:68
+msgid "My campaigns"
 msgstr "我的活動"
 
-#: templates/main/layout.html:74 templates/main/layout.html:78
+#: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
 msgstr "登出"
 
-#: templates/main/layout.html:82
+#: templates/main/layout.html:83
 msgid "Login"
 msgstr "登入"
 
-#: templates/main/layout.html:106
+#: templates/main/layout.html:107
 msgid "ISA tool"
 msgstr "ISA 工具"
 
-#: templates/main/layout.html:107
-msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "由 Wiki In Africa、Histropedia 和維基共享資源上結構資料計劃合作開發。"
+#: templates/main/layout.html:108
+msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
+msgstr "由 Wiki In Africa、Histropedia 和維基共享資源上結構資料計劃合作開發"
 
-#: templates/main/layout.html:107
+#: templates/main/layout.html:109
+msgid "Further devopment supported by "
+msgstr "進一步開發支援由\\"
+
+#: templates/main/layout.html:113
 msgid "It is running on"
 msgstr "運作在"
 
-#: templates/main/layout.html:109
+#: templates/main/layout.html:115
 msgid "and is subject to the"
 msgstr "並受限"
 
-#: templates/main/layout.html:111
+#: templates/main/layout.html:117
 msgid "ISA is published under"
 msgstr "ISA 的發布基於"
 
-#: templates/main/layout.html:113
+#: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
 msgstr "內容透過該工具添加到維基共享資源，發布是基於"
 
@@ -1227,20 +1275,12 @@ msgid "Your Campaigns"
 msgstr "您的活動"
 
 #: templates/users/own_campaigns.html:16
-msgid "Below is a list of your Campaigns"
+msgid "Below is a list of your campaigns"
 msgstr "以下是您的活動清單"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
 msgstr "您沒有任何活動"
-
-#: templates/users/own_campaigns.html:27
-msgid "#"
-msgstr ""
-
-#: templates/users/user_settings.html:6
-msgid "Language preferences"
-msgstr "語言偏好設定"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
@@ -1251,7 +1291,7 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "所選語言將用於搜尋圖片裡描述的元素。"
 
 #: templates/users/user_settings.html:15
-msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
+msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
 msgstr "如果選擇「與介面相同」，將使用在頂部選單中所選擇的語言。"
 
 #: templates/users/user_settings.html:19
@@ -1259,7 +1299,7 @@ msgid "Select upto 6 languages for captions"
 msgstr "為說明選擇多達 6 種語言"
 
 #: templates/users/user_settings.html:19
-msgid "Caption Languages"
+msgid "Caption languages"
 msgstr "說明語言"
 
 #: templates/users/user_settings.html:19
@@ -1285,7 +1325,7 @@ msgid "Undo changes to language settings"
 msgstr "撤銷對語言設定的更改"
 
 #: templates/users/user_settings.html:57
-msgid "Undo Changes"
+msgid "Undo changes"
 msgstr "撤銷更改"
 
 #: users/forms.py:26
@@ -1309,29 +1349,29 @@ msgstr "下次見！"
 msgid "Please login to change your language preferences"
 msgstr "請登入來更改您的語言偏好設定。"
 
-#: users/routes.py:144
+#: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "很抱歉，您多次嘗試輸入%(rep_languages)s"
 
-#: users/routes.py:157
+#: users/routes.py:158
 msgid "Captions languages could not be set"
 msgstr "無法設定說明語言"
 
-#: users/routes.py:159
-msgid "Preferred Languages set Successfully"
-msgstr "偏好語言設定成功"
+#: users/routes.py:160
+msgid "Preferred languages set"
+msgstr "偏好語言設定"
 
-#: users/routes.py:172
+#: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "目前語言設定不可用"
 
-#: users/routes.py:174
+#: users/routes.py:175
 #, python-format
-msgid "%(username)s's - Settings"
+msgid "%(username)s's Settings"
 msgstr "%(username)s的設定"
 
-#: users/routes.py:197
+#: users/routes.py:199
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "由%(username)s建立的活動"

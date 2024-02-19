@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-25 12:26:49+0000\n"
-"X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
+"PO-Revision-Date: 2024-02-19 12:24:50+0000\n"
+"X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sl\n"
@@ -20,71 +20,75 @@ msgstr ""
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
-#: campaigns/routes.py:36 templates/campaign/campaigns.html:6
-#: templates/main/layout.html:38
+#: campaigns/routes.py:38 templates/campaign/campaigns.html:6
+#: templates/main/layout.html:39
 msgid "Campaigns"
 msgstr "Kampanje"
 
-#: campaigns/routes.py:54 campaigns/routes.py:140
+#: campaigns/routes.py:56 campaigns/routes.py:144
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "Kampanja z ID-jem %(id)s ne obstaja"
 
-#: campaigns/routes.py:111 campaigns/routes.py:165
-msgid "Campaign - "
-msgstr "Kampanja – "
+#: campaigns/routes.py:113 campaigns/routes.py:169
+#, python-format
+msgid "Campaign - %(campaign_name)s"
+msgstr ""
 
-#: campaigns/routes.py:188
+#: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Za ustvaritev kampanje se morate prijaviti"
 
-#: campaigns/routes.py:217
-#, python-format
-msgid "Sorry %(campaign_name)s Could not be created"
+#: campaigns/routes.py:223
+#, fuzzy, python-format
+msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Kampanje %(campaign_name)s žal ni bilo mogoče ustvariti"
 
-#: campaigns/routes.py:225
-#, python-format
-msgid "%(campaign_name)s Campaign created!"
+#: campaigns/routes.py:231
+#, fuzzy, python-format
+msgid "%(campaign_name)s campaign created!"
 msgstr "Kampanja %(campaign_name)s ustvarjena!"
 
-#: campaigns/routes.py:228
+#: campaigns/routes.py:234
 msgid "Create a campaign"
 msgstr "Ustvari kampanjo"
 
-#: campaigns/routes.py:248
+#: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s – prispevajte"
 
-#: campaigns/routes.py:267
-msgid "You need to Login to update a campaign"
+#: campaigns/routes.py:273
+#, fuzzy
+msgid "You need to log in to update a campaign"
 msgstr "Za ustvaritev kampanje se morate prijaviti"
 
-#: campaigns/routes.py:292
-msgid "Campaign update failed please try later!"
+#: campaigns/routes.py:299
+#, fuzzy
+msgid "Campaign update failed. Please try later!"
 msgstr "Posodobitev kampanje ni uspela, poskusite znova pozneje!"
 
-#: campaigns/routes.py:296
-msgid "Update Succesfull !"
+#: campaigns/routes.py:303
+#, fuzzy
+msgid "Update succesfull!"
 msgstr "Posodobitev uspešna!"
 
-#: campaigns/routes.py:304
+#: campaigns/routes.py:312
 #, python-format
-msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "Te kampanje ne morete posodobiti, obrnite se na upravitelja User:%(campaign_manager)s "
+msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
+msgstr ""
 
-#: campaigns/routes.py:319
-#, python-format
-msgid "Booo! %(campaign_name)s Could not be updated!"
+#: campaigns/routes.py:328
+#, fuzzy, python-format
+msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Buuu! Kampanje %(campaign_name)s ni bilo mogoče posodobiti!"
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:333
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s – posodobitev"
 
-#: campaigns/routes.py:366
+#: campaigns/routes.py:375
 msgid "You need to login to participate"
 msgstr "Za sodelovanje se morate prijaviti"
 
@@ -101,7 +105,8 @@ msgid "You are updating"
 msgstr "Posodabljate"
 
 #: templates/campaign/campaign-form.html:16
-msgid "Fill in the form below to create you campaign"
+#, fuzzy
+msgid "Fill in the form below to create your campaign"
 msgstr "Izpolnite spodnji obrazec, da ustvarite kampanjo"
 
 #: templates/campaign/campaign-form.html:19
@@ -231,7 +236,8 @@ msgid "You must select at least one of the options below."
 msgstr "Izbrati morate vsaj eno od spodnjih možnosti."
 
 #: templates/campaign/campaign-form.html:179
-msgid "To learn more about Depicts and Caption meta-data see the help page."
+#, fuzzy
+msgid "To learn more about Depicts and Caption meta-data, see the help page."
 msgstr "Če želite izvedeti več o metapodatkih »Prikazi« (Depicts) in »Napisi« (Captions), glejte stran pomoči."
 
 #: templates/campaign/campaign-form.html:182
@@ -240,16 +246,18 @@ msgid "Depicts"
 msgstr "Prikazi"
 
 #: templates/campaign/campaign-form.html:194
-msgid "Select to collect Depicts metadata in the campiagn"
+#, fuzzy
+msgid "Select to collect Depicts metadata in the campaign"
 msgstr "Izberite za zbiranje metapodatkov »Prikazi« (Depicts) v kampanji"
 
 #: templates/campaign/campaign-form.html:197
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Captions"
 msgstr "Napisi"
 
 #: templates/campaign/campaign-form.html:209
-msgid "Select to collect Caption metadata in the campiagn"
+#, fuzzy
+msgid "Select to collect Caption metadata in the campaign"
 msgstr "Izberite za zbiranje metapodatkov »Napisi« (Captions) v kampanji"
 
 #: templates/campaign/campaign-form.html:216
@@ -357,9 +365,8 @@ msgid "No partcipants has contributed to this campaign"
 msgstr "K tej kampanji ni prispeval noben udeleženec"
 
 #: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:71
-msgid "Most improved Countries"
-msgstr "Najbolj izboljšane države"
+msgid "Most improved countries"
+msgstr ""
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -433,7 +440,7 @@ msgid "View the previous image"
 msgstr "Ogled prejšnje slike"
 
 #: templates/campaign/campaign_entry.html:23
-#: templates/campaign/campaign_entry.html:102
+#: templates/campaign/campaign_entry.html:127
 msgid "PREV IMAGE"
 msgstr "PREJ. SLIKA"
 
@@ -446,7 +453,7 @@ msgid "View the next image"
 msgstr "Ogled naslednje slike"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:103
+#: templates/campaign/campaign_entry.html:128
 msgid "NEXT IMAGE"
 msgstr "NASL. SLIKA"
 
@@ -471,7 +478,6 @@ msgid "Camera Location"
 msgstr "Lokacija fotoaparata"
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
 msgstr "prikaži vse metapodatke iz Zbirke"
 
@@ -480,7 +486,8 @@ msgid "Adding Depict Statements"
 msgstr "Dodajanje izjav o prikazanem (»Depicts«)"
 
 #: templates/campaign/campaign_entry.html:46
-msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
+#, fuzzy
+msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
 msgstr "Poenostavite: Uporabite preproste besede in pojme, da opišete, kaj na vsaki sliki vidite (npr. mačka, gora, Tadž Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
@@ -488,7 +495,7 @@ msgid "Cancel your changes"
 msgstr "Prekličite spremembe"
 
 #: templates/campaign/campaign_entry.html:50
-#: templates/campaign/campaign_entry.html:82
+#: templates/campaign/campaign_entry.html:107
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -497,7 +504,7 @@ msgid "Save your edits to Wikimedia Commons"
 msgstr "Shranite svoje spremembe v Wikimedijino zbirko"
 
 #: templates/campaign/campaign_entry.html:51
-#: templates/campaign/campaign_entry.html:83
+#: templates/campaign/campaign_entry.html:108
 #: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "Shrani"
@@ -510,81 +517,123 @@ msgstr "Preusmerjeni boste na prijavo in nazaj sem, da shranite spremembe"
 msgid "Name the different elements that you can see in this image"
 msgstr "Poimenujte različne elemente, ki jih lahko vidite na tej sliki"
 
-#: templates/campaign/campaign_entry.html:73
+#: templates/campaign/campaign_entry.html:79
+msgid "Accept"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:80
+msgid "Reject"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:89
+#: templates/campaign/campaign_entry.html:150
+msgid "Hide Suggestions"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
 msgstr "Če želite označiti vidne elemente na sliki, kliknite ikono zastavice"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Writing Captions"
 msgstr "Pisanje napisov"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
 msgstr "Vključite vse kulturno specifične, znanstvene ali tehnične informacije, ki jih lahko prepoznate (npr. etiopska kavna slovesnost ali bunna maflat), da bodo informacije bogatejše."
 
-#: templates/campaign/campaign_entry.html:86
+#: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
 msgstr "Za objavo sprememb se prijavite"
 
-#: templates/campaign/campaign_entry.html:88
+#: templates/campaign/campaign_entry.html:113
 msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr "Dodajte napis za boljšo razlago slike (največ 255 znakov)"
 
-#: templates/campaign/campaign_entry.html:93
+#: templates/campaign/campaign_entry.html:118
 msgid "Briefly explain what you see in this image."
 msgstr "Na kratko razložite, kaj vidite na tej sliki."
 
-#: templates/campaign/campaign_entry.html:97
+#: templates/campaign/campaign_entry.html:122
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
 msgstr "Dodate lahko napise v dodatnih jezikih tako, da v uporabniškem meniju izberete Jezikovne nastavitve"
 
-#: templates/campaign/campaign_entry.html:109
+#: templates/campaign/campaign_entry.html:134
 msgid "No images found for this campaign!"
 msgstr "Za to kampanjo ni najdenih slik!"
 
-#: templates/campaign/campaign_entry.html:110
+#: templates/campaign/campaign_entry.html:135
 msgid "Something went wrong getting campaign images"
 msgstr "Pri pridobivanju slik kampanje je šlo nekaj narobe"
 
-#: templates/campaign/campaign_entry.html:111
+#: templates/campaign/campaign_entry.html:136
 msgid "Search for things you see in the image"
 msgstr "Poiščite stvari, ki jih vidite na sliki"
 
-#: templates/campaign/campaign_entry.html:112
-msgid "minimise metadata from commons"
+#: templates/campaign/campaign_entry.html:137
+#, fuzzy
+msgid "minimise metadata from Commons"
 msgstr "minimiziraj metapodatke iz Zbirke"
 
-#: templates/campaign/campaign_entry.html:114
+#: templates/campaign/campaign_entry.html:138
+msgid "show all metadata from Commons"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
 msgstr "Uspeh! Prikazani predmeti so shranjeni v Wikimedijini zbirki"
 
-#: templates/campaign/campaign_entry.html:115
+#: templates/campaign/campaign_entry.html:140
 msgid "Success! Captions saved to Wikimedia Commons"
 msgstr "Uspeh! Napisi so shranjeni v Wikimedijini zbirki"
 
-#: templates/campaign/campaign_entry.html:116
+#: templates/campaign/campaign_entry.html:141
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
 msgstr "Ups! Nekaj je šlo narobe, vaša urejanja se niso shranila v Wikimedijino zbirko"
 
-#: templates/campaign/campaign_entry.html:117
+#: templates/campaign/campaign_entry.html:142
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
 msgstr "Ste prepričani, da se želite pomakniti na drugo sliko? Imate neshranjene spremembe, ki bodo izgubljene."
 
-#: templates/campaign/campaign_entry.html:118
+#: templates/campaign/campaign_entry.html:143
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
 msgstr "Kliknite »V redu«, če želite vseeno nadaljevati, ali »Prekliči«, če želite najprej shraniti spremembe."
 
-#: templates/campaign/campaign_entry.html:119
+#: templates/campaign/campaign_entry.html:144
 msgid "Remove this depicted item"
 msgstr "Odstrani ta prikazani predmet"
 
-#: templates/campaign/campaign_entry.html:120
+#: templates/campaign/campaign_entry.html:145
 msgid "Mark this depicted item as prominent"
 msgstr "Označite ta prikazani predmet kot opazen"
 
-#: templates/campaign/campaign_entry.html:121
+#: templates/campaign/campaign_entry.html:146
 msgid "Mark this depicted item as NOT prominent"
 msgstr "Označi ta prikazani predmet kot NE opazen"
+
+#: templates/campaign/campaign_entry.html:147
+msgid "Suggestion removed from list"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:148
+msgid "Please check that you are logged in"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:149
+msgid "Oops! Suggestion might not have been removed"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:151
+msgid "Show Suggestions"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:152
+msgid "Are you sure you want to reject this suggestion?"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:153
+msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -597,6 +646,10 @@ msgstr "Od"
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
 msgstr "Do"
+
+#: templates/campaign/campaign_stats.html:71
+msgid "Most improved Countries"
+msgstr "Najbolj izboljšane države"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
@@ -619,7 +672,8 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Kliknite ime kampanje, da začnete, in dodajte sliki strukturirane podatke."
 
 #: templates/campaign/campaigns.html:8
-msgid "You can access information on the previous Campaigns in the Archive section."
+#, fuzzy
+msgid "You can access information on the previous campaigns in the archive section."
 msgstr "Do podazkov o prejšnjih kampanjah lahko dostopate v razdelku Arhiv."
 
 #: templates/campaign/campaigns.html:15
@@ -639,7 +693,8 @@ msgid "Total number of images in the campaign"
 msgstr "Skupno število slik v kampanji"
 
 #: templates/campaign/campaigns.html:23
-msgid "Number of editors that have contributed to the campaign "
+#, fuzzy
+msgid "Number of editors that have contributed to the campaign"
 msgstr "Število urejevalcev, ki so prispevali h kampanji "
 
 #: templates/campaign/campaigns.html:23
@@ -699,12 +754,12 @@ msgid "Show closed campaigns"
 msgstr "Prikaži zaprte kampanje"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create your own campaign"
 msgstr "Ustvarite lastno kampanjo"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create a new campaign using this tool"
 msgstr "S tem orodjem ustvarite novo kampanjo"
 
@@ -777,11 +832,13 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "Upravitelj kampanje lahko poskusi znova s posodobitvijo kampanje."
 
 #: templates/errors/403.html:8
-msgid "Server Under maintenance"
+#, fuzzy
+msgid "Server under maintenance"
 msgstr "Strežnik v vzdrževanju"
 
 #: templates/errors/403.html:10
-msgid "Please check contact support"
+#, fuzzy
+msgid "Please contact support"
 msgstr "Obrnite se na podporo"
 
 #: templates/errors/403.html:15
@@ -798,7 +855,8 @@ msgid "Page Not Found"
 msgstr "Stran ni najdena"
 
 #: templates/errors/404.html:10
-msgid "We Are Unable to find the page you are looking for"
+#, fuzzy
+msgid "We are unable to find the page you are looking for"
 msgstr "Strani, ki jo iščete, ni mogoče najti"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
@@ -840,7 +898,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "Kaj je Wikimedijina zbirka?"
 
 #: templates/main/help.html:26
-msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
+#, fuzzy
+msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
 msgstr "<strong>Wikimedijina zbirka</strong> (uradno Wikimedia Commons) je projekt Wikimedie, sorodni projekt Wikipedije in zbirka več kot 40 milijonov prostih predstavnostnih datotek."
 
 #: templates/main/help.html:27
@@ -865,7 +924,7 @@ msgstr "Osebne fotografije in predstavnostne datoteke, ki jih naložijo posamezn
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr "Prostolicenčne predstavnostne datoteke z zunanjih spletnih mest, kot so Flickr, YouTube, revije z odprtim dostopom in druge shrambe; ter"
+msgstr "Prosto licencirane predstavnostne datoteke z zunanjih spletnih mest, kot so Flickr, YouTube, odprtodostopne revije in drugi repoozitoriji; ter"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
@@ -888,11 +947,13 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "Z več strukture postane lažja nadaljnja uporaba podatkov za druge projekte Wikimedie in tretje osebe; prav tako omogoča obdelavo in »razumevanje« računalnikom."
 
 #: templates/main/help.html:49
-msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
+#, fuzzy
+msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
 msgstr "Strukturirani podatki so potekajoč projekt, ki se je začel leta 2019! ... medtem ko Wikimedijina zbirka obstaja že leta!"
 
 #: templates/main/help.html:50
-msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
+#, fuzzy
+msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
 msgstr "V Wikimedijini zbirki je dobesedno na milijone slik ... ki potrebujejo pozornost in ljubezen."
 
 #: templates/main/help.html:51
@@ -900,7 +961,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr "Milijone slik, ki trenutno niso opisane s strukturiranimi podatki."
 
 #: templates/main/help.html:54
-msgid "How are we going to do that ? "
+#, fuzzy
+msgid "How are we going to do that?"
 msgstr "Kako se bomo lotili tega? "
 
 #: templates/main/help.html:57
@@ -916,7 +978,7 @@ msgid "In the context of Structured Data on Commons, curating means all the acti
 msgstr "V kontekstu Strukturiranih podatkov v Zbirki pomeni vse dejavnosti, ki jih izvajajo sodelavci Zbirke, da bi organizirali in predstavili predstavnostne datoteke v Wikimedijini zbirki: administratorska dejanja, dodajanje več in boljših metapodatkov datotekam, njihovo združevanje v kategorije, ustvarjanje galerij ..."
 
 #: templates/main/help.html:62
-msgid "So...how does the ISA tool fit in there ?"
+msgid "So... how does the ISA tool fit in there?"
 msgstr "Torej ... kakšno vlogo ima v tem okviru orodje ISA?"
 
 #: templates/main/help.html:65
@@ -952,7 +1014,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "K dodajanju strukturiranih podatkov v kampanji lahko prispeva vsakdo z Wikimedia računom!"
 
 #: templates/main/help.html:79
-msgid "The only requirement is… to be logged-in."
+#, fuzzy
+msgid "The only requirement is... to be logged-in."
 msgstr "Edini pogoj je ... biti prijavljen."
 
 #: templates/main/help.html:82
@@ -1044,7 +1107,8 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "Ti so bili v Wikimedijini zbirki omogočeni aprila 2019."
 
 #: templates/main/help.html:131
-msgid "To add a depicts statement, simply start typing in the search box to get started."
+#, fuzzy
+msgid "To add a depicts statement, simply start typing in the search box."
 msgstr "Da dodate izjavo o prikazih, preprosto začnite vnašati v iskalno polje."
 
 #: templates/main/help.html:132
@@ -1096,7 +1160,8 @@ msgid "Legal and credits"
 msgstr "Pravne informacije in avtorji"
 
 #: templates/main/help.html:165
-msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
+#, fuzzy
+msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "ISA se izvaja na tools.wmflabs.org in zanjo veljajo pogoji uporabe storitev v oblaku Wikimedia."
 
 #: templates/main/help.html:166
@@ -1112,7 +1177,7 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Preprosto dodajanje podatkov o slikah v Wikimedijini zbirki"
 
 #: templates/main/home.html:15
-#, python-format
+#, fuzzy, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
 msgstr "<strong>ISA</strong> je večjezično orodje za mobilne naprave, ki ljudem olajša dodajanje »mikroprispevkov« v obliki <a %(link_attrs)s title=\"Več o strukturiranih podatkih\">strukturiranih podatkov</a> (opisov, napisov, oznak idr.) slikam, ki so jih v Wikimedijino zbirko  prispevali natečaji Wiki Loves."
 
@@ -1120,99 +1185,111 @@ msgstr "<strong>ISA</strong> je večjezično orodje za mobilne naprave, ki ljude
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
 msgstr "<strong>Za začetek kliknite Razišči kampanje!</strong>"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
 msgstr "Pojdite v imenik kampanj, da izberete kampanjo"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
 msgstr "RAZIŠČI KAMPANJE"
 
-#: templates/main/home.html:21
+#: templates/main/home.html:22
 msgid "About This Tool"
 msgstr "O tem orodju"
 
-#: templates/main/home.html:22
-msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
+#: templates/main/home.html:23
+#, fuzzy
+msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
 msgstr "Dolgoročni namen orodja je povečati uporabo znanja, ki ga zagotavlja vsaka slika, shranjena v Wikimedijini zbirki. "
 
-#: templates/main/home.html:23
+#: templates/main/home.html:24
+#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
 msgstr "Orodje je namenjeno povečanju uporabnosti in dostopa do informacij o slikah, doniranih v natečajih Wiki Loves."
 
-#: templates/main/home.html:24
+#: templates/main/home.html:25
+#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
 msgstr "Sprva je bilo ustvarjeno za pomoč pri opisih slik Wiki Loves Africa, vendar je bilo posebej zasnovano tako, da bo uporabno za vse natečaje Wiki Loves in zunaj njih."
 
-#: templates/main/home.html:25
+#: templates/main/home.html:26
+#, fuzzy
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "Orodje je zasnovano tudi kot gostitelj natečajev z mikroprispevki, ki jih predlagajo vodje projektov."
 
-#: templates/main/home.html:26
+#: templates/main/home.html:27
+#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA je plod sodelovanja med »Wiki in Africa«, projektom »Histropedia« in projektom »Structured Data on Commons«."
 
-#: templates/main/home.html:27
+#: templates/main/home.html:28
+#, fuzzy
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
 msgstr "ISA ni le kratica za ''Information Structured Acceleration'', ampak je tudi beseda v jeziku čišona za »postaviti« ali »mesto«."
 
-#: templates/main/layout.html:33
+#: templates/main/layout.html:34
 msgid "Home"
 msgstr "Domov"
 
-#: templates/main/layout.html:44
-msgid "Create New"
-msgstr "Ustvari novo"
+#: templates/main/layout.html:45
+msgid "Create new campaign"
+msgstr ""
 
-#: templates/main/layout.html:50
+#: templates/main/layout.html:51
 msgid "Help"
 msgstr "Pomoč"
 
-#: templates/main/layout.html:66
+#: templates/main/layout.html:67
 msgid "Change your available caption languages"
 msgstr "Spremenite razpoložljive jezike napisov"
 
-#: templates/main/layout.html:66
-msgid "Languages preferences"
+#: templates/main/layout.html:67 templates/users/user_settings.html:6
+msgid "Language preferences"
 msgstr "Jezikovne nastavitve"
 
-#: templates/main/layout.html:67
+#: templates/main/layout.html:68
 msgid "See your campaigns"
 msgstr "Oglejte si svoje kampanje"
 
-#: templates/main/layout.html:67
-msgid "My Campaigns"
+#: templates/main/layout.html:68
+#, fuzzy
+msgid "My campaigns"
 msgstr "Moje kampanje"
 
-#: templates/main/layout.html:74 templates/main/layout.html:78
+#: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
 msgstr "Odjava"
 
-#: templates/main/layout.html:82
+#: templates/main/layout.html:83
 msgid "Login"
 msgstr "Prijava"
 
-#: templates/main/layout.html:106
+#: templates/main/layout.html:107
 msgid "ISA tool"
 msgstr "Orodje ISA"
 
-#: templates/main/layout.html:107
-msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
+#: templates/main/layout.html:108
+#, fuzzy
+msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
 msgstr "je bila razvita kot sodelovanje med »Wiki in Africa«, projektom »Histropedia« in projektom »Structured Data on Commons«."
 
-#: templates/main/layout.html:107
+#: templates/main/layout.html:109
+msgid "Further devopment supported by "
+msgstr ""
+
+#: templates/main/layout.html:113
 msgid "It is running on"
 msgstr "Teče na"
 
-#: templates/main/layout.html:109
+#: templates/main/layout.html:115
 msgid "and is subject to the"
 msgstr "in je predmet"
 
-#: templates/main/layout.html:111
+#: templates/main/layout.html:117
 msgid "ISA is published under"
 msgstr "ISA je objavljena pod licenco"
 
-#: templates/main/layout.html:113
+#: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
 msgstr "Vsebina, dodana s tem orodjem v Wikimedijini zbirki, je objavljena pod licenco"
 
@@ -1221,20 +1298,13 @@ msgid "Your Campaigns"
 msgstr "Vaše kampanje"
 
 #: templates/users/own_campaigns.html:16
-msgid "Below is a list of your Campaigns"
+#, fuzzy
+msgid "Below is a list of your campaigns"
 msgstr "Tu je seznam vaših kampanj"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
 msgstr "Nimate nobene kampanje"
-
-#: templates/users/own_campaigns.html:27
-msgid "#"
-msgstr ""
-
-#: templates/users/user_settings.html:6
-msgid "Language preferences"
-msgstr "Jezikovne nastavitve"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
@@ -1245,7 +1315,8 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "Izbrani jezik bo uporabljen za iskanje elementov, prikazanih na slikah."
 
 #: templates/users/user_settings.html:15
-msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
+#, fuzzy
+msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
 msgstr "Če boste izbrali »Enako kot vmesnik«, bo uporabljen jezik, izbran v zgornjem meniju."
 
 #: templates/users/user_settings.html:19
@@ -1253,7 +1324,8 @@ msgid "Select upto 6 languages for captions"
 msgstr "Izberite do 6 jezikov za napise"
 
 #: templates/users/user_settings.html:19
-msgid "Caption Languages"
+#, fuzzy
+msgid "Caption languages"
 msgstr "Jeziki napisov"
 
 #: templates/users/user_settings.html:19
@@ -1279,7 +1351,8 @@ msgid "Undo changes to language settings"
 msgstr "Razveljavi spremembe jezikovnih nastavitev"
 
 #: templates/users/user_settings.html:57
-msgid "Undo Changes"
+#, fuzzy
+msgid "Undo changes"
 msgstr "Razveljavi spremembe"
 
 #: users/forms.py:26
@@ -1303,29 +1376,30 @@ msgstr "Se vidimo naslednjič!"
 msgid "Please login to change your language preferences"
 msgstr "Za spremembo svojih jezikovnih nastavitev se prijavite."
 
-#: users/routes.py:144
+#: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "Oprostite, %(rep_languages)s ste poskusili vnesti večkrat"
 
-#: users/routes.py:157
+#: users/routes.py:158
 msgid "Captions languages could not be set"
 msgstr "Jezikov napisov ni bilo mogoče določiti"
 
-#: users/routes.py:159
-msgid "Preferred Languages set Successfully"
+#: users/routes.py:160
+#, fuzzy
+msgid "Preferred languages set"
 msgstr "Želeni jeziki so uspešno nastavljeni"
 
-#: users/routes.py:172
+#: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "Jezikovne nastavitve trenutno niso na voljo"
 
-#: users/routes.py:174
-#, python-format
-msgid "%(username)s's - Settings"
+#: users/routes.py:175
+#, fuzzy, python-format
+msgid "%(username)s's Settings"
 msgstr "%(username)s — Nastavitve"
 
-#: users/routes.py:197
+#: users/routes.py:199
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Kampanje, ki jih je ustvaril_a %(username)s"

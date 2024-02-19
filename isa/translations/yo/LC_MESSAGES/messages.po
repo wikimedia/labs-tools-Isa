@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-01-25 12:26:50+0000\n"
-"X-POT-Import-Date: 2022-12-02 11:50:02+0000\n"
+"PO-Revision-Date: 2024-02-19 12:24:51+0000\n"
+"X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: yo\n"
@@ -24,71 +24,75 @@ msgstr ""
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
-#: campaigns/routes.py:36 templates/campaign/campaigns.html:6
-#: templates/main/layout.html:38
+#: campaigns/routes.py:38 templates/campaign/campaigns.html:6
+#: templates/main/layout.html:39
 msgid "Campaigns"
 msgstr "ipolongo"
 
-#: campaigns/routes.py:54 campaigns/routes.py:140
+#: campaigns/routes.py:56 campaigns/routes.py:144
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
 msgstr "Ipolongo pẹlu id%(id)s ko si"
 
-#: campaigns/routes.py:111 campaigns/routes.py:165
-msgid "Campaign - "
-msgstr "Ipolongo - "
+#: campaigns/routes.py:113 campaigns/routes.py:169
+#, python-format
+msgid "Campaign - %(campaign_name)s"
+msgstr ""
 
-#: campaigns/routes.py:188
+#: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "O nilo lati Buwolu wọle lati ṣẹda ipolongo kan"
 
-#: campaigns/routes.py:217
+#: campaigns/routes.py:223
 #, python-format
-msgid "Sorry %(campaign_name)s Could not be created"
+msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Mabinu %(campaign_name)s Ko le ṣẹda"
 
-#: campaigns/routes.py:225
-#, python-format
-msgid "%(campaign_name)s Campaign created!"
+#: campaigns/routes.py:231
+#, fuzzy, python-format
+msgid "%(campaign_name)s campaign created!"
 msgstr "%(campaign_name)s sise Ipolongo"
 
-#: campaigns/routes.py:228
+#: campaigns/routes.py:234
 msgid "Create a campaign"
 msgstr "Se Ipolongo"
 
-#: campaigns/routes.py:248
+#: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - tiwon"
 
-#: campaigns/routes.py:267
-msgid "You need to Login to update a campaign"
+#: campaigns/routes.py:273
+#, fuzzy
+msgid "You need to log in to update a campaign"
 msgstr "O nilo lati buwolu wọle lati ṣe imudojuiwọn ipolongo kan"
 
-#: campaigns/routes.py:292
-msgid "Campaign update failed please try later!"
+#: campaigns/routes.py:299
+#, fuzzy
+msgid "Campaign update failed. Please try later!"
 msgstr "O nilo lati buwolu wọle lati ṣe imudojuiwọn ipolongo kan"
 
-#: campaigns/routes.py:296
-msgid "Update Succesfull !"
+#: campaigns/routes.py:303
+#, fuzzy
+msgid "Update succesfull!"
 msgstr "Ṣe imudojuiwọn Aṣeyọri!"
 
-#: campaigns/routes.py:304
+#: campaigns/routes.py:312
 #, python-format
-msgid "You cannot update this campaign, Contact Manager User:%(campaign_manager)s "
-msgstr "O ko le ṣe imudojuiwọn ipolongo yii, Olumulo Olubasọrọ Olubasọrọ:%(campaign_manager)s "
+msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
+msgstr ""
 
-#: campaigns/routes.py:319
-#, python-format
-msgid "Booo! %(campaign_name)s Could not be updated!"
+#: campaigns/routes.py:328
+#, fuzzy, python-format
+msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Mabinu %(campaign_name)s Ko le ṣẹda!"
 
-#: campaigns/routes.py:324
+#: campaigns/routes.py:333
 #, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - Imudojuiwọn"
 
-#: campaigns/routes.py:366
+#: campaigns/routes.py:375
 msgid "You need to login to participate"
 msgstr "O nilo lati buwolu wọle lati kopa"
 
@@ -105,7 +109,8 @@ msgid "You are updating"
 msgstr "O n ṣe imudojuiwọn"
 
 #: templates/campaign/campaign-form.html:16
-msgid "Fill in the form below to create you campaign"
+#, fuzzy
+msgid "Fill in the form below to create your campaign"
 msgstr "Ṣẹ́ ìforúkọsílẹ̀ tó wà nísàlẹ̀ yìí kí o lè ṣètò ìpolongo rẹ"
 
 #: templates/campaign/campaign-form.html:19
@@ -235,7 +240,8 @@ msgid "You must select at least one of the options below."
 msgstr "O gbọdọ yan o kere ju ọkan ninu awọn aṣayan ni isalẹ."
 
 #: templates/campaign/campaign-form.html:179
-msgid "To learn more about Depicts and Caption meta-data see the help page."
+#, fuzzy
+msgid "To learn more about Depicts and Caption meta-data, see the help page."
 msgstr "Tó o bá fẹ́ mọ púpọ̀ sí i nípa àwọn ìsọfúnni nípa àwọn àwòrán àti àwọn ìsọ̀rọ̀ nípa àwọn àlàyé ìsàlẹ̀ ìwé, wo ojúewé ìrànlọ́wọ́."
 
 #: templates/campaign/campaign-form.html:182
@@ -244,16 +250,18 @@ msgid "Depicts"
 msgstr "Àwọn àwòrán"
 
 #: templates/campaign/campaign-form.html:194
-msgid "Select to collect Depicts metadata in the campiagn"
+#, fuzzy
+msgid "Select to collect Depicts metadata in the campaign"
 msgstr "Yan lati gba awọn aworan metadata ninu awọn ipolongo"
 
 #: templates/campaign/campaign-form.html:197
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Captions"
 msgstr "akole"
 
 #: templates/campaign/campaign-form.html:209
-msgid "Select to collect Caption metadata in the campiagn"
+#, fuzzy
+msgid "Select to collect Caption metadata in the campaign"
 msgstr "Yan lati gba Metadata Akọsilẹ ninu ipolongo"
 
 #: templates/campaign/campaign-form.html:216
@@ -361,9 +369,8 @@ msgid "No partcipants has contributed to this campaign"
 msgstr "Ko si awọn olukopa ti o ṣe alabapin si ipolongo yii"
 
 #: templates/campaign/campaign.html:74
-#: templates/campaign/campaign_stats.html:71
-msgid "Most improved Countries"
-msgstr "Awọn orilẹ-ede ti o ni ilọsiwaju julọ"
+msgid "Most improved countries"
+msgstr ""
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -437,7 +444,7 @@ msgid "View the previous image"
 msgstr "Wo aworan ti tẹlẹ"
 
 #: templates/campaign/campaign_entry.html:23
-#: templates/campaign/campaign_entry.html:102
+#: templates/campaign/campaign_entry.html:127
 msgid "PREV IMAGE"
 msgstr "Àwòrán ìṣáájú"
 
@@ -450,7 +457,7 @@ msgid "View the next image"
 msgstr "Wo àwòrán tó tẹ̀ lé e"
 
 #: templates/campaign/campaign_entry.html:27
-#: templates/campaign/campaign_entry.html:103
+#: templates/campaign/campaign_entry.html:128
 msgid "NEXT IMAGE"
 msgstr "Aworan t’okan"
 
@@ -475,7 +482,6 @@ msgid "Camera Location"
 msgstr "Ipo kamẹra"
 
 #: templates/campaign/campaign_entry.html:38
-#: templates/campaign/campaign_entry.html:113
 msgid "show all metadata from commons"
 msgstr "Se afihan gbogbo metadata lati awọn wọpọ"
 
@@ -484,7 +490,8 @@ msgid "Adding Depict Statements"
 msgstr "Fifi Awọn Gbólóhùn Apejuwe"
 
 #: templates/campaign/campaign_entry.html:46
-msgid "Make it Simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
+#, fuzzy
+msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
 msgstr "Jẹ ki o rọrun: Lo awọn ọrọ ti o rọrun ati awọn imọran lati ṣe apejuwe ohun ti o rii ninu aworan kọọkan (fun apẹẹrẹ ologbo, oke nla, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
@@ -492,7 +499,7 @@ msgid "Cancel your changes"
 msgstr "Fagilee awọn ayipada rẹ"
 
 #: templates/campaign/campaign_entry.html:50
-#: templates/campaign/campaign_entry.html:82
+#: templates/campaign/campaign_entry.html:107
 msgid "Cancel"
 msgstr "Fagilé"
 
@@ -501,7 +508,7 @@ msgid "Save your edits to Wikimedia Commons"
 msgstr "Ṣafipamọ awọn atunṣe rẹ si Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
-#: templates/campaign/campaign_entry.html:83
+#: templates/campaign/campaign_entry.html:108
 #: templates/users/user_settings.html:58
 msgid "Save"
 msgstr "Fipamọ"
@@ -514,81 +521,123 @@ msgstr "Iwọ yoo darí lati buwolu wọle ati pada si ibi lati ṣafipamọ aw�
 msgid "Name the different elements that you can see in this image"
 msgstr "Darukọ awọn oriṣiriṣi awọn eroja ti o le rii ninu aworan yii"
 
-#: templates/campaign/campaign_entry.html:73
+#: templates/campaign/campaign_entry.html:79
+msgid "Accept"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:80
+msgid "Reject"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:89
+#: templates/campaign/campaign_entry.html:150
+msgid "Hide Suggestions"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
 msgstr "Lati samisi awọn eroja pataki ninu aworan, tẹ aami asia"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Writing Captions"
 msgstr "Awọn akọle kikọ"
 
-#: templates/campaign/campaign_entry.html:80
+#: templates/campaign/campaign_entry.html:105
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
 msgstr "Ṣafikun eyikeyi ti aṣa ni pato, imọ-jinlẹ tabi alaye imọ-ẹrọ ti o le ṣe idanimọ (fun apẹẹrẹ Ayẹyẹ Kofi Etiopia tabi bunna maflat) lati jẹ ki alaye naa pọ si."
 
-#: templates/campaign/campaign_entry.html:86
+#: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
 msgstr "Wọle lati gbejade awọn ayipada"
 
-#: templates/campaign/campaign_entry.html:88
+#: templates/campaign/campaign_entry.html:113
 msgid "Add a caption to better explain the image (max 255 characters)"
 msgstr "Ṣafikun akọle lati ṣalaye aworan dara dara julọ (awọn ohun kikọ 255 ti o pọju)"
 
-#: templates/campaign/campaign_entry.html:93
+#: templates/campaign/campaign_entry.html:118
 msgid "Briefly explain what you see in this image."
 msgstr "Ni ṣoki ṣe alaye ohun ti o rii ninu aworan yii."
 
-#: templates/campaign/campaign_entry.html:97
+#: templates/campaign/campaign_entry.html:122
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
 msgstr "O le ṣafikun awọn akọle ni awọn ede afikun nipa yiyan Awọn ayanfẹ Ede lati inu akojọ aṣayan olumulo"
 
-#: templates/campaign/campaign_entry.html:109
+#: templates/campaign/campaign_entry.html:134
 msgid "No images found for this campaign!"
 msgstr "Ko si awọn aworan ti a rii fun ipolongo yii!"
 
-#: templates/campaign/campaign_entry.html:110
+#: templates/campaign/campaign_entry.html:135
 msgid "Something went wrong getting campaign images"
 msgstr "Nkankan ti ko tọ lati gba awọn aworan ipolongo"
 
-#: templates/campaign/campaign_entry.html:111
+#: templates/campaign/campaign_entry.html:136
 msgid "Search for things you see in the image"
 msgstr "Wa awọn nkan ti o rii ninu aworan"
 
-#: templates/campaign/campaign_entry.html:112
-msgid "minimise metadata from commons"
+#: templates/campaign/campaign_entry.html:137
+#, fuzzy
+msgid "minimise metadata from Commons"
 msgstr "gbe metadata lati awọn wọpọ"
 
-#: templates/campaign/campaign_entry.html:114
+#: templates/campaign/campaign_entry.html:138
+msgid "show all metadata from Commons"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
 msgstr "Aseyori! Awọn ohun ti a fihan ti a fipamọ si Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:115
+#: templates/campaign/campaign_entry.html:140
 msgid "Success! Captions saved to Wikimedia Commons"
 msgstr "Aseyori! Awọn ifọrọranṣẹ ti a fipamọ si Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:116
+#: templates/campaign/campaign_entry.html:141
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
 msgstr "Ops! Nkankan ti ko tọ, awọn atunṣe rẹ ko ti wa ni fipamọ si Wikimedia Commons"
 
-#: templates/campaign/campaign_entry.html:117
+#: templates/campaign/campaign_entry.html:142
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
 msgstr "Ṣe o da ọ loju pe o fẹ lilö kiri si aworan miiran? O ni awọn ayipada ti a ko fipamọ eyiti yoo sọnu."
 
-#: templates/campaign/campaign_entry.html:118
+#: templates/campaign/campaign_entry.html:143
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
 msgstr "Tẹ 'O DARA' lati tẹsiwaju lọnakọna, tabi 'Fagilee' ti o ba fẹ fi awọn ayipada pamọ ni akọkọ."
 
-#: templates/campaign/campaign_entry.html:119
+#: templates/campaign/campaign_entry.html:144
 msgid "Remove this depicted item"
 msgstr "Yọ nkan ti o han yii kuro"
 
-#: templates/campaign/campaign_entry.html:120
+#: templates/campaign/campaign_entry.html:145
 msgid "Mark this depicted item as prominent"
 msgstr "Samisi nkan ti a fihan bi olokiki"
 
-#: templates/campaign/campaign_entry.html:121
+#: templates/campaign/campaign_entry.html:146
 msgid "Mark this depicted item as NOT prominent"
 msgstr "Samisi nkan ti o fihan bi KO ṣe pataki"
+
+#: templates/campaign/campaign_entry.html:147
+msgid "Suggestion removed from list"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:148
+msgid "Please check that you are logged in"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:149
+msgid "Oops! Suggestion might not have been removed"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:151
+msgid "Show Suggestions"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:152
+msgid "Are you sure you want to reject this suggestion?"
+msgstr ""
+
+#: templates/campaign/campaign_entry.html:153
+msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
+msgstr ""
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -601,6 +650,10 @@ msgstr "Láti"
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
 msgstr "Titi di"
+
+#: templates/campaign/campaign_stats.html:71
+msgid "Most improved Countries"
+msgstr "Awọn orilẹ-ede ti o ni ilọsiwaju julọ"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
@@ -623,7 +676,8 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Tẹ lórí orúkọ ìpolongo kan láti bẹ̀rẹ̀, kó o sì fi àwọn ìsọfúnni tó wà ní ìparí ṣú sínú àwòrán kan."
 
 #: templates/campaign/campaigns.html:8
-msgid "You can access information on the previous Campaigns in the Archive section."
+#, fuzzy
+msgid "You can access information on the previous campaigns in the archive section."
 msgstr "O le wọle si alaye lori awọn ipolongo iṣaaju ni apakan Ile-ipamọ."
 
 #: templates/campaign/campaigns.html:15
@@ -643,7 +697,8 @@ msgid "Total number of images in the campaign"
 msgstr "Lapapọ nọmba awọn aworan ni ipolongo yii"
 
 #: templates/campaign/campaigns.html:23
-msgid "Number of editors that have contributed to the campaign "
+#, fuzzy
+msgid "Number of editors that have contributed to the campaign"
 msgstr "Nọmba awọn olootu ti o ti ṣe alabapin si ipolongo naa "
 
 #: templates/campaign/campaigns.html:23
@@ -703,12 +758,12 @@ msgid "Show closed campaigns"
 msgstr "Ṣẹ́ àwọn ìpolongo tí kò ṣeé ṣe"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create your own campaign"
 msgstr "Ṣẹ́ ìpolongo ara rẹ"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
-#: templates/main/home.html:30
+#: templates/main/home.html:32
 msgid "Create a new campaign using this tool"
 msgstr "Ṣẹ́ ìpolongo tuntun pẹ̀lú ọ̀rọ̀ yìí"
 
@@ -781,11 +836,13 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "Olùdarí ìpolongo náà lè tún gbìyànjú láti ṣe é nípa fífi ìpolongo tuntun ṣe àtúnṣe."
 
 #: templates/errors/403.html:8
-msgid "Server Under maintenance"
+#, fuzzy
+msgid "Server under maintenance"
 msgstr "Ètò Ìsọfúnni"
 
 #: templates/errors/403.html:10
-msgid "Please check contact support"
+#, fuzzy
+msgid "Please contact support"
 msgstr "Jọwọ ṣayẹwo atilẹyin olubasọrọ"
 
 #: templates/errors/403.html:15
@@ -802,7 +859,8 @@ msgid "Page Not Found"
 msgstr "A kò rí ojúewé"
 
 #: templates/errors/404.html:10
-msgid "We Are Unable to find the page you are looking for"
+#, fuzzy
+msgid "We are unable to find the page you are looking for"
 msgstr "A kò lè rí ojúewé tó o ń wá"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
@@ -844,7 +902,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "Kí ni Wikimedia Commons?"
 
 #: templates/main/help.html:26
-msgid "<strong>Wikimedia Commons</strong> (also known as 'Commons') is a Wikimedia project, a sister project of Wikipedia, and a collection of more than 40 million free media files."
+#, fuzzy
+msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
 msgstr "<strong>Wikimedia Commons</strong> (ti a tún mọ̀ sí 'Commons') jẹ́ iṣẹ́ Wikimedia, iṣẹ́ àbúrò Wikipedia, àti àjọpín àwọn àdàkọ mídíà tó lé ní mílíọ̀nù mẹ́rìnlélógóji."
 
 #: templates/main/help.html:27
@@ -892,11 +951,12 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "Pẹlu eto diẹ sii, o di rọrun lati tun lo data ni awọn iṣẹ akanṣe Wikimedia miiran ati nipasẹ awọn ẹgbẹ kẹta; o tun gba awọn kọmputa laaye lati ṣe ilana ati 'loye' rẹ."
 
 #: templates/main/help.html:49
-msgid "Structured Data is an ongoing project that was launched in 2019 ! … whilst Wikimedia Commons has been around for years !"
+#, fuzzy
+msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
 msgstr "Data Iṣeto jẹ iṣẹ akanṣe ti nlọ lọwọ ti a ṣe ifilọlẹ ni ọdun 2019! … lakoko ti Wikimedia Commons ti wa ni ayika fun awọn ọdun melo kan!"
 
 #: templates/main/help.html:50
-msgid "There are literally millions of pictures hosted on Wikimedia Commons… that need attention and love."
+msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
 msgstr "Awọn aworan miliọnu gidi lo wa ti a gbalejo lori Wikimedia Commons… ti o nilo akiyesi ati ifẹ."
 
 #: templates/main/help.html:51
@@ -904,7 +964,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr "Awọn miliọnu awọn aworan ti a ko ṣe apejuwe pẹlu data eleto ni akoko."
 
 #: templates/main/help.html:54
-msgid "How are we going to do that ? "
+#, fuzzy
+msgid "How are we going to do that?"
 msgstr "Báwo la ṣe máa ṣe bẹ́ẹ̀? "
 
 #: templates/main/help.html:57
@@ -920,7 +981,7 @@ msgid "In the context of Structured Data on Commons, curating means all the acti
 msgstr "Ni aaye ti Data Ti a Ti tunṣe lori Awọn Commons, curating tumọ si gbogbo awọn iṣẹ ṣiṣe nipasẹ awọn oluranlọwọ Commons lati ṣeto ati ṣafihan awọn faili media lori Wikimedia Commons: awọn iṣe iṣakoso, fifi diẹ sii ati awọn metadata to dara julọ si awọn faili, ṣiṣe akojọpọ wọn si awọn ẹka, ṣiṣẹda awọn aworan. ."
 
 #: templates/main/help.html:62
-msgid "So...how does the ISA tool fit in there ?"
+msgid "So... how does the ISA tool fit in there?"
 msgstr "Nitorinaa… bawo ni ohun elo ISA ṣe baamu ni ibẹ?"
 
 #: templates/main/help.html:65
@@ -956,7 +1017,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "Ẹnikẹni ti o ni akọọlẹ Wikimedia kan le ṣe alabapin lati ṣafikun metadata ti a ṣeto si ipolongo kan."
 
 #: templates/main/help.html:79
-msgid "The only requirement is… to be logged-in."
+#, fuzzy
+msgid "The only requirement is... to be logged-in."
 msgstr "Ibeere nikan ni… lati wọle."
 
 #: templates/main/help.html:82
@@ -1048,7 +1110,8 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "O ti ṣiṣẹ lori Wikimedia Commons ni Oṣu Kẹrin Ọjọ 2019."
 
 #: templates/main/help.html:131
-msgid "To add a depicts statement, simply start typing in the search box to get started."
+#, fuzzy
+msgid "To add a depicts statement, simply start typing in the search box."
 msgstr "Lati ṣafikun alaye asọye, nìkan bẹrẹ titẹ ni apoti wiwa lati bẹrẹ."
 
 #: templates/main/help.html:132
@@ -1100,7 +1163,8 @@ msgid "Legal and credits"
 msgstr "Ofin ati kirediti"
 
 #: templates/main/help.html:165
-msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of use."
+#, fuzzy
+msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "O nṣiṣẹ lori tools.wmflabs.org, ati pe o jẹ koko-ọrọ si Awọn ofin lilo Awọn iṣẹ awọsanma Wikimedia."
 
 #: templates/main/help.html:166
@@ -1124,99 +1188,107 @@ msgstr "<strong>ISA</strong> jẹ ọpọlọpọ awọn ede, ohun elo alagbeka-
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
 msgstr "<strong>Tẹ lori Ṣawari Awọn ipolongo lati bẹrẹ!</strong>"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
 msgstr "Lọ si itọsọna ipolongo lati yan ipolongo kan"
 
-#: templates/main/home.html:18
+#: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
 msgstr "Ye ipolongo"
 
-#: templates/main/home.html:21
+#: templates/main/home.html:22
 msgid "About This Tool"
 msgstr "Nipa Ọpa Yi"
 
-#: templates/main/home.html:22
-msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons. "
+#: templates/main/home.html:23
+msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
 msgstr "Ni igba pipẹ, idi ti o wa lẹhin ọpa ni lati mu lilo imo ti o han nipasẹ aworan kọọkan ti o gbalejo lori Wikimedia Commons. "
 
-#: templates/main/home.html:23
+#: templates/main/home.html:24
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
 msgstr "Ọpa naa ni ifọkansi lati ṣe iranlọwọ ni iwulo ati alaye ti awọn aworan ti a ṣetọrẹ lakoko awọn idije Awọn Ifẹ Wiki."
 
-#: templates/main/home.html:24
+#: templates/main/home.html:25
+#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
 msgstr "O ti kọkọ kọ lati ṣe iranlọwọ ninu awọn apejuwe ti awọn aworan Wiki Fẹran Afirika, ṣugbọn o jẹ apẹrẹ ni pataki lati wulo fun gbogbo awọn idije Wiki Awọn ifẹran ati kọja."
 
-#: templates/main/home.html:25
+#: templates/main/home.html:26
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "Ọpa naa tun ṣe apẹrẹ lati jẹ agbalejo ti awọn idije idasi micro ti a daba nipasẹ awọn oludari iṣẹ akanṣe."
 
-#: templates/main/home.html:26
+#: templates/main/home.html:27
+#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA jẹ ifowosowopo laarin Wiki Ni Afirika, Histropedia ati Data Ti a Ṣeto lori iṣẹ akanṣe Commons."
 
-#: templates/main/home.html:27
+#: templates/main/home.html:28
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
 msgstr "ISA kii ṣe adape fun Imudara Iṣeto Alaye, ṣugbọn tun jẹ ọrọ ede chiShona fun 'fi' tabi 'ibi'."
 
-#: templates/main/layout.html:33
+#: templates/main/layout.html:34
 msgid "Home"
 msgstr "Ile"
 
-#: templates/main/layout.html:44
-msgid "Create New"
-msgstr "Ṣẹda Titun"
+#: templates/main/layout.html:45
+msgid "Create new campaign"
+msgstr ""
 
-#: templates/main/layout.html:50
+#: templates/main/layout.html:51
 msgid "Help"
 msgstr "Egba Mi O"
 
-#: templates/main/layout.html:66
+#: templates/main/layout.html:67
 msgid "Change your available caption languages"
 msgstr "Yi awọn ede akọle ti o wa pada"
 
-#: templates/main/layout.html:66
-msgid "Languages preferences"
+#: templates/main/layout.html:67 templates/users/user_settings.html:6
+msgid "Language preferences"
 msgstr "Awọn ayanfẹ ede"
 
-#: templates/main/layout.html:67
+#: templates/main/layout.html:68
 msgid "See your campaigns"
 msgstr "Wo awọn ipolongo rẹ"
 
-#: templates/main/layout.html:67
-msgid "My Campaigns"
+#: templates/main/layout.html:68
+#, fuzzy
+msgid "My campaigns"
 msgstr "Awọn ipolongo Mi"
 
-#: templates/main/layout.html:74 templates/main/layout.html:78
+#: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
 msgstr "Jade jade"
 
-#: templates/main/layout.html:82
+#: templates/main/layout.html:83
 msgid "Login"
 msgstr "Wo ile"
 
-#: templates/main/layout.html:106
+#: templates/main/layout.html:107
 msgid "ISA tool"
 msgstr "ISA ọpa"
 
-#: templates/main/layout.html:107
-msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
+#: templates/main/layout.html:108
+#, fuzzy
+msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
 msgstr "ti ni idagbasoke gẹgẹbi ifowosowopo laarin Wiki Ni Afirika, Histropedia ati Data Ti a Ṣeto lori iṣẹ-ṣiṣe Commons."
 
-#: templates/main/layout.html:107
+#: templates/main/layout.html:109
+msgid "Further devopment supported by "
+msgstr ""
+
+#: templates/main/layout.html:113
 msgid "It is running on"
 msgstr "O ti wa ni nṣiṣẹ lori"
 
-#: templates/main/layout.html:109
+#: templates/main/layout.html:115
 msgid "and is subject to the"
 msgstr "ati ki o jẹ koko ọrọ si awọn"
 
-#: templates/main/layout.html:111
+#: templates/main/layout.html:117
 msgid "ISA is published under"
 msgstr "ISA ti wa ni atejade labẹ"
 
-#: templates/main/layout.html:113
+#: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
 msgstr "Akoonu ti a ṣafikun nipasẹ irinṣẹ si Wikimedia Commons jẹ idasilẹ labẹ"
 
@@ -1225,20 +1297,13 @@ msgid "Your Campaigns"
 msgstr "Awọn ipolongo rẹ"
 
 #: templates/users/own_campaigns.html:16
-msgid "Below is a list of your Campaigns"
+#, fuzzy
+msgid "Below is a list of your campaigns"
 msgstr "Ni isalẹ ni atokọ ti Awọn ipolongo rẹ"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
 msgstr "O ko ni eyikeyi ipolongo"
-
-#: templates/users/own_campaigns.html:27
-msgid "#"
-msgstr "#"
-
-#: templates/users/user_settings.html:6
-msgid "Language preferences"
-msgstr "Awọn ayanfẹ ede"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
@@ -1249,7 +1314,8 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "Ede ti o yan yoo ṣee lo fun wiwa awọn eroja ti a fihan ninu awọn aworan."
 
 #: templates/users/user_settings.html:15
-msgid "If &quot;Same as interface&quot; is selected the language selected in the top menu will be used."
+#, fuzzy
+msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
 msgstr "Ti &quot;Same as interface&quot;  ti yan ede ti a yan ninu akojọ aṣayan oke yoo ṣee lo."
 
 #: templates/users/user_settings.html:19
@@ -1257,7 +1323,8 @@ msgid "Select upto 6 languages for captions"
 msgstr "Yan awọn ede 6 fun awọn akọle"
 
 #: templates/users/user_settings.html:19
-msgid "Caption Languages"
+#, fuzzy
+msgid "Caption languages"
 msgstr "Awọn ede ifori"
 
 #: templates/users/user_settings.html:19
@@ -1283,7 +1350,8 @@ msgid "Undo changes to language settings"
 msgstr "Mu awọn ayipada pada si awọn eto ede"
 
 #: templates/users/user_settings.html:57
-msgid "Undo Changes"
+#, fuzzy
+msgid "Undo changes"
 msgstr "Mu awọn iyipada pada"
 
 #: users/forms.py:26
@@ -1307,29 +1375,30 @@ msgstr "Ma ri e lojo miiran!"
 msgid "Please login to change your language preferences"
 msgstr "Jọwọ buwolu wọle lati yi awọn ayanfẹ ede rẹ pada"
 
-#: users/routes.py:144
+#: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
 msgstr "Ma binu o gbiyanju lati tẹ %(rep_languages)s sii ni ọpọlọpọ igba"
 
-#: users/routes.py:157
+#: users/routes.py:158
 msgid "Captions languages could not be set"
 msgstr "Awọn ede awọn akọle ko le ṣeto"
 
-#: users/routes.py:159
-msgid "Preferred Languages set Successfully"
+#: users/routes.py:160
+#, fuzzy
+msgid "Preferred languages set"
 msgstr "Awọn ede ti o fẹ ṣeto ni aṣeyọri"
 
-#: users/routes.py:172
+#: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "Eto ede ko si ni akoko yii"
 
-#: users/routes.py:174
-#, python-format
-msgid "%(username)s's - Settings"
+#: users/routes.py:175
+#, fuzzy, python-format
+msgid "%(username)s's Settings"
 msgstr "%(username)s's -    Eto"
 
-#: users/routes.py:197
+#: users/routes.py:199
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Awọn ipolongo da nipa  %(username)s"
