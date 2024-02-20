@@ -4,7 +4,7 @@ from flask import Blueprint, flash, redirect, render_template, request, session,
 from flask_login import current_user, login_user, logout_user
 import mwoauth
 
-from isa import app, gettext
+from isa import app, gettext, db
 from isa.main.utils import commit_changes_to_db
 from isa.models import User, Campaign
 from isa.users.forms import LanguageForm
@@ -71,6 +71,13 @@ def oauth_callback():
         session['access_token'] = dict(zip(
             access_token._fields, access_token))
         session['username'] = identity['username']
+        user = User.query.filter_by(username=session.get('username')).first()
+        if not user:
+            # Create new user and add to db
+            user = User(username=session.get('username'), caption_languages='en,fr,,,,')
+            db.session.add(user)
+            if commit_changes_to_db():
+                login_user(user)
         flash(gettext('Welcome %(username)s!', username=session['username']), 'success')
         if session.get('next_url'):
             next_url = session.get('next_url')
