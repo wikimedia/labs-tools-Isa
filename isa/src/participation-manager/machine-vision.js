@@ -51,7 +51,7 @@ ParticipationManager.prototype.getM2CSuggestions = function() {
     return $.ajax({
         type: 'POST',
         contentType: 'application/json',
-        url: 'https://m2c.wikimedia.se/extract/',
+        url: ' https://m2c.wmcloud.org/extract/',
         data: JSON.stringify(apiOptions)
     });
 }
