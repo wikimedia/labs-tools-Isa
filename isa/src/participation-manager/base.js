@@ -402,6 +402,12 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                     metadata_to_concept: isMetadataToConcept,
                     metadata_to_concept_confidence: metadataToConceptConfidence
                 })
+
+                var sessionClaims = [];
+                sessionClaims.push(getAddClaimOptions(currentStatement.statementId, depictItem, isProminent))
+                if (ideps.length == 0) { // make initial claims and add if not found
+                    sessionStorage.setItem('intial_depicts', sessionClaims);
+                }
             }
         } // check next statement...
 
