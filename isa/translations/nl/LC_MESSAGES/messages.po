@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-02-19 12:24:49+0000\n"
+"PO-Revision-Date: 2024-02-26 12:24:48+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,12 +43,12 @@ msgid "You need to Login to create a campaign"
 msgstr "U moet zich aanmelden om een campagne aan te maken"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
-msgstr "Sorry, %(campaign_name)s kon niet aangemaakt worden"
+msgstr "Helaas kon %(campaign_name)s niet aangemaakt worden"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr "De campagne %(campaign_name)s is aangemaakt!"
 
@@ -62,19 +62,16 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Doe mee!"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "U moet zich aanmelden om een campagne bij te werken"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "De update van de campagne is mislukt. Probeer later opnieuw!"
+msgstr "Het bijwerken van de campagne is mislukt. Probeer het later nog eens."
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
-msgstr "De update is met succes voltooid."
+msgstr "Het bijwerken is voltooid."
 
 #: campaigns/routes.py:312
 #, python-format
@@ -82,9 +79,9 @@ msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
 msgstr ""
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
-msgstr "Oh jee! %(campaign_name)s kon niet aangepast worden!"
+msgstr "Nou ja zeg! %(campaign_name)s kon niet bijgewerkt worden!"
 
 #: campaigns/routes.py:333
 #, python-format
@@ -108,9 +105,8 @@ msgid "You are updating"
 msgstr "Je bent aan het updaten"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
-msgstr "Vul het onderstaande formulier in om je campagne aan te maken"
+msgstr "Vul het onderstaande formulier in om uw campagne aan te maken"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
@@ -239,7 +235,6 @@ msgid "You must select at least one of the options below."
 msgstr "Je moet minstens één van de opties hieronder uitkiezen."
 
 #: templates/campaign/campaign-form.html:179
-#, fuzzy
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
 msgstr "Zie de hulppagina's voor meer info over de 'Beeldt af'- en 'Bijschrift'-metadata."
 
@@ -249,7 +244,6 @@ msgid "Depicts"
 msgstr "Beeldt af"
 
 #: templates/campaign/campaign-form.html:194
-#, fuzzy
 msgid "Select to collect Depicts metadata in the campaign"
 msgstr "Selecteer deze optie om 'Beeldt af'-metadata te verzamelen in de campagne"
 
@@ -259,7 +253,6 @@ msgid "Captions"
 msgstr "Bijschriften"
 
 #: templates/campaign/campaign-form.html:209
-#, fuzzy
 msgid "Select to collect Caption metadata in the campaign"
 msgstr "Selecteer deze optie om 'Bijschrift'-metadata te verzamelen in de campagne."
 
@@ -489,9 +482,8 @@ msgid "Adding Depict Statements"
 msgstr "'Beeldt af'-eigenschappen toevoegen"
 
 #: templates/campaign/campaign_entry.html:46
-#, fuzzy
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "Hou het eenvoudig: gebruik eenvoudige woorden om te beschrijven wat je in elke afbeelding ziet (bijvoorbeeld: kat, berg, Taj Mahal)"
+msgstr "Hou het eenvoudig: gebruik eenvoudige woorden om te beschrijven wat u in elke afbeelding ziet (bijvoorbeeld: kat, berg, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
@@ -574,9 +566,8 @@ msgid "Search for things you see in the image"
 msgstr "Zoek naar dingen die je ziet in het plaatje"
 
 #: templates/campaign/campaign_entry.html:137
-#, fuzzy
 msgid "minimise metadata from Commons"
-msgstr "minimaliseer metadata van Commons"
+msgstr "metadata van Commons minimaliseren"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
@@ -675,9 +666,8 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Klik op de naam van een campagne om te starten en om gestructureerde data aan een afbeelding toe te voegen."
 
 #: templates/campaign/campaigns.html:8
-#, fuzzy
 msgid "You can access information on the previous campaigns in the archive section."
-msgstr "Je vindt informatie over de voorbije campagnes in het 'Archief'gedeelte."
+msgstr "Informatie over de voorbije campagnes vindt u in het gedeelte 'Archief'."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
@@ -696,7 +686,6 @@ msgid "Total number of images in the campaign"
 msgstr "Totaal aantal afbeeldingen in de campagne"
 
 #: templates/campaign/campaigns.html:23
-#, fuzzy
 msgid "Number of editors that have contributed to the campaign"
 msgstr "Aantal bewerkers die hebben deelgenomen aan de campagne"
 
@@ -835,12 +824,10 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr ""
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
-msgstr "Server in onderhoudsmodus"
+msgstr "Server in onderhoud"
 
 #: templates/errors/403.html:10
-#, fuzzy
 msgid "Please contact support"
 msgstr "Neem contact op met support"
 
@@ -858,9 +845,8 @@ msgid "Page Not Found"
 msgstr "Pagina niet gevonden"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
-msgstr "We kunnen deze pagina niet vinden"
+msgstr "We kunnen de pagina die u zoekt niet vinden"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"

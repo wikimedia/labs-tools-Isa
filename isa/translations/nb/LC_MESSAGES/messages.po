@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-02-19 12:24:49+0000\n"
+"PO-Revision-Date: 2024-02-26 12:24:48+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -64,7 +64,6 @@ msgid "You need to log in to update a campaign"
 msgstr "Du må logge inn for å oppdatere en kampanje"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
 msgstr "Oppdatering av kampanje mislyktes. Prøv igjen senere."
 
