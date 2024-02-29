@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: ISA\n"
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2024-02-19 12:24:47+0000\n"
+"PO-Revision-Date: 2024-02-29 12:23:37+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -1208,7 +1208,7 @@ msgstr "Il est initialement construit pour aider à la description des images de
 
 #: templates/main/home.html:26
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr "L’outil est également conçu pour accueillir des concours de micro-contributions proposés par des responsables de projets."
+msgstr "L’outil est également conçu pour accueillir des concours de micro-contributions proposés par les responsables des projets."
 
 #: templates/main/home.html:27
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
