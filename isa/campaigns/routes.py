@@ -364,6 +364,7 @@ def postContribution():
     contrib_options_list = []
     contrib_data_list = request.json
     username = session.get('username', None)
+    edits_recorded = 0
 
     # The most recent rev_id will be stored in latest_base_rev_id
     # Default is 0 meaning there is none and the edit failed
@@ -442,9 +443,11 @@ def postContribution():
                                        api_auth_token,
                                        contrib_data_list[i])
         if lastrevid is not None:
+            edits_recorded += 1
             # We check if the previous edit was successfull
             # We then add the contribution to the db session
-            db.session.add(contrib_list[i])
+            if len(contrib_list) > 0:
+                db.session.add(contrib_list[i])
 
             # Check that there are still elements in the list in order to pop
             if len(contrib_options_list) > 1:
@@ -464,8 +467,12 @@ def postContribution():
     for suggestion in suggestion_list:
         db.session.add(suggestion)
 
-    # We attempt to save the changes to db
-    if commit_changes_to_db():
+    # We attempt to save the changes to db if we have contributions
+    if len(contrib_list) > 0:
+        if commit_changes_to_db():
+            return (str(latest_base_rev_id))
+    # edit was made but not recorded in db
+    if edits_recorded > 0:
         return (str(latest_base_rev_id))
 
     return make_response("Failure", 400)
