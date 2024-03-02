@@ -388,19 +388,20 @@ def postContribution():
         ]
         if data["api_options"]["action"] not in valid_actions:
             abort(400)
-
-        contribution = Contribution(user=user,
-                                    campaign_id=int(campaign_id),
-                                    file=data['image'],
-                                    edit_action=data['edit_action'],
-                                    edit_type=data['edit_type'],
-                                    country=data['country'],
-                                    depict_item=data.get('depict_item'),
-                                    depict_prominent=data.get('depict_prominent'),
-                                    caption_language=data.get('caption_language'),
-                                    caption_text=data.get('caption_text'),
-                                    date=datetime.date(datetime.utcnow()))
-        contrib_list.append(contribution)
+        # Don't create a new contribution if it's an edit
+        if data['edit_action'] != 'edit':
+            contribution = Contribution(user=user,
+                                        campaign_id=int(campaign_id),
+                                        file=data['image'],
+                                        edit_action=data['edit_action'],
+                                        edit_type=data['edit_type'],
+                                        country=data['country'],
+                                        depict_item=data.get('depict_item'),
+                                        depict_prominent=data.get('depict_prominent'),
+                                        caption_language=data.get('caption_language'),
+                                        caption_text=data.get('caption_text'),
+                                        date=datetime.date(datetime.utcnow()))
+            contrib_list.append(contribution)
 
         # Also create a new suggestion if depict item was suggested
         suggestion_keys = ['google_vision', 'metadata_to_concept']
