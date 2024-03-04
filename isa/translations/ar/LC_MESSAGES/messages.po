@@ -4,6 +4,7 @@
 # Author: Anass Sedrati
 # Author: Dr-Taher
 # Author: NEHAOUA
+# Author: أيوب
 # Author: محمد أحمد عبد الفتاح
 # --
 # Translation for the ISA project
@@ -12,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-02-19 12:24:47+0000\n"
+"PO-Revision-Date: 2024-03-04 12:23:36+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -184,7 +185,7 @@ msgstr "تصنيفات لاستخدامها في هذه الحملة"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr "ابحث عن تصنيفات Wikimedia Commons التي تحتوي على الصور التي ترغب في استخدامها في حملتك."
+msgstr "ابحث عن تصنيفات ويكيميديا ​​كومنز التي تحتوي على الصور التي ترغب في استخدامها في حملتك."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."

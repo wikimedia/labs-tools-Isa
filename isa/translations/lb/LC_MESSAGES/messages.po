@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-02-19 12:24:48+0000\n"
+"PO-Revision-Date: 2024-03-04 12:23:38+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -69,7 +69,6 @@ msgid "Campaign update failed. Please try later!"
 msgstr ""
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "Aktualiséierung ofgeschloss!"
 
@@ -948,9 +947,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr ""
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "Wéi maache mir dat? "
+msgstr "Wéi maache mir dat?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1002,7 +1000,7 @@ msgstr ""
 
 #: templates/main/help.html:79
 msgid "The only requirement is... to be logged-in."
-msgstr ""
+msgstr "Déi eenzeg Viraussetzung ass... ageloggt ze sinn."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1230,7 +1228,6 @@ msgid "See your campaigns"
 msgstr ""
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "Meng Campagnen"
 
@@ -1326,7 +1323,6 @@ msgid "Undo changes to language settings"
 msgstr ""
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
 msgstr "Ännerungen zrécksetzen"
 
