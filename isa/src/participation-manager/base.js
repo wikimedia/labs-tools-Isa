@@ -347,14 +347,12 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         var depictChanges = [];
 
         // Compare to initial state to find actual depcits edits
-
         // First find any new items, or changes to isProminent
         for (var i=0; i < depictStatements.length; i++) {
             var currentStatement = depictStatements[i],
                 depictItem = currentStatement.item,
                 isProminent = currentStatement.isProminent,
-                ideps = JSON.parse(sessionStorage.getItem('intial_depicts'));
-
+                ideps = sessionStorage.getItem('intial_depicts') ? sessionStorage.getItem('intial_depicts') : [];
             var found = false;
             for (var j=0; j < intialDepictStatements.length; j++) {
                 // check all intial statements to see if currentStatement q number was there
