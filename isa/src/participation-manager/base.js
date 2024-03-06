@@ -329,16 +329,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         return captions;
     }
 
-    this.getCompleteClaim = function (item, intialClaims) {
-        // use depict item and get initial depict from store
-        for (var i = 0; i < intialClaims.length; i++) {
-            if (intialClaims[i].item === item) {
-                return intialClaims[i].completeClaim;
-            }
-        }
-        return null
-    }
-
 
     //todo: create generalised updateUnsavedChanges which work for depicts and captions
     this.updateUnsavedDepictChanges = function() {
@@ -351,8 +341,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
         for (var i=0; i < depictStatements.length; i++) {
             var currentStatement = depictStatements[i],
                 depictItem = currentStatement.item,
-                isProminent = currentStatement.isProminent,
-                ideps = sessionStorage.getItem('intial_depicts') ? sessionStorage.getItem('intial_depicts') : [];
+                isProminent = currentStatement.isProminent;
             var found = false;
             for (var j=0; j < intialDepictStatements.length; j++) {
                 // check all intial statements to see if currentStatement q number was there
@@ -367,7 +356,7 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
                             depict_item: depictItem,
                             depict_prominent: isProminent,
                             statement_id: currentStatement.statementId,
-                            initial_claim: initialStatement.completeClaim != undefined ? initialStatement.completeClaim : this.getCompleteClaim(depictItem, ideps)
+                            initial_claim: getAddClaimOptions(currentStatement.statementId, depictItem,isProminent)
                         })
                     } // else, no changes to statement
 
@@ -403,9 +392,6 @@ export function ParticipationManager(images, campaignId, wikiLovesCountry, isUse
 
                 var sessionClaims = [];
                 sessionClaims.push(getAddClaimOptions(currentStatement.statementId, depictItem, isProminent))
-                if (ideps.length == 0) { // make initial claims and add if not found
-                    sessionStorage.setItem('intial_depicts', sessionClaims);
-                }
             }
         } // check next statement...
 
