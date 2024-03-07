@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-02-19 12:24:47+0000\n"
+"PO-Revision-Date: 2024-03-07 12:23:16+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,12 +44,12 @@ msgid "You need to Login to create a campaign"
 msgstr "Sinun on oltava kirjautuneena luodaksesi kampanjan"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
-msgstr "Pahoittelu, kampanjaa %(campaign_name)s ei voitu luoda"
+msgstr "Pahoittelut, kampanjaa %(campaign_name)s ei voitu luoda"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr "Kampanja %(campaign_name)s luotu!"
 
@@ -63,17 +63,14 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Osallistu"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "Sinun täytyy kirjautua, jotta voit ylläpitää kampanjaa"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
 msgstr "Kampanjan päivitys epäonnistui, yritä myöhemmin uudestaan!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "Päivitetty onnistuneesti!"
 
@@ -83,7 +80,7 @@ msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
 msgstr ""
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Buu! Kampanjaa %(campaign_name)s ei voitu päivittää!"
 
@@ -109,7 +106,6 @@ msgid "You are updating"
 msgstr "Päivitys käynnissä"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
 msgstr "Täyttämällä alla olevan lomakkeen voit luoda kampanjasi"
 
@@ -1014,9 +1010,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr ""
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
-msgstr "Ainoa vaatimus on olla kirjautunut sisään."
+msgstr "Ainoa vaatimus on... olla kirjautunut sisään."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1225,7 +1220,7 @@ msgstr "Koti"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Luo uusi kampanja"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1244,7 +1239,6 @@ msgid "See your campaigns"
 msgstr "Näytä kampanjasi"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "Omat kampanjat"
 
@@ -1383,7 +1377,7 @@ msgid "Language settings not available at the moment"
 msgstr "Kieliasetuksia ei ole vielä saatavilla"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
 msgstr "Käyttäjän %(username)s asetukset"
 
