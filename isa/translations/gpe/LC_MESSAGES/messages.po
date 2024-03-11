@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-02-19 12:24:47+0000\n"
+"PO-Revision-Date: 2024-03-11 12:24:05+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +34,7 @@ msgstr "Campaign plus id %(id)s no dey exist"
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Campaign - %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
