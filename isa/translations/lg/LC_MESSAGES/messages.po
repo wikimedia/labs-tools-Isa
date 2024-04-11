@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-02-19 12:24:49+0000\n"
+"PO-Revision-Date: 2024-04-11 12:27:44+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: ISA\n"
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
-"X-Generator: MediaWiki 1.42.0-alpha; Translate 2024-01-22\n"
+"X-Generator: MediaWiki 1.43.0-alpha; Translate 2024-01-22\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: campaigns/routes.py:38 templates/campaign/campaigns.html:6
