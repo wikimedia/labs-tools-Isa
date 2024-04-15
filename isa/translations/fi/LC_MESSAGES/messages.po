@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-04-11 12:27:42+0000\n"
+"PO-Revision-Date: 2024-04-15 12:27:23+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -954,9 +954,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr ""
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "Kuinka aiomme tehdä sen ? "
+msgstr "Kuinka aiomme tehdä sen?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1280,7 +1279,6 @@ msgid "Your Campaigns"
 msgstr "Kampanjasi"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
 msgstr "Alla on luettelo kampanjoistasi"
 
@@ -1331,7 +1329,6 @@ msgid "Undo changes to language settings"
 msgstr "Kumoa muutokset kieliasetuksiin"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
 msgstr "Kumoa muutokset"
 
