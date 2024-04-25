@@ -1,6 +1,7 @@
 # Translation of ISA to German (Deutsch)
 # Exported from translatewiki.net
 #
+# Author: Brettchenweber
 # Author: Nikki
 # Author: ThisCarthing
 # Author: TomatoCake
@@ -12,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-04-22 12:23:55+0000\n"
+"PO-Revision-Date: 2024-04-25 12:25:15+0000\n"
 "X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Project-Id-Version: ISA\n"
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
-"X-Generator: MediaWiki 1.43.0-alpha; Translate 2024-01-22\n"
+"X-Generator: MediaWiki 1.43.0-alpha; Translate 2024-04-24\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: campaigns/routes.py:38 templates/campaign/campaigns.html:6
@@ -563,7 +564,7 @@ msgstr "Beim Abrufen der Kampagnenbilder ist ein Fehler aufgetreten."
 
 #: templates/campaign/campaign_entry.html:136
 msgid "Search for things you see in the image"
-msgstr "Suche nach Dingen, die du im Bild siehst"
+msgstr "Suche nach Dingen, die du auf dem Bild siehst"
 
 #: templates/campaign/campaign_entry.html:137
 msgid "minimise metadata from Commons"
