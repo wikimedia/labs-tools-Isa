@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-04-25 12:25:18+0000\n"
-"X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
+"PO-Revision-Date: 2024-05-02 12:24:52+0000\n"
+"X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
@@ -102,8 +102,9 @@ msgid "Create new Campaign"
 msgstr "Criar nova campanha"
 
 #: templates/campaign/campaign-form.html:14
-msgid "You are updating"
-msgstr "Atualização em curso"
+#, python-format
+msgid "You are updating %(campaign)s"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:16
 #, fuzzy

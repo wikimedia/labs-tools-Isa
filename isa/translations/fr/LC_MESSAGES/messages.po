@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: ISA\n"
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2024-04-25 12:25:16+0000\n"
+"PO-Revision-Date: 2024-05-02 12:24:50+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
-"X-POT-Import-Date: 2024-02-15 11:49:07+0000\n"
+"X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "X-Generator: MediaWiki 1.43.0-alpha; Translate 2024-04-24\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
@@ -116,8 +116,9 @@ msgid "Create new Campaign"
 msgstr "Créer une nouvelle campagne"
 
 #: templates/campaign/campaign-form.html:14
-msgid "You are updating"
-msgstr "Vous allez mettre à jour la campagne"
+#, python-format
+msgid "You are updating %(campaign)s"
+msgstr ""
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create your campaign"
