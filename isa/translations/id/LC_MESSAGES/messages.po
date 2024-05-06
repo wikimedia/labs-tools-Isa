@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-05-02 12:24:50+0000\n"
+"PO-Revision-Date: 2024-05-06 12:21:51+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,21 +36,21 @@ msgstr "Kampanye dengan id %(id)s tidak ada"
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Kampanye - %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Anda harus masuk log untuk membuat kampanye"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
-msgstr "Maaf %(campaign_name)s tidak bisa dibuat"
+msgstr "Maaf, %(campaign_name)s tidak dapat dibuat"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
-msgstr "Kampanye %(campaign_name)s dibuat!"
+msgstr "Kampanye %(campaign_name)s telah dibuat!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
@@ -62,19 +62,16 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Berkontribusi"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
-msgstr "Anda harus masuk log untuk memperbarui kampanye"
+msgstr "Anda harus masuk log untuk memperbarui suatu kampanye"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "Pembaruan kampanye gagal mohon coba ulang nanti!"
+msgstr "Pembaruan kampanye gagal, mohon coba lagi nanti!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
-msgstr "Pembaruan Sukses!"
+msgstr "Pembaruan berhasil!"
 
 #: campaigns/routes.py:312
 #, python-format
@@ -106,7 +103,7 @@ msgstr "Buat Kampanye baru"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "Anda memperbarui %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
 #, fuzzy
@@ -523,16 +520,16 @@ msgstr "Sebutkan elemen berbeda yang bisa Anda lihat di gambar ini"
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "Terima"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Tolak"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Sembunyikan Saran"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -1256,9 +1253,8 @@ msgid "See your campaigns"
 msgstr "Lihat kampanye Anda"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
-msgstr "Kampanye Saya"
+msgstr "Kampanye saya"
 
 #: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
@@ -1279,7 +1275,7 @@ msgstr "dikembangkan sebagai kolaborasi antara proyek-proyek Wiki In Africa, His
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "Pengembangan lebih lanjut didukung oleh "
 
 #: templates/main/layout.html:113
 msgid "It is running on"
@@ -1302,9 +1298,8 @@ msgid "Your Campaigns"
 msgstr "Kampanye Anda"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
-msgstr "Di bawah ini adalah daftar Kampanye Anda"
+msgstr "Di bawah ini adalah daftar kampanye Anda"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
@@ -1328,9 +1323,8 @@ msgid "Select upto 6 languages for captions"
 msgstr "Pilih hingga 6 bahasa untuk takarir"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
-msgstr "Bahasa Takarir"
+msgstr "Bahasa takarir"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
@@ -1355,7 +1349,6 @@ msgid "Undo changes to language settings"
 msgstr "Batalkan perubahan pada pengaturan bahasa"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
 msgstr "Batalkan perubahan"
 
