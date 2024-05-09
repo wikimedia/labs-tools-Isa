@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-05-02 12:24:52+0000\n"
+"PO-Revision-Date: 2024-05-09 12:22:16+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,19 +37,19 @@ msgstr "Кампания с идентификатором %(id)s не суще�
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Кампания — %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Чтобы создать кампанию, нужно войти на сайт"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "К сожалению, кампанию «%(campaign_name)s» создать не удалось"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr "Кампания «%(campaign_name)s» создана!"
 
@@ -63,19 +63,16 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s — сделать вклад"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "Чтобы обновить сведения о кампании, нужно войти на сайт"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "Обновление кампании не удалось — пожалуйста, попробуйте позже!"
+msgstr "Обновление кампании не удалось. Пожалуйста, попробуйте позже!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
-msgstr "Успешно обновлено !"
+msgstr "Успешно обновлено!"
 
 #: campaigns/routes.py:312
 #, python-format
@@ -83,7 +80,7 @@ msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
 msgstr ""
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Бууу! Кампанию «%(campaign_name)s» обновить не удалось!"
 
@@ -107,10 +104,9 @@ msgstr "Создать новую кампанию"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "Вы обновляете %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
 msgstr "Чтобы создать свою кампанию, заполните форму ниже"
 
@@ -222,7 +218,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."
-msgstr ""
+msgstr "Это заменит все текущие изображения."
 
 #: templates/campaign/campaign-form.html:174
 msgid "Use if you changed the categories or if there was an error updating previously."
@@ -520,16 +516,16 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "Принять"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Отклонить"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Скрыть предложения"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -672,7 +668,6 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Чтобы начать, нажмите на название кампании и добавьте структурированные данные к изображению."
 
 #: templates/campaign/campaigns.html:8
-#, fuzzy
 msgid "You can access information on the previous campaigns in the archive section."
 msgstr "Информацию о предыдущих кампаниях можно найти в архивном разделе."
 
@@ -693,9 +688,8 @@ msgid "Total number of images in the campaign"
 msgstr "Общее количество изображений в кампании"
 
 #: templates/campaign/campaigns.html:23
-#, fuzzy
 msgid "Number of editors that have contributed to the campaign"
-msgstr "Количество редакторов, внёсших свой вклад в кампанию "
+msgstr "Количество редакторов, внёсших свой вклад в кампанию"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -832,12 +826,10 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr ""
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
 msgstr "Сервер на обслуживании"
 
 #: templates/errors/403.html:10
-#, fuzzy
 msgid "Please contact support"
 msgstr "Пожалуйста, обратитесь в службу поддержки"
 
@@ -855,7 +847,6 @@ msgid "Page Not Found"
 msgstr "Страница не найдена"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
 msgstr "Мы не можем найти страницу, которую вы ищете"
 
@@ -959,7 +950,7 @@ msgstr ""
 
 #: templates/main/help.html:54
 msgid "How are we going to do that?"
-msgstr ""
+msgstr "Как мы собираемся это сделать?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1154,9 +1145,8 @@ msgid "Legal and credits"
 msgstr "Правовые вопросы и благодарности"
 
 #: templates/main/help.html:165
-#, fuzzy
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
-msgstr "Он работает на tools.wmflabs.org и подпадает под действие Условий использования облачных сервисов Викимедиа (Wikimedia Cloud Services Terms of use)."
+msgstr "Он работает на tools.wmflabs.org и подпадает под действие Условий использования облачных сервисов Викимедиа (Wikimedia Cloud Services Terms of Use)."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
@@ -1171,9 +1161,9 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Легко добавляйте на Викисклад информацию об изображениях"
 
 #: templates/main/home.html:15
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> — это многоязычный инструмент для мобильных устройств, который позволяет людям легко добавлять «микровклады» в виде <a %(link_attrs)s title=\"Узнайте больше о структурированных данных\">структурированных данных</a> (описания, подписи, теги и т. д.) к изображениям, которые были добавлены на Викисклад в рамках конкурсов «Вики любит...» (Wiki Loves)."
+msgstr "<strong>ISA</strong> — это многоязычный инструмент для мобильных устройств, который позволяет людям легко добавлять 'микровклады' в виде <a %(link_attrs)s title=\"Узнайте больше о структурированных данных\">структурированных данных</a> (описания, подписи, теги и т. д.) к изображениям, которые были добавлены на Викисклад в рамках конкурсов «Вики любит…»."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
@@ -1192,34 +1182,28 @@ msgid "About This Tool"
 msgstr "Об этом инструменте"
 
 #: templates/main/home.html:23
-#, fuzzy
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
 msgstr "В долгосрочной перспективе цель этого инструмента состоит в том, чтобы расширить использование знаний, отраженных в каждом размещённом на Викискладе изображении."
 
 #: templates/main/home.html:24
-#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "Этот инструмент призван помочь повысить полезность и информативность изображений, предоставленных во время конкурсов «Вики любит...»."
+msgstr "Этот инструмент призван помочь повысить полезность и информативность изображений, предоставленных во время конкурсов «Вики любит…»."
 
 #: templates/main/home.html:25
-#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr "Первоначально он был создан для помощи в описании изображений конкурса «Вики любит Африку», но специально спроектирован так, чтобы быть полезным для всего семейства конкурсов «Вики любит...», а также за их пределами."
+msgstr "Первоначально он был создан для помощи в описании изображений конкурса «Вики любит Африку», но специально спроектирован так, чтобы быть полезным для всего семейства конкурсов «Вики любит…», а также за их пределами."
 
 #: templates/main/home.html:26
-#, fuzzy
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr "Инструмент также предназначен для проведения конкурсов «микровкладов», предложенных лидерами проектов."
+msgstr "Этот инструмент также предназначен для проведения конкурсов микровкладов, предложенных лидерами проектов."
 
 #: templates/main/home.html:27
-#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "ISA — результат сотрудничества между «Вики-Африка», Histropedia и проектом  «Структурированные данные на Викискладе»."
+msgstr "ISA — результат сотрудничества между «Вики-Африка», Histropedia и проектом «Структурированные данные» на Викискладе."
 
 #: templates/main/home.html:28
-#, fuzzy
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr "ISA — это не только аббревиатура от Information Structured Acceleration, но и слово на языке шона, означающее «положить» или «поместить»."
+msgstr "ISA — это не только аббревиатура от Information Structured Acceleration (структурированное ускорение информации), но и слово на языке шона, означающее «положить» или «поместить»."
 
 #: templates/main/layout.html:34
 msgid "Home"
@@ -1227,7 +1211,7 @@ msgstr "Главная"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Создать новую кампанию"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1246,7 +1230,6 @@ msgid "See your campaigns"
 msgstr "Смотрите свои кампании"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "Мои кампании"
 
@@ -1263,9 +1246,8 @@ msgid "ISA tool"
 msgstr "Инструментарий ISA"
 
 #: templates/main/layout.html:108
-#, fuzzy
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr "был разработан в рамках сотрудничества между проектами «Вики в Африке», «Histropedia» и проектом «Структурированные данные на Викискладе»."
+msgstr "был разработан в рамках сотрудничества между проектами «Вики в Африке», «Histropedia» и проектом «Структурированные данные на Викискладе»"
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
@@ -1292,7 +1274,6 @@ msgid "Your Campaigns"
 msgstr "Ваши кампании"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
 msgstr "Ниже приведён список ваших кампаний"
 
@@ -1317,7 +1298,6 @@ msgid "Select upto 6 languages for captions"
 msgstr "Выберите до 6 языков для подписей"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
 msgstr "Языки подписей"
 
@@ -1344,7 +1324,6 @@ msgid "Undo changes to language settings"
 msgstr "Отменить изменения языковых настроек"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
 msgstr "Отменить изменения"
 
@@ -1379,18 +1358,17 @@ msgid "Captions languages could not be set"
 msgstr "Не удалось задать языки подписей"
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
-msgstr "Предпочитаемые языки успешно установлены"
+msgstr "Предпочитаемые языки установлены"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "Языковые настройки в данный момент недоступны"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s's — Настройки"
+msgstr "Настройки %(username)s"
 
 #: users/routes.py:199
 #, python-format
