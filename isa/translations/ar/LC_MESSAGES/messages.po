@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-05-02 12:24:49+0000\n"
+"PO-Revision-Date: 2024-05-23 12:27:50+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,19 +37,19 @@ msgstr "لا توجد حملة بالمعرف %(id)s"
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "الحملة - %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "عليك تسجيل الدخول لإنشاء حملة"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
-msgstr "عذرا ، تعذر إنشاء %(campaign_name)s"
+msgstr "عذرا، تعذر إنشاء %(campaign_name)s"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr "أُنشئت حملة %(campaign_name)s"
 
@@ -63,17 +63,14 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - المساهمة"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "تحتاج إلى تسجيل الدخول لتحديث الحملة"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "فشل تحديث الحملة ، يرجى المحاولة لاحقًا!"
+msgstr "فشل تحديث الحملة. يرجى المحاولة لاحقًا!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "تحديث ناجح!"
 
@@ -83,7 +80,7 @@ msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
 msgstr ""
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "بوو! تعذر تحديث %(campaign_name)s!"
 
@@ -107,7 +104,7 @@ msgstr "إنشاء حملة جديدة"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "أنت تُحدث %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
 #, fuzzy
