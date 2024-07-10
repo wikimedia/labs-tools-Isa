@@ -299,7 +299,7 @@ def updateCampaign(id):
             flash(gettext('Campaign update failed. Please try later!'), 'danger')
         else:
             if form.update_images.data:
-                image_updater.update_in_thread(id)
+                image_updater.update_in_task(id)
             flash(gettext('Update succesfull!'), 'success')
             return redirect(url_for('campaigns.getCampaignById', id=id))
 

@@ -8,7 +8,7 @@ from celery import shared_task
 import requests
 from requests.exceptions import Timeout
 
-from isa import db, app
+from isa import db
 from isa.main.utils import commit_changes_to_db
 from isa.models import Campaign
 from isa.models import Image
@@ -34,17 +34,6 @@ IMAGES_PER_COMMIT = 1000
 
 class UpdateImageException(Exception):
     pass
-
-
-def update_in_thread(campaign_id):
-    """
-    Update campaign images in a separate thread
-
-    Keyword arguments:
-    campaign_id -- Id of the campaign to update.
-    """
-    thread = Thread(target=update, args=(campaign_id,))
-    thread.start()
 
 
 def update_in_task(campaign_id):
@@ -75,7 +64,6 @@ def update(campaign_id):
     Keyword arguments:
     campaign_id -- Id of the campaign to update.
     """
-    app.app_context().push()
     try:
         updater = ImageUpdater(campaign_id)
         updater.update_images()
