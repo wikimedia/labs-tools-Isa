@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-07-11 12:27:20+0000\n"
+"PO-Revision-Date: 2024-07-22 12:25:06+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,19 +35,19 @@ msgstr "Кампанія з ідентифікатором %(id)s не існу�
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Кампанія — %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Щоб створити кампанію, потрібно увійти в систему"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Вибачте, не вдалося створити «%(campaign_name)s»"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr "Кампанія %(campaign_name)s створена!"
 
@@ -61,27 +61,24 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s — Зробити свій внесок"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "Вам потрібно увійти, щоб оновити кампанію"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "Помилка оновлення кампанії, спробуйте пізніше!"
+msgstr "Помилка оновлення кампанії. Спробуйте пізніше!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "Оновлено успішно!"
 
 #: campaigns/routes.py:312
 #, python-format
 msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
-msgstr ""
+msgstr "Ви не можете оновити цю кампанію. Зв'яжіться з її менеджером, User:%(username)s."
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Буу! Не вдалося оновити «%(campaign_name)s»!"
 
@@ -105,10 +102,9 @@ msgstr "Створити нову кампанію"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "Ви оновлюєте %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
 msgstr "Заповніть форму нижче, щоб створити свою кампанію"
 
@@ -239,7 +235,6 @@ msgid "You must select at least one of the options below."
 msgstr "Ви маєте обрати хоча б одну з опцій нижче."
 
 #: templates/campaign/campaign-form.html:179
-#, fuzzy
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
 msgstr "Щоб дізнатися більше про метадані Зображує та Підпис, перейдіть на довідкову сторінку."
 
@@ -249,7 +244,6 @@ msgid "Depicts"
 msgstr "Зображує"
 
 #: templates/campaign/campaign-form.html:194
-#, fuzzy
 msgid "Select to collect Depicts metadata in the campaign"
 msgstr "Виберіть цю опцію для збору метаданих «Зображує» у кампанії"
 
@@ -259,7 +253,6 @@ msgid "Captions"
 msgstr "Підписи"
 
 #: templates/campaign/campaign-form.html:209
-#, fuzzy
 msgid "Select to collect Caption metadata in the campaign"
 msgstr "Виберіть цю опцію для збору метаданих «Підпис» у цій кампанії"
 
@@ -369,7 +362,7 @@ msgstr "У цій кампанії ще немає учасників"
 
 #: templates/campaign/campaign.html:74
 msgid "Most improved countries"
-msgstr ""
+msgstr "Найбільш поліпшені країни"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -489,7 +482,6 @@ msgid "Adding Depict Statements"
 msgstr "Додавання твердження «Зображує»"
 
 #: templates/campaign/campaign_entry.html:46
-#, fuzzy
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
 msgstr "Зробіть це просто: використовуйте прості слова та поняття, щоб описати те, що ви бачите на кожному зображенні (наприклад, кішка, гора, Тадж-Махал)"
 
@@ -522,16 +514,16 @@ msgstr "Назвіть різні елементи, які ви бачите н�
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "Прийняти"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Відхилити"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Приховати пропозиції"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -574,13 +566,12 @@ msgid "Search for things you see in the image"
 msgstr "Шукати речі, які ви бачите на зображенні"
 
 #: templates/campaign/campaign_entry.html:137
-#, fuzzy
 msgid "minimise metadata from Commons"
 msgstr "мінімізувати метадані з Вікісховища"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr ""
+msgstr "показати усі метадані з Вікісховища"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -616,27 +607,27 @@ msgstr "Позначити цей зображений елемент НЕзна
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr ""
+msgstr "Пропозицію вилучено зі списку"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr ""
+msgstr "Будь ласка, переконайтеся, що ви увійшли в систему"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
-msgstr ""
+msgstr "Ой! Схоже, пропозицію не було вилучено"
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr ""
+msgstr "Показати пропозиції"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
-msgstr ""
+msgstr "Ви дійсно хочете відхилити цю пропозицію?"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
-msgstr ""
+msgstr "Робіть це, лише якщо ви впевнені, що запропонованого тегу немає на зображенні, або якщо його додавання суперечитиме настановам Вікісховища. Якщо кілька користувачів відхилять ту саму пропозицію, вона більше не буде показуватися."
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -675,7 +666,6 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Натисніть на назву кампанії, щоб розпочати і додавати структуровані дані до зображення."
 
 #: templates/campaign/campaigns.html:8
-#, fuzzy
 msgid "You can access information on the previous campaigns in the archive section."
 msgstr "Ви можете отримати доступ до інформації попередніх кампаній з архіву."
 
@@ -696,9 +686,8 @@ msgid "Total number of images in the campaign"
 msgstr "Загальне число зображень у кампанії"
 
 #: templates/campaign/campaigns.html:23
-#, fuzzy
 msgid "Number of editors that have contributed to the campaign"
-msgstr "Кількість редакторів, які зробили внесок у кампанію "
+msgstr "Кількість редакторів, які зробили внесок у кампанію"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -835,12 +824,10 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "Менеджер кампанії може повторити спробу, оновивши кампанію."
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
 msgstr "Сервер на обслуговуванні"
 
 #: templates/errors/403.html:10
-#, fuzzy
 msgid "Please contact support"
 msgstr "Будь ласка, зверніться у службу підтримки"
 
@@ -858,7 +845,6 @@ msgid "Page Not Found"
 msgstr "Сторінку не знайдено"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
 msgstr "Нам не вдалося знайти сторінку, яку ви шукаєте"
 
@@ -901,9 +887,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "Що таке Вікісховище?"
 
 #: templates/main/help.html:26
-#, fuzzy
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr "<strong>Вікісховище</strong> (<i>Wikimedia Commons</i>, або ж інколи <i>Commons</i>) — це проєкт Вікімедіа, сестринський проєкт Вікіпедії, колекція десятків мільйонів вільних медіафайлів."
+msgstr "<strong>Вікісховище</strong> (<i>Wikimedia Commons</i>, або ж інколи <i>Commons</i>) — це проєкт Вікімедіа, сестринський проєкт Вікіпедії. У ньому зібрано десятки мільйонів вільних медіафайлів і будь-хто може поповнювати цю колекцію."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -950,23 +935,20 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "Чим більш вони структуровані, тим легше повторно використовувати дані в інших проєктах Вікімедіа і третіми сторонами; також структурованість даних дозволяє комп'ютерам обробляти і «розуміти» їх."
 
 #: templates/main/help.html:49
-#, fuzzy
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
-msgstr "Структуровані дані — це чинний проєкт, який запустили у 2019 році,… тоді як Вікісховище існує роками!"
+msgstr "Структуровані дані — це чинний проєкт, який запустили у 2019 році,.. тоді як Вікісховище існує роками!"
 
 #: templates/main/help.html:50
-#, fuzzy
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
-msgstr "У Вікісховищі є буквально мільйони зображень,… які потребують уваги і піклування."
+msgstr "У Вікісховищі є буквально мільйони зображень,.. які потребують уваги і піклування."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
 msgstr "Мільйони зображень, які наразі не описані з використанням структурованих даних."
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "Як ви збираєтеся це зробити? "
+msgstr "Як ви збираєтеся це зробити?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1017,9 +999,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "Будь-хто з обліковим записом Вікімедіа може робити внесок, додаючи структуровані метадані у рамках кампанії."
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
-msgstr "Єдина умова — …увійти в систему."
+msgstr "Єдина умова… — увійти в систему."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1110,7 +1091,6 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "Її увімкнули у Вікісховищі у квітні 2019 року."
 
 #: templates/main/help.html:131
-#, fuzzy
 msgid "To add a depicts statement, simply start typing in the search box."
 msgstr "Щоб додати твердження «зображує», просто почніть друкувати у полі пошуку."
 
@@ -1163,7 +1143,6 @@ msgid "Legal and credits"
 msgstr "Правові питання й автори"
 
 #: templates/main/help.html:165
-#, fuzzy
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "Інструмент працює на tools.wmflabs.org і підлягає Умовам використання Хмарних сервісів Вікімедіа."
 
@@ -1180,9 +1159,9 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Швидко додавайте інформацію про зображення у Вікісховище"
 
 #: templates/main/home.html:15
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> — це багатомовний інструмент для мобільних пристроїв, який дозволяє людям легко додавати «мікровнески» у вигляді <a %(link_attrs)s title='Дізнайтеся більше про структуровані дані'>структурованих даних</a> (описів, підписів, тегів тощо) до зображень у Вікісховищі, вивантажених під час конкурсів Wiki Loves."
+msgstr "<strong>ISA</strong> — це багатомовний інструмент для мобільних пристроїв, який дозволяє людям легко додавати «мікровнески» у вигляді <a %(link_attrs)s title='Дізнайтеся більше про структуровані дані'>структурованих даних</a> (описів, підписів, тегів тощо) до зображень у Вікісховищі, вивантажених під час конкурсів «Вікі любить»."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
@@ -1201,32 +1180,26 @@ msgid "About This Tool"
 msgstr "Про цей інструмент"
 
 #: templates/main/home.html:23
-#, fuzzy
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr "У довгостроковій перспективі, мета цього інструменту — підвищити використання знань, які несе в собі кожне зображення, розміщене у Вікісховищі. "
+msgstr "У довгостроковій перспективі, мета цього інструменту — підвищити використання знань, які несе в собі кожне зображення, розміщене у Вікісховищі."
 
 #: templates/main/home.html:24
-#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "Інструмент націлений на допомогу з корисністю й інформативністю зображень, наданих під час конкурсів Wiki Loves."
+msgstr "Інструмент націлений на допомогу з корисністю й інформативністю зображень, наданих під час конкурсів «Вікі любить»."
 
 #: templates/main/home.html:25
-#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr "Початково його розробляли для допомоги з підписами зображень конкурсу «Вікі любить Африку», але далі його моделюють так, що він був корисним для усіх конкурсів Wiki Loves і поза ними."
+msgstr "Початково його розробляли для допомоги з описами зображень конкурсу «Вікі любить Африку», але далі його моделюють так, що він був корисним для усіх конкурсів «Вікі любить» і поза ними."
 
 #: templates/main/home.html:26
-#, fuzzy
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "Інструмент також розроблений як центр проведення конкурсів із мікровнесків, пропонованих лідерами проєктів."
 
 #: templates/main/home.html:27
-#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA — це колаборація між Wiki In Africa, Histropedia та проєктом структурованих даних у Вікісховищі."
 
 #: templates/main/home.html:28
-#, fuzzy
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
 msgstr "ISA — це не лише акронім Information Structured Acceleration, але ще й слово «класти» або «розташовувати» мовою шишона."
 
@@ -1236,7 +1209,7 @@ msgstr "Домашня"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Створити нову кампанію"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1255,7 +1228,6 @@ msgid "See your campaigns"
 msgstr "Переглянути свої кампанії"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "Мої кампанії"
 
@@ -1272,13 +1244,12 @@ msgid "ISA tool"
 msgstr "Інструмент ISA"
 
 #: templates/main/layout.html:108
-#, fuzzy
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr "розроблено у співпраці між Wiki In Africa, Histropedia та проєктом структурованих даних у Вікісховищі."
+msgstr "розроблено у співпраці між Wiki In Africa, Histropedia та проєктом структурованих даних у Вікісховищі"
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "Подальша розробка за підтримки"
 
 #: templates/main/layout.html:113
 msgid "It is running on"
@@ -1301,7 +1272,6 @@ msgid "Your Campaigns"
 msgstr "Ваші кампанії"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
 msgstr "Нижче подано список ваших кампаній"
 
@@ -1318,7 +1288,6 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "Вибрана мова буде використовуватися для пошуку елементів, зображених на зображеннях."
 
 #: templates/users/user_settings.html:15
-#, fuzzy
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
 msgstr "Якщо вибрано «Так само, як інтерфейс», буде використовуватися мова, вибрана у верхньому меню."
 
@@ -1327,7 +1296,6 @@ msgid "Select upto 6 languages for captions"
 msgstr "Оберіть до 6 мов для підписів"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
 msgstr "Мови підписів"
 
@@ -1354,7 +1322,6 @@ msgid "Undo changes to language settings"
 msgstr "Скасувати зміни до мовних налаштувань"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
 msgstr "Скасувати зміни"
 
@@ -1389,18 +1356,17 @@ msgid "Captions languages could not be set"
 msgstr "Не вдалося налаштувати мови підписів"
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
-msgstr "Бажані мови успішно налаштовано"
+msgstr "Бажані мови налаштовано"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "Мовні налаштування наразі недоступні"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s's — Налаштування"
+msgstr "Налаштування %(username)s"
 
 #: users/routes.py:199
 #, python-format
