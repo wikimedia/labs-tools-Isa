@@ -3,6 +3,7 @@
 #
 # Author: Anass Sedrati
 # Author: Dr-Taher
+# Author: Meno25
 # Author: NEHAOUA
 # Author: أيوب
 # Author: محمد أحمد عبد الفتاح
@@ -13,7 +14,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-10-24 12:25:32+0000\n"
+"PO-Revision-Date: 2024-11-05 14:37:28+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -107,9 +108,8 @@ msgid "You are updating %(campaign)s"
 msgstr "أنت تُحدث %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
-msgstr "املأ النموذج أدناه لإنشاء حملتك"
+msgstr "إملأ النموذج أدناه لإنشاء حملتك"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
@@ -238,9 +238,8 @@ msgid "You must select at least one of the options below."
 msgstr "يجب تحديد واحد على الأقل من الخيارات أدناه."
 
 #: templates/campaign/campaign-form.html:179
-#, fuzzy
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
-msgstr "لمعرفة المزيد حول البيانات الوصفية للتصورات والتعليقات التوضيحية، راجع صفحة المساعدة."
+msgstr "لمعرفة المزيد حول بيانات التعريف الوصفية الخاصة بالتصوير والتعليق التوضيحي، راجع صفحة المساعدة."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
@@ -248,9 +247,8 @@ msgid "Depicts"
 msgstr "العناصر المصورة"
 
 #: templates/campaign/campaign-form.html:194
-#, fuzzy
 msgid "Select to collect Depicts metadata in the campaign"
-msgstr "حدد لتجميع تصورات البيانات الوصفية في الحملة"
+msgstr "حدد لجمع البيانات الوصفية في الحملة"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:105
@@ -258,9 +256,8 @@ msgid "Captions"
 msgstr "نصوص توضيحية"
 
 #: templates/campaign/campaign-form.html:209
-#, fuzzy
 msgid "Select to collect Caption metadata in the campaign"
-msgstr "حدد لتجميع بيانات تعريف التسمية التوضيحية في الحملة"
+msgstr "حدد لجمع بيانات وصفية توضيحية في الحملة"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
@@ -488,9 +485,8 @@ msgid "Adding Depict Statements"
 msgstr "إضافة عبارات التصوير"
 
 #: templates/campaign/campaign_entry.html:46
-#, fuzzy
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "اجعل الأمر بسيطًا: استخدم كلمات ومفاهيم بسيطة لوصف ما تراه في كل صورة (مثل القط والجبل وتاج محل)"
+msgstr "اجعل الأمر بسيطًا: استخدم كلمات ومفاهيم بسيطة لوصف ما تراه في كل صورة (على سبيل المثال القطة، الجبل، تاج محل)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
@@ -573,7 +569,6 @@ msgid "Search for things you see in the image"
 msgstr "ابحث عن الأشياء التي تراها في الصورة"
 
 #: templates/campaign/campaign_entry.html:137
-#, fuzzy
 msgid "minimise metadata from Commons"
 msgstr "تقليل البيانات الوصفية من كومنز"
 
@@ -674,9 +669,8 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "انقر فوق اسم الحملة للبدء وإضافة البيانات المنظمة إلى الصورة."
 
 #: templates/campaign/campaigns.html:8
-#, fuzzy
 msgid "You can access information on the previous campaigns in the archive section."
-msgstr "يمكنك الوصول إلى معلومات عن الحملات السابقة في قسم الأرشيف."
+msgstr "يمكنك الوصول إلى معلومات حول الحملات السابقة في قسم الأرشيف."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
@@ -695,9 +689,8 @@ msgid "Total number of images in the campaign"
 msgstr "إجمالي عدد الصور في الحملة"
 
 #: templates/campaign/campaigns.html:23
-#, fuzzy
 msgid "Number of editors that have contributed to the campaign"
-msgstr "عدد المحررين الذين ساهموا في الحملة "
+msgstr "عدد المحررين الذين ساهموا في الحملة"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -834,14 +827,12 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "يمكن لمدير الحملة إعادة المحاولة عن طريق تحديث الحملة."
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
-msgstr "يجري صيانة الخادم"
+msgstr "الخادم تحت الصيانة"
 
 #: templates/errors/403.html:10
-#, fuzzy
 msgid "Please contact support"
-msgstr "يرجى التحقق من الاتصال بالدعم"
+msgstr "يرجى الاتصال بالدعم"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -857,9 +848,8 @@ msgid "Page Not Found"
 msgstr "الصفحة غير موجودة"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
-msgstr "غير قادرين على العثور على الصفحة التي تبحث عنها"
+msgstr "لم نتمكن من العثور على الصفحة التي تبحث عنها"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
@@ -900,9 +890,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "ما هي ويكيميديا كومنز؟"
 
 #: templates/main/help.html:26
-#, fuzzy
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr "<strong>ويكيميديا كومنز</strong> (المعروف أيضًا باسم \"كومنز\") هو مشروع ويكيميديا ، وهو مشروع شقيق لويكيبيديا، ومجموعة تضم أكثر من 40 مليون ملف وسائط مجاني."
+msgstr "<strong>ويكيميديا كومنز</strong> (المعروفة أيضًا باسم \"كومنز\") هو مشروع ويكيميديا، وهو مشروع شقيق لويكيبيديا. يستضيف مجموعة من ملايين ملفات الوسائط القابلة للاستخدام بحرية والتي يمكن لأي شخص المساهمة فيها."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -949,23 +938,20 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "مع مزيد من التركيب، يصبح من الأسهل إعادة استخدام البيانات في مشاريع ويكيميديا الأخرى ومن قِبل أطراف ثالثة؛ كما يسمح لأجهزة الكمبيوتر بمعالجتها و \"فهمها\"."
 
 #: templates/main/help.html:49
-#, fuzzy
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
-msgstr "البيانات المهيكلة هي مشروع مستمر جرى إطلاقه في عام 2019! ... بينما كانت ويكيميديا كومنز موجودة منذ سنوات!"
+msgstr "البيانات المنظمة عبارة عن مشروع مستمر تم إطلاقه في عام 2019!.. في حين أن ويكيميديا كومنز موجودة منذ سنوات!"
 
 #: templates/main/help.html:50
-#, fuzzy
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
-msgstr "هناك ملايين الصور التي جرى استضافتها على ويكيميديا كومنز ... تحتاج إلى الاهتمام والحب."
+msgstr "هناك حرفيًا ملايين الصور المستضافة على ويكيميديا كومنز... والتي تحتاج إلى الاهتمام والحب."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
 msgstr "ملايين الصور التي لم يُكتب وصفها بالبيانات المهيكلة في الوقت الحالي."
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "كيف سنقوم بفعل ذلك ؟ "
+msgstr "كيف سنفعل ذلك؟"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1016,9 +1002,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr ""
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
-msgstr "الشرط الوحيد هو… أن يتم تسجيل الدخول."
+msgstr "المتطلب الوحيد هو... تسجيل الدخول."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1177,9 +1162,9 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "أضف معلومات حول الصور بسهولة على ويكيميديا كومنز"
 
 #: templates/main/home.html:15
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> هي أداة متعددة اللغات، تستخدم في الأجهزة المحمولة أولاً، تسهل على الأشخاص إضافة \"مساهمات صغيرة\" في شكل <a %(link_attrs)s title='تعرف على المزيد حول البيانات المهيكلة'></a> (أوصاف، وتسميات توضيحية، وعلامات، وما إلى ذلك) إلى الصور التي ساهمت مسابقات ويكي تهوى بها في ويكيميديا كومنز."
+msgstr "<strong>ISA</strong> هي أداة متعددة اللغات تركز على الأجهزة المحمولة، تسهل على الأشخاص إضافة \"مساهمات صغيرة\" في شكل <a %(link_attrs)s title=\"تعرف على المزيد حول البيانات المنظمة\">بيانات منظمة</a> (أوصاف، تسميات توضيحية، علامات، وما إلى ذلك) إلى الصور التي تمت المساهمة بها في Wikimedia Commons من خلال مسابقات Wiki Loves."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
@@ -1198,14 +1183,12 @@ msgid "About This Tool"
 msgstr "حول هذه الأداة"
 
 #: templates/main/home.html:23
-#, fuzzy
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr "على المدى الطويل، الهدف من الأداة هو زيادة استخدام المعرفة التي تنعكس في كل صورة مستضافة على ويكيميديا كومنز. "
+msgstr "وعلى المدى الطويل، فإن الهدف من وراء هذه الأداة هو زيادة استخدام المعرفة التي تعكسها كل صورة مستضافة على ويكيميديا كومنز."
 
 #: templates/main/home.html:24
-#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "تهدف الأداة إلى المساعدة في فائدة ومعلومات الصور التي تم التبرع بها خلال مسابقات ويكي تهوى."
+msgstr "تهدف هذه الأداة إلى المساعدة في الاستفادة من المعلومات المتوفرة عن الصور التي تم التبرع بها خلال مسابقات Wiki Loves."
 
 #: templates/main/home.html:25
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
@@ -1248,7 +1231,6 @@ msgid "See your campaigns"
 msgstr "شاهد حملاتك"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "حملاتي"
 
@@ -1293,7 +1275,6 @@ msgid "Your Campaigns"
 msgstr "حملاتك"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
 msgstr "فيما يلي قائمة بحملاتك"
 
@@ -1318,9 +1299,8 @@ msgid "Select upto 6 languages for captions"
 msgstr "حدد ما يصل إلى 6 لغات للنصوص التوضيحية"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
-msgstr "لغات التسمية التوضيحية"
+msgstr "لغات الترجمة"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
@@ -1345,9 +1325,8 @@ msgid "Undo changes to language settings"
 msgstr "تراجع عن التغييرات في إعدادات اللغة"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
-msgstr "الرجوع عن التغييرات"
+msgstr "التراجع عن التغييرات"
 
 #: users/forms.py:26
 msgid "Same as interface"
@@ -1380,18 +1359,17 @@ msgid "Captions languages could not be set"
 msgstr "تعذر تعيين لغات النصوص التوضيحية"
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
-msgstr "عُينت اللغات المفضلة بنجاح"
+msgstr "تم تعيين اللغات المفضلة"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "إعدادات اللغة غير متوفرة في الوقت الحالي"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s - الإعدادات"
+msgstr "إعدادات %(username)s"
 
 #: users/routes.py:199
 #, python-format
