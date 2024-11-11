@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-11-05 14:37:28+0000\n"
+"PO-Revision-Date: 2024-11-11 12:20:10+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -78,7 +78,7 @@ msgstr "تحديث ناجح!"
 #: campaigns/routes.py:312
 #, python-format
 msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
-msgstr ""
+msgstr "لا يمكنك تحديث هذه الحملة. اتصل بالمدير، User\n:%(username)s."
 
 #: campaigns/routes.py:328
 #, python-format
@@ -365,7 +365,7 @@ msgstr "لم يساهم أي مشارك في هذه الحملة"
 
 #: templates/campaign/campaign.html:74
 msgid "Most improved countries"
-msgstr ""
+msgstr "الدول الأكثر تحسنا"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -517,16 +517,16 @@ msgstr "قم بتسمية العناصر المختلفة التي يمكنك ر
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "قبول"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "رفض"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "إخفاء الاقتراحات"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -574,7 +574,7 @@ msgstr "تقليل البيانات الوصفية من كومنز"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr ""
+msgstr "إظهار كافة البيانات الوصفية من كومنز"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -610,27 +610,27 @@ msgstr "ضع علامة على هذا العنصر المصور على أنه ل
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr ""
+msgstr "تمت إزالة الاقتراح من القائمة"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr ""
+msgstr "يرجى التأكد من تسجيل الدخول"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
-msgstr ""
+msgstr "عفواً! ربما لم تتم إزالة الاقتراح"
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr ""
+msgstr "عرض الاقتراحات"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
-msgstr ""
+msgstr "هل أنت متأكد أنك تريد رفض هذا الاقتراح؟"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
-msgstr ""
+msgstr "لا تفعل ذلك إلا إذا كنت متأكدًا من أن العلامة المقترحة لا تظهر في الصورة، أو أنها غير صحيحة وفقًا لإرشادات ويكيميديا كومنز. إذا رفض العديد من المستخدمين نفس الاقتراح، فلن يتم عرضه بعد الآن."
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -955,7 +955,7 @@ msgstr "كيف سنفعل ذلك؟"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "تعني <strong>عملية التنظيم</strong> ، أو الإشراف، بالمعنى الضيق، اختيار وتنظيم قطع من الأعمال الفنية والتراث الثقافي لعرضها في معرض ما."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
@@ -975,31 +975,31 @@ msgstr "تسمح أداة ISA بإضافة نوعين مختلفين من الب
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "إنها أداة \"مساهمات صغيرة\" متعددة اللغات، تركز على الأجهزة المحمولة، وتجعل من السهل على الأشخاص إضافة بيانات منظمة إلى الصور المساهمة بها في مسابقات Wiki Loves على ويكيميديا كومنز."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr ""
+msgstr "تعمل الأداة مع الحملات المنظمة التي أنشأها المنسقون."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "أي شخص لديه حساب ويكيميديا يمكنه أن يكون منسقًا!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr ""
+msgstr "باستخدام ISA، يستطيع المنسق اختيار مجموعة محددة مسبقًا من الصور على Commons، وتحديد تاريخ البدء وتاريخ الانتهاء للحملة، وتوفير معلومات عامة حول الحملة نفسها."
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr ""
+msgstr "يمكن بعد ذلك أن يطلب المنسق من المساهمين \"وسم\" هذه الصور باستخدام بيانات وصفية منظمة متعددة اللغات (صور و/أو تعليقات توضيحية)."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr ""
+msgstr "يتم احتساب النقاط لكل مساهمة يقدمها المشارك، وبالتالي من الممكن تنظيم مسابقات أو تحديات \"الوسوم\" أو المساهمات الصغيرة مع ISA."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr ""
+msgstr "يمكن لأي شخص لديه حساب ويكيميديا أن يساهم في إضافة بيانات وصفية منظمة إلى حملة."
 
 #: templates/main/help.html:79
 msgid "The only requirement is... to be logged-in."
@@ -1015,11 +1015,11 @@ msgstr "التسميات التوضيحية على الملف هي جزء ممي
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "الغرض منها هو تخزين أوصاف قصيرة ومتعددة اللغات للملفات."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "ما هو العنوان الجيد؟ وما هو الفرق بين أوصاف الملفات القديمة الجيدة والعنوانات التوضيحية؟"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
@@ -1027,43 +1027,43 @@ msgstr "أولاً، من المفترض أن تكون التسميات التو
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "على الرغم من أن الأوصاف يمكن أن تكون واسعة جدًا، فإن التسميات التوضيحية محدودة بـ 255 حرفًا في الطول، ولا يمكن أن تحتوي على علامات (مثل روابط نصوص الويكي أو HTML) ولا تدعم الروابط الخارجية."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "في كثير من الحالات، سيكون التعليق مشابهًا أو مطابقًا للوصف."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "ولكن في حالات أخرى، يوجد وصف موسع للغاية (858 حرفًا وروابط) والتسمية التوضيحية أقصر كثيرًا (أكثر أو أقل نفس التسمية التوضيحية المستخدمة في مقالات ويكيبيديا التي تستخدم تلك الصورة)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "لا ينبغي نسخ سوى النص القصير للغاية الذي لا يخضع لحقوق الطبع والنشر إلى التعليقات التوضيحية، حيث يتم نشر التعليقات التوضيحية بموجب تنازل CC0 (\"المجال العام\")."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "أحد الفوائد الأساسية للتسميات التوضيحية هو تحسين إمكانية البحث المدرك للغة."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "توجد أوصاف الملفات الكلاسيكية في نص الويكي، ولا يمكن البحث فيها إلا من خلال البحث في النص الكامل، والذي يبحث بالضرورة في محتويات الصفحة بأكملها، بما في ذلك الفئات وقوالب الترخيص؛ ومن غير الممكن إجراء بحث حسب اللغة."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "تتوفر التسميات التوضيحية كجزء من بياناتنا المنظمة، في حين أن الأوصاف ليست كذلك."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "من الناحية الفنية، الوصف هو نص ويكي عادي ملفوف في قالب لغوي، ملفوف مرة أخرى في قالب معلومات؛ في حين أن التسميات التوضيحية هي علامات Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "وبناءً على ذلك، سيكون من الممكن البحث عن التسميات التوضيحية من خلال واجهة برمجة التطبيقات، مما يسهل العثور على التسميات التوضيحية/تصفيتها/سحبها من الملفات كبيانات وصفية."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "نظرًا لأنه يمكن البحث عنها عبر واجهة برمجة التطبيقات (API)، فمن الأسهل أيضًا على المستخدمين الخارجيين العثور على الوسائط والتسميات التوضيحية وإعادة استخدامها."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
@@ -1091,47 +1091,47 @@ msgstr "تُعد التسميات التوضيحية أيضًا جزءًا مم�
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "تم تفعيله على ويكيميديا كومنز في أبريل 2019."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box."
-msgstr ""
+msgstr "لإضافة بيان مصور، ما عليك سوى البدء بالكتابة في مربع البحث."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr ""
+msgstr "ثم لكل عنصر مصور في الصورة، ابحث عن العنصر المناسب من Wikidata وقم بتحديده."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr ""
+msgstr "إذا كنت تواجه مشكلة في العثور على عنصر Wikidata الصحيح، فاختبر التهجئات البديلة."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr ""
+msgstr "إذا لم يكن هناك عنصر Wikidata مرتبطًا بالموضوع الموضح، فاختر عنصرًا أكثر عمومية يتضمن موضوعك كمثال."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr ""
+msgstr "كن محددًا قدر الإمكان مع العلامة الأساسية."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr ""
+msgstr "إذا كان هناك عدة عناصر تم تصويرها بوضوح وبشكل متعمد بواسطة ملف الوسائط، فيجب إضافة كل منها كبيانات تصويرية منفصلة، ضمن حدود المعقول."
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr ""
+msgstr "بالنسبة للملفات التي تحتوي على عشرات أو مئات العناصر (مثل الأفلام)، قم بإدراج العناصر الأكثر بروزًا فقط."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr ""
+msgstr "هناك أيضًا خيار لوضع علامة على عنصر معين باعتباره \"بارزا\"."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "تشير هذه الخاصية إلى أهمية العنصر في قطعة الوسائط."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "يمكن العثور على مزيد من المعلومات حول الصور هنا:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
@@ -1143,15 +1143,15 @@ msgstr "يمكن العثور على مزيد من المعلومات هنا:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "القانونية والائتمانات"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
-msgstr ""
+msgstr "يتم تشغيله على tools.wmflabs.org، ويخضع لشروط استخدام خدمات Wikimedia Cloud."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "تم نشر ISA بموجب GPLv3. المحتوى المضاف من خلال الأداة إلى Wikimedia Commons يتم نشره بموجب CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
@@ -1192,19 +1192,19 @@ msgstr "تهدف هذه الأداة إلى المساعدة في الاستفا
 
 #: templates/main/home.html:25
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "تم تصميمه في البداية للمساعدة في وصف صور Wiki Loves Africa، ولكن تم تصميمه خصيصًا ليكون مفيدًا لجميع مسابقات Wiki Loves وما بعدها."
 
 #: templates/main/home.html:26
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr ""
+msgstr "كما تم تصميم الأداة لتكون بمثابة مجموعة من مسابقات المساهمات الصغيرة التي يقترحها قادة المشاريع."
 
 #: templates/main/home.html:27
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ISA هو عبارة عن تعاون بين Wiki In Africa وHistropedia ومشروع البيانات المنظمة على مشروع كومنز."
 
 #: templates/main/home.html:28
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA ليس مجرد اختصار لـ Information Structured Acceleration (تسارع المعلومات المنظمة)، بل هو أيضًا كلمة في لغة تشيشونا تعني \"وضع\" أو \"مكان\"."
 
 #: templates/main/layout.html:34
 msgid "Home"
@@ -1212,7 +1212,7 @@ msgstr "الرئيسية"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "إنشاء حملة جديدة"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1248,11 +1248,11 @@ msgstr "أداة ISA"
 
 #: templates/main/layout.html:108
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr ""
+msgstr "تم تطويره كتعاون بين Wiki In Africa وHistropedia ومشروع البيانات الهيكلية في كومنز"
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "مزيد من التطوير مدعوم بواسطة "
 
 #: templates/main/layout.html:113
 msgid "It is running on"
@@ -1260,15 +1260,15 @@ msgstr "إنه يعمل على"
 
 #: templates/main/layout.html:115
 msgid "and is subject to the"
-msgstr ""
+msgstr "ويخضع لـ"
 
 #: templates/main/layout.html:117
 msgid "ISA is published under"
-msgstr ""
+msgstr "يتم نشر ISA تحت"
 
 #: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "يتم إصدار المحتوى المضاف من خلال الأداة إلى ويكيميديا كومنز بموجب"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
@@ -1292,7 +1292,7 @@ msgstr "ستُستخدم اللغة المختارة للبحث عن العنا�
 
 #: templates/users/user_settings.html:15
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
-msgstr ""
+msgstr "إذا تم تحديد \"نفس الواجهة\"، سيتم استخدام اللغة المحددة في القائمة العلوية."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"

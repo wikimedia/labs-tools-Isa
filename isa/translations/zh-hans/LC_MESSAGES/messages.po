@@ -5,6 +5,7 @@
 # Author: Lantx
 # Author: Phoenix3145
 # Author: StarrySky
+# Author: ミラへぜ
 # Author: 沈澄心
 # --
 # Translation for the ISA project
@@ -13,7 +14,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-10-31 12:20:59+0000\n"
+"PO-Revision-Date: 2024-11-11 12:20:14+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -186,7 +187,7 @@ msgstr ""
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr ""
+msgstr "如果您想要一个分类及其所有子分类，请使用「深度」选项来选择您想要下降的级别（将深度保留为 0 以用于 Wiki loves 活动）。"
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
@@ -202,7 +203,7 @@ msgstr "深度"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr ""
+msgstr "红色分类没有「Wiki Loves 活动」功能的正确语法。"
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
