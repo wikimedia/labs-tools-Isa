@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-10-24 12:25:34+0000\n"
+"PO-Revision-Date: 2024-11-18 12:21:57+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,19 +34,19 @@ msgstr "Kampanija, kurios ID %(id)s, neegzistuoja"
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Kampanija – %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Norėdami sukurti kampaniją, turite prisijungti"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Atsiprašome, %(campaign_name)s nepavyko sukurti"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr "%(campaign_name)s kampanija sukurta!"
 
@@ -60,27 +60,24 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s – prisidėkite"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "Norėdami atnaujinti kampaniją, turite prisijungti"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "Nepavyko atnaujinti kampanijos, bandykite vėliau!"
+msgstr "Nepavyko atnaujinti kampanijos. Bandykite vėliau!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
-msgstr "Atnaujinimas sėkmingas !"
+msgstr "Atnaujinimas sėkmingas!"
 
 #: campaigns/routes.py:312
 #, python-format
 msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
-msgstr ""
+msgstr "Negalite atnaujinti šios kampanijos. Susisiekite su vadovu, User:%(username)s."
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Booo! %(campaign_name)s nepavyko atnaujinti!"
 
@@ -104,10 +101,9 @@ msgstr "Kurti naują kampaniją"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "Jūs atnaujinate %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
 msgstr "Norėdami sukurti kampaniją, užpildykite žemiau esančią formą"
 
@@ -238,7 +234,6 @@ msgid "You must select at least one of the options below."
 msgstr "Turite pasirinkti bent vieną iš toliau pateiktų parinkčių."
 
 #: templates/campaign/campaign-form.html:179
-#, fuzzy
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
 msgstr "Kad sužinotumėte daugiau apie vaizdavimo ir antraščių metaduomenis, žiūrėkite pagalbos puslapį."
 
@@ -248,7 +243,6 @@ msgid "Depicts"
 msgstr "Vaizdavimas"
 
 #: templates/campaign/campaign-form.html:194
-#, fuzzy
 msgid "Select to collect Depicts metadata in the campaign"
 msgstr "Pasirinkite, jei norite rinkti vaizdavimo metaduomenis kampanijoje"
 
@@ -258,7 +252,6 @@ msgid "Captions"
 msgstr "Antraštės"
 
 #: templates/campaign/campaign-form.html:209
-#, fuzzy
 msgid "Select to collect Caption metadata in the campaign"
 msgstr "Pasirinkite, jei norite rinkti antraščių metaduomenis kampanijoje"
 
@@ -354,12 +347,12 @@ msgstr "Indėliai"
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
-msgstr ""
+msgstr "Top autoriai"
 
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr ""
+msgstr "Autorius"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
@@ -485,7 +478,7 @@ msgstr "rodyti visus Vikitekos metaduomenis"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr ""
+msgstr "Vaizdo pareiškimų pridėjimas"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
@@ -524,12 +517,12 @@ msgstr "Sutikti"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Atmesti"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Slėpti pasiūlymus"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -537,11 +530,11 @@ msgstr "Norėdami pažymėti svarbius vaizdo elementus, spustelėkite vėliavėl
 
 #: templates/campaign/campaign_entry.html:105
 msgid "Writing Captions"
-msgstr ""
+msgstr "Antraštės rašymas"
 
 #: templates/campaign/campaign_entry.html:105
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr ""
+msgstr "Įtraukite bet kokią kultūrinio pobūdžio, mokslinę ar techninę informaciją, kurią galite nustatyti (pvz., Etiopijos kavos ceremonija arba bunna maflat), kad informacija būtų turtingesnė."
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
@@ -572,13 +565,12 @@ msgid "Search for things you see in the image"
 msgstr "Ieškokite dalykų, kuriuos matote paveikslėlyje"
 
 #: templates/campaign/campaign_entry.html:137
-#, fuzzy
 msgid "minimise metadata from Commons"
 msgstr "minimizuoti metaduomenis iš Vikitekos"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr ""
+msgstr "rodyti visus Vikitekos metaduomenis"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -618,23 +610,23 @@ msgstr "Pasiūlymas pašalintas iš sąrašo"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr ""
+msgstr "Patikrinkite, ar esate prisijungę"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
-msgstr ""
+msgstr "Oi! Pasiūlymas galėjo būti nepašalintas"
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr ""
+msgstr "Rodyti pasiūlymus"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
-msgstr ""
+msgstr "Ar tikrai norite atmesti šį pasiūlymą?"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
-msgstr ""
+msgstr "Atlikite tai tik tuo atveju, jei esate tikri, kad siūloma žyma vaizde nerodoma arba būtų neteisinga pagal Vikitekos gaires. Jei keli naudotojai atmeta tą patį pasiūlymą, jis nebebus rodomas."
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -658,7 +650,7 @@ msgstr "Atsisiųsti visą statistiką (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
-msgstr ""
+msgstr "Pagalbininkų statistika"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
@@ -673,9 +665,8 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Spustelėkite kampanijos pavadinimą, kad pradėtumėte ir pridėtumėte struktūrinių duomenų prie vaizdo."
 
 #: templates/campaign/campaigns.html:8
-#, fuzzy
 msgid "You can access information on the previous campaigns in the archive section."
-msgstr "Informaciją apie ankstesnes kampanijas galite pasiekti Archyvo skiltyje."
+msgstr "Informaciją apie ankstesnes kampanijas galite pasiekti archyvo skiltyje."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
@@ -694,9 +685,8 @@ msgid "Total number of images in the campaign"
 msgstr "Bendras vaizdų skaičius kampanijoje"
 
 #: templates/campaign/campaigns.html:23
-#, fuzzy
 msgid "Number of editors that have contributed to the campaign"
-msgstr "Prisidėjusių prie kampanijos skaičius "
+msgstr "Prisidėjusių prie kampanijos skaičius"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -838,7 +828,7 @@ msgstr "Serverio tvarkymo darbai"
 
 #: templates/errors/403.html:10
 msgid "Please contact support"
-msgstr ""
+msgstr "Susisiekite su palaikymo komanda"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -854,7 +844,6 @@ msgid "Page Not Found"
 msgstr "Puslapis nerastas"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
 msgstr "Mums nepavyko rasti jūsų ieškomo puslapio"
 
@@ -897,9 +886,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "Kas yra Vikiteka?"
 
 #: templates/main/help.html:26
-#, fuzzy
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr "<strong>Vikiteka</strong> (angl. „Wikimedia Commons“) yra Vikimedijos projektas, seserinis Vikipedijos projektas, ir daugiau nei 40 milijonų nemokamų medijos failų kolekcija."
+msgstr "<strong>Vikiteka</strong> (angl. „Wikimedia Commons“) yra Vikimedijos projektas, seserinis Vikipedijos projektas. Joje talpinami milijonai medijos failai, prie kurių gali prisidėti kiekvienas."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -939,19 +927,17 @@ msgstr "<strong>Struktūriniai duomenys Vikitekoje</strong> yra projektas, sutei
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "Struktūrizuoti duomenys – tai aukšto struktūrizavimo laipsnio duomenys."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
 msgstr "Turint daugiau struktūros, tampa lengviau pakartotinai naudoti duomenis kituose Vikitekos projektuose ir trečiosioms šalims; tai taip pat leidžia kompiuteriams tai apdoroti ir „suprasti“."
 
 #: templates/main/help.html:49
-#, fuzzy
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
 msgstr "Struktūriniai duomenys yra tęstinis projektas, kuris buvo pradėtas 2019 m.! ... o Vikiteka egzistuoja jau daugelį metų!"
 
 #: templates/main/help.html:50
-#, fuzzy
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
 msgstr "Vikitekoje yra milijonai nuotraukų … kurioms reikia dėmesio ir meilės."
 
@@ -960,9 +946,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr "Milijonai nuotraukų, kurios šiuo metu nėra apibūdintos struktūriniais duomenimis."
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "Kaip mes tai padarysime? "
+msgstr "Kaip mes tai padarysime?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -974,7 +959,7 @@ msgstr "Šis terminas gali būti vartojamas ir plačiau, apibūdinti bet kokią 
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "Struktūruotų duomenų Vikitekoje kontekste kuravimas reiškia visą veiklą, kurią atlieka Vikitekos bendradarbiai, siekdami tvarkyti ir pateikti medijos failus Vikitekoje: administracinius veiksmus, daugiau ir geresnių metaduomenų pridėjimą prie failų, grupavimą į kategorijas, galerijų kūrimą..."
 
 #: templates/main/help.html:62
 msgid "So... how does the ISA tool fit in there?"
@@ -1013,7 +998,6 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "Kiekvienas, turintis Vikimedijos paskyrą, gali prisidėti prie kampanijos pridėdamas struktūrinių metaduomenų."
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
 msgstr "Vienintelis reikalavimas... būti prisijungusiam."
 
@@ -1091,7 +1075,7 @@ msgstr "failų užklausos dėl trūkstamų antraščių tam tikra kalba"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "sudaryti sąrašus svarbiems failams, kuriems reikia projekto ar kampanijos lokalizacijos antraštės, vertimo"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
@@ -1106,7 +1090,6 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "Tai buvo įjungta Vikitekoje 2019 m. balandžio mėn."
 
 #: templates/main/help.html:131
-#, fuzzy
 msgid "To add a depicts statement, simply start typing in the search box."
 msgstr "Norėdami pridėti vaizdavimo teiginį, tiesiog pradėkite vesti tekstą paieškos laukelyje."
 
@@ -1159,7 +1142,6 @@ msgid "Legal and credits"
 msgstr "Teisinė informacija ir kreditai"
 
 #: templates/main/help.html:165
-#, fuzzy
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "Jis veikia tools.wmflabs.org ir todėl jam taikomas Vikimedijos debesijos paslaugų naudojimo sąlygos."
 
@@ -1176,7 +1158,7 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Lengvai pridėkite informaciją apie vaizdus Vikitekoje"
 
 #: templates/main/home.html:15
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
 msgstr "<strong>ISA</strong> yra daugiakalbis, pirmiausia mobiliesiems įrenginiams skirtas įrankis, leidžiantis žmonėms lengvai pridėti „mikro indėlius“ <a %(link_attrs)s title='Learn more about structured data'>struktūrinių duomenų</a> pavidalu (aprašymai, antraštės, žymos ir kt.) prie vaizdų, kuriuos į Vikiteką įtraukė „Wiki Loves“ konkursai."
 
@@ -1197,33 +1179,28 @@ msgid "About This Tool"
 msgstr "Apie šį įrankį"
 
 #: templates/main/home.html:23
-#, fuzzy
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr "Ilgainiui įrankio tikslas yra padidinti informacijos, kurios atsispindi kiekviename Vikitekoje esančiame paveikslėlyje, naudojimą. "
+msgstr "Ilgainiui įrankio tikslas yra padidinti informacijos, kurios atsispindi kiekviename Vikitekoje esančiame paveikslėlyje, naudojimą."
 
 #: templates/main/home.html:24
-#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
 msgstr "Įrankis skirtas didinti vaizdų, kurie paaukoti per „Wiki Loves“ konkursus, naudingumą ir informaciją."
 
 #: templates/main/home.html:25
-#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
 msgstr "Iš pradžių jis kuriamas, kad padėtų aprašyti „Wiki Loves Africa“ vaizdus, tačiau yra specialiai sukurtas taip, kad būtų naudingas visuose „Wiki Loves“ konkursuose ir ne tik."
 
 #: templates/main/home.html:26
-#, fuzzy
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "Įrankis taip pat sukurtas taip, kad būtų galima dalyvauti projektų vadovų pasiūlytuose mikro indelių konkursuose."
 
 #: templates/main/home.html:27
-#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA yra „Wiki In Africa“, „Histropedia“ ir „Structured Data on Commons“ projekto bendradarbiavimo rezultatas."
 
 #: templates/main/home.html:28
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA yra ne tik Information Structured Acceleration akronimas, bet ir chiShona kalbos žodis, reiškiantis „įdėti“ arba „vieta“."
 
 #: templates/main/layout.html:34
 msgid "Home"
@@ -1231,7 +1208,7 @@ msgstr "Pradžia"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Kurti naują kampaniją"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1250,7 +1227,6 @@ msgid "See your campaigns"
 msgstr "Peržiūrėkite savo kampanijas"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "Mano kampanijos"
 
@@ -1267,13 +1243,12 @@ msgid "ISA tool"
 msgstr "ISA įrankis"
 
 #: templates/main/layout.html:108
-#, fuzzy
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr "ISA sukurtas bendradarbiaujant „Wiki In Africa“, „Histropedia“ ir „Structured Data on Commons“ projektui."
+msgstr "sukurtas bendradarbiaujant „Wiki In Africa“, „Histropedia“ ir „Structured Data on Commons“ projektui."
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "Tolesnis vystymas palaikomas "
 
 #: templates/main/layout.html:113
 msgid "It is running on"
@@ -1296,7 +1271,6 @@ msgid "Your Campaigns"
 msgstr "Jūsų kampanijos"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
 msgstr "Žemiau yra jūsų kampanijų sąrašas"
 
@@ -1313,7 +1287,6 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "Pasirinkta kalba bus naudojama ieškant vaizduose pavaizduotų elementų."
 
 #: templates/users/user_settings.html:15
-#, fuzzy
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
 msgstr "Pasirinkus „Tas pats kaip sąsaja“, bus naudojama viršutiniame meniu pasirinkta kalba."
 
@@ -1322,7 +1295,6 @@ msgid "Select upto 6 languages for captions"
 msgstr "Pasirinkite iki 6 kalbų antraštėms"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
 msgstr "Antraščių kalbos"
 
@@ -1358,7 +1330,7 @@ msgstr "Tas pats kaip sąsaja"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "OAuth atgalinis ryšys nepavyko. Ar slapukai išjungti?"
 
 #: users/routes.py:74
 #, python-format
@@ -1383,18 +1355,17 @@ msgid "Captions languages could not be set"
 msgstr "Nepavyko nustatyti antraščių kalbų"
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
-msgstr "Pageidaujamos kalbos sėkmingai nustatytos"
+msgstr "Pageidaujamos kalbos nustatytos"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "Kalbos nustatymai šiuo metu nepasiekiami"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s - nustatymai"
+msgstr "%(username)s nustatymai"
 
 #: users/routes.py:199
 #, python-format
