@@ -5,6 +5,7 @@
 # Author: Lantx
 # Author: Phoenix3145
 # Author: StarrySky
+# Author: TFX202X
 # Author: ミラへぜ
 # Author: 沈澄心
 # --
@@ -14,7 +15,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-11-11 12:20:14+0000\n"
+"PO-Revision-Date: 2024-11-28 12:21:10+0000\n"
 "X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -171,11 +172,11 @@ msgstr "对于Wiki Loves活动中的所有类别，深度必须设置为0。"
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr ""
+msgstr "需要对特定<strong><em>年份</em></strong>的 Wiki Loves<strong><em>项目</em></strong>中的图像进行分类，例如“来自Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>的图像”（根据<strong><em>需要</em></strong>更改<strong><em>项目</em></strong>和年份）"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr ""
+msgstr "下面选择的某些类别语法不正确"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
@@ -183,7 +184,7 @@ msgstr "在此活动中使用的分类"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr ""
+msgstr "搜索包含您希望在活动中使用的图像的维基共享资源类别。"
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
@@ -207,7 +208,7 @@ msgstr "红色分类没有「Wiki Loves 活动」功能的正确语法。"
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr ""
+msgstr "请删除它们或取消勾选上方的“Wiki Loves活动”复选框"
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
@@ -231,7 +232,7 @@ msgstr "在活动中收集的元数据"
 
 #: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr ""
+msgstr "选择您想要在活动中收集的<strong>元数据</strong>类型。"
 
 #: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
@@ -239,7 +240,7 @@ msgstr "您必须至少选择以下选项之一。"
 
 #: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
-msgstr ""
+msgstr "要了解有关描述内容和说明内容元数据的更多信息，请参阅帮助页面。"
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
@@ -248,7 +249,7 @@ msgstr "描述"
 
 #: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campaign"
-msgstr ""
+msgstr "选择收集活动中的描述元数据"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:105
@@ -257,7 +258,7 @@ msgstr "说明"
 
 #: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campaign"
-msgstr ""
+msgstr "选择在活动中收集标题元数据"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
@@ -265,23 +266,23 @@ msgstr "活动图片"
 
 #: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr ""
+msgstr "活动图片的最大高度为 150px。图片应为横幅图片或徽标。"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
-msgstr ""
+msgstr "不建议使用肖像或方形照片。"
 
 #: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr ""
+msgstr "仅输入来自共享资源的图像的文件名，以显示在活动主页上。"
 
 #: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
-msgstr ""
+msgstr "活动的详细描述（完整的信息）"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
-msgstr ""
+msgstr "为什么用户对活动的贡献很重要？"
 
 #: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
@@ -289,19 +290,19 @@ msgstr "发布活动"
 
 #: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
-msgstr ""
+msgstr "您必须为您的活动选择至少一个类别。"
 
 #: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr ""
+msgstr "您选择的某些类别不符合维基爱古迹活动的正确语法。"
 
 #: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
-msgstr ""
+msgstr "请检查您的选择并重试。"
 
 #: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr ""
+msgstr "请从要收集的元数据部分中选择至少一种类型"
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
@@ -415,7 +416,7 @@ msgstr "尚未设置"
 
 #: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
-msgstr ""
+msgstr "对此活动系列进行更改"
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
@@ -478,15 +479,15 @@ msgstr "相机位置"
 
 #: templates/campaign/campaign_entry.html:38
 msgid "show all metadata from commons"
-msgstr ""
+msgstr "显示共享资源中的所有元数据"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr ""
+msgstr "添加描述语句"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr ""
+msgstr "简单一点：用简单的词语和概念来描述你在每个图像中看到的内容（例如猫、山、泰姬陵）"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
@@ -538,7 +539,7 @@ msgstr "编写说明"
 
 #: templates/campaign/campaign_entry.html:105
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr ""
+msgstr "包括任何您可以识别的特定文化、科学或技术信息（例如埃塞俄比亚咖啡仪式或bunna maflat咖啡仪式），以使信息更加丰富。"
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
@@ -554,71 +555,71 @@ msgstr "简要说明您在这张图片中看到的内容。"
 
 #: templates/campaign/campaign_entry.html:122
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr ""
+msgstr "您可以从用户菜单中选择“语言偏好设置”来添加其他语言的字幕"
 
 #: templates/campaign/campaign_entry.html:134
 msgid "No images found for this campaign!"
-msgstr ""
+msgstr "未找到此活动的图片！"
 
 #: templates/campaign/campaign_entry.html:135
 msgid "Something went wrong getting campaign images"
-msgstr ""
+msgstr "获取活动图片时出错"
 
 #: templates/campaign/campaign_entry.html:136
 msgid "Search for things you see in the image"
-msgstr ""
+msgstr "搜索您在图片中看到的东西"
 
 #: templates/campaign/campaign_entry.html:137
 msgid "minimise metadata from Commons"
-msgstr ""
+msgstr "尽量减少共享资源中的元数据"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr ""
+msgstr "显示共享资源中的所有元数据"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr ""
+msgstr "成功！描述的项目已保存至维基媒体共享资源"
 
 #: templates/campaign/campaign_entry.html:140
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr ""
+msgstr "成功！说明已保存至维基媒体共享资源"
 
 #: templates/campaign/campaign_entry.html:141
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr ""
+msgstr "糟糕！出了点问题，你的编辑尚未保存到维基媒体共享资源"
 
 #: templates/campaign/campaign_entry.html:142
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr ""
+msgstr "您确定要导航至另一张图片吗？您有未保存的更改，这些更改将会丢失。"
 
 #: templates/campaign/campaign_entry.html:143
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr ""
+msgstr "单击“确定”继续，或者单击“取消”如果您想先保存更改。"
 
 #: templates/campaign/campaign_entry.html:144
 msgid "Remove this depicted item"
-msgstr ""
+msgstr "移除此描绘的物品"
 
 #: templates/campaign/campaign_entry.html:145
 msgid "Mark this depicted item as prominent"
-msgstr ""
+msgstr "将此描绘的项目标记为突出"
 
 #: templates/campaign/campaign_entry.html:146
 msgid "Mark this depicted item as NOT prominent"
-msgstr ""
+msgstr "将此描绘的项目标记为不突出"
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr ""
+msgstr "建议已从列表中移除"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr ""
+msgstr "请检查您是否已登录"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
-msgstr ""
+msgstr "糟糕！建议可能未被删除"
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
@@ -630,11 +631,11 @@ msgstr "您确定要拒绝此建议吗？"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
-msgstr ""
+msgstr "仅当您确定建议的标签不会出现在图片中，或者根据维基共享资源指南不正确时才执行此操作。如果多个用户拒绝同一项建议，则该建议将不再显示。"
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr ""
+msgstr "对结构化数据活动的贡献"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
@@ -662,15 +663,15 @@ msgstr "国家/地区统计"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr ""
+msgstr "此页面是当前作为ISA工具的一部分运行的精选活动。"
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr ""
+msgstr "单击活动名称即可开始并将结构化数据添加到图像。"
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous campaigns in the archive section."
-msgstr ""
+msgstr "您可以在档案部分访问有关以前活动的信息。"
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
@@ -764,7 +765,7 @@ msgstr "您必须登录才能创建活动。"
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "正在显示第_START_至_END_条记录，共_TOTAL_条"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
@@ -780,19 +781,19 @@ msgstr "没有找到匹配的记录"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr ""
+msgstr "第一"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr ""
+msgstr "最后的"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr ""
+msgstr "下一个"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr ""
+msgstr "上一个"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
@@ -800,15 +801,15 @@ msgstr "正在更新图片"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr ""
+msgstr "此活动的图片正在更新。"
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr ""
+msgstr "将会添加更多图像。"
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr ""
+msgstr "您仍然可以参加该活动。"
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
@@ -816,15 +817,15 @@ msgstr "图片更新失败"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
-msgstr ""
+msgstr "更新此活动的图像时出现错误。"
 
 #: templates/campaign/macros.html:8
 msgid "Some images will be missing."
-msgstr ""
+msgstr "一些图像将会丢失。"
 
 #: templates/campaign/macros.html:8
 msgid "The campaign manager can retry by updating the campaign."
-msgstr ""
+msgstr "活动管理者可以通过更新活动来重试。"
 
 #: templates/errors/403.html:8
 msgid "Server under maintenance"
@@ -861,7 +862,7 @@ msgstr "发生了一些错误"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "ISA可能正在进行维护"
 
 #: templates/main/help.html:9
 msgid "Help Page"
@@ -869,21 +870,21 @@ msgstr "帮助页面"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr ""
+msgstr "轻松添加有关维基媒体共享资源上图像的信息"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong>是一款有趣、多语言、移动优先的工具，它让人们可以轻松地将“微贡献”以<a %(link_attrs)s>结构化数据</a>的形式添加到由Wiki Loves竞赛添加的维基媒体共享资源图像中。"
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "ISA最初建立是为了为<a %(link_attrs)s>Wiki Loves Africa</a>图像提供更好的多语言和结构化描述。"
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "但它也被开发用于所有<a link_attrs>Wiki Loves竞赛</a>，并最终用于维基媒体共享资源上的<strong>所有媒体文件</strong>。"
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
@@ -891,19 +892,19 @@ msgstr "什么是维基共享资源？"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr ""
+msgstr "<strong>维基共享资源</strong>（也称为“Commons”）是维基媒体项目，也是维基百科的姊妹项目。它拥有数百万个可免费使用的媒体文件，任何人都可以为其做出贡献。"
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "维基百科上所有免费授权的照片、音频和视频文件、PDF 和其他媒体都存储在共享资源上。"
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "维基媒体共享资源发展迅速，每年新增媒体文件约500万个。"
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "数千名志愿者将文件上传到共享资源，并将其集成到维基百科等维基媒体项目中，以展示其中的内容并与公众分享这些媒体。"
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
@@ -927,27 +928,27 @@ msgstr "共享资源上的结构化数据是什么？"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>维基共享资源上的结构化数据</strong>是一个提供技术基础设施的项目，以结构化数据补充维基共享资源上的维基文本、模板和类别。"
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "结构化数据是具有高度结构化组织的数据。"
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "有了更多的结构，就更容易在其他维基媒体项目和第三方中重复使用数据；它还允许计算机处理和“理解”它。"
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
-msgstr ""
+msgstr "结构化数据是一个正在进行的项目，于 2019 年启动！而维基媒体共享资源已经存在多年了！"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
-msgstr ""
+msgstr "维基共享资源上托管着数以百万计的图片……需要关注和喜爱。"
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "数百万张目前尚未用结构化数据描述的图片。"
 
 #: templates/main/help.html:54
 msgid "How are we going to do that?"
@@ -959,420 +960,420 @@ msgstr "<strong>策展</strong>，狭义的意思是：为展览选择和组织�
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "这一术语还可以得到更广泛的使用，用来描述涉及选择、组织和呈现信息的任何活动。"
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "在共享资源结构化数据的背景下，策展意味着共享资源贡献者为组织和呈现维基媒体共享资源上的媒体文件而执行的所有活动：管理操作、向文件添加更多更好的元数据、将它们分组到类别中、创建画廊......"
 
 #: templates/main/help.html:62
 msgid "So... how does the ISA tool fit in there?"
-msgstr ""
+msgstr "那么...ISA工具如何适应其中？"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "ISA工具允许向图片集添加两种不同类型的结构化数据：说明和描绘（下面有关于说明和描绘的更多解释）。"
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "它是一种多语言、移动优先的“微贡献”工具，人们可以轻松地向在维基共享资源上为Wiki Loves竞赛贡献的图像添加结构化数据。"
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr ""
+msgstr "该工具与协调员创建的策划活动一起运作。"
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "任何拥有维基媒体帐户的人都可以成为协调员！"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr ""
+msgstr "通过ISA，协调员可以选择共享资源上预定义的一组图像，选择活动的开始日期和结束日期，并提供有关活动本身的一般信息。"
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr ""
+msgstr "然后，协调员可以要求贡献者使用多语言结构化元数据（描述和/或标题）来“标记”这些图像。"
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr ""
+msgstr "参与者的每项贡献都会计算积分，因此可以使用 ISA 组织“标记”或微贡献竞赛或挑战。"
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr ""
+msgstr "任何拥有维基媒体帐户的人都可以为活动添加结构化元数据。"
 
 #: templates/main/help.html:79
 msgid "The only requirement is... to be logged-in."
-msgstr ""
+msgstr "唯一的要求是...登录。"
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "了解有关文件标题和描述的更多信息"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "文件标题是结构化数据的特征部分。"
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "它们用于存储有关文件的简短、多语言描述。"
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "什么是好的说明？我们的旧文件描述和说明之间有什么区别？"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "首先，标题应该简单、简短。"
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "虽然描述可以非常广泛，但标题长度限制为255个字符，并且不能包含标记（如Wikitext链接或HTML）并且不支持外部链接。"
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "在许多情况下，标题会与描述相似或相同。"
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "但在其他情况下，有一个非常详细的描述（858个字符和链接），并且标题要短得多（或多或少与使用该图像的维基百科文章上使用的标题相同）。"
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "只有非常短以至于不受版权保护的文本才应被复制到字幕中，因为字幕是在CC0（“公共领域”）豁免下发布的。"
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "字幕的核心优势之一是提高了语言感知的可搜索性。"
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "经典的文件描述在wikitext中，只能通过全文搜索进行搜索，这必然会搜索整个页面内容，包括类别和许可模板；并且无法按语言进行搜索。"
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "标题是我们结构化数据的一部分，但描述不是。"
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "从技术角度来说，描述是用语言模板包装的普通wikitext，然后再用信息模板包装；而标题是Wikibase标签。"
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "这样，字幕将可以通过API进行搜索，从而可以轻松地从文件中找到/过滤/提取字幕作为元数据。"
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "由于可以通过API搜索，第三方重复使用者也可以更轻松地找到和重复使用媒体和字幕本身。"
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "说明的其他可能用途包括："
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "填写信息框"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "查询文件中是否存在给定语言的缺失说明"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "为需要为项目或活动本地化字幕的重要文件建立翻译清单"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "在此处查找有关说明的更多信息"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr ""
+msgstr "描述也是结构化数据的一个特征部分。"
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "它于2019年4月在维基媒体共享资源上启用。"
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box."
-msgstr ""
+msgstr "要添加描述语句，只需在搜索框中开始输入即可。"
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr ""
+msgstr "然后，对于图像中描绘的每个项目，从维基数据中找到适当的项目并选择它。"
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr ""
+msgstr "如果您在寻找正确的维基数据项目时遇到困难，请测试其他拼写。"
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr ""
+msgstr "如果没有与所描绘主题相关的维基数据项目，请选择一个包含您的主题的更通用的项目作为示例。"
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr ""
+msgstr "使用主要标签时请尽量具体。"
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr ""
+msgstr "如果媒体文件清楚且刻意地描述了多个项目，则应在合理范围内将所有项目添加为单独的描述陈述。"
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr ""
+msgstr "对于描述数十或数百个项目（例如电影）的文件，仅列出最突出的项目。"
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr ""
+msgstr "还有一个选项可以将特定项目标记为“突出”。"
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "此属性指的是该项目在媒体中的突出程度。"
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "有关描绘的更多信息可以在这里找到："
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "使用ISA工具"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "更多信息可以在这里找到："
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "法律与致谢"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
-msgstr ""
+msgstr "它在tools.wmflabs.org上运行，并受维基媒体云服务使用条款的约束。"
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA依据GPLv3发布。通过该工具添加到维基媒体共享资源的内容依据CC0条款发布。"
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "工具上使用的图像："
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "轻松在维基媒体共享资源上添加有关图像的信息"
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong>是一种多语言、移动设备优先的工具，它让人们可以轻松地以<a %(link_attrs)s title=\"详细了解结构化数据\">结构化数据</a>（描述、标题、标签等）的形式向由Wiki Loves竞赛贡献给维基媒体共享资源 的图像添加“微贡献”。"
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr ""
+msgstr "<strong>点击“探索活动”即可开始！</strong>"
 
 #: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
-msgstr ""
+msgstr "前往活动目录选择一个活动"
 
 #: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "探索活动"
 
 #: templates/main/home.html:22
 msgid "About This Tool"
-msgstr ""
+msgstr "关于此工具"
 
 #: templates/main/home.html:23
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr ""
+msgstr "从长远来看，该工具背后的意图是增加维基共享资源上托管的每张图片所反映的知识的使用率。"
 
 #: templates/main/home.html:24
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "此工具的目的是协助提高Wiki Loves竞赛期间捐赠图像的实用性和信息性。"
 
 #: templates/main/home.html:25
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "它最初是为了协助描述Wiki Loves\n Africa图像而建立的，但经过专门设计，可供所有Wiki Loves比赛及其他活动使用。"
 
 #: templates/main/home.html:26
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr ""
+msgstr "该工具还被设计为举办由项目负责人提出的微贡献竞赛。"
 
 #: templates/main/home.html:27
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ISA是Wiki In Africa、Histropedia和维基共享资源项目上的架构数据之间的合作成果。"
 
 #: templates/main/home.html:28
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA不仅是“信息结构化加速”的首字母缩写，也是奇绍纳语中“放”或“地点”的意思。"
 
 #: templates/main/layout.html:34
 msgid "Home"
-msgstr ""
+msgstr "首页"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "创建新活动"
 
 #: templates/main/layout.html:51
 msgid "Help"
-msgstr ""
+msgstr "帮助"
 
 #: templates/main/layout.html:67
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "更改可用的字幕语言"
 
 #: templates/main/layout.html:67 templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "语言偏好设定"
 
 #: templates/main/layout.html:68
 msgid "See your campaigns"
-msgstr ""
+msgstr "查看您的活动"
 
 #: templates/main/layout.html:68
 msgid "My campaigns"
-msgstr ""
+msgstr "我的活动"
 
 #: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
-msgstr ""
+msgstr "登出"
 
 #: templates/main/layout.html:83
 msgid "Login"
-msgstr ""
+msgstr "登录"
 
 #: templates/main/layout.html:107
 msgid "ISA tool"
-msgstr ""
+msgstr "ISA工具"
 
 #: templates/main/layout.html:108
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr ""
+msgstr "由 Wiki In Africa、Histropedia和维基共享资源项目的结构化数据共同开发"
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "进一步发展由 \\ 提供支持"
 
 #: templates/main/layout.html:113
 msgid "It is running on"
-msgstr ""
+msgstr "它正在运行于"
 
 #: templates/main/layout.html:115
 msgid "and is subject to the"
-msgstr ""
+msgstr "并受"
 
 #: templates/main/layout.html:117
 msgid "ISA is published under"
-msgstr ""
+msgstr "ISA发布在"
 
 #: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "通过该工具添加到维基共享资源的内容将按照以下方式发布："
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "您的活动"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your campaigns"
-msgstr ""
+msgstr "以下是您的活动列表"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "您还没有任何活动"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr ""
+msgstr "描述语言"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr ""
+msgstr "所选语言将用于搜索图像中描绘的元素。"
 
 #: templates/users/user_settings.html:15
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
-msgstr ""
+msgstr "如果选择“与界面相同”，则将使用顶部菜单中选择的语言。"
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "最多可选择6种语言作为字幕"
 
 #: templates/users/user_settings.html:19
 msgid "Caption languages"
-msgstr ""
+msgstr "字幕语言"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "每幅图像都可以添加多种语言的字幕。"
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "当您查看图像时，您在此页面选择的语言将会显示在页面上。"
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "选择您愿意参与贡献的所有语言。"
 
 #: templates/users/user_settings.html:23 templates/users/user_settings.html:29
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr ""
+msgstr "移除语言"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "撤消对语言设置的更改"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes"
-msgstr ""
+msgstr "撤消更改"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "与接口相同"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "OAuth回调失败。Cookie是否已禁用？"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "欢迎，%(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "下次再见！"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "请登录以更改您的语言偏好设置。"
 
 #: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "抱歉，您尝试多次输入%(rep_languages)s"
 
 #: users/routes.py:158
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "无法设置字幕语言"
 
 #: users/routes.py:160
 msgid "Preferred languages set"
-msgstr ""
+msgstr "偏好语言设定"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "目前无法设置语言"
 
 #: users/routes.py:175
 #, python-format
 msgid "%(username)s's Settings"
-msgstr ""
+msgstr "%(username)s的设置"
 
 #: users/routes.py:199
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "由%(username)s创建的活动"
 
