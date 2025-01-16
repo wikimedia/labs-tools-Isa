@@ -1552,3 +1552,8 @@ msgstr ""
 msgid "Campaigns created by %(username)s"
 msgstr ""
 
+#: templates/footer.html:1
+msgid "Powered by SWITCH/WMSE/Bern Uni"
+msgstr ""
+
+
