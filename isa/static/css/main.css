@@ -285,14 +285,16 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 }
 
 /* style the footer*/
-.footer{
-    width: 100%;
-    color:#6a6a6a;
+.footer {
     font-size: 11px;
-    text-align: center;
-    padding: 5px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Adjust as needed */
+    background-color: #f0f0f0; /* Optional styling */
     margin-top: 50px;
-}
+    text-align: center;
+  }
 
 /*make subtle footer links*/
 .footer a {
