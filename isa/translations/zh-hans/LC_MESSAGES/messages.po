@@ -1,6 +1,7 @@
 # Translation of ISA to Simplified Chinese (中文（简体）)
 # Exported from translatewiki.net
 #
+# Author: Chimes
 # Author: Lantianjialiang
 # Author: Lantx
 # Author: Phoenix3145
@@ -15,8 +16,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-11-28 12:21:10+0000\n"
-"X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
+"PO-Revision-Date: 2025-01-20 12:20:26+0000\n"
+"X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh-Hans\n"
@@ -1376,4 +1377,8 @@ msgstr "%(username)s的设置"
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "由%(username)s创建的活动"
+
+#: templates/footer.html:1
+msgid "Powered by SWITCH/WMSE/Bern Uni"
+msgstr "由SWITCH/WMSE/伯尔尼大学提供支持"
 

@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: ISA\n"
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "POT-Creation-Date: 2020-10-17 20:31+0100\n"
-"PO-Revision-Date: 2024-10-24 12:25:33+0000\n"
+"PO-Revision-Date: 2025-01-20 12:20:22+0000\n"
 "Last-Translator: Egbe Eugene <agboreugene@gmail.com>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
-"X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
+"X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "X-Generator: MediaWiki 1.44.0-alpha; Translate 2024-07-16\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
 
@@ -1388,4 +1388,8 @@ msgstr "Paramètres de %(username)s"
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Campagnes créées par %(username)s"
+
+#: templates/footer.html:1
+msgid "Powered by SWITCH/WMSE/Bern Uni"
+msgstr ""
 

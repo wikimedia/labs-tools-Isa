@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Brettchenweber
+# Author: Justman10000
 # Author: Nikki
 # Author: Sebastian Wallroth
 # Author: ThisCarthing
@@ -14,8 +15,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-10-24 12:25:32+0000\n"
-"X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
+"PO-Revision-Date: 2025-01-20 12:20:22+0000\n"
+"X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
@@ -1375,4 +1376,8 @@ msgstr "%(username)s Einstellungen"
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Von %(username)s erstellte Kampagnen"
+
+#: templates/footer.html:1
+msgid "Powered by SWITCH/WMSE/Bern Uni"
+msgstr "Unterstützt von SWITCH/WMSE/Bern Uni"
 

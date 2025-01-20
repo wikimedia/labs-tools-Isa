@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-10-24 12:25:35+0000\n"
-"X-POT-Import-Date: 2024-05-01 02:55:02+0000\n"
+"PO-Revision-Date: 2025-01-20 12:20:24+0000\n"
+"X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
@@ -1374,4 +1374,8 @@ msgstr "Настройки %(username)s"
 #, python-format
 msgid "Campaigns created by %(username)s"
 msgstr "Кампании, которые создал(а) %(username)s"
+
+#: templates/footer.html:1
+msgid "Powered by SWITCH/WMSE/Bern Uni"
+msgstr ""
 
