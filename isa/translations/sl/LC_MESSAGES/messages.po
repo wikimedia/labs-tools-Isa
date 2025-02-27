@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-01-20 12:20:25+0000\n"
+"PO-Revision-Date: 2025-02-27 12:23:15+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1154,7 +1154,7 @@ msgstr "Uporaba orodja ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr "Več informacij lahko najdete tukaj:"
+msgstr "Več informacij je na voljo tukaj:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
