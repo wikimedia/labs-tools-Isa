@@ -1,0 +1,37 @@
+/* Fix header Links margin in mobile */
+.rtl .navbar-nav .nav-item + .nav-item, [dir="rtl"] .navbar-nav .nav-item + .nav-item{
+    margin-right: inherit;
+}
+/* Fix for datepicker dropdown position in RTL mode on create campaigns page */
+.rtl .list-unstyled {
+    padding-right: 0px;
+    padding-left: inherit;
+}
+
+/* Fix background color for language select dropdown in RTL mode */
+.rtl .custom-select {
+    background: inherit;
+    padding: 0.375rem 1.75rem 0.375rem 1.75rem;
+}
+
+/* Swap language select icons (language and dropdown arrow) for RTL mode in header */
+.rtl .lang::before {
+    left: 12px;
+    right: inherit;
+}
+
+.rtl .lang::after {
+    right: 0px;
+    left: inherit;
+}
+
+/* Adjust position of "Show closed campaigns" checkbox label in RTL mode to be next to the checkbox */
+.rtl [for="show-closed-campaigns-checkbox"].custom-control-label::before,
+.rtl [for="show-closed-campaigns-checkbox"].custom-control-label::after {
+    right: -1.5rem !important;
+}
+
+/* Fix position of "Save" and "Cancel" buttons in edit forms to align to the left in RTL mode */
+.rtl .edit-publish-btn-group {
+    left: 0px;
+}
