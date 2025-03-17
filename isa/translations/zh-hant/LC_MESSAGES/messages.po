@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-03-13 12:24:09+0000\n"
+"PO-Revision-Date: 2025-03-17 12:22:19+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1380,5 +1380,5 @@ msgstr "由%(username)s建立的活動"
 
 #: templates/footer.html:1
 msgid "Powered by SWITCH/WMSE/Bern Uni"
-msgstr ""
+msgstr "由 SWITCH/WMSE/Bern Uni (伯恩大學) 提供"
 
