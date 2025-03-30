@@ -362,7 +362,10 @@ select.selectpicker> option, .nav-item.dropdown .dropdown-menu  {
 .img-holder   {
     height:300px;
     position: relative;
-    background-color: #444;
+}
+/* make the background the same to hide the original image on hover (T312784) */
+.img-holder,.zoomImg{
+    background: repeating-conic-gradient(#ddd 0% 25%, #fff 0% 50%) 0 0 / 20px 20px;
 }
 /*shrink image to fit in img-holder*/
 .img-holder img {
