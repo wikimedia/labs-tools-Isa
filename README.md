@@ -132,3 +132,9 @@ ISA development has been supported by:
 - Wikimedia Sverige (https://wikimedia.se)
 - SWITCH (https://www.switch.ch)
 - Bern University of Applied Sciences (https://www.bfh.ch)
+
+# System Dependencies for Ubuntu/Linux Users
+To successfully add the MySQL client to the Python environment and start the tool's development environment, install the required system dependency `libmysqlclient-dev`.
+Use the following command:
+bash
+- sudo apt-get install libmysqlclient-dev
