@@ -1,6 +1,7 @@
 # Translation of ISA to Dutch (Nederlands)
 # Exported from translatewiki.net
 #
+# Author: ABPMAB
 # Author: Husky
 # Author: McDutchie
 # Author: Robin van der Vliet
@@ -12,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-03-13 12:24:07+0000\n"
+"PO-Revision-Date: 2025-04-03 12:23:57+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -515,16 +516,16 @@ msgstr "Noem de verschillende elementen die je in deze afbeelding kan zien"
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "Accepteren"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Weigeren"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Verberg suggesties"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -572,7 +573,7 @@ msgstr "metadata van Commons minimaliseren"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr ""
+msgstr "toon alle metadata van Commons"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -608,7 +609,7 @@ msgstr "Markeer dit afgebeelde item als NIET prominent"
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr ""
+msgstr "Suggestie verwijderd uit lijst"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
@@ -1222,7 +1223,7 @@ msgstr ""
 
 #: templates/main/layout.html:67 templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "Taalvoorkeuren"
 
 #: templates/main/layout.html:68
 msgid "See your campaigns"
@@ -1234,11 +1235,11 @@ msgstr ""
 
 #: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
-msgstr ""
+msgstr "Uitloggen"
 
 #: templates/main/layout.html:83
 msgid "Login"
-msgstr ""
+msgstr "Inloggen"
 
 #: templates/main/layout.html:107
 msgid "ISA tool"
@@ -1324,7 +1325,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes"
-msgstr ""
+msgstr "Wijzigingen ongedaan maken"
 
 #: users/forms.py:26
 msgid "Same as interface"
@@ -1337,11 +1338,11 @@ msgstr ""
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "Welkom %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "Tot de volgende keer!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
