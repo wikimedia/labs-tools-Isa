@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 #
 # Author: Ykhwong
+# Author: 아라
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -9,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-03-13 12:24:07+0000\n"
+"PO-Revision-Date: 2025-05-05 12:25:53+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -506,7 +507,7 @@ msgstr "저장"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr "변경 내용 저장을 위해 로그인한 뒤 여기로 돌아옵니다"
+msgstr "변경사항 저장을 위해 로그인한 뒤 여기로 돌아옵니다"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
@@ -539,7 +540,7 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
-msgstr "변경 내용 게시를 위해 로그인"
+msgstr "변경사항을 게시하려면 로그인"
 
 #: templates/campaign/campaign_entry.html:113
 msgid "Add a caption to better explain the image (max 255 characters)"
@@ -1325,12 +1326,11 @@ msgstr "언어 제거"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr "언어 설정의 변경 내용을 되돌리기"
+msgstr "언어 설정의 변경사항을 되돌리기"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
-msgstr "변경 내용 취소"
+msgstr "변경사항 실행 취소"
 
 #: users/forms.py:26
 msgid "Same as interface"
