@@ -1,6 +1,7 @@
 # Translation of ISA to Korean (한국어)
 # Exported from translatewiki.net
 #
+# Author: YeBoy371
 # Author: Ykhwong
 # Author: 아라
 # --
@@ -10,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-05-08 12:28:37+0000\n"
+"PO-Revision-Date: 2025-05-12 12:26:27+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -69,9 +70,8 @@ msgid "Campaign update failed. Please try later!"
 msgstr ""
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
-msgstr "업데이트 성공 !"
+msgstr "업데이트 성공!"
 
 #: campaigns/routes.py:312
 #, python-format
