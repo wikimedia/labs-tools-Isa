@@ -5,6 +5,7 @@
 # Author: Beta16
 # Author: Camelia Boban
 # Author: Senator Choko
+# Author: Wheelygay
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -12,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-05-08 12:28:37+0000\n"
+"PO-Revision-Date: 2025-06-16 12:23:45+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -515,16 +516,16 @@ msgstr "Assegna un nome ai diversi elementi che puoi vedere in questa immagine"
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "Accetta"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Rifiuta"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Nascondi suggerimenti"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -608,11 +609,11 @@ msgstr "Contrassegna questo oggetto raffigurato come NON rilevante"
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr ""
+msgstr "Suggerimento rimosso dall'elenco"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr ""
+msgstr "Si prega di verificare di aver effettuato l'accesso"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
@@ -620,11 +621,11 @@ msgstr ""
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr ""
+msgstr "Vedi suggerimenti"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
-msgstr ""
+msgstr "Sei sicuro di voler rifiutare questo suggerimento?"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
@@ -740,7 +741,7 @@ msgstr "Vai alla home page della campagna per iniziare"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr "Vai a Campagna"
+msgstr "Vai alla campagna"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
@@ -1210,7 +1211,7 @@ msgstr "Home"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Crea nuova campagna"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1376,5 +1377,5 @@ msgstr "Campagne create da %(username)s"
 
 #: templates/footer.html:1
 msgid "Powered by SWITCH/WMSE/Bern Uni"
-msgstr ""
+msgstr "Alimentato da SWITCH/WMSE/Bern Uni"
 

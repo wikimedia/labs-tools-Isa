@@ -3,6 +3,7 @@
 #
 # Author: Darwin
 # Author: McDutchie
+# Author: O andras
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -10,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-05-08 12:28:38+0000\n"
+"PO-Revision-Date: 2025-06-16 12:23:47+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,14 +42,14 @@ msgid "You need to Login to create a campaign"
 msgstr "É necessário iniciar sessão para criar uma campanha"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Lamentamos, mas não foi possível criar %(campaign_name)s"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
-msgstr "%(campaign_name)s Campanha criada!"
+msgstr "Campanha %(campaign_name)s criada!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
@@ -60,17 +61,14 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Contribuir"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "É necessário iniciar sessão para atualizar uma campanha"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "A atualização da campanha falhou, por favor tente mais tarde."
+msgstr "A atualização da campanha falhou. Por favor tente mais tarde."
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "Atualizado com sucesso!"
 
@@ -80,9 +78,9 @@ msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
 msgstr ""
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
-msgstr "Lamentamos, mas não foi possível criar %(campaign_name)s"
+msgstr "Lamentamos, mas não foi possível actualizar %(campaign_name)s!"
 
 #: campaigns/routes.py:333
 #, python-format
@@ -107,7 +105,6 @@ msgid "You are updating %(campaign)s"
 msgstr ""
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
 msgstr "Preencha o formulário abaixo para criar uma campanha"
 
@@ -485,9 +482,8 @@ msgid "Adding Depict Statements"
 msgstr ""
 
 #: templates/campaign/campaign_entry.html:46
-#, fuzzy
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "Simplifique: Use palavras e conceitos simples por descrever o que observa em cada imagem (p. ex. gato, montanha, Taj Mahal)"
+msgstr "Simplifique: Use palavras e conceitos simples para descrever o que observa em cada imagem (e.g. gato, montanha, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
@@ -828,7 +824,6 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr ""
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
 msgstr "Servidor em manutenção"
 
@@ -952,9 +947,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr ""
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "Como vamos fazer isto ? "
+msgstr "Como vamos fazer isto?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1234,7 +1228,6 @@ msgid "See your campaigns"
 msgstr "Ver as suas campanhas"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "As minhas campanhas"
 
@@ -1329,7 +1322,6 @@ msgid "Undo changes to language settings"
 msgstr ""
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
 msgstr "Desfazer alterações"
 
