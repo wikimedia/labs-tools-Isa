@@ -568,11 +568,22 @@ def searchDepicts(id):
         return jsonify({"results": search_return})
 
 
-@campaigns.route('/campaigns/<int:id>/all_stats_download/<string:filename>')
-def downloadAllCampaignStats(id, filename):
-    if filename:
-        return send_file(os.getcwd() + '/campaign_stats_files/' + str(id) + '/' + filename,
-                         as_attachment=True, cache_timeout=0, last_modified=True)
+@campaigns.route('/campaigns/<int:id>/download_csv')
+def downloadAllCampaignStats(id):
+
+    campaign = Campaign.query.get(id)
+    stats_file_directory = os.getcwd() + '/campaign_stats_files/' + str(campaign.id)
+
+    # We create the all_stats download file
+    # The field in the stats file will be as thus
+    all_stats_fields = ['username', 'file', 'edit_type', 'edit_action', 'country', 'depict_item',
+                        'depict_prominent', 'caption_text', 'caption_language', 'date']
+    campaign_all_stats_data = get_all_camapaign_stats_data(id)
+    stats_csv_file = create_campaign_all_stats_csv(stats_file_directory,
+                                                   convert_latin_to_english(campaign.campaign_name),
+                                                   all_stats_fields, campaign_all_stats_data)
+    if stats_csv_file:
+        return send_file(stats_file_directory + '/' + stats_csv_file, as_attachment=True)
     else:
         flash('Download may be unavailable now', 'info')
 

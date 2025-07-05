@@ -105,7 +105,7 @@
         <p>Source: ISA Tool |  <a href="{{url_for('campaigns.getCampaignById', id=campaign.id ) }}"> tools.wmflabs.org{{url_for('campaigns.getCampaignById', id=campaign.id ) }} </a></p>
          <p>License: CC BY SA 4.0</p>
         </div>
-        <a  class="btn btn-sm btn-primary" href="{{url_for('campaigns.downloadAllCampaignStats', id=campaign.id, filename=campaign_all_stats_csv_file) }}">{{ _('Download all stats (CSV)') }}</a>
+        <a  class="btn btn-sm btn-primary" href="{{url_for('campaigns.downloadAllCampaignStats', id=campaign.id) }}">{{ _('Download all stats (CSV)') }}</a>
     </div></div>
  
     <div class="hidden-i18n-text">
