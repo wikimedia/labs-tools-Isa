@@ -36,74 +36,10 @@
         <div class="stat-label" title="{{ _('Total number of images in this campaign') }}">{{ _('Images') }}<br>{{ images(campaign) }}</div>
         <div class="stat-label" title="{{ _('Total number of contributions made to this campaign') }}">{{ _('Contributions') }}<br>{{ campaign_contributions }}</div>
     </div>
-    <div class="stats-table mx-auto">
-        <div class="top-user-table mr-4">
-            <table class="table table-sm table-light text-center">
-                <h6>{{ _('Top Contributors') }}</h6>
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">{{ _('Contributor') }}</th>
-                        <th scope="col">{{ _('Contributions') }}</th>
-                    </tr>
-                </thead>
-                {% if all_contributors_data %}
-                <tbody>
-                {% for contributor_data in all_contributors_data %}
-                    <tr>
-                        <th scope="row">{{contributor_data['rank']}}</th>
-                        <td><a href="https://commons.wikimedia.org/wiki/User:{{ contributor_data['username'] }}">{{contributor_data['username']}}</a></td>
-                        <td>{{contributor_data['images_improved']}}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-                {% else %}
-                <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td class="text-center">{{ _('No partcipants has contributed to this campaign') }}</td>
-                    </tr>
-                </tbody>
-                {% endif %}
-            </table>
-        </div>
-        {% if is_wiki_loves_campaign %}
-            <div class="top-country-table">
-                <table class="table table-sm table-light text-center">
-                    <h6>{{ _('Most improved countries') }}</h6>
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">{{ _('Country') }}</th>
-                                <th scope="col">{{ _('Contributions') }}</th>
-                            </tr>
-                        </thead>
-                        {% if all_campaign_country_statistics_data %}
-                            <tbody>
-                                {% for country_statistics_data in all_campaign_country_statistics_data %}
-                                    <tr>
-                                        <th scope="row">{{country_statistics_data['rank']}}</th>
-                                        <td>{{country_statistics_data['country']}}</td>
-                                        <td>{{country_statistics_data['images_improved']}}</td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
-                        {% else %}
-                            <tbody>
-                                <tr>
-                                    <th scope="row"></th>
-                                    <td></td>
-                                    <td class="text-center">{{ _('There is no data available yet for this campaign') }}</td>
-                                </tr>
-                            </tbody>
-                        {% endif %}
-                </table>
-            </div>
-        {% endif %}
-    </div>
+    {% with table_data = campaign_table_pagination_data %}
+        {% include 'campaign/campaign_table.html' %}
+    {% endwith %}
                 <a href="{{url_for('campaigns.getCampaignStatsById', id=campaign.id ) }}" class="btn btn-secondary" title="{{ _('View and download more stats for this campaign') }}">{{ _('View full stats') }}</a>
-
 
 </div>
 </div>

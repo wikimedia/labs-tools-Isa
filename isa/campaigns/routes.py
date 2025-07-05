@@ -46,6 +46,9 @@ def getCampaigns():
 
 @campaigns.route('/campaigns/<int:id>')
 def getCampaignById(id):
+
+    page = request.args.get('page', 1, type=int)
+    per_page = request.args.get('per_page', 10, type=int)
     # We get the current user's user_name
     username = session.get('username', None)
     session_language = session.get('lang', None)
@@ -67,7 +70,7 @@ def getCampaignById(id):
         if (contrib.campaign_id == campaign.id):
             campaign_contributions += 1
 
-    campaign_table_stats = get_table_stats(id, username)
+    campaign_table_stats = get_table_stats(id, username, page, per_page)
     # Delete the files in the campaign directory
     stats_path = os.getcwd() + '/campaign_stats_files/' + str(campaign.id)
     files = glob.glob(stats_path + '/*')
@@ -122,6 +125,7 @@ def getCampaignById(id):
                             campaign_contributions=campaign_contributions,
                             current_user=current_user,
                             is_wiki_loves_campaign=campaign.campaign_type,
+                            campaign_table_pagination_data=campaign_table_stats['page_info'],
                             all_contributors_data=campaign_table_stats['all_contributors_data'],
                             current_user_rank=campaign_table_stats['current_user_rank'],
                             all_campaign_country_statistics_data=campaign_table_stats['all_campaign_country_statistics_data'],
@@ -130,6 +134,16 @@ def getCampaignById(id):
                             country_csv_file=country_csv_file,
                             countries=country_names
                             ))
+
+
+@campaigns.route('/campaigns/<int:id>/table')
+def getCampaignTableData(id):
+    # We get the table stats from the campaign itself
+    page = request.args.get('page', None, type=int)
+    per_page = request.args.get('per_page', 30, type=int)
+    username = session.get('username', None)
+    campaign_table_stats = get_table_stats(id, username, page, per_page)
+    return campaign_table_stats
 
 
 @campaigns.route('/campaigns/<int:id>/stats')
@@ -151,21 +165,21 @@ def getCampaignStatsById(id):
     all_stats_fields = ['username', 'file', 'edit_type', 'edit_action', 'country', 'depict_item',
                         'depict_prominent', 'caption_text', 'caption_language', 'date']
     campaign_all_stats_data = get_all_camapaign_stats_data(id)
+
+    # TODO: Move this method or fix to include all campaign data
     campaign_all_stats_csv_file = create_campaign_all_stats_csv(stats_file_directory,
                                                                 convert_latin_to_english(campaign.campaign_name),
                                                                 all_stats_fields, campaign_all_stats_data)
-
-    # We get the table stats from the campaign itself
-    campaign_table_stats = get_table_stats(id, username)
 
     # We prepare the campaign stats data to be sent to the next page (stats route)
     all_campaign_stats_data = {}
     all_campaign_stats_data['campaign_editors'] = campaign.campaign_participants
     all_campaign_stats_data['campaign_contributions'] = campaign.campaign_contributions
-    all_campaign_stats_data['all_contributors_data'] = campaign_table_stats['all_contributors_data']
-    all_campaign_stats_data['all_campaign_country_statistics_data'] = campaign_table_stats['all_campaign_country_statistics_data']
+    # all_campaign_stats_data['all_contributors_data'] = campaign_table_stats['all_contributors_data']
+    # all_campaign_stats_data['all_campaign_country_statistics_data'] = campaign_table_stats['all_campaign_country_statistics_data']
     all_campaign_stats_data['campaign_all_stats_csv_file'] = campaign_all_stats_csv_file
     session['next_url'] = request.url
+
     return render_template('campaign/campaign_stats.html', title=gettext('Campaign - %(campaign_name)s',
                                                                          campaign_name=campaign.campaign_name),
                            campaign=campaign,
@@ -174,8 +188,8 @@ def getCampaignStatsById(id):
                            campaign_contributions=all_campaign_stats_data['campaign_contributions'],
                            current_user=current_user,
                            is_wiki_loves_campaign=campaign.campaign_type,
-                           all_contributors_data=all_campaign_stats_data['all_contributors_data'],
-                           all_campaign_country_statistics_data=all_campaign_stats_data['all_campaign_country_statistics_data'],
+                           # all_contributors_data=all_campaign_stats_data['all_contributors_data'],
+                           # all_campaign_country_statistics_data=all_campaign_stats_data['all_campaign_country_statistics_data'],
                            username=username,
                            campaign_all_stats_csv_file=all_campaign_stats_data['campaign_all_stats_csv_file'])
 
@@ -352,10 +366,12 @@ def getCampaignCategories():
 @campaigns.route('/api/get-campaign-graph-stats-data')
 def getCampaignGraphStatsData():
     # we get the campaign_id from the route request
+    page = request.args.get('page', None, type=int)
+    per_page = request.args.get('per_page', 30, type=int)
     campaign_id = request.args.get('campaign')
     # We get the current user's username
     username = session.get('username', None)
-    data_points = get_stats_data_points(campaign_id, username)
+    data_points = get_stats_data_points(campaign_id, username, page, per_page)
     return json.dumps(data_points)
 
 

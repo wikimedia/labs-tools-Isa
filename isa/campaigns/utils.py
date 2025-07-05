@@ -12,7 +12,7 @@ from mwoauth import ConsumerToken, Handshaker
 from operator import itemgetter
 from requests_oauthlib import OAuth1
 
-from isa import app
+from isa import app, db
 from isa.models import Contribution, User
 from isa.users.utils import (get_all_users_contribution_data_per_campaign, get_user_ranking)
 
@@ -272,7 +272,7 @@ def get_country_improved_file_count(campaign_contributions, country):
 
 
 # TODO: Transfer all these methods to the campaign blueprint
-def get_campaign_country_data(campaign_id):
+def get_campaign_country_data(campaign_id, page=1, per_page=10):
     """
     Fetch campaign country data
 
@@ -286,7 +286,9 @@ def get_campaign_country_data(campaign_id):
     all_country_statistics_data = []
 
     # We get all the campaign contributions
-    campaign_contributions = Contribution.query.filter_by(campaign_id=campaign_id).all()
+    # Support pagination for campaign contributions
+    pagination = Contribution.query.filter_by(campaign_id=campaign_id).paginate(page=page, per_page=per_page, error_out=False)
+    campaign_contributions = pagination.items
     # We then iterate to get the countries
     for contribution in campaign_contributions:
         if contribution.country != "":
@@ -307,7 +309,7 @@ def get_campaign_country_data(campaign_id):
     return all_country_statistics_data
 
 
-def get_table_stats(campaign_id, username):
+def get_table_stats(campaign_id, username, page, per_page):
     """
     Fetch campaign table stats
 
@@ -317,10 +319,27 @@ def get_table_stats(campaign_id, username):
     """
     # participantids for this campaign
     campaign_user_names = []
+
     # We are querrying all the users who participate in the campaign
-    contribs_for_campaign = Contribution.query.filter_by(campaign_id=campaign_id).all()
-    for campaign_contribution in contribs_for_campaign:
-        campaign_user_names.append(campaign_contribution.user.username)
+    # Get all unique usernames who contributed to this campaign
+    user_query = (
+        User.query
+        .join(Contribution, User.id == Contribution.user_id)
+        .filter(Contribution.campaign_id == campaign_id)
+        .group_by(User.id)
+        .order_by(db.func.count(Contribution.id).desc())
+    )
+    try:
+        contribs_for_campaign = user_query.paginate(page=page, per_page=per_page, error_out=False)
+        # If the requested page is out of range, fallback to page 1
+        if page > contribs_for_campaign.pages and contribs_for_campaign.pages > 0:
+            contribs_for_campaign = user_query.paginate(page=1, per_page=per_page, error_out=False)
+    except Exception:
+        # If any error occurs (e.g., no results), fallback to page 1
+        contribs_for_campaign = user_query.paginate(page=1, per_page=per_page, error_out=False)
+
+    for campaign_contribution in contribs_for_campaign.items:
+        campaign_user_names.append(campaign_contribution.username)
     # we get the unique ids so as not to count an id twice
     campaign_user_names_set = set(campaign_user_names)
     # We then re-initialize the ids array
@@ -341,17 +360,23 @@ def get_table_stats(campaign_id, username):
         user_data['rank'] = get_user_ranking(all_contributors_data, user_data['username'])
 
     # We get all the campaign coountry sorted data
-    all_campaign_country_statistics_data = get_campaign_country_data(campaign_id)
+    all_campaign_country_statistics_data = get_campaign_country_data(campaign_id, page, per_page)
 
     campaign_table_stats = {}
     campaign_table_stats['all_contributors_data'] = all_contributors_data
     campaign_table_stats['all_campaign_country_statistics_data'] = all_campaign_country_statistics_data
     campaign_table_stats['current_user_rank'] = current_user_rank
     campaign_table_stats['campaign_editors'] = len(campaign_user_names_set)
+    campaign_table_stats['page_info'] = {
+        'page': page,
+        'per_page': per_page,
+        'total': contribs_for_campaign.total,
+        'pages': contribs_for_campaign.pages,
+    }
     return campaign_table_stats
 
 
-def get_stats_data_points(campaign_id, username):
+def get_stats_data_points(campaign_id, username, page, per_page):
     """
     Get the data points for the pie charts
 
@@ -360,7 +385,7 @@ def get_stats_data_points(campaign_id, username):
     username -- username of the currently logged in user
     """
     campaign_id = int(campaign_id)
-    campaign_table_stats = get_table_stats(campaign_id, username)
+    campaign_table_stats = get_table_stats(campaign_id, username, page, per_page)
     all_contributors_data = campaign_table_stats['all_contributors_data']
     all_campaign_country_statistics_data = campaign_table_stats['all_campaign_country_statistics_data']
     stats_data_points = {}
