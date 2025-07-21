@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-05-08 12:28:38+0000\n"
+"PO-Revision-Date: 2025-07-21 12:25:14+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -272,7 +272,7 @@ msgstr "Foto's in portretoriëntatie of vierkante foto's zijn niet aan te bevele
 
 #: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr "Vul hier enkel de BESTANDSNAAM in van een afbeelding op Wikimedia Commons. Deze wordt gebruikt op de homepage van de campagne."
+msgstr "Vul hier enkel de BESTANDSNAAM in van een afbeelding op Wikimedia Commons. Deze wordt gebruikt op de startpagina van de campagne."
 
 #: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
@@ -426,7 +426,7 @@ msgstr "Onbekend land"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr "Keer terug naar de homepage van de campagne"
+msgstr "Terugkeren naar de startpagina van de campagne"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
@@ -737,7 +737,7 @@ msgstr "Open"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr "Ga naar de homepage van de campagne om te starten"
+msgstr "Ga naar de startpagina van de campagne om te beginnen"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
@@ -835,7 +835,7 @@ msgstr "Neem contact op met support"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Naar de homepage"
+msgstr "Naar de startpagina"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
@@ -852,7 +852,7 @@ msgstr "We kunnen de pagina die u zoekt niet vinden"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Naar de homepage"
+msgstr "Naar de startpagina"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
