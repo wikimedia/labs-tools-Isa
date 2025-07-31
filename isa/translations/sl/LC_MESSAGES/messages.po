@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-05-08 12:28:39+0000\n"
+"PO-Revision-Date: 2025-07-31 12:33:26+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -367,7 +367,7 @@ msgstr "K tej kampanji ni prispeval noben udeleženec"
 
 #: templates/campaign/campaign.html:74
 msgid "Most improved countries"
-msgstr ""
+msgstr "Najbolj izboljšane države"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
