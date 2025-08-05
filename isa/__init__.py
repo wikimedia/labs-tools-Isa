@@ -23,8 +23,10 @@ app = Flask(__name__)
 
 # Load configuration from YAML file
 __dir__ = os.path.dirname(__file__)
-app.config.update(
-    yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
+config_path = os.path.join(os.path.dirname(__dir__), 'config.yaml')
+with open(config_path) as f:
+    config = yaml.safe_load(f)
+app.config.update(config)
 
 # Another secret key will be generated later
 app.config['SQLALCHEMY_DATABASE_URI']

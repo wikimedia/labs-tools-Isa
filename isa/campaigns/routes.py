@@ -514,7 +514,7 @@ def searchDepicts(id):
 
         query_titles = '|'.join(depict for depict, in top_depicts)
         depict_details = requests.get(
-            url='https://www.wikidata.org/w/api.php',
+            url=app.config['WIKIDATA_SEARCH_API_URL'],
             params={
                 'action': 'wbgetentities',
                 'format': 'json',
@@ -545,7 +545,7 @@ def searchDepicts(id):
     else:
         search_return = []
         search_result = requests.get(
-            url='https://www.wikidata.org/w/api.php',
+            url=app.config['WIKIDATA_SEARCH_API_URL'],
             params={
                 'search': search_term,
                 'action': 'wbsearchentities',
