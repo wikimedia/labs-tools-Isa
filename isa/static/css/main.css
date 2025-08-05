@@ -1,5 +1,20 @@
 /* GLOBAL STYLES */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body > .content-wrapper {
+    flex: 1;
+}
+
+footer.footer {
+    margin-top: auto;
+}
+
 /*change btn-primary color*/
 .btn-primary {
     background-color:#006699;
