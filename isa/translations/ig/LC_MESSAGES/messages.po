@@ -20,7 +20,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-08-04 12:28:50+0000\n"
+"PO-Revision-Date: 2025-09-01 12:49:37+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1234,9 +1234,8 @@ msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Struct
 msgstr "ISA bụ mmekorita n'etiti Wiki In Africa, Histropedia na Structured Data on Commons project."
 
 #: templates/main/home.html:28
-#, fuzzy
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr "ISA abụghị naanị acronym maka Information Structured Acceleration, kamakwa ọ bụ okwu asụsụ chiShona maka 'put' ma ọ bụ 'ebe'."
+msgstr "ISA abụghị naanị acronym maka Information Structured Acceleration, ka ma,ọ bụ okwu asụsụ chiShona maka 'put' ma ọ bụ 'ebe'."
 
 #: templates/main/layout.html:34
 msgid "Home"
@@ -1244,7 +1243,7 @@ msgstr "Be"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Mepụta mkpọsa nka ọhụrụ"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1263,9 +1262,8 @@ msgid "See your campaigns"
 msgstr "Hụ mkpọsa gị"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
-msgstr "Mgbasa ozi m"
+msgstr "Mgbasa nke ozi m"
 
 #: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
@@ -1280,9 +1278,8 @@ msgid "ISA tool"
 msgstr "Ngwá ọrụ ISA"
 
 #: templates/main/layout.html:108
-#, fuzzy
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr "mepụtara dị ka mmekorita n'etiti Wiki In Africa, Histropedia na Structured Data on Commons project."
+msgstr "mepụtara ya dị ka mmekorita n'etiti Wiki In Africa, Histropedia na Structured Data on Commons project."
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
@@ -1309,9 +1306,8 @@ msgid "Your Campaigns"
 msgstr "Mgbasa ozi gị"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
-msgstr "N'okpuru ebe a bụ ndepụta nke mkpọsa gị"
+msgstr "N'okpuru ebe a bụ iha ndepụta nke mkpọsa gị"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
@@ -1335,9 +1331,8 @@ msgid "Select upto 6 languages for captions"
 msgstr "Họrọ ihe ruru asụsụ 6 maka nkọwa"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
-msgstr "Asụsụ ndị e dere n'asụsụ"
+msgstr "Asụsụ ndị e dere n'ọrụ asụsụ"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
@@ -1362,9 +1357,8 @@ msgid "Undo changes to language settings"
 msgstr "Wepu mgbanwe na ntọala asụsụ"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
-msgstr "Wepu Mgbanwe"
+msgstr "Kụpụ̀ Mgbanwe"
 
 #: users/forms.py:26
 msgid "Same as interface"
