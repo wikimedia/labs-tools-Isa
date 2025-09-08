@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-08-04 12:28:51+0000\n"
+"PO-Revision-Date: 2025-09-08 12:19:19+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -833,7 +833,7 @@ msgstr ""
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Bréng mech zréck"
+msgstr "Bréng mech zeréck"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
@@ -850,7 +850,7 @@ msgstr ""
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Bréng mech zréck"
+msgstr "Bréng mech zeréck"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
