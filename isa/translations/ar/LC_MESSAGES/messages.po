@@ -4,6 +4,7 @@
 # Author: Anass Sedrati
 # Author: Dr-Taher
 # Author: Meno25
+# Author: Mohammed Qays
 # Author: NEHAOUA
 # Author: أيوب
 # Author: محمد أحمد عبد الفتاح
@@ -14,7 +15,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-08-04 12:28:48+0000\n"
+"PO-Revision-Date: 2025-10-06 12:42:49+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1099,15 +1100,15 @@ msgstr "لإضافة بيان مصور، ما عليك سوى البدء بال�
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr "ثم لكل عنصر مصور في الصورة، ابحث عن العنصر المناسب من Wikidata وقم بتحديده."
+msgstr "ثم لكل عنصر مصور في الصورة، ابحث عن العنصر المناسب من ويكي بيانات وحدده."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr "إذا كنت تواجه مشكلة في العثور على عنصر Wikidata الصحيح، فاختبر التهجئات البديلة."
+msgstr "إذا كنت تواجه مشكلة في العثور على عنصر ويكي بيانات الصحيح، فاختبر التهجئات البديلة."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr "إذا لم يكن هناك عنصر Wikidata مرتبطًا بالموضوع الموضح، فاختر عنصرًا أكثر عمومية يتضمن موضوعك كمثال."
+msgstr "إذا لم يكن هناك عنصر ويكي بيانات مرتبطًا بالموضوع الموضح، فاختر عنصرًا أكثر عمومية يتضمن موضوعك مثلاً."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
