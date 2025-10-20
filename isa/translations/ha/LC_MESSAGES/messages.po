@@ -5,6 +5,7 @@
 # Author: EdnaLisa
 # Author: Jerryjaymi
 # Author: Juguson
+# Author: McDutchie
 # Author: Muhammad Idriss Criteria
 # Author: Muhammadhum
 # Author: Salydy
@@ -17,7 +18,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-08-04 12:28:50+0000\n"
+"PO-Revision-Date: 2025-10-20 05:51:48+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,7 +93,7 @@ msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Boo! Ba za a iya sabunta %(campaign_name)s ba!"
 
 #: campaigns/routes.py:333
-#, python-format
+#, fuzzy, python-format
 msgid "%(campaign_name)s - Update"
 msgstr "%(campaign_name)s - Update"
 
@@ -119,6 +120,7 @@ msgid "Fill in the form below to create your campaign"
 msgstr "Fill in the form below to create you campaign"
 
 #: templates/campaign/campaign-form.html:19
+#, fuzzy
 msgid "Fields marked with * are mandatory"
 msgstr "Fields marked with * are mandatory"
 
@@ -135,6 +137,7 @@ msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria�
 msgstr "Don haka, ba \"Wiki Loves Africa\" ba amma \"Music and Dance in Nigeria\""
 
 #: templates/campaign/campaign-form.html:48
+#, fuzzy
 msgid "Short description of Campaign (144 characters)"
 msgstr "Short description of Campaign (144 characters)"
 
@@ -197,6 +200,7 @@ msgid "If you want a category and ALL of its subcategories use the 'Depth' optio
 msgstr "Idan kana son nau'i da DUKKAN rukunoninsa yi amfani da zaɓin 'zurfin' don zaɓar matakan ƙasa nawa kake son zuwa (bar zurfin kan 0 don Wiki na son kamfen)."
 
 #: templates/campaign/campaign-form.html:151
+#, fuzzy
 msgid "Choose categories to use in the campaign"
 msgstr "Choose categories to use in the campaign"
 
@@ -261,6 +265,7 @@ msgstr "Zaɓi don tattara Bayanan metadata a cikin kamfen"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:105
+#, fuzzy
 msgid "Captions"
 msgstr "Captions"
 
