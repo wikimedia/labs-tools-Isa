@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-09-08 12:19:19+0000\n"
+"PO-Revision-Date: 2025-10-27 12:43:02+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1325,7 +1325,7 @@ msgstr ""
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes"
-msgstr "Ännerungen zrécksetzen"
+msgstr "Ännerungen zerécksetzen"
 
 #: users/forms.py:26
 msgid "Same as interface"
