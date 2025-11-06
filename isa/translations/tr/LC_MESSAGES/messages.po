@@ -4,6 +4,7 @@
 # Author: Can
 # Author: Cobija
 # Author: Hedda
+# Author: SaldırganSincap
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -11,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-10-30 12:44:00+0000\n"
+"PO-Revision-Date: 2025-11-06 12:39:59+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,14 +43,14 @@ msgid "You need to Login to create a campaign"
 msgstr "Kampanya oluşturmak için oturum açmanız gerekiyor"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Üzgünüz, %(campaign_name)s oluşturulamadı"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
-msgstr "%(campaign_name)s Kampanyası oluşturuldu!"
+msgstr "%(campaign_name)s kampanyası oluşturuldu!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
@@ -61,19 +62,16 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Katkıda bulun"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "Kampanyayı güncellemek için oturum açmanız gerekiyor"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "Kampanya güncellemesi başarısız oldu, lütfen daha sonra deneyin!"
+msgstr "Kampanya güncellemesi başarısız oldu. Lütfen daha sonra deneyin!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
-msgstr "Güncelleme Başarılı !"
+msgstr "Güncelleme başarılı!"
 
 #: campaigns/routes.py:312
 #, python-format
@@ -81,9 +79,9 @@ msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
 msgstr ""
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
-msgstr "Pes! %(campaign_name)s Güncellenemedi!"
+msgstr "Pes! %(campaign_name)s güncellenemedi!"
 
 #: campaigns/routes.py:333
 #, python-format
@@ -108,7 +106,6 @@ msgid "You are updating %(campaign)s"
 msgstr ""
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
 msgstr "Kampanyanızı oluşturmak için aşağıdaki formu doldurun"
 
@@ -828,7 +825,6 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr ""
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
 msgstr "Sunucu bakım altındadır"
 
@@ -850,7 +846,6 @@ msgid "Page Not Found"
 msgstr "Sayfa Bulunamadı"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
 msgstr "Aradığınız sayfayı bulamadık"
 
@@ -953,9 +948,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr ""
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "Bunu nasıl yapacağız ? "
+msgstr "Bunu nasıl yapacağız?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1006,9 +1000,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr ""
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
-msgstr "Tek gereken şey... giriş yapmak."
+msgstr "Tek gereken şey... oturum açmak."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1330,9 +1323,8 @@ msgid "Undo changes to language settings"
 msgstr ""
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
-msgstr "Değişiklikleri Geri Al"
+msgstr "Değişiklikleri geri al"
 
 #: users/forms.py:26
 msgid "Same as interface"
@@ -1365,18 +1357,17 @@ msgid "Captions languages could not be set"
 msgstr ""
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
-msgstr "Tercih edilen diller başarıyla ayarlandı"
+msgstr "Tercih edilen diller ayarlandı"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "Dil ayarları şu an mevcut değil"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s kullanıcısı - Ayarlar"
+msgstr "%(username)s Kullanıcısı Ayarları"
 
 #: users/routes.py:199
 #, python-format
