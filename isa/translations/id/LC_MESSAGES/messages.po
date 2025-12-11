@@ -4,6 +4,7 @@
 # Author: Bennylin
 # Author: Mnam23
 # Author: NFarras
+# Author: Penyuwangi
 # Author: Veracious
 # --
 # Translation for the ISA project
@@ -12,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-10-30 12:43:57+0000\n"
+"PO-Revision-Date: 2025-12-11 12:29:48+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -929,7 +930,7 @@ msgstr "Berkas media berlisensi bebas dari situs web eksternal seperti Flickr, Y
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr "Sumbangan dari lembaga dan organisasi dengan koleksi media yang substansial, besar dan kecil, mulai dari UNESCO, NASA dan British Library hingga lembaga budaya lokal kecil."
+msgstr "Sumbangan dari lembaga dan organisasi dengan koleksi media yang berbobot, besar dan kecil, mulai dari UNESCO, NASA dan British Library hingga lembaga budaya setempat kecil."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"

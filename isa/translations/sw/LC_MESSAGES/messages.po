@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-12-08 12:29:09+0000\n"
+"PO-Revision-Date: 2025-12-11 12:29:51+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -856,249 +856,249 @@ msgstr "Kuna kitu kitu hakiko sawa"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr ""
+msgstr "Isa anaweza kuwa anafanyiwa matengenezo"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr ""
+msgstr "Ukurasa wa msaada"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr ""
+msgstr "Ongeza maelezo katika picha kiurahisi zaidi"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> ni zana ya kufurahisha, ya lugha nyingi, ya kwanza ya rununu, ambayo hurahisisha watu kuongeza \"michango midogo\" katika mfumo wa <a %(link_attrs)s>data iliyopangwa</a> kwa picha kwenye Wikimedia Commons ambazo zimeongezwa na mashindano ya Wiki Loves."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr ""
+msgstr "ISA iliundwa awali ili kutoa maelezo bora ya lugha nyingi na muundo wa picha za <a %(link_attrs)s>Wiki Loves Afrika</a> ."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr ""
+msgstr "Lakini pia imeundwa ili kuwa muhimu kwa <a link_attrs>mashindano yote ya Wiki Loves</a> na, hatimaye, kwa <strong>faili zote za midia</strong> kwenye Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr ""
+msgstr "Wikimedia Commons ni nini?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr ""
+msgstr "<strong>Wikimedia Commons</strong> (pia inajulikana kama \"Commons\") ni mradi wa Wikimedia, mradi dada wa Wikipedia. Inakusanya mamamilioni ya faili za midia zinazoweza kutumika bila malipo ambazo mtu yeyote anaweza kuchangia."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr ""
+msgstr "Picha zote zilizoidhinishwa bila malipo, faili za sauti na video, PDF na midia nyingine kwenye Wikipedia huhifadhiwa kwenye Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr ""
+msgstr "Wikimedia commons Hukua kwa haraka, ambapo kila mwaka huongezeka kwa takribani mafaili milioni 5"
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr ""
+msgstr "Maelfu ya watu waliojitolea hupakia faili kwa Commons, na kuziunganisha katika miradi ya Wikimedia, kama vile Wikipedia, ili kuonyesha maudhui yaliyo hapo na kushiriki maudhui hayo na umma."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr ""
+msgstr "Mafaili ya media kwenye commons kwakawaida ni:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr ""
+msgstr "Upigaji picha wa kibinafsi na maudhui yaliyopakiwa na watu binafsi, wakati mwingine wakati wa mashindano ya Wiki Loves kama vile Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth n.k;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr ""
+msgstr "Faili za midia zilizo na leseni bila malipo kutoka tovuti za nje kama vile Flickr, YouTube, majarida ya ufikiaji huria, na hazina zingine; na"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr ""
+msgstr "Michango kutoka kwa taasisi na mashirika yenye mikusanyiko mikubwa ya vyombo vya habari, kubwa na ndogo, kuanzia UNESCO, NASA na Maktaba ya Uingereza hadi taasisi ndogo za kitamaduni za ndani."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr ""
+msgstr "Data iliyopangwa kwenye Commons ni nini?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr ""
+msgstr "<strong>Data Iliyoundwa juu ya Commons</strong> ni mradi ambao hutoa miundombinu ya kiufundi inayosaidia wiki matini, violezo na kategoria kwenye Wikimedia Commons na data iliyopangwa."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr ""
+msgstr "Data iliyopangwa ni data yenye kiwango cha juu cha shirika lenye muundo."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr ""
+msgstr "Kwa muundo zaidi, inakuwa rahisi kutumia tena data katika miradi mingine ya Wikimedia na kwa wahusika wengine; pia inaruhusu kompyuta kuchakata na 'kuielewa'."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
-msgstr ""
+msgstr "Data Muundo ni mradi unaoendelea ambao ulizinduliwa mwaka wa 2019!.. huku Wikimedia Commons imekuwepo kwa miaka mingi!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
-msgstr ""
+msgstr "Kuna mamilioni ya picha zinazopangishwa kwenye Wikimedia Commons... ambazo zinahitaji umakini na upendo."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr ""
+msgstr "Mamilioni ya picha ambazo hazijaelezewa na data iliyopangwa kwa sasa."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that?"
-msgstr ""
+msgstr "Tutafanyaje hivyo?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr ""
+msgstr "<strong>Kuchunga</strong> , au kupanga, kwa maana finyu, kunamaanisha: kuchagua na kupanga vipande vya kazi za sanaa na urithi wa kitamaduni kwa ajili ya maonyesho."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr ""
+msgstr "Neno hili pia linaweza kutumika kwa mapana zaidi, kuelezea shughuli yoyote inayohusisha kuchagua, kupanga na kuwasilisha taarifa."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr ""
+msgstr "Katika muktadha wa Data Iliyoundwa kuhusu Commons, kuratibu kunamaanisha shughuli zote zinazofanywa na wachangiaji wa Commons kupanga na kuwasilisha faili za midia kwenye Wikimedia Commons: vitendo vya usimamizi, kuongeza metadata zaidi na bora zaidi kwenye faili, kuziweka katika vikundi, kuunda ghala..."
 
 #: templates/main/help.html:62
 msgid "So... how does the ISA tool fit in there?"
-msgstr ""
+msgstr "Kwa hivyo... chombo cha ISA kinafaaje hapo?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr ""
+msgstr "Zana ya ISA inaruhusu kuongeza aina mbili tofauti za data iliyopangwa kwa seti ya picha: maelezo mafupi na maonyesho (maelezo zaidi hapa chini juu ya manukuu na taswira ni nini)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr ""
+msgstr "Ni zana ya lugha nyingi, ya kwanza ya 'michango midogo' ya rununu, ambayo hurahisisha watu kuongeza data iliyopangwa kwa picha zilizochangiwa katika mashindano ya Wiki Loves kwenye Wikimedia Commons."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr ""
+msgstr "Chombo hiki hufanya kazi na kampeni zilizoratibiwa iliyoundwa na waratibu."
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr ""
+msgstr "Yeyote aliye na akaunti ya Wikimedia anaweza kuwa mratibu!"
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr ""
+msgstr "Kwakutumia ISA, Mratibu anaweza kuchagua seti iliyo bainishwa au kupangwa kwenye commons, chagua tarehe ya kuanza na kumaliza kampeni, na kisha toa maelezo kamili ya kampeni"
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr ""
+msgstr "Kisha mratibu anaweza kuwakaribisha wachangiaji \"kuweka lebo\" kwenye picha hizi kwa kutumia metadata iliyoundwa kwa lugha nyingi (inaonyesha na/au manukuu)."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr ""
+msgstr "Pointi huhesabiwa kwa kila mchango unaotolewa na mshiriki, na kwa hivyo inawezekana kuandaa mashindano ya \"kuweka alama\" au michango midogo au changamoto na ISA."
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr ""
+msgstr "Mtu yeyote aliye na akaunti ya Wikimedia anaweza kuchangia kuongeza metadata iliyopangwa kwenye kampeni."
 
 #: templates/main/help.html:79
 msgid "The only requirement is... to be logged-in."
-msgstr ""
+msgstr "Sharti pekee ni... kuwa umeingia."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "Jifunze zaidi maelezo zaidi kuhusu nukuu ya faili na taswira"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "Nukuu za picha au faili nisehmu ya data Muundo (Data zilizo pangiliwa)"
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "Zinakusudiwa kuhifadhi maelezo mafupi, ya lugha nyingi kuhusu faili."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "Manukuu mazuri ni yapi? na ni tofauti gani kati ya maelezo yetu mazuri ya faili za zamani na manukuu?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "Kwanza, maelezo mafupi yanapaswa kuwa rahisi na mafupi."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "Ingawa maelezo yanaweza kuwa makubwa sana, manukuu yana urefu wa vibambo 255 tu, na hayawezi kuwa na alama (kama vile viungo vya Wikitext au HTML) na hayatumii viungo vya nje."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "Mara nyingi, maelezo mafupi yatakuwa sawa au sawa na maelezo."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "Lakini katika hali zingine, kuna maelezo ya kina sana (herufi 858, na viungo) na maelezo mafupi ni mafupi zaidi (zaidi au chini ya maelezo sawa yaliyotumiwa kwenye nakala za Wikipedia kwa kutumia picha hiyo)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "Maandishi tu ambayo ni mafupi sana kwamba hayana hakimiliki yanapaswa kunakiliwa hadi manukuu, kwa vile manukuu yanachapishwa chini ya msamaha wa CC0 (\"kikoa cha umma\")."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "Moja wapo ya manufaa makubwa na msingi ya nukuu ni kuboresha namna ya utafutaji na uelewa wa lugha"
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "Maelezo ya awali ya faili yako katika maandishi ya wiki, na yanaweza kutafutwa tu kupitia utafutaji wa maandishi kamili, ambao hutafuta maudhui yote ya ukurasa, ikijumuisha kategoria na violezo vya leseni; na haiwezekani kutafuta utafutaji kwa kila lugha."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "Nukuu zinapatikana kama sehemu ya data yetu iliyopangwa, ilhali maelezo hayapatikani."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "Kwa maneno ya kiufundi, maelezo ni matini ya wiki iliyofungwa katika kiolezo cha lugha, iliyofungwa tena katika kiolezo cha Habari; huku manukuu ni lebo za Wikibase."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "Kwa hivyo, manukuu yataweza kutafutwa kupitia API, na kuifanya iwe rahisi kupata/kuchuja/kuvuta manukuu kutoka kwa faili kama metadata."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "Kwa kuwa zinaweza kutafutwa kupitia API, pia ni rahisi kwa watumiaji wengine kupata na kutumia tena midia na manukuu yenyewe."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "Matumizi mengine ya nukuu yanaweza kuwa:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "kujaza masanduku ya habari"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "Vuta mafaili ambayo hanaya nukuu kwa lugha hii"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "kujenga orodha za tafsiri ya faili muhimu zinazohitaji kichwa cha habari kilichowekwa kwa mradi au kampeni"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "Pata maelezo zaidi kuhusu nukuu au kichwa cha habari hapa"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr ""
+msgstr "Taswira pia ni sehemu ya kipengele cha data Muundo(data zilizo pangiliwa)."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "Iliwezeshwa kwenye Wikimedia Commons mnamo Aprili 2019."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box."
-msgstr ""
+msgstr "Ili kuongeza taarifa ya picha, anza tu kuandika kwenye kisanduku cha utafutaji."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr ""
+msgstr "Kisha kwa kila kipengee kilichoonyeshwa kwenye picha, pata kipengee kinachofaa kutoka kwa Wikidata na ukichague."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr ""
+msgstr "Kama unapata changamoto ya kupata haki Wikidata kipengele, mtihani uandishi mbadala."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
