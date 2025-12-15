@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-12-11 12:29:51+0000\n"
+"PO-Revision-Date: 2025-12-15 12:30:51+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1102,276 +1102,276 @@ msgstr "Kama unapata changamoto ya kupata haki Wikidata kipengele, mtihani uandi
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr ""
+msgstr "Ikiwa hakuna kipengee cha Wikidata kinachohusiana na mada inayoonyeshwa, chagua kipengee cha jumla zaidi kinachojumuisha mada yako kama mfano."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr ""
+msgstr "Uwe na uhakika kadiri uwezavyo kuhusu lebo ya msingi."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr ""
+msgstr "Ikiwa kuna vipengee vingi vilivyoonyeshwa wazi na kwa makusudi kwa faili, vyote vinapaswa kuongezwa kama kauli tofauti za taswira, ndani ya mantiki."
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr ""
+msgstr "Kwa faili zinazoonyesha vitu vingi au mamia (kama filamu), orodhesha vitu ambavyo ni maarufu zaidi pekee."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr ""
+msgstr "Kuna namna ya kunyesha chaguo la tia alama kipengele kama 'Kitu maarufu'"
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "Sifa hii inarejelea umaarufu wa bidhaa katika kipande cha faili."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "Maelezo zaidi kuhusu taswira yanaweza kupatikana hapa:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "Kutumia zana ya ISA"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "Taarifa zaidi zinapatikana hapa:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "Kisheria na faida zake"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
-msgstr ""
+msgstr "Inafanya kazi kwenye tools.wmflabs.org, na iko chini ya Sheria na Masharti ya Huduma za Wikimedia Cloud."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA imechapishwa chini ya GPLv3. Maudhui yaliyoongezwa kupitia zana hiyo kwenye Wikimedia Commons yametolewa chini ya CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "Picha iliyotumika kwenye kifaa:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr ""
+msgstr "Ongeza maelezo katika picha kiurahisi zaidi"
 
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong> ni zana inayotumia lugha nyingi, inayotumia simu za mkononi kwanza, ambayo hurahisisha watu kuongeza 'michango midogo' katika mfumo wa <a %(link_attrs)s title=\"Pata maelezo zaidi kuhusu data iliyopangwa\">data iliyopangwa</a> (maelezo, maelezo mafupi, lebo, n.k.) kwenye picha ambazo zimechangiwa katika mashindano ya Wikimedia Commons na Wiki Loves."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr ""
+msgstr "<strong>Bonyeza kwenye Gundua Kampeni ili kuanza!</strong>"
 
 #: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
-msgstr ""
+msgstr "Nenda kwenye saraka ya kampeni kuchagua kampeni"
 
 #: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
-msgstr ""
+msgstr "CHUNGUZA KAMPENI"
 
 #: templates/main/home.html:22
 msgid "About This Tool"
-msgstr ""
+msgstr "kuhusu Zana Hii"
 
 #: templates/main/home.html:23
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr ""
+msgstr "Kwa muda mrefu, nia ya chombo ni kuongeza matumizi ya maarifa ambayo yanaonyeshwa na kila picha iliyohifadhiwa kwenye Wikimedia Commons."
 
 #: templates/main/home.html:24
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr ""
+msgstr "Chombo hiki kinalenga kusaidia katika matumizi na habari ya picha zilizochangwa wakati wa mashindano ya Wiki Loves."
 
 #: templates/main/home.html:25
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr ""
+msgstr "Mwanzoni imejengwa kusaidia katika maelezo ya picha za Wiki Loves Afrika, lakini inaundwa kwa njia maalum kuwa muhimu kwa mashindano yote ya Wiki Loves na zaidi."
 
 #: templates/main/home.html:26
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr ""
+msgstr "Chombo hicho pia kimeundwa kuwa wito wa mashindano ya michache ya mchango iliyopendekezwa na viongozi wa mradi."
 
 #: templates/main/home.html:27
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr ""
+msgstr "ISA ni ushirikiano kati ya Wiki Katika Afrika, Histropedia na mradi wa Takwimu Zilizoundwa kwenye Commons."
 
 #: templates/main/home.html:28
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr ""
+msgstr "ISA si tu kifupisho cha Kuongeza Kasi ya Muundo wa Taarifa, lakini pia ni neno la lugha ya ChiShona linalomaanisha 'weka' au 'weka'."
 
 #: templates/main/layout.html:34
 msgid "Home"
-msgstr ""
+msgstr "Mwanzo"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Unda kampeni mpya"
 
 #: templates/main/layout.html:51
 msgid "Help"
-msgstr ""
+msgstr "Msaada"
 
 #: templates/main/layout.html:67
 msgid "Change your available caption languages"
-msgstr ""
+msgstr "Badiri lugha yako pendwa iliyopo"
 
 #: templates/main/layout.html:67 templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr ""
+msgstr "Pendekezo la Lugha"
 
 #: templates/main/layout.html:68
 msgid "See your campaigns"
-msgstr ""
+msgstr "Tanzama kampeni yako"
 
 #: templates/main/layout.html:68
 msgid "My campaigns"
-msgstr ""
+msgstr "Kampeni yangu"
 
 #: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
-msgstr ""
+msgstr "Toka"
 
 #: templates/main/layout.html:83
 msgid "Login"
-msgstr ""
+msgstr "Ingia"
 
 #: templates/main/layout.html:107
 msgid "ISA tool"
-msgstr ""
+msgstr " Zana ya ISA"
 
 #: templates/main/layout.html:108
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr ""
+msgstr "ilitengenezwa kama ushirikiano kati ya Wiki In Africa, Histropedia na mradi wa Structured Data on Commons"
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "Maboresho zaidi yalichangiwa na "
 
 #: templates/main/layout.html:113
 msgid "It is running on"
-msgstr ""
+msgstr "Inapatikana kwenye"
 
 #: templates/main/layout.html:115
 msgid "and is subject to the"
-msgstr ""
+msgstr "na ni chini ya"
 
 #: templates/main/layout.html:117
 msgid "ISA is published under"
-msgstr ""
+msgstr "ISA imechapishwa chini ya"
 
 #: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr ""
+msgstr "Maudhui yaliyoongezwa kupitia zana hiyo kwenye Wikimedia Commons yametolewa chini ya"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr ""
+msgstr "Kampeni Zako"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your campaigns"
-msgstr ""
+msgstr "Hapa chini kuna orodha ya kampeni zako"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "Huna kampeni zozote"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr ""
+msgstr "Picha za lugha"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr ""
+msgstr "Lugha iliyochaguliwa itatumika kutafuta vipengele vilivyoonyeshwa kwenye picha."
 
 #: templates/users/user_settings.html:15
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
-msgstr ""
+msgstr "Ikiwa 'Sawa na kiolesura' imechaguliwa, lugha iliyochaguliwa kwenye menyu ya juu itatumika."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
-msgstr ""
+msgstr "Chagua hadi lugha 6 kwa vipande vya vichwa vya habari"
 
 #: templates/users/user_settings.html:19
 msgid "Caption languages"
-msgstr ""
+msgstr "Lugha za kichwa cha picha"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
-msgstr ""
+msgstr "Kichwa cha habari kinaweza kuongezwa katika lugha nyingi kwa kila picha."
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr ""
+msgstr "Lugha unazochagua kwenye ukurasa huu zitaonekana kwenye ukurasa unapokuwa ukitazama picha."
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
-msgstr ""
+msgstr "Chagua lugha zote ambazo upo huru nazo kuchangia."
 
 #: templates/users/user_settings.html:23 templates/users/user_settings.html:29
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr ""
+msgstr "Ondoa Lugha"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr ""
+msgstr "Tengua mabadiriko kwenye mpangilio. wa lugha"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes"
-msgstr ""
+msgstr "Tengua mabadiriko"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr ""
+msgstr "Sawa na kiolesura"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr ""
+msgstr "Urudishaji nyuma wa OAuth umeshindikana. Je, kuki zimezimwa?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr ""
+msgstr "Karibu %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr ""
+msgstr "Mpaka wakati mwingine!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr ""
+msgstr "Tafadhari ingia kubadiri lugha uipendayo"
 
 #: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "Samahani umejaribu kuingiza %(rep_languages)s) mara nyingi"
 
 #: users/routes.py:158
 msgid "Captions languages could not be set"
-msgstr ""
+msgstr "Lugha Tafsiri haikuweza kuweka"
 
 #: users/routes.py:160
 msgid "Preferred languages set"
-msgstr ""
+msgstr "Lugha pendwa umewekwa"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
-msgstr ""
+msgstr "Mpangilio wa lugha haupo kwa sasa"
 
 #: users/routes.py:175
 #, python-format
 msgid "%(username)s's Settings"
-msgstr ""
+msgstr "Mpangilio wa %(username)s's"
 
 #: users/routes.py:199
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr ""
+msgstr "Kampeni imeundwa na %(username)s"
 
 #: templates/footer.html:1
 msgid "Powered by SWITCH/WMSE/Bern Uni"
-msgstr ""
+msgstr "Imewezeshwa na SWITCH/WMSE/Bern Uni"
 

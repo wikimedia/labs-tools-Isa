@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-12-11 12:29:48+0000\n"
+"PO-Revision-Date: 2025-12-15 12:30:48+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -989,7 +989,7 @@ msgstr "Perkakas ISA memungkinkan untuk menambahkan dua jenis data terstruktur k
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr "Ini adalah alat 'kontribusi mikro' multibahasa, mobile-first, yang memudahkan orang untuk menambahkan data terstruktur ke gambar yang berkontribusi pada kompetisi Wiki Cinta di Wikimedia Commons."
+msgstr "Ini adalah alat 'kontribusi mikro' multibahasa, berbasis seluler, yang memudahkan orang untuk menambahkan data terstruktur ke gambar yang berkontribusi pada kompetisi Wiki Cinta di Wikimedia Commons."
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
