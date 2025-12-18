@@ -20,7 +20,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-10-30 12:43:57+0000\n"
+"PO-Revision-Date: 2025-12-18 12:34:39+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,21 +44,21 @@ msgstr "Mgbasa ozi na id %(id)s adịghị adị"
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Mkpọsa - %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Ịkwesịrị ịbanye ka ịmepụta mkpọsa"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Ndo %(campaign_name)s enweghị ike ịmepụta"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
-msgstr "%(campaign_name)s mkpọsa emebere!"
+msgstr "%(campaign_name)s emebere mkpọsa!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
@@ -70,29 +70,26 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Nye aka"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "Ịkwesịrị ịbanye ka ịmepụta mkpọsa"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
 msgstr "Mmelite mkpọsa dara, biko nwaa ma emechaa!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "Mmelite gara nke ọma!"
 
 #: campaigns/routes.py:312
 #, python-format
 msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
-msgstr ""
+msgstr "Ị nweghị ike imelite mkpọsa a. Kpọtụrụ onye njikwa, Onye ọrụ:%(username)s."
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
-msgstr "Ndo %(campaign_name)s enweghị ike ịmepụta"
+msgstr "Ndo %(campaign_name)s enweghị ike ịmelite!"
 
 #: campaigns/routes.py:333
 #, python-format
@@ -114,10 +111,9 @@ msgstr "Mepụta mkpọsa ọhụrụ"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "Ị na-emelite %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
 msgstr "Dejupụta fọm dị n'okpuru ka ịmepụta mkpọsa gị"
 
@@ -248,9 +244,8 @@ msgid "You must select at least one of the options below."
 msgstr "Ị ga-ahọrọ opekata mpe otu n'ime nhọrọ ndị dị n'okpuru."
 
 #: templates/campaign/campaign-form.html:179
-#, fuzzy
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
-msgstr "Iji mụtakwuo maka data meta-Depicts na Caption hụ ibe enyemaka."
+msgstr "Iji mụtakwuo maka Depicts na nkọwa okwu meta-data, hụ ibe enyemaka."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
@@ -258,7 +253,6 @@ msgid "Depicts"
 msgstr "Na-egosi"
 
 #: templates/campaign/campaign-form.html:194
-#, fuzzy
 msgid "Select to collect Depicts metadata in the campaign"
 msgstr "Họrọ ka ịnakọta metadata gosipụtara na mkpọsa ahụ"
 
@@ -268,9 +262,8 @@ msgid "Captions"
 msgstr "Nkọwapụta"
 
 #: templates/campaign/campaign-form.html:209
-#, fuzzy
 msgid "Select to collect Caption metadata in the campaign"
-msgstr "Họrọ ka ịnakọta metadata nke edemede na mkpọsa ahụ"
+msgstr "Họrọ ka ịnakọta metadata nke nkọwa okwu na mkpọsa ahụ"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
@@ -498,7 +491,6 @@ msgid "Adding Depict Statements"
 msgstr "Ịtinye Nkwupụta Ihe Ndị A Na-ese onyinyo"
 
 #: templates/campaign/campaign_entry.html:46
-#, fuzzy
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
 msgstr "Mee ka ọ dị mfe: Jiri okwu dị mfe na echiche kọwaa ihe ị na-ahụ na onyonyo ọ bụla (dịka pusi, ugwu, Taj Mahal)"
 
@@ -531,16 +523,16 @@ msgstr "Kpọọ ihe dị iche iche ị nwere ike ịhụ na foto a"
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "Nabata"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Jụ"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Zoo atụmatụ"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -583,13 +575,12 @@ msgid "Search for things you see in the image"
 msgstr "Chọọ ihe ndị ị na-ahụ na foto a"
 
 #: templates/campaign/campaign_entry.html:137
-#, fuzzy
 msgid "minimise metadata from Commons"
 msgstr "belata metadata site na commons"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr ""
+msgstr "gosi metadata niile sitere na Commons"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -625,27 +616,27 @@ msgstr "Kaa ihe a egosiri ka ọo bughi nke ama ama"
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr ""
+msgstr "Ewepụrụ atụmatụ na ndepụta"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr ""
+msgstr "Biko lelee ma ị banyela"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
-msgstr ""
+msgstr "Oops! O nwere ike a gaghị ewepụ atụmatụ"
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr ""
+msgstr "Gosi atụmatụ"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
-msgstr ""
+msgstr "Ị ji n'aka na ị chọrọ ịjụ atụmatụ a?"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
-msgstr ""
+msgstr "Mee nke a naanị ma ọ bụrụ na ị ji n'aka na akara atụpụtara apụtaghị na onyonyo ahụ, ma ọ bụ na ọ gaghị ezighi ezi dịka ntuziaka Wikimedia Commons si dị. Ọ bụrụ na ọtụtụ ndị ọrụ ajụ otu atụmatụ ahụ, a gaghị egosi ya ọzọ."
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -684,7 +675,6 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Pịa aha mkpọsa ka ịmalite wee tinye data ahaziri ahazi na onyonyo."
 
 #: templates/campaign/campaigns.html:8
-#, fuzzy
 msgid "You can access information on the previous campaigns in the archive section."
 msgstr "Ị nwere ike ịnweta ozi na mkpọsa gara aga na ngalaba Archive."
 
@@ -705,9 +695,8 @@ msgid "Total number of images in the campaign"
 msgstr "Ngụkọta ọnụọgụ onyonyo dị na mkpọsa a"
 
 #: templates/campaign/campaigns.html:23
-#, fuzzy
 msgid "Number of editors that have contributed to the campaign"
-msgstr "Ọnụọgụ ndị ndezi nyere aka na mkpọsa a "
+msgstr "Ọnụọgụ ndị ndezi nyere aka na mkpọsa a"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -844,14 +833,12 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "Onye njikwa mkpọsa ahụ nwere ike nwaa ọzọ site na imelite mkpọsa ahụ."
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
 msgstr "Ihe nkesa dị n'okpuru mmezi"
 
 #: templates/errors/403.html:10
-#, fuzzy
 msgid "Please contact support"
-msgstr "Biko lelee nkwado kọntaktị"
+msgstr "Biko kpọtụrụ ndi nkwado"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -867,7 +854,6 @@ msgid "Page Not Found"
 msgstr "Peeji A Na-achọtaghị"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
 msgstr "Anyị enweghị ike ịchọta ibe ị na-achọ"
 
@@ -910,9 +896,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "Gịnị bụ Wikimedia Commons?"
 
 #: templates/main/help.html:26
-#, fuzzy
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr "<strong>Wikimedia Commons</strong> (nke a makwaara dị ka 'Commons') bụ ọrụ Wikimedia, ọrụ nta Wikipedia, yana nchịkọta faịlụ mgbasa ozi karịrị nde iri anọ efu."
+msgstr "<strong>Wikimedia Commons</strong> (nke a makwaara dị ka 'Commons') bụ ọrụ Wikimedia, ọrụ nta Wikipedia, yana nchịkọta faịlụ mgbasa ozi karịrị otu nde n’efu nke onye ọbụla nwere ike isonye."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -959,12 +944,10 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "N'iji usoro ọzọ, ọ na-adị mfe iji data ndị a na ọrụ Wikimedia na ndị ọzọ;  ọ na-enye ohere ka kọmputa hazie ma 'aghọta' ya."
 
 #: templates/main/help.html:49
-#, fuzzy
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
-msgstr "Structured Data bụ ọrụ na-aga n'ihu nke a malitere na 2019 ! ... ebe Wikimedia Commons anọwo kemgbe ọtụtụ afọ !"
+msgstr "Structured Data bụ ọrụ na-aga n'ihu nke a malitere na 2019 !.. ebe Wikimedia Commons anọwo kemgbe ọtụtụ afọ !"
 
 #: templates/main/help.html:50
-#, fuzzy
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
 msgstr "E nwere ọtụtụ nde foto ndị a kwadoro na Wikimedia Commons... nke chọrọ nlebara anya na ịhụnanya."
 
@@ -1025,7 +1008,6 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "Onye ọ bụla nwere akaụntụ Wikimedia nwere ike inye aka ịgbakwunye metadata a haziri ahazi na mkpọsa."
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
 msgstr "Naanị ihe achọrọ bụ… ịbanye."
 
@@ -1118,9 +1100,8 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "Agbanyere ya na Wikimedia Commons na Eprel 2019"
 
 #: templates/main/help.html:131
-#, fuzzy
 msgid "To add a depicts statement, simply start typing in the search box."
-msgstr "Ka ịgbakwunye nkwupụta gosipụtara, naanị bido pịnye n'igbe ọchụchọ ka ibido."
+msgstr "Ka ịgbakwunye nkwupụta gosiputara, naanị bido pịnye n'igbe ọchụchọ ka ibido."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
@@ -1171,9 +1152,8 @@ msgid "Legal and credits"
 msgstr "Iwu na ihe nrite"
 
 #: templates/main/help.html:165
-#, fuzzy
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
-msgstr "Ọ na-agba ọsọ na ngwaọrụ.wmflabs.org, ma na-adabere na Wikimedia Cloud Services Terms of use."
+msgstr "Ọ na-arụ na ngwaọrụ.wmflabs.org, ma na-adabere na usoro ojiji Wikimedia Cloud Services."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
@@ -1188,7 +1168,7 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Tinye ozi gbasara onyonyo na Wikimedia Commons ngwa ngwa"
 
 #: templates/main/home.html:15
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
 msgstr "<strong>ISA</strong> bụ ngwá ọrụ na-asụ ọtụtụ asụsụ, nke na-eme ka ọ dịrị ndị mmadụ mfe ịgbakwunye 'micro-contributions' n'ụdị <a %(link_attrs)s=\"\" title=\"Learn more about structured data\">data a haziri ahazi</a> (nkọwa, ederede, mkpado, wdg) na ihe oyiyi ndị Wiki Loves nyere na Wikimedia Commons."
 
@@ -1209,27 +1189,22 @@ msgid "About This Tool"
 msgstr "Banyere Ngwá Ọrụ a"
 
 #: templates/main/home.html:23
-#, fuzzy
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr "N'ikpeazụ, ebumnuche dị n'azụ ngwá ọrụ ahụ bụ ịbawanye ojiji nke ihe ọmụma nke onyinyo ọ bụla na-egosipụta na Wikimedia Commons. "
+msgstr "N'ikpeazụ, ebumnuche dị n'azụ ngwá ọrụ ahụ bụ ịbawanye ojiji nke ihe ọmụma nke onyinyo ọ bụla na-egosipụta na Wikimedia Commons."
 
 #: templates/main/home.html:24
-#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
 msgstr "Ebumnuche ngwá ọrụ ahụ bụ inye aka na uru na ozi nke ihe oyiyi nyere n'oge asọmpi Wiki Loves."
 
 #: templates/main/home.html:25
-#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
 msgstr "A na-ewu ya na mbụ iji nyere aka na nkọwa nke ihe oyiyi Wiki Loves Africa, mana a na-eme ya kpọmkwem iji baara asọmpi Wiki Loves niile uru na karịa."
 
 #: templates/main/home.html:26
-#, fuzzy
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "A na-emekwa ngwá ọrụ ahụ ka ọ bụrụ ọtụtụ asọmpi micro onyinye nke ndị isi ọrụ chepụtara."
 
 #: templates/main/home.html:27
-#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA bụ mmekorita n'etiti Wiki In Africa, Histropedia na Structured Data on Commons project."
 
@@ -1239,7 +1214,7 @@ msgstr "ISA abụghị naanị acronym maka Information Structured Acceleration,
 
 #: templates/main/layout.html:34
 msgid "Home"
-msgstr "Be"
+msgstr "Ụlọ"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
@@ -1283,7 +1258,7 @@ msgstr "mepụtara ya dị ka mmekorita n'etiti Wiki In Africa, Histropedia na S
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "Nkwado ọzọ site na "
 
 #: templates/main/layout.html:113
 msgid "It is running on"
@@ -1322,9 +1297,8 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "A ga-eji asụsụ ahọpụtara maka ịchọ ihe ndị egosiri na foto."
 
 #: templates/users/user_settings.html:15
-#, fuzzy
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
-msgstr "Ọ bụrụ na &quot;Dị ka interface&quot; ahọrọla asụsụ ahọrọ na menu dị n'elu ga-eji."
+msgstr "Ọ bụrụ na ahọrọ ‘Dị ka interface’, a ga eji asụsụ ahọrọ na menu dị n'elu."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
@@ -1371,7 +1345,7 @@ msgstr "OAuth callback dara. kuki ọ nwere nkwarụ?"
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr "Nabata %(aha njirimara)%(username)s!"
+msgstr "Nnọọ %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
@@ -1384,14 +1358,13 @@ msgstr "Biko banye ka ịgbanwee mmasị asụsụ gị"
 #: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr "Ndo ị nwara ịbanye (rep_languages) ọtụtụ oge %(rep_languages)s"
+msgstr "Ndo ị nwara ịbanye %(rep_languages)s ọtụtụ oge"
 
 #: users/routes.py:158
 msgid "Captions languages could not be set"
 msgstr "Enweghị ike ịtọ mkpụrụ okwu asụsụ"
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
 msgstr "Asụsụ ndị ahọpụtara ka edobere nke ọma"
 
@@ -1400,9 +1373,9 @@ msgid "Language settings not available at the moment"
 msgstr "Mmezi asụsụ adịghị ugbu a"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s's - Settings%"
+msgstr "%(username)s's - Ntọala"
 
 #: users/routes.py:199
 #, python-format
@@ -1411,5 +1384,5 @@ msgstr "Campaigns created by %(username)s%(username)s"
 
 #: templates/footer.html:1
 msgid "Powered by SWITCH/WMSE/Bern Uni"
-msgstr ""
+msgstr "Kwadoro site na SWITCH/WMSE/Bern Uni"
 
