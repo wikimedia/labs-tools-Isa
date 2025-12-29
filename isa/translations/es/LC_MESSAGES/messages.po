@@ -7,6 +7,7 @@
 # Author: King ChristLike
 # Author: Marfossatti
 # Author: McDutchie
+# Author: Tecbs
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -14,7 +15,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-10-30 12:43:56+0000\n"
+"PO-Revision-Date: 2025-12-29 12:31:44+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1378,5 +1379,5 @@ msgstr "Campañas creadas por %(username)s"
 
 #: templates/footer.html:1
 msgid "Powered by SWITCH/WMSE/Bern Uni"
-msgstr ""
+msgstr "Con tecnología de SWITCH/WMSE/Universidad de Berna"
 

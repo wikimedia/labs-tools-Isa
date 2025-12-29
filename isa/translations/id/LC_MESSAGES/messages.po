@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-12-15 12:30:48+0000\n"
+"PO-Revision-Date: 2025-12-29 12:31:45+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1127,7 +1127,7 @@ msgstr "Jika tidak ada item Wikidata yang terkait dengan subjek yang digambarkan
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr "Deskripsikan sespesifik mungkin dengan tag utama."
+msgstr "Deskripsikan sespesifik mungkin dengan tanda utama."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
