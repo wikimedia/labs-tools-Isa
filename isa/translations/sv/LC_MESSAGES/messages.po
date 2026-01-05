@@ -7,6 +7,7 @@
 # Author: Jon Harald Søby
 # Author: Jopparn
 # Author: Sabelöga
+# Author: Stefan2255
 # Author: Tore
 # --
 # Translation for the ISA project
@@ -15,7 +16,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-10-30 12:43:59+0000\n"
+"PO-Revision-Date: 2026-01-05 12:24:42+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,21 +40,21 @@ msgstr "Kampanjen med ID %(id)s finns inte"
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Kampanj - %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Du behöver logga in för att skapa en kampanj"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Tyvärr, %(campaign_name)s kunde inte skapas"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
-msgstr "Kampanjen %(campaign_name)s skapades!"
+msgstr "%(campaign_name)s kampanj skapad!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
@@ -65,27 +66,24 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Bidra"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "Du behöver logga in för att uppdatera en kampanj"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "Kunde inte uppdatera kampanj, försök igen senare!"
+msgstr "Kampanjuppdateringen misslyckades. Försök senare!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "Uppdaterades!"
 
 #: campaigns/routes.py:312
 #, python-format
 msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
-msgstr ""
+msgstr "Du kan inte uppdatera den här kampanjen. Kontakta administratören, Användare: %(username)s."
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Surt! %(campaign_name)s kunde inte uppdateras!"
 
@@ -109,10 +107,9 @@ msgstr "Skapa ny kampanj"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "Du uppdaterar %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
 msgstr "Fyll i formuläret nedan för att skapa din kampanj"
 
@@ -243,9 +240,8 @@ msgid "You must select at least one of the options below."
 msgstr "Du måste välja minst en av alternativen nedan."
 
 #: templates/campaign/campaign-form.html:179
-#, fuzzy
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
-msgstr "För att ta reda på mer om \"motiv\"- och \"bildtext\"-metadata, läs hjälpsidan."
+msgstr "För att ta reda på mer om motiv- och bildtext-metadata, läs hjälpsidan."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
@@ -253,7 +249,6 @@ msgid "Depicts"
 msgstr "Motiv"
 
 #: templates/campaign/campaign-form.html:194
-#, fuzzy
 msgid "Select to collect Depicts metadata in the campaign"
 msgstr "Välj för att samla in motivmetadata i kampanjen"
 
@@ -263,7 +258,6 @@ msgid "Captions"
 msgstr "Bildtexter"
 
 #: templates/campaign/campaign-form.html:209
-#, fuzzy
 msgid "Select to collect Caption metadata in the campaign"
 msgstr "Välj för att samla in bildtextmetadata i kampanjen"
 
@@ -373,7 +367,7 @@ msgstr "Inga deltagare har bidragit till denna kampanj"
 
 #: templates/campaign/campaign.html:74
 msgid "Most improved countries"
-msgstr ""
+msgstr "Mest förbättrade länder"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -493,7 +487,6 @@ msgid "Adding Depict Statements"
 msgstr "Lägg till Motiv-uttalanden"
 
 #: templates/campaign/campaign_entry.html:46
-#, fuzzy
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
 msgstr "Gör det enkel: Använda enkla ord och förställningar för att beskriva vad det är du ser i varje bild (t.ex. katt, berg, Taj Mahal)"
 
@@ -526,16 +519,16 @@ msgstr "Nämn de olika elementen du ser i den här bilden"
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "Acceptera"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Avslå"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Dölj förslag"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -578,13 +571,12 @@ msgid "Search for things you see in the image"
 msgstr "Sök efter saker du ser i bilden"
 
 #: templates/campaign/campaign_entry.html:137
-#, fuzzy
 msgid "minimise metadata from Commons"
-msgstr "minimera metadata från commons"
+msgstr "minimera metadata från Commons"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr ""
+msgstr "visa alla metadata från Commons"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -620,27 +612,27 @@ msgstr "Markera detta motiv-objekt som INTE framträdande"
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr ""
+msgstr "Förslaget har tagits bort från listan"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr ""
+msgstr "Kontrollera att du är inloggad"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
-msgstr ""
+msgstr "Oj! Förslaget kanske inte har tagits bort."
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr ""
+msgstr "Visa förslag"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
-msgstr ""
+msgstr "Är du säker på att du vill avvisa det här förslaget?"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
-msgstr ""
+msgstr "Gör bara detta om du är säker på att den föreslagna taggen inte visas i bilden, eller skulle vara felaktig enligt Wikimedia Commons riktlinjer. Om flera användare avvisar samma förslag kommer det inte längre att visas."
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -679,7 +671,6 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Klicka på kampanjens namn för att komma igång och lägga till strukturerad data till en bild."
 
 #: templates/campaign/campaigns.html:8
-#, fuzzy
 msgid "You can access information on the previous campaigns in the archive section."
 msgstr "Du kan komma åt information på tidigare kampanjer från arkivavsnittet."
 
@@ -700,9 +691,8 @@ msgid "Total number of images in the campaign"
 msgstr "Totalt antal bilder i kampanjen"
 
 #: templates/campaign/campaigns.html:23
-#, fuzzy
 msgid "Number of editors that have contributed to the campaign"
-msgstr "Antalet redigerare som har bidragit till kampanjen "
+msgstr "Antalet redigerare som har bidragit till kampanjen"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -839,14 +829,12 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "Kampanjhanteraren kan försöka igen genom att uppdatera kampanjen."
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
 msgstr "Servern genomgår underhåll"
 
 #: templates/errors/403.html:10
-#, fuzzy
 msgid "Please contact support"
-msgstr "Kontrollera kontaktsupport"
+msgstr "Vänligen kontakta supporten"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -862,7 +850,6 @@ msgid "Page Not Found"
 msgstr "Sidan kunde inte hittas"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
 msgstr "Vi kunde inte hitta sidan du letar efter"
 
@@ -905,9 +892,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "Vad är Wikimedia Commons?"
 
 #: templates/main/help.html:26
-#, fuzzy
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr "<strong>Wikimedia Commons</strong> (även känd som \"Commons\") är ett Wikimediaprojekt, ett systerprojekt till Wikipedia och en samling på fler än 40 miljoner fria mediefiler."
+msgstr "<strong>Wikimedia Commons</strong> (även känt som \"Commons\") är ett Wikimedia-projekt, ett systerprojekt till Wikipedia. Det innehåller en samling av miljontals fritt användbara mediefiler till vilka vem som helst kan bidra."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -954,12 +940,10 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "Med mer struktur blir det lättare att återanvända data på andra Wikimediaprojekt och andra tredje parter; det möjliggör också för datorer att bearbeta och \"förstå\" det."
 
 #: templates/main/help.html:49
-#, fuzzy
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
 msgstr "Strukturerad data är ett pågående projekt som lanserades 2019! ... medan Wikimedia Commons har funnits i åratal!"
 
 #: templates/main/help.html:50
-#, fuzzy
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
 msgstr "Det finns bokstavligen miljoner bilder på Wikimedia Commons... som behöver uppmärksamhet och kärlek."
 
@@ -968,9 +952,8 @@ msgid "Millions of pictures that are not described with structured data at the m
 msgstr "Miljoner bilder som inte är beskrivna med strukturerad data för tillfället."
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "Hur ska vi göra detta? "
+msgstr "Hur ska vi göra det?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1021,9 +1004,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "Vem som helst som har ett Wikimediakonto kan bidra och lägga till strukturerad metadata till en kampanj."
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
-msgstr "Det enda kravet är… att vara inloggad."
+msgstr "Det enda kravet är... att vara inloggad."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1114,7 +1096,6 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "Det aktiverades på Wikimedia Commons i april 2019."
 
 #: templates/main/help.html:131
-#, fuzzy
 msgid "To add a depicts statement, simply start typing in the search box."
 msgstr "För att lägga till en motivuttalande, börja med att att skriva i sökrutan."
 
@@ -1167,7 +1148,6 @@ msgid "Legal and credits"
 msgstr "Juridisk information och erkännande"
 
 #: templates/main/help.html:165
-#, fuzzy
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "Verktyget körs på tools.wmflabs.org och omfattas av användarvillkoren för Wikimedia Cloud Services."
 
@@ -1205,9 +1185,8 @@ msgid "About This Tool"
 msgstr "Om verktyget"
 
 #: templates/main/home.html:23
-#, fuzzy
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr "Den långsiktiga ambitionen bakom verktyget är att öka användningen av den kunskap som finns i varje bild på Wikimedia Commons. "
+msgstr "Den långsiktiga ambitionen bakom verktyget är att öka användningen av den kunskap som finns i varje bild på Wikimedia Commons."
 
 #: templates/main/home.html:24
 #, fuzzy
@@ -1215,22 +1194,18 @@ msgid "The tool is aimed to assist in the usefulness and information of images d
 msgstr "Syftet med verktyget är att göra bilder uppladdade inom Wiki Loves-tävlingarna mer användbara och informationsrika."
 
 #: templates/main/home.html:25
-#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
 msgstr "Från början byggdes det för att göra det lättare att beskriva bilder från Wiki Loves Africa, men är uttryckligen utformat för att kunna användas inom alla Wiki Loves-tävlingar – och mycket mer."
 
 #: templates/main/home.html:26
-#, fuzzy
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
 msgstr "Verktyget är också utformat med syfte att skapa en plattform för mikrobidragstävlingar framtagna av projektledare."
 
 #: templates/main/home.html:27
-#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA är ett samarbete mellan Wiki In Africa, Histropedia och projektet Strukturerad Data på Commons."
 
 #: templates/main/home.html:28
-#, fuzzy
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
 msgstr "ISA är inte bara en akronym för Information Structured Acceleration, utan även betyder \"sätta\" eller \"placera\" på språket Shona."
 
@@ -1240,7 +1215,7 @@ msgstr "Hem"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Skapa en ny kampanj"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1259,7 +1234,6 @@ msgid "See your campaigns"
 msgstr "Visa dina kampanjer"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "Mina kampanjer"
 
@@ -1276,13 +1250,12 @@ msgid "ISA tool"
 msgstr "ISA-verktyget"
 
 #: templates/main/layout.html:108
-#, fuzzy
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
 msgstr "utvecklades som ett samarbete mellan Wiki In Africa, Histropedia och projektet Strukturerad data på Commons."
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "Vidare utveckling stöds av"
 
 #: templates/main/layout.html:113
 msgid "It is running on"
@@ -1305,7 +1278,6 @@ msgid "Your Campaigns"
 msgstr "Dina kampanjer"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
 msgstr "Nedan följer en lisa över dina kampanjer"
 
@@ -1322,16 +1294,14 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "Det valda språket kommer att användas när du söker efter objekt som är motiv i bilder."
 
 #: templates/users/user_settings.html:15
-#, fuzzy
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
-msgstr "Om du väljer &quot;Samma som gränssnitt&quot; kommer språket valt i toppmenyn att användas."
+msgstr "Om du väljer (Samma som gränssnitt) kommer språket valt i toppmenyn att användas."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
 msgstr "Välj upp till 6 språk för bildtexter"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
 msgstr "Språk för bildtexter"
 
@@ -1358,7 +1328,6 @@ msgid "Undo changes to language settings"
 msgstr "Ångra ändringar av språkinställningarna"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
 msgstr "Ångra ändringar"
 
@@ -1393,7 +1362,6 @@ msgid "Captions languages could not be set"
 msgstr "Språket för bildtexter kunde inte anges"
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
 msgstr "Föredragna språk har angetts"
 
@@ -1402,9 +1370,9 @@ msgid "Language settings not available at the moment"
 msgstr "Språkinställningarna är för tillfället inte tillgängliga"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s - inställningar"
+msgstr "%(username)s inställningar"
 
 #: users/routes.py:199
 #, python-format
@@ -1413,5 +1381,5 @@ msgstr "Kampanjer skapade av %(username)s"
 
 #: templates/footer.html:1
 msgid "Powered by SWITCH/WMSE/Bern Uni"
-msgstr ""
+msgstr "Drivs av SWITCH/WMSE/Bern Uni"
 
