@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-01-05 12:24:42+0000\n"
+"PO-Revision-Date: 2026-01-12 12:26:35+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1164,9 +1164,9 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Lägg till information om bilder på Wikimedia Commons – snabbt och enkelt"
 
 #: templates/main/home.html:15
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> är ett flerspråkigt verktyg, designat främst med mobila enheter i åtanke, som gör det lättare för alla att göra 'mikrobidrag' till bilder från Wiki Loves-tävlingar på Wikimedia Commons. Dessa bidrag består av <a %(link_attrs)s title='Mer information om strukturerade data'>strukturerade data</a> (beskrivningar, bildtexter, taggar, och så vidare)."
+msgstr "<strong>ISA</strong> är ett flerspråkigt, mobilanpassat verktyg som gör det enkelt för alla att lägga till \"mikrobidrag\" i form av <a %(link_attrs)s title='Learn more about structured data'>strukturerad data</a> (beskrivningar, bildtexter, taggar etc.) till bilder som har bidragits till Wikimedia Commons av Wiki Loves-tävlingar."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
@@ -1189,9 +1189,8 @@ msgid "In the long run, the intent behind the tool is to increase the use of the
 msgstr "Den långsiktiga ambitionen bakom verktyget är att öka användningen av den kunskap som finns i varje bild på Wikimedia Commons."
 
 #: templates/main/home.html:24
-#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "Syftet med verktyget är att göra bilder uppladdade inom Wiki Loves-tävlingarna mer användbara och informationsrika."
+msgstr "Verktyget syftar till att hjälpa till med användbarheten och informationen kring bilder som donerats under Wiki Loves-tävlingarna."
 
 #: templates/main/home.html:25
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
