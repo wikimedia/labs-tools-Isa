@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-10-30 12:43:59+0000\n"
+"PO-Revision-Date: 2026-02-23 12:33:17+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,19 +33,19 @@ msgstr ""
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Kampaanj - %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Ton õõlǥak leeʹd sizz ǩeeʹrjtõõttâm, jõs haaʹlääk kampaanj raajjâd."
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
 msgstr "Žaaʹll lij, što kampanja %(campaign_name)s raajjmõš ij oʹnnstam"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr "Kampanja %(campaign_name)s raʹjješ!"
 
@@ -59,16 +59,14 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Vuässõõđ"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
-msgstr "Ton õõlǥak leeʹd sizz ǩeeʹrjtõõttâm, jõs haaʹlääk kampaanj peiʹvveed."
+msgstr "Ton õõlǥak ǩeeʹrjtõõttâd sizz, jõs haaʹlääk kampaanj peiʹvveed."
 
 #: campaigns/routes.py:299
 msgid "Campaign update failed. Please try later!"
 msgstr ""
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "Peiʹvvummuš oʹnnsti!"
 
@@ -78,7 +76,7 @@ msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
 msgstr ""
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
 msgstr "Vuõi ij, kampanja %(campaign_name)s peiʹvvummuš ij oʹnnstam!"
 
@@ -1296,7 +1294,6 @@ msgid "Select upto 6 languages for captions"
 msgstr ""
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
 msgstr "Kartt- leʹbe snimldõkteeʹkstid ǩiõl"
 
@@ -1323,7 +1320,6 @@ msgid "Undo changes to language settings"
 msgstr "Kååʹmet muttsid ǩiõllasetõõzzid"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
 msgstr "Kååʹmet muttsid"
 
@@ -1366,9 +1362,9 @@ msgid "Language settings not available at the moment"
 msgstr ""
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "Õõʹnni %(username)s - asetõõzz"
+msgstr "Õõʹnni %(username)s asetõõzz"
 
 #: users/routes.py:199
 #, python-format
