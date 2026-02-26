@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-10-30 12:43:57+0000\n"
+"PO-Revision-Date: 2026-02-26 12:22:53+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr ""
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "캠페인 - %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
@@ -44,10 +44,10 @@ msgstr "캠페인을 만들려면 로그인해야 합니다"
 #: campaigns/routes.py:223
 #, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
-msgstr ""
+msgstr "죄송합니다, %(campaign_name)s을(를) 만들 수 없습니다"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
 msgstr "%(campaign_name)s 캠페인을 만들었습니다!"
 
@@ -61,7 +61,6 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - 기여"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
 msgstr "캠페인을 업데이트하려면 로그인해야 합니다"
 
@@ -762,11 +761,11 @@ msgstr "캠페인을 만들려면 로그인해야 합니다."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "_TOTAL_개의 항목 중 _START_부터 _END_까지 표시 중"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr ""
+msgstr "항목 없음"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
@@ -778,11 +777,11 @@ msgstr "일치하는 레코드가 없습니다"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr ""
+msgstr "처음"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr ""
+msgstr "마지막"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
@@ -825,7 +824,6 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr ""
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
 msgstr "서버 유지 보수 중"
 
@@ -847,7 +845,6 @@ msgid "Page Not Found"
 msgstr "페이지를 찾을 수 없습니다"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
 msgstr "찾고 계신 문서를 찾을 수 없습니다"
 
@@ -1002,7 +999,6 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr ""
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
 msgstr "유일한 요건은... 로그인 상태를 유지하는 것입니다."
 
@@ -1147,7 +1143,6 @@ msgid "Legal and credits"
 msgstr ""
 
 #: templates/main/help.html:165
-#, fuzzy
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
 msgstr "tools.wmflabs.org에서 실행 중이며 위키미디어 클라우드 서비스 이용 약관에 종속됩니다."
 
@@ -1233,7 +1228,6 @@ msgid "See your campaigns"
 msgstr "내 캠페인 보기"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "내 캠페인"
 
@@ -1302,7 +1296,6 @@ msgid "Select upto 6 languages for captions"
 msgstr "캡션에 최대 6개 언어를 선택"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
 msgstr "캡션 언어"
 
@@ -1372,9 +1365,9 @@ msgid "Language settings not available at the moment"
 msgstr "지금은 언어 설정을 사용할 수 없습니다"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s's - 설정"
+msgstr "%(username)s's 설정"
 
 #: users/routes.py:199
 #, python-format
