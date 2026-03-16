@@ -1,0 +1,1377 @@
+# Translation of ISA to Irish (Gaeilge)
+# Exported from translatewiki.net
+#
+# Author: Aindriu80
+# --
+# Translation for the ISA project
+# This file is distributed under the same license as the ISA project.
+#
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2026-03-16 12:27:31+0000\n"
+"X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ga\n"
+"Project-Id-Version: ISA\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.46.0-alpha; Translate 2025-07-31\n"
+"Plural-Forms: nplurals=5; plural=(n == 1) ? 0 : ( (n == 2) ? 1 : ( (n < 7) ? 2 : ( (n < 11) ? 3 : 4 ) ) );\n"
+
+#: campaigns/routes.py:38 templates/campaign/campaigns.html:6
+#: templates/main/layout.html:39
+msgid "Campaigns"
+msgstr "Feachtais"
+
+#: campaigns/routes.py:56 campaigns/routes.py:144
+#, python-format
+msgid "Campaign with id %(id)s does not exist"
+msgstr "Níl feachtas leis an aitheantas %(id)s ann"
+
+#: campaigns/routes.py:113 campaigns/routes.py:169
+#, python-format
+msgid "Campaign - %(campaign_name)s"
+msgstr "Feachtas - %(campaign_name)s"
+
+#: campaigns/routes.py:193
+msgid "You need to Login to create a campaign"
+msgstr "Ní mór duit logáil isteach chun feachtas a chruthú"
+
+#: campaigns/routes.py:223
+#, python-format
+msgid "Sorry, %(campaign_name)s could not be created"
+msgstr "Tá brón orm, níorbh fhéidir %(campaign_name)s a chruthú"
+
+#: campaigns/routes.py:231
+#, python-format
+msgid "%(campaign_name)s campaign created!"
+msgstr "Cruthaíodh feachtas %(campaign_name)s!"
+
+#: campaigns/routes.py:234
+msgid "Create a campaign"
+msgstr "Cruthaigh feachtas"
+
+#: campaigns/routes.py:254
+#, python-format
+msgid "%(campaign_name)s - Contribute"
+msgstr "%(campaign_name)s - Cuir leis"
+
+#: campaigns/routes.py:273
+msgid "You need to log in to update a campaign"
+msgstr "Ní mór duit logáil isteach chun feachtas a nuashonrú"
+
+#: campaigns/routes.py:299
+msgid "Campaign update failed. Please try later!"
+msgstr "Theip ar nuashonrú an fheachtais. Déan iarracht níos déanaí!"
+
+#: campaigns/routes.py:303
+msgid "Update succesfull!"
+msgstr "Nuashonrú rathúil!"
+
+#: campaigns/routes.py:312
+#, python-format
+msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
+msgstr "Ní féidir leat an feachtas seo a nuashonrú. Téigh i dteagmháil leis an mbainisteoir, Úsáideoir:%(username)s."
+
+#: campaigns/routes.py:328
+#, python-format
+msgid "Booo! %(campaign_name)s could not be updated!"
+msgstr "Búú! Níorbh fhéidir %(campaign_name)s a nuashonrú!"
+
+#: campaigns/routes.py:333
+#, python-format
+msgid "%(campaign_name)s - Update"
+msgstr "%(campaign_name)s - Nuashonrú"
+
+#: campaigns/routes.py:375
+msgid "You need to login to participate"
+msgstr "Ní mór duit logáil isteach le bheith páirteach"
+
+#: templates/campaign/campaign-form.html:6
+msgid "Update Campaign Details"
+msgstr "Nuashonraigh Sonraí an Fheachtais"
+
+#: templates/campaign/campaign-form.html:8
+msgid "Create new Campaign"
+msgstr "Cruthaigh Feachtas Nua"
+
+#: templates/campaign/campaign-form.html:14
+#, python-format
+msgid "You are updating %(campaign)s"
+msgstr "Tá tú ag nuashonrú %(campaign)s"
+
+#: templates/campaign/campaign-form.html:16
+msgid "Fill in the form below to create your campaign"
+msgstr "Líon isteach an fhoirm thíos chun do fheachtas a chruthú"
+
+#: templates/campaign/campaign-form.html:19
+msgid "Fields marked with * are mandatory"
+msgstr "Tá réimsí marcáilte le * éigeantach"
+
+#: templates/campaign/campaign-form.html:29
+msgid "Campaign Name"
+msgstr "Ainm an Fheachtais"
+
+#: templates/campaign/campaign-form.html:41
+msgid "This is the name specific to your campaign, not the main project."
+msgstr "Seo an t-ainm atá sainiúil do do fheachtas, ní an príomhthionscadal."
+
+#: templates/campaign/campaign-form.html:41
+msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
+msgstr "Mar sin, ní “Is breá le Wiki an Afraic” ach “Ceol agus Damhsa sa Nigéir”"
+
+#: templates/campaign/campaign-form.html:48
+msgid "Short description of Campaign (144 characters)"
+msgstr "Cur síos gairid ar an bhfeachtas (144 carachtar)"
+
+#: templates/campaign/campaign-form.html:60
+msgid "What are users going to be working on"
+msgstr "Cad a mbeidh úsáideoirí ag obair air?"
+
+#: templates/campaign/campaign-form.html:68
+#: templates/campaign/campaigns.html:25
+msgid "Start Date"
+msgstr "Dáta Tosaigh"
+
+#: templates/campaign/campaign-form.html:80
+msgid "Set campaign start date"
+msgstr "Socraigh dáta tosaithe an fheachtais"
+
+#: templates/campaign/campaign-form.html:83
+#: templates/campaign/campaigns.html:26
+msgid "End Date"
+msgstr "Dáta Deiridh"
+
+#: templates/campaign/campaign-form.html:95
+msgid "Set campaign end date"
+msgstr "Socraigh dáta deiridh an fheachtais"
+
+#: templates/campaign/campaign-form.html:102
+msgid "This is a Wiki Loves Campaign"
+msgstr "Is feachtas é seo de chuid Wiki Loves."
+
+#: templates/campaign/campaign-form.html:112
+msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
+msgstr "Nuair a bhíonn sé socraithe i gceart, tugann an rogha seo deis do rannpháirtithe a roghnú cén tír ar mian leo íomhánna uaithi a fheiceáil agus taifeadann sé ranníocaíochtaí de réir tíre."
+
+#: templates/campaign/campaign-form.html:112
+msgid " You can select multiple categories of the correct type."
+msgstr "Is féidir leat roinnt catagóirí den chineál ceart a roghnú."
+
+#: templates/campaign/campaign-form.html:112
+msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
+msgstr "Ní mór an doimhneacht a shocrú go 0 do gach catagóir i bhfeachtas Wiki Loves."
+
+#: templates/campaign/campaign-form.html:114
+msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
+msgstr "Éilíonn sé catagóirí den fhoirm íomhánna ó <strong><em>thionscadal</em></strong> Wiki Loves i <strong><em>mbliain</em></strong> ar leith, m.sh. “Íomhánna ó Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong> ” (athraigh <strong><em>an tionscadal</em></strong> agus an bhliain de réir mar <strong><em>is gá</em></strong> )"
+
+#: templates/campaign/campaign-form.html:116
+msgid "Some of the categories chosen below do not have the correct syntax"
+msgstr "Níl an comhréir cheart ag cuid de na catagóirí a roghnaíodh thíos"
+
+#: templates/campaign/campaign-form.html:124
+msgid "Categories to use in this campaign"
+msgstr "Catagóirí le húsáid sa fheachtas seo"
+
+#: templates/campaign/campaign-form.html:124
+msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
+msgstr "Cuardaigh na catagóirí de chuid Wikimedia Commons ina bhfuil na híomhánna is mian leat a úsáid i do fheachtas."
+
+#: templates/campaign/campaign-form.html:124
+msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
+msgstr "Más mian leat catagóir agus a fochatagóirí GO LÉIR, bain úsáid as an rogha 'Doimhneacht' chun a roghnú cé mhéad leibhéal síos is mian leat dul (fág doimhneacht ar 0 le haghaidh feachtais is breá le Vicí)."
+
+#: templates/campaign/campaign-form.html:151
+msgid "Choose categories to use in the campaign"
+msgstr "Roghnaigh catagóirí le húsáid sa fheachtas"
+
+#: templates/campaign/campaign-form.html:155
+msgid "Name"
+msgstr "Ainm"
+
+#: templates/campaign/campaign-form.html:156
+msgid "Depth"
+msgstr "Doimhneacht"
+
+#: templates/campaign/campaign-form.html:165
+msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
+msgstr "Níl an comhréir cheart ag na catagóirí atá i ndath dearg don ghné \"Wiki Loves campaign\"."
+
+#: templates/campaign/campaign-form.html:166
+msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
+msgstr "Bain iad nó díthiceáil an bosca seiceála \"Is breá le Wiki Campaign\" thuas le do thoil."
+
+#: templates/campaign/campaign-form.html:172
+msgid "Update images"
+msgstr "Nuashonraigh íomhánna"
+
+#: templates/campaign/campaign-form.html:174
+msgid "Collect images from the categories."
+msgstr "Bailigh íomhánna ó na catagóirí."
+
+#: templates/campaign/campaign-form.html:174
+msgid "This will replace any current images."
+msgstr "Cuirfidh sé seo aon íomhánna reatha in ionad na n-íomhánna atá ann cheana féin."
+
+#: templates/campaign/campaign-form.html:174
+msgid "Use if you changed the categories or if there was an error updating previously."
+msgstr "Úsáid é má d’athraigh tú na catagóirí nó má bhí earráid ann agus an nuashonrú á dhéanamh roimhe seo."
+
+#: templates/campaign/campaign-form.html:179
+msgid "Metadata to collect in the Campaign"
+msgstr "Meiteashonraí le bailiú sa Fheachtas"
+
+#: templates/campaign/campaign-form.html:179
+msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
+msgstr "Roghnaigh cén cineál <strong>meiteashonraí</strong> is mian leat a bhailiú i do fheachtas."
+
+#: templates/campaign/campaign-form.html:179
+msgid "You must select at least one of the options below."
+msgstr "Ní mór duit ceann amháin ar a laghad de na roghanna thíos a roghnú."
+
+#: templates/campaign/campaign-form.html:179
+msgid "To learn more about Depicts and Caption meta-data, see the help page."
+msgstr "Chun tuilleadh eolais a fháil faoi mheiteashonraí Depicts and Caption, féach ar an leathanach cabhrach."
+
+#: templates/campaign/campaign-form.html:182
+#: templates/campaign/campaign_entry.html:45
+msgid "Depicts"
+msgstr "Léiríonn"
+
+#: templates/campaign/campaign-form.html:194
+msgid "Select to collect Depicts metadata in the campaign"
+msgstr "Roghnaigh chun meiteashonraí Léiríonn a bhailiú sa fheachtas"
+
+#: templates/campaign/campaign-form.html:197
+#: templates/campaign/campaign_entry.html:105
+msgid "Captions"
+msgstr "Fotheidil"
+
+#: templates/campaign/campaign-form.html:209
+msgid "Select to collect Caption metadata in the campaign"
+msgstr "Roghnaigh chun meiteashonraí Fotheideal a bhailiú sa fheachtas"
+
+#: templates/campaign/campaign-form.html:216
+msgid "Campaign Image"
+msgstr "Íomhá Feachtais"
+
+#: templates/campaign/campaign-form.html:216
+msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
+msgstr "Is é 150px an airde uasta don íomhá feachtasaíochta. Ba chóir go mbeadh na híomhánna ina n-íomhá meirge nó ina lógó."
+
+#: templates/campaign/campaign-form.html:216
+msgid "Portrait or square photos are not recommended."
+msgstr "Ní mholtar grianghraif portráide ná cearnacha."
+
+#: templates/campaign/campaign-form.html:228
+msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
+msgstr "Cuir isteach AINM COMHAID amháin d'íomhá ó commons le taispeáint ar leathanach baile an Fheachtais."
+
+#: templates/campaign/campaign-form.html:234
+msgid "Long description of Campaign (full about info)"
+msgstr "Cur síos fada ar an bhfeachtas (eolas iomlán faoi)"
+
+#: templates/campaign/campaign-form.html:246
+msgid "Why it is important that users contribute to the campaign?"
+msgstr "Cén fáth go bhfuil sé tábhachtach go gcuirfeadh úsáideoirí leis an bhfeachtas?"
+
+#: templates/campaign/campaign-form.html:252
+msgid "Publish Campaign"
+msgstr "Feachtas a Fhoilsiú"
+
+#: templates/campaign/campaign-form.html:262
+msgid "You must select at least one category for your campaign."
+msgstr "Ní mór duit catagóir amháin ar a laghad a roghnú do do fheachtas."
+
+#: templates/campaign/campaign-form.html:263
+msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
+msgstr "Níl an comhréir cheart ag cuid de na catagóirí atá roghnaithe agat le haghaidh Feachtas Wiki Loves."
+
+#: templates/campaign/campaign-form.html:264
+msgid "Please check your selections and try again."
+msgstr "Seiceáil do roghanna agus déan iarracht arís."
+
+#: templates/campaign/campaign-form.html:265
+msgid "Please select at least one type from the Metadata to collect section"
+msgstr "Roghnaigh cineál amháin ar a laghad ón rannán Meiteashonraí le bailiú"
+
+#: templates/campaign/campaign.html:18
+msgid "View images from"
+msgstr "Féach ar íomhánna ó"
+
+#: templates/campaign/campaign.html:19
+msgid "Choose to only view images from a single country"
+msgstr "Roghnaigh gan ach íomhánna ó thír amháin a fheiceáil"
+
+#: templates/campaign/campaign.html:26
+msgid "Start contributing to this campaign"
+msgstr "Tosaigh ag cur leis an bhfeachtas seo"
+
+#: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
+msgid "Get Started"
+msgstr "Tosaigh"
+
+#: templates/campaign/campaign.html:33
+msgid "Campaign progress so far"
+msgstr "Dul chun cinn an fheachtais go dtí seo"
+
+#: templates/campaign/campaign.html:36
+#: templates/campaign/campaign_stats.html:19
+msgid "Total number of images in this campaign"
+msgstr "Líon iomlán na n-íomhánna sa fheachtas seo"
+
+#: templates/campaign/campaign.html:36
+#: templates/campaign/campaign_stats.html:19
+#: templates/campaign/campaigns.html:22
+msgid "Images"
+msgstr "Íomhánna"
+
+#: templates/campaign/campaign.html:37
+#: templates/campaign/campaign_stats.html:20
+msgid "Total number of contributions made to this campaign"
+msgstr "Líon iomlán na ranníocaíochtaí a rinneadh leis an bhfeachtas seo"
+
+#: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
+#: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
+#: templates/campaign/campaign_stats.html:20
+#: templates/campaign/campaign_stats.html:44
+#: templates/campaign/campaign_stats.html:76
+#: templates/campaign/campaigns.html:24
+msgid "Contributions"
+msgstr "Ranníocaíochtaí"
+
+#: templates/campaign/campaign.html:42
+#: templates/campaign/campaign_stats.html:39
+msgid "Top Contributors"
+msgstr "Príomh-Rannpháirtíthe"
+
+#: templates/campaign/campaign.html:46
+#: templates/campaign/campaign_stats.html:43
+msgid "Contributor"
+msgstr "Rannpháirtí"
+
+#: templates/campaign/campaign.html:65
+#: templates/campaign/campaign_stats.html:62
+msgid "No partcipants has contributed to this campaign"
+msgstr "Níor chuir aon rannpháirtí leis an bhfeachtas seo"
+
+#: templates/campaign/campaign.html:74
+msgid "Most improved countries"
+msgstr "Tíortha is mó feabhsaithe"
+
+#: templates/campaign/campaign.html:78
+#: templates/campaign/campaign_stats.html:75
+msgid "Country"
+msgstr "Tír"
+
+#: templates/campaign/campaign.html:97
+#: templates/campaign/campaign_stats.html:94
+msgid "There is no data available yet for this campaign"
+msgstr "Níl aon sonraí ar fáil fós don fheachtas seo"
+
+#: templates/campaign/campaign.html:105
+msgid "View and download more stats for this campaign"
+msgstr "Féach ar agus íoslódáil tuilleadh staitisticí don fheachtas seo"
+
+#: templates/campaign/campaign.html:105
+msgid "View full stats"
+msgstr "Féach ar na staitisticí iomlána"
+
+#: templates/campaign/campaign.html:116
+msgid "My Contributions"
+msgstr "Mo Ranníocaíochtaí"
+
+#: templates/campaign/campaign.html:123
+msgid "Rank"
+msgstr "Céim"
+
+#: templates/campaign/campaign.html:141
+msgid "More About This Campaign"
+msgstr "Tuilleadh faoin bhfeachtas seo"
+
+#: templates/campaign/campaign.html:143
+msgid "Campaign Manager"
+msgstr "Bainisteoir Feachtais"
+
+#: templates/campaign/campaign.html:145
+msgid "START DATE"
+msgstr "DÁTA TOSAIGH"
+
+#: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
+msgid "END DATE"
+msgstr "DÁTA CRÍOCHNAITHE"
+
+#: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
+msgid "Not Set"
+msgstr "Gan Socrú"
+
+#: templates/campaign/campaign.html:156
+msgid "Make changes to this campaign"
+msgstr "Déan athruithe ar an bhfeachtas seo"
+
+#: templates/campaign/campaign.html:156
+msgid "Edit Campaign"
+msgstr "Cuir Feachtas in Eagar"
+
+#: templates/campaign/campaign.html:162
+msgid "Unknown country"
+msgstr "Tír anaithnid"
+
+#: templates/campaign/campaign_entry.html:19
+msgid "Return to the campaign home page"
+msgstr "Fill ar ais chuig leathanach baile an fheachtais"
+
+#: templates/campaign/campaign_entry.html:19
+#: templates/campaign/campaign_stats.html:4
+msgid "Home Page"
+msgstr "Leathanach Baile"
+
+#: templates/campaign/campaign_entry.html:23
+msgid "View the previous image"
+msgstr "Féach ar an íomhá roimhe seo"
+
+#: templates/campaign/campaign_entry.html:23
+#: templates/campaign/campaign_entry.html:127
+msgid "PREV IMAGE"
+msgstr "ÍOMHÁ ROIMHE SEO"
+
+#: templates/campaign/campaign_entry.html:25
+msgid "Own work"
+msgstr "Obair féin"
+
+#: templates/campaign/campaign_entry.html:27
+msgid "View the next image"
+msgstr "Féach ar an gcéad íomhá eile"
+
+#: templates/campaign/campaign_entry.html:27
+#: templates/campaign/campaign_entry.html:128
+msgid "NEXT IMAGE"
+msgstr "AN CHÉAD ÍOMHÁ EILE"
+
+#: templates/campaign/campaign_entry.html:32
+msgid "File"
+msgstr "Comhad"
+
+#: templates/campaign/campaign_entry.html:32
+msgid "Open this image on Wikimedia Commons"
+msgstr "Oscail an íomhá seo ar Wikimedia Commons"
+
+#: templates/campaign/campaign_entry.html:33
+msgid "Description"
+msgstr "Cur síos"
+
+#: templates/campaign/campaign_entry.html:34
+msgid "Categories"
+msgstr "Catagóirí"
+
+#: templates/campaign/campaign_entry.html:35
+msgid "Camera Location"
+msgstr "Suíomh an Cheamara"
+
+#: templates/campaign/campaign_entry.html:38
+msgid "show all metadata from commons"
+msgstr "taispeáin na meiteashonraí go léir ó chomónta"
+
+#: templates/campaign/campaign_entry.html:46
+msgid "Adding Depict Statements"
+msgstr "Ráitis Léirithe á gcur leis"
+
+#: templates/campaign/campaign_entry.html:46
+msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
+msgstr "Déan simplí é: Bain úsáid as focail agus coincheapa simplí chun cur síos a dhéanamh ar a bhfeiceann tú i ngach íomhá (m.sh. cat, sliabh, an Taj Mahal)"
+
+#: templates/campaign/campaign_entry.html:50
+msgid "Cancel your changes"
+msgstr "Cealaigh do chuid athruithe"
+
+#: templates/campaign/campaign_entry.html:50
+#: templates/campaign/campaign_entry.html:107
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: templates/campaign/campaign_entry.html:51
+msgid "Save your edits to Wikimedia Commons"
+msgstr "Sábháil do chuid eagarthóireachtaí chuig Wikimedia Commons"
+
+#: templates/campaign/campaign_entry.html:51
+#: templates/campaign/campaign_entry.html:108
+#: templates/users/user_settings.html:58
+msgid "Save"
+msgstr "Sábháil"
+
+#: templates/campaign/campaign_entry.html:54
+msgid "You will be redirected to login and back here to save your changes"
+msgstr "Déanfar tú a atreorú chuig logáil isteach agus ar ais anseo chun do chuid athruithe a shábháil."
+
+#: templates/campaign/campaign_entry.html:56
+msgid "Name the different elements that you can see in this image"
+msgstr "Ainmnigh na heilimintí éagsúla is féidir leat a fheiceáil san íomhá seo"
+
+#: templates/campaign/campaign_entry.html:79
+msgid "Accept"
+msgstr "Glac leis"
+
+#: templates/campaign/campaign_entry.html:80
+msgid "Reject"
+msgstr "Diúltaigh"
+
+#: templates/campaign/campaign_entry.html:89
+#: templates/campaign/campaign_entry.html:150
+msgid "Hide Suggestions"
+msgstr "Folaigh Moltaí"
+
+#: templates/campaign/campaign_entry.html:97
+msgid "To mark the prominent elements in the image, click on the flag icon"
+msgstr "Chun na heilimintí suntasacha san íomhá a mharcáil, cliceáil ar dheilbhín na brataí"
+
+#: templates/campaign/campaign_entry.html:105
+msgid "Writing Captions"
+msgstr "Scríobh Fotheidil"
+
+#: templates/campaign/campaign_entry.html:105
+msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
+msgstr "Cuir aon fhaisnéis chultúrtha, eolaíoch nó theicniúil ar leith is féidir leat a aithint (m.sh. Searmanas Caife na hAetóipe nó bunna maflat) san áireamh chun an fhaisnéis a dhéanamh níos saibhre."
+
+#: templates/campaign/campaign_entry.html:111
+msgid "Log in to publish changes"
+msgstr "Logáil isteach chun athruithe a fhoilsiú"
+
+#: templates/campaign/campaign_entry.html:113
+msgid "Add a caption to better explain the image (max 255 characters)"
+msgstr "Cuir fotheideal leis chun an íomhá a mhíniú níos fearr (uasmhéid 255 carachtar)"
+
+#: templates/campaign/campaign_entry.html:118
+msgid "Briefly explain what you see in this image."
+msgstr "Mínigh go hachomair cad a fheiceann tú san íomhá seo."
+
+#: templates/campaign/campaign_entry.html:122
+msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
+msgstr "Is féidir leat fotheidil a chur leis i dteangacha breise trí Roghanna Teanga a roghnú ón roghchlár úsáideora."
+
+#: templates/campaign/campaign_entry.html:134
+msgid "No images found for this campaign!"
+msgstr "Níor aimsíodh aon íomhánna don fheachtas seo!"
+
+#: templates/campaign/campaign_entry.html:135
+msgid "Something went wrong getting campaign images"
+msgstr "Chuaigh rud éigin mícheart ag fáil íomhánna feachtasaíochta"
+
+#: templates/campaign/campaign_entry.html:136
+msgid "Search for things you see in the image"
+msgstr "Cuardaigh rudaí a fheiceann tú san íomhá"
+
+#: templates/campaign/campaign_entry.html:137
+msgid "minimise metadata from Commons"
+msgstr "íoslaghdaigh meiteashonraí ó Commons"
+
+#: templates/campaign/campaign_entry.html:138
+msgid "show all metadata from Commons"
+msgstr "taispeáin na meiteashonraí go léir ó Commons"
+
+#: templates/campaign/campaign_entry.html:139
+msgid "Success! Depicted items saved to Wikimedia Commons"
+msgstr "Rath! Míreanna léirithe sábháilte chuig Wikimedia Commons"
+
+#: templates/campaign/campaign_entry.html:140
+msgid "Success! Captions saved to Wikimedia Commons"
+msgstr "Rath! Fotheidil sábháilte chuig Wikimedia Commons"
+
+#: templates/campaign/campaign_entry.html:141
+msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
+msgstr "Úps! Chuaigh rud éigin mícheart, níor sábháladh do chuid eagarthóireachtaí chuig Wikimedia Commons."
+
+#: templates/campaign/campaign_entry.html:142
+msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
+msgstr "An bhfuil tú cinnte gur mian leat nascleanúint a dhéanamh chuig íomhá eile? Tá athruithe neamhshábháilte agat a chaillfear."
+
+#: templates/campaign/campaign_entry.html:143
+msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
+msgstr "Cliceáil 'Ceart go leor' le dul ar aghaidh ar aon nós, nó 'Cealaigh' más mian leat na hathruithe a shábháil ar dtús."
+
+#: templates/campaign/campaign_entry.html:144
+msgid "Remove this depicted item"
+msgstr "Bain an mhír seo atá léirithe"
+
+#: templates/campaign/campaign_entry.html:145
+msgid "Mark this depicted item as prominent"
+msgstr "Marcáil an mhír seo atá léirithe mar mhír fheiceálach"
+
+#: templates/campaign/campaign_entry.html:146
+msgid "Mark this depicted item as NOT prominent"
+msgstr "Marcáil an mhír seo atá léirithe mar NACH bhfuil sí feiceálach"
+
+#: templates/campaign/campaign_entry.html:147
+msgid "Suggestion removed from list"
+msgstr "Baineadh an moladh den liosta"
+
+#: templates/campaign/campaign_entry.html:148
+msgid "Please check that you are logged in"
+msgstr "Seiceáil le do thoil go bhfuil tú logáilte isteach"
+
+#: templates/campaign/campaign_entry.html:149
+msgid "Oops! Suggestion might not have been removed"
+msgstr "Úps! B’fhéidir nár baineadh an moladh."
+
+#: templates/campaign/campaign_entry.html:151
+msgid "Show Suggestions"
+msgstr "Taispeáin Moltaí"
+
+#: templates/campaign/campaign_entry.html:152
+msgid "Are you sure you want to reject this suggestion?"
+msgstr "An bhfuil tú cinnte gur mian leat an moladh seo a dhiúltú?"
+
+#: templates/campaign/campaign_entry.html:153
+msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
+msgstr "Ná déan é seo ach amháin má tá tú cinnte nach bhfuil an chlib molta le feiceáil san íomhá, nó go mbeadh sé mícheart de réir threoirlínte Wikimedia Commons. Má dhiúltaíonn roinnt úsáideoirí don mholadh céanna, ní thaispeánfar é a thuilleadh."
+
+#: templates/campaign/campaign_stats.html:5
+msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
+msgstr "RANNPHÁIRTÍOCHTAÍ LE FEACHTAS SONRAÍ STRUCHTÚRTHA"
+
+#: templates/campaign/campaign_stats.html:10
+msgid "From"
+msgstr "Ó"
+
+#: templates/campaign/campaign_stats.html:11
+msgid "Till"
+msgstr "Go dtí"
+
+#: templates/campaign/campaign_stats.html:71
+msgid "Most improved Countries"
+msgstr "Tíortha is mó feabhsaithe"
+
+#: templates/campaign/campaign_stats.html:108
+msgid "Download all stats (CSV)"
+msgstr "Íoslódáil na staitisticí go léir (CSV)"
+
+#: templates/campaign/campaign_stats.html:113
+msgid "Contributor Stats"
+msgstr "Staitisticí Rannpháirtí"
+
+#: templates/campaign/campaign_stats.html:114
+msgid "Country Stats"
+msgstr "Staitisticí Tíre"
+
+#: templates/campaign/campaigns.html:8
+msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
+msgstr "Ar an leathanach seo tá na feachtais choimeádta atá ar siúl faoi láthair mar chuid den uirlis ISA."
+
+#: templates/campaign/campaigns.html:8
+msgid "Click on the name of a campaign to get started and add structured data to an image."
+msgstr "Cliceáil ar ainm feachtais chun tús a chur leis agus sonraí struchtúrtha a chur le híomhá."
+
+#: templates/campaign/campaigns.html:8
+msgid "You can access information on the previous campaigns in the archive section."
+msgstr "Is féidir leat rochtain a fháil ar fhaisnéis faoi na feachtais roimhe seo sa chuid cartlainne."
+
+#: templates/campaign/campaigns.html:15
+msgid "Ongoing Campaigns"
+msgstr "Feachtais Leanúnacha"
+
+#: templates/campaign/campaigns.html:21
+msgid "Campaign name"
+msgstr "Ainm an fheachtais"
+
+#: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
+msgid "Campaign"
+msgstr "Feachtas"
+
+#: templates/campaign/campaigns.html:22
+msgid "Total number of images in the campaign"
+msgstr "Líon iomlán na n-íomhánna sa fheachtas"
+
+#: templates/campaign/campaigns.html:23
+msgid "Number of editors that have contributed to the campaign"
+msgstr "Líon na n-eagarthóirí a chuir leis an bhfeachtas"
+
+#: templates/campaign/campaigns.html:23
+msgid "Participants"
+msgstr "Rannpháirtithe"
+
+#: templates/campaign/campaigns.html:24
+msgid "Total number of contributions to the campaign"
+msgstr "Líon iomlán na ranníocaíochtaí leis an bhfeachtas"
+
+#: templates/campaign/campaigns.html:25
+msgid "Campaign start date"
+msgstr "Dáta tosaithe an fheachtais"
+
+#: templates/campaign/campaigns.html:26
+msgid "Campaign end date"
+msgstr "Dáta deiridh an fheachtais"
+
+#: templates/campaign/campaigns.html:27
+msgid "Date the campaign was created"
+msgstr "Dáta cruthaithe an fheachtais"
+
+#: templates/campaign/campaigns.html:27
+msgid "Creation Date"
+msgstr "Dáta Cruthaithe"
+
+#: templates/campaign/campaigns.html:28
+msgid "Campaign status"
+msgstr "Stádas an fheachtais"
+
+#: templates/campaign/campaigns.html:28
+msgid "Status"
+msgstr "Stádas"
+
+#: templates/campaign/campaigns.html:54
+msgid "Closed"
+msgstr "Dúnta"
+
+#: templates/campaign/campaigns.html:57
+msgid "Not Opened"
+msgstr "Níor Oscaileadh"
+
+#: templates/campaign/campaigns.html:60
+msgid "Open"
+msgstr "Oscail"
+
+#: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
+msgid "Go to the campaign home page to get started"
+msgstr "Téigh chuig leathanach baile an fheachtais le tosú"
+
+#: templates/campaign/campaigns.html:66
+msgid "Go to Campaign"
+msgstr "Téigh go dtí an Feachtas"
+
+#: templates/campaign/campaigns.html:74
+msgid "Show closed campaigns"
+msgstr "Taispeáin feachtais dúnta"
+
+#: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
+#: templates/main/home.html:32
+msgid "Create your own campaign"
+msgstr "Cruthaigh do fheachtas féin"
+
+#: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
+#: templates/main/home.html:32
+msgid "Create a new campaign using this tool"
+msgstr "Cruthaigh feachtas nua ag baint úsáide as an uirlis seo"
+
+#: templates/campaign/campaigns.html:82
+msgid "You must be logged in to create a campaign."
+msgstr "Ní mór duit a bheith logáilte isteach chun feachtas a chruthú."
+
+#: templates/campaign/campaigns.html:90
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr "Ag taispeáint _START_ go _END_ de _TOTAL_ iontrálacha"
+
+#: templates/campaign/campaigns.html:91
+msgid "No entries"
+msgstr "Gan aon iontrálacha"
+
+#: templates/campaign/campaigns.html:93
+msgid "Search:"
+msgstr "Cuardaigh:"
+
+#: templates/campaign/campaigns.html:94
+msgid "No matching records found"
+msgstr "Níor aimsíodh aon taifid chomhoiriúnacha"
+
+#: templates/campaign/campaigns.html:96
+msgid "First"
+msgstr "Ar dtús"
+
+#: templates/campaign/campaigns.html:97
+msgid "Last"
+msgstr "Deireanach"
+
+#: templates/campaign/campaigns.html:98
+msgid "Next"
+msgstr "Ar Aghaidh"
+
+#: templates/campaign/campaigns.html:99
+msgid "Previous"
+msgstr "Roimhe Seo"
+
+#: templates/campaign/macros.html:4
+msgid "Updating images"
+msgstr "Íomhánna á nuashonrú"
+
+#: templates/campaign/macros.html:4
+msgid "The images for this campaign are being updated."
+msgstr "Tá na híomhánna don fheachtas seo á nuashonrú."
+
+#: templates/campaign/macros.html:4
+msgid "More images will be added."
+msgstr "Cuirfear níos mó íomhánna leis."
+
+#: templates/campaign/macros.html:4 templates/campaign/macros.html:8
+msgid "You can still participate in the campaign."
+msgstr "Is féidir leat páirt a ghlacadh sa fheachtas fós."
+
+#: templates/campaign/macros.html:8
+msgid "Failed to update images"
+msgstr "Theip ar na híomhánna a nuashonrú"
+
+#: templates/campaign/macros.html:8
+msgid "There was an error while updating the images for this campaign."
+msgstr "Tharla earráid agus na híomhánna á nuashonrú don fheachtas seo."
+
+#: templates/campaign/macros.html:8
+msgid "Some images will be missing."
+msgstr "Beidh roinnt íomhánna ar iarraidh."
+
+#: templates/campaign/macros.html:8
+msgid "The campaign manager can retry by updating the campaign."
+msgstr "Is féidir leis an mbainisteoir feachtais iarracht eile a dhéanamh tríd an bhfeachtas a nuashonrú."
+
+#: templates/errors/403.html:8
+msgid "Server under maintenance"
+msgstr "Freastalaí faoi chothabháil"
+
+#: templates/errors/403.html:10
+msgid "Please contact support"
+msgstr "Téigh i dteagmháil leis an tacaíocht le do thoil"
+
+#: templates/errors/403.html:15
+msgid " Take Me Home"
+msgstr "Tabhair Abhaile Mé"
+
+#: templates/errors/403.html:19 templates/errors/404.html:18
+#: templates/errors/500.html:18
+msgid "Contact Support"
+msgstr "Déan Teagmháil leis an Tacaíocht"
+
+#: templates/errors/404.html:8
+msgid "Page Not Found"
+msgstr "Leathanach Gan Aimsiú"
+
+#: templates/errors/404.html:10
+msgid "We are unable to find the page you are looking for"
+msgstr "Ní féidir linn an leathanach atá á lorg agat a aimsiú"
+
+#: templates/errors/404.html:15 templates/errors/500.html:14
+msgid "Take Me Home"
+msgstr "Tabhair Abhaile Mé"
+
+#: templates/errors/500.html:7
+msgid "Something Went Wrong"
+msgstr "Chuaigh rud éigin mícheart"
+
+#: templates/errors/500.html:9
+msgid "Isa might be undergoing maintenance"
+msgstr "B’fhéidir go bhfuil cothabháil á déanamh ar Isa"
+
+#: templates/main/help.html:9
+msgid "Help Page"
+msgstr "Leathanach Cabhrach"
+
+#: templates/main/help.html:11
+msgid "Easily add information about images on Wikimedia Commons"
+msgstr "Cuir faisnéis faoi íomhánna ar Wikimedia Commons go héasca"
+
+#: templates/main/help.html:16
+#, python-format
+msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
+msgstr "Is uirlis spraíúil, ilteangach, atá dírithe ar fhóin phóca í <strong>ISA</strong>, a fhágann go bhfuil sé éasca do dhaoine \"micrea-ranníocaíochtaí\" i bhfoirm <a %(link_attrs)s>sonraí struchtúrtha</a> a chur le híomhánna ar Wikimedia Commons atá curtha leis ag comórtais Wiki Loves."
+
+#: templates/main/help.html:19
+#, python-format
+msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
+msgstr "Tógadh ISA ar dtús chun cur síos ilteangach agus struchtúrtha níos fearr a sholáthar ar íomhánna <a %(link_attrs)s>Wiki Loves Africa</a>."
+
+#: templates/main/help.html:20
+msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
+msgstr "Ach tá sé forbartha freisin le bheith úsáideach do gach ceann de na <a link_attrs>comórtais Wiki Loves</a> agus, sa deireadh, do <strong>gach comhad meán</strong> ar Wikimedia Commons."
+
+#: templates/main/help.html:23
+msgid "What is Wikimedia Commons?"
+msgstr "Cad é Wikimedia Commons?"
+
+#: templates/main/help.html:26
+msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
+msgstr "Is tionscadal Wikimedia é <strong>Wikimedia Commons</strong> (ar a dtugtar \"Commons\" freisin), tionscadal deirfiúr de chuid Vicipéid. Tá bailiúchán de na milliúin comhad meán inúsáidte go saor ann ar féidir le duine ar bith cur leo."
+
+#: templates/main/help.html:27
+msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
+msgstr "Tá na grianghraif, na comhaid fuaime agus físe, na PDFanna agus na meáin eile go léir atá ceadúnaithe go saor ar Vicipéid stóráilte ar Commons."
+
+#: templates/main/help.html:30
+msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
+msgstr "Fásann Wikimedia Commons go tapa, thart ar 5 mhilliún comhad meán nua in aghaidh na bliana."
+
+#: templates/main/help.html:33
+msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
+msgstr "Uaslódálann na mílte oibrithe deonacha comhaid chuig Commons, agus comhtháthaíonn siad iad seo i dtionscadail Wikimedia, cosúil le Vicipéid, chun an t-ábhar ann a léiriú agus na meáin sin a roinnt leis an bpobal."
+
+#: templates/main/help.html:34
+msgid "Media files on Commons are typically:"
+msgstr "Is iad na comhaid meán ar Commons de ghnáth:"
+
+#: templates/main/help.html:37
+msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
+msgstr "Grianghrafadóireacht phearsanta agus meáin a uaslódáileann daoine aonair, uaireanta le linn comórtais Wiki Loves ar nós Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc.;"
+
+#: templates/main/help.html:38
+msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
+msgstr "Comhaid meán ceadúnaithe saor ó shuíomhanna gréasáin sheachtracha ar nós Flickr, YouTube, irisí rochtana oscailte, agus stórtha eile; agus"
+
+#: templates/main/help.html:39
+msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
+msgstr "Síntiúis ó institiúidí agus eagraíochtaí a bhfuil bailiúcháin shuntasacha meán acu, mór agus beag, ó UNESCO, NASA agus Leabharlann na Breataine go hinstitiúidí cultúrtha beaga áitiúla."
+
+#: templates/main/help.html:42
+msgid "What is structured data on Commons ?"
+msgstr "Cad is sonraí struchtúrtha ar Commons?"
+
+#: templates/main/help.html:44
+msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
+msgstr "Is tionscadal é <strong>Sonraí Struchtúrtha ar Commons</strong> a sholáthraíonn an bonneagar teicniúil chun an téacs vicí, na teimpléid agus na catagóirí ar Wikimedia Commons a chomhlánú le sonraí struchtúrtha."
+
+#: templates/main/help.html:45
+msgid "Structured data is data with a high degree of structured organization."
+msgstr "Is sonraí a bhfuil ardleibhéal eagrúcháin struchtúrtha iontu iad sonraí struchtúrtha."
+
+#: templates/main/help.html:46
+msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
+msgstr "Le níos mó struchtúir, bíonn sé níos éasca sonraí a athúsáid i dtionscadail Wikimedia eile agus ag tríú páirtithe; tugann sé deis do ríomhairí iad a phróiseáil agus a 'thuiscint' freisin."
+
+#: templates/main/help.html:49
+msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
+msgstr "Is tionscadal leanúnach é Sonraí Struchtúrtha a seoladh in 2019!... cé go bhfuil Wikimedia Commons ann le blianta!"
+
+#: templates/main/help.html:50
+msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
+msgstr "Tá na milliúin pictiúr ar Wikimedia Commons... a bhfuil aird agus grá ag teastáil uathu."
+
+#: templates/main/help.html:51
+msgid "Millions of pictures that are not described with structured data at the moment."
+msgstr "Milliúin pictiúr nach bhfuil cur síos orthu le sonraí struchtúrtha faoi láthair."
+
+#: templates/main/help.html:54
+msgid "How are we going to do that?"
+msgstr "Conas a dhéanfaimid é sin?"
+
+#: templates/main/help.html:57
+msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
+msgstr "Ciallaíonn <strong>ag coimeád</strong>, nó coimeád, sa chiall chúng: píosaí ealaíne agus oidhreachta cultúrtha a roghnú agus a eagrú le haghaidh taispeántais."
+
+#: templates/main/help.html:58
+msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
+msgstr "Is féidir an téarma seo a úsáid ar bhealach níos leithne freisin, chun cur síos a dhéanamh ar aon ghníomhaíocht a bhaineann le faisnéis a roghnú, a eagrú agus a chur i láthair."
+
+#: templates/main/help.html:59
+msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
+msgstr "I gcomhthéacs Sonraí Struchtúrtha ar Commons, ciallaíonn coimeád na gníomhaíochtaí uile a dhéanann rannpháirtithe Commons chun na comhaid meán ar Wikimedia Commons a eagrú agus a chur i láthair: gníomhartha riaracháin, meiteashonraí níos mó agus níos fearr a chur leis na comhaid, iad a ghrúpáil i gcatagóirí, gailearaithe a chruthú..."
+
+#: templates/main/help.html:62
+msgid "So... how does the ISA tool fit in there?"
+msgstr "Mar sin... conas a oireann an uirlis ISA ansin?"
+
+#: templates/main/help.html:65
+msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
+msgstr "Leis an uirlis ISA is féidir dhá chineál sonraí struchtúrtha a chur le sraith pictiúr: fotheidil agus léirithe (tuilleadh mínithe thíos ar cad is fotheidil agus léirithe ann)."
+
+#: templates/main/help.html:66
+msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
+msgstr "Is uirlis ilteangach, soghluaiste-chéadfach í 'micrea-ranníocaíochtaí', a fhágann go bhfuil sé éasca do dhaoine sonraí struchtúrtha a chur le híomhánna a chuirtear ar fáil do chomórtais Wiki Loves ar Wikimedia Commons."
+
+#: templates/main/help.html:69
+msgid "The tool operates with curated campaigns created by coordinators."
+msgstr "Oibríonn an uirlis le feachtais choimeádta arna gcruthú ag comhordaitheoirí."
+
+#: templates/main/help.html:70
+msgid "Anyone with a Wikimedia account may be a coordinator!"
+msgstr "Féadfaidh aon duine a bhfuil cuntas Wikimedia aige a bheith ina chomhordaitheoir!"
+
+#: templates/main/help.html:73
+msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
+msgstr "Le ISA, is féidir leis an gcomhordaitheoir sraith íomhánna réamhshainithe a roghnú ar Commons, dáta tosaigh agus dáta deiridh a roghnú don fheachtas, agus faisnéis ghinearálta a sholáthar faoin bhfeachtas féin."
+
+#: templates/main/help.html:74
+msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
+msgstr "Ansin, féadfaidh an comhordaitheoir iarraidh ar rannpháirtithe na híomhánna seo a \"chlibeáil\" le meiteashonraí struchtúrtha ilteangacha (léirithe agus/nó fotheidil)."
+
+#: templates/main/help.html:75
+msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
+msgstr "Déantar pointí a chomhaireamh as gach ranníocaíocht a dhéanann rannpháirtí, agus dá bhrí sin is féidir comórtais nó dúshláin \"clibeála\" nó micrea-ranníocaíochtaí a eagrú le ISA."
+
+#: templates/main/help.html:78
+msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
+msgstr "Is féidir le duine ar bith a bhfuil cuntas Wikimedia aige cur le meiteashonraí struchtúrtha a chur le feachtas."
+
+#: templates/main/help.html:79
+msgid "The only requirement is... to be logged-in."
+msgstr "Is é an t-aon riachtanas ná... a bheith logáilte isteach."
+
+#: templates/main/help.html:82
+msgid "Learn more about file captions and depicts"
+msgstr "Foghlaim tuilleadh faoi fhotheidil agus léirithe comhad"
+
+#: templates/main/help.html:85
+msgid "File captions are a feature part of Structured data."
+msgstr "Is cuid ghné de shonraí struchtúrtha iad fotheidil chomhad."
+
+#: templates/main/help.html:86
+msgid "They are meant to store short, multilingual description about files."
+msgstr "Tá siad ceaptha chun cur síos gearr, ilteangach faoi chomhaid a stóráil."
+
+#: templates/main/help.html:89
+msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
+msgstr "Cad is fotheideal maith ann? agus cad é an difríocht idir ár seanthuairiscí maithe ar chomhaid agus ár bhfotheidil?"
+
+#: templates/main/help.html:92
+msgid "First, captions are meant to be simple and short."
+msgstr "Ar dtús, tá fotheidil ceaptha a bheith simplí agus gearr."
+
+#: templates/main/help.html:93
+msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
+msgstr "Cé gur féidir le tuairiscí a bheith an-fhada, tá teorainn 255 carachtar ar fhad le fotheidil, agus ní féidir leo marcáil a bheith iontu (cosúil le naisc Wikitext nó HTML) agus ní thacaíonn siad le naisc sheachtracha."
+
+#: templates/main/help.html:96
+msgid "In many cases, the caption will be similar or identical to the description."
+msgstr "I go leor cásanna, beidh an fotheideal cosúil nó comhionann leis an tuairisc."
+
+#: templates/main/help.html:97
+msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
+msgstr "Ach i gcásanna eile, bíonn cur síos an-fhairsing ann (858 carachtar, agus naisc) agus bíonn an fotheideal i bhfad níos giorra (an fotheideal céanna a úsáidtear ar na hairteagail Vicipéide a úsáideann an íomhá sin)."
+
+#: templates/main/help.html:100
+msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
+msgstr "Níor cheart ach téacs atá chomh gearr sin nach bhfuil cóipcheart air a chóipeáil isteach i bhfotheidil, toisc go bhfoilsítear fotheidil faoi tharscaoileadh CC0 (\"fearann ​​poiblí\")."
+
+#: templates/main/help.html:103
+msgid "One of the core benefits of captions is improved language-aware searchability."
+msgstr "Ceann de na príomhbhuntáistí a bhaineann le fotheidil ná inchuardach feabhsaithe atá feasach ar theanga."
+
+#: templates/main/help.html:104
+msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
+msgstr "Bíonn tuairiscí clasaiceacha ar chomhaid sa vicíthéacs, agus ní féidir iad a chuardach ach trí chuardach téacs iomlán, rud a chuardaíonn ábhar iomlán an leathanaigh, lena n-áirítear catagóirí agus teimpléid cheadúnais; agus ní féidir cuardach a dhéanamh de réir teanga."
+
+#: templates/main/help.html:107
+msgid "Captions are available as part of our structured data, while descriptions are not."
+msgstr "Tá fotheidil ar fáil mar chuid dár sonraí struchtúrtha, ach níl tuairiscí ar fáil."
+
+#: templates/main/help.html:108
+msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
+msgstr "I dtéarmaí teicniúla, is téacs simplí vicí é cur síos atá fillte i dteimpléad teanga, fillte arís i dteimpléad Faisnéise; agus is lipéid Wikibase iad fotheidil."
+
+#: templates/main/help.html:111
+msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
+msgstr "Dá bhrí sin, beidh fotheidil inchuardaithe tríd an API, rud a fhágfaidh go mbeidh sé éasca fotheidil a aimsiú/a scagadh/a tharraingt ó chomhaid mar mheiteashonraí."
+
+#: templates/main/help.html:112
+msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
+msgstr "Ós rud é gur féidir iad a chuardach tríd an API, tá sé níos éasca freisin d’athúsáideoirí tríú páirtí meáin agus na fotheidil féin a aimsiú agus a athúsáid."
+
+#: templates/main/help.html:115
+msgid "Other possible usages of captions can be:"
+msgstr "Is féidir úsáidí eile a bhaint as fotheidil:"
+
+#: templates/main/help.html:118
+msgid "filling in infoboxes"
+msgstr "ag líonadh boscaí eolais"
+
+#: templates/main/help.html:119
+msgid "query files for missing captions in a given language"
+msgstr "comhaid fiosrúcháin le haghaidh fotheidil atá ar iarraidh i dteanga ar leith"
+
+#: templates/main/help.html:120
+msgid "building lists for translation of important files needing a caption localized for a project or campaign"
+msgstr "liostaí a thógáil le haghaidh aistriúcháin comhad tábhachtach a bhfuil fotheideal logánaithe ag teastáil uathu do thionscadal nó do fheachtas"
+
+#: templates/main/help.html:123
+msgid "Find more information about Captions here"
+msgstr "Faigh tuilleadh eolais faoi Fhotheidil anseo"
+
+#: templates/main/help.html:127
+msgid "Depicts is also a feature part of Structured data."
+msgstr "Is cuid ghné de shonraí struchtúrtha é Depicts freisin."
+
+#: templates/main/help.html:128
+msgid "It was enabled on Wikimedia Commons on April 2019."
+msgstr "Cumasaíodh é ar Wikimedia Commons i mí Aibreáin 2019."
+
+#: templates/main/help.html:131
+msgid "To add a depicts statement, simply start typing in the search box."
+msgstr "Chun ráiteas léiríonn a chur leis, níl le déanamh ach tosú ag clóscríobh sa bhosca cuardaigh."
+
+#: templates/main/help.html:132
+msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
+msgstr "Ansin, i gcás gach míre atá léirithe san íomhá, faigh an mhír chuí ó Wikidata agus roghnaigh í."
+
+#: templates/main/help.html:135
+msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
+msgstr "Má bhíonn deacracht agat an mhír cheart ar Wikidata a aimsiú, déan tástáil ar litriúcháin mhalartacha."
+
+#: templates/main/help.html:138
+msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
+msgstr "Mura bhfuil aon mhír Wikidata a bhaineann leis an ábhar atá léirithe, roghnaigh mír níos ginearálta a chuimsíonn d’ábhar mar shampla."
+
+#: templates/main/help.html:141
+msgid "Be as specific as you can with the primary tag."
+msgstr "Bí chomh sonrach agus is féidir leat leis an bpríomhchlib."
+
+#: templates/main/help.html:142
+msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
+msgstr "Más rud é go bhfuil roinnt míreanna á léiriú go soiléir agus d'aon ghnó sa chomhad meán, ba chóir iad uile a chur leis mar ráitis léirithe ar leithligh, laistigh de réasún."
+
+#: templates/main/help.html:143
+msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
+msgstr "I gcás comhad a léiríonn dosaenacha nó na céadta mír (e.g. scannáin) ná liostaigh ach na míreanna is suntasaí."
+
+#: templates/main/help.html:146
+msgid "There is also an option to mark a particular item as 'prominent'."
+msgstr "Tá rogha ann freisin chun mír ar leith a mharcáil mar 'suntasach'."
+
+#: templates/main/help.html:147
+msgid "This property refers to the item's prominence in the piece of media."
+msgstr "Tagraíonn an airí seo do shuntasacht na míre sa phíosa meán."
+
+#: templates/main/help.html:150
+msgid "More information about depicts may be found here :"
+msgstr "Is féidir tuilleadh eolais faoi léirithe a fháil anseo:"
+
+#: templates/main/help.html:154
+msgid "Using the ISA tool"
+msgstr "Ag baint úsáide as an uirlis ISA"
+
+#: templates/main/help.html:157
+msgid "More information may be found here:"
+msgstr "Is féidir tuilleadh eolais a fháil anseo:"
+
+#: templates/main/help.html:161
+msgid "Legal and credits"
+msgstr "Dlí agus creidmheasanna"
+
+#: templates/main/help.html:165
+msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
+msgstr "Tá sé ag rith ar tools.wmflabs.org, agus tá sé faoi réir Théarmaí Úsáide Sheirbhísí Scamall Wikimedia."
+
+#: templates/main/help.html:166
+msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
+msgstr "Tá ISA foilsithe faoi GPLv3. Tá ábhar a chuirtear leis an uirlis chuig Wikimedia Commons eisithe faoi CC0."
+
+#: templates/main/help.html:169
+msgid "Image used on the tool :"
+msgstr "Íomhá a úsáideadh ar an uirlis:"
+
+#: templates/main/home.html:11
+msgid "Easily Add Information about Images on Wikimedia Commons"
+msgstr "Cuir Faisnéis faoi Íomhánna ar Wikimedia Commons go Héasca"
+
+#: templates/main/home.html:15
+#, python-format
+msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
+msgstr "Is uirlis ilteangach, atá dírithe ar fhóin phóca, é <strong>ISA</strong> a fhágann go bhfuil sé éasca do dhaoine 'micrea-ranníocaíochtaí' a chur leis i bhfoirm <a %(link_attrs)s title='Learn more about structured data'>sonraí struchtúrtha</a> (tuairiscí, fotheidil, clibeanna, srl.) le híomhánna atá curtha ar fáil do Wikimedia Commons ag comórtais Wiki Loves."
+
+#: templates/main/home.html:16
+msgid "<strong>Click on Explore Campaigns to begin!</strong>"
+msgstr "<strong>Cliceáil ar Iniúchadh Feachtais le tosú!</strong>"
+
+#: templates/main/home.html:19
+msgid "Go to the campaign directory to choose a campaign"
+msgstr "Téigh chuig an eolaire feachtasaíochta chun feachtas a roghnú"
+
+#: templates/main/home.html:19
+msgid "EXPLORE CAMPAIGNS"
+msgstr "FEACHTAIS INIÚCHTA"
+
+#: templates/main/home.html:22
+msgid "About This Tool"
+msgstr "Maidir leis an Uirlis seo"
+
+#: templates/main/home.html:23
+msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
+msgstr "San fhadtréimhse, is é an cuspóir atá leis an uirlis ná úsáid an eolais a léirítear i ngach íomhá atá á óstáil ar Wikimedia Commons a mhéadú."
+
+#: templates/main/home.html:24
+msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
+msgstr "Tá sé mar aidhm ag an uirlis cabhrú le húsáideacht agus faisnéis na n-íomhánna a bhronntar le linn chomórtais Wiki Loves."
+
+#: templates/main/home.html:25
+msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
+msgstr "Tá sé á thógáil ar dtús chun cabhrú le cur síos a dhéanamh ar íomhánna Wiki Loves Africa, ach tá sé á shamhaltú go sonrach le bheith úsáideach do gach comórtas Wiki Loves agus níos faide anonn."
+
+#: templates/main/home.html:26
+msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
+msgstr "Tá an uirlis deartha freisin le bheith ina hóstach ar chomórtais micrea-ranníocaíochtaí arna moladh ag ceannairí tionscadail."
+
+#: templates/main/home.html:27
+msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
+msgstr "Is comhoibriú idir Wiki In Africa, Histopedia agus an tionscadal Structured Data on Commons é ISA."
+
+#: templates/main/home.html:28
+msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
+msgstr "Ní hamháin gur acrainm é ISA do Luasghéarú Struchtúrtha Faisnéise, ach is focal i dteanga ChiShona é freisin do 'cuir' nó 'áit'."
+
+#: templates/main/layout.html:34
+msgid "Home"
+msgstr "Baile"
+
+#: templates/main/layout.html:45
+msgid "Create new campaign"
+msgstr "Cruthaigh feachtas nua"
+
+#: templates/main/layout.html:51
+msgid "Help"
+msgstr "Cabhair"
+
+#: templates/main/layout.html:67
+msgid "Change your available caption languages"
+msgstr "Athraigh na teangacha fotheideal atá ar fáil"
+
+#: templates/main/layout.html:67 templates/users/user_settings.html:6
+msgid "Language preferences"
+msgstr "Roghanna teanga"
+
+#: templates/main/layout.html:68
+msgid "See your campaigns"
+msgstr "Féach ar do fheachtais"
+
+#: templates/main/layout.html:68
+msgid "My campaigns"
+msgstr "Mo fheachtais"
+
+#: templates/main/layout.html:75 templates/main/layout.html:79
+msgid "Logout"
+msgstr "Logáil Amach"
+
+#: templates/main/layout.html:83
+msgid "Login"
+msgstr "Logáil Isteach"
+
+#: templates/main/layout.html:107
+msgid "ISA tool"
+msgstr "Uirlis IAA"
+
+#: templates/main/layout.html:108
+msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
+msgstr "forbraíodh é mar chomhoibriú idir Wiki In Africa, Histopedia agus an tionscadal Structured Data on Commons"
+
+#: templates/main/layout.html:109
+msgid "Further devopment supported by "
+msgstr "Tacaítear le tuilleadh forbartha ag "
+
+#: templates/main/layout.html:113
+msgid "It is running on"
+msgstr "Tá sé ag rith ar"
+
+#: templates/main/layout.html:115
+msgid "and is subject to the"
+msgstr "agus tá sé faoi réir an"
+
+#: templates/main/layout.html:117
+msgid "ISA is published under"
+msgstr "Foilsítear ISA faoi"
+
+#: templates/main/layout.html:119
+msgid "Content added through the tool to Wikimedia Commons is released under"
+msgstr "Scaoiltear ábhar a chuirtear leis an uirlis chuig Wikimedia Commons faoi"
+
+#: templates/users/own_campaigns.html:7
+msgid "Your Campaigns"
+msgstr "Do Fheachtais"
+
+#: templates/users/own_campaigns.html:16
+msgid "Below is a list of your campaigns"
+msgstr "Seo thíos liosta de do fheachtais"
+
+#: templates/users/own_campaigns.html:18
+msgid "You do not have any campaigns"
+msgstr "Níl aon fheachtais agat"
+
+#: templates/users/user_settings.html:15
+msgid "Depicts language"
+msgstr "Léiríonn teanga"
+
+#: templates/users/user_settings.html:15
+msgid "The selected language will be used for searching for elements depicted in images."
+msgstr "Úsáidfear an teanga roghnaithe chun eilimintí a léirítear in íomhánna a chuardach."
+
+#: templates/users/user_settings.html:15
+msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
+msgstr "Má roghnaítear 'Mar an gcéanna leis an gcomhéadan', úsáidfear an teanga a roghnaíodh sa roghchlár uachtarach."
+
+#: templates/users/user_settings.html:19
+msgid "Select upto 6 languages for captions"
+msgstr "Roghnaigh suas le 6 theanga le haghaidh fotheidil"
+
+#: templates/users/user_settings.html:19
+msgid "Caption languages"
+msgstr "Teangacha fotheideal"
+
+#: templates/users/user_settings.html:19
+msgid "Captions can be added in multiple languages for each image."
+msgstr "Is féidir fotheidil a chur leis i dteangacha éagsúla le haghaidh gach íomhá."
+
+#: templates/users/user_settings.html:19
+msgid "The languages you select on this page will appear on the page when you are viewing an image."
+msgstr "Beidh na teangacha a roghnaíonn tú ar an leathanach seo le feiceáil ar an leathanach nuair a bheidh tú ag féachaint ar íomhá."
+
+#: templates/users/user_settings.html:19
+msgid "Select all the languages you are comfortable contributing in."
+msgstr "Roghnaigh na teangacha uile ina bhfuil tú sásta cur leis."
+
+#: templates/users/user_settings.html:23 templates/users/user_settings.html:29
+#: templates/users/user_settings.html:35 templates/users/user_settings.html:41
+#: templates/users/user_settings.html:47 templates/users/user_settings.html:53
+msgid "Remove language"
+msgstr "Bain teanga"
+
+#: templates/users/user_settings.html:57
+msgid "Undo changes to language settings"
+msgstr "Cealaigh athruithe ar shocruithe teanga"
+
+#: templates/users/user_settings.html:57
+msgid "Undo changes"
+msgstr "Cealaigh athruithe"
+
+#: users/forms.py:26
+msgid "Same as interface"
+msgstr "Mar an gcéanna leis an gcomhéadan"
+
+#: users/routes.py:54
+msgid "OAuth callback failed. Are cookies disabled?"
+msgstr "Theip ar ghlao ar ais OAuth. An bhfuil fianáin díchumasaithe?"
+
+#: users/routes.py:74
+#, python-format
+msgid "Welcome %(username)s!"
+msgstr "Fáilte roimh %(username)s!"
+
+#: users/routes.py:88
+msgid "See you next time!"
+msgstr "Feicfidh mé thú an chéad uair eile!"
+
+#: users/routes.py:104
+msgid "Please login to change your language preferences"
+msgstr "Logáil isteach le do thoil chun do chuid sainroghanna teanga a athrú"
+
+#: users/routes.py:145
+#, python-format
+msgid "Sorry you tried to enter %(rep_languages)s multiple times"
+msgstr "Tá brón orm gur iarraigh tú %(rep_languages)s a iontráil arís agus arís eile."
+
+#: users/routes.py:158
+msgid "Captions languages could not be set"
+msgstr "Níorbh fhéidir teangacha na bhfotheideal a shocrú"
+
+#: users/routes.py:160
+msgid "Preferred languages set"
+msgstr "Socraíodh teangacha is fearr"
+
+#: users/routes.py:173
+msgid "Language settings not available at the moment"
+msgstr "Níl socruithe teanga ar fáil faoi láthair"
+
+#: users/routes.py:175
+#, python-format
+msgid "%(username)s's Settings"
+msgstr "Socruithe %(username)s"
+
+#: users/routes.py:199
+#, python-format
+msgid "Campaigns created by %(username)s"
+msgstr "Feachtais cruthaithe ag %(username)s"
+
+#: templates/footer.html:1
+msgid "Powered by SWITCH/WMSE/Bern Uni"
+msgstr "Cumhachtaithe ag SWITCH/WMSE/Ollscoil Bhearn"
+
