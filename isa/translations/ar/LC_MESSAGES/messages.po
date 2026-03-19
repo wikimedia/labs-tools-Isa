@@ -6,6 +6,7 @@
 # Author: Meno25
 # Author: Mohammed Qays
 # Author: NEHAOUA
+# Author: Sandra Hanbo
 # Author: أيوب
 # Author: محمد أحمد عبد الفتاح
 # --
@@ -15,7 +16,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-10-30 12:43:55+0000\n"
+"PO-Revision-Date: 2026-03-19 12:27:17+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,7 +63,7 @@ msgstr "أنشئ حملة"
 #: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr "%(campaign_name)s - المساهمة"
+msgstr "%(campaign_name)s - ساهم"
 
 #: campaigns/routes.py:273
 msgid "You need to log in to update a campaign"
@@ -126,7 +127,7 @@ msgstr "هذا هو الاسم الخاص بحملتك، وليس المشروع
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr "لذلك، ليس \"Wiki Loves Africa\" بل \"الموسيقى والرقص في نيجيريا\""
+msgstr "لذلك، ليس \"ويكي تهوى إفريقيا\" بل \"الموسيقى والرقص في نيجيريا\""
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
@@ -156,7 +157,7 @@ msgstr "حدد تاريخ انتهاء الحملة"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "هذه حملة Wiki Loves"
+msgstr "هذه حملة \"ويكي تهوى ...\""
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
@@ -168,7 +169,7 @@ msgstr "يمكنك تحديد تصنيفات متعددة من النوع الص
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr "يجب ضبط العمق على 0 لجميع التصنيفات في حملة Wiki Loves."
+msgstr "يجب ضبط العمق على 0 لجميع التصنيفات في حملة ويكي تهوى."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
