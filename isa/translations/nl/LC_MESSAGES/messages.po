@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-02-02 12:28:25+0000\n"
+"PO-Revision-Date: 2026-04-13 12:28:21+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -479,7 +479,7 @@ msgstr "Cameralocatie"
 
 #: templates/campaign/campaign_entry.html:38
 msgid "show all metadata from commons"
-msgstr "Toon alle metadata van Commons"
+msgstr "alle metadata van Commons weergeven"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
@@ -575,7 +575,7 @@ msgstr "metadata van Commons minimaliseren"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr "toon alle metadata van Commons"
+msgstr "alle metadata van Commons weergeven"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -623,7 +623,7 @@ msgstr "De suggestie is mogelijk niet verwijderd"
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr "Suggesties tonen"
+msgstr "Suggesties weergeven"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
@@ -747,7 +747,7 @@ msgstr "Ga naar campagne"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr "Toon afgesloten campagnes"
+msgstr "Afgesloten campagnes weergeven"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:32
