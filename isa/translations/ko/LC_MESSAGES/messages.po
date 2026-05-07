@@ -1,6 +1,7 @@
 # Translation of ISA to Korean (한국어)
 # Exported from translatewiki.net
 #
+# Author: Tensama0415
 # Author: YeBoy371
 # Author: Ykhwong
 # Author: 아라
@@ -11,7 +12,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-02-26 12:22:53+0000\n"
+"PO-Revision-Date: 2026-05-07 12:23:49+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1356,9 +1357,8 @@ msgid "Captions languages could not be set"
 msgstr "캡션 언어를 설정하지 못했습니다"
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
-msgstr "선호하는 언어를 성공적으로 설정했습니다"
+msgstr "선호하는 언어 설정됨"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
