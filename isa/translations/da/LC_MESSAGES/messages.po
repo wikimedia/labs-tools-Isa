@@ -1,11 +1,8 @@
-# Translation of ISA to Turkish (Türkçe)
+# Translation of ISA to Danish (dansk)
 # Exported from translatewiki.net
 #
-# Author: Can
-# Author: Cobija
-# Author: HakanIST
-# Author: Hedda
-# Author: SaldırganSincap
+# Author: Peterleth
+# Author: Saederup92
 # --
 # Translation for the ISA project
 # This file is distributed under the same license as the ISA project.
@@ -13,330 +10,330 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-06-01 12:40:18+0000\n"
+"PO-Revision-Date: 2026-06-01 12:40:14+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
-"X-Generator: MediaWiki 1.47.0-alpha; Translate 2025-07-31\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: da\n"
 "Project-Id-Version: ISA\n"
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.47.0-alpha; Translate 2025-07-31\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: campaigns/routes.py:38 templates/campaign/campaigns.html:6
 #: templates/main/layout.html:39
 msgid "Campaigns"
-msgstr "Kampanyalar"
+msgstr "Kampagner"
 
 #: campaigns/routes.py:56 campaigns/routes.py:144
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "%(id)s kimliğine sahip kampanya mevcut değil"
+msgstr "Kampagne med id %(id)s findes ikke"
 
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr "Kampanya - %(campaign_name)s"
+msgstr "Kampagne - %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
-msgstr "Kampanya oluşturmak için oturum açmanız gerekiyor"
+msgstr "Du skal logge ind for at oprette en kampagne"
 
 #: campaigns/routes.py:223
 #, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
-msgstr "Üzgünüz, %(campaign_name)s oluşturulamadı"
+msgstr "Beklager, %(campaign_name)s kunne ikke oprettes"
 
 #: campaigns/routes.py:231
 #, python-format
 msgid "%(campaign_name)s campaign created!"
-msgstr "%(campaign_name)s kampanyası oluşturuldu!"
+msgstr "%(campaign_name)s kampagne oprettet!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
-msgstr "Bir kampanya oluştur"
+msgstr "Opret en kampagne"
 
 #: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr "%(campaign_name)s - Katkıda bulun"
+msgstr "%(campaign_name)s - Bidrag"
 
 #: campaigns/routes.py:273
 msgid "You need to log in to update a campaign"
-msgstr "Kampanyayı güncellemek için oturum açmanız gerekiyor"
+msgstr "Du skal logge ind for at opdatere en kampagne"
 
 #: campaigns/routes.py:299
 msgid "Campaign update failed. Please try later!"
-msgstr "Kampanya güncellemesi başarısız oldu. Lütfen daha sonra deneyin!"
+msgstr "Kampagneopdatering mislykkedes. Prøv igen senere!"
 
 #: campaigns/routes.py:303
 msgid "Update succesfull!"
-msgstr "Güncelleme başarılı!"
+msgstr "Opdatering vellykket!"
 
 #: campaigns/routes.py:312
 #, python-format
 msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
-msgstr "Bu kampanyayı güncelleyemezsiniz. Yönetici User:%(username)s ile iletişime geçin."
+msgstr "Du kan ikke opdatere denne kampagne. Kontakt administratoren, Bruger: %(username)s."
 
 #: campaigns/routes.py:328
 #, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
-msgstr "Pes! %(campaign_name)s güncellenemedi!"
+msgstr "Øv! %(campaign_name)s kunne ikke opdateres!"
 
 #: campaigns/routes.py:333
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr "%(campaign_name)s - Güncelle"
+msgstr "%(campaign_name)s – Opdater"
 
 #: campaigns/routes.py:375
 msgid "You need to login to participate"
-msgstr "Katılmak için oturum açmanız gerekiyor"
+msgstr "Du skal logge ind for at deltage"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr "Kampanya Ayrntılarını Güncelle"
+msgstr "Opdater kampagnedetaljer"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr "Yeni Kampanya Oluştur"
+msgstr "Opret en ny kampagne"
 
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr "%(campaign)s kampanyasını güncelliyorsunuz"
+msgstr "Du opdaterer %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create your campaign"
-msgstr "Kampanyanızı oluşturmak için aşağıdaki formu doldurun"
+msgstr "Udfyld formularen nedenfor for at oprette din kampagne"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr "* işaretli alanlar zorunludur"
+msgstr "Felter markeret med * er obligatoriske"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
-msgstr "Kampanya Adı"
+msgstr "Kampagnenavn"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr "Bu, ana projeye değil; kampanyanıza özel bir addır."
+msgstr "Dette er navnet specifikt for din kampagne, ikke hovedprojektet."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
-msgstr "Yani “Wiki Afrika'yı Seviyor” değil de “Nijerya'da Müzik ve Dans” gibi"
+msgstr "Så ikke “Wiki elsker Afrika”, men snarere “Musik og dans i Nigeria”"
 
 #: templates/campaign/campaign-form.html:48
 msgid "Short description of Campaign (144 characters)"
-msgstr "Kampanyanın kısa açıklaması (144 karakter)"
+msgstr "Kort beskrivelse af kampagnen (144 tegn)"
 
 #: templates/campaign/campaign-form.html:60
 msgid "What are users going to be working on"
-msgstr "Kullanıcılar ne üzerinde çalışacak"
+msgstr "Hvad skal brugerne arbejde på"
 
 #: templates/campaign/campaign-form.html:68
 #: templates/campaign/campaigns.html:25
 msgid "Start Date"
-msgstr "Başlangıç Tarihi"
+msgstr "Startdato"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr "Kampanyanın başlangıç tarihini ayarla"
+msgstr "Angiv kampagnens startdato"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
 msgid "End Date"
-msgstr "Bitiş Tarihi"
+msgstr "Slutdato"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr "Kampanyanın bitiş tarihini ayarla"
+msgstr "Angiv kampagnens slutdato"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "Bu bir Viki Kampanyayı Seviyor'dur"
+msgstr "Dette er en Wiki Loves-kampagne"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
-msgstr "Doğru ayarlandığı takdirde bu seçenek, katılımcıların hangi ülkeden görüntüler görmek istediklerini seçmelerine ve ülkelere göre katkıları kaydetmelerine olanak tanır."
+msgstr "Når den er korrekt konfigureret, giver denne mulighed for at deltagerne kan vælge, hvilket land de ønsker at se billeder fra, og bidrag registreres efter land."
 
 #: templates/campaign/campaign-form.html:112
 msgid " You can select multiple categories of the correct type."
-msgstr " Doğru türden birden fazla kategori seçebilirsiniz."
+msgstr "Du kan vælge flere kategorier af den korrekte type."
 
 #: templates/campaign/campaign-form.html:112
 msgid "Depth must be set to 0 for all categories in a Wiki Loves campaign."
-msgstr "Bir Wiki Loves kampanyasındaki tüm kategoriler için derinlik 0 olarak ayarlanmalıdır."
+msgstr "Dybden skal sættes til 0 for alle kategorier i en Wiki Loves-kampagne."
 
 #: templates/campaign/campaign-form.html:114
 msgid "Requires categories of the form images from Wiki Loves <strong><em>project</em></strong> in a specific <strong><em>year</em></strong>, eg “Images from Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong>” (change <strong><em>project</em></strong> and year as <strong><em>required</em></strong>)"
-msgstr "Wiki Loves <strong><em>proje</em></strong> biçimindeki görseller kategorilerini gerektirir"
+msgstr "Kræver kategorier af formularen billeder fra Wiki Loves <strong><em>-projektet</em></strong> i et bestemt <strong><em>år</em></strong> , f.eks. \"Billeder fra Wiki Loves <strong><em>Africa</em></strong> <strong><em>2019</em></strong> \" (ændre <strong><em>projekt</em></strong> og år efter <strong><em>behov</em></strong> )"
 
 #: templates/campaign/campaign-form.html:116
 msgid "Some of the categories chosen below do not have the correct syntax"
-msgstr "Aşağıda seçilen kategorilerden bazıları doğru sözdizimine sahip değil"
+msgstr "Nogle af de nedenfor valgte kategorier har ikke den korrekte syntaks"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Categories to use in this campaign"
-msgstr "Bu kampanyada kullanılacak kategoriler"
+msgstr "Kategorier, der skal bruges i denne kampagne"
 
 #: templates/campaign/campaign-form.html:124
 msgid "Search for the Wikimedia Commons categories that contain the images you wish to use in your campaign."
-msgstr "Kampanyanıza dahil etmek istediğiniz görselleri içeren Wikimedia Commons kategorilerini arayın"
+msgstr "Søg efter de Wikimedia Commons-kategorier, der indeholder de billeder, du ønsker at bruge i din kampagne."
 
 #: templates/campaign/campaign-form.html:124
 msgid "If you want a category and ALL of its subcategories use the 'Depth' option to choose how many levels down you want to go (leave depth on 0 for Wiki loves campaigns)."
-msgstr "Bir kategori ve TÜM alt kategorilerini istiyorsanız, seçmek için 'Derinlik' seçeneğini kullanın"
+msgstr "Hvis du vil have en kategori og ALLE dens underkategorier, skal du bruge 'Dybde'-funktionen til at vælge, hvor mange niveauer ned du vil gå (lad dybden være på 0 for Wiki loves-kampagner)."
 
 #: templates/campaign/campaign-form.html:151
 msgid "Choose categories to use in the campaign"
-msgstr "Kampanyada kullanılacak kategorileri seçin"
+msgstr "Vælg kategorier, der skal bruges i kampagnen"
 
 #: templates/campaign/campaign-form.html:155
 msgid "Name"
-msgstr "Ad"
+msgstr "Navn"
 
 #: templates/campaign/campaign-form.html:156
 msgid "Depth"
-msgstr "Derinlik"
+msgstr "Dybde"
 
 #: templates/campaign/campaign-form.html:165
 msgid "The categories in red do not have the correct syntax for the \"Wiki Loves campaign\" feature."
-msgstr "Kırmızı renkteki kategoriler \"Wiki Loves kampanyası\" için doğru sözdizimine sahip değil"
+msgstr "Kategorierne markeret med rødt har ikke den korrekte syntaks til funktionen \"Wiki Loves-kampagnen\"."
 
 #: templates/campaign/campaign-form.html:166
 msgid "Please remove them or untick the \"Wiki Loves Campaign\" checkbox above"
-msgstr "Lütfen bunları kaldırın veya yukarıdaki \"Wiki Loves Kampanyası\" onay kutusunun işaretini kaldırın"
+msgstr "Fjern dem venligst, eller fjern markeringen i afkrydsningsfeltet \"Wiki Loves Campaign\" ovenfor."
 
 #: templates/campaign/campaign-form.html:172
 msgid "Update images"
-msgstr "Görselleri güncelle"
+msgstr "Opdater billeder"
 
 #: templates/campaign/campaign-form.html:174
 msgid "Collect images from the categories."
-msgstr "Kategorilerden görselleri topla."
+msgstr "Saml billeder fra kategorierne."
 
 #: templates/campaign/campaign-form.html:174
 msgid "This will replace any current images."
-msgstr "Bu, mevcut görsellerin yerini alacaktır."
+msgstr "Dette vil erstatte alle nuværende billeder."
 
 #: templates/campaign/campaign-form.html:174
 msgid "Use if you changed the categories or if there was an error updating previously."
-msgstr "Kategorileri değiştirdiyseniz veya daha önce güncelleme sırasında hata oluştuysa kullanın."
+msgstr "Bruges hvis du har ændret kategorierne, eller hvis der opstod en fejl under opdateringen tidligere."
 
 #: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
-msgstr "Kampanyada toplanacak meta veriler"
+msgstr "Metadata, der skal indsamles i kampagnen"
 
 #: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr "Kampanyanızda ne tür <strong>meta veri</strong> toplamak istediğinizi seçin"
+msgstr "Vælg hvilken type <strong>metadata</strong> du vil indsamle i din kampagne."
 
 #: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
-msgstr "Aşağıdaki seçeneklerden en az birini seçmek zorundasınız."
+msgstr "Du skal vælge mindst én af nedenstående muligheder."
 
 #: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
-msgstr "Tasvirler ve Altyazı meta verileri hakkında daha fazla bilgi edinmek için yardım sayfasına bakın."
+msgstr "For at få mere at vide om metadata for afbildninger og billedtekster, se hjælpesiden."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
 msgid "Depicts"
-msgstr "Tasvirler"
+msgstr "Skildrer"
 
 #: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campaign"
-msgstr "Kampanyada Tasvir meta verilerini toplamayı seçin"
+msgstr "Vælg at indsamle Skildrer-metadata i kampagnen"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:105
 msgid "Captions"
-msgstr "Altyazılar"
+msgstr "Billedtekst"
 
 #: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campaign"
-msgstr "Kampanyada Altyazı meta verilerini toplamayı seçin"
+msgstr "Vælg at indsamle metadata for billedtekster i kampagnen"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
-msgstr "Kampanya Görseli"
+msgstr "Kampagnebillede"
 
 #: templates/campaign/campaign-form.html:216
 msgid "The maximum height for the campaign image is 150px. Images should either be a banner image or a logo."
-msgstr "Kampanya görseli için maksimum yükseklik 150 pikseldir. Görseller bir afiş görseli veya logo olmalıdır."
+msgstr "Den maksimale højde for kampagnebilledet er 150px. Billederne skal enten være et bannerbillede eller et logo."
 
 #: templates/campaign/campaign-form.html:216
 msgid "Portrait or square photos are not recommended."
-msgstr "Portre veya kare fotoğraflar önerilmez."
+msgstr "Portræt- eller kvadratiske billeder anbefales ikke."
 
 #: templates/campaign/campaign-form.html:228
 msgid "Enter the FILE NAME only of a image from commons to display on the Campaign home page."
-msgstr "Kampanya ana sayfasında görüntülemek için Commons'tan bir görselin yalnızca DOSYA ADINI girin."
+msgstr "Indtast kun FILNAVNET på et billede fra Commons, der skal vises på kampagnens forside."
 
 #: templates/campaign/campaign-form.html:234
 msgid "Long description of Campaign (full about info)"
-msgstr "Kampanyanın Uzun Açıklaması (tam hakkında bilgisi)"
+msgstr "Lang beskrivelse af kampagnen (fuldstændig information)"
 
 #: templates/campaign/campaign-form.html:246
 msgid "Why it is important that users contribute to the campaign?"
-msgstr "Kullanıcıların kampanyaya katkıda bulunması neden önemlidir?"
+msgstr "Hvorfor er det vigtigt, at brugerne bidrager til kampagnen?"
 
 #: templates/campaign/campaign-form.html:252
 msgid "Publish Campaign"
-msgstr "Kampanyayı Yayımla"
+msgstr "Udgiv kampagne"
 
 #: templates/campaign/campaign-form.html:262
 msgid "You must select at least one category for your campaign."
-msgstr "Kampanyanız için en az bir kategori seçmek zorundasınız."
+msgstr "Du skal vælge mindst én kategori til din kampagne."
 
 #: templates/campaign/campaign-form.html:263
 msgid "Some of the categories you have chosen do not have the correct syntax for a Wiki Loves Campaign."
-msgstr "Seçtiğiniz kategorilerden bazıları Wiki Loves Kampanyası için doğru sözdizimine sahip değil."
+msgstr "Nogle af de kategorier, du har valgt, har ikke den korrekte syntaks til en Wiki Loves-kampagne."
 
 #: templates/campaign/campaign-form.html:264
 msgid "Please check your selections and try again."
-msgstr "Lütfen seçimlerinizi kontrol edin ve tekrar deneyin."
+msgstr "Tjek venligst dine valg, og prøv igen."
 
 #: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr "Lütfen Toplanacak Meta Veriler bölümünden en az bir tür seçin"
+msgstr "Vælg mindst én type fra afsnittet Metadata, der skal indsamles"
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
-msgstr "Görselleri şuradan görüntüle:"
+msgstr "Se billeder fra"
 
 #: templates/campaign/campaign.html:19
 msgid "Choose to only view images from a single country"
-msgstr "Yalnızca tek bir ülkeden görselleri görüntülemeyi seçin"
+msgstr "Vælg kun at se billeder fra et enkelt land"
 
 #: templates/campaign/campaign.html:26
 msgid "Start contributing to this campaign"
-msgstr "Bu kampanyaya katkıda bulunmaya başlayın"
+msgstr "Begynd at bidrage til denne kampagne"
 
 #: templates/campaign/campaign.html:26 templates/campaign/campaigns.html:33
 msgid "Get Started"
-msgstr "Başlayın"
+msgstr "Kom i gang"
 
 #: templates/campaign/campaign.html:33
 msgid "Campaign progress so far"
-msgstr "Şu ana kadarki kampanya süreci"
+msgstr "Kampagnefremskridt indtil videre"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 msgid "Total number of images in this campaign"
-msgstr "Bu kampanyadaki toplam görsel sayısı"
+msgstr "Samlet antal billeder i denne kampagne"
 
 #: templates/campaign/campaign.html:36
 #: templates/campaign/campaign_stats.html:19
 #: templates/campaign/campaigns.html:22
 msgid "Images"
-msgstr "Görseller"
+msgstr "Billeder"
 
 #: templates/campaign/campaign.html:37
 #: templates/campaign/campaign_stats.html:20
 msgid "Total number of contributions made to this campaign"
-msgstr "Bu kampanyaya yapılan toplam katkı sayısı"
+msgstr "Samlet antal bidrag til denne kampagne"
 
 #: templates/campaign/campaign.html:37 templates/campaign/campaign.html:47
 #: templates/campaign/campaign.html:79 templates/campaign/campaign.html:124
@@ -345,820 +342,820 @@ msgstr "Bu kampanyaya yapılan toplam katkı sayısı"
 #: templates/campaign/campaign_stats.html:76
 #: templates/campaign/campaigns.html:24
 msgid "Contributions"
-msgstr "Katkılar"
+msgstr "Bidrag"
 
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
-msgstr "En çok katkıda bulunanlar"
+msgstr "Topbidragere"
 
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr "Katkıda bulunan"
+msgstr "Bidragsyder"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
 msgid "No partcipants has contributed to this campaign"
-msgstr "Bu kampanyaya henüz hiçbir katılımcı katkıda bulunmadı"
+msgstr "Ingen deltagere har bidraget til denne kampagne"
 
 #: templates/campaign/campaign.html:74
 msgid "Most improved countries"
-msgstr "En çok gelişen ülkeler"
+msgstr "De mest forbedrede lande"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
 msgid "Country"
-msgstr "Ülke"
+msgstr "Land"
 
 #: templates/campaign/campaign.html:97
 #: templates/campaign/campaign_stats.html:94
 msgid "There is no data available yet for this campaign"
-msgstr "Bu kampanya için henüz veri mevcut değil"
+msgstr "Der er endnu ingen data tilgængelige for denne kampagne"
 
 #: templates/campaign/campaign.html:105
 msgid "View and download more stats for this campaign"
-msgstr "Bu kampanya için daha fazla istatistik görüntüleyin ve indirin"
+msgstr "Se og download flere statistikker for denne kampagne"
 
 #: templates/campaign/campaign.html:105
 msgid "View full stats"
-msgstr "Tam istatisiği görüntüle"
+msgstr "Se fuld statistik"
 
 #: templates/campaign/campaign.html:116
 msgid "My Contributions"
-msgstr "Katkılarım"
+msgstr "Mine bidrag"
 
 #: templates/campaign/campaign.html:123
 msgid "Rank"
-msgstr "Sıralama"
+msgstr "Rang"
 
 #: templates/campaign/campaign.html:141
 msgid "More About This Campaign"
-msgstr "Bu Kampanya Hakkında Daha Fazla"
+msgstr "Mere om denne kampagne"
 
 #: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
-msgstr "Kampanya Yöneticisi"
+msgstr "Kampagneadministrator"
 
 #: templates/campaign/campaign.html:145
 msgid "START DATE"
-msgstr "BAŞLANGIÇ TARİHİ"
+msgstr "STARTDATO"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaign.html:149
 msgid "END DATE"
-msgstr "BİTİŞ TARİHİ"
+msgstr "SLUTDATO"
 
 #: templates/campaign/campaign.html:147 templates/campaign/campaigns.html:46
 msgid "Not Set"
-msgstr "Ayarlanmadı"
+msgstr "Ikke indstillet"
 
 #: templates/campaign/campaign.html:156
 msgid "Make changes to this campaign"
-msgstr "Bu kampanyada değişiklik yapın"
+msgstr "Foretag ændringer i denne kampagne"
 
 #: templates/campaign/campaign.html:156
 msgid "Edit Campaign"
-msgstr "Kampanyayı Düzenle"
+msgstr "Redigér kampagne"
 
 #: templates/campaign/campaign.html:162
 msgid "Unknown country"
-msgstr "Bilinmeyen Ülke"
+msgstr "Ukendt land"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr "Kampanya ana sayfasına dön"
+msgstr "Tilbage til kampagnens forside"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
 msgid "Home Page"
-msgstr "Anasayfa"
+msgstr "Forside"
 
 #: templates/campaign/campaign_entry.html:23
 msgid "View the previous image"
-msgstr "Önceki görseli görüntüle"
+msgstr "Se det forrige billede"
 
 #: templates/campaign/campaign_entry.html:23
 #: templates/campaign/campaign_entry.html:127
 msgid "PREV IMAGE"
-msgstr "ÖNCK GÖRSEL"
+msgstr "FORRIGE BILLEDE"
 
 #: templates/campaign/campaign_entry.html:25
 msgid "Own work"
-msgstr "Kendi çalışması"
+msgstr "Eget arbejde"
 
 #: templates/campaign/campaign_entry.html:27
 msgid "View the next image"
-msgstr "Sonraki görseli görüntüle"
+msgstr "Se det næste billede"
 
 #: templates/campaign/campaign_entry.html:27
 #: templates/campaign/campaign_entry.html:128
 msgid "NEXT IMAGE"
-msgstr "SONRK GÖRSEL"
+msgstr "NÆSTE BILLEDE"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "File"
-msgstr "Dosya"
+msgstr "Fil"
 
 #: templates/campaign/campaign_entry.html:32
 msgid "Open this image on Wikimedia Commons"
-msgstr "Bu görseli Wikimedia Commons'ta aç"
+msgstr "Åbn dette billede på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:33
 msgid "Description"
-msgstr "Açıklama"
+msgstr "Beskrivelse"
 
 #: templates/campaign/campaign_entry.html:34
 msgid "Categories"
-msgstr "Kategoriler"
+msgstr "Kategorier"
 
 #: templates/campaign/campaign_entry.html:35
 msgid "Camera Location"
-msgstr "Kamera Konumu"
+msgstr "Kameraplacering"
 
 #: templates/campaign/campaign_entry.html:38
 msgid "show all metadata from commons"
-msgstr "Commons'tan tüm meta verileri göster"
+msgstr "vis alle metadata fra commons"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
-msgstr "Tasvir İfadeleri Ekleme"
+msgstr "Tilføjelse af Skildrings-udsagn"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "Basit tutun: Her görselde gördüklerinizi tanımlamak için basit kelimeler ve kavramlar kullanın (ör. kedi, dağ, Tac Mahal)"
+msgstr "Gør det enkelt: Brug enkle ord og begreber til at beskrive, hvad du ser på hvert billede (f.eks. kat, bjerg, Taj Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
-msgstr "Değişiklerinizi iptal et"
+msgstr "Annuller dine ændringer"
 
 #: templates/campaign/campaign_entry.html:50
 #: templates/campaign/campaign_entry.html:107
 msgid "Cancel"
-msgstr "İptal"
+msgstr "Annullér"
 
 #: templates/campaign/campaign_entry.html:51
 msgid "Save your edits to Wikimedia Commons"
-msgstr "Düzenlemelerinizi Wikimedia Commons'a kaydedin"
+msgstr "Gem dine redigeringer på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:51
 #: templates/campaign/campaign_entry.html:108
 #: templates/users/user_settings.html:58
 msgid "Save"
-msgstr "Kaydet"
+msgstr "Gem"
 
 #: templates/campaign/campaign_entry.html:54
 msgid "You will be redirected to login and back here to save your changes"
-msgstr "Değişikliklerinizi kaydetmek için girişe yonlendirilecek ve geri geleceksiniz"
+msgstr "Du vil blive omdirigeret til login og tilbage hertil for at gemme dine ændringer"
 
 #: templates/campaign/campaign_entry.html:56
 msgid "Name the different elements that you can see in this image"
-msgstr "Bu görselde gördüğünüz farklı ögeleri adlandırın"
+msgstr "Nævn de forskellige elementer, du kan se på dette billede"
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr "Kabul Et"
+msgstr "Acceptér"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr "Reddet"
+msgstr "Afvis"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr "Önerileri Gizle"
+msgstr "Skjul forslag"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
-msgstr "Görseldeki belirgin öğeleri işaretlemek için bayrak simgesine tıklayın"
+msgstr "For at markere de fremtrædende elementer i billedet skal du klikke på flagikonet"
 
 #: templates/campaign/campaign_entry.html:105
 msgid "Writing Captions"
-msgstr "Altyazı Yazma"
+msgstr "Skrivning af billedtekster"
 
 #: templates/campaign/campaign_entry.html:105
 msgid "Include any culturally specific, scientific or technical information that you can identify (e.g. the Ethiopian Coffee Ceremony or bunna maflat) to make the information richer."
-msgstr "Görseldeki bilgiyi daha erişilebilir kılmak için tanımlayabildiğiniz kültürel, bilimsel veya teknik bilgileri ekleyin (ör. Etiyopya Kahve Töreni veya bunna maflat)"
+msgstr "Medtag alle kulturelt specifikke, videnskabelige eller tekniske oplysninger, som du kan identificere (f.eks. den etiopiske kaffeceremoni eller bunna maflat), for at gøre informationen mere fyldig."
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
-msgstr "Değişiklikleri yayımlamak için giriş yap"
+msgstr "Log ind for at offentliggøre ændringer"
 
 #: templates/campaign/campaign_entry.html:113
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr "Görseli daha iyi açıklamak için bir altyazı ekleyin (en fazla 255 karakter)"
+msgstr "Tilføj en billedtekst for bedre at forklare billedet (maks. 255 tegn)"
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Briefly explain what you see in this image."
-msgstr "Bu görselde ne gördüğünüzü kısaca açıklayın."
+msgstr "Forklar kort, hvad du ser på dette billede."
 
 #: templates/campaign/campaign_entry.html:122
 msgid "You can add captions in additional languages by selecting Language Preferences from the user menu"
-msgstr "Kullanıcı menüsünden Dil Tercihleri'ni seçerek ek dillerde altyazı ekleyebilirsiniz"
+msgstr "Du kan tilføje undertekster på flere sprog ved at vælge Sprogindstillinger i brugermenuen."
 
 #: templates/campaign/campaign_entry.html:134
 msgid "No images found for this campaign!"
-msgstr "Bu kampanya için görsel bulunamadı!"
+msgstr "Ingen billeder fundet til denne kampagne!"
 
 #: templates/campaign/campaign_entry.html:135
 msgid "Something went wrong getting campaign images"
-msgstr "Kampanya görselleri alınırken bir şeyler ters gitti"
+msgstr "Noget gik galt med at hente kampagnebilleder"
 
 #: templates/campaign/campaign_entry.html:136
 msgid "Search for things you see in the image"
-msgstr "Görselde gördüklerinizi arayın"
+msgstr "Søg efter ting, du ser på billedet"
 
 #: templates/campaign/campaign_entry.html:137
 msgid "minimise metadata from Commons"
-msgstr "Commons'tan meta verileri küçült"
+msgstr "minimér metadata fra Commons"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr "Commons'tan tüm meta verileri göster"
+msgstr "vis alle metadata fra Commons"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
-msgstr "Başarılı! Tasvir edilen öğeler Wikimedia Commons'a kaydedildi"
+msgstr "Succes! Afbildede elementer gemt på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:140
 msgid "Success! Captions saved to Wikimedia Commons"
-msgstr "Başarılı! Altyazılar Wikimedia Commons'a kaydedildi"
+msgstr "Succes! Tekster gemt på Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:141
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr "Hay aksi! Bir şeyler ters gitti, düzenlemeleriniz Wikimedia Commons'a kaydedilmedi"
+msgstr "Ups! Noget gik galt, dine redigeringer er ikke blevet gemt på Wikimedia Commons."
 
 #: templates/campaign/campaign_entry.html:142
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
-msgstr "Başka bir görsele gitmek istediğinizden emin misiniz? Kaydedilmemiş değişiklikleriniz kaybolacak."
+msgstr "Er du sikker på, at du vil navigere til et andet billede? Du har ugemte ændringer, som vil gå tabt."
 
 #: templates/campaign/campaign_entry.html:143
 msgid "Click 'OK' to proceed anyway, or 'Cancel' if you want to save changes first."
-msgstr "Yine de devam etmek için 'Tamam'a veya önce değişiklikleri kaydetmek istiyorsanız 'İptal'e tıklayın."
+msgstr "Klik på 'OK' for at fortsætte alligevel, eller 'Annuller', hvis du vil gemme ændringerne først."
 
 #: templates/campaign/campaign_entry.html:144
 msgid "Remove this depicted item"
-msgstr "Bu tasvir edilen öğeyi kaldır"
+msgstr "Fjern dette afbilledede element"
 
 #: templates/campaign/campaign_entry.html:145
 msgid "Mark this depicted item as prominent"
-msgstr "Bu tasvir edilen öğeyi belirgin olarak işaretle"
+msgstr "Marker denne afbildede genstand som fremtrædende"
 
 #: templates/campaign/campaign_entry.html:146
 msgid "Mark this depicted item as NOT prominent"
-msgstr "Bu tasvir edilen öğeyi belirgin DEĞİL olarak işaretle"
+msgstr "Marker denne afbildede genstand som IKKE fremtrædende"
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr "Öneri listeden kaldırıldı"
+msgstr "Forslag fjernet fra listen"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr "Lütfen giriş yapmış olduğunuzu kontrol edin"
+msgstr "Tjek venligst, at du er logget ind"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
-msgstr "Hay aksi! Öneri kaldırılmamış olabilir"
+msgstr "Ups! Forslaget er muligvis ikke blevet fjernet."
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr "Önerileri Göster"
+msgstr "Vis forslag"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
-msgstr "Bu öneriyi reddetmek istediğinizden emin misiniz?"
+msgstr "Er du sikker på, at du vil afvise dette forslag?"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
-msgstr "Bunu yalnızca önerilen etiketin görselde görünmediğinden veya Wikimedia Commons yönergelerine göre yanlış olacağından eminseniz yapın."
+msgstr "Gør kun dette, hvis du er sikker på, at det foreslåede tag ikke vises på billedet, eller at det ville være forkert i henhold til Wikimedia Commons' retningslinjer. Hvis flere brugere afviser det samme forslag, vil det ikke længere blive vist."
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
-msgstr "YAPILANDIRILMIŞ VERİ KAMPANYASINA KATKILAR"
+msgstr "BIDRAG TIL EN STRUKTURERET DATAKAMPAGNE"
 
 #: templates/campaign/campaign_stats.html:10
 msgid "From"
-msgstr "Kimden"
+msgstr "Fra"
 
 #: templates/campaign/campaign_stats.html:11
 msgid "Till"
-msgstr "Bitiş"
+msgstr "Til"
 
 #: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
-msgstr "En gelişmiş ülkeler"
+msgstr "De mest forbedrede lande"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
-msgstr "Tüm istatistikleri indir (CSV)"
+msgstr "Download alle statistikker (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
-msgstr "Katkıda bulunanların İstatistikleri"
+msgstr "Bidragyderstatistik"
 
 #: templates/campaign/campaign_stats.html:114
 msgid "Country Stats"
-msgstr "Ülke İstatistikleri"
+msgstr "Landestatistikker"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr "Bu sayfada ISA aracının bir parçası olarak şu anda yürütülen küratörlü kampanyalar bulunmaktadır."
+msgstr "På denne side er de kuraterede kampagner, der i øjeblikket kører som en del af ISA-værktøjet."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
-msgstr "Başlamak ve bir görsele yapılandırılmış veri eklemek için bir kampanyanın adına tıklayın."
+msgstr "Klik på navnet på en kampagne for at komme i gang og tilføje strukturerede data til et billede."
 
 #: templates/campaign/campaigns.html:8
 msgid "You can access information on the previous campaigns in the archive section."
-msgstr "Önceki kampanyalar hakkında bilgilere arşiv bölümünden erişebilirsiniz."
+msgstr "Du kan finde oplysninger om tidligere kampagner i arkivsektionen."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
-msgstr "Devam Eden Kampanyalar"
+msgstr "Igangværende kampagner"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr "Kampanya adı"
+msgstr "Kampagnenavn"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
-msgstr "Kampanya"
+msgstr "Kampagne"
 
 #: templates/campaign/campaigns.html:22
 msgid "Total number of images in the campaign"
-msgstr "Kampanyadaki toplam görsel sayısı"
+msgstr "Samlet antal billeder i denne kampagne"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign"
-msgstr "Kampanyaya katkıda bulunan editör sayısı"
+msgstr "Antal deltagere, der har bidraget til kampagnen"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
-msgstr "Katılımcılar"
+msgstr "Deltagere"
 
 #: templates/campaign/campaigns.html:24
 msgid "Total number of contributions to the campaign"
-msgstr "Kampanyaya yapılan toplam katkı sayısı"
+msgstr "Samlet antal bidrag til denne kampagne"
 
 #: templates/campaign/campaigns.html:25
 msgid "Campaign start date"
-msgstr "Kampanya başlangıç tarihi"
+msgstr "Kampagnens startdato"
 
 #: templates/campaign/campaigns.html:26
 msgid "Campaign end date"
-msgstr "Kampanya bitiş tarihi"
+msgstr "Kampagnens slutdato"
 
 #: templates/campaign/campaigns.html:27
 msgid "Date the campaign was created"
-msgstr "Kampanyanın oluşturulma tarihi"
+msgstr "Kampagnens oprettelsesdato"
 
 #: templates/campaign/campaigns.html:27
 msgid "Creation Date"
-msgstr "Oluşturma Tarihi"
+msgstr "Oprettelsesdato"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr "Kampanya durumu"
+msgstr "Kampagnestatus"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
-msgstr "Durum"
+msgstr "Status"
 
 #: templates/campaign/campaigns.html:54
 msgid "Closed"
-msgstr "Kapalı"
+msgstr "Lukket"
 
 #: templates/campaign/campaigns.html:57
 msgid "Not Opened"
-msgstr "Açık Değil"
+msgstr "Ikke åbnet"
 
 #: templates/campaign/campaigns.html:60
 msgid "Open"
-msgstr "Açık"
+msgstr "Åben"
 
 #: templates/campaign/campaigns.html:66 templates/users/own_campaigns.html:35
 msgid "Go to the campaign home page to get started"
-msgstr "Başlamak için kampanya ana sayfasına gidin"
+msgstr "Gå til kampagnens forside for at komme i gang"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr "Kampanyaya Git"
+msgstr "Gå til kampagne"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
-msgstr "Kapatılan kampanyaları göster"
+msgstr "Vis lukkede kampagner"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:32
 msgid "Create your own campaign"
-msgstr "Kendi kampanyanızı oluşturun"
+msgstr "Opret din egen kampagne"
 
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:32
 msgid "Create a new campaign using this tool"
-msgstr "Bu aracı kullanarak yeni bir kampanya oluşturun"
+msgstr "Opret en ny kampagne med dette værktøj"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
-msgstr "Kampanya oluşturmak için giriş yapmış olmalısınız."
+msgstr "Du skal være logget ind for at oprette en kampagne."
 
 #: templates/campaign/campaigns.html:90
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr "_TOTAL_ girişin _START_ - _END_ arası gösteriliyor"
+msgstr "Viser _START_ til _END_ af _TOTAL_ opslag"
 
 #: templates/campaign/campaigns.html:91
 msgid "No entries"
-msgstr "Girdi yok"
+msgstr "Ingen bidrag"
 
 #: templates/campaign/campaigns.html:93
 msgid "Search:"
-msgstr "Ara:"
+msgstr "Søg:"
 
 #: templates/campaign/campaigns.html:94
 msgid "No matching records found"
-msgstr "Eşleşen kayıt bulunamadı"
+msgstr "Ingen matchende poster fundet"
 
 #: templates/campaign/campaigns.html:96
 msgid "First"
-msgstr "İlk"
+msgstr "Første"
 
 #: templates/campaign/campaigns.html:97
 msgid "Last"
-msgstr "Son"
+msgstr "Sidste"
 
 #: templates/campaign/campaigns.html:98
 msgid "Next"
-msgstr "Sonraki"
+msgstr "Næste"
 
 #: templates/campaign/campaigns.html:99
 msgid "Previous"
-msgstr "Önceki"
+msgstr "Forrige"
 
 #: templates/campaign/macros.html:4
 msgid "Updating images"
-msgstr "Görseller güncelleniyor"
+msgstr "Opdaterer billeder"
 
 #: templates/campaign/macros.html:4
 msgid "The images for this campaign are being updated."
-msgstr "Bu kampanyanın görselleri güncelleniyor."
+msgstr "Billederne til denne kampagne opdateres."
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr "Daha fazla görsel eklenecek."
+msgstr "Flere billeder vil blive tilføjet."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
-msgstr "Kampanyaya hâlâ katılabilirsiniz."
+msgstr "Du kan stadig deltage i kampagnen."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr "Görseller güncellenemedi"
+msgstr "Billederne kunne ikke opdateres"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
-msgstr "Bu kampanyanın görselleri güncellenirken bir hata oluştu."
+msgstr "Der opstod en fejl under opdateringen af billederne til denne kampagne."
 
 #: templates/campaign/macros.html:8
 msgid "Some images will be missing."
-msgstr "Bazı görseller eksik olacak."
+msgstr "Nogle billeder vil mangle."
 
 #: templates/campaign/macros.html:8
 msgid "The campaign manager can retry by updating the campaign."
-msgstr "Kampanya yöneticisi kampanyayı güncelleyerek yeniden deneyebilir."
+msgstr "Kampagneadministratoren kan forsøge igen ved at opdatere kampagnen."
 
 #: templates/errors/403.html:8
 msgid "Server under maintenance"
-msgstr "Sunucu bakım altındadır"
+msgstr "Server under vedligeholdelse"
 
 #: templates/errors/403.html:10
 msgid "Please contact support"
-msgstr "Lütfen destekle iletişime geçin"
+msgstr "Kontakt venligst support"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
-msgstr "Ana Sayfaya Dön"
+msgstr "Tag mig til startsiden"
 
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Destek ile iletişime geçin"
+msgstr "Kontakt support"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
-msgstr "Sayfa Bulunamadı"
+msgstr "Siden blev ikke fundet"
 
 #: templates/errors/404.html:10
 msgid "We are unable to find the page you are looking for"
-msgstr "Aradığınız sayfayı bulamadık"
+msgstr "Vi kan ikke finde den side, du leder efter"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Ana Sayfaya Dön"
+msgstr "Tag mig til startsiden"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
-msgstr "Bir şeyler yanlış gitti"
+msgstr "Noget gik galt"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr "Isa bakım altına alınıyor olabilir"
+msgstr "Isa er muligvis under vedligeholdelse"
 
 #: templates/main/help.html:9
 msgid "Help Page"
-msgstr "Yardım Sayfası"
+msgstr "Hjælpeside"
 
 #: templates/main/help.html:11
 msgid "Easily add information about images on Wikimedia Commons"
-msgstr "Kolayca Wikimedia Commons'taki görseller hakkında bilgi ekle"
+msgstr "Tilføj nemt oplysninger om billeder på Wikimedia Commons"
 
 #: templates/main/help.html:16
 #, python-format
 msgid "<strong>ISA</strong> is a fun, multilingual, mobile-first tool, that makes it easy for people to add \"micro contributions\" in the form of <a %(link_attrs)s>structured data</a> to images on Wikimedia Commons that have been added by Wiki Loves competitions."
-msgstr "<strong>ISA</strong>, <a %(link_attrs)s>Wiki Loves</a> yarışmalarına katkıda bulunulan görsellere yapılandırılmış veri biçiminde \"mikro katkılar\" eklemeyi kolaylaştıran eğlenceli, çok dilli, mobil öncelikli bir araçtır."
+msgstr "<strong>ISA</strong> er et sjovt, flersproget, mobilorienteret værktøj, der gør det nemt for folk at tilføje \"mikrobidrag\" i form af <a %(link_attrs)s>strukturerede data</a> til billeder på Wikimedia Commons, der er blevet tilføjet af Wiki Loves-konkurrencer."
 
 #: templates/main/help.html:19
 #, python-format
 msgid "ISA is originally built to provide better multilingual and structured descriptions of <a %(link_attrs)s>Wiki Loves Africa</a> images."
-msgstr "ISA başlangıçta <a %(link_attrs)s>Wiki Loves Africa</a> görsellerinin daha iyi çok dilli ve yapılandırılmış açıklamalarını sağlamak için oluşturulmuştur."
+msgstr "ISA er oprindeligt bygget til at give bedre flersprogede og strukturerede beskrivelser af <a %(link_attrs)s>Wiki Loves Africa</a> -billeder."
 
 #: templates/main/help.html:20
 msgid "But it is also developed to be useful to all of the <a link_attrs>Wiki Loves competitions</a> and, ultimately, for <strong>all media files</strong> on Wikimedia Commons."
-msgstr "Ancak tüm <a link_attrs>Wiki Loves yarışmaları</a> ve nihayetinde <strong>tüm medya dosyaları</strong> için de yararlı olacak şekilde geliştirilmektedir."
+msgstr "Men den er også udviklet til at være nyttig for alle <a link_attrs>Wiki Loves-konkurrencerne</a> og i sidste ende for <strong>alle mediefiler</strong> på Wikimedia Commons."
 
 #: templates/main/help.html:23
 msgid "What is Wikimedia Commons?"
-msgstr "Wikimedia Commons nedir?"
+msgstr "Hvad er Wikimedia Commons?"
 
 #: templates/main/help.html:26
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr "<strong>Wikimedia Commons</strong> (\"Commons\" olarak da bilinir), Vikipedi'nin kardeş projesi olan bir Wikimedia projesidir."
+msgstr "<strong>Wikimedia Commons</strong> (også kendt som \"Commons\") er et Wikimedia-projekt, et søsterprojekt til Wikipedia. Det indeholder en samling af millioner af frit anvendelige mediefiler, som alle kan bidrage til."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
-msgstr "Vikipedi'deki tüm serbest lisanslı fotoğraflar, ses ve video dosyaları, PDF'ler ve diğer medyalar Commons'ta depolanır."
+msgstr "Alle de frit licenserede fotos, lyd- og videofiler, PDF'er og andre medier på Wikipedia er gemt på Commons."
 
 #: templates/main/help.html:30
 msgid "Wikimedia Commons grows rapidly, by approximately 5 million new media files per year."
-msgstr "Wikimedia Commons yılda yaklaşık 5 milyon yeni medya dosyasıyla hızla büyümektedir."
+msgstr "Wikimedia Commons vokser hurtigt med cirka 5 millioner nye mediefiler om året."
 
 #: templates/main/help.html:33
 msgid "Thousands of volunteers upload files to Commons, and integrate these into Wikimedia projects, like Wikipedia, to illustrate the content there and to share that media with the public."
-msgstr "Binlerce gönüllü Commons'a dosya yükler ve bunları Vikipedi gibi Wikimedia projelerine entegre eder."
+msgstr "Tusindvis af frivillige uploader filer til Commons og integrerer disse i Wikimedia-projekter, som f.eks. Wikipedia, for at illustrere indholdet der og dele disse medier med offentligheden."
 
 #: templates/main/help.html:34
 msgid "Media files on Commons are typically:"
-msgstr "Commons'taki medya dosyaları tipik olarak şunlardır:"
+msgstr "Mediefiler på Commons er typisk:"
 
 #: templates/main/help.html:37
 msgid "Personal photography and media uploaded by individuals, sometimes during Wiki Loves competitions such as Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth etc;"
-msgstr "Bireyler tarafından yüklenen kişisel fotoğraflar ve medya, bazen Wiki Loves yarışmaları sırasında."
+msgstr "Personlige fotografier og medier uploadet af enkeltpersoner, nogle gange under Wiki Loves-konkurrencer såsom Wiki Loves Africa, Wiki Loves Monuments, Wiki Loves Earth osv.;"
 
 #: templates/main/help.html:38
 msgid "Freely licensed media files from external websites like Flickr, YouTube, open access journals, and other repositories; and"
-msgstr "Flickr, YouTube, açık erişimli dergiler ve diğer depolar gibi harici web sitelerinden serbest lisanslı medya dosyaları; ve"
+msgstr "Frit licenserede mediefiler fra eksterne websteder som Flickr, YouTube, open access-tidsskrifter og andre arkiver; og"
 
 #: templates/main/help.html:39
 msgid "Donations from institutions and organizations with substantial media collections, large and small, ranging from UNESCO, NASA and the British Library to small local cultural institutions."
-msgstr "UNESCO, NASA ve Britanya Kütüphanesi'nden yerel kurumlara kadar önemli medya koleksiyonlarına sahip kurum ve kuruluşlardan bağışlar."
+msgstr "Donationer fra institutioner og organisationer med betydelige mediesamlinger, store som små, lige fra UNESCO, NASA og British Library til små lokale kulturinstitutioner."
 
 #: templates/main/help.html:42
 msgid "What is structured data on Commons ?"
-msgstr "Commons'ta yapılandırılmış veri nedir?"
+msgstr "Hvad er strukturerede data på Commons?"
 
 #: templates/main/help.html:44
 msgid "<strong>Structured Data on Commons</strong> is a project that provides the technical infrastructure to complement the wikitext, templates and categories on Wikimedia Commons with structured data."
-msgstr "<strong>Commons'ta Yapılandırılmış Veri</strong>, vikimetin, şablon ve kategori sistemiyle tamamlayıcı teknik altyapı sağlayan bir projedir."
+msgstr "<strong>Strukturerede data på Commons</strong> er et projekt, der leverer den tekniske infrastruktur til at supplere wikiteksten, skabelonerne og kategorierne på Wikimedia Commons med strukturerede data."
 
 #: templates/main/help.html:45
 msgid "Structured data is data with a high degree of structured organization."
-msgstr "Yapılandırılmış veri, yüksek düzeyde yapılandırılmış organizasyona sahip veridir."
+msgstr "Strukturerede data er data med en høj grad af struktureret organisering."
 
 #: templates/main/help.html:46
 msgid "With more structure, it becomes easier to reuse data in other Wikimedia projects and by third parties; it also allows computers to process and 'understand' it."
-msgstr "Daha fazla yapıyla, verileri diğer Wikimedia projelerinde ve üçüncü taraflarca yeniden kullanmak kolaylaşır."
+msgstr "Med mere struktur bliver det nemmere at genbruge data i andre Wikimedia-projekter og af tredjeparter; det giver også computere mulighed for at behandle og 'forstå' dem."
 
 #: templates/main/help.html:49
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
-msgstr "Yapılandırılmış Veri, 2019'da başlatılan devam eden bir projedir!"
+msgstr "Struktureret data er et igangværende projekt, der blev lanceret i 2019! ... mens Wikimedia Commons har eksisteret i årevis!"
 
 #: templates/main/help.html:50
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
-msgstr "Wikimedia Commons'ta barındırılan ilgilenilmesi gereken kelimenin tam anlamıyla milyonlarca resim var."
+msgstr "Der er bogstaveligt talt millioner af billeder på Wikimedia Commons ... som fortjener opmærksomhed og kærlighed."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
-msgstr "Şu anda yapılandırılmış veriyle açıklanmayan milyonlarca resim."
+msgstr "Millioner af billeder, der i øjeblikket ikke er beskrevet med strukturerede data."
 
 #: templates/main/help.html:54
 msgid "How are we going to do that?"
-msgstr "Bunu nasıl yapacağız?"
+msgstr "Hvordan skal vi gøre det?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
-msgstr "<strong>Küratörlük</strong>, dar anlamda: bir sergi için sanat eserleri ve kültürel miras parçalarını seçme ve düzenleme anlamına gelir."
+msgstr "<strong>Kuratering</strong> , eller kuratering, i snæver forstand, betyder: at udvælge og organisere kunstværker og kulturarv til en udstilling."
 
 #: templates/main/help.html:58
 msgid "This term can also be used more broadly, to describe any activity that involves selecting, organizing and presenting information."
-msgstr "Bu terim daha geniş anlamda, bilgi seçme, düzenleme ve sunma ile ilgili herhangi bir etkinliği tanımlamak için de kullanılabilir."
+msgstr "Dette udtryk kan også bruges bredere til at beskrive enhver aktivitet, der involverer udvælgelse, organisering og præsentation af information."
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr "Commons'ta Yapılandırılmış Veri bağlamında küratörlük, Commons katkıda bulunanları tarafından medya dosyalarını düzenlemek ve sunmak için gerçekleştirilen tüm etkinlikleri ifade eder."
+msgstr "I forbindelse med strukturerede data på Commons betyder kuratering alle de aktiviteter, der udføres af Commons-bidragydere for at organisere og præsentere mediefiler på Wikimedia Commons: administrative handlinger, tilføjelse af flere og bedre metadata til filerne, gruppering af dem i kategorier, oprettelse af gallerier..."
 
 #: templates/main/help.html:62
 msgid "So... how does the ISA tool fit in there?"
-msgstr "Peki... ISA aracı bunların neresinde?"
+msgstr "Så ... hvordan passer ISA-værktøjet ind i det?"
 
 #: templates/main/help.html:65
 msgid "The ISA tool allows to add two different types of structured data to set of pictures: captions and depicts (more explanations below on what captions and depicts are)."
-msgstr "ISA aracı, bir dizi resme iki farklı türde yapılandırılmış veri eklemeye olanak tanır: altyazılar ve tasvirler."
+msgstr "ISA-værktøjet giver mulighed for at tilføje to forskellige typer strukturerede data til et sæt af billeder: billedtekster og illustrationer (flere forklaringer nedenfor om, hvad billedtekster og illustrationer er)."
 
 #: templates/main/help.html:66
 msgid "It is a multilingual, mobile-first 'micro-contributions' tool, that makes it easy for people to add structured data to images contributed to Wiki Loves competitions on Wikimedia Commons."
-msgstr "Wiki Loves yarışmalarına katkıda bulunulan görsellere yapılandırılmış veri eklemeyi kolaylaştıran çok dilli, mobil öncelikli bir 'mikro katkılar' aracıdır."
+msgstr ""
 
 #: templates/main/help.html:69
 msgid "The tool operates with curated campaigns created by coordinators."
-msgstr "Araç, koordinatörler tarafından oluşturulan küratörlü kampanyalarla çalışır."
+msgstr ""
 
 #: templates/main/help.html:70
 msgid "Anyone with a Wikimedia account may be a coordinator!"
-msgstr "Wikimedia hesabı olan herkes koordinatör olabilir!"
+msgstr ""
 
 #: templates/main/help.html:73
 msgid "With ISA, the coordinator can choose a predefined set of images on Commons, select a starting date and an end date for the campaign, and provide general information about the campaign itself."
-msgstr "ISA ile koordinatör, Commons'ta önceden tanımlanmış bir görsel seti seçebilir, kampanya için başlangıç ve bitiş tarihi belirleyebilir ve genel yönergeler sağlayabilir."
+msgstr ""
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr "Koordinatör daha sonra katkıda bulunanlardan bu görselleri çok dilli yapılandırılmış meta verilerle \"etiketlemelerini\" isteyebilir."
+msgstr ""
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
-msgstr "Puanlar, bir katılımcı tarafından yapılan her katkı için sayılır ve bu nedenle \"etiketleme\" veya mikro katkı yarışmaları düzenlemek mümkündür."
+msgstr ""
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr "Wikimedia hesabı olan herkes bir kampanyaya yapılandırılmış meta veri ekleme katkısında bulunabilir."
+msgstr ""
 
 #: templates/main/help.html:79
 msgid "The only requirement is... to be logged-in."
-msgstr "Tek gereken şey... oturum açmak."
+msgstr ""
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr "Dosya altyazıları ve tasvirler hakkında daha fazla bilgi edinin"
+msgstr ""
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr "Dosya altyazıları, Yapılandırılmış verinin bir parçası olan bir özelliktir."
+msgstr ""
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr "Dosyalar hakkında kısa, çok dilli açıklamaları depolamak için tasarlanmıştır."
+msgstr ""
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr "İyi bir altyazı nedir? Ve eski dosya açıklamalarımız ile altyazılar arasındaki fark nedir?"
+msgstr ""
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr "Birincisi, altyazılar basit ve kısa olmalıdır."
+msgstr ""
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr "Açıklamalar çok uzun olabilirken, altyazılar 255 karakterle sınırlıdır ve biçimlendirme (bağlantılar gibi) içeremez."
+msgstr ""
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr "Çoğu durumda altyazı açıklamaya benzer veya aynı olacaktır."
+msgstr ""
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr "Ancak diğer durumlarda, çok kapsamlı bir açıklama vardır ve altyazı çok daha kısadır."
+msgstr ""
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr "Yalnızca telif hakkı korumasına tabi olmayacak kadar kısa olan metin altyazılara kopyalanmalıdır; çünkü altyazılar CC0 altında yayınlanmaktadır."
+msgstr ""
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr "Altyazıların temel faydalarından biri, dil farkındalıklı aranabilirliğin geliştirilmesidir."
+msgstr ""
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr "Klasik dosya açıklamaları vikimetindedir ve yalnızca tam metin arama yoluyla aranabilir."
+msgstr ""
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr "Altyazılar yapılandırılmış verimizin bir parçası olarak mevcutken, açıklamalar değildir."
+msgstr ""
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr "Teknik açıdan, açıklama bir dil şablonuna sarılmış düz vikimetin iken, altyazı bir Wikibase etiketidir."
+msgstr ""
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr "Bu nedenle altyazılar API aracılığıyla aranabilir olacak ve dosyalardan meta veri olarak altyazıları bulmayı/filtrelemeyi/çekmeyi kolaylaştıracaktır."
+msgstr ""
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr "API aracılığıyla aranabilir oldukları için, üçüncü taraf kullanıcıların medya ve altyazıları bulması ve yeniden kullanması da daha kolaydır."
+msgstr ""
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr "Altyazıların diğer olası kullanımları şunlar olabilir:"
+msgstr ""
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr "bilgi kutularını doldurma"
+msgstr ""
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr "belirli bir dilde eksik altyazılar için dosyaları sorgulama"
+msgstr ""
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr "bir proje veya kampanya için yerelleştirilmiş altyazıya ihtiyaç duyan önemli dosyaların çeviri listelerini oluşturma"
+msgstr ""
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr "Altyazılar hakkında daha fazla bilgiyi burada bulabilirsiniz"
+msgstr ""
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr "Tasvir de Yapılandırılmış verinin bir parçası olan bir özelliktir."
+msgstr ""
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr "Wikimedia Commons'ta Nisan 2019'da etkinleştirildi."
+msgstr ""
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box."
-msgstr "Bir tasvir ifadesi eklemek için arama kutusuna yazmaya başlayın."
+msgstr ""
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr "Ardından görseldeki tasvir edilen her öğe için Wikidata'dan uygun öğeyi bulun ve seçin."
+msgstr ""
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr "Doğru Wikidata öğesini bulmakta sorun yaşıyorsanız, alternatif yazılışları deneyin."
+msgstr ""
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr "Tasvir edilen konuyla ilişkili bir Wikidata öğesi yoksa, konunuzu içeren daha genel bir öğe seçin."
+msgstr ""
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr "Birincil etiketle mümkün olduğunca spesifik olun."
+msgstr ""
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr "Medya dosyası tarafından açıkça ve kasıtlı olarak tasvir edilen birden fazla öğe varsa, hepsi ayrı tasvir ifadeleri olarak eklenmelidir."
+msgstr ""
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr "Düzinelerce veya yüzlerce öğeyi tasvir eden dosyalar için (ör. filmler) yalnızca en belirgin olanları listeleyin."
+msgstr ""
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr "Belirli bir öğeyi 'belirgin' olarak işaretleme seçeneği de vardır."
+msgstr ""
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr "Bu özellik, öğenin medya parçasındaki belirginliğini ifade eder."
+msgstr ""
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr "Tasvirler hakkında daha fazla bilgi burada bulunabilir:"
+msgstr ""
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr "ISA aracını kullanmak"
+msgstr ""
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr "Daha fazla bilgi burada bulunabilir:"
+msgstr ""
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr "Yasal bilgiler ve katkıda bulunanlar"
+msgstr ""
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
-msgstr "tools.wmflabs.org üzerinde çalışmaktadır ve Wikimedia Bulut Hizmetleri Kullanım Koşullarına tabidir."
+msgstr ""
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr "ISA, GPLv3 altında yayınlanmıştır. Araç aracılığıyla Wikimedia Commons'a eklenen içerik CC0 altında yayınlanmaktadır."
+msgstr ""
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr "Araçta kullanılan görsel:"
+msgstr ""
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
-msgstr "Wikimedia Commons'taki Görsellere Kolayca Bilgi Ekleyin"
+msgstr ""
 
 #: templates/main/home.html:15
 #, python-format
@@ -1167,215 +1164,215 @@ msgstr ""
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
-msgstr "<strong>Başlamak için Kampanyaları Keşfet'e tıklayın!</strong>"
+msgstr ""
 
 #: templates/main/home.html:19
 msgid "Go to the campaign directory to choose a campaign"
-msgstr "Bir kampanya seçmek için kampanya dizinine gidin"
+msgstr ""
 
 #: templates/main/home.html:19
 msgid "EXPLORE CAMPAIGNS"
-msgstr "KAMPANYALARI KEŞFET"
+msgstr ""
 
 #: templates/main/home.html:22
 msgid "About This Tool"
-msgstr "Bu araç hakkında"
+msgstr ""
 
 #: templates/main/home.html:23
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr "Uzun vadede, aracın arkasındaki niyet, Commons'ta barındırılan her görsel tarafından yansıtılan bilginin kullanımını artırmaktır."
+msgstr ""
 
 #: templates/main/home.html:24
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "Araç, Wiki Loves yarışmaları sırasında bağışlanan görsellerin kullanışlılığına ve bilgisine yardımcı olmayı amaçlamaktadır."
+msgstr ""
 
 #: templates/main/home.html:25
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr "Başlangıçta Wiki Loves Africa görsellerinin açıklamalarına yardımcı olmak için oluşturulmaktadır, ancak özellikle tüm Wiki Loves yarışmalarına uygulanabilir şekilde modellenmektedir."
+msgstr ""
 
 #: templates/main/home.html:26
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr "Araç ayrıca proje liderleri tarafından önerilen mikro katkı yarışmalarına ev sahipliği yapacak şekilde tasarlanmıştır."
+msgstr ""
 
 #: templates/main/home.html:27
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
-msgstr "ISA, Wiki In Africa, Histropedia ve Commons'ta Yapılandırılmış Veri projesi arasında bir iş birliğidir."
+msgstr ""
 
 #: templates/main/home.html:28
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr "ISA yalnızca Information Structured Acceleration (Bilgi Yapılandırılmış Hızlandırma) kısaltması değil, aynı zamanda chiShona dilinde 'koy' veya 'yerleştir' anlamına gelen bir kelimedir."
+msgstr ""
 
 #: templates/main/layout.html:34
 msgid "Home"
-msgstr "Anasayfa"
+msgstr ""
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr "Yeni kampanya oluştur"
+msgstr "Opret ny kampagne"
 
 #: templates/main/layout.html:51
 msgid "Help"
-msgstr "Yardım"
+msgstr "Hjælp"
 
 #: templates/main/layout.html:67
 msgid "Change your available caption languages"
-msgstr "Kullanılabilir altyazı dillerinizi değiştirin"
+msgstr "Skift dine tilgængelige tekstsprog"
 
 #: templates/main/layout.html:67 templates/users/user_settings.html:6
 msgid "Language preferences"
-msgstr "Dil tercihleri"
+msgstr "Sprogpræferencer"
 
 #: templates/main/layout.html:68
 msgid "See your campaigns"
-msgstr "Kampanyalarınızı görün"
+msgstr "Se dine kampagner"
 
 #: templates/main/layout.html:68
 msgid "My campaigns"
-msgstr "Kampanyalarım"
+msgstr "Mine kampagner"
 
 #: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
-msgstr "Çıkış yap"
+msgstr "Log af"
 
 #: templates/main/layout.html:83
 msgid "Login"
-msgstr "Giriş yap"
+msgstr "Log ind"
 
 #: templates/main/layout.html:107
 msgid "ISA tool"
-msgstr "ISA aracı"
+msgstr "ISA-værktøj"
 
 #: templates/main/layout.html:108
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr "Wiki In Africa, Histropedia ve Commons'ta Yapılandırılmış Veri projesi arasında bir iş birliği olarak geliştirildi"
+msgstr "blev udviklet som et samarbejde mellem Wiki In Africa, Histopedia og Structured Data on Commons-projektet"
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr "Daha fazla geliştirme şu kuruluşlar tarafından desteklenmektedir:"
+msgstr "Yderligere udvikling støttet af "
 
 #: templates/main/layout.html:113
 msgid "It is running on"
-msgstr "Şurada çalışmaktadır:"
+msgstr "Det kører på"
 
 #: templates/main/layout.html:115
 msgid "and is subject to the"
-msgstr "ve şunlara tabidir:"
+msgstr "og er underlagt"
 
 #: templates/main/layout.html:117
 msgid "ISA is published under"
-msgstr "ISA şu lisans altında yayınlanmıştır:"
+msgstr "ISA er offentliggjort under"
 
 #: templates/main/layout.html:119
 msgid "Content added through the tool to Wikimedia Commons is released under"
-msgstr "Araç aracılığıyla Wikimedia Commons'a eklenen içerik şu lisans altında yayınlanmaktadır:"
+msgstr "Indhold tilføjet via værktøjet til Wikimedia Commons er udgivet under"
 
 #: templates/users/own_campaigns.html:7
 msgid "Your Campaigns"
-msgstr "Kampanyalarınız"
+msgstr "Dine kampagner"
 
 #: templates/users/own_campaigns.html:16
 msgid "Below is a list of your campaigns"
-msgstr "Aşağıda kampanyalarınızın listesi bulunmaktadır"
+msgstr "Herunder er en liste med dine kampagner"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr "Hiç kampanyanız yok"
+msgstr "Du har ingen kampagner"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
-msgstr "Tasvir dili"
+msgstr "Vælg sprog"
 
 #: templates/users/user_settings.html:15
 msgid "The selected language will be used for searching for elements depicted in images."
-msgstr "Seçilen dil, görsellerde tasvir edilen öğeleri aramak için kullanılacaktır."
+msgstr "Det valgte sprog vil blive brugt til at søge efter elementer, der er afbildet i billeder."
 
 #: templates/users/user_settings.html:15
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
-msgstr "'Arayüzle aynı' seçilirse, üst menüde seçilen dil kullanılacaktır."
+msgstr "Hvis 'Samme som brugerflade' er valgt, bruges det sprog, der er valgt i topmenuen."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
-msgstr "Altyazılar için en fazla 6 dil seçin"
+msgstr "Vælg op til 6 sprog til undertekster"
 
 #: templates/users/user_settings.html:19
 msgid "Caption languages"
-msgstr "Altyazı dilleri"
+msgstr "Sprog for billedtekster"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
-msgstr "Her görsel için birden fazla dilde altyazı eklenebilir."
+msgstr "Der kan tilføjes billedtekster på flere sprog til hvert billede."
 
 #: templates/users/user_settings.html:19
 msgid "The languages you select on this page will appear on the page when you are viewing an image."
-msgstr "Bu sayfada seçtiğiniz diller, bir görseli görüntülediğinizde sayfada görünecektir."
+msgstr "De sprog, du vælger på denne side, vises på siden, når du ser et billede."
 
 #: templates/users/user_settings.html:19
 msgid "Select all the languages you are comfortable contributing in."
-msgstr "Katkıda bulunmaktan rahat hissettiğiniz tüm dilleri seçin."
+msgstr "Vælg alle de sprog, du er tryg ved at bidrage på."
 
 #: templates/users/user_settings.html:23 templates/users/user_settings.html:29
 #: templates/users/user_settings.html:35 templates/users/user_settings.html:41
 #: templates/users/user_settings.html:47 templates/users/user_settings.html:53
 msgid "Remove language"
-msgstr "Dil kaldır"
+msgstr "Fjern sprog"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes to language settings"
-msgstr "Dil ayarlarındaki değişiklikleri geri al"
+msgstr "Fortryd ændringer af sprogindstillinger"
 
 #: templates/users/user_settings.html:57
 msgid "Undo changes"
-msgstr "Değişiklikleri geri al"
+msgstr "Fortryd ændringer"
 
 #: users/forms.py:26
 msgid "Same as interface"
-msgstr "Arayüzle aynı"
+msgstr "Samme som grænseflade"
 
 #: users/routes.py:54
 msgid "OAuth callback failed. Are cookies disabled?"
-msgstr "OAuth çağrısı başarısız. Çerezler devre dışı mı?"
+msgstr "OAuth-tilbagekald mislykkedes. Er cookies deaktiveret?"
 
 #: users/routes.py:74
 #, python-format
 msgid "Welcome %(username)s!"
-msgstr "Hoş geldin %(username)s!"
+msgstr "Velkommen %(username)s!"
 
 #: users/routes.py:88
 msgid "See you next time!"
-msgstr "Görüşürüz!"
+msgstr "Vi ses næste gang!"
 
 #: users/routes.py:104
 msgid "Please login to change your language preferences"
-msgstr "Dil tercihlerinizi değiştirmek için lütfen giriş yapın"
+msgstr "Log venligst ind for at ændre dine sprogindstillinger"
 
 #: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr "Üzgünüz, %(rep_languages)s kez giriş yapmaya çalıştınız"
+msgstr ""
 
 #: users/routes.py:158
 msgid "Captions languages could not be set"
-msgstr "Altyazı dilleri ayarlanamadı"
+msgstr "Sproget for billedtekster kunne ikke indstilles"
 
 #: users/routes.py:160
 msgid "Preferred languages set"
-msgstr "Tercih edilen diller ayarlandı"
+msgstr "Foretrukne sprog er angivet"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
-msgstr "Dil ayarları şu an mevcut değil"
+msgstr "Sprogindstillinger er ikke tilgængelige i øjeblikket"
 
 #: users/routes.py:175
 #, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s Kullanıcısı Ayarları"
+msgstr "%(username)s' indstillinger"
 
 #: users/routes.py:199
 #, python-format
 msgid "Campaigns created by %(username)s"
-msgstr "%(username)s tarafından oluşturulan kampanyalar"
+msgstr "Kampagner oprettet af %(username)s"
 
 #: templates/footer.html:1
 msgid "Powered by SWITCH/WMSE/Bern Uni"
-msgstr "SWITCH/WMSE/Bern Uni tarafından desteklenmektedir"
+msgstr "Powered af SWITCH/WMSE/Bern Uni"
 
