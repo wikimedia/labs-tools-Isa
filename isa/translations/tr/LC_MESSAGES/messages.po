@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-06-01 12:40:18+0000\n"
+"PO-Revision-Date: 2026-06-04 12:24:23+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1163,7 +1163,7 @@ msgstr "Wikimedia Commons'taki Görsellere Kolayca Bilgi Ekleyin"
 #: templates/main/home.html:15
 #, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr ""
+msgstr "<strong>ISA</strong>, insanların, Wiki Loves yarışmaları tarafından Wikimedia Commons'a katılan görüntülere <a %(link_attrs)s=\"\" title=\"Learn more about structured data\">Yapılandırılmış veriler</a> (tüm tanımlar, başlıklar, etiketler, vb.) şeklinde 'mikro katkı' eklemesini kolaylaştıran çok dilli, mobil ilk bir araçtır."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
