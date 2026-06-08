@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-06-04 12:24:21+0000\n"
+"PO-Revision-Date: 2026-06-08 12:26:02+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,7 +57,7 @@ msgstr "De campagne %(campaign_name)s is aangemaakt!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
-msgstr "Maak een campagne aan"
+msgstr "Campagne aanmaken"
 
 #: campaigns/routes.py:254
 #, python-format
@@ -101,7 +101,7 @@ msgstr "Informatie over de campagne bijwerken"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
-msgstr "Maak een nieuwe campagne aan"
+msgstr "Nieuwe campagne aanmaken"
 
 #: templates/campaign/campaign-form.html:14
 #, python-format
@@ -228,11 +228,11 @@ msgstr "Gebruik deze optie als u de categorieën heeft gewijzigd of als er eerde
 
 #: templates/campaign/campaign-form.html:179
 msgid "Metadata to collect in the Campaign"
-msgstr "Metadata die u in de campagne wilt verzamelen"
+msgstr "Metagegevens die u in de campagne wilt verzamelen"
 
 #: templates/campaign/campaign-form.html:179
 msgid "Choose what type of <strong>metadata</strong> you want to collect in your campaign."
-msgstr "Kies welke soort <strong>metadata</strong> u wilt verzamelen in de campagne."
+msgstr "Kies welke soort <strong>metagegevens</strong> u wilt verzamelen in de campagne."
 
 #: templates/campaign/campaign-form.html:179
 msgid "You must select at least one of the options below."
@@ -240,7 +240,7 @@ msgstr "U moet minstens één van de opties hieronder kiezen."
 
 #: templates/campaign/campaign-form.html:179
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
-msgstr "Zie de hulppagina's voor meer info over de 'Beeldt af'- en 'Bijschrift'-metadata."
+msgstr "Zie de hulppagina's voor meer info over de 'Beeldt af'- en 'Bijschrift'-metagegevens."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
@@ -249,7 +249,7 @@ msgstr "Beeldt af"
 
 #: templates/campaign/campaign-form.html:194
 msgid "Select to collect Depicts metadata in the campaign"
-msgstr "Selecteer deze optie om 'Beeldt af'-metadata te verzamelen in de campagne"
+msgstr "Selecteer deze optie om 'Beeldt af'-metagegevens te verzamelen in de campagne"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:105
@@ -258,7 +258,7 @@ msgstr "Bijschriften"
 
 #: templates/campaign/campaign-form.html:209
 msgid "Select to collect Caption metadata in the campaign"
-msgstr "Selecteer deze optie om 'Bijschrift'-metadata te verzamelen in de campagne."
+msgstr "Selecteer deze optie om 'Bijschrift'-metagegevens te verzamelen in de campagne."
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
@@ -302,7 +302,7 @@ msgstr "Bekijk u selecties en probeer het opnieuw."
 
 #: templates/campaign/campaign-form.html:265
 msgid "Please select at least one type from the Metadata to collect section"
-msgstr "Selecteer minstens één type in het onderdeel 'Metadata te verzamelen'"
+msgstr "Selecteer minstens één type in het onderdeel 'Te verzamelen metagegevens'"
 
 #: templates/campaign/campaign.html:18
 msgid "View images from"
@@ -479,7 +479,7 @@ msgstr "Cameralocatie"
 
 #: templates/campaign/campaign_entry.html:38
 msgid "show all metadata from commons"
-msgstr "alle metadata van Commons weergeven"
+msgstr "alle metagegevens van Commons weergeven"
 
 #: templates/campaign/campaign_entry.html:46
 msgid "Adding Depict Statements"
@@ -571,11 +571,11 @@ msgstr "Zoek naar dingen die u ziet in de afbeelding"
 
 #: templates/campaign/campaign_entry.html:137
 msgid "minimise metadata from Commons"
-msgstr "metadata van Commons minimaliseren"
+msgstr "metagegevens van Commons minimaliseren"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr "alle metadata van Commons weergeven"
+msgstr "alle metagegevens van Commons weergeven"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -757,7 +757,7 @@ msgstr "Maak uw eigen campagne"
 #: templates/campaign/campaigns.html:79 templates/campaign/campaigns.html:81
 #: templates/main/home.html:32
 msgid "Create a new campaign using this tool"
-msgstr "Maak een nieuwe campagne aan"
+msgstr "Nieuwe campagne aanmaken met dit hulpmiddel"
 
 #: templates/campaign/campaigns.html:82
 msgid "You must be logged in to create a campaign."
@@ -964,7 +964,7 @@ msgstr "Deze term kan ook breder worden gebruikt om elke activiteit te beschrijv
 
 #: templates/main/help.html:59
 msgid "In the context of Structured Data on Commons, curating means all the activities performed by Commons contributors to organize and present the media files on Wikimedia Commons: administrative actions, adding more and better metadata to the files, grouping them in categories, creating galleries..."
-msgstr "In de context van gestructureerde data op Wikimedia Commons, betekent het alle activiteiten die door Commons-bijdragers worden uitgevoerd om de mediabestanden op Wikimedia Commons te organiseren en te presenteren: administratieve acties, het toevoegen van meer en betere metadata aan de bestanden, het groeperen ervan in categorieën, het creëren van galerijen, enzovoort."
+msgstr "In de context van gestructureerde data op Wikimedia Commons, betekent het alle activiteiten die door Commons-bijdragers worden uitgevoerd om de mediabestanden op Wikimedia Commons te organiseren en te presenteren: administratieve acties, het toevoegen van meer en betere metagegevens aan de bestanden, het groeperen ervan in categorieën, het creëren van galerijen, enzovoort."
 
 #: templates/main/help.html:62
 msgid "So... how does the ISA tool fit in there?"
@@ -992,7 +992,7 @@ msgstr "Met ISA kan de coördinator een vooraf gedefinieerde set afbeeldingen op
 
 #: templates/main/help.html:74
 msgid "The coordinator can then ask contributors to \"tag\" these images with multilingual structured metadata (depicts and/or captions)."
-msgstr "De coördinator kan de deelnemers vervolgens vragen om deze afbeeldingen te \"taggen\" (labelen) met meertalige, gestructureerde metadata."
+msgstr "De coördinator kan de deelnemers vervolgens vragen om deze afbeeldingen te \"taggen\" (labelen) met meertalige, gestructureerde metagegevens."
 
 #: templates/main/help.html:75
 msgid "Points are counted for each contribution made by a participant, and therefore it is possible to organize \"tagging\" or micro-contributions competitions or challenges with ISA."
@@ -1000,7 +1000,7 @@ msgstr "Voor elke bijdrage van een deelnemer worden punten toegekend, waardoor h
 
 #: templates/main/help.html:78
 msgid "Anyone with a Wikimedia account can contribute to add structured metadata to a campaign."
-msgstr "Iedereen met een Wikimedia-account kan via een campagne bijdragen aan het toevoegen van gestructureerde metadata."
+msgstr "Iedereen met een Wikimedia-account kan via een campagne bijdragen aan het toevoegen van gestructureerde metagegevens."
 
 #: templates/main/help.html:79
 msgid "The only requirement is... to be logged-in."
@@ -1028,7 +1028,7 @@ msgstr "Ten eerste, bijschriften zijn bedoeld om eenvoudig en kort te zijn."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr "Hoewel beschrijvingen zeer uitgebreid kunnen zijn, zijn bijschriften beperkt tot 255 tekens en mogen ze geen opmaak (zoals Wikitext-links of HTML) bevatten en geen externe links ondersteunen."
+msgstr "Hoewel beschrijvingen zeer uitgebreid kunnen zijn, zijn bijschriften beperkt tot 255 tekens en mogen ze geen opmaak (zoals wikitextkoppelingen of HTML) bevatten en geen externe koppelingen ondersteunen."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
@@ -1036,7 +1036,7 @@ msgstr "In veel gevallen zal het bijschrift (caption) vergelijkbaar of identiek 
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr "Maar in andere gevallen is er een zeer uitgebreide beschrijving (858 tekens, inclusief links) en is het bijschrift veel korter (min of meer hetzelfde bijschrift als dat gebruikt wordt in de Wikipedia-artikelen waarin die afbeelding gebruikt wordt)."
+msgstr "Maar in andere gevallen is er een zeer uitgebreide beschrijving (858 tekens, inclusief koppelingen) en is het bijschrift veel korter (min of meer hetzelfde bijschrift als dat gebruikt wordt in de Wikipedia-artikelen waarin die afbeelding gebruikt wordt)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
@@ -1060,7 +1060,7 @@ msgstr "Technisch gezien is een beschrijving gewone wikitext, verpakt in een taa
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr "Hierdoor zullen bijschriften via de API doorzoekbaar zijn, waardoor het eenvoudig is om bijschriften uit bestanden als metadata te vinden, te filteren en op te halen."
+msgstr "Hierdoor zijn bijschriften via de API doorzoekbaar, waardoor het eenvoudig is om bijschriften uit bestanden als metagegevens te vinden, te filteren en op te halen."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
