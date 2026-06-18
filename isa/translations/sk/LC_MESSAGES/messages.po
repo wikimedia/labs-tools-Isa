@@ -1,6 +1,7 @@
 # Translation of ISA to Slovak (slovenčina)
 # Exported from translatewiki.net
 #
+# Author: Wizzard
 # Author: Yardom78
 # --
 # Translation for the ISA project
@@ -9,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-05-18 12:55:08+0000\n"
+"PO-Revision-Date: 2026-06-18 12:24:18+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,21 +34,21 @@ msgstr "Kampaň s id %(id)s neexistuje"
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Kampaň – %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
 msgstr "Pre vytvorenie kampane sa musíte prihlásiť"
 
 #: campaigns/routes.py:223
-#, fuzzy, python-format
+#, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
-msgstr "Prepáčte %(campaign_name)s sa nedá vytvoriť"
+msgstr "Prepáčte, kampaň %(campaign_name)s sa nepodarilo vytvoriť"
 
 #: campaigns/routes.py:231
-#, fuzzy, python-format
+#, python-format
 msgid "%(campaign_name)s campaign created!"
-msgstr "%(campaign_name)s kampaň vytvorená!"
+msgstr "Kampaň %(campaign_name)s bola vytvorená!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
@@ -59,29 +60,26 @@ msgid "%(campaign_name)s - Contribute"
 msgstr "%(campaign_name)s - Prispieť"
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
-msgstr "Pre aktualizovanie kampane sa musíte prihlásiť"
+msgstr "Na aktualizáciu kampane sa musíte prihlásiť"
 
 #: campaigns/routes.py:299
-#, fuzzy
 msgid "Campaign update failed. Please try later!"
-msgstr "Aktualizovanie kampane zlyhalo, skúste neskôr prosím!"
+msgstr "Aktualizácia kampane zlyhala. Skúste to, prosím, neskôr!"
 
 #: campaigns/routes.py:303
-#, fuzzy
 msgid "Update succesfull!"
 msgstr "Aktualizácia úspešná!"
 
 #: campaigns/routes.py:312
 #, python-format
 msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
-msgstr ""
+msgstr "Túto kampaň nemôžete aktualizovať. Kontaktujte správcu, používateľa User:%(username)s."
 
 #: campaigns/routes.py:328
-#, fuzzy, python-format
+#, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
-msgstr "%(campaign_name)s sa nedá aktualizovať!"
+msgstr "Ale nie! Kampaň %(campaign_name)s sa nepodarilo aktualizovať!"
 
 #: campaigns/routes.py:333
 #, python-format
@@ -103,12 +101,11 @@ msgstr "Vytvoriť novú kampaň"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "Aktualizujete kampaň %(campaign)s"
 
 #: templates/campaign/campaign-form.html:16
-#, fuzzy
 msgid "Fill in the form below to create your campaign"
-msgstr "Vyplňte formulár nižšie pre vytvorenie kampane"
+msgstr "Vyplňte formulár nižšie a vytvorte svoju kampaň"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
@@ -237,9 +234,8 @@ msgid "You must select at least one of the options below."
 msgstr "Musíte vybrať aspoň jednu z možností nižšie."
 
 #: templates/campaign/campaign-form.html:179
-#, fuzzy
 msgid "To learn more about Depicts and Caption meta-data, see the help page."
-msgstr "Pre viac informácií o metadátach vykresľovania a titulkov si prečítajte stránku pomoci."
+msgstr "Ak sa chcete dozvedieť viac o metaúdajoch Zobrazuje (Depicts) a Popisok (Caption), pozrite si stránku pomocníka."
 
 #: templates/campaign/campaign-form.html:182
 #: templates/campaign/campaign_entry.html:45
@@ -247,9 +243,8 @@ msgid "Depicts"
 msgstr "Vykresľuje"
 
 #: templates/campaign/campaign-form.html:194
-#, fuzzy
 msgid "Select to collect Depicts metadata in the campaign"
-msgstr "Vybrať pre zber metadát Vykresľovania v kampani"
+msgstr "Vyberte na zbieranie metaúdajov Zobrazuje (Depicts) v kampani"
 
 #: templates/campaign/campaign-form.html:197
 #: templates/campaign/campaign_entry.html:105
@@ -257,9 +252,8 @@ msgid "Captions"
 msgstr "Titulky"
 
 #: templates/campaign/campaign-form.html:209
-#, fuzzy
 msgid "Select to collect Caption metadata in the campaign"
-msgstr "Vybrať pre zber metadát Titulkov v kampani"
+msgstr "Vyberte na zbieranie metaúdajov Popisok (Caption) v kampani"
 
 #: templates/campaign/campaign-form.html:216
 msgid "Campaign Image"
@@ -367,7 +361,7 @@ msgstr "Do tejto kampane ešte nik neprispel"
 
 #: templates/campaign/campaign.html:74
 msgid "Most improved countries"
-msgstr ""
+msgstr "Najviac zlepšené krajiny"
 
 #: templates/campaign/campaign.html:78
 #: templates/campaign/campaign_stats.html:75
@@ -487,9 +481,8 @@ msgid "Adding Depict Statements"
 msgstr "Pridávanie Vykresľovacích vyhlásení"
 
 #: templates/campaign/campaign_entry.html:46
-#, fuzzy
 msgid "Make it simple: Use simple words and concepts to describe what you see in each image (e.g. cat, mountain, Taj Mahal)"
-msgstr "Urobte to jednoduché: Použite jednoduché slová a koncepty na popísanie toho čo vidíte na každom obrázku (napríklad: mačka, hory, most)"
+msgstr "Zjednodušte to: Použite jednoduché slová a pojmy na opis toho, čo na každom obrázku vidíte (napr. mačka, hora, Tádž Mahal)"
 
 #: templates/campaign/campaign_entry.html:50
 msgid "Cancel your changes"
@@ -520,16 +513,16 @@ msgstr "Pomenujte rôzne elementy, ktoré vidíte na tomto obrázku"
 
 #: templates/campaign/campaign_entry.html:79
 msgid "Accept"
-msgstr ""
+msgstr "Prijať"
 
 #: templates/campaign/campaign_entry.html:80
 msgid "Reject"
-msgstr ""
+msgstr "Odmietnuť"
 
 #: templates/campaign/campaign_entry.html:89
 #: templates/campaign/campaign_entry.html:150
 msgid "Hide Suggestions"
-msgstr ""
+msgstr "Skryť návrhy"
 
 #: templates/campaign/campaign_entry.html:97
 msgid "To mark the prominent elements in the image, click on the flag icon"
@@ -572,13 +565,12 @@ msgid "Search for things you see in the image"
 msgstr "Vyhľadať veci ktoré vidíte na obrázku"
 
 #: templates/campaign/campaign_entry.html:137
-#, fuzzy
 msgid "minimise metadata from Commons"
-msgstr "minimalizovať metadáta z commons"
+msgstr "minimalizovať metaúdaje z Commons"
 
 #: templates/campaign/campaign_entry.html:138
 msgid "show all metadata from Commons"
-msgstr ""
+msgstr "zobraziť všetky metaúdaje z Commons"
 
 #: templates/campaign/campaign_entry.html:139
 msgid "Success! Depicted items saved to Wikimedia Commons"
@@ -614,27 +606,27 @@ msgstr "Označiť túto vykreslenú položku ako nie prominentnú"
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
-msgstr ""
+msgstr "Návrh odstránený zo zoznamu"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr ""
+msgstr "Skontrolujte, prosím, či ste prihlásení"
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
-msgstr ""
+msgstr "Hups! Návrh sa možno neodstránil"
 
 #: templates/campaign/campaign_entry.html:151
 msgid "Show Suggestions"
-msgstr ""
+msgstr "Zobraziť návrhy"
 
 #: templates/campaign/campaign_entry.html:152
 msgid "Are you sure you want to reject this suggestion?"
-msgstr ""
+msgstr "Naozaj chcete tento návrh odmietnuť?"
 
 #: templates/campaign/campaign_entry.html:153
 msgid "Only do this if you are sure the suggested tag does not appear in the image, or would be incorrect according to Wikimedia Commons guidelines. If several users reject the same suggestion, it will no longer be shown."
-msgstr ""
+msgstr "Urobte to len vtedy, ak ste si istí, že navrhovaná značka sa na obrázku nenachádza alebo by bola nesprávna podľa pravidiel Wikimedia Commons. Ak rovnaký návrh odmietne viacero používateľov, prestane sa zobrazovať."
 
 #: templates/campaign/campaign_stats.html:5
 msgid "CONTRIBUTIONS TO A STRUCTURED DATA CAMPAIGN"
@@ -673,9 +665,8 @@ msgid "Click on the name of a campaign to get started and add structured data to
 msgstr "Kliknite na názov kampane pre začatie a pridajte štruktúrované údaje pre nejaký obrázok."
 
 #: templates/campaign/campaigns.html:8
-#, fuzzy
 msgid "You can access information on the previous campaigns in the archive section."
-msgstr "Informácie o predchádzajúcich kampaniach môžete nájsť v sekcii archívu."
+msgstr "Informácie o predchádzajúcich kampaniach nájdete v sekcii archívu."
 
 #: templates/campaign/campaigns.html:15
 msgid "Ongoing Campaigns"
@@ -694,9 +685,8 @@ msgid "Total number of images in the campaign"
 msgstr "Celkový počet obrázkov v kampani"
 
 #: templates/campaign/campaigns.html:23
-#, fuzzy
 msgid "Number of editors that have contributed to the campaign"
-msgstr "Počet editorov, ktorí prispeli ku kampani"
+msgstr "Počet redaktorov, ktorí prispeli do kampane"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -833,14 +823,12 @@ msgid "The campaign manager can retry by updating the campaign."
 msgstr "Správca kampane to môže skúsiť znova aktualizáciou kampane."
 
 #: templates/errors/403.html:8
-#, fuzzy
 msgid "Server under maintenance"
-msgstr "Prebieha údržba servera"
+msgstr "Server je v údržbe"
 
 #: templates/errors/403.html:10
-#, fuzzy
 msgid "Please contact support"
-msgstr "Skontrolujte kontakt na podporu"
+msgstr "Kontaktujte, prosím, podporu"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -856,9 +844,8 @@ msgid "Page Not Found"
 msgstr "Stránka nenájdená"
 
 #: templates/errors/404.html:10
-#, fuzzy
 msgid "We are unable to find the page you are looking for"
-msgstr "Nemôžeme nájsť stránku, ktorú hľadáte"
+msgstr "Stránku, ktorú hľadáte, sa nám nepodarilo nájsť"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
@@ -899,9 +886,8 @@ msgid "What is Wikimedia Commons?"
 msgstr "Čo je Wikimedia Commons?"
 
 #: templates/main/help.html:26
-#, fuzzy
 msgid "<strong>Wikimedia Commons</strong> (also known as \"Commons\") is a Wikimedia project, a sister project of Wikipedia. It hosts a collection of millions of freely usable media files to which anyone can contribute."
-msgstr "<strong>Wikimedia Commons</strong> (tiež známy ako „Commons“) je projekt Wikimedia, sesterský projekt Wikipédie a zbierka viac ako 40 miliónov bezplatných mediálnych súborov."
+msgstr "<strong>Wikimedia Commons</strong> (známe aj ako „Commons“) je projekt Wikimedia, sesterský projekt Wikipédie. Hostí zbierku miliónov voľne použiteľných mediálnych súborov, do ktorej môže prispieť ktokoľvek."
 
 #: templates/main/help.html:27
 msgid "All the freely licensed photos, audio and video files, PDFs and other media on Wikipedia are stored on Commons."
@@ -948,23 +934,20 @@ msgid "With more structure, it becomes easier to reuse data in other Wikimedia p
 msgstr "S väčšou štruktúrou sa stáva jednoduchšie opätovné použitie údajov v iných projektoch Wikimedia a tretími stranami; umožňuje aj počítačom, aby ich spracovali a „porozumeli“ im."
 
 #: templates/main/help.html:49
-#, fuzzy
 msgid "Structured Data is an ongoing project that was launched in 2019!.. whilst Wikimedia Commons has been around for years!"
-msgstr "Štruktúrované dáta sú prebiehajúci projekt, ktorý bol spustený v roku 2019! … zatiaľ čo Wikimedia Commons existuje už roky!"
+msgstr "Štruktúrované údaje sú prebiehajúci projekt, ktorý bol spustený v roku 2019!.. zatiaľ čo Wikimedia Commons tu je už roky!"
 
 #: templates/main/help.html:50
-#, fuzzy
 msgid "There are literally millions of pictures hosted on Wikimedia Commons... that need attention and love."
-msgstr "Na Wikimedia Commons sú doslova milióny obrázkov, ktoré si vyžadujú pozornosť a lásku."
+msgstr "Na Wikimedia Commons sú doslova milióny obrázkov... ktoré potrebujú pozornosť a lásku."
 
 #: templates/main/help.html:51
 msgid "Millions of pictures that are not described with structured data at the moment."
 msgstr "Milióny obrázkov, ktoré momentálne nie sú popísané štruktúrovanými dátami."
 
 #: templates/main/help.html:54
-#, fuzzy
 msgid "How are we going to do that?"
-msgstr "Ako to urobíme? "
+msgstr "Ako to urobíme?"
 
 #: templates/main/help.html:57
 msgid "<strong>Curating</strong>, or curation, in the narrow sense, means: selecting and organizing pieces of artwork and cultural heritage for an exhibition."
@@ -1015,9 +998,8 @@ msgid "Anyone with a Wikimedia account can contribute to add structured metadata
 msgstr "Ktokoľvek s účtom Wikimedia môže prispieť k pridaniu štruktúrovaných metadát do kampane."
 
 #: templates/main/help.html:79
-#, fuzzy
 msgid "The only requirement is... to be logged-in."
-msgstr "Jedinou podmienkou je... byť prihlásený."
+msgstr "Jedinou požiadavkou je... byť prihlásený."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1108,9 +1090,8 @@ msgid "It was enabled on Wikimedia Commons on April 2019."
 msgstr "To bolo povolené na Wikimedia Commons v apríli 2019."
 
 #: templates/main/help.html:131
-#, fuzzy
 msgid "To add a depicts statement, simply start typing in the search box."
-msgstr "Ak chcete pridať vyhlásenie s vyobrazením, jednoducho začnite písať do vyhľadávacieho poľa."
+msgstr "Ak chcete pridať vyhlásenie zobrazuje, jednoducho začnite písať do vyhľadávacieho poľa."
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
@@ -1161,9 +1142,8 @@ msgid "Legal and credits"
 msgstr "Právne informácie a zásluhy"
 
 #: templates/main/help.html:165
-#, fuzzy
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
-msgstr "Beží na tools.wmflabs.org a podlieha podmienkam používania cloudových služieb Wikimedia."
+msgstr "Beží na tools.wmflabs.org a podlieha podmienkam používania Wikimedia Cloud Services."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
@@ -1178,9 +1158,9 @@ msgid "Easily Add Information about Images on Wikimedia Commons"
 msgstr "Jednoducho pridajte informácie o obrázkoch na Wikimedia Commons"
 
 #: templates/main/home.html:15
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>ISA</strong> is a multilingual, mobile-first tool, that makes it easy for people to add 'micro-contributions' in the form of <a %(link_attrs)s title='Learn more about structured data'>structured data</a> (descriptions, captions, tags, etc.) to images that have been contributed to Wikimedia Commons by Wiki Loves competitions."
-msgstr "<strong>ISA</strong> je viacjazyčný nástroj určený predovšetkým pre mobilné zariadenia, ktorý ľuďom uľahčuje pridávanie „mikro príspevkov“ vo forme <a %(link_attrs)s title=\"Získajte viac informácií o štruktúrovaných údajoch\">štruktúrované údaje</a> (popisy, titulky, značky atď.) k obrázkom, ktoré do Wikimedia Commons pridala Wiki Miluje súťaže."
+msgstr "<strong>ISA</strong> je viacjazyčný nástroj s prioritou na mobil, ktorý ľuďom uľahčuje pridávať „mikropríspevky“ vo forme <a %(link_attrs)s title='Zistite viac o štruktúrovaných údajoch'>štruktúrovaných údajov</a> (opisy, popisky, značky a podobne) k obrázkom, ktoré boli prispené na Wikimedia Commons cez súťaže Wiki Loves."
 
 #: templates/main/home.html:16
 msgid "<strong>Click on Explore Campaigns to begin!</strong>"
@@ -1199,34 +1179,28 @@ msgid "About This Tool"
 msgstr "O tomto nástroji"
 
 #: templates/main/home.html:23
-#, fuzzy
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
-msgstr "Z dlhodobého hľadiska je zámerom tohto nástroja zvýšiť využitie znalostí, ktoré sa odrážajú v každom obrázku hosťovanom na Wikimedia Commons. "
+msgstr "Z dlhodobého hľadiska je zámerom tohto nástroja zvýšiť využitie poznania, ktoré odráža každý obrázok hostený na Wikimedia Commons."
 
 #: templates/main/home.html:24
-#, fuzzy
 msgid "The tool is aimed to assist in the usefulness and information of images donated during the Wiki Loves competitions."
-msgstr "Tento nástroj je zameraný na pomoc pri užitočnosti a informovanosti obrázkov darovaných počas súťaží Wiki Loves."
+msgstr "Nástroj má pomôcť pri užitočnosti a informačnej hodnote obrázkov darovaných počas súťaží Wiki Loves."
 
 #: templates/main/home.html:25
-#, fuzzy
 msgid "It is initially being built to assist in the descriptions of Wiki Loves Africa images, but is being specifically modelled to be useful to all of the Wiki Loves competitions and beyond."
-msgstr "Pôvodne bol vytvorený tak, aby pomáhal pri popise obrázkov Wiki miluje Afriku, ale je špeciálne modelovaný tak, aby bol užitočný pre všetky súťaže Wiki Loves a mimo nich."
+msgstr "Spočiatku sa buduje na pomoc pri opisoch obrázkov Wiki Loves Africa, no je špecificky modelovaný tak, aby bol užitočný pre všetky súťaže Wiki Loves a aj mimo nich."
 
 #: templates/main/home.html:26
-#, fuzzy
 msgid "The tool is also designed to be a host of micro contribution competitions proposed by project leaders."
-msgstr "Tento nástroj je tiež navrhnutý tak, aby predstavoval množstvo súťaží o mikro príspevky, ktoré navrhujú vedúci projektov."
+msgstr "Nástroj je tiež navrhnutý tak, aby hostil súťaže mikropríspevkov navrhnuté vedúcimi projektov."
 
 #: templates/main/home.html:27
-#, fuzzy
 msgid "ISA is a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project."
 msgstr "ISA je spolupráca medzi Wiki In Africa, Histropedia a projektom Structured Data on Commons."
 
 #: templates/main/home.html:28
-#, fuzzy
 msgid "ISA is not only an acronym for Information Structured Acceleration, but is also a chiShona language word for 'put' or 'place'."
-msgstr "ISA nie je len skratka pre Information Structured Acceleration, ale je to aj slovo v jazyku chiShona pre „umiestniť“ alebo „miesto“."
+msgstr "ISA nie je len skratka pre Information Structured Acceleration, ale je to aj slovo v jazyku chiShona pre „položiť“ alebo „umiestniť“."
 
 #: templates/main/layout.html:34
 msgid "Home"
@@ -1234,7 +1208,7 @@ msgstr "Domov"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
-msgstr ""
+msgstr "Vytvoriť novú kampaň"
 
 #: templates/main/layout.html:51
 msgid "Help"
@@ -1253,7 +1227,6 @@ msgid "See your campaigns"
 msgstr "Pozrite svoje kampane"
 
 #: templates/main/layout.html:68
-#, fuzzy
 msgid "My campaigns"
 msgstr "Moje kampane"
 
@@ -1270,13 +1243,12 @@ msgid "ISA tool"
 msgstr "Nástroj ISA"
 
 #: templates/main/layout.html:108
-#, fuzzy
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
-msgstr "bol vyvinutý ako spolupráca medzi Wiki In Africa, Histropedia a projektom Structured Data on Commons."
+msgstr "bol vyvinutý v spolupráci medzi Wiki In Africa, Histropedia a projektom Structured Data on Commons"
 
 #: templates/main/layout.html:109
 msgid "Further devopment supported by "
-msgstr ""
+msgstr "Ďalší vývoj podporuje "
 
 #: templates/main/layout.html:113
 msgid "It is running on"
@@ -1299,9 +1271,8 @@ msgid "Your Campaigns"
 msgstr "Vaše kampane"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
-msgstr "Nižšie je uvedený zoznam vašich kampaní"
+msgstr "Nižšie je zoznam vašich kampaní"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
@@ -1316,18 +1287,16 @@ msgid "The selected language will be used for searching for elements depicted in
 msgstr "Zvolený jazyk sa použije na vyhľadávanie prvkov zobrazených na obrázkoch."
 
 #: templates/users/user_settings.html:15
-#, fuzzy
 msgid "If 'Same as interface' is selected, the language selected in the top menu will be used."
-msgstr "Ak zvolíte \"Rovnaké ako rozhranie\", použije sa jazyk vybraný v hornom menu."
+msgstr "Ak je vybraté „Rovnako ako rozhranie“, použije sa jazyk vybratý v hornej ponuke."
 
 #: templates/users/user_settings.html:19
 msgid "Select upto 6 languages for captions"
 msgstr "Vyberte až 6 jazykov pre titulky"
 
 #: templates/users/user_settings.html:19
-#, fuzzy
 msgid "Caption languages"
-msgstr "Jazyky titulkov"
+msgstr "Jazyky popiskov"
 
 #: templates/users/user_settings.html:19
 msgid "Captions can be added in multiple languages for each image."
@@ -1352,9 +1321,8 @@ msgid "Undo changes to language settings"
 msgstr "Vráťte späť zmeny nastavení jazyka"
 
 #: templates/users/user_settings.html:57
-#, fuzzy
 msgid "Undo changes"
-msgstr "Vrátiť späť zmeny"
+msgstr "Vrátiť zmeny"
 
 #: users/forms.py:26
 msgid "Same as interface"
@@ -1387,18 +1355,17 @@ msgid "Captions languages could not be set"
 msgstr "Jazyky titulkov sa nepodarilo nastaviť"
 
 #: users/routes.py:160
-#, fuzzy
 msgid "Preferred languages set"
-msgstr "Preferované jazyky boli úspešne nastavené"
+msgstr "Preferované jazyky nastavené"
 
 #: users/routes.py:173
 msgid "Language settings not available at the moment"
 msgstr "Nastavenia jazyka momentálne nie sú k dispozícii"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s's – Nastavenia"
+msgstr "Nastavenia používateľa %(username)s"
 
 #: users/routes.py:199
 #, python-format
@@ -1407,5 +1374,5 @@ msgstr "Kampane vytvorené používateľom %(username)s"
 
 #: templates/footer.html:1
 msgid "Powered by SWITCH/WMSE/Bern Uni"
-msgstr ""
+msgstr "Beží vďaka SWITCH/WMSE/Bern Uni"
 
