@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-06-15 12:26:55+0000\n"
+"PO-Revision-Date: 2026-06-25 12:24:39+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1003,91 +1003,91 @@ msgstr "Det eneste krav  er... at være logget ind."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
-msgstr ""
+msgstr "Få mere at vide om filtekster og -afbildninger"
 
 #: templates/main/help.html:85
 msgid "File captions are a feature part of Structured data."
-msgstr ""
+msgstr "Filtekster er en funktionel del af strukturerede data."
 
 #: templates/main/help.html:86
 msgid "They are meant to store short, multilingual description about files."
-msgstr ""
+msgstr "De er beregnet til at gemme korte, flersprogede beskrivelser af filer."
 
 #: templates/main/help.html:89
 msgid "What is a good caption ? and what is the difference between our good old file descriptions and captions ?"
-msgstr ""
+msgstr "Hvad er en god billedtekst og hvad er forskellen på vores gode gamle filbeskrivelser og billedtekster?"
 
 #: templates/main/help.html:92
 msgid "First, captions are meant to be simple and short."
-msgstr ""
+msgstr "For det første er hensigten med undertekster at de skal være enkle og korte."
 
 #: templates/main/help.html:93
 msgid "While descriptions can be very expansive, captions are limited to 255 characters in length, and cannot contain markup (like Wikitext links or HTML) and do not support external links."
-msgstr ""
+msgstr "Selvom beskrivelser kan være meget omfattende, er billedtekster begrænset til 255 tegn i længden og må ikke indeholde markup (som Wikitext-links eller HTML) og understøtter ikke eksterne links."
 
 #: templates/main/help.html:96
 msgid "In many cases, the caption will be similar or identical to the description."
-msgstr ""
+msgstr "I mange tilfælde vil billedteksten være lig eller identisk med beskrivelsen."
 
 #: templates/main/help.html:97
 msgid "But in other cases, there is a very extensive description (858 characters, and links) and the caption is much shorter (more or less the same caption used on the Wikipedia articles using that image)."
-msgstr ""
+msgstr "Men i andre tilfælde kan der være en meget omfattende beskrivelse (858 tegn og links), mens billedteksten er meget kortere (mere eller mindre den samme billedtekst, der bruges på Wikipedia-artiklerne, der bruger det pågældende billede)."
 
 #: templates/main/help.html:100
 msgid "Only text which is so short that it is not copyrightable should be copied into captions, as captions are published under a CC0 (\"public domain\") waiver."
-msgstr ""
+msgstr "Kun tekst, der er så kort, at den ikke er ophavsretligt beskyttet, bør kopieres til billedtekster, da billedtekster udgives under en CC0-markeringen (\"offentligt domæne\")."
 
 #: templates/main/help.html:103
 msgid "One of the core benefits of captions is improved language-aware searchability."
-msgstr ""
+msgstr "En af de vigtigste fordele ved undertekster er forbedret sprogbevidst søgbarhed."
 
 #: templates/main/help.html:104
 msgid "Classical file descriptions are in the wikitext, and are only searchable through full-text search, which necessarily searches through the entire page contents, including categories and license templates; and it is not possible to do search search per language."
-msgstr ""
+msgstr "Klassiske filbeskrivelser findes i wikiteksten og kan kun søges via fuldtekstsøgning, som nødvendigvis søger gennem hele sidens indhold, inklusive kategorier og licensskabeloner; og det er ikke muligt at søge pr. sprog."
 
 #: templates/main/help.html:107
 msgid "Captions are available as part of our structured data, while descriptions are not."
-msgstr ""
+msgstr "Undertekster er tilgængelige som en del af vores strukturerede data, mens beskrivelser ikke er."
 
 #: templates/main/help.html:108
 msgid "In technical terms, a description is plain wikitext wrapped in a language template, wrapped again in an Information template; while captions are Wikibase labels."
-msgstr ""
+msgstr "Teknisk set er en beskrivelse almindelig wikitekst indpakket i en sprogskabelon og igen indpakket i en informationsskabelon; mens billedtekster er Wikibase-etiketter."
 
 #: templates/main/help.html:111
 msgid "As such, captions will be searchable through the API, making it easy to find/filter/pull captions from files as metadata."
-msgstr ""
+msgstr "Dermed vil undertekster være søgbare via API'en, hvilket gør det nemt at finde/filtrere/trække undertekster fra filer som metadata."
 
 #: templates/main/help.html:112
 msgid "As they are searchable via the API, it is also easier for 3rd party reusers to find and reuse media and the captions themselves."
-msgstr ""
+msgstr "Da de er søgbare via API'en, er det også nemmere for tredjepartsgenbrugere at finde og genbruge både medier og selve underteksterne."
 
 #: templates/main/help.html:115
 msgid "Other possible usages of captions can be:"
-msgstr ""
+msgstr "Andre mulige anvendelser af billedtekster kan være:"
 
 #: templates/main/help.html:118
 msgid "filling in infoboxes"
-msgstr ""
+msgstr "udfyldning af infobokse"
 
 #: templates/main/help.html:119
 msgid "query files for missing captions in a given language"
-msgstr ""
+msgstr "forespørg filer om manglende undertekster på et givet sprog"
 
 #: templates/main/help.html:120
 msgid "building lists for translation of important files needing a caption localized for a project or campaign"
-msgstr ""
+msgstr "opbygning af lister til oversættelse af vigtige filer, der har brug for en lokaliseret billedtekst til et projekt eller en kampagne"
 
 #: templates/main/help.html:123
 msgid "Find more information about Captions here"
-msgstr ""
+msgstr "Find mere information om billedtekster her"
 
 #: templates/main/help.html:127
 msgid "Depicts is also a feature part of Structured data."
-msgstr ""
+msgstr "Afbildninger er også en funktionel del af strukturerede data."
 
 #: templates/main/help.html:128
 msgid "It was enabled on Wikimedia Commons on April 2019."
-msgstr ""
+msgstr "Det blev aktiveret på Wikimedia Commons i april 2019."
 
 #: templates/main/help.html:131
 msgid "To add a depicts statement, simply start typing in the search box."
@@ -1095,51 +1095,51 @@ msgstr ""
 
 #: templates/main/help.html:132
 msgid "Then for each depicted item in the image, find the appropriate item from Wikidata and select it."
-msgstr ""
+msgstr "Find derefter, for hvert afbildet element på billedet, det relevante element fra Wikidata og vælg det."
 
 #: templates/main/help.html:135
 msgid "If you have trouble finding the right Wikidata item, test alternative spellings."
-msgstr ""
+msgstr "Hvis du har problemer med at finde det rigtige Wikidata-element, kan du teste alternative stavemåder."
 
 #: templates/main/help.html:138
 msgid "If there is no Wikidata item associated with the subject depicted, choose a more generic item which includes your subject as an example."
-msgstr ""
+msgstr "Hvis der ikke er noget Wikidata-element tilknyttet det afbildede emne, skal du vælge et mere generisk element, der inkluderer dit emne som eksempel."
 
 #: templates/main/help.html:141
 msgid "Be as specific as you can with the primary tag."
-msgstr ""
+msgstr "Vær så specifik som muligt med det primære tag."
 
 #: templates/main/help.html:142
 msgid "If there are multiple items clearly and deliberately depicted by the media file, all should be added as separate depicts statements, within reason."
-msgstr ""
+msgstr "Hvis der er flere elementer, der tydeligt og bevidst er afbildet i mediefilen, skal alle tilføjes som separate afbildningserklæringer, inden for rimelighedens grænser."
 
 #: templates/main/help.html:143
 msgid "For files that depict dozens or hundreds of items (e.g. movies) only list those items which are most prominent."
-msgstr ""
+msgstr "For filer, der viser snesevis eller hundredvis af elementer (f.eks. film), skal du kun angive de elementer, der er mest fremtrædende."
 
 #: templates/main/help.html:146
 msgid "There is also an option to mark a particular item as 'prominent'."
-msgstr ""
+msgstr "Der er også en mulighed for at markere et bestemt element som 'fremtrædende'."
 
 #: templates/main/help.html:147
 msgid "This property refers to the item's prominence in the piece of media."
-msgstr ""
+msgstr "Denne egenskab refererer til elementets fremtrædende plads i mediestykket."
 
 #: templates/main/help.html:150
 msgid "More information about depicts may be found here :"
-msgstr ""
+msgstr "Mere information om afbildningerne kan findes her:"
 
 #: templates/main/help.html:154
 msgid "Using the ISA tool"
-msgstr ""
+msgstr "Brug af ISA-værktøjet"
 
 #: templates/main/help.html:157
 msgid "More information may be found here:"
-msgstr ""
+msgstr "Mere information kan findes her:"
 
 #: templates/main/help.html:161
 msgid "Legal and credits"
-msgstr ""
+msgstr "Juridisk information og kreditering"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
@@ -1176,7 +1176,7 @@ msgstr ""
 
 #: templates/main/home.html:22
 msgid "About This Tool"
-msgstr ""
+msgstr "Om dette værktøj"
 
 #: templates/main/home.html:23
 msgid "In the long run, the intent behind the tool is to increase the use of the knowledge that is reflected by each image hosted on Wikimedia Commons."
@@ -1204,7 +1204,7 @@ msgstr ""
 
 #: templates/main/layout.html:34
 msgid "Home"
-msgstr ""
+msgstr "Hjem"
 
 #: templates/main/layout.html:45
 msgid "Create new campaign"
@@ -1348,7 +1348,7 @@ msgstr "Log venligst ind for at ændre dine sprogindstillinger"
 #: users/routes.py:145
 #, python-format
 msgid "Sorry you tried to enter %(rep_languages)s multiple times"
-msgstr ""
+msgstr "Beklager, at du prøvede at indtaste %(rep_languages)s flere gange."
 
 #: users/routes.py:158
 msgid "Captions languages could not be set"
