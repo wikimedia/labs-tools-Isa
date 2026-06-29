@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-06-25 12:24:39+0000\n"
+"PO-Revision-Date: 2026-06-29 12:32:51+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1143,15 +1143,15 @@ msgstr "Juridisk information og kreditering"
 
 #: templates/main/help.html:165
 msgid "It is running on tools.wmflabs.org, and is subject to the Wikimedia Cloud Services Terms of Use."
-msgstr ""
+msgstr "Den kører på tools.wmflabs.org og er underlagt Wikimedia Cloud Services' brugsbetingelser."
 
 #: templates/main/help.html:166
 msgid "ISA is published under GPLv3. Content added through the tool to Wikimedia Commons is released under CC0."
-msgstr ""
+msgstr "ISA er udgivet under GPLv3. Indhold tilføjet via værktøjet til Wikimedia Commons er udgivet under CC0."
 
 #: templates/main/help.html:169
 msgid "Image used on the tool :"
-msgstr ""
+msgstr "Billede brugt på værktøjet:"
 
 #: templates/main/home.html:11
 msgid "Easily Add Information about Images on Wikimedia Commons"
