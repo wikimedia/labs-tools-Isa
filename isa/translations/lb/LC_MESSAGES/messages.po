@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-07-13 12:28:08+0000\n"
+"PO-Revision-Date: 2026-07-23 12:32:39+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -349,12 +349,12 @@ msgstr "Kontributiounen"
 #: templates/campaign/campaign.html:42
 #: templates/campaign/campaign_stats.html:39
 msgid "Top Contributors"
-msgstr ""
+msgstr "Top-Contributeuren"
 
 #: templates/campaign/campaign.html:46
 #: templates/campaign/campaign_stats.html:43
 msgid "Contributor"
-msgstr ""
+msgstr "Contributeur"
 
 #: templates/campaign/campaign.html:65
 #: templates/campaign/campaign_stats.html:62
@@ -1280,7 +1280,7 @@ msgstr "Drënner ass eng Lëscht vun Äre Campagnen"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
-msgstr ""
+msgstr "Dir hutt keng Campagnen"
 
 #: templates/users/user_settings.html:15
 msgid "Depicts language"
