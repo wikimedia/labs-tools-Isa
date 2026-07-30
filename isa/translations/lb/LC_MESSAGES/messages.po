@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-07-23 12:32:39+0000\n"
+"PO-Revision-Date: 2026-07-30 12:25:33+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -810,7 +810,7 @@ msgstr "Dir kënnt ëmmer nach un der Campagne deelhuelen."
 
 #: templates/campaign/macros.html:8
 msgid "Failed to update images"
-msgstr ""
+msgstr "D'Biller konnten net aktualiséiert ginn"
 
 #: templates/campaign/macros.html:8
 msgid "There was an error while updating the images for this campaign."
