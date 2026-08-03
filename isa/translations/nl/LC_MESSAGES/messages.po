@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-06-11 12:26:20+0000\n"
+"PO-Revision-Date: 2026-08-03 12:37:26+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -543,11 +543,11 @@ msgstr "Beschrijf alle specifieke (ook culturele, wetenschappelijke en technisch
 
 #: templates/campaign/campaign_entry.html:111
 msgid "Log in to publish changes"
-msgstr "Log in om uw wijzigingen op te slaan"
+msgstr "Meld u aan om uw wijzigingen op te slaan"
 
 #: templates/campaign/campaign_entry.html:113
 msgid "Add a caption to better explain the image (max 255 characters)"
-msgstr "Voeg een bijschrift toe om de afbeelding beter te beschrijven (maximaal 255 karakters)"
+msgstr "Voeg een bijschrift toe om de afbeelding beter te beschrijven (maximaal 255 tekens)"
 
 #: templates/campaign/campaign_entry.html:118
 msgid "Briefly explain what you see in this image."
@@ -587,7 +587,7 @@ msgstr "Gelukt! De bijschriften zijn opgeslagen op Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:141
 msgid "Oops! Something went wrong, your edits have not been saved to Wikimedia Commons"
-msgstr "Er is iets misgegaan, uw bewerkingen zijn helaas niet opgeslagen op Wikimedia Commons"
+msgstr "Er is iets misgegaan. Uw bewerkingen zijn helaas niet opgeslagen op Wikimedia Commons"
 
 #: templates/campaign/campaign_entry.html:142
 msgid "Are you sure you want to navigate to another image? You have unsaved changes which will be lost."
@@ -599,15 +599,15 @@ msgstr "Klik op \"OK\" om verder te gaan, of op \"Annuleren\" als u eerst uw wij
 
 #: templates/campaign/campaign_entry.html:144
 msgid "Remove this depicted item"
-msgstr "Verwijder dit afgebeelde item"
+msgstr "Dit afgebeelde item verwijderen"
 
 #: templates/campaign/campaign_entry.html:145
 msgid "Mark this depicted item as prominent"
-msgstr "Markeer dit afgebeelde item als prominent"
+msgstr "Dit afgebeelde item als prominent markeren"
 
 #: templates/campaign/campaign_entry.html:146
 msgid "Mark this depicted item as NOT prominent"
-msgstr "Markeer dit afgebeelde item als NIET prominent"
+msgstr "Dit afgebeelde item als NIET prominent markeren"
 
 #: templates/campaign/campaign_entry.html:147
 msgid "Suggestion removed from list"
@@ -615,7 +615,7 @@ msgstr "Suggestie verwijderd uit lijst"
 
 #: templates/campaign/campaign_entry.html:148
 msgid "Please check that you are logged in"
-msgstr "Controleer of u bent ingelogd."
+msgstr "Controleer of u bent aangemeld."
 
 #: templates/campaign/campaign_entry.html:149
 msgid "Oops! Suggestion might not have been removed"
@@ -647,11 +647,11 @@ msgstr "Tot"
 
 #: templates/campaign/campaign_stats.html:71
 msgid "Most improved Countries"
-msgstr "Landen met de meeste bijdragen"
+msgstr "Meest verbeterde landen"
 
 #: templates/campaign/campaign_stats.html:108
 msgid "Download all stats (CSV)"
-msgstr "Download alle statistieken (CSV)"
+msgstr "Alle statistieken downloaden (CSV)"
 
 #: templates/campaign/campaign_stats.html:113
 msgid "Contributor Stats"
@@ -663,7 +663,7 @@ msgstr "Statistieken per land"
 
 #: templates/campaign/campaigns.html:8
 msgid "On this page are the curated campaigns that are currently running as part of the ISA tool."
-msgstr "Op deze pagina staan de campagnes die nu actief zijn in de ISA Tool."
+msgstr "Op deze pagina staan de campagnes die nu actief zijn in het ISA-hulpmiddel."
 
 #: templates/campaign/campaigns.html:8
 msgid "Click on the name of a campaign to get started and add structured data to an image."
@@ -679,7 +679,7 @@ msgstr "Huidige campagnes"
 
 #: templates/campaign/campaigns.html:21
 msgid "Campaign name"
-msgstr "Naam van de campagne"
+msgstr "Campagnenaam"
 
 #: templates/campaign/campaigns.html:21 templates/users/own_campaigns.html:28
 msgid "Campaign"
@@ -691,7 +691,7 @@ msgstr "Totaal aantal afbeeldingen in de campagne"
 
 #: templates/campaign/campaigns.html:23
 msgid "Number of editors that have contributed to the campaign"
-msgstr "Aantal bewerkers die hebben deelgenomen aan de campagne"
+msgstr "Aantal bewerkers dat heeft deelgenomen aan de campagne"
 
 #: templates/campaign/campaigns.html:23
 msgid "Participants"
@@ -719,7 +719,7 @@ msgstr "Aanmaakdatum"
 
 #: templates/campaign/campaigns.html:28
 msgid "Campaign status"
-msgstr "Status van de campagne"
+msgstr "Campagnestatus"
 
 #: templates/campaign/campaigns.html:28
 msgid "Status"
@@ -743,7 +743,7 @@ msgstr "Ga naar de startpagina van de campagne om te beginnen"
 
 #: templates/campaign/campaigns.html:66
 msgid "Go to Campaign"
-msgstr "Ga naar campagne"
+msgstr "Naar campagne gaan"
 
 #: templates/campaign/campaigns.html:74
 msgid "Show closed campaigns"
@@ -805,7 +805,7 @@ msgstr "De afbeeldingen voor deze campagne worden bijgewerkt."
 
 #: templates/campaign/macros.html:4
 msgid "More images will be added."
-msgstr "Er zullen meer afbeeldingen worden toegevoegd."
+msgstr "Er worden meer afbeeldingen toegevoegd."
 
 #: templates/campaign/macros.html:4 templates/campaign/macros.html:8
 msgid "You can still participate in the campaign."
@@ -833,7 +833,7 @@ msgstr "Server in onderhoud"
 
 #: templates/errors/403.html:10
 msgid "Please contact support"
-msgstr "Neem contact op met support"
+msgstr "Neem contact op voor ondersteuning"
 
 #: templates/errors/403.html:15
 msgid " Take Me Home"
@@ -842,7 +842,7 @@ msgstr "Naar de startpagina"
 #: templates/errors/403.html:19 templates/errors/404.html:18
 #: templates/errors/500.html:18
 msgid "Contact Support"
-msgstr "Neem contact op met support"
+msgstr "Contact opnemen voor ondersteuning"
 
 #: templates/errors/404.html:8
 msgid "Page Not Found"
@@ -854,7 +854,7 @@ msgstr "We kunnen de pagina die u zoekt niet vinden"
 
 #: templates/errors/404.html:15 templates/errors/500.html:14
 msgid "Take Me Home"
-msgstr "Naar de startpagina"
+msgstr "Naar startpagina gaan"
 
 #: templates/errors/500.html:7
 msgid "Something Went Wrong"
@@ -862,7 +862,7 @@ msgstr "Er is iets misgegaan"
 
 #: templates/errors/500.html:9
 msgid "Isa might be undergoing maintenance"
-msgstr "Het hulpmiddel ISA is misschien in onderhoudsmodus"
+msgstr "Isa ondergaat mogelijk onderhoud"
 
 #: templates/main/help.html:9
 msgid "Help Page"
@@ -1004,7 +1004,7 @@ msgstr "Iedereen met een Wikimedia-account kan via een campagne bijdragen aan he
 
 #: templates/main/help.html:79
 msgid "The only requirement is... to be logged-in."
-msgstr "De enige vereiste is... om ingelogd zijn."
+msgstr "De enige vereiste is om aangemeld te zijn."
 
 #: templates/main/help.html:82
 msgid "Learn more about file captions and depicts"
@@ -1237,7 +1237,7 @@ msgstr "Mijn campagnes"
 
 #: templates/main/layout.html:75 templates/main/layout.html:79
 msgid "Logout"
-msgstr "Uitloggen"
+msgstr "Afmelden"
 
 #: templates/main/layout.html:83
 msgid "Login"

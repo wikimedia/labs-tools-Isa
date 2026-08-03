@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-07-30 12:25:33+0000\n"
+"PO-Revision-Date: 2026-08-03 12:37:25+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -61,9 +61,8 @@ msgid "%(campaign_name)s - Contribute"
 msgstr ""
 
 #: campaigns/routes.py:273
-#, fuzzy
 msgid "You need to log in to update a campaign"
-msgstr "Dir musst Iech alogge fir eng Campagne z'aktualiséieren"
+msgstr "Dir musst Iech aloggen, fir eng Campagne z'aktualiséieren"
 
 #: campaigns/routes.py:299
 msgid "Campaign update failed. Please try later!"
@@ -425,7 +424,7 @@ msgstr "Onbekannt d'Land"
 
 #: templates/campaign/campaign_entry.html:19
 msgid "Return to the campaign home page"
-msgstr "Zréck op d'Haaptsäit vun der Campagne"
+msgstr "Zeréck op d'Haaptsäit vun der Campagne"
 
 #: templates/campaign/campaign_entry.html:19
 #: templates/campaign/campaign_stats.html:4
@@ -1274,9 +1273,8 @@ msgid "Your Campaigns"
 msgstr "Är Campagnen"
 
 #: templates/users/own_campaigns.html:16
-#, fuzzy
 msgid "Below is a list of your campaigns"
-msgstr "Drënner ass eng Lëscht vun Äre Campagnen"
+msgstr "Ënnen ass eng Lëscht vun Äre Campagnen"
 
 #: templates/users/own_campaigns.html:18
 msgid "You do not have any campaigns"
@@ -1367,9 +1365,9 @@ msgid "Language settings not available at the moment"
 msgstr "Sproochastellungen den Ament net disponibel"
 
 #: users/routes.py:175
-#, fuzzy, python-format
+#, python-format
 msgid "%(username)s's Settings"
-msgstr "%(username)s - Astellungen"
+msgstr "Astellunge vum %(username)s"
 
 #: users/routes.py:199
 #, python-format
