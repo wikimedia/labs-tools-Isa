@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-08-03 12:37:25+0000\n"
+"PO-Revision-Date: 2026-09-03 12:31:10+0000\n"
 "X-POT-Import-Date: 2025-01-16 20:31:23+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,12 +30,12 @@ msgstr "Campagnen"
 #: campaigns/routes.py:56 campaigns/routes.py:144
 #, python-format
 msgid "Campaign with id %(id)s does not exist"
-msgstr "Eng Campagne mat der ID %(id)s gëtt et net"
+msgstr "Et gëtt keng Campagne mat der ID %(id)s"
 
 #: campaigns/routes.py:113 campaigns/routes.py:169
 #, python-format
 msgid "Campaign - %(campaign_name)s"
-msgstr ""
+msgstr "Campagne – %(campaign_name)s"
 
 #: campaigns/routes.py:193
 msgid "You need to Login to create a campaign"
@@ -44,12 +44,12 @@ msgstr "Dir musst Iech aloggen, fir eng Campagne ze kreéieren"
 #: campaigns/routes.py:223
 #, python-format
 msgid "Sorry, %(campaign_name)s could not be created"
-msgstr ""
+msgstr "Et deet eis leed, %(campaign_name)s konnt net kreéiert ginn"
 
 #: campaigns/routes.py:231
 #, python-format
 msgid "%(campaign_name)s campaign created!"
-msgstr ""
+msgstr "D'Campagne %(campaign_name)s gouf kreéiert!"
 
 #: campaigns/routes.py:234
 msgid "Create a campaign"
@@ -58,7 +58,7 @@ msgstr "Eng Campagne kreéieren"
 #: campaigns/routes.py:254
 #, python-format
 msgid "%(campaign_name)s - Contribute"
-msgstr ""
+msgstr "%(campaign_name)s – Matmaachen"
 
 #: campaigns/routes.py:273
 msgid "You need to log in to update a campaign"
@@ -66,26 +66,26 @@ msgstr "Dir musst Iech aloggen, fir eng Campagne z'aktualiséieren"
 
 #: campaigns/routes.py:299
 msgid "Campaign update failed. Please try later!"
-msgstr ""
+msgstr "D'Campagne konnt net aktualiséiert ginn. Probéiert wgl. méi spéit nach eng Kéier!"
 
 #: campaigns/routes.py:303
 msgid "Update succesfull!"
-msgstr "Aktualiséierung ofgeschloss!"
+msgstr "Erfollegräich aktualiséiert!"
 
 #: campaigns/routes.py:312
 #, python-format
 msgid "You cannot update this campaign. Contact the manager, User:%(username)s."
-msgstr ""
+msgstr "Dir kënnt dës Campagne net aktualiséieren. Kontaktéiert de Manager, User:%(username)s."
 
 #: campaigns/routes.py:328
 #, python-format
 msgid "Booo! %(campaign_name)s could not be updated!"
-msgstr ""
+msgstr "Buuu! %(campaign_name)s konnt net aktualiséiert ginn!"
 
 #: campaigns/routes.py:333
 #, python-format
 msgid "%(campaign_name)s - Update"
-msgstr ""
+msgstr "%(campaign_name)s – Aktualiséierung"
 
 #: campaigns/routes.py:375
 msgid "You need to login to participate"
@@ -93,7 +93,7 @@ msgstr "Dir musst Iech alogge fir matzemaachen"
 
 #: templates/campaign/campaign-form.html:6
 msgid "Update Campaign Details"
-msgstr ""
+msgstr "Detailer vun der Campagne aktualiséieren"
 
 #: templates/campaign/campaign-form.html:8
 msgid "Create new Campaign"
@@ -102,15 +102,15 @@ msgstr "Eng nei Campagne kreéieren"
 #: templates/campaign/campaign-form.html:14
 #, python-format
 msgid "You are updating %(campaign)s"
-msgstr ""
+msgstr "Dir sidd amgaang, %(campaign)s z'aktualiséieren"
 
 #: templates/campaign/campaign-form.html:16
 msgid "Fill in the form below to create your campaign"
-msgstr ""
+msgstr "Fëllt de Formulaire ënnen aus, fir Är Campagne ze kreéieren"
 
 #: templates/campaign/campaign-form.html:19
 msgid "Fields marked with * are mandatory"
-msgstr ""
+msgstr "Felder, déi mat * markéiert sinn, sinn obligatoresch"
 
 #: templates/campaign/campaign-form.html:29
 msgid "Campaign Name"
@@ -118,7 +118,7 @@ msgstr "Numm vun der Campagne"
 
 #: templates/campaign/campaign-form.html:41
 msgid "This is the name specific to your campaign, not the main project."
-msgstr ""
+msgstr "Dat ass den Numm, dee spezifesch fir Är Campagne ass, net den Haaptprojet."
 
 #: templates/campaign/campaign-form.html:41
 msgid "So, not “Wiki Loves Africa” but rather “Music and Dance in Nigeria”"
@@ -139,7 +139,7 @@ msgstr "Ufanksdatum"
 
 #: templates/campaign/campaign-form.html:80
 msgid "Set campaign start date"
-msgstr ""
+msgstr "Leet den Ufanksdatum vun der Campagne fest"
 
 #: templates/campaign/campaign-form.html:83
 #: templates/campaign/campaigns.html:26
@@ -148,11 +148,11 @@ msgstr "Schlussdatum"
 
 #: templates/campaign/campaign-form.html:95
 msgid "Set campaign end date"
-msgstr ""
+msgstr "Leet de Schlussdatum vun der Campagne fest"
 
 #: templates/campaign/campaign-form.html:102
 msgid "This is a Wiki Loves Campaign"
-msgstr "Dëst ass eng Wiki Loves Campagne"
+msgstr "Dat hei ass eng Wiki-Loves-Campagne"
 
 #: templates/campaign/campaign-form.html:112
 msgid "When set up correctly this option allows participants to choose what country they want to see images from and records contributions by country."
@@ -396,7 +396,7 @@ msgstr "Méi iwwer dës Campagne"
 
 #: templates/campaign/campaign.html:143
 msgid "Campaign Manager"
-msgstr "Campagne-Manager"
+msgstr "Campagnë-Manager"
 
 #: templates/campaign/campaign.html:145
 msgid "START DATE"
@@ -1242,7 +1242,7 @@ msgstr "Aloggen"
 
 #: templates/main/layout.html:107
 msgid "ISA tool"
-msgstr ""
+msgstr "ISA-Tool"
 
 #: templates/main/layout.html:108
 msgid "was developed as a collaboration between Wiki In Africa, Histropedia and the Structured Data on Commons project"
